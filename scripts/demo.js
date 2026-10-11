@@ -1,0 +1,13 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import {analyze,preCodeGuidance} from '../src/engine.js';
+import {readableReport} from '../src/report.js';
+const root=path.resolve(import.meta.dirname,'..');
+const output=path.join(root,'reports');fs.mkdirSync(output,{recursive:true});
+const rules=JSON.parse(fs.readFileSync(path.join(root,'fixtures/rules.json'),'utf8'));
+const candidate=path.join(root,'fixtures/lookup/candidate');
+const report=analyze({baseline:{type:'directory',root:path.join(root,'fixtures/lookup/baseline')},candidate:{type:'directory',root:candidate},rules,asOf:'2026-10-11',task:'Change the lookup API route and response contract; identify callers and focused compatibility tests'});
+fs.writeFileSync(path.join(output,'lookup-change.json'),JSON.stringify(report,null,2)+'\n');fs.writeFileSync(path.join(output,'lookup-change.txt'),readableReport(report));
+const guide=preCodeGuidance({root:candidate,rules,task:'Prepare a lookup contract migration',paths:['backend/src/main/java/com/example/lookup/LookupController.java','frontend/src/api/lookupApi.ts']});
+fs.writeFileSync(path.join(output,'pre-code-guidance.json'),JSON.stringify(guide,null,2)+'\n');fs.writeFileSync(path.join(output,'pre-code-guidance.txt'),readableReport(guide));
+process.stdout.write(JSON.stringify({sourceBuildHash:report.analyzer.sourceBuildHash,changes:report.changes.length,direct:report.impact.direct.length,indirect:report.impact.indirect.length,findings:report.findings.length,unknowns:report.unknowns.length,output},null,2)+'\n');

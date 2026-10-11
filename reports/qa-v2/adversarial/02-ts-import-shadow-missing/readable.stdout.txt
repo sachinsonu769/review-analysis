@@ -1,0 +1,63 @@
+Review Analysis — advisory source report
+Analyzer 0.1.0; build ca04bac50b7584aaafd9d5602acc8055152e81e25de5fa1b15bb710f76f53ac9
+As of 2026-10-11
+Baseline: tree-sha256:4c2dcad5edde3048d080c6ad442997f575d7f5fd8880592fa579b9b49fe0ca5b
+Candidate: tree-sha256:77db4e8ccd58030590e06a202bec4233f5b3b28a1889e892b91b02f0c026090d
+
+Task: Named and namespace bindings, nested forward local call, absent relative import
+Applicable rules:
+- independent/http-contract vindependent-adversarial-v1; owner synthetic-qa: endpoint-contract-change
+No human approval is inferred. Reviewed examples/exceptions are assertions from supplied configuration; simulation records are demonstrations only.
+
+Changed declarations (1):
+- modified: work; body/path changed
+  Before: frontend/lib.ts:1-1 @ tree-sha256:4c2dcad5edde3048d080c6ad442997f575d7f5fd8880592fa579b9b49fe0ca5b (sha256 6a17fb63c8c90e2ce7a1f7344a73bd815f27fdf6df05982abd610fe84ea3408b)
+  After: frontend/lib.ts:1-1 @ tree-sha256:77db4e8ccd58030590e06a202bec4233f5b3b28a1889e892b91b02f0c026090d (sha256 6745bcd12f9a1c706a5b88bc099841f1fb145a755425ede6614a1c4559e322d9)
+
+Direct dependencies (10):
+- frontend/consumer.ts -> frontend/lib.ts (import, high): Relative import resolves to supplied source file
+  frontend/consumer.ts:1-1 @ tree-sha256:4c2dcad5edde3048d080c6ad442997f575d7f5fd8880592fa579b9b49fe0ca5b (sha256 fa2c919715d474b2c8941ea1ce8b9ab1dc8449306f1d7e5460d491df4d9a8518)
+- frontend/consumer.ts -> frontend/lib.ts (import, high): Relative import resolves to supplied source file
+  frontend/consumer.ts:2-2 @ tree-sha256:4c2dcad5edde3048d080c6ad442997f575d7f5fd8880592fa579b9b49fe0ca5b (sha256 fa2c919715d474b2c8941ea1ce8b9ab1dc8449306f1d7e5460d491df4d9a8518)
+- frontend/consumer.ts -> frontend/lib.ts (type, high): Imported binding resolves to a supplied named declaration
+  frontend/consumer.ts:4-4 @ tree-sha256:4c2dcad5edde3048d080c6ad442997f575d7f5fd8880592fa579b9b49fe0ca5b (sha256 fa2c919715d474b2c8941ea1ce8b9ab1dc8449306f1d7e5460d491df4d9a8518)
+- frontend/consumer.ts -> frontend/lib.ts (call, high): Imported binding resolves to a supplied named declaration
+  frontend/consumer.ts:4-4 @ tree-sha256:4c2dcad5edde3048d080c6ad442997f575d7f5fd8880592fa579b9b49fe0ca5b (sha256 fa2c919715d474b2c8941ea1ce8b9ab1dc8449306f1d7e5460d491df4d9a8518)
+- frontend/consumer.ts -> frontend/lib.ts (call, high): Imported binding resolves to a supplied named declaration
+  frontend/consumer.ts:5-5 @ tree-sha256:4c2dcad5edde3048d080c6ad442997f575d7f5fd8880592fa579b9b49fe0ca5b (sha256 fa2c919715d474b2c8941ea1ce8b9ab1dc8449306f1d7e5460d491df4d9a8518)
+- frontend/consumer.ts -> frontend/lib.ts (import, high): Relative import resolves to supplied source file
+  frontend/consumer.ts:1-1 @ tree-sha256:77db4e8ccd58030590e06a202bec4233f5b3b28a1889e892b91b02f0c026090d (sha256 fa2c919715d474b2c8941ea1ce8b9ab1dc8449306f1d7e5460d491df4d9a8518)
+- frontend/consumer.ts -> frontend/lib.ts (import, high): Relative import resolves to supplied source file
+  frontend/consumer.ts:2-2 @ tree-sha256:77db4e8ccd58030590e06a202bec4233f5b3b28a1889e892b91b02f0c026090d (sha256 fa2c919715d474b2c8941ea1ce8b9ab1dc8449306f1d7e5460d491df4d9a8518)
+- frontend/consumer.ts -> frontend/lib.ts (type, high): Imported binding resolves to a supplied named declaration
+  frontend/consumer.ts:4-4 @ tree-sha256:77db4e8ccd58030590e06a202bec4233f5b3b28a1889e892b91b02f0c026090d (sha256 fa2c919715d474b2c8941ea1ce8b9ab1dc8449306f1d7e5460d491df4d9a8518)
+- frontend/consumer.ts -> frontend/lib.ts (call, high): Imported binding resolves to a supplied named declaration
+  frontend/consumer.ts:4-4 @ tree-sha256:77db4e8ccd58030590e06a202bec4233f5b3b28a1889e892b91b02f0c026090d (sha256 fa2c919715d474b2c8941ea1ce8b9ab1dc8449306f1d7e5460d491df4d9a8518)
+- frontend/consumer.ts -> frontend/lib.ts (call, high): Imported binding resolves to a supplied named declaration
+  frontend/consumer.ts:5-5 @ tree-sha256:77db4e8ccd58030590e06a202bec4233f5b3b28a1889e892b91b02f0c026090d (sha256 fa2c919715d474b2c8941ea1ce8b9ab1dc8449306f1d7e5460d491df4d9a8518)
+
+Likely indirect dependencies (0):
+
+Architecture findings (0):
+
+Unknowns (10):
+- unresolved_call: act; frontend/consumer.ts:6-6 @ tree-sha256:4c2dcad5edde3048d080c6ad442997f575d7f5fd8880592fa579b9b49fe0ca5b (sha256 fa2c919715d474b2c8941ea1ce8b9ab1dc8449306f1d7e5460d491df4d9a8518)
+- unresolved_call: before; frontend/consumer.ts:7-7 @ tree-sha256:4c2dcad5edde3048d080c6ad442997f575d7f5fd8880592fa579b9b49fe0ca5b (sha256 fa2c919715d474b2c8941ea1ce8b9ab1dc8449306f1d7e5460d491df4d9a8518)
+- missing-source: ./absent; frontend/consumer.ts:3-3 @ tree-sha256:4c2dcad5edde3048d080c6ad442997f575d7f5fd8880592fa579b9b49fe0ca5b (sha256 fa2c919715d474b2c8941ea1ce8b9ab1dc8449306f1d7e5460d491df4d9a8518)
+- unresolved-call: act; frontend/consumer.ts:6-6 @ tree-sha256:4c2dcad5edde3048d080c6ad442997f575d7f5fd8880592fa579b9b49fe0ca5b (sha256 fa2c919715d474b2c8941ea1ce8b9ab1dc8449306f1d7e5460d491df4d9a8518)
+- unresolved-call: before; frontend/consumer.ts:7-7 @ tree-sha256:4c2dcad5edde3048d080c6ad442997f575d7f5fd8880592fa579b9b49fe0ca5b (sha256 fa2c919715d474b2c8941ea1ce8b9ab1dc8449306f1d7e5460d491df4d9a8518)
+- unresolved_call: act; frontend/consumer.ts:6-6 @ tree-sha256:77db4e8ccd58030590e06a202bec4233f5b3b28a1889e892b91b02f0c026090d (sha256 fa2c919715d474b2c8941ea1ce8b9ab1dc8449306f1d7e5460d491df4d9a8518)
+- unresolved_call: before; frontend/consumer.ts:7-7 @ tree-sha256:77db4e8ccd58030590e06a202bec4233f5b3b28a1889e892b91b02f0c026090d (sha256 fa2c919715d474b2c8941ea1ce8b9ab1dc8449306f1d7e5460d491df4d9a8518)
+- missing-source: ./absent; frontend/consumer.ts:3-3 @ tree-sha256:77db4e8ccd58030590e06a202bec4233f5b3b28a1889e892b91b02f0c026090d (sha256 fa2c919715d474b2c8941ea1ce8b9ab1dc8449306f1d7e5460d491df4d9a8518)
+- unresolved-call: act; frontend/consumer.ts:6-6 @ tree-sha256:77db4e8ccd58030590e06a202bec4233f5b3b28a1889e892b91b02f0c026090d (sha256 fa2c919715d474b2c8941ea1ce8b9ab1dc8449306f1d7e5460d491df4d9a8518)
+- unresolved-call: before; frontend/consumer.ts:7-7 @ tree-sha256:77db4e8ccd58030590e06a202bec4233f5b3b28a1889e892b91b02f0c026090d (sha256 fa2c919715d474b2c8941ea1ce8b9ab1dc8449306f1d7e5460d491df4d9a8518)
+
+Focused tests (0; recommendations, not executed by analyzer):
+
+Coverage incomplete. This report never authorizes skipping full regression.
+- Source-only analysis; no Java/TypeScript semantic compilation, runtime dispatch, reflection, DI wiring, proxy/origin verification or transitive external package sources
+- Edges are evidence-backed approximations; indirect file dependencies do not prove execution
+- Renames inferred only for identical declaration key/signature/body; edited renames remain delete/add
+- Unknown syntax and unresolved/dynamic dependencies remain visible; passing fixture tests is not private-repository acceptance
+Cache: {"report":"disabled","parsedFiles":4,"reusedFiles":0,"invalidEntries":0}
+Analysis metrics: {"elapsedMs":39.98,"bytesRead":1134,"reportCacheHit":false}

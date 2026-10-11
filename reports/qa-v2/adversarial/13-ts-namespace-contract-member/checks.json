@@ -1,0 +1,48 @@
+{
+  "id": "13-ts-namespace-contract-member",
+  "description": "Nested exported namespace method must use qualified member declaration or explicit uncertainty",
+  "status": "pass",
+  "exitCode": 0,
+  "sourcePaths": {
+    "baseline": "/tmp/review-analysis-adversarial-v2-NZrPxG/13-ts-namespace-contract-member/baseline",
+    "candidate": "/tmp/review-analysis-adversarial-v2-NZrPxG/13-ts-namespace-contract-member/candidate"
+  },
+  "sourceHashes": {
+    "baseline": {
+      "frontend/consumer.ts": "0ea13582782a29f0efecfd6f084810a4fa4baabf97fc1d99854e10f651fce687",
+      "frontend/lib.ts": "5d1eb563b8d431a3baae70baf61caa769b8ed1b384c71859ff060d2a36311950"
+    },
+    "candidate": {
+      "frontend/consumer.ts": "0ea13582782a29f0efecfd6f084810a4fa4baabf97fc1d99854e10f651fce687",
+      "frontend/lib.ts": "ae28fabd402488e451dd36e907c07c5edbef985ea39b7304e2ad681ec13cfba0"
+    }
+  },
+  "evidence": {
+    "checkedEvidenceRecords": 10,
+    "errors": []
+  },
+  "assertions": [
+    {
+      "name": "no wrong namespace declaration for method call",
+      "status": "pass"
+    },
+    {
+      "name": "qualified member or explicit uncertainty",
+      "status": "pass"
+    },
+    {
+      "name": "all source evidence hashes/ranges/excerpts/revisions independently reproduce",
+      "status": "pass"
+    },
+    {
+      "name": "readable actual CLI exits 0",
+      "status": "pass"
+    }
+  ],
+  "reportStats": {
+    "changes": 2,
+    "directEdges": 2,
+    "unknowns": 2,
+    "sourceBuildHash": "ca04bac50b7584aaafd9d5602acc8055152e81e25de5fa1b15bb710f76f53ac9"
+  }
+}

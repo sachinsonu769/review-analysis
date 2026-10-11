@@ -1,0 +1,104 @@
+{
+  "status": "pass-for-bounded-source-only-POC-scope",
+  "artifact": "/workspace/review-analysis-deliverables/review-analysis-qa-v2.zip",
+  "artifactSha256": "a140834fe7d26c707a04dc43ae225178bc39756154ca52e63f8dd7db91582897",
+  "sourceTreeHash": "97c934ed0473448f478ec731f056ba292febc1d76e2fdb532a1ad434e12cf241",
+  "analyzerBuildHash": "ca04bac50b7584aaafd9d5602acc8055152e81e25de5fa1b15bb710f76f53ac9",
+  "testedExtraction": "/tmp/review-analysis-qa-v2-fsn7g676",
+  "startedAtUtc": "2026-10-11T16:54:46.257238+00:00",
+  "recordedAtUtc": "2026-10-11T16:59:57.263446+00:00",
+  "runtime": {
+    "versions": [
+      {
+        "name": "runtime",
+        "version": "v24.19.0"
+      },
+      {
+        "name": "npm-version",
+        "version": "11.9.0"
+      },
+      {
+        "name": "git-version",
+        "version": "git version 2.52.0"
+      },
+      {
+        "name": "python-version",
+        "version": "Python 3.12.14"
+      }
+    ],
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+    "architecture": "x86_64"
+  },
+  "manifestFilesVerifiedBeforeAfter": 124,
+  "zipFileSetVerified": true,
+  "manifestFilesUnchangedAfter": true,
+  "npmTests": {
+    "passed": 65,
+    "failed": 0,
+    "notRun": 0
+  },
+  "operationalAndAssertionChecks": {
+    "passed": 83,
+    "failed": 0,
+    "note": "Includes executed-command and assertion records; not an additional implementation test count."
+  },
+  "manualAdversarialCases": {
+    "originalCasesExecuted": 16,
+    "originalCasesPassed": 16,
+    "originalCasesFailed": 0,
+    "nearbyPositiveCasesExecuted": 2,
+    "nearbyPositiveCasesPassed": 2,
+    "notRun": 0
+  },
+  "sourceEvidenceRecordsVerified": 1926,
+  "originalHardFailuresResolved": [
+    "04-java-arity-prefix",
+    "08-http-template-regex",
+    "11-ts-namespace-nested-member",
+    "12-java-ambiguous-explicit-imports",
+    "13-ts-namespace-contract-member",
+    "14-js-with-lexical-shadow"
+  ],
+  "semanticLimitCasesNowExplicitUnknowns": {
+    "15-java-varargs-overload": "ambiguous-call, both fixed-arity and varargs candidates retained",
+    "16-java-inherited-overload": "java-inheritance-dispatch; no narrowed method target"
+  },
+  "benchmark": {
+    "correctedApiFileWasExisting": true,
+    "sourceHashBefore": "8b9224af601766edbb0617ffe30c2b85aa82fb82e97d13ed8467849175b8bcda",
+    "sourceHashAfter": "24235d96e685874c7de797bba874a768d435fe110a5b68f6cef15ca4ab899f36",
+    "coldProcessMedianWallMs": 643.47,
+    "coldProcessMedianAnalyzerMs": 122.7,
+    "warmSameProcessMedianMs": 2.69,
+    "incrementalAnalyzerMs": 5.54,
+    "incrementalParsedFiles": 1,
+    "incrementalReusedFiles": 42,
+    "limitation": "Tiny incomplete source fixture in this cloud environment; does not measure application regression savings, real-repository scale, or efficacy."
+  },
+  "remainingBlockingDefects": [],
+  "evidence": {
+    "commands": "commands.jsonl",
+    "manualCases": "adversarial/summary.json, positive-controls/*/checks.json",
+    "manualCommandLogs": "adversarial/commands.json and per-case command.json",
+    "artifactVerification": "artifact-verification.json, artifact-after-tests.json",
+    "sourceInputs": "adversarial/*/input and synthetic-git-input.zip",
+    "rawLogs": "*.stdout.log/*.stderr.log and manual JSON/readable files"
+  },
+  "notRun": [
+    {
+      "name": "npm run demo",
+      "reason": "Would overwrite extracted packaged reports; equivalent actual CLI analysis/guidance JSON/readable behavior was tested."
+    },
+    {
+      "name": "Full application compilation/regression, UI and real private-repository acceptance",
+      "reason": "No UI is included and fixture projects are incomplete source samples. No real private repository was provided/authorized."
+    }
+  ],
+  "limitations": [
+    "Bounded source-only analysis; compilation, runtime dispatch, DI/reflection, origin/proxy verification and transitive external dependency coverage remain outside tested support.",
+    "Synthetic local Git commits and dirty worktrees only; no remote pushes, deployment or external AI requests used.",
+    "Approval identities/review authenticity are user-supplied/simulated configuration assertions; genuine governance authentication was not tested.",
+    "Analyzer-version override uses the exported engine API; actual source-build hash invalidation was additionally verified using v2 CLI against a cache populated by v1.",
+    "Final distribution envelope is pending independent manifest/executable-source equivalence verification; no engine source changes are expected."
+  ]
+}

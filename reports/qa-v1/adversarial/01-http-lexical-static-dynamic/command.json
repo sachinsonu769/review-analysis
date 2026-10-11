@@ -1,0 +1,20 @@
+{
+  "command": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+  "args": [
+    "/tmp/review-analysis-qa-v1-nn0cdauu/src/cli.js",
+    "analyze",
+    "--baseline",
+    "/tmp/review-analysis-adversarial-v1-anUajX/01-http-lexical-static-dynamic/baseline",
+    "--candidate",
+    "/tmp/review-analysis-adversarial-v1-anUajX/01-http-lexical-static-dynamic/candidate",
+    "--rules",
+    "/tmp/review-analysis-adversarial-v1-anUajX/rules.json",
+    "--as-of",
+    "2026-10-11",
+    "--task",
+    "Global receiver and destructured parameter shadows; static templates versus constant concatenation; literal object override order",
+    "--format",
+    "json"
+  ],
+  "cwd": "/tmp/review-analysis-qa-v1-nn0cdauu"
+}

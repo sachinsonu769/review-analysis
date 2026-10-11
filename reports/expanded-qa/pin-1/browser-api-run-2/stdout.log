@@ -1,0 +1,37 @@
+PASS health has exact pinned build
+PASS all five bundled demos available
+PASS lookup real API analysis and typed canonical paths
+PASS lookup exact source location/revision/hash/excerpt
+PASS angular real API analysis and typed canonical paths
+PASS angular exact source location/revision/hash/excerpt
+PASS split real API analysis and typed canonical paths
+PASS split exact source location/revision/hash/excerpt
+PASS quality real API analysis and typed canonical paths
+PASS quality exact source location/revision/hash/excerpt
+PASS requirements real API analysis and typed canonical paths
+PASS requirements exact source location/revision/hash/excerpt
+PASS React Spring direct and likely indirect callers
+PASS Angular typed HttpClient endpoints retain bounded evidence
+PASS split links exist only with explicit versioned mapping
+PASS reputable quality tools actually available and classified
+PASS draft requirements never certify runtime
+PASS API cold then warm cache observes exact sources
+PASS custom mounted requirements combine backend/source and frontend/tests
+PASS non-root app reads foreign-owned Git mount with pinned original SHA and dirty bypass
+PASS API input denies outside
+PASS API input denies parent-traversal
+PASS API input denies symlink-outside
+PASS API cross-origin rejected
+PASS API malformed checklist and oversize requests fail visibly
+PASS browser initial real analysis and visible file graph
+PASS browser canonical source selection, file and declaration evidence
+PASS browser direct/indirect paths use exact canonical same-phase edge IDs
+PASS browser repository/module/search/changed/certainty filters restore graph
+PASS browser governance and legacy/new filters
+PASS browser report download matches returned report
+PASS browser angular demo fully updates real report
+PASS browser split demo fully updates real report
+PASS browser quality demo fully updates real report
+PASS browser requirements demo fully updates real report
+PASS browser custom mounted workspace and cross-project confirmed checklist
+PASS browser errors absent

@@ -1,0 +1,419 @@
+{
+  "schemaVersion": "1.0",
+  "analyzer": {
+    "version": "0.1.0",
+    "sourceBuildHash": "8ee7fcacee9a1b276b2bfab2665d8d3ab771e40eee5f3924f1f301192426e68f",
+    "parsers": {
+      "java": "java-parser@3.0.1",
+      "typescript": "typescript@5.9.3"
+    }
+  },
+  "advisory": true,
+  "asOf": "2026-10-11",
+  "provenance": {
+    "baseline": {
+      "root": "/tmp/review-analysis-adversarial-v1-anUajX/12-java-ambiguous-explicit-imports/baseline",
+      "type": "directory",
+      "revision": "tree-sha256:86bb3497a219782c2f8c116a21fe117ae1b7f566b3ea9a6b6a39018746391451",
+      "contentHash": "86bb3497a219782c2f8c116a21fe117ae1b7f566b3ea9a6b6a39018746391451",
+      "dirty": false
+    },
+    "candidate": {
+      "root": "/tmp/review-analysis-adversarial-v1-anUajX/12-java-ambiguous-explicit-imports/candidate",
+      "type": "directory",
+      "revision": "tree-sha256:dd1db3d1164381b66f8d7f1305b0dad55580f264cdbc2a0e0762d8862f492aad",
+      "contentHash": "dd1db3d1164381b66f8d7f1305b0dad55580f264cdbc2a0e0762d8862f492aad",
+      "dirty": false
+    },
+    "rulesHash": "90f33c2c080aa463115b0ef7e4058bb9bf0da4944dff79ed58eae2f01f9cd3f1",
+    "baselineRulesHash": "90f33c2c080aa463115b0ef7e4058bb9bf0da4944dff79ed58eae2f01f9cd3f1",
+    "cacheKey": "e9c9ec0562e803fa731c9d7a76d99970ca0f853d74ebb44c0e4e9deb04922558"
+  },
+  "changes": [
+    {
+      "kind": "modified",
+      "name": "Target",
+      "key": "a.Target",
+      "language": "java",
+      "contractChanged": false,
+      "before": {
+        "path": "backend/a/Target.java",
+        "range": {
+          "startLine": 2,
+          "endLine": 2
+        },
+        "revision": "tree-sha256:86bb3497a219782c2f8c116a21fe117ae1b7f566b3ea9a6b6a39018746391451",
+        "fileHash": "8975900bb8ad28d30e1d27a9da5e6b98b6a6340d8401749369cd611ebeeb173f",
+        "excerpt": "public class Target { public int run() { return 1; } }"
+      },
+      "after": {
+        "path": "backend/a/Target.java",
+        "range": {
+          "startLine": 2,
+          "endLine": 2
+        },
+        "revision": "tree-sha256:dd1db3d1164381b66f8d7f1305b0dad55580f264cdbc2a0e0762d8862f492aad",
+        "fileHash": "d3cd92707954342015ca2a17c62667b79bbe02c54115f3447a0e887e4ac065fb",
+        "excerpt": "public class Target { public int run() { return 2; } }"
+      }
+    },
+    {
+      "kind": "modified",
+      "name": "run",
+      "key": "a.Target#run/0",
+      "language": "java",
+      "contractChanged": false,
+      "before": {
+        "path": "backend/a/Target.java",
+        "range": {
+          "startLine": 2,
+          "endLine": 2
+        },
+        "revision": "tree-sha256:86bb3497a219782c2f8c116a21fe117ae1b7f566b3ea9a6b6a39018746391451",
+        "fileHash": "8975900bb8ad28d30e1d27a9da5e6b98b6a6340d8401749369cd611ebeeb173f",
+        "excerpt": "public class Target { public int run() { return 1; } }"
+      },
+      "after": {
+        "path": "backend/a/Target.java",
+        "range": {
+          "startLine": 2,
+          "endLine": 2
+        },
+        "revision": "tree-sha256:dd1db3d1164381b66f8d7f1305b0dad55580f264cdbc2a0e0762d8862f492aad",
+        "fileHash": "d3cd92707954342015ca2a17c62667b79bbe02c54115f3447a0e887e4ac065fb",
+        "excerpt": "public class Target { public int run() { return 2; } }"
+      }
+    },
+    {
+      "kind": "modified",
+      "name": "Target",
+      "key": "b.Target",
+      "language": "java",
+      "contractChanged": false,
+      "before": {
+        "path": "backend/b/Target.java",
+        "range": {
+          "startLine": 2,
+          "endLine": 2
+        },
+        "revision": "tree-sha256:86bb3497a219782c2f8c116a21fe117ae1b7f566b3ea9a6b6a39018746391451",
+        "fileHash": "348b07628db2c793993b980125169b03b52ad5356c04f6c54d881dda83e6e603",
+        "excerpt": "public class Target { public int run() { return 1; } }"
+      },
+      "after": {
+        "path": "backend/b/Target.java",
+        "range": {
+          "startLine": 2,
+          "endLine": 2
+        },
+        "revision": "tree-sha256:dd1db3d1164381b66f8d7f1305b0dad55580f264cdbc2a0e0762d8862f492aad",
+        "fileHash": "e9b4a26f8373aa1ccf1a9257272ffe2d1159496d9c17e4871b859ef7574c9056",
+        "excerpt": "public class Target { public int run() { return 2; } }"
+      }
+    },
+    {
+      "kind": "modified",
+      "name": "run",
+      "key": "b.Target#run/0",
+      "language": "java",
+      "contractChanged": false,
+      "before": {
+        "path": "backend/b/Target.java",
+        "range": {
+          "startLine": 2,
+          "endLine": 2
+        },
+        "revision": "tree-sha256:86bb3497a219782c2f8c116a21fe117ae1b7f566b3ea9a6b6a39018746391451",
+        "fileHash": "348b07628db2c793993b980125169b03b52ad5356c04f6c54d881dda83e6e603",
+        "excerpt": "public class Target { public int run() { return 1; } }"
+      },
+      "after": {
+        "path": "backend/b/Target.java",
+        "range": {
+          "startLine": 2,
+          "endLine": 2
+        },
+        "revision": "tree-sha256:dd1db3d1164381b66f8d7f1305b0dad55580f264cdbc2a0e0762d8862f492aad",
+        "fileHash": "e9b4a26f8373aa1ccf1a9257272ffe2d1159496d9c17e4871b859ef7574c9056",
+        "excerpt": "public class Target { public int run() { return 2; } }"
+      }
+    }
+  ],
+  "impact": {
+    "direct": [
+      {
+        "kind": "import",
+        "fromPath": "backend/Caller.java",
+        "toPath": "backend/a/Target.java",
+        "targetKey": "a.Target",
+        "confidence": "high",
+        "reason": "Java qualified import or same-package type resolves to supplied source",
+        "evidence": {
+          "path": "backend/Caller.java",
+          "range": {
+            "startLine": 2,
+            "endLine": 2
+          },
+          "revision": "tree-sha256:86bb3497a219782c2f8c116a21fe117ae1b7f566b3ea9a6b6a39018746391451",
+          "fileHash": "a1aab558052caeea45ce53962b9306053f365cbd9d7495df9741dc5998e45d9a",
+          "excerpt": "import a.Target;"
+        },
+        "targetEvidence": {
+          "path": "backend/a/Target.java",
+          "range": {
+            "startLine": 2,
+            "endLine": 2
+          },
+          "revision": "tree-sha256:86bb3497a219782c2f8c116a21fe117ae1b7f566b3ea9a6b6a39018746391451",
+          "fileHash": "8975900bb8ad28d30e1d27a9da5e6b98b6a6340d8401749369cd611ebeeb173f",
+          "excerpt": "public class Target { public int run() { return 1; } }"
+        }
+      },
+      {
+        "kind": "import",
+        "fromPath": "backend/Caller.java",
+        "toPath": "backend/b/Target.java",
+        "targetKey": "b.Target",
+        "confidence": "high",
+        "reason": "Java qualified import or same-package type resolves to supplied source",
+        "evidence": {
+          "path": "backend/Caller.java",
+          "range": {
+            "startLine": 3,
+            "endLine": 3
+          },
+          "revision": "tree-sha256:86bb3497a219782c2f8c116a21fe117ae1b7f566b3ea9a6b6a39018746391451",
+          "fileHash": "a1aab558052caeea45ce53962b9306053f365cbd9d7495df9741dc5998e45d9a",
+          "excerpt": "import b.Target;"
+        },
+        "targetEvidence": {
+          "path": "backend/b/Target.java",
+          "range": {
+            "startLine": 2,
+            "endLine": 2
+          },
+          "revision": "tree-sha256:86bb3497a219782c2f8c116a21fe117ae1b7f566b3ea9a6b6a39018746391451",
+          "fileHash": "348b07628db2c793993b980125169b03b52ad5356c04f6c54d881dda83e6e603",
+          "excerpt": "public class Target { public int run() { return 1; } }"
+        }
+      },
+      {
+        "kind": "type",
+        "fromPath": "backend/Caller.java",
+        "toPath": "backend/a/Target.java",
+        "targetKey": "a.Target",
+        "confidence": "high",
+        "reason": "Java qualified import or same-package type resolves to supplied source",
+        "evidence": {
+          "path": "backend/Caller.java",
+          "range": {
+            "startLine": 5,
+            "endLine": 5
+          },
+          "revision": "tree-sha256:86bb3497a219782c2f8c116a21fe117ae1b7f566b3ea9a6b6a39018746391451",
+          "fileHash": "a1aab558052caeea45ce53962b9306053f365cbd9d7495df9741dc5998e45d9a",
+          "excerpt": " Target target;"
+        },
+        "targetEvidence": {
+          "path": "backend/a/Target.java",
+          "range": {
+            "startLine": 2,
+            "endLine": 2
+          },
+          "revision": "tree-sha256:86bb3497a219782c2f8c116a21fe117ae1b7f566b3ea9a6b6a39018746391451",
+          "fileHash": "8975900bb8ad28d30e1d27a9da5e6b98b6a6340d8401749369cd611ebeeb173f",
+          "excerpt": "public class Target { public int run() { return 1; } }"
+        }
+      },
+      {
+        "kind": "call",
+        "fromPath": "backend/Caller.java",
+        "toPath": "backend/a/Target.java",
+        "targetKey": "a.Target#run/0",
+        "confidence": "medium",
+        "reason": "Lexical receiver type and unique method name/arity match; no runtime dispatch proof",
+        "evidence": {
+          "path": "backend/Caller.java",
+          "range": {
+            "startLine": 6,
+            "endLine": 6
+          },
+          "revision": "tree-sha256:86bb3497a219782c2f8c116a21fe117ae1b7f566b3ea9a6b6a39018746391451",
+          "fileHash": "a1aab558052caeea45ce53962b9306053f365cbd9d7495df9741dc5998e45d9a",
+          "excerpt": " void use(){ target.run(); } // ambiguous-import-receiver"
+        },
+        "targetEvidence": {
+          "path": "backend/a/Target.java",
+          "range": {
+            "startLine": 2,
+            "endLine": 2
+          },
+          "revision": "tree-sha256:86bb3497a219782c2f8c116a21fe117ae1b7f566b3ea9a6b6a39018746391451",
+          "fileHash": "8975900bb8ad28d30e1d27a9da5e6b98b6a6340d8401749369cd611ebeeb173f",
+          "excerpt": "public class Target { public int run() { return 1; } }"
+        }
+      },
+      {
+        "kind": "import",
+        "fromPath": "backend/Caller.java",
+        "toPath": "backend/a/Target.java",
+        "targetKey": "a.Target",
+        "confidence": "high",
+        "reason": "Java qualified import or same-package type resolves to supplied source",
+        "evidence": {
+          "path": "backend/Caller.java",
+          "range": {
+            "startLine": 2,
+            "endLine": 2
+          },
+          "revision": "tree-sha256:dd1db3d1164381b66f8d7f1305b0dad55580f264cdbc2a0e0762d8862f492aad",
+          "fileHash": "a1aab558052caeea45ce53962b9306053f365cbd9d7495df9741dc5998e45d9a",
+          "excerpt": "import a.Target;"
+        },
+        "targetEvidence": {
+          "path": "backend/a/Target.java",
+          "range": {
+            "startLine": 2,
+            "endLine": 2
+          },
+          "revision": "tree-sha256:dd1db3d1164381b66f8d7f1305b0dad55580f264cdbc2a0e0762d8862f492aad",
+          "fileHash": "d3cd92707954342015ca2a17c62667b79bbe02c54115f3447a0e887e4ac065fb",
+          "excerpt": "public class Target { public int run() { return 2; } }"
+        }
+      },
+      {
+        "kind": "import",
+        "fromPath": "backend/Caller.java",
+        "toPath": "backend/b/Target.java",
+        "targetKey": "b.Target",
+        "confidence": "high",
+        "reason": "Java qualified import or same-package type resolves to supplied source",
+        "evidence": {
+          "path": "backend/Caller.java",
+          "range": {
+            "startLine": 3,
+            "endLine": 3
+          },
+          "revision": "tree-sha256:dd1db3d1164381b66f8d7f1305b0dad55580f264cdbc2a0e0762d8862f492aad",
+          "fileHash": "a1aab558052caeea45ce53962b9306053f365cbd9d7495df9741dc5998e45d9a",
+          "excerpt": "import b.Target;"
+        },
+        "targetEvidence": {
+          "path": "backend/b/Target.java",
+          "range": {
+            "startLine": 2,
+            "endLine": 2
+          },
+          "revision": "tree-sha256:dd1db3d1164381b66f8d7f1305b0dad55580f264cdbc2a0e0762d8862f492aad",
+          "fileHash": "e9b4a26f8373aa1ccf1a9257272ffe2d1159496d9c17e4871b859ef7574c9056",
+          "excerpt": "public class Target { public int run() { return 2; } }"
+        }
+      },
+      {
+        "kind": "type",
+        "fromPath": "backend/Caller.java",
+        "toPath": "backend/a/Target.java",
+        "targetKey": "a.Target",
+        "confidence": "high",
+        "reason": "Java qualified import or same-package type resolves to supplied source",
+        "evidence": {
+          "path": "backend/Caller.java",
+          "range": {
+            "startLine": 5,
+            "endLine": 5
+          },
+          "revision": "tree-sha256:dd1db3d1164381b66f8d7f1305b0dad55580f264cdbc2a0e0762d8862f492aad",
+          "fileHash": "a1aab558052caeea45ce53962b9306053f365cbd9d7495df9741dc5998e45d9a",
+          "excerpt": " Target target;"
+        },
+        "targetEvidence": {
+          "path": "backend/a/Target.java",
+          "range": {
+            "startLine": 2,
+            "endLine": 2
+          },
+          "revision": "tree-sha256:dd1db3d1164381b66f8d7f1305b0dad55580f264cdbc2a0e0762d8862f492aad",
+          "fileHash": "d3cd92707954342015ca2a17c62667b79bbe02c54115f3447a0e887e4ac065fb",
+          "excerpt": "public class Target { public int run() { return 2; } }"
+        }
+      },
+      {
+        "kind": "call",
+        "fromPath": "backend/Caller.java",
+        "toPath": "backend/a/Target.java",
+        "targetKey": "a.Target#run/0",
+        "confidence": "medium",
+        "reason": "Lexical receiver type and unique method name/arity match; no runtime dispatch proof",
+        "evidence": {
+          "path": "backend/Caller.java",
+          "range": {
+            "startLine": 6,
+            "endLine": 6
+          },
+          "revision": "tree-sha256:dd1db3d1164381b66f8d7f1305b0dad55580f264cdbc2a0e0762d8862f492aad",
+          "fileHash": "a1aab558052caeea45ce53962b9306053f365cbd9d7495df9741dc5998e45d9a",
+          "excerpt": " void use(){ target.run(); } // ambiguous-import-receiver"
+        },
+        "targetEvidence": {
+          "path": "backend/a/Target.java",
+          "range": {
+            "startLine": 2,
+            "endLine": 2
+          },
+          "revision": "tree-sha256:dd1db3d1164381b66f8d7f1305b0dad55580f264cdbc2a0e0762d8862f492aad",
+          "fileHash": "d3cd92707954342015ca2a17c62667b79bbe02c54115f3447a0e887e4ac065fb",
+          "excerpt": "public class Target { public int run() { return 2; } }"
+        }
+      }
+    ],
+    "indirect": []
+  },
+  "findings": [],
+  "guidance": {
+    "task": "Conflicting explicit imports cannot acquire a guessed first-import receiver target (source is semantically invalid)",
+    "ruleSetVersion": "independent-adversarial-v1",
+    "approvalGap": "No human approval is inferred. Reviewed examples/exceptions are assertions from supplied configuration; simulation records are demonstrations only.",
+    "rules": [
+      {
+        "id": "independent/http-contract",
+        "kind": "endpoint-contract-change",
+        "owner": "synthetic-qa",
+        "version": "independent-adversarial-v1",
+        "severity": "warning",
+        "instruction": "endpoint-contract-change",
+        "examples": []
+      }
+    ]
+  },
+  "unknowns": [],
+  "focusedTests": [],
+  "coverage": {
+    "complete": false,
+    "fullRegressionMayBeSkipped": false,
+    "sourceFiles": {
+      "baseline": 3,
+      "candidate": 3
+    },
+    "excluded": {
+      "baseline": [],
+      "candidate": []
+    },
+    "limitations": [
+      "Source-only analysis; no Java/TypeScript semantic compilation, runtime dispatch, reflection, DI wiring, proxy/origin verification or transitive external package sources",
+      "Edges are evidence-backed approximations; indirect file dependencies do not prove execution",
+      "Renames inferred only for identical declaration key/signature/body; edited renames remain delete/add",
+      "Unknown syntax and unresolved/dynamic dependencies remain visible; passing fixture tests is not private-repository acceptance"
+    ]
+  },
+  "cache": {
+    "report": "disabled",
+    "parsedFiles": 6,
+    "reusedFiles": 0,
+    "invalidEntries": 0
+  },
+  "metrics": {
+    "elapsedMs": 22.5,
+    "bytesRead": 532,
+    "reportCacheHit": false
+  }
+}

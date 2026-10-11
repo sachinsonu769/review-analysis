@@ -1,0 +1,9 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+	fsmonitor = /inputs/foreign-owned-git/.git/qa-fsmonitor
+[user]
+	name = Synthetic QA
+	email = synthetic@example.invalid

@@ -1,0 +1,100 @@
+{
+  "id": "01-http-lexical-static-dynamic",
+  "description": "Global receiver and destructured parameter shadows; static templates versus constant concatenation; literal object override order",
+  "status": "pass",
+  "exitCode": 0,
+  "sourcePaths": {
+    "baseline": "/tmp/review-analysis-adversarial-v2-NZrPxG/01-http-lexical-static-dynamic/baseline",
+    "candidate": "/tmp/review-analysis-adversarial-v2-NZrPxG/01-http-lexical-static-dynamic/candidate"
+  },
+  "sourceHashes": {
+    "baseline": {
+      "backend/Resource.java": "3804feef0d2b303327d83f58c4c2c6d33f75f79ba6aa914d248183fa52cf67c4",
+      "frontend/http.ts": "aee5c10cb9dd8ad797e5d6c43c9c1766abbe3bcf1b81edfcba01463ff2a92588"
+    },
+    "candidate": {
+      "backend/Resource.java": "9cc83dd7593fb95d69dde305e4e434d34375cb35681b969b0077437544f752b2",
+      "frontend/http.ts": "aee5c10cb9dd8ad797e5d6c43c9c1766abbe3bcf1b81edfcba01463ff2a92588"
+    }
+  },
+  "evidence": {
+    "checkedEvidenceRecords": 114,
+    "errors": []
+  },
+  "assertions": [
+    {
+      "name": "positive-global",
+      "status": "pass"
+    },
+    {
+      "name": "positive-template",
+      "status": "pass"
+    },
+    {
+      "name": "positive-member",
+      "status": "pass"
+    },
+    {
+      "name": "positive-axios",
+      "status": "pass"
+    },
+    {
+      "name": "positive-last-property",
+      "status": "pass"
+    },
+    {
+      "name": "negative-window",
+      "status": "pass"
+    },
+    {
+      "name": "negative-self",
+      "status": "pass"
+    },
+    {
+      "name": "negative-globalthis",
+      "status": "pass"
+    },
+    {
+      "name": "negative-fetch",
+      "status": "pass"
+    },
+    {
+      "name": "negative-axios",
+      "status": "pass"
+    },
+    {
+      "name": "negative-string",
+      "status": "pass"
+    },
+    {
+      "name": "negative-comment",
+      "status": "pass"
+    },
+    {
+      "name": "dynamic-concat",
+      "status": "pass"
+    },
+    {
+      "name": "dynamic-options",
+      "status": "pass"
+    },
+    {
+      "name": "dynamic-spread",
+      "status": "pass"
+    },
+    {
+      "name": "all source evidence hashes/ranges/excerpts/revisions independently reproduce",
+      "status": "pass"
+    },
+    {
+      "name": "readable actual CLI exits 0",
+      "status": "pass"
+    }
+  ],
+  "reportStats": {
+    "changes": 2,
+    "directEdges": 10,
+    "unknowns": 70,
+    "sourceBuildHash": "ca04bac50b7584aaafd9d5602acc8055152e81e25de5fa1b15bb710f76f53ac9"
+  }
+}

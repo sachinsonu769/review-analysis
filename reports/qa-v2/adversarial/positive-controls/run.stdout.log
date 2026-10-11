@@ -1,0 +1,3 @@
+17-positive-exact-java-arity: pass 
+18-positive-unconstrained-template: pass 
+{"cases":2,"passed":2,"failed":0,"notRun":0,"manifestErrorsAfter":[]}

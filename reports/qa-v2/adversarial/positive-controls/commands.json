@@ -1,0 +1,82 @@
+[
+  {
+    "command": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "args": [
+      "/tmp/review-analysis-qa-v2-fsn7g676/src/cli.js",
+      "analyze",
+      "--baseline",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/positive-controls/17-positive-exact-java-arity/baseline",
+      "--candidate",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/positive-controls/17-positive-exact-java-arity/candidate",
+      "--rules",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/positive-controls/rules.json",
+      "--as-of",
+      "2026-10-11",
+      "--task",
+      "One and ten arguments select only matching formal arity and retain direct call evidence",
+      "--format",
+      "json"
+    ],
+    "cwd": "/tmp/review-analysis-qa-v2-fsn7g676"
+  },
+  {
+    "command": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "args": [
+      "/tmp/review-analysis-qa-v2-fsn7g676/src/cli.js",
+      "analyze",
+      "--baseline",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/positive-controls/17-positive-exact-java-arity/baseline",
+      "--candidate",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/positive-controls/17-positive-exact-java-arity/candidate",
+      "--rules",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/positive-controls/rules.json",
+      "--as-of",
+      "2026-10-11",
+      "--task",
+      "One and ten arguments select only matching formal arity and retain direct call evidence",
+      "--format",
+      "readable"
+    ],
+    "cwd": "/tmp/review-analysis-qa-v2-fsn7g676"
+  },
+  {
+    "command": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "args": [
+      "/tmp/review-analysis-qa-v2-fsn7g676/src/cli.js",
+      "analyze",
+      "--baseline",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/positive-controls/18-positive-unconstrained-template/baseline",
+      "--candidate",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/positive-controls/18-positive-unconstrained-template/candidate",
+      "--rules",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/positive-controls/rules.json",
+      "--as-of",
+      "2026-10-11",
+      "--task",
+      "Unconstrained URI template consumers remain mapped after constrained route suppression",
+      "--format",
+      "json"
+    ],
+    "cwd": "/tmp/review-analysis-qa-v2-fsn7g676"
+  },
+  {
+    "command": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "args": [
+      "/tmp/review-analysis-qa-v2-fsn7g676/src/cli.js",
+      "analyze",
+      "--baseline",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/positive-controls/18-positive-unconstrained-template/baseline",
+      "--candidate",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/positive-controls/18-positive-unconstrained-template/candidate",
+      "--rules",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/positive-controls/rules.json",
+      "--as-of",
+      "2026-10-11",
+      "--task",
+      "Unconstrained URI template consumers remain mapped after constrained route suppression",
+      "--format",
+      "readable"
+    ],
+    "cwd": "/tmp/review-analysis-qa-v2-fsn7g676"
+  }
+]

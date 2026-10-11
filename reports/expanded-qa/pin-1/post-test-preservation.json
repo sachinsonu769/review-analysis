@@ -1,0 +1,19 @@
+{
+  "status": "pass",
+  "pinnedSourceManifestFilesUnchanged": 951,
+  "mountedInputFilesUnchanged": 37,
+  "gitIndexPreserved": true,
+  "suite": {
+    "tests": 121,
+    "pass": 121,
+    "fail": 0,
+    "skipped": 0
+  },
+  "browserApi": {
+    "checkpoints": 37,
+    "pass": 37,
+    "fail": 0
+  },
+  "image": "sha256:56ce7b94faf0f817f0fc13a1358b6650ff0d950bbd68198f070d649e1c23c819",
+  "build": "0427f5fed8a45a3d4dbc5523f1d0f8afb57949bac0df1f9bef249fd73ae31061"
+}

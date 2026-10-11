@@ -1,0 +1,58 @@
+Review Analysis — advisory source report
+Analyzer 0.1.0; build 8ee7fcacee9a1b276b2bfab2665d8d3ab771e40eee5f3924f1f301192426e68f
+As of 2026-10-11
+Baseline: tree-sha256:86bb3497a219782c2f8c116a21fe117ae1b7f566b3ea9a6b6a39018746391451
+Candidate: tree-sha256:dd1db3d1164381b66f8d7f1305b0dad55580f264cdbc2a0e0762d8862f492aad
+
+Task: Conflicting explicit imports cannot acquire a guessed first-import receiver target (source is semantically invalid)
+Applicable rules:
+- independent/http-contract vindependent-adversarial-v1; owner synthetic-qa: endpoint-contract-change
+No human approval is inferred. Reviewed examples/exceptions are assertions from supplied configuration; simulation records are demonstrations only.
+
+Changed declarations (4):
+- modified: a.Target; body/path changed
+  Before: backend/a/Target.java:2-2 @ tree-sha256:86bb3497a219782c2f8c116a21fe117ae1b7f566b3ea9a6b6a39018746391451 (sha256 8975900bb8ad28d30e1d27a9da5e6b98b6a6340d8401749369cd611ebeeb173f)
+  After: backend/a/Target.java:2-2 @ tree-sha256:dd1db3d1164381b66f8d7f1305b0dad55580f264cdbc2a0e0762d8862f492aad (sha256 d3cd92707954342015ca2a17c62667b79bbe02c54115f3447a0e887e4ac065fb)
+- modified: a.Target#run/0; body/path changed
+  Before: backend/a/Target.java:2-2 @ tree-sha256:86bb3497a219782c2f8c116a21fe117ae1b7f566b3ea9a6b6a39018746391451 (sha256 8975900bb8ad28d30e1d27a9da5e6b98b6a6340d8401749369cd611ebeeb173f)
+  After: backend/a/Target.java:2-2 @ tree-sha256:dd1db3d1164381b66f8d7f1305b0dad55580f264cdbc2a0e0762d8862f492aad (sha256 d3cd92707954342015ca2a17c62667b79bbe02c54115f3447a0e887e4ac065fb)
+- modified: b.Target; body/path changed
+  Before: backend/b/Target.java:2-2 @ tree-sha256:86bb3497a219782c2f8c116a21fe117ae1b7f566b3ea9a6b6a39018746391451 (sha256 348b07628db2c793993b980125169b03b52ad5356c04f6c54d881dda83e6e603)
+  After: backend/b/Target.java:2-2 @ tree-sha256:dd1db3d1164381b66f8d7f1305b0dad55580f264cdbc2a0e0762d8862f492aad (sha256 e9b4a26f8373aa1ccf1a9257272ffe2d1159496d9c17e4871b859ef7574c9056)
+- modified: b.Target#run/0; body/path changed
+  Before: backend/b/Target.java:2-2 @ tree-sha256:86bb3497a219782c2f8c116a21fe117ae1b7f566b3ea9a6b6a39018746391451 (sha256 348b07628db2c793993b980125169b03b52ad5356c04f6c54d881dda83e6e603)
+  After: backend/b/Target.java:2-2 @ tree-sha256:dd1db3d1164381b66f8d7f1305b0dad55580f264cdbc2a0e0762d8862f492aad (sha256 e9b4a26f8373aa1ccf1a9257272ffe2d1159496d9c17e4871b859ef7574c9056)
+
+Direct dependencies (8):
+- backend/Caller.java -> backend/a/Target.java (import, high): Java qualified import or same-package type resolves to supplied source
+  backend/Caller.java:2-2 @ tree-sha256:86bb3497a219782c2f8c116a21fe117ae1b7f566b3ea9a6b6a39018746391451 (sha256 a1aab558052caeea45ce53962b9306053f365cbd9d7495df9741dc5998e45d9a)
+- backend/Caller.java -> backend/b/Target.java (import, high): Java qualified import or same-package type resolves to supplied source
+  backend/Caller.java:3-3 @ tree-sha256:86bb3497a219782c2f8c116a21fe117ae1b7f566b3ea9a6b6a39018746391451 (sha256 a1aab558052caeea45ce53962b9306053f365cbd9d7495df9741dc5998e45d9a)
+- backend/Caller.java -> backend/a/Target.java (type, high): Java qualified import or same-package type resolves to supplied source
+  backend/Caller.java:5-5 @ tree-sha256:86bb3497a219782c2f8c116a21fe117ae1b7f566b3ea9a6b6a39018746391451 (sha256 a1aab558052caeea45ce53962b9306053f365cbd9d7495df9741dc5998e45d9a)
+- backend/Caller.java -> backend/a/Target.java (call, medium): Lexical receiver type and unique method name/arity match; no runtime dispatch proof
+  backend/Caller.java:6-6 @ tree-sha256:86bb3497a219782c2f8c116a21fe117ae1b7f566b3ea9a6b6a39018746391451 (sha256 a1aab558052caeea45ce53962b9306053f365cbd9d7495df9741dc5998e45d9a)
+- backend/Caller.java -> backend/a/Target.java (import, high): Java qualified import or same-package type resolves to supplied source
+  backend/Caller.java:2-2 @ tree-sha256:dd1db3d1164381b66f8d7f1305b0dad55580f264cdbc2a0e0762d8862f492aad (sha256 a1aab558052caeea45ce53962b9306053f365cbd9d7495df9741dc5998e45d9a)
+- backend/Caller.java -> backend/b/Target.java (import, high): Java qualified import or same-package type resolves to supplied source
+  backend/Caller.java:3-3 @ tree-sha256:dd1db3d1164381b66f8d7f1305b0dad55580f264cdbc2a0e0762d8862f492aad (sha256 a1aab558052caeea45ce53962b9306053f365cbd9d7495df9741dc5998e45d9a)
+- backend/Caller.java -> backend/a/Target.java (type, high): Java qualified import or same-package type resolves to supplied source
+  backend/Caller.java:5-5 @ tree-sha256:dd1db3d1164381b66f8d7f1305b0dad55580f264cdbc2a0e0762d8862f492aad (sha256 a1aab558052caeea45ce53962b9306053f365cbd9d7495df9741dc5998e45d9a)
+- backend/Caller.java -> backend/a/Target.java (call, medium): Lexical receiver type and unique method name/arity match; no runtime dispatch proof
+  backend/Caller.java:6-6 @ tree-sha256:dd1db3d1164381b66f8d7f1305b0dad55580f264cdbc2a0e0762d8862f492aad (sha256 a1aab558052caeea45ce53962b9306053f365cbd9d7495df9741dc5998e45d9a)
+
+Likely indirect dependencies (0):
+
+Architecture findings (0):
+
+Unknowns (0):
+
+Focused tests (0; recommendations, not executed by analyzer):
+
+Coverage incomplete. This report never authorizes skipping full regression.
+- Source-only analysis; no Java/TypeScript semantic compilation, runtime dispatch, reflection, DI wiring, proxy/origin verification or transitive external package sources
+- Edges are evidence-backed approximations; indirect file dependencies do not prove execution
+- Renames inferred only for identical declaration key/signature/body; edited renames remain delete/add
+- Unknown syntax and unresolved/dynamic dependencies remain visible; passing fixture tests is not private-repository acceptance
+Cache: {"report":"disabled","parsedFiles":6,"reusedFiles":0,"invalidEntries":0}
+Analysis metrics: {"elapsedMs":23.38,"bytesRead":532,"reportCacheHit":false}

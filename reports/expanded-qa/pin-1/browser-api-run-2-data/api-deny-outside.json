@@ -1,0 +1,15 @@
+{
+  "status": 400,
+  "headers": {
+    "cache-control": "no-store",
+    "connection": "keep-alive",
+    "content-type": "application/json; charset=utf-8",
+    "date": "Sun, 11 Oct 2026 17:48:27 GMT",
+    "keep-alive": "timeout=5",
+    "transfer-encoding": "chunked",
+    "x-content-type-options": "nosniff"
+  },
+  "body": {
+    "error": "Input root must be within a configured read-only /inputs mount or bundled fixtures"
+  }
+}

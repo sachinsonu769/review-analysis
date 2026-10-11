@@ -1,0 +1,58 @@
+{
+  "recordedAt": "2026-10-11T17:24:56.190Z",
+  "expectation": "fixed source blocks hook and avoids clean-worktree false deletion",
+  "runtime": {
+    "node": "v24.19.0",
+    "git": "git version 2.52.0"
+  },
+  "reviewedSources": {
+    "src/snapshot.js": "40218ed972622892756bd9d8c027d6d8d11e6ca4ceec95d796e9efbb038766ac",
+    "src/engine.js": "7b6033b2c2149ddf61394cf10f82e10cf7bba0c873b65620d257e5cbbf1abc02",
+    "src/cache.js": "6876a054527bdd8645d527c015a7c196d9419ccad7ec605bdc533234eb239419",
+    "src/cli.js": "2745d4ca16e4013d26eb69ae1816ff72bc80ab3fa9d5dbb5b7835a622d3f1d93",
+    "app/workspace.ts": "9fa9107e9c9b95a80b6b1b3813d1af83c1de5966e54bef2503a1a10416df63db"
+  },
+  "fsmonitor": {
+    "repository": "/workspace/review-analysis-deliverables/expanded-architect-review/cache-review/repro-9NLM5m/fsmonitor-repository",
+    "configuredHook": "/workspace/review-analysis-deliverables/expanded-architect-review/cache-review/repro-9NLM5m/fsmonitor-repository/.git/synthetic-fsmonitor",
+    "markerPath": "/workspace/review-analysis-deliverables/expanded-architect-review/cache-review/repro-9NLM5m/fsmonitor-repository/executed-by-repository-hook.ts",
+    "markerBefore": false,
+    "markerAfter": false,
+    "markerSource": null,
+    "returnedSnapshotFiles": [
+      "a.ts"
+    ],
+    "dirty": false
+  },
+  "cleanGitWorktree": {
+    "repository": "/workspace/review-analysis-deliverables/expanded-architect-review/cache-review/repro-9NLM5m/clean-exclusion-repository",
+    "head": "562dcb08d94fedd823319be1c2719a30bbd5251c",
+    "status": "",
+    "candidateDirty": false,
+    "sourceFiles": {
+      "baseline": 1,
+      "candidate": 1
+    },
+    "changes": [],
+    "exclusions": {
+      "baseline": [
+        {
+          "path": "build/b.ts",
+          "reason": "generated/vendor directory"
+        }
+      ],
+      "candidate": [
+        {
+          "path": ".git",
+          "reason": "generated/vendor directory"
+        },
+        {
+          "path": "build",
+          "reason": "generated/vendor directory"
+        }
+      ]
+    },
+    "fullRegressionMayBeSkipped": false,
+    "advisory": true
+  }
+}

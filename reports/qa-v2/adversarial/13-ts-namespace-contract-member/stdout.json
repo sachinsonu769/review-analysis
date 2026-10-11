@@ -1,0 +1,226 @@
+{
+  "schemaVersion": "1.0",
+  "analyzer": {
+    "version": "0.1.0",
+    "sourceBuildHash": "ca04bac50b7584aaafd9d5602acc8055152e81e25de5fa1b15bb710f76f53ac9",
+    "parsers": {
+      "java": "java-parser@3.0.1",
+      "typescript": "typescript@5.9.3"
+    }
+  },
+  "advisory": true,
+  "asOf": "2026-10-11",
+  "provenance": {
+    "baseline": {
+      "root": "/tmp/review-analysis-adversarial-v2-NZrPxG/13-ts-namespace-contract-member/baseline",
+      "type": "directory",
+      "revision": "tree-sha256:99c8677a3068ca5ed295165291ae5b5da5e8a7864f7aa090e0fd822372c7198a",
+      "contentHash": "99c8677a3068ca5ed295165291ae5b5da5e8a7864f7aa090e0fd822372c7198a",
+      "dirty": false
+    },
+    "candidate": {
+      "root": "/tmp/review-analysis-adversarial-v2-NZrPxG/13-ts-namespace-contract-member/candidate",
+      "type": "directory",
+      "revision": "tree-sha256:c0d19991c5788f23a7094506bddcb0f57aff5d2630cc35bc6bbeb1a8bfe88142",
+      "contentHash": "c0d19991c5788f23a7094506bddcb0f57aff5d2630cc35bc6bbeb1a8bfe88142",
+      "dirty": false
+    },
+    "rulesHash": "90f33c2c080aa463115b0ef7e4058bb9bf0da4944dff79ed58eae2f01f9cd3f1",
+    "baselineRulesHash": "90f33c2c080aa463115b0ef7e4058bb9bf0da4944dff79ed58eae2f01f9cd3f1",
+    "cacheKey": "b9548ad5acf9a0faf95ae9f2f6a26b19b63ae25562a28710ba4c72098ffba86f"
+  },
+  "changes": [
+    {
+      "kind": "modified",
+      "name": "Api",
+      "key": "Api",
+      "language": "typescript",
+      "contractChanged": false,
+      "before": {
+        "path": "frontend/lib.ts",
+        "range": {
+          "startLine": 1,
+          "endLine": 1
+        },
+        "revision": "tree-sha256:99c8677a3068ca5ed295165291ae5b5da5e8a7864f7aa090e0fd822372c7198a",
+        "fileHash": "5d1eb563b8d431a3baae70baf61caa769b8ed1b384c71859ff060d2a36311950",
+        "excerpt": "export namespace Api { export function run() { return 1; } }"
+      },
+      "after": {
+        "path": "frontend/lib.ts",
+        "range": {
+          "startLine": 1,
+          "endLine": 1
+        },
+        "revision": "tree-sha256:c0d19991c5788f23a7094506bddcb0f57aff5d2630cc35bc6bbeb1a8bfe88142",
+        "fileHash": "ae28fabd402488e451dd36e907c07c5edbef985ea39b7304e2ad681ec13cfba0",
+        "excerpt": "export namespace Api { export function run() { return 2; } }"
+      }
+    },
+    {
+      "kind": "modified",
+      "name": "run",
+      "key": "Api.run",
+      "language": "typescript",
+      "contractChanged": false,
+      "before": {
+        "path": "frontend/lib.ts",
+        "range": {
+          "startLine": 1,
+          "endLine": 1
+        },
+        "revision": "tree-sha256:99c8677a3068ca5ed295165291ae5b5da5e8a7864f7aa090e0fd822372c7198a",
+        "fileHash": "5d1eb563b8d431a3baae70baf61caa769b8ed1b384c71859ff060d2a36311950",
+        "excerpt": "export namespace Api { export function run() { return 1; } }"
+      },
+      "after": {
+        "path": "frontend/lib.ts",
+        "range": {
+          "startLine": 1,
+          "endLine": 1
+        },
+        "revision": "tree-sha256:c0d19991c5788f23a7094506bddcb0f57aff5d2630cc35bc6bbeb1a8bfe88142",
+        "fileHash": "ae28fabd402488e451dd36e907c07c5edbef985ea39b7304e2ad681ec13cfba0",
+        "excerpt": "export namespace Api { export function run() { return 2; } }"
+      }
+    }
+  ],
+  "impact": {
+    "direct": [
+      {
+        "kind": "import",
+        "fromPath": "frontend/consumer.ts",
+        "toPath": "frontend/lib.ts",
+        "targetKey": null,
+        "confidence": "high",
+        "reason": "Relative import resolves to supplied source file",
+        "evidence": {
+          "path": "frontend/consumer.ts",
+          "range": {
+            "startLine": 1,
+            "endLine": 1
+          },
+          "revision": "tree-sha256:99c8677a3068ca5ed295165291ae5b5da5e8a7864f7aa090e0fd822372c7198a",
+          "fileHash": "0ea13582782a29f0efecfd6f084810a4fa4baabf97fc1d99854e10f651fce687",
+          "excerpt": "import * as api from './lib';"
+        },
+        "targetEvidence": {
+          "path": "frontend/lib.ts",
+          "range": {
+            "startLine": 1,
+            "endLine": 1
+          },
+          "revision": "tree-sha256:99c8677a3068ca5ed295165291ae5b5da5e8a7864f7aa090e0fd822372c7198a",
+          "fileHash": "5d1eb563b8d431a3baae70baf61caa769b8ed1b384c71859ff060d2a36311950",
+          "excerpt": "export namespace Api { export function run() { return 1; } }"
+        }
+      },
+      {
+        "kind": "import",
+        "fromPath": "frontend/consumer.ts",
+        "toPath": "frontend/lib.ts",
+        "targetKey": null,
+        "confidence": "high",
+        "reason": "Relative import resolves to supplied source file",
+        "evidence": {
+          "path": "frontend/consumer.ts",
+          "range": {
+            "startLine": 1,
+            "endLine": 1
+          },
+          "revision": "tree-sha256:c0d19991c5788f23a7094506bddcb0f57aff5d2630cc35bc6bbeb1a8bfe88142",
+          "fileHash": "0ea13582782a29f0efecfd6f084810a4fa4baabf97fc1d99854e10f651fce687",
+          "excerpt": "import * as api from './lib';"
+        },
+        "targetEvidence": {
+          "path": "frontend/lib.ts",
+          "range": {
+            "startLine": 1,
+            "endLine": 1
+          },
+          "revision": "tree-sha256:c0d19991c5788f23a7094506bddcb0f57aff5d2630cc35bc6bbeb1a8bfe88142",
+          "fileHash": "ae28fabd402488e451dd36e907c07c5edbef985ea39b7304e2ad681ec13cfba0",
+          "excerpt": "export namespace Api { export function run() { return 2; } }"
+        }
+      }
+    ],
+    "indirect": []
+  },
+  "findings": [],
+  "guidance": {
+    "task": "Nested exported namespace method must use qualified member declaration or explicit uncertainty",
+    "ruleSetVersion": "independent-adversarial-v1",
+    "approvalGap": "No human approval is inferred. Reviewed examples/exceptions are assertions from supplied configuration; simulation records are demonstrations only.",
+    "rules": [
+      {
+        "id": "independent/http-contract",
+        "kind": "endpoint-contract-change",
+        "owner": "synthetic-qa",
+        "version": "independent-adversarial-v1",
+        "severity": "warning",
+        "instruction": "endpoint-contract-change",
+        "examples": []
+      }
+    ]
+  },
+  "unknowns": [
+    {
+      "reason": "unresolved-imported-member",
+      "detail": "run",
+      "evidence": {
+        "path": "frontend/consumer.ts",
+        "range": {
+          "startLine": 2,
+          "endLine": 2
+        },
+        "revision": "tree-sha256:99c8677a3068ca5ed295165291ae5b5da5e8a7864f7aa090e0fd822372c7198a",
+        "fileHash": "0ea13582782a29f0efecfd6f084810a4fa4baabf97fc1d99854e10f651fce687",
+        "excerpt": "export function use() { api.Api.run(); } // namespace-member"
+      }
+    },
+    {
+      "reason": "unresolved-imported-member",
+      "detail": "run",
+      "evidence": {
+        "path": "frontend/consumer.ts",
+        "range": {
+          "startLine": 2,
+          "endLine": 2
+        },
+        "revision": "tree-sha256:c0d19991c5788f23a7094506bddcb0f57aff5d2630cc35bc6bbeb1a8bfe88142",
+        "fileHash": "0ea13582782a29f0efecfd6f084810a4fa4baabf97fc1d99854e10f651fce687",
+        "excerpt": "export function use() { api.Api.run(); } // namespace-member"
+      }
+    }
+  ],
+  "focusedTests": [],
+  "coverage": {
+    "complete": false,
+    "fullRegressionMayBeSkipped": false,
+    "sourceFiles": {
+      "baseline": 2,
+      "candidate": 2
+    },
+    "excluded": {
+      "baseline": [],
+      "candidate": []
+    },
+    "limitations": [
+      "Source-only analysis; no Java/TypeScript semantic compilation, runtime dispatch, reflection, DI wiring, proxy/origin verification or transitive external package sources",
+      "Edges are evidence-backed approximations; indirect file dependencies do not prove execution",
+      "Renames inferred only for identical declaration key/signature/body; edited renames remain delete/add",
+      "Unknown syntax and unresolved/dynamic dependencies remain visible; passing fixture tests is not private-repository acceptance"
+    ]
+  },
+  "cache": {
+    "report": "disabled",
+    "parsedFiles": 4,
+    "reusedFiles": 0,
+    "invalidEntries": 0
+  },
+  "metrics": {
+    "elapsedMs": 34.89,
+    "bytesRead": 304,
+    "reportCacheHit": false
+  }
+}

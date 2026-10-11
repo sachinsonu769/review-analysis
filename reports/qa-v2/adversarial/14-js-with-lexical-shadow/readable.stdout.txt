@@ -1,0 +1,76 @@
+Review Analysis — advisory source report
+Analyzer 0.1.0; build ca04bac50b7584aaafd9d5602acc8055152e81e25de5fa1b15bb710f76f53ac9
+As of 2026-10-11
+Baseline: tree-sha256:711e0938538298114ccb5dd700490445e756f227c4727a72a7101e6dbee187cd
+Candidate: tree-sha256:20172821a390a42967242f9d0ad4454e61938398b5ffafa0e07c7a93a527c14d
+
+Task: Sloppy-script with object supplies custom fetch; outside global fetch remains a control
+Applicable rules:
+- independent/http-contract vindependent-adversarial-v1; owner synthetic-qa: endpoint-contract-change
+No human approval is inferred. Reviewed examples/exceptions are assertions from supplied configuration; simulation records are demonstrations only.
+
+Changed declarations (4):
+- modified: qa.Resource; body/path changed
+  Before: backend/Resource.java:5-10 @ tree-sha256:711e0938538298114ccb5dd700490445e756f227c4727a72a7101e6dbee187cd (sha256 3804feef0d2b303327d83f58c4c2c6d33f75f79ba6aa914d248183fa52cf67c4)
+  After: backend/Resource.java:5-10 @ tree-sha256:20172821a390a42967242f9d0ad4454e61938398b5ffafa0e07c7a93a527c14d (sha256 9e9c44affd6daae1cc4a1e4216829ec607ab4530301be37a8fb6ff54b8428641)
+- modified: qa.Resource#real/0; body/path changed
+  Before: backend/Resource.java:7-7 @ tree-sha256:711e0938538298114ccb5dd700490445e756f227c4727a72a7101e6dbee187cd (sha256 3804feef0d2b303327d83f58c4c2c6d33f75f79ba6aa914d248183fa52cf67c4)
+  After: backend/Resource.java:7-7 @ tree-sha256:20172821a390a42967242f9d0ad4454e61938398b5ffafa0e07c7a93a527c14d (sha256 9e9c44affd6daae1cc4a1e4216829ec607ab4530301be37a8fb6ff54b8428641)
+- modified: qa.Resource#fake/0; body/path changed
+  Before: backend/Resource.java:8-8 @ tree-sha256:711e0938538298114ccb5dd700490445e756f227c4727a72a7101e6dbee187cd (sha256 3804feef0d2b303327d83f58c4c2c6d33f75f79ba6aa914d248183fa52cf67c4)
+  After: backend/Resource.java:8-8 @ tree-sha256:20172821a390a42967242f9d0ad4454e61938398b5ffafa0e07c7a93a527c14d (sha256 9e9c44affd6daae1cc4a1e4216829ec607ab4530301be37a8fb6ff54b8428641)
+- modified: qa.Resource#post/0; body/path changed
+  Before: backend/Resource.java:9-9 @ tree-sha256:711e0938538298114ccb5dd700490445e756f227c4727a72a7101e6dbee187cd (sha256 3804feef0d2b303327d83f58c4c2c6d33f75f79ba6aa914d248183fa52cf67c4)
+  After: backend/Resource.java:9-9 @ tree-sha256:20172821a390a42967242f9d0ad4454e61938398b5ffafa0e07c7a93a527c14d (sha256 9e9c44affd6daae1cc4a1e4216829ec607ab4530301be37a8fb6ff54b8428641)
+
+Direct dependencies (2):
+- frontend/shadow.js -> backend/Resource.java (http, medium): Literal HTTP verb/path matches source Spring mapping; runtime origin/proxy not verified
+  frontend/shadow.js:4-4 @ tree-sha256:711e0938538298114ccb5dd700490445e756f227c4727a72a7101e6dbee187cd (sha256 106156234a0c6d6e3105e8ef6d1fd842d611025f4e211886999daf0ecb91cad7)
+- frontend/shadow.js -> backend/Resource.java (http, medium): Literal HTTP verb/path matches source Spring mapping; runtime origin/proxy not verified
+  frontend/shadow.js:4-4 @ tree-sha256:20172821a390a42967242f9d0ad4454e61938398b5ffafa0e07c7a93a527c14d (sha256 106156234a0c6d6e3105e8ef6d1fd842d611025f4e211886999daf0ecb91cad7)
+
+Likely indirect dependencies (0):
+
+Architecture findings (0):
+
+Unknowns (28):
+- external-or-missing-java-source: org.springframework.web.bind.annotation.GetMapping; backend/Resource.java:2-2 @ tree-sha256:711e0938538298114ccb5dd700490445e756f227c4727a72a7101e6dbee187cd (sha256 3804feef0d2b303327d83f58c4c2c6d33f75f79ba6aa914d248183fa52cf67c4)
+- external-or-missing-java-source: org.springframework.web.bind.annotation.PostMapping; backend/Resource.java:3-3 @ tree-sha256:711e0938538298114ccb5dd700490445e756f227c4727a72a7101e6dbee187cd (sha256 3804feef0d2b303327d83f58c4c2c6d33f75f79ba6aa914d248183fa52cf67c4)
+- external-or-missing-java-source: org.springframework.web.bind.annotation.RequestMapping; backend/Resource.java:4-4 @ tree-sha256:711e0938538298114ccb5dd700490445e756f227c4727a72a7101e6dbee187cd (sha256 3804feef0d2b303327d83f58c4c2c6d33f75f79ba6aa914d248183fa52cf67c4)
+- external-or-missing-java-source: org.springframework.web.bind.annotation.RequestMapping; backend/Resource.java:5-5 @ tree-sha256:711e0938538298114ccb5dd700490445e756f227c4727a72a7101e6dbee187cd (sha256 3804feef0d2b303327d83f58c4c2c6d33f75f79ba6aa914d248183fa52cf67c4)
+- external-or-missing-java-source: org.springframework.web.bind.annotation.GetMapping; backend/Resource.java:7-7 @ tree-sha256:711e0938538298114ccb5dd700490445e756f227c4727a72a7101e6dbee187cd (sha256 3804feef0d2b303327d83f58c4c2c6d33f75f79ba6aa914d248183fa52cf67c4)
+- external-or-missing-java-source: String; backend/Resource.java:7-7 @ tree-sha256:711e0938538298114ccb5dd700490445e756f227c4727a72a7101e6dbee187cd (sha256 3804feef0d2b303327d83f58c4c2c6d33f75f79ba6aa914d248183fa52cf67c4)
+- external-or-missing-java-source: org.springframework.web.bind.annotation.GetMapping; backend/Resource.java:8-8 @ tree-sha256:711e0938538298114ccb5dd700490445e756f227c4727a72a7101e6dbee187cd (sha256 3804feef0d2b303327d83f58c4c2c6d33f75f79ba6aa914d248183fa52cf67c4)
+- external-or-missing-java-source: String; backend/Resource.java:8-8 @ tree-sha256:711e0938538298114ccb5dd700490445e756f227c4727a72a7101e6dbee187cd (sha256 3804feef0d2b303327d83f58c4c2c6d33f75f79ba6aa914d248183fa52cf67c4)
+- external-or-missing-java-source: org.springframework.web.bind.annotation.PostMapping; backend/Resource.java:9-9 @ tree-sha256:711e0938538298114ccb5dd700490445e756f227c4727a72a7101e6dbee187cd (sha256 3804feef0d2b303327d83f58c4c2c6d33f75f79ba6aa914d248183fa52cf67c4)
+- external-or-missing-java-source: String; backend/Resource.java:9-9 @ tree-sha256:711e0938538298114ccb5dd700490445e756f227c4727a72a7101e6dbee187cd (sha256 3804feef0d2b303327d83f58c4c2c6d33f75f79ba6aa914d248183fa52cf67c4)
+- with_dynamic_scope: A with-object may shadow any lexical/global receiver binding.; frontend/shadow.js:2-2 @ tree-sha256:711e0938538298114ccb5dd700490445e756f227c4727a72a7101e6dbee187cd (sha256 106156234a0c6d6e3105e8ef6d1fd842d611025f4e211886999daf0ecb91cad7)
+- dynamic_call: fetch; frontend/shadow.js:2-2 @ tree-sha256:711e0938538298114ccb5dd700490445e756f227c4727a72a7101e6dbee187cd (sha256 106156234a0c6d6e3105e8ef6d1fd842d611025f4e211886999daf0ecb91cad7)
+- dynamic-dependency: Runtime value prevents a resolved edge; frontend/shadow.js:2-2 @ tree-sha256:711e0938538298114ccb5dd700490445e756f227c4727a72a7101e6dbee187cd (sha256 106156234a0c6d6e3105e8ef6d1fd842d611025f4e211886999daf0ecb91cad7)
+- unresolved-call: fetch; frontend/shadow.js:4-4 @ tree-sha256:711e0938538298114ccb5dd700490445e756f227c4727a72a7101e6dbee187cd (sha256 106156234a0c6d6e3105e8ef6d1fd842d611025f4e211886999daf0ecb91cad7)
+- external-or-missing-java-source: org.springframework.web.bind.annotation.GetMapping; backend/Resource.java:2-2 @ tree-sha256:20172821a390a42967242f9d0ad4454e61938398b5ffafa0e07c7a93a527c14d (sha256 9e9c44affd6daae1cc4a1e4216829ec607ab4530301be37a8fb6ff54b8428641)
+- external-or-missing-java-source: org.springframework.web.bind.annotation.PostMapping; backend/Resource.java:3-3 @ tree-sha256:20172821a390a42967242f9d0ad4454e61938398b5ffafa0e07c7a93a527c14d (sha256 9e9c44affd6daae1cc4a1e4216829ec607ab4530301be37a8fb6ff54b8428641)
+- external-or-missing-java-source: org.springframework.web.bind.annotation.RequestMapping; backend/Resource.java:4-4 @ tree-sha256:20172821a390a42967242f9d0ad4454e61938398b5ffafa0e07c7a93a527c14d (sha256 9e9c44affd6daae1cc4a1e4216829ec607ab4530301be37a8fb6ff54b8428641)
+- external-or-missing-java-source: org.springframework.web.bind.annotation.RequestMapping; backend/Resource.java:5-5 @ tree-sha256:20172821a390a42967242f9d0ad4454e61938398b5ffafa0e07c7a93a527c14d (sha256 9e9c44affd6daae1cc4a1e4216829ec607ab4530301be37a8fb6ff54b8428641)
+- external-or-missing-java-source: org.springframework.web.bind.annotation.GetMapping; backend/Resource.java:7-7 @ tree-sha256:20172821a390a42967242f9d0ad4454e61938398b5ffafa0e07c7a93a527c14d (sha256 9e9c44affd6daae1cc4a1e4216829ec607ab4530301be37a8fb6ff54b8428641)
+- external-or-missing-java-source: String; backend/Resource.java:7-7 @ tree-sha256:20172821a390a42967242f9d0ad4454e61938398b5ffafa0e07c7a93a527c14d (sha256 9e9c44affd6daae1cc4a1e4216829ec607ab4530301be37a8fb6ff54b8428641)
+- external-or-missing-java-source: org.springframework.web.bind.annotation.GetMapping; backend/Resource.java:8-8 @ tree-sha256:20172821a390a42967242f9d0ad4454e61938398b5ffafa0e07c7a93a527c14d (sha256 9e9c44affd6daae1cc4a1e4216829ec607ab4530301be37a8fb6ff54b8428641)
+- external-or-missing-java-source: String; backend/Resource.java:8-8 @ tree-sha256:20172821a390a42967242f9d0ad4454e61938398b5ffafa0e07c7a93a527c14d (sha256 9e9c44affd6daae1cc4a1e4216829ec607ab4530301be37a8fb6ff54b8428641)
+- external-or-missing-java-source: org.springframework.web.bind.annotation.PostMapping; backend/Resource.java:9-9 @ tree-sha256:20172821a390a42967242f9d0ad4454e61938398b5ffafa0e07c7a93a527c14d (sha256 9e9c44affd6daae1cc4a1e4216829ec607ab4530301be37a8fb6ff54b8428641)
+- external-or-missing-java-source: String; backend/Resource.java:9-9 @ tree-sha256:20172821a390a42967242f9d0ad4454e61938398b5ffafa0e07c7a93a527c14d (sha256 9e9c44affd6daae1cc4a1e4216829ec607ab4530301be37a8fb6ff54b8428641)
+- with_dynamic_scope: A with-object may shadow any lexical/global receiver binding.; frontend/shadow.js:2-2 @ tree-sha256:20172821a390a42967242f9d0ad4454e61938398b5ffafa0e07c7a93a527c14d (sha256 106156234a0c6d6e3105e8ef6d1fd842d611025f4e211886999daf0ecb91cad7)
+- dynamic_call: fetch; frontend/shadow.js:2-2 @ tree-sha256:20172821a390a42967242f9d0ad4454e61938398b5ffafa0e07c7a93a527c14d (sha256 106156234a0c6d6e3105e8ef6d1fd842d611025f4e211886999daf0ecb91cad7)
+- dynamic-dependency: Runtime value prevents a resolved edge; frontend/shadow.js:2-2 @ tree-sha256:20172821a390a42967242f9d0ad4454e61938398b5ffafa0e07c7a93a527c14d (sha256 106156234a0c6d6e3105e8ef6d1fd842d611025f4e211886999daf0ecb91cad7)
+- unresolved-call: fetch; frontend/shadow.js:4-4 @ tree-sha256:20172821a390a42967242f9d0ad4454e61938398b5ffafa0e07c7a93a527c14d (sha256 106156234a0c6d6e3105e8ef6d1fd842d611025f4e211886999daf0ecb91cad7)
+
+Focused tests (2; recommendations, not executed by analyzer):
+- api-consumer: Exercise HTTP route, verb, serialization, empty/not-found/error responses and consumer rendering; frontend/shadow.js:4-4 @ tree-sha256:711e0938538298114ccb5dd700490445e756f227c4727a72a7101e6dbee187cd (sha256 106156234a0c6d6e3105e8ef6d1fd842d611025f4e211886999daf0ecb91cad7)
+- api-consumer: Exercise HTTP route, verb, serialization, empty/not-found/error responses and consumer rendering; frontend/shadow.js:4-4 @ tree-sha256:20172821a390a42967242f9d0ad4454e61938398b5ffafa0e07c7a93a527c14d (sha256 106156234a0c6d6e3105e8ef6d1fd842d611025f4e211886999daf0ecb91cad7)
+
+Coverage incomplete. This report never authorizes skipping full regression.
+- Source-only analysis; no Java/TypeScript semantic compilation, runtime dispatch, reflection, DI wiring, proxy/origin verification or transitive external package sources
+- Edges are evidence-backed approximations; indirect file dependencies do not prove execution
+- Renames inferred only for identical declaration key/signature/body; edited renames remain delete/add
+- Unknown syntax and unresolved/dynamic dependencies remain visible; passing fixture tests is not private-repository acceptance
+Cache: {"report":"disabled","parsedFiles":4,"reusedFiles":0,"invalidEntries":0}
+Analysis metrics: {"elapsedMs":46.46,"bytesRead":1040,"reportCacheHit":false}

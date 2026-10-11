@@ -1,0 +1,20 @@
+{
+  "command": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+  "args": [
+    "/tmp/review-analysis-qa-v1-nn0cdauu/src/cli.js",
+    "analyze",
+    "--baseline",
+    "/tmp/review-analysis-adversarial-v1-anUajX/11-ts-namespace-nested-member/baseline",
+    "--candidate",
+    "/tmp/review-analysis-adversarial-v1-anUajX/11-ts-namespace-nested-member/candidate",
+    "--rules",
+    "/tmp/review-analysis-adversarial-v1-anUajX/rules.json",
+    "--as-of",
+    "2026-10-11",
+    "--task",
+    "Nested property method on namespace import must not claim the container variable is the called declaration",
+    "--format",
+    "json"
+  ],
+  "cwd": "/tmp/review-analysis-qa-v1-nn0cdauu"
+}

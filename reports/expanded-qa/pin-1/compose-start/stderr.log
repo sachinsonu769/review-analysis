@@ -1,0 +1,6 @@
+ Network expanded-qa-pin1_default  Creating
+ Network expanded-qa-pin1_default  Created
+ Container expanded-qa-pin1-app-1  Creating
+ Container expanded-qa-pin1-app-1  Created
+ Container expanded-qa-pin1-app-1  Starting
+Error response from daemon: failed to set up container networking: driver failed programming external connectivity on endpoint expanded-qa-pin1-app-1 (ecc0232ee61aa8cdf1606a8f946e46bdbfc5dc9ca91fdb56fc3d93ca06ceb927): failed to bind host port for 127.0.0.1:8787:172.19.0.2:8787/tcp: address already in use

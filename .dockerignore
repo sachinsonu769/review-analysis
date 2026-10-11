@@ -1,0 +1,15 @@
+# Only application inputs are sent to the Docker builder.
+**
+!Dockerfile
+!.dockerignore
+!package.json
+!package-lock.json
+!tsconfig.json
+!src/
+!src/**
+!app/
+!app/**
+!ui/
+!ui/**
+!fixtures/
+!fixtures/**

@@ -1,0 +1,3914 @@
+{
+  "schemaVersion": "2.0",
+  "build": {
+    "version": "0.2.0",
+    "sourceBuildHash": "0427f5fed8a45a3d4dbc5523f1d0f8afb57949bac0df1f9bef249fd73ae31061",
+    "parsers": {
+      "java": "java-parser@3.0.1",
+      "typescript": "typescript@5.9.3"
+    }
+  },
+  "analyzer": {
+    "version": "0.2.0",
+    "sourceBuildHash": "0427f5fed8a45a3d4dbc5523f1d0f8afb57949bac0df1f9bef249fd73ae31061",
+    "parsers": {
+      "java": "java-parser@3.0.1",
+      "typescript": "typescript@5.9.3"
+    }
+  },
+  "advisory": true,
+  "asOf": "2026-10-11",
+  "graph": {
+    "nodes": [
+      {
+        "id": "quality::backend/Quality.java",
+        "kind": "file",
+        "label": "Quality.java",
+        "path": "backend/Quality.java",
+        "projectId": "quality",
+        "repository": "example/quality",
+        "module": "Backend",
+        "language": "java",
+        "changed": true,
+        "changeKinds": [
+          "modified",
+          "deleted",
+          "added"
+        ],
+        "evidence": {
+          "path": "backend/Quality.java",
+          "range": {
+            "startLine": 1,
+            "endLine": 1
+          },
+          "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+          "fileHash": "841ae26e08ef903b2cdd2f68b3ba0d438ec8058ae6f3e7b727cf2fb1fb7358e9",
+          "excerpt": "package fixture;",
+          "projectId": "quality",
+          "repository": "example/quality"
+        },
+        "declarations": [
+          {
+            "key": "fixture.Quality",
+            "name": "Quality",
+            "kind": "class",
+            "signature": "public class Quality",
+            "evidence": {
+              "path": "backend/Quality.java",
+              "range": {
+                "startLine": 4,
+                "endLine": 18
+              },
+              "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+              "fileHash": "841ae26e08ef903b2cdd2f68b3ba0d438ec8058ae6f3e7b727cf2fb1fb7358e9",
+              "excerpt": "public class Quality {\n  public int mutable;\n  public String broken(String input) {\n    if (input != null || !input.isEmpty()) return input;\n    return \"\";\n  }\n  public int unclosed(String filename) throws IOException {\n    FileInputStream stream = new FileInputStream(filename);\n    return stream.read();\n  }\n  public boolean conditional() {\n    if (true) return true;\n    return false;\n  }\n}",
+              "projectId": "quality",
+              "repository": "example/quality"
+            }
+          },
+          {
+            "key": "fixture.Quality#mutable",
+            "name": "mutable",
+            "kind": "field",
+            "signature": "public int mutable",
+            "evidence": {
+              "path": "backend/Quality.java",
+              "range": {
+                "startLine": 5,
+                "endLine": 5
+              },
+              "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+              "fileHash": "841ae26e08ef903b2cdd2f68b3ba0d438ec8058ae6f3e7b727cf2fb1fb7358e9",
+              "excerpt": "  public int mutable;",
+              "projectId": "quality",
+              "repository": "example/quality"
+            }
+          },
+          {
+            "key": "fixture.Quality#broken/1",
+            "name": "broken",
+            "kind": "method",
+            "signature": "public String broken(String input)",
+            "evidence": {
+              "path": "backend/Quality.java",
+              "range": {
+                "startLine": 6,
+                "endLine": 9
+              },
+              "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+              "fileHash": "841ae26e08ef903b2cdd2f68b3ba0d438ec8058ae6f3e7b727cf2fb1fb7358e9",
+              "excerpt": "  public String broken(String input) {\n    if (input != null || !input.isEmpty()) return input;\n    return \"\";\n  }",
+              "projectId": "quality",
+              "repository": "example/quality"
+            }
+          },
+          {
+            "key": "fixture.Quality#unclosed/1",
+            "name": "unclosed",
+            "kind": "method",
+            "signature": "public int unclosed(String filename) throws IOException",
+            "evidence": {
+              "path": "backend/Quality.java",
+              "range": {
+                "startLine": 10,
+                "endLine": 13
+              },
+              "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+              "fileHash": "841ae26e08ef903b2cdd2f68b3ba0d438ec8058ae6f3e7b727cf2fb1fb7358e9",
+              "excerpt": "  public int unclosed(String filename) throws IOException {\n    FileInputStream stream = new FileInputStream(filename);\n    return stream.read();\n  }",
+              "projectId": "quality",
+              "repository": "example/quality"
+            }
+          },
+          {
+            "key": "fixture.Quality#conditional/0",
+            "name": "conditional",
+            "kind": "method",
+            "signature": "public boolean conditional()",
+            "evidence": {
+              "path": "backend/Quality.java",
+              "range": {
+                "startLine": 14,
+                "endLine": 17
+              },
+              "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+              "fileHash": "841ae26e08ef903b2cdd2f68b3ba0d438ec8058ae6f3e7b727cf2fb1fb7358e9",
+              "excerpt": "  public boolean conditional() {\n    if (true) return true;\n    return false;\n  }",
+              "projectId": "quality",
+              "repository": "example/quality"
+            }
+          }
+        ],
+        "phases": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "id": "quality::frontend/domain/order.ts",
+        "kind": "file",
+        "label": "order.ts",
+        "path": "frontend/domain/order.ts",
+        "projectId": "quality",
+        "repository": "example/quality",
+        "module": "Frontend",
+        "language": "typescript",
+        "changed": true,
+        "changeKinds": [
+          "added"
+        ],
+        "evidence": {
+          "path": "frontend/domain/order.ts",
+          "range": {
+            "startLine": 1,
+            "endLine": 1
+          },
+          "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+          "fileHash": "866a650d284a15d72d11ddfbcbaca8efec0052c80270e976d06c1035766aafeb",
+          "excerpt": "import { Injectable } from '@angular/core';",
+          "projectId": "quality",
+          "repository": "example/quality"
+        },
+        "declarations": [
+          {
+            "key": "Order",
+            "name": "Order",
+            "kind": "class",
+            "signature": "@Injectable()\nexport class Order {\npublic total\nprivate internal\nreadonly id\nsubmit(a: string, b: string, c: string, d: string, e: string, f: string)\n}",
+            "evidence": {
+              "path": "frontend/domain/order.ts",
+              "range": {
+                "startLine": 3,
+                "endLine": 11
+              },
+              "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+              "fileHash": "866a650d284a15d72d11ddfbcbaca8efec0052c80270e976d06c1035766aafeb",
+              "excerpt": "@Injectable()\nexport class Order {\n  public total = 0;\n  private internal = 0;\n  readonly id = 'order';\n  submit(a: string, b: string, c: string, d: string, e: string, f: string) {\n    return view(a + b + c + d + e + f + this.internal);\n  }\n}",
+              "projectId": "quality",
+              "repository": "example/quality"
+            }
+          },
+          {
+            "key": "Order.total",
+            "name": "total",
+            "kind": "property",
+            "signature": "public total",
+            "evidence": {
+              "path": "frontend/domain/order.ts",
+              "range": {
+                "startLine": 5,
+                "endLine": 5
+              },
+              "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+              "fileHash": "866a650d284a15d72d11ddfbcbaca8efec0052c80270e976d06c1035766aafeb",
+              "excerpt": "  public total = 0;",
+              "projectId": "quality",
+              "repository": "example/quality"
+            }
+          },
+          {
+            "key": "Order.internal",
+            "name": "internal",
+            "kind": "property",
+            "signature": "private internal",
+            "evidence": {
+              "path": "frontend/domain/order.ts",
+              "range": {
+                "startLine": 6,
+                "endLine": 6
+              },
+              "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+              "fileHash": "866a650d284a15d72d11ddfbcbaca8efec0052c80270e976d06c1035766aafeb",
+              "excerpt": "  private internal = 0;",
+              "projectId": "quality",
+              "repository": "example/quality"
+            }
+          },
+          {
+            "key": "Order.id",
+            "name": "id",
+            "kind": "property",
+            "signature": "readonly id",
+            "evidence": {
+              "path": "frontend/domain/order.ts",
+              "range": {
+                "startLine": 7,
+                "endLine": 7
+              },
+              "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+              "fileHash": "866a650d284a15d72d11ddfbcbaca8efec0052c80270e976d06c1035766aafeb",
+              "excerpt": "  readonly id = 'order';",
+              "projectId": "quality",
+              "repository": "example/quality"
+            }
+          },
+          {
+            "key": "Order.submit",
+            "name": "submit",
+            "kind": "method",
+            "signature": "submit(a: string, b: string, c: string, d: string, e: string, f: string)",
+            "evidence": {
+              "path": "frontend/domain/order.ts",
+              "range": {
+                "startLine": 8,
+                "endLine": 10
+              },
+              "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+              "fileHash": "866a650d284a15d72d11ddfbcbaca8efec0052c80270e976d06c1035766aafeb",
+              "excerpt": "  submit(a: string, b: string, c: string, d: string, e: string, f: string) {\n    return view(a + b + c + d + e + f + this.internal);\n  }",
+              "projectId": "quality",
+              "repository": "example/quality"
+            }
+          }
+        ],
+        "phases": [
+          "candidate"
+        ]
+      },
+      {
+        "id": "quality::frontend/duplicate-a.ts",
+        "kind": "file",
+        "label": "duplicate-a.ts",
+        "path": "frontend/duplicate-a.ts",
+        "projectId": "quality",
+        "repository": "example/quality",
+        "module": "Frontend",
+        "language": "typescript",
+        "changed": true,
+        "changeKinds": [
+          "added"
+        ],
+        "evidence": {
+          "path": "frontend/duplicate-a.ts",
+          "range": {
+            "startLine": 1,
+            "endLine": 1
+          },
+          "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+          "fileHash": "cefd0da6057d393b87caf4f92d5bfc5f32b1b502b0df65268c693120d637ba83",
+          "excerpt": "export function summarizeA(values: number[]) {",
+          "projectId": "quality",
+          "repository": "example/quality"
+        },
+        "declarations": [
+          {
+            "key": "summarizeA",
+            "name": "summarizeA",
+            "kind": "function",
+            "signature": "export function summarizeA(values: number[])",
+            "evidence": {
+              "path": "frontend/duplicate-a.ts",
+              "range": {
+                "startLine": 1,
+                "endLine": 12
+              },
+              "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+              "fileHash": "cefd0da6057d393b87caf4f92d5bfc5f32b1b502b0df65268c693120d637ba83",
+              "excerpt": "export function summarizeA(values: number[]) {\n  let total = 0;\n  let accepted = 0;\n  for (const value of values) {\n    if (value > 0) {\n      total += value;\n      accepted += 1;\n    }\n  }\n  const average = accepted === 0 ? 0 : total / accepted;\n  return { total, accepted, average };\n}",
+              "projectId": "quality",
+              "repository": "example/quality"
+            }
+          }
+        ],
+        "phases": [
+          "candidate"
+        ]
+      },
+      {
+        "id": "quality::frontend/duplicate-b.ts",
+        "kind": "file",
+        "label": "duplicate-b.ts",
+        "path": "frontend/duplicate-b.ts",
+        "projectId": "quality",
+        "repository": "example/quality",
+        "module": "Frontend",
+        "language": "typescript",
+        "changed": true,
+        "changeKinds": [
+          "added"
+        ],
+        "evidence": {
+          "path": "frontend/duplicate-b.ts",
+          "range": {
+            "startLine": 1,
+            "endLine": 1
+          },
+          "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+          "fileHash": "1f136709bdb12cd84215d92bb13c35362bf915679e6ffc17a22c2171e28bcece",
+          "excerpt": "export function summarizeB(values: number[]) {",
+          "projectId": "quality",
+          "repository": "example/quality"
+        },
+        "declarations": [
+          {
+            "key": "summarizeB",
+            "name": "summarizeB",
+            "kind": "function",
+            "signature": "export function summarizeB(values: number[])",
+            "evidence": {
+              "path": "frontend/duplicate-b.ts",
+              "range": {
+                "startLine": 1,
+                "endLine": 12
+              },
+              "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+              "fileHash": "1f136709bdb12cd84215d92bb13c35362bf915679e6ffc17a22c2171e28bcece",
+              "excerpt": "export function summarizeB(values: number[]) {\n  let total = 0;\n  let accepted = 0;\n  for (const value of values) {\n    if (value > 0) {\n      total += value;\n      accepted += 1;\n    }\n  }\n  const average = accepted === 0 ? 0 : total / accepted;\n  return { total, accepted, average };\n}",
+              "projectId": "quality",
+              "repository": "example/quality"
+            }
+          }
+        ],
+        "phases": [
+          "candidate"
+        ]
+      },
+      {
+        "id": "quality::frontend/review.ts",
+        "kind": "file",
+        "label": "review.ts",
+        "path": "frontend/review.ts",
+        "projectId": "quality",
+        "repository": "example/quality",
+        "module": "Frontend",
+        "language": "typescript",
+        "changed": true,
+        "changeKinds": [
+          "modified",
+          "added"
+        ],
+        "evidence": {
+          "path": "frontend/review.ts",
+          "range": {
+            "startLine": 1,
+            "endLine": 1
+          },
+          "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+          "fileHash": "a85423a3a2b3710203eea1289845495c9362bbf9c5a367a9a30b570ab1674183",
+          "excerpt": "// A line inserted above existing declarations must not change their identity.",
+          "projectId": "quality",
+          "repository": "example/quality"
+        },
+        "declarations": [
+          {
+            "key": "risky",
+            "name": "risky",
+            "kind": "function",
+            "signature": "export function risky(value?: string)",
+            "evidence": {
+              "path": "frontend/review.ts",
+              "range": {
+                "startLine": 2,
+                "endLine": 5
+              },
+              "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+              "fileHash": "a85423a3a2b3710203eea1289845495c9362bbf9c5a367a9a30b570ab1674183",
+              "excerpt": "export function risky(value?: string) {\n  const normalized = value!;\n  return normalized;\n}",
+              "projectId": "quality",
+              "repository": "example/quality"
+            }
+          },
+          {
+            "key": "calculate",
+            "name": "calculate",
+            "kind": "function",
+            "signature": "export function calculate(values: number[])",
+            "evidence": {
+              "path": "frontend/review.ts",
+              "range": {
+                "startLine": 7,
+                "endLine": 17
+              },
+              "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+              "fileHash": "a85423a3a2b3710203eea1289845495c9362bbf9c5a367a9a30b570ab1674183",
+              "excerpt": "export function calculate(values: number[]) {\n  let sum = 0;\n  for (const value of values) {\n    if (value > 0) sum += value;\n    if (value > 5) sum += value;\n    if (value > 10) sum += value;\n    if (value > 15) sum += value;\n    if (value > 20) sum += value;\n  }\n  return sum;\n}",
+              "projectId": "quality",
+              "repository": "example/quality"
+            }
+          },
+          {
+            "key": "resolved",
+            "name": "resolved",
+            "kind": "function",
+            "signature": "export function resolved()",
+            "evidence": {
+              "path": "frontend/review.ts",
+              "range": {
+                "startLine": 19,
+                "endLine": 21
+              },
+              "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+              "fileHash": "a85423a3a2b3710203eea1289845495c9362bbf9c5a367a9a30b570ab1674183",
+              "excerpt": "export function resolved() {\n  return true;\n}",
+              "projectId": "quality",
+              "repository": "example/quality"
+            }
+          },
+          {
+            "key": "newIssue",
+            "name": "newIssue",
+            "kind": "function",
+            "signature": "export function newIssue(value: number)",
+            "evidence": {
+              "path": "frontend/review.ts",
+              "range": {
+                "startLine": 23,
+                "endLine": 26
+              },
+              "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+              "fileHash": "a85423a3a2b3710203eea1289845495c9362bbf9c5a367a9a30b570ab1674183",
+              "excerpt": "export function newIssue(value: number) {\n  if (true) return value;\n  return 0;\n}",
+              "projectId": "quality",
+              "repository": "example/quality"
+            }
+          },
+          {
+            "key": "asyncIssue",
+            "name": "asyncIssue",
+            "kind": "variable",
+            "signature": "export const asyncIssue",
+            "evidence": {
+              "path": "frontend/review.ts",
+              "range": {
+                "startLine": 28,
+                "endLine": 30
+              },
+              "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+              "fileHash": "a85423a3a2b3710203eea1289845495c9362bbf9c5a367a9a30b570ab1674183",
+              "excerpt": "export const asyncIssue = new Promise(async resolve => {\n  resolve(1);\n});",
+              "projectId": "quality",
+              "repository": "example/quality"
+            }
+          }
+        ],
+        "phases": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "id": "quality::frontend/view.tsx",
+        "kind": "file",
+        "label": "view.tsx",
+        "path": "frontend/view.tsx",
+        "projectId": "quality",
+        "repository": "example/quality",
+        "module": "Frontend",
+        "language": "typescript",
+        "changed": true,
+        "changeKinds": [
+          "added"
+        ],
+        "evidence": {
+          "path": "frontend/view.tsx",
+          "range": {
+            "startLine": 1,
+            "endLine": 1
+          },
+          "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+          "fileHash": "fd7c97d2996557138fc6c02d6b2fb56514defda30e0247c56c2818e9422424ef",
+          "excerpt": "import { Order } from './domain/order';",
+          "projectId": "quality",
+          "repository": "example/quality"
+        },
+        "declarations": [
+          {
+            "key": "view",
+            "name": "view",
+            "kind": "variable",
+            "signature": "export const view = (message: string) =>",
+            "evidence": {
+              "path": "frontend/view.tsx",
+              "range": {
+                "startLine": 2,
+                "endLine": 2
+              },
+              "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+              "fileHash": "fd7c97d2996557138fc6c02d6b2fb56514defda30e0247c56c2818e9422424ef",
+              "excerpt": "export const view = (message: string) => <article>{message}</article>;",
+              "projectId": "quality",
+              "repository": "example/quality"
+            }
+          },
+          {
+            "key": "model",
+            "name": "model",
+            "kind": "variable",
+            "signature": "export const model",
+            "evidence": {
+              "path": "frontend/view.tsx",
+              "range": {
+                "startLine": 3,
+                "endLine": 3
+              },
+              "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+              "fileHash": "fd7c97d2996557138fc6c02d6b2fb56514defda30e0247c56c2818e9422424ef",
+              "excerpt": "export const model = new Order();",
+              "projectId": "quality",
+              "repository": "example/quality"
+            }
+          }
+        ],
+        "phases": [
+          "candidate"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "369d7153fb1a46db75b0c4a0",
+        "source": "quality::frontend/domain/order.ts",
+        "target": "quality::frontend/view.tsx",
+        "kind": "import",
+        "confidence": "high",
+        "reason": "Relative import resolves to supplied source file",
+        "evidence": {
+          "path": "frontend/domain/order.ts",
+          "range": {
+            "startLine": 2,
+            "endLine": 2
+          },
+          "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+          "fileHash": "866a650d284a15d72d11ddfbcbaca8efec0052c80270e976d06c1035766aafeb",
+          "excerpt": "import { view } from '../view';",
+          "projectId": "quality",
+          "repository": "example/quality"
+        },
+        "targetEvidence": {
+          "path": "frontend/view.tsx",
+          "range": {
+            "startLine": 1,
+            "endLine": 1
+          },
+          "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+          "fileHash": "fd7c97d2996557138fc6c02d6b2fb56514defda30e0247c56c2818e9422424ef",
+          "excerpt": "import { Order } from './domain/order';",
+          "projectId": "quality",
+          "repository": "example/quality"
+        },
+        "phase": "candidate",
+        "crossRepository": false,
+        "targetKey": null
+      },
+      {
+        "id": "05bf4cfe8682d1a08c8e3a70",
+        "source": "quality::frontend/domain/order.ts",
+        "target": "quality::frontend/view.tsx",
+        "kind": "call",
+        "confidence": "high",
+        "reason": "Imported binding resolves to a supplied named declaration",
+        "evidence": {
+          "path": "frontend/domain/order.ts",
+          "range": {
+            "startLine": 9,
+            "endLine": 9
+          },
+          "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+          "fileHash": "866a650d284a15d72d11ddfbcbaca8efec0052c80270e976d06c1035766aafeb",
+          "excerpt": "    return view(a + b + c + d + e + f + this.internal);",
+          "projectId": "quality",
+          "repository": "example/quality"
+        },
+        "targetEvidence": {
+          "path": "frontend/view.tsx",
+          "range": {
+            "startLine": 2,
+            "endLine": 2
+          },
+          "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+          "fileHash": "fd7c97d2996557138fc6c02d6b2fb56514defda30e0247c56c2818e9422424ef",
+          "excerpt": "export const view = (message: string) => <article>{message}</article>;",
+          "projectId": "quality",
+          "repository": "example/quality"
+        },
+        "phase": "candidate",
+        "crossRepository": false,
+        "targetKey": "view"
+      },
+      {
+        "id": "5f8c7c10d7aa7782ca613349",
+        "source": "quality::frontend/view.tsx",
+        "target": "quality::frontend/domain/order.ts",
+        "kind": "import",
+        "confidence": "high",
+        "reason": "Relative import resolves to supplied source file",
+        "evidence": {
+          "path": "frontend/view.tsx",
+          "range": {
+            "startLine": 1,
+            "endLine": 1
+          },
+          "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+          "fileHash": "fd7c97d2996557138fc6c02d6b2fb56514defda30e0247c56c2818e9422424ef",
+          "excerpt": "import { Order } from './domain/order';",
+          "projectId": "quality",
+          "repository": "example/quality"
+        },
+        "targetEvidence": {
+          "path": "frontend/domain/order.ts",
+          "range": {
+            "startLine": 1,
+            "endLine": 1
+          },
+          "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+          "fileHash": "866a650d284a15d72d11ddfbcbaca8efec0052c80270e976d06c1035766aafeb",
+          "excerpt": "import { Injectable } from '@angular/core';",
+          "projectId": "quality",
+          "repository": "example/quality"
+        },
+        "phase": "candidate",
+        "crossRepository": false,
+        "targetKey": null
+      }
+    ],
+    "complete": false,
+    "direction": "consumer-to-dependency"
+  },
+  "projectMetadata": [
+    {
+      "id": "quality",
+      "label": "Selected quality cases",
+      "repository": "example/quality",
+      "module": "Selected quality cases"
+    }
+  ],
+  "workspace": {
+    "version": "demo-quality-1",
+    "mappings": [],
+    "configHash": "906da2cc2a9cd70f763ef7575db8196889050dd0d84e4d4c9166567968c2a9ab"
+  },
+  "changes": [
+    {
+      "kind": "modified",
+      "name": "Quality",
+      "key": "fixture.Quality",
+      "language": "java",
+      "contractChanged": false,
+      "before": {
+        "path": "backend/Quality.java",
+        "range": {
+          "startLine": 2,
+          "endLine": 7
+        },
+        "revision": "tree-sha256:571c7ffdee41d629dea48f196950a8d93f43fb35977bc9036a40da3efe8330c9",
+        "fileHash": "bb14ae21fdf8620bdf5cd243ad2b68a0ff448431ba0fbc1af5334b9b47e0c046",
+        "excerpt": "public class Quality {\n  public String safe(String input) {\n    if (input != null && !input.isEmpty()) return input;\n    return \"\";\n  }\n}",
+        "projectId": "quality",
+        "repository": "example/quality"
+      },
+      "after": {
+        "path": "backend/Quality.java",
+        "range": {
+          "startLine": 4,
+          "endLine": 18
+        },
+        "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+        "fileHash": "841ae26e08ef903b2cdd2f68b3ba0d438ec8058ae6f3e7b727cf2fb1fb7358e9",
+        "excerpt": "public class Quality {\n  public int mutable;\n  public String broken(String input) {\n    if (input != null || !input.isEmpty()) return input;\n    return \"\";\n  }\n  public int unclosed(String filename) throws IOException {\n    FileInputStream stream = new FileInputStream(filename);\n    return stream.read();\n  }\n  public boolean conditional() {\n    if (true) return true;\n    return false;\n  }\n}",
+        "projectId": "quality",
+        "repository": "example/quality"
+      },
+      "projectId": "quality"
+    },
+    {
+      "kind": "deleted",
+      "name": "safe",
+      "key": "fixture.Quality#safe/1",
+      "language": "java",
+      "contractChanged": true,
+      "before": {
+        "path": "backend/Quality.java",
+        "range": {
+          "startLine": 3,
+          "endLine": 6
+        },
+        "revision": "tree-sha256:571c7ffdee41d629dea48f196950a8d93f43fb35977bc9036a40da3efe8330c9",
+        "fileHash": "bb14ae21fdf8620bdf5cd243ad2b68a0ff448431ba0fbc1af5334b9b47e0c046",
+        "excerpt": "  public String safe(String input) {\n    if (input != null && !input.isEmpty()) return input;\n    return \"\";\n  }",
+        "projectId": "quality",
+        "repository": "example/quality"
+      },
+      "after": null,
+      "projectId": "quality"
+    },
+    {
+      "kind": "modified",
+      "name": "calculate",
+      "key": "calculate",
+      "language": "typescript",
+      "contractChanged": false,
+      "before": {
+        "path": "frontend/review.ts",
+        "range": {
+          "startLine": 6,
+          "endLine": 14
+        },
+        "revision": "tree-sha256:571c7ffdee41d629dea48f196950a8d93f43fb35977bc9036a40da3efe8330c9",
+        "fileHash": "917c3f46cef70fc195d1c044650994971313b8eadbf88e6b48d5794fe42e7035",
+        "excerpt": "export function calculate(values: number[]) {\n  let sum = 0;\n  for (const value of values) {\n    if (value > 0) sum += value;\n    if (value > 5) sum += value;\n    if (value > 10) sum += value;\n  }\n  return sum;\n}",
+        "projectId": "quality",
+        "repository": "example/quality"
+      },
+      "after": {
+        "path": "frontend/review.ts",
+        "range": {
+          "startLine": 7,
+          "endLine": 17
+        },
+        "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+        "fileHash": "a85423a3a2b3710203eea1289845495c9362bbf9c5a367a9a30b570ab1674183",
+        "excerpt": "export function calculate(values: number[]) {\n  let sum = 0;\n  for (const value of values) {\n    if (value > 0) sum += value;\n    if (value > 5) sum += value;\n    if (value > 10) sum += value;\n    if (value > 15) sum += value;\n    if (value > 20) sum += value;\n  }\n  return sum;\n}",
+        "projectId": "quality",
+        "repository": "example/quality"
+      },
+      "projectId": "quality"
+    },
+    {
+      "kind": "modified",
+      "name": "resolved",
+      "key": "resolved",
+      "language": "typescript",
+      "contractChanged": false,
+      "before": {
+        "path": "frontend/review.ts",
+        "range": {
+          "startLine": 16,
+          "endLine": 19
+        },
+        "revision": "tree-sha256:571c7ffdee41d629dea48f196950a8d93f43fb35977bc9036a40da3efe8330c9",
+        "fileHash": "917c3f46cef70fc195d1c044650994971313b8eadbf88e6b48d5794fe42e7035",
+        "excerpt": "export function resolved() {\n  return true;\n  console.log('unreachable in baseline');\n}",
+        "projectId": "quality",
+        "repository": "example/quality"
+      },
+      "after": {
+        "path": "frontend/review.ts",
+        "range": {
+          "startLine": 19,
+          "endLine": 21
+        },
+        "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+        "fileHash": "a85423a3a2b3710203eea1289845495c9362bbf9c5a367a9a30b570ab1674183",
+        "excerpt": "export function resolved() {\n  return true;\n}",
+        "projectId": "quality",
+        "repository": "example/quality"
+      },
+      "projectId": "quality"
+    },
+    {
+      "kind": "added",
+      "name": "mutable",
+      "key": "fixture.Quality#mutable",
+      "language": "java",
+      "contractChanged": true,
+      "before": null,
+      "after": {
+        "path": "backend/Quality.java",
+        "range": {
+          "startLine": 5,
+          "endLine": 5
+        },
+        "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+        "fileHash": "841ae26e08ef903b2cdd2f68b3ba0d438ec8058ae6f3e7b727cf2fb1fb7358e9",
+        "excerpt": "  public int mutable;",
+        "projectId": "quality",
+        "repository": "example/quality"
+      },
+      "projectId": "quality"
+    },
+    {
+      "kind": "added",
+      "name": "broken",
+      "key": "fixture.Quality#broken/1",
+      "language": "java",
+      "contractChanged": true,
+      "before": null,
+      "after": {
+        "path": "backend/Quality.java",
+        "range": {
+          "startLine": 6,
+          "endLine": 9
+        },
+        "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+        "fileHash": "841ae26e08ef903b2cdd2f68b3ba0d438ec8058ae6f3e7b727cf2fb1fb7358e9",
+        "excerpt": "  public String broken(String input) {\n    if (input != null || !input.isEmpty()) return input;\n    return \"\";\n  }",
+        "projectId": "quality",
+        "repository": "example/quality"
+      },
+      "projectId": "quality"
+    },
+    {
+      "kind": "added",
+      "name": "unclosed",
+      "key": "fixture.Quality#unclosed/1",
+      "language": "java",
+      "contractChanged": true,
+      "before": null,
+      "after": {
+        "path": "backend/Quality.java",
+        "range": {
+          "startLine": 10,
+          "endLine": 13
+        },
+        "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+        "fileHash": "841ae26e08ef903b2cdd2f68b3ba0d438ec8058ae6f3e7b727cf2fb1fb7358e9",
+        "excerpt": "  public int unclosed(String filename) throws IOException {\n    FileInputStream stream = new FileInputStream(filename);\n    return stream.read();\n  }",
+        "projectId": "quality",
+        "repository": "example/quality"
+      },
+      "projectId": "quality"
+    },
+    {
+      "kind": "added",
+      "name": "conditional",
+      "key": "fixture.Quality#conditional/0",
+      "language": "java",
+      "contractChanged": true,
+      "before": null,
+      "after": {
+        "path": "backend/Quality.java",
+        "range": {
+          "startLine": 14,
+          "endLine": 17
+        },
+        "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+        "fileHash": "841ae26e08ef903b2cdd2f68b3ba0d438ec8058ae6f3e7b727cf2fb1fb7358e9",
+        "excerpt": "  public boolean conditional() {\n    if (true) return true;\n    return false;\n  }",
+        "projectId": "quality",
+        "repository": "example/quality"
+      },
+      "projectId": "quality"
+    },
+    {
+      "kind": "added",
+      "name": "Order",
+      "key": "Order",
+      "language": "typescript",
+      "contractChanged": true,
+      "before": null,
+      "after": {
+        "path": "frontend/domain/order.ts",
+        "range": {
+          "startLine": 3,
+          "endLine": 11
+        },
+        "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+        "fileHash": "866a650d284a15d72d11ddfbcbaca8efec0052c80270e976d06c1035766aafeb",
+        "excerpt": "@Injectable()\nexport class Order {\n  public total = 0;\n  private internal = 0;\n  readonly id = 'order';\n  submit(a: string, b: string, c: string, d: string, e: string, f: string) {\n    return view(a + b + c + d + e + f + this.internal);\n  }\n}",
+        "projectId": "quality",
+        "repository": "example/quality"
+      },
+      "projectId": "quality"
+    },
+    {
+      "kind": "added",
+      "name": "total",
+      "key": "Order.total",
+      "language": "typescript",
+      "contractChanged": true,
+      "before": null,
+      "after": {
+        "path": "frontend/domain/order.ts",
+        "range": {
+          "startLine": 5,
+          "endLine": 5
+        },
+        "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+        "fileHash": "866a650d284a15d72d11ddfbcbaca8efec0052c80270e976d06c1035766aafeb",
+        "excerpt": "  public total = 0;",
+        "projectId": "quality",
+        "repository": "example/quality"
+      },
+      "projectId": "quality"
+    },
+    {
+      "kind": "added",
+      "name": "internal",
+      "key": "Order.internal",
+      "language": "typescript",
+      "contractChanged": true,
+      "before": null,
+      "after": {
+        "path": "frontend/domain/order.ts",
+        "range": {
+          "startLine": 6,
+          "endLine": 6
+        },
+        "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+        "fileHash": "866a650d284a15d72d11ddfbcbaca8efec0052c80270e976d06c1035766aafeb",
+        "excerpt": "  private internal = 0;",
+        "projectId": "quality",
+        "repository": "example/quality"
+      },
+      "projectId": "quality"
+    },
+    {
+      "kind": "added",
+      "name": "id",
+      "key": "Order.id",
+      "language": "typescript",
+      "contractChanged": true,
+      "before": null,
+      "after": {
+        "path": "frontend/domain/order.ts",
+        "range": {
+          "startLine": 7,
+          "endLine": 7
+        },
+        "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+        "fileHash": "866a650d284a15d72d11ddfbcbaca8efec0052c80270e976d06c1035766aafeb",
+        "excerpt": "  readonly id = 'order';",
+        "projectId": "quality",
+        "repository": "example/quality"
+      },
+      "projectId": "quality"
+    },
+    {
+      "kind": "added",
+      "name": "submit",
+      "key": "Order.submit",
+      "language": "typescript",
+      "contractChanged": true,
+      "before": null,
+      "after": {
+        "path": "frontend/domain/order.ts",
+        "range": {
+          "startLine": 8,
+          "endLine": 10
+        },
+        "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+        "fileHash": "866a650d284a15d72d11ddfbcbaca8efec0052c80270e976d06c1035766aafeb",
+        "excerpt": "  submit(a: string, b: string, c: string, d: string, e: string, f: string) {\n    return view(a + b + c + d + e + f + this.internal);\n  }",
+        "projectId": "quality",
+        "repository": "example/quality"
+      },
+      "projectId": "quality"
+    },
+    {
+      "kind": "added",
+      "name": "summarizeA",
+      "key": "summarizeA",
+      "language": "typescript",
+      "contractChanged": true,
+      "before": null,
+      "after": {
+        "path": "frontend/duplicate-a.ts",
+        "range": {
+          "startLine": 1,
+          "endLine": 12
+        },
+        "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+        "fileHash": "cefd0da6057d393b87caf4f92d5bfc5f32b1b502b0df65268c693120d637ba83",
+        "excerpt": "export function summarizeA(values: number[]) {\n  let total = 0;\n  let accepted = 0;\n  for (const value of values) {\n    if (value > 0) {\n      total += value;\n      accepted += 1;\n    }\n  }\n  const average = accepted === 0 ? 0 : total / accepted;\n  return { total, accepted, average };\n}",
+        "projectId": "quality",
+        "repository": "example/quality"
+      },
+      "projectId": "quality"
+    },
+    {
+      "kind": "added",
+      "name": "summarizeB",
+      "key": "summarizeB",
+      "language": "typescript",
+      "contractChanged": true,
+      "before": null,
+      "after": {
+        "path": "frontend/duplicate-b.ts",
+        "range": {
+          "startLine": 1,
+          "endLine": 12
+        },
+        "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+        "fileHash": "1f136709bdb12cd84215d92bb13c35362bf915679e6ffc17a22c2171e28bcece",
+        "excerpt": "export function summarizeB(values: number[]) {\n  let total = 0;\n  let accepted = 0;\n  for (const value of values) {\n    if (value > 0) {\n      total += value;\n      accepted += 1;\n    }\n  }\n  const average = accepted === 0 ? 0 : total / accepted;\n  return { total, accepted, average };\n}",
+        "projectId": "quality",
+        "repository": "example/quality"
+      },
+      "projectId": "quality"
+    },
+    {
+      "kind": "added",
+      "name": "newIssue",
+      "key": "newIssue",
+      "language": "typescript",
+      "contractChanged": true,
+      "before": null,
+      "after": {
+        "path": "frontend/review.ts",
+        "range": {
+          "startLine": 23,
+          "endLine": 26
+        },
+        "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+        "fileHash": "a85423a3a2b3710203eea1289845495c9362bbf9c5a367a9a30b570ab1674183",
+        "excerpt": "export function newIssue(value: number) {\n  if (true) return value;\n  return 0;\n}",
+        "projectId": "quality",
+        "repository": "example/quality"
+      },
+      "projectId": "quality"
+    },
+    {
+      "kind": "added",
+      "name": "asyncIssue",
+      "key": "asyncIssue",
+      "language": "typescript",
+      "contractChanged": true,
+      "before": null,
+      "after": {
+        "path": "frontend/review.ts",
+        "range": {
+          "startLine": 28,
+          "endLine": 30
+        },
+        "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+        "fileHash": "a85423a3a2b3710203eea1289845495c9362bbf9c5a367a9a30b570ab1674183",
+        "excerpt": "export const asyncIssue = new Promise(async resolve => {\n  resolve(1);\n});",
+        "projectId": "quality",
+        "repository": "example/quality"
+      },
+      "projectId": "quality"
+    },
+    {
+      "kind": "added",
+      "name": "view",
+      "key": "view",
+      "language": "typescript",
+      "contractChanged": true,
+      "before": null,
+      "after": {
+        "path": "frontend/view.tsx",
+        "range": {
+          "startLine": 2,
+          "endLine": 2
+        },
+        "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+        "fileHash": "fd7c97d2996557138fc6c02d6b2fb56514defda30e0247c56c2818e9422424ef",
+        "excerpt": "export const view = (message: string) => <article>{message}</article>;",
+        "projectId": "quality",
+        "repository": "example/quality"
+      },
+      "projectId": "quality"
+    },
+    {
+      "kind": "added",
+      "name": "model",
+      "key": "model",
+      "language": "typescript",
+      "contractChanged": true,
+      "before": null,
+      "after": {
+        "path": "frontend/view.tsx",
+        "range": {
+          "startLine": 3,
+          "endLine": 3
+        },
+        "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+        "fileHash": "fd7c97d2996557138fc6c02d6b2fb56514defda30e0247c56c2818e9422424ef",
+        "excerpt": "export const model = new Order();",
+        "projectId": "quality",
+        "repository": "example/quality"
+      },
+      "projectId": "quality"
+    }
+  ],
+  "impact": {
+    "paths": [
+      {
+        "source": "quality::frontend/view.tsx",
+        "target": "quality::frontend/domain/order.ts",
+        "edgeIds": [
+          "5f8c7c10d7aa7782ca613349"
+        ],
+        "nodeIds": [
+          "quality::frontend/view.tsx",
+          "quality::frontend/domain/order.ts"
+        ],
+        "phase": "candidate",
+        "confidence": "high",
+        "kind": "direct"
+      },
+      {
+        "source": "quality::frontend/domain/order.ts",
+        "target": "quality::frontend/view.tsx",
+        "edgeIds": [
+          "369d7153fb1a46db75b0c4a0"
+        ],
+        "nodeIds": [
+          "quality::frontend/domain/order.ts",
+          "quality::frontend/view.tsx"
+        ],
+        "phase": "candidate",
+        "confidence": "high",
+        "kind": "direct"
+      },
+      {
+        "source": "quality::frontend/domain/order.ts",
+        "target": "quality::frontend/view.tsx",
+        "edgeIds": [
+          "05bf4cfe8682d1a08c8e3a70"
+        ],
+        "nodeIds": [
+          "quality::frontend/domain/order.ts",
+          "quality::frontend/view.tsx"
+        ],
+        "phase": "candidate",
+        "confidence": "high",
+        "kind": "direct"
+      }
+    ],
+    "limits": {
+      "maxDepth": 12,
+      "representativePaths": true,
+      "complete": false,
+      "reason": "One bounded representative chain per expanded node and phase; alternate paths and deeper chains may be omitted"
+    },
+    "direct": [
+      {
+        "source": "quality::frontend/view.tsx",
+        "target": "quality::frontend/domain/order.ts",
+        "edgeIds": [
+          "5f8c7c10d7aa7782ca613349"
+        ],
+        "nodeIds": [
+          "quality::frontend/view.tsx",
+          "quality::frontend/domain/order.ts"
+        ],
+        "phase": "candidate",
+        "confidence": "high",
+        "kind": "direct"
+      },
+      {
+        "source": "quality::frontend/domain/order.ts",
+        "target": "quality::frontend/view.tsx",
+        "edgeIds": [
+          "369d7153fb1a46db75b0c4a0"
+        ],
+        "nodeIds": [
+          "quality::frontend/domain/order.ts",
+          "quality::frontend/view.tsx"
+        ],
+        "phase": "candidate",
+        "confidence": "high",
+        "kind": "direct"
+      },
+      {
+        "source": "quality::frontend/domain/order.ts",
+        "target": "quality::frontend/view.tsx",
+        "edgeIds": [
+          "05bf4cfe8682d1a08c8e3a70"
+        ],
+        "nodeIds": [
+          "quality::frontend/domain/order.ts",
+          "quality::frontend/view.tsx"
+        ],
+        "phase": "candidate",
+        "confidence": "high",
+        "kind": "direct"
+      }
+    ],
+    "indirect": []
+  },
+  "findings": [],
+  "guidance": {
+    "projects": [
+      {
+        "projectId": "quality",
+        "task": "Demonstrate a bounded evidence-based change review",
+        "ruleSetVersion": "demo-2026.10",
+        "approvalGap": "No human approval is inferred. Reviewed examples/exceptions are assertions from supplied configuration; simulation records are demonstrations only.",
+        "rules": [
+          {
+            "id": "api/contract-change",
+            "kind": "endpoint-contract-change",
+            "owner": "Synthetic demo team",
+            "version": "demo-2026.10",
+            "severity": "warning",
+            "instruction": "Review consumers and API compatibility before changing a lookup contract.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "quality": {
+    "tools": [
+      {
+        "name": "eslint",
+        "version": "10.12.0",
+        "parser": "@typescript-eslint/parser@8.71.1",
+        "rules": [
+          "complexity",
+          "no-unreachable",
+          "no-constant-condition",
+          "no-constant-binary-expression",
+          "no-dupe-else-if",
+          "no-unsafe-finally",
+          "no-async-promise-executor",
+          "require-atomic-updates",
+          "@typescript-eslint/no-non-null-assertion",
+          "@typescript-eslint/no-non-null-asserted-optional-chain"
+        ],
+        "sourceOnly": true
+      },
+      {
+        "name": "jscpd",
+        "version": "4.0.5",
+        "rules": [
+          "duplicate-block"
+        ],
+        "sourceOnly": true
+      },
+      {
+        "name": "pmd",
+        "version": "7.17.0",
+        "status": "available",
+        "rules": [
+          "CyclomaticComplexity",
+          "BrokenNullCheck",
+          "CloseResource",
+          "UnconditionalIfStatement"
+        ],
+        "sourceOnly": true
+      }
+    ],
+    "findings": [
+      {
+        "tool": "pmd",
+        "ruleId": "BrokenNullCheck",
+        "basis": "analyzer",
+        "severity": "error",
+        "certainty": "potential",
+        "message": "Dereferencing the qualifier of this expression will throw a NullPointerException",
+        "evidence": {
+          "path": "backend/Quality.java",
+          "range": {
+            "startLine": 7,
+            "endLine": 7,
+            "startColumn": 27,
+            "endColumn": 42
+          },
+          "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+          "fileHash": "841ae26e08ef903b2cdd2f68b3ba0d438ec8058ae6f3e7b727cf2fb1fb7358e9",
+          "excerpt": "    if (input != null || !input.isEmpty()) return input;",
+          "projectId": "quality",
+          "repository": "example/quality"
+        },
+        "scope": "fixture.Quality#broken/1",
+        "fingerprint": "e7778bd34350623965f560d146e977f0a953598fab172f77c08cd36982b50195",
+        "documentation": "https://docs.pmd-code.org/snapshot/pmd_rules_java_errorprone.html#brokennullcheck",
+        "classification": "new",
+        "beforeEvidence": null,
+        "afterEvidence": {
+          "path": "backend/Quality.java",
+          "range": {
+            "startLine": 7,
+            "endLine": 7,
+            "startColumn": 27,
+            "endColumn": 42
+          },
+          "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+          "fileHash": "841ae26e08ef903b2cdd2f68b3ba0d438ec8058ae6f3e7b727cf2fb1fb7358e9",
+          "excerpt": "    if (input != null || !input.isEmpty()) return input;"
+        },
+        "projectId": "quality"
+      },
+      {
+        "tool": "pmd",
+        "ruleId": "CloseResource",
+        "basis": "analyzer",
+        "severity": "warning",
+        "certainty": "potential",
+        "message": "Ensure that resources like this FileInputStream object are closed after use",
+        "evidence": {
+          "path": "backend/Quality.java",
+          "range": {
+            "startLine": 11,
+            "endLine": 11,
+            "startColumn": 21,
+            "endColumn": 27
+          },
+          "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+          "fileHash": "841ae26e08ef903b2cdd2f68b3ba0d438ec8058ae6f3e7b727cf2fb1fb7358e9",
+          "excerpt": "    FileInputStream stream = new FileInputStream(filename);",
+          "projectId": "quality",
+          "repository": "example/quality"
+        },
+        "scope": "fixture.Quality#unclosed/1",
+        "fingerprint": "ab516775a2d5aa978ea346c540de4b3b24be86a0553e0029ed9c2e69553f8553",
+        "documentation": "https://docs.pmd-code.org/snapshot/pmd_rules_java_errorprone.html#closeresource",
+        "classification": "new",
+        "beforeEvidence": null,
+        "afterEvidence": {
+          "path": "backend/Quality.java",
+          "range": {
+            "startLine": 11,
+            "endLine": 11,
+            "startColumn": 21,
+            "endColumn": 27
+          },
+          "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+          "fileHash": "841ae26e08ef903b2cdd2f68b3ba0d438ec8058ae6f3e7b727cf2fb1fb7358e9",
+          "excerpt": "    FileInputStream stream = new FileInputStream(filename);"
+        },
+        "projectId": "quality"
+      },
+      {
+        "tool": "pmd",
+        "ruleId": "UnconditionalIfStatement",
+        "basis": "analyzer",
+        "severity": "warning",
+        "certainty": "evidenced",
+        "message": "Do not use if statements that are always true or always false",
+        "evidence": {
+          "path": "backend/Quality.java",
+          "range": {
+            "startLine": 15,
+            "endLine": 15,
+            "startColumn": 5,
+            "endColumn": 27
+          },
+          "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+          "fileHash": "841ae26e08ef903b2cdd2f68b3ba0d438ec8058ae6f3e7b727cf2fb1fb7358e9",
+          "excerpt": "    if (true) return true;",
+          "projectId": "quality",
+          "repository": "example/quality"
+        },
+        "scope": "fixture.Quality#conditional/0",
+        "fingerprint": "eb82cebd6d73434f7221c9f32fb65ca968859b637b602aa72e70622ae7e117e0",
+        "documentation": "https://docs.pmd-code.org/snapshot/pmd_rules_java_errorprone.html#unconditionalifstatement",
+        "classification": "new",
+        "beforeEvidence": null,
+        "afterEvidence": {
+          "path": "backend/Quality.java",
+          "range": {
+            "startLine": 15,
+            "endLine": 15,
+            "startColumn": 5,
+            "endColumn": 27
+          },
+          "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+          "fileHash": "841ae26e08ef903b2cdd2f68b3ba0d438ec8058ae6f3e7b727cf2fb1fb7358e9",
+          "excerpt": "    if (true) return true;"
+        },
+        "projectId": "quality"
+      },
+      {
+        "tool": "jscpd",
+        "ruleId": "duplicate-block",
+        "basis": "analyzer",
+        "severity": "warning",
+        "certainty": "evidenced",
+        "message": "Token clone detected across frontend/duplicate-a.ts and frontend/duplicate-b.ts (13 lines, 0 tokens)",
+        "evidence": {
+          "path": "frontend/duplicate-a.ts",
+          "range": {
+            "startLine": 1,
+            "endLine": 13
+          },
+          "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+          "fileHash": "cefd0da6057d393b87caf4f92d5bfc5f32b1b502b0df65268c693120d637ba83",
+          "excerpt": "export function summarizeA(values: number[]) {\n  let total = 0;\n  let accepted = 0;\n  for (const value of values) {\n    if (value > 0) {\n      total += value;\n      accepted += 1;\n    }\n  }\n  const average = accepted === 0 ? 0 : total / accepted;\n  return { total, accepted, average };\n}\n",
+          "projectId": "quality",
+          "repository": "example/quality"
+        },
+        "relatedEvidence": [
+          {
+            "path": "frontend/duplicate-b.ts",
+            "range": {
+              "startLine": 1,
+              "endLine": 13
+            },
+            "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+            "fileHash": "1f136709bdb12cd84215d92bb13c35362bf915679e6ffc17a22c2171e28bcece",
+            "excerpt": "export function summarizeB(values: number[]) {\n  let total = 0;\n  let accepted = 0;\n  for (const value of values) {\n    if (value > 0) {\n      total += value;\n      accepted += 1;\n    }\n  }\n  const average = accepted === 0 ? 0 : total / accepted;\n  return { total, accepted, average };\n}\n",
+            "projectId": "quality",
+            "repository": "example/quality"
+          }
+        ],
+        "fingerprint": "d622257887d146f0cf379061272a9c0ac6d3584c755bc12a0e914fb9acdd8552",
+        "magnitude": 0,
+        "lines": 13,
+        "format": "typescript",
+        "threshold": 50,
+        "classification": "new",
+        "beforeEvidence": null,
+        "afterEvidence": {
+          "path": "frontend/duplicate-a.ts",
+          "range": {
+            "startLine": 1,
+            "endLine": 13
+          },
+          "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+          "fileHash": "cefd0da6057d393b87caf4f92d5bfc5f32b1b502b0df65268c693120d637ba83",
+          "excerpt": "export function summarizeA(values: number[]) {\n  let total = 0;\n  let accepted = 0;\n  for (const value of values) {\n    if (value > 0) {\n      total += value;\n      accepted += 1;\n    }\n  }\n  const average = accepted === 0 ? 0 : total / accepted;\n  return { total, accepted, average };\n}\n"
+        },
+        "projectId": "quality"
+      },
+      {
+        "tool": "eslint",
+        "ruleId": "@typescript-eslint/no-non-null-assertion",
+        "basis": "analyzer",
+        "severity": "warning",
+        "certainty": "potential",
+        "message": "Forbidden non-null assertion.",
+        "evidence": {
+          "path": "frontend/review.ts",
+          "range": {
+            "startLine": 3,
+            "endLine": 3,
+            "startColumn": 22,
+            "endColumn": 28
+          },
+          "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+          "fileHash": "a85423a3a2b3710203eea1289845495c9362bbf9c5a367a9a30b570ab1674183",
+          "excerpt": "  const normalized = value!;",
+          "projectId": "quality",
+          "repository": "example/quality"
+        },
+        "fingerprint": "99fd4c9b84a4a8222ca122d25d736f487869d49c25aee585911c60d416992014",
+        "scope": "risky.normalized",
+        "classification": "pre-existing",
+        "beforeEvidence": {
+          "path": "frontend/review.ts",
+          "range": {
+            "startLine": 2,
+            "endLine": 2,
+            "startColumn": 22,
+            "endColumn": 28
+          },
+          "revision": "tree-sha256:571c7ffdee41d629dea48f196950a8d93f43fb35977bc9036a40da3efe8330c9",
+          "fileHash": "917c3f46cef70fc195d1c044650994971313b8eadbf88e6b48d5794fe42e7035",
+          "excerpt": "  const normalized = value!;"
+        },
+        "afterEvidence": {
+          "path": "frontend/review.ts",
+          "range": {
+            "startLine": 3,
+            "endLine": 3,
+            "startColumn": 22,
+            "endColumn": 28
+          },
+          "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+          "fileHash": "a85423a3a2b3710203eea1289845495c9362bbf9c5a367a9a30b570ab1674183",
+          "excerpt": "  const normalized = value!;"
+        },
+        "projectId": "quality"
+      },
+      {
+        "tool": "eslint",
+        "ruleId": "no-async-promise-executor",
+        "basis": "analyzer",
+        "severity": "warning",
+        "certainty": "evidenced",
+        "message": "Promise executor functions should not be async.",
+        "evidence": {
+          "path": "frontend/review.ts",
+          "range": {
+            "startLine": 28,
+            "endLine": 28,
+            "startColumn": 39,
+            "endColumn": 44
+          },
+          "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+          "fileHash": "a85423a3a2b3710203eea1289845495c9362bbf9c5a367a9a30b570ab1674183",
+          "excerpt": "export const asyncIssue = new Promise(async resolve => {",
+          "projectId": "quality",
+          "repository": "example/quality"
+        },
+        "fingerprint": "d17fa06029d49fd69f9ed2abdc2aeca3e145ea4fa20391b7bbe0bca3307c0f04",
+        "scope": "asyncIssue",
+        "classification": "new",
+        "beforeEvidence": null,
+        "afterEvidence": {
+          "path": "frontend/review.ts",
+          "range": {
+            "startLine": 28,
+            "endLine": 28,
+            "startColumn": 39,
+            "endColumn": 44
+          },
+          "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+          "fileHash": "a85423a3a2b3710203eea1289845495c9362bbf9c5a367a9a30b570ab1674183",
+          "excerpt": "export const asyncIssue = new Promise(async resolve => {"
+        },
+        "projectId": "quality"
+      },
+      {
+        "tool": "eslint",
+        "ruleId": "no-constant-condition",
+        "basis": "analyzer",
+        "severity": "warning",
+        "certainty": "evidenced",
+        "message": "Unexpected constant condition.",
+        "evidence": {
+          "path": "frontend/review.ts",
+          "range": {
+            "startLine": 24,
+            "endLine": 24,
+            "startColumn": 7,
+            "endColumn": 11
+          },
+          "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+          "fileHash": "a85423a3a2b3710203eea1289845495c9362bbf9c5a367a9a30b570ab1674183",
+          "excerpt": "  if (true) return value;",
+          "projectId": "quality",
+          "repository": "example/quality"
+        },
+        "fingerprint": "b2dd58d7cda99ebeeaf3bb01925a5cf4db262066da89fab38dfff6e6a8850cf0",
+        "scope": "newIssue",
+        "classification": "new",
+        "beforeEvidence": null,
+        "afterEvidence": {
+          "path": "frontend/review.ts",
+          "range": {
+            "startLine": 24,
+            "endLine": 24,
+            "startColumn": 7,
+            "endColumn": 11
+          },
+          "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+          "fileHash": "a85423a3a2b3710203eea1289845495c9362bbf9c5a367a9a30b570ab1674183",
+          "excerpt": "  if (true) return value;"
+        },
+        "projectId": "quality"
+      },
+      {
+        "tool": "eslint",
+        "ruleId": "no-unreachable",
+        "basis": "analyzer",
+        "severity": "warning",
+        "certainty": "evidenced",
+        "message": "Unreachable code.",
+        "evidence": {
+          "path": "frontend/review.ts",
+          "range": {
+            "startLine": 18,
+            "endLine": 18,
+            "startColumn": 3,
+            "endColumn": 42
+          },
+          "revision": "tree-sha256:571c7ffdee41d629dea48f196950a8d93f43fb35977bc9036a40da3efe8330c9",
+          "fileHash": "917c3f46cef70fc195d1c044650994971313b8eadbf88e6b48d5794fe42e7035",
+          "excerpt": "  console.log('unreachable in baseline');",
+          "projectId": "quality",
+          "repository": "example/quality"
+        },
+        "fingerprint": "855f18362dae7e7bf0e43752eef78d7d5af2e5a959ba2f9b3054f5331364cd9a",
+        "scope": "resolved",
+        "classification": "resolved",
+        "beforeEvidence": {
+          "path": "frontend/review.ts",
+          "range": {
+            "startLine": 18,
+            "endLine": 18,
+            "startColumn": 3,
+            "endColumn": 42
+          },
+          "revision": "tree-sha256:571c7ffdee41d629dea48f196950a8d93f43fb35977bc9036a40da3efe8330c9",
+          "fileHash": "917c3f46cef70fc195d1c044650994971313b8eadbf88e6b48d5794fe42e7035",
+          "excerpt": "  console.log('unreachable in baseline');"
+        },
+        "afterEvidence": null,
+        "projectId": "quality"
+      },
+      {
+        "tool": "source-design",
+        "ruleId": "public-mutable-field",
+        "basis": "inferred-convention",
+        "severity": "info",
+        "certainty": "potential",
+        "message": "fixture.Quality#mutable exposes a writable field; review whether direct mutation is intended",
+        "evidence": {
+          "path": "backend/Quality.java",
+          "range": {
+            "startLine": 5,
+            "endLine": 5
+          },
+          "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+          "fileHash": "841ae26e08ef903b2cdd2f68b3ba0d438ec8058ae6f3e7b727cf2fb1fb7358e9",
+          "excerpt": "  public int mutable;",
+          "projectId": "quality",
+          "repository": "example/quality"
+        },
+        "fingerprint": "6d43393cb9e94749d8cefc996c560b9d05caeb1eb57459637918ae61a900edc3",
+        "classification": "new",
+        "beforeEvidence": null,
+        "afterEvidence": {
+          "path": "backend/Quality.java",
+          "range": {
+            "startLine": 5,
+            "endLine": 5
+          },
+          "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+          "fileHash": "841ae26e08ef903b2cdd2f68b3ba0d438ec8058ae6f3e7b727cf2fb1fb7358e9",
+          "excerpt": "  public int mutable;"
+        },
+        "projectId": "quality"
+      },
+      {
+        "tool": "source-design",
+        "ruleId": "module-cycle",
+        "basis": "inferred-convention",
+        "severity": "warning",
+        "certainty": "potential",
+        "message": "Resolved source imports form a cycle among frontend/domain/order.ts, frontend/view.tsx; review initialization and coupling",
+        "evidence": {
+          "path": "frontend/domain/order.ts",
+          "range": {
+            "startLine": 2,
+            "endLine": 2
+          },
+          "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+          "fileHash": "866a650d284a15d72d11ddfbcbaca8efec0052c80270e976d06c1035766aafeb",
+          "excerpt": "import { view } from '../view';",
+          "projectId": "quality",
+          "repository": "example/quality"
+        },
+        "fingerprint": "2e64cfb02eb20d0d5958bde54e3c90a4f71133c8542180309189c4f3bd4060e8",
+        "magnitude": 2,
+        "members": [
+          "frontend/domain/order.ts",
+          "frontend/view.tsx"
+        ],
+        "relatedEvidence": [
+          {
+            "path": "frontend/view.tsx",
+            "range": {
+              "startLine": 1,
+              "endLine": 1
+            },
+            "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+            "fileHash": "fd7c97d2996557138fc6c02d6b2fb56514defda30e0247c56c2818e9422424ef",
+            "excerpt": "import { Order } from './domain/order';",
+            "projectId": "quality",
+            "repository": "example/quality"
+          }
+        ],
+        "edgeEvidence": [
+          {
+            "fromPath": "frontend/domain/order.ts",
+            "toPath": "frontend/view.tsx",
+            "evidence": {
+              "path": "frontend/domain/order.ts",
+              "range": {
+                "startLine": 2,
+                "endLine": 2
+              },
+              "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+              "fileHash": "866a650d284a15d72d11ddfbcbaca8efec0052c80270e976d06c1035766aafeb",
+              "excerpt": "import { view } from '../view';"
+            }
+          },
+          {
+            "fromPath": "frontend/view.tsx",
+            "toPath": "frontend/domain/order.ts",
+            "evidence": {
+              "path": "frontend/view.tsx",
+              "range": {
+                "startLine": 1,
+                "endLine": 1
+              },
+              "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+              "fileHash": "fd7c97d2996557138fc6c02d6b2fb56514defda30e0247c56c2818e9422424ef",
+              "excerpt": "import { Order } from './domain/order';"
+            }
+          }
+        ],
+        "limitations": "Source import cycle does not prove a runtime initialization fault or a SOLID violation",
+        "classification": "new",
+        "beforeEvidence": null,
+        "afterEvidence": {
+          "path": "frontend/domain/order.ts",
+          "range": {
+            "startLine": 2,
+            "endLine": 2
+          },
+          "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+          "fileHash": "866a650d284a15d72d11ddfbcbaca8efec0052c80270e976d06c1035766aafeb",
+          "excerpt": "import { view } from '../view';"
+        },
+        "projectId": "quality"
+      },
+      {
+        "tool": "source-design",
+        "ruleId": "parameter-count",
+        "basis": "inferred-convention",
+        "severity": "warning",
+        "certainty": "potential",
+        "message": "Order.submit has 6 parameters; review the convention limit 5",
+        "evidence": {
+          "path": "frontend/domain/order.ts",
+          "range": {
+            "startLine": 8,
+            "endLine": 10
+          },
+          "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+          "fileHash": "866a650d284a15d72d11ddfbcbaca8efec0052c80270e976d06c1035766aafeb",
+          "excerpt": "  submit(a: string, b: string, c: string, d: string, e: string, f: string) {\n    return view(a + b + c + d + e + f + this.internal);\n  }",
+          "projectId": "quality",
+          "repository": "example/quality"
+        },
+        "fingerprint": "0c5fc7d185d7863884ed0d5bcddcecb2341f2f152859a20589bdd5591a605586",
+        "magnitude": 6,
+        "threshold": 5,
+        "classification": "new",
+        "beforeEvidence": null,
+        "afterEvidence": {
+          "path": "frontend/domain/order.ts",
+          "range": {
+            "startLine": 8,
+            "endLine": 10
+          },
+          "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+          "fileHash": "866a650d284a15d72d11ddfbcbaca8efec0052c80270e976d06c1035766aafeb",
+          "excerpt": "  submit(a: string, b: string, c: string, d: string, e: string, f: string) {\n    return view(a + b + c + d + e + f + this.internal);\n  }"
+        },
+        "projectId": "quality"
+      },
+      {
+        "tool": "source-design",
+        "ruleId": "public-mutable-field",
+        "basis": "inferred-convention",
+        "severity": "info",
+        "certainty": "potential",
+        "message": "Order.total exposes a writable field; review whether direct mutation is intended",
+        "evidence": {
+          "path": "frontend/domain/order.ts",
+          "range": {
+            "startLine": 5,
+            "endLine": 5
+          },
+          "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+          "fileHash": "866a650d284a15d72d11ddfbcbaca8efec0052c80270e976d06c1035766aafeb",
+          "excerpt": "  public total = 0;",
+          "projectId": "quality",
+          "repository": "example/quality"
+        },
+        "fingerprint": "995281d08f35ebed73f2be814e7e1eda61a8766014754b094842ffc6794ca58c",
+        "classification": "new",
+        "beforeEvidence": null,
+        "afterEvidence": {
+          "path": "frontend/domain/order.ts",
+          "range": {
+            "startLine": 5,
+            "endLine": 5
+          },
+          "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+          "fileHash": "866a650d284a15d72d11ddfbcbaca8efec0052c80270e976d06c1035766aafeb",
+          "excerpt": "  public total = 0;"
+        },
+        "projectId": "quality"
+      }
+    ],
+    "unsupported": [
+      {
+        "tool": "typescript-eslint",
+        "reason": "type-aware-checks-unavailable",
+        "detail": "No repository tsconfig, dependencies or compiler project is loaded; no-floating-promises, no-unnecessary-condition and typed null/async rules are not run",
+        "projectId": "quality"
+      },
+      {
+        "tool": "pmd",
+        "reason": "source-only-type-resolution",
+        "detail": "JDK types only; external Java dependency types, dispatch and resource ownership contracts are not verified",
+        "projectId": "quality"
+      },
+      {
+        "tool": "source-design",
+        "reason": "bounded-design-coverage",
+        "detail": "Selected import boundaries and declaration conventions only; no universal SRP/OCP/LSP/ISP/DIP judgment, runtime DI resolution, inheritance substitutability or behavioral proof",
+        "projectId": "quality"
+      }
+    ],
+    "projects": [
+      {
+        "configHash": "a2ee4ddf65b11ddd9d572f41575b37f55c0141f30e531b11fe09d18a64e2dc58",
+        "config": {
+          "complexityThreshold": 10,
+          "duplication": {
+            "minTokens": 50,
+            "minLines": 5
+          },
+          "pmdEnabled": true
+        },
+        "tools": [
+          {
+            "name": "eslint",
+            "version": "10.12.0",
+            "parser": "@typescript-eslint/parser@8.71.1",
+            "rules": [
+              "complexity",
+              "no-unreachable",
+              "no-constant-condition",
+              "no-constant-binary-expression",
+              "no-dupe-else-if",
+              "no-unsafe-finally",
+              "no-async-promise-executor",
+              "require-atomic-updates",
+              "@typescript-eslint/no-non-null-assertion",
+              "@typescript-eslint/no-non-null-asserted-optional-chain"
+            ],
+            "sourceOnly": true
+          },
+          {
+            "name": "jscpd",
+            "version": "4.0.5",
+            "rules": [
+              "duplicate-block"
+            ],
+            "sourceOnly": true
+          },
+          {
+            "name": "pmd",
+            "version": "7.17.0",
+            "status": "available",
+            "rules": [
+              "CyclomaticComplexity",
+              "BrokenNullCheck",
+              "CloseResource",
+              "UnconditionalIfStatement"
+            ],
+            "sourceOnly": true
+          }
+        ],
+        "findings": [
+          {
+            "tool": "pmd",
+            "ruleId": "BrokenNullCheck",
+            "basis": "analyzer",
+            "severity": "error",
+            "certainty": "potential",
+            "message": "Dereferencing the qualifier of this expression will throw a NullPointerException",
+            "evidence": {
+              "path": "backend/Quality.java",
+              "range": {
+                "startLine": 7,
+                "endLine": 7,
+                "startColumn": 27,
+                "endColumn": 42
+              },
+              "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+              "fileHash": "841ae26e08ef903b2cdd2f68b3ba0d438ec8058ae6f3e7b727cf2fb1fb7358e9",
+              "excerpt": "    if (input != null || !input.isEmpty()) return input;",
+              "projectId": "quality",
+              "repository": "example/quality"
+            },
+            "scope": "fixture.Quality#broken/1",
+            "fingerprint": "e7778bd34350623965f560d146e977f0a953598fab172f77c08cd36982b50195",
+            "documentation": "https://docs.pmd-code.org/snapshot/pmd_rules_java_errorprone.html#brokennullcheck",
+            "classification": "new",
+            "beforeEvidence": null,
+            "afterEvidence": {
+              "path": "backend/Quality.java",
+              "range": {
+                "startLine": 7,
+                "endLine": 7,
+                "startColumn": 27,
+                "endColumn": 42
+              },
+              "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+              "fileHash": "841ae26e08ef903b2cdd2f68b3ba0d438ec8058ae6f3e7b727cf2fb1fb7358e9",
+              "excerpt": "    if (input != null || !input.isEmpty()) return input;"
+            },
+            "projectId": "quality"
+          },
+          {
+            "tool": "pmd",
+            "ruleId": "CloseResource",
+            "basis": "analyzer",
+            "severity": "warning",
+            "certainty": "potential",
+            "message": "Ensure that resources like this FileInputStream object are closed after use",
+            "evidence": {
+              "path": "backend/Quality.java",
+              "range": {
+                "startLine": 11,
+                "endLine": 11,
+                "startColumn": 21,
+                "endColumn": 27
+              },
+              "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+              "fileHash": "841ae26e08ef903b2cdd2f68b3ba0d438ec8058ae6f3e7b727cf2fb1fb7358e9",
+              "excerpt": "    FileInputStream stream = new FileInputStream(filename);",
+              "projectId": "quality",
+              "repository": "example/quality"
+            },
+            "scope": "fixture.Quality#unclosed/1",
+            "fingerprint": "ab516775a2d5aa978ea346c540de4b3b24be86a0553e0029ed9c2e69553f8553",
+            "documentation": "https://docs.pmd-code.org/snapshot/pmd_rules_java_errorprone.html#closeresource",
+            "classification": "new",
+            "beforeEvidence": null,
+            "afterEvidence": {
+              "path": "backend/Quality.java",
+              "range": {
+                "startLine": 11,
+                "endLine": 11,
+                "startColumn": 21,
+                "endColumn": 27
+              },
+              "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+              "fileHash": "841ae26e08ef903b2cdd2f68b3ba0d438ec8058ae6f3e7b727cf2fb1fb7358e9",
+              "excerpt": "    FileInputStream stream = new FileInputStream(filename);"
+            },
+            "projectId": "quality"
+          },
+          {
+            "tool": "pmd",
+            "ruleId": "UnconditionalIfStatement",
+            "basis": "analyzer",
+            "severity": "warning",
+            "certainty": "evidenced",
+            "message": "Do not use if statements that are always true or always false",
+            "evidence": {
+              "path": "backend/Quality.java",
+              "range": {
+                "startLine": 15,
+                "endLine": 15,
+                "startColumn": 5,
+                "endColumn": 27
+              },
+              "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+              "fileHash": "841ae26e08ef903b2cdd2f68b3ba0d438ec8058ae6f3e7b727cf2fb1fb7358e9",
+              "excerpt": "    if (true) return true;",
+              "projectId": "quality",
+              "repository": "example/quality"
+            },
+            "scope": "fixture.Quality#conditional/0",
+            "fingerprint": "eb82cebd6d73434f7221c9f32fb65ca968859b637b602aa72e70622ae7e117e0",
+            "documentation": "https://docs.pmd-code.org/snapshot/pmd_rules_java_errorprone.html#unconditionalifstatement",
+            "classification": "new",
+            "beforeEvidence": null,
+            "afterEvidence": {
+              "path": "backend/Quality.java",
+              "range": {
+                "startLine": 15,
+                "endLine": 15,
+                "startColumn": 5,
+                "endColumn": 27
+              },
+              "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+              "fileHash": "841ae26e08ef903b2cdd2f68b3ba0d438ec8058ae6f3e7b727cf2fb1fb7358e9",
+              "excerpt": "    if (true) return true;"
+            },
+            "projectId": "quality"
+          },
+          {
+            "tool": "jscpd",
+            "ruleId": "duplicate-block",
+            "basis": "analyzer",
+            "severity": "warning",
+            "certainty": "evidenced",
+            "message": "Token clone detected across frontend/duplicate-a.ts and frontend/duplicate-b.ts (13 lines, 0 tokens)",
+            "evidence": {
+              "path": "frontend/duplicate-a.ts",
+              "range": {
+                "startLine": 1,
+                "endLine": 13
+              },
+              "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+              "fileHash": "cefd0da6057d393b87caf4f92d5bfc5f32b1b502b0df65268c693120d637ba83",
+              "excerpt": "export function summarizeA(values: number[]) {\n  let total = 0;\n  let accepted = 0;\n  for (const value of values) {\n    if (value > 0) {\n      total += value;\n      accepted += 1;\n    }\n  }\n  const average = accepted === 0 ? 0 : total / accepted;\n  return { total, accepted, average };\n}\n",
+              "projectId": "quality",
+              "repository": "example/quality"
+            },
+            "relatedEvidence": [
+              {
+                "path": "frontend/duplicate-b.ts",
+                "range": {
+                  "startLine": 1,
+                  "endLine": 13
+                },
+                "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+                "fileHash": "1f136709bdb12cd84215d92bb13c35362bf915679e6ffc17a22c2171e28bcece",
+                "excerpt": "export function summarizeB(values: number[]) {\n  let total = 0;\n  let accepted = 0;\n  for (const value of values) {\n    if (value > 0) {\n      total += value;\n      accepted += 1;\n    }\n  }\n  const average = accepted === 0 ? 0 : total / accepted;\n  return { total, accepted, average };\n}\n",
+                "projectId": "quality",
+                "repository": "example/quality"
+              }
+            ],
+            "fingerprint": "d622257887d146f0cf379061272a9c0ac6d3584c755bc12a0e914fb9acdd8552",
+            "magnitude": 0,
+            "lines": 13,
+            "format": "typescript",
+            "threshold": 50,
+            "classification": "new",
+            "beforeEvidence": null,
+            "afterEvidence": {
+              "path": "frontend/duplicate-a.ts",
+              "range": {
+                "startLine": 1,
+                "endLine": 13
+              },
+              "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+              "fileHash": "cefd0da6057d393b87caf4f92d5bfc5f32b1b502b0df65268c693120d637ba83",
+              "excerpt": "export function summarizeA(values: number[]) {\n  let total = 0;\n  let accepted = 0;\n  for (const value of values) {\n    if (value > 0) {\n      total += value;\n      accepted += 1;\n    }\n  }\n  const average = accepted === 0 ? 0 : total / accepted;\n  return { total, accepted, average };\n}\n"
+            },
+            "projectId": "quality"
+          },
+          {
+            "tool": "eslint",
+            "ruleId": "@typescript-eslint/no-non-null-assertion",
+            "basis": "analyzer",
+            "severity": "warning",
+            "certainty": "potential",
+            "message": "Forbidden non-null assertion.",
+            "evidence": {
+              "path": "frontend/review.ts",
+              "range": {
+                "startLine": 3,
+                "endLine": 3,
+                "startColumn": 22,
+                "endColumn": 28
+              },
+              "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+              "fileHash": "a85423a3a2b3710203eea1289845495c9362bbf9c5a367a9a30b570ab1674183",
+              "excerpt": "  const normalized = value!;",
+              "projectId": "quality",
+              "repository": "example/quality"
+            },
+            "fingerprint": "99fd4c9b84a4a8222ca122d25d736f487869d49c25aee585911c60d416992014",
+            "scope": "risky.normalized",
+            "classification": "pre-existing",
+            "beforeEvidence": {
+              "path": "frontend/review.ts",
+              "range": {
+                "startLine": 2,
+                "endLine": 2,
+                "startColumn": 22,
+                "endColumn": 28
+              },
+              "revision": "tree-sha256:571c7ffdee41d629dea48f196950a8d93f43fb35977bc9036a40da3efe8330c9",
+              "fileHash": "917c3f46cef70fc195d1c044650994971313b8eadbf88e6b48d5794fe42e7035",
+              "excerpt": "  const normalized = value!;"
+            },
+            "afterEvidence": {
+              "path": "frontend/review.ts",
+              "range": {
+                "startLine": 3,
+                "endLine": 3,
+                "startColumn": 22,
+                "endColumn": 28
+              },
+              "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+              "fileHash": "a85423a3a2b3710203eea1289845495c9362bbf9c5a367a9a30b570ab1674183",
+              "excerpt": "  const normalized = value!;"
+            },
+            "projectId": "quality"
+          },
+          {
+            "tool": "eslint",
+            "ruleId": "no-async-promise-executor",
+            "basis": "analyzer",
+            "severity": "warning",
+            "certainty": "evidenced",
+            "message": "Promise executor functions should not be async.",
+            "evidence": {
+              "path": "frontend/review.ts",
+              "range": {
+                "startLine": 28,
+                "endLine": 28,
+                "startColumn": 39,
+                "endColumn": 44
+              },
+              "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+              "fileHash": "a85423a3a2b3710203eea1289845495c9362bbf9c5a367a9a30b570ab1674183",
+              "excerpt": "export const asyncIssue = new Promise(async resolve => {",
+              "projectId": "quality",
+              "repository": "example/quality"
+            },
+            "fingerprint": "d17fa06029d49fd69f9ed2abdc2aeca3e145ea4fa20391b7bbe0bca3307c0f04",
+            "scope": "asyncIssue",
+            "classification": "new",
+            "beforeEvidence": null,
+            "afterEvidence": {
+              "path": "frontend/review.ts",
+              "range": {
+                "startLine": 28,
+                "endLine": 28,
+                "startColumn": 39,
+                "endColumn": 44
+              },
+              "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+              "fileHash": "a85423a3a2b3710203eea1289845495c9362bbf9c5a367a9a30b570ab1674183",
+              "excerpt": "export const asyncIssue = new Promise(async resolve => {"
+            },
+            "projectId": "quality"
+          },
+          {
+            "tool": "eslint",
+            "ruleId": "no-constant-condition",
+            "basis": "analyzer",
+            "severity": "warning",
+            "certainty": "evidenced",
+            "message": "Unexpected constant condition.",
+            "evidence": {
+              "path": "frontend/review.ts",
+              "range": {
+                "startLine": 24,
+                "endLine": 24,
+                "startColumn": 7,
+                "endColumn": 11
+              },
+              "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+              "fileHash": "a85423a3a2b3710203eea1289845495c9362bbf9c5a367a9a30b570ab1674183",
+              "excerpt": "  if (true) return value;",
+              "projectId": "quality",
+              "repository": "example/quality"
+            },
+            "fingerprint": "b2dd58d7cda99ebeeaf3bb01925a5cf4db262066da89fab38dfff6e6a8850cf0",
+            "scope": "newIssue",
+            "classification": "new",
+            "beforeEvidence": null,
+            "afterEvidence": {
+              "path": "frontend/review.ts",
+              "range": {
+                "startLine": 24,
+                "endLine": 24,
+                "startColumn": 7,
+                "endColumn": 11
+              },
+              "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+              "fileHash": "a85423a3a2b3710203eea1289845495c9362bbf9c5a367a9a30b570ab1674183",
+              "excerpt": "  if (true) return value;"
+            },
+            "projectId": "quality"
+          },
+          {
+            "tool": "eslint",
+            "ruleId": "no-unreachable",
+            "basis": "analyzer",
+            "severity": "warning",
+            "certainty": "evidenced",
+            "message": "Unreachable code.",
+            "evidence": {
+              "path": "frontend/review.ts",
+              "range": {
+                "startLine": 18,
+                "endLine": 18,
+                "startColumn": 3,
+                "endColumn": 42
+              },
+              "revision": "tree-sha256:571c7ffdee41d629dea48f196950a8d93f43fb35977bc9036a40da3efe8330c9",
+              "fileHash": "917c3f46cef70fc195d1c044650994971313b8eadbf88e6b48d5794fe42e7035",
+              "excerpt": "  console.log('unreachable in baseline');",
+              "projectId": "quality",
+              "repository": "example/quality"
+            },
+            "fingerprint": "855f18362dae7e7bf0e43752eef78d7d5af2e5a959ba2f9b3054f5331364cd9a",
+            "scope": "resolved",
+            "classification": "resolved",
+            "beforeEvidence": {
+              "path": "frontend/review.ts",
+              "range": {
+                "startLine": 18,
+                "endLine": 18,
+                "startColumn": 3,
+                "endColumn": 42
+              },
+              "revision": "tree-sha256:571c7ffdee41d629dea48f196950a8d93f43fb35977bc9036a40da3efe8330c9",
+              "fileHash": "917c3f46cef70fc195d1c044650994971313b8eadbf88e6b48d5794fe42e7035",
+              "excerpt": "  console.log('unreachable in baseline');"
+            },
+            "afterEvidence": null,
+            "projectId": "quality"
+          },
+          {
+            "tool": "source-design",
+            "ruleId": "public-mutable-field",
+            "basis": "inferred-convention",
+            "severity": "info",
+            "certainty": "potential",
+            "message": "fixture.Quality#mutable exposes a writable field; review whether direct mutation is intended",
+            "evidence": {
+              "path": "backend/Quality.java",
+              "range": {
+                "startLine": 5,
+                "endLine": 5
+              },
+              "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+              "fileHash": "841ae26e08ef903b2cdd2f68b3ba0d438ec8058ae6f3e7b727cf2fb1fb7358e9",
+              "excerpt": "  public int mutable;",
+              "projectId": "quality",
+              "repository": "example/quality"
+            },
+            "fingerprint": "6d43393cb9e94749d8cefc996c560b9d05caeb1eb57459637918ae61a900edc3",
+            "classification": "new",
+            "beforeEvidence": null,
+            "afterEvidence": {
+              "path": "backend/Quality.java",
+              "range": {
+                "startLine": 5,
+                "endLine": 5
+              },
+              "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+              "fileHash": "841ae26e08ef903b2cdd2f68b3ba0d438ec8058ae6f3e7b727cf2fb1fb7358e9",
+              "excerpt": "  public int mutable;"
+            },
+            "projectId": "quality"
+          },
+          {
+            "tool": "source-design",
+            "ruleId": "module-cycle",
+            "basis": "inferred-convention",
+            "severity": "warning",
+            "certainty": "potential",
+            "message": "Resolved source imports form a cycle among frontend/domain/order.ts, frontend/view.tsx; review initialization and coupling",
+            "evidence": {
+              "path": "frontend/domain/order.ts",
+              "range": {
+                "startLine": 2,
+                "endLine": 2
+              },
+              "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+              "fileHash": "866a650d284a15d72d11ddfbcbaca8efec0052c80270e976d06c1035766aafeb",
+              "excerpt": "import { view } from '../view';",
+              "projectId": "quality",
+              "repository": "example/quality"
+            },
+            "fingerprint": "2e64cfb02eb20d0d5958bde54e3c90a4f71133c8542180309189c4f3bd4060e8",
+            "magnitude": 2,
+            "members": [
+              "frontend/domain/order.ts",
+              "frontend/view.tsx"
+            ],
+            "relatedEvidence": [
+              {
+                "path": "frontend/view.tsx",
+                "range": {
+                  "startLine": 1,
+                  "endLine": 1
+                },
+                "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+                "fileHash": "fd7c97d2996557138fc6c02d6b2fb56514defda30e0247c56c2818e9422424ef",
+                "excerpt": "import { Order } from './domain/order';",
+                "projectId": "quality",
+                "repository": "example/quality"
+              }
+            ],
+            "edgeEvidence": [
+              {
+                "fromPath": "frontend/domain/order.ts",
+                "toPath": "frontend/view.tsx",
+                "evidence": {
+                  "path": "frontend/domain/order.ts",
+                  "range": {
+                    "startLine": 2,
+                    "endLine": 2
+                  },
+                  "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+                  "fileHash": "866a650d284a15d72d11ddfbcbaca8efec0052c80270e976d06c1035766aafeb",
+                  "excerpt": "import { view } from '../view';"
+                }
+              },
+              {
+                "fromPath": "frontend/view.tsx",
+                "toPath": "frontend/domain/order.ts",
+                "evidence": {
+                  "path": "frontend/view.tsx",
+                  "range": {
+                    "startLine": 1,
+                    "endLine": 1
+                  },
+                  "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+                  "fileHash": "fd7c97d2996557138fc6c02d6b2fb56514defda30e0247c56c2818e9422424ef",
+                  "excerpt": "import { Order } from './domain/order';"
+                }
+              }
+            ],
+            "limitations": "Source import cycle does not prove a runtime initialization fault or a SOLID violation",
+            "classification": "new",
+            "beforeEvidence": null,
+            "afterEvidence": {
+              "path": "frontend/domain/order.ts",
+              "range": {
+                "startLine": 2,
+                "endLine": 2
+              },
+              "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+              "fileHash": "866a650d284a15d72d11ddfbcbaca8efec0052c80270e976d06c1035766aafeb",
+              "excerpt": "import { view } from '../view';"
+            },
+            "projectId": "quality"
+          },
+          {
+            "tool": "source-design",
+            "ruleId": "parameter-count",
+            "basis": "inferred-convention",
+            "severity": "warning",
+            "certainty": "potential",
+            "message": "Order.submit has 6 parameters; review the convention limit 5",
+            "evidence": {
+              "path": "frontend/domain/order.ts",
+              "range": {
+                "startLine": 8,
+                "endLine": 10
+              },
+              "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+              "fileHash": "866a650d284a15d72d11ddfbcbaca8efec0052c80270e976d06c1035766aafeb",
+              "excerpt": "  submit(a: string, b: string, c: string, d: string, e: string, f: string) {\n    return view(a + b + c + d + e + f + this.internal);\n  }",
+              "projectId": "quality",
+              "repository": "example/quality"
+            },
+            "fingerprint": "0c5fc7d185d7863884ed0d5bcddcecb2341f2f152859a20589bdd5591a605586",
+            "magnitude": 6,
+            "threshold": 5,
+            "classification": "new",
+            "beforeEvidence": null,
+            "afterEvidence": {
+              "path": "frontend/domain/order.ts",
+              "range": {
+                "startLine": 8,
+                "endLine": 10
+              },
+              "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+              "fileHash": "866a650d284a15d72d11ddfbcbaca8efec0052c80270e976d06c1035766aafeb",
+              "excerpt": "  submit(a: string, b: string, c: string, d: string, e: string, f: string) {\n    return view(a + b + c + d + e + f + this.internal);\n  }"
+            },
+            "projectId": "quality"
+          },
+          {
+            "tool": "source-design",
+            "ruleId": "public-mutable-field",
+            "basis": "inferred-convention",
+            "severity": "info",
+            "certainty": "potential",
+            "message": "Order.total exposes a writable field; review whether direct mutation is intended",
+            "evidence": {
+              "path": "frontend/domain/order.ts",
+              "range": {
+                "startLine": 5,
+                "endLine": 5
+              },
+              "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+              "fileHash": "866a650d284a15d72d11ddfbcbaca8efec0052c80270e976d06c1035766aafeb",
+              "excerpt": "  public total = 0;",
+              "projectId": "quality",
+              "repository": "example/quality"
+            },
+            "fingerprint": "995281d08f35ebed73f2be814e7e1eda61a8766014754b094842ffc6794ca58c",
+            "classification": "new",
+            "beforeEvidence": null,
+            "afterEvidence": {
+              "path": "frontend/domain/order.ts",
+              "range": {
+                "startLine": 5,
+                "endLine": 5
+              },
+              "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+              "fileHash": "866a650d284a15d72d11ddfbcbaca8efec0052c80270e976d06c1035766aafeb",
+              "excerpt": "  public total = 0;"
+            },
+            "projectId": "quality"
+          }
+        ],
+        "unsupported": [
+          {
+            "tool": "typescript-eslint",
+            "reason": "type-aware-checks-unavailable",
+            "detail": "No repository tsconfig, dependencies or compiler project is loaded; no-floating-promises, no-unnecessary-condition and typed null/async rules are not run",
+            "projectId": "quality"
+          },
+          {
+            "tool": "pmd",
+            "reason": "source-only-type-resolution",
+            "detail": "JDK types only; external Java dependency types, dispatch and resource ownership contracts are not verified",
+            "projectId": "quality"
+          },
+          {
+            "tool": "source-design",
+            "reason": "bounded-design-coverage",
+            "detail": "Selected import boundaries and declaration conventions only; no universal SRP/OCP/LSP/ISP/DIP judgment, runtime DI resolution, inheritance substitutability or behavioral proof",
+            "projectId": "quality"
+          }
+        ],
+        "metrics": {
+          "elapsedMs": 1903.73,
+          "analyzedFiles": {
+            "baseline": {
+              "eslint": 1,
+              "pmd": 1,
+              "jscpd": 2
+            },
+            "candidate": {
+              "eslint": 5,
+              "pmd": 1,
+              "jscpd": 6
+            }
+          },
+          "duplication": {
+            "baseline": {
+              "lines": 26,
+              "tokens": 230,
+              "sources": 2,
+              "clones": 0,
+              "duplicatedLines": 0,
+              "duplicatedTokens": 0,
+              "percentage": 0,
+              "percentageTokens": 0,
+              "newDuplicatedLines": 0,
+              "newClones": 0
+            },
+            "candidate": {
+              "lines": 83,
+              "tokens": 837,
+              "sources": 5,
+              "clones": 1,
+              "duplicatedLines": 12,
+              "duplicatedTokens": 124,
+              "percentage": 14.46,
+              "percentageTokens": 14.81,
+              "newDuplicatedLines": 0,
+              "newClones": 0
+            }
+          }
+        },
+        "conventions": {
+          "configHash": "a0c3afb1e366ef4040a5019cacaf21eaed3e19335582e5366b1220659d28c64d",
+          "config": {
+            "forbiddenImports": [],
+            "maxParameters": 5,
+            "maxClassMethods": 20,
+            "checkPublicMutableFields": true,
+            "checkModuleCycles": true
+          },
+          "tools": [
+            {
+              "name": "source-design",
+              "version": "1.0",
+              "rules": [
+                "forbidden-import",
+                "parameter-count",
+                "class-method-count",
+                "public-mutable-field",
+                "module-cycle"
+              ],
+              "sourceOnly": true
+            }
+          ],
+          "findings": [
+            {
+              "tool": "source-design",
+              "ruleId": "public-mutable-field",
+              "basis": "inferred-convention",
+              "severity": "info",
+              "certainty": "potential",
+              "message": "fixture.Quality#mutable exposes a writable field; review whether direct mutation is intended",
+              "evidence": {
+                "path": "backend/Quality.java",
+                "range": {
+                  "startLine": 5,
+                  "endLine": 5
+                },
+                "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+                "fileHash": "841ae26e08ef903b2cdd2f68b3ba0d438ec8058ae6f3e7b727cf2fb1fb7358e9",
+                "excerpt": "  public int mutable;"
+              },
+              "fingerprint": "6d43393cb9e94749d8cefc996c560b9d05caeb1eb57459637918ae61a900edc3",
+              "classification": "new",
+              "beforeEvidence": null,
+              "afterEvidence": {
+                "path": "backend/Quality.java",
+                "range": {
+                  "startLine": 5,
+                  "endLine": 5
+                },
+                "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+                "fileHash": "841ae26e08ef903b2cdd2f68b3ba0d438ec8058ae6f3e7b727cf2fb1fb7358e9",
+                "excerpt": "  public int mutable;"
+              }
+            },
+            {
+              "tool": "source-design",
+              "ruleId": "module-cycle",
+              "basis": "inferred-convention",
+              "severity": "warning",
+              "certainty": "potential",
+              "message": "Resolved source imports form a cycle among frontend/domain/order.ts, frontend/view.tsx; review initialization and coupling",
+              "evidence": {
+                "path": "frontend/domain/order.ts",
+                "range": {
+                  "startLine": 2,
+                  "endLine": 2
+                },
+                "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+                "fileHash": "866a650d284a15d72d11ddfbcbaca8efec0052c80270e976d06c1035766aafeb",
+                "excerpt": "import { view } from '../view';"
+              },
+              "fingerprint": "2e64cfb02eb20d0d5958bde54e3c90a4f71133c8542180309189c4f3bd4060e8",
+              "magnitude": 2,
+              "members": [
+                "frontend/domain/order.ts",
+                "frontend/view.tsx"
+              ],
+              "relatedEvidence": [
+                {
+                  "path": "frontend/view.tsx",
+                  "range": {
+                    "startLine": 1,
+                    "endLine": 1
+                  },
+                  "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+                  "fileHash": "fd7c97d2996557138fc6c02d6b2fb56514defda30e0247c56c2818e9422424ef",
+                  "excerpt": "import { Order } from './domain/order';"
+                }
+              ],
+              "edgeEvidence": [
+                {
+                  "fromPath": "frontend/domain/order.ts",
+                  "toPath": "frontend/view.tsx",
+                  "evidence": {
+                    "path": "frontend/domain/order.ts",
+                    "range": {
+                      "startLine": 2,
+                      "endLine": 2
+                    },
+                    "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+                    "fileHash": "866a650d284a15d72d11ddfbcbaca8efec0052c80270e976d06c1035766aafeb",
+                    "excerpt": "import { view } from '../view';"
+                  }
+                },
+                {
+                  "fromPath": "frontend/view.tsx",
+                  "toPath": "frontend/domain/order.ts",
+                  "evidence": {
+                    "path": "frontend/view.tsx",
+                    "range": {
+                      "startLine": 1,
+                      "endLine": 1
+                    },
+                    "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+                    "fileHash": "fd7c97d2996557138fc6c02d6b2fb56514defda30e0247c56c2818e9422424ef",
+                    "excerpt": "import { Order } from './domain/order';"
+                  }
+                }
+              ],
+              "limitations": "Source import cycle does not prove a runtime initialization fault or a SOLID violation",
+              "classification": "new",
+              "beforeEvidence": null,
+              "afterEvidence": {
+                "path": "frontend/domain/order.ts",
+                "range": {
+                  "startLine": 2,
+                  "endLine": 2
+                },
+                "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+                "fileHash": "866a650d284a15d72d11ddfbcbaca8efec0052c80270e976d06c1035766aafeb",
+                "excerpt": "import { view } from '../view';"
+              }
+            },
+            {
+              "tool": "source-design",
+              "ruleId": "parameter-count",
+              "basis": "inferred-convention",
+              "severity": "warning",
+              "certainty": "potential",
+              "message": "Order.submit has 6 parameters; review the convention limit 5",
+              "evidence": {
+                "path": "frontend/domain/order.ts",
+                "range": {
+                  "startLine": 8,
+                  "endLine": 10
+                },
+                "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+                "fileHash": "866a650d284a15d72d11ddfbcbaca8efec0052c80270e976d06c1035766aafeb",
+                "excerpt": "  submit(a: string, b: string, c: string, d: string, e: string, f: string) {\n    return view(a + b + c + d + e + f + this.internal);\n  }"
+              },
+              "fingerprint": "0c5fc7d185d7863884ed0d5bcddcecb2341f2f152859a20589bdd5591a605586",
+              "magnitude": 6,
+              "threshold": 5,
+              "classification": "new",
+              "beforeEvidence": null,
+              "afterEvidence": {
+                "path": "frontend/domain/order.ts",
+                "range": {
+                  "startLine": 8,
+                  "endLine": 10
+                },
+                "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+                "fileHash": "866a650d284a15d72d11ddfbcbaca8efec0052c80270e976d06c1035766aafeb",
+                "excerpt": "  submit(a: string, b: string, c: string, d: string, e: string, f: string) {\n    return view(a + b + c + d + e + f + this.internal);\n  }"
+              }
+            },
+            {
+              "tool": "source-design",
+              "ruleId": "public-mutable-field",
+              "basis": "inferred-convention",
+              "severity": "info",
+              "certainty": "potential",
+              "message": "Order.total exposes a writable field; review whether direct mutation is intended",
+              "evidence": {
+                "path": "frontend/domain/order.ts",
+                "range": {
+                  "startLine": 5,
+                  "endLine": 5
+                },
+                "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+                "fileHash": "866a650d284a15d72d11ddfbcbaca8efec0052c80270e976d06c1035766aafeb",
+                "excerpt": "  public total = 0;"
+              },
+              "fingerprint": "995281d08f35ebed73f2be814e7e1eda61a8766014754b094842ffc6794ca58c",
+              "classification": "new",
+              "beforeEvidence": null,
+              "afterEvidence": {
+                "path": "frontend/domain/order.ts",
+                "range": {
+                  "startLine": 5,
+                  "endLine": 5
+                },
+                "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+                "fileHash": "866a650d284a15d72d11ddfbcbaca8efec0052c80270e976d06c1035766aafeb",
+                "excerpt": "  public total = 0;"
+              }
+            }
+          ],
+          "unsupported": [
+            {
+              "tool": "source-design",
+              "reason": "bounded-design-coverage",
+              "detail": "Selected import boundaries and declaration conventions only; no universal SRP/OCP/LSP/ISP/DIP judgment, runtime DI resolution, inheritance substitutability or behavioral proof"
+            }
+          ],
+          "metrics": {
+            "configuredPolicies": 0,
+            "baselineFindings": 0,
+            "candidateFindings": 4
+          }
+        },
+        "projectId": "quality",
+        "cache": "miss"
+      }
+    ]
+  },
+  "requirements": {
+    "schemaVersion": "1",
+    "status": "draft",
+    "advisory": true,
+    "confirmation": {
+      "status": "draft"
+    },
+    "checklist": {
+      "revision": "customer-lookup-checklist-example-v1",
+      "owner": "Example product owner (unconfirmed demonstration)",
+      "hash": "775651a6cdc32a97c972c816f4a97652639ad60bab94a5c166bac25cab5f7eb4"
+    },
+    "provenance": {
+      "mode": "workspace",
+      "fileHashesVerified": true,
+      "projects": [
+        {
+          "id": "quality",
+          "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+          "contentHash": "c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033"
+        }
+      ],
+      "scope": {
+        "status": "unscoped",
+        "issues": []
+      }
+    },
+    "criteria": [
+      {
+        "id": "customer-lookup-by-id",
+        "description": "A customer can request a lookup by identifier and receive the matching customer identifier.",
+        "assessment": "unverified",
+        "reasons": [
+          "Checklist is draft; business criteria have not been asserted as confirmed",
+          "One or more declared source selectors are unmatched",
+          "One or more declared test selectors are unmatched",
+          "Declared edge cases have missing test source evidence"
+        ],
+        "sourceChecks": [
+          {
+            "selector": {
+              "pathPattern": "backend/src/main/java/example/customers/CustomerLookupController.java",
+              "symbol": "lookup",
+              "pattern": "@GetMapping(\"/customers/lookup\")"
+            },
+            "status": "unmatched",
+            "reason": "No supplied file matches the path selector",
+            "matchingFileCount": 0,
+            "searchedFileCount": 0,
+            "searchedProjectIds": [
+              "quality"
+            ],
+            "evidence": [],
+            "evidenceTruncated": false
+          },
+          {
+            "selector": {
+              "pathPattern": "frontend/src/customerApi.ts",
+              "symbol": "lookupCustomer",
+              "pattern": "/api/customers/lookup?id="
+            },
+            "status": "unmatched",
+            "reason": "No supplied file matches the path selector",
+            "matchingFileCount": 0,
+            "searchedFileCount": 0,
+            "searchedProjectIds": [
+              "quality"
+            ],
+            "evidence": [],
+            "evidenceTruncated": false
+          }
+        ],
+        "testChecks": [
+          {
+            "selector": {
+              "pathPattern": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+              "name": "lookupByIdReturnsMatchingCustomer"
+            },
+            "status": "unmatched",
+            "reason": "No supplied file matches the path selector",
+            "matchingFileCount": 0,
+            "searchedFileCount": 0,
+            "searchedProjectIds": [
+              "quality"
+            ],
+            "evidence": [],
+            "evidenceTruncated": false
+          }
+        ],
+        "sourceEvidence": [],
+        "testEvidence": [],
+        "edgeCases": [
+          {
+            "id": "known-customer",
+            "description": "A known identifier is preserved in the returned customer.",
+            "assessment": "missing",
+            "checks": [
+              {
+                "selector": {
+                  "pathPattern": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+                  "name": "lookupByIdReturnsMatchingCustomer"
+                },
+                "status": "unmatched",
+                "reason": "No supplied file matches the path selector",
+                "matchingFileCount": 0,
+                "searchedFileCount": 0,
+                "searchedProjectIds": [
+                  "quality"
+                ],
+                "evidence": [],
+                "evidenceTruncated": false
+              }
+            ],
+            "testEvidence": [],
+            "runtime": "unverified",
+            "reason": "One or more declared edge-case test selectors are unmatched"
+          }
+        ],
+        "missingEdgeCases": [
+          {
+            "id": "known-customer",
+            "description": "A known identifier is preserved in the returned customer.",
+            "reason": "One or more declared edge-case test selectors are unmatched",
+            "checks": [
+              {
+                "selector": {
+                  "pathPattern": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+                  "name": "lookupByIdReturnsMatchingCustomer"
+                },
+                "status": "unmatched",
+                "reason": "No supplied file matches the path selector",
+                "matchingFileCount": 0,
+                "searchedFileCount": 0,
+                "searchedProjectIds": [
+                  "quality"
+                ],
+                "evidence": [],
+                "evidenceTruncated": false
+              }
+            ]
+          }
+        ],
+        "runtime": "unverified"
+      },
+      {
+        "id": "display-name",
+        "description": "The customer result displays the displayName property from the lookup response.",
+        "assessment": "unverified",
+        "reasons": [
+          "Checklist is draft; business criteria have not been asserted as confirmed",
+          "One or more declared source selectors are unmatched",
+          "One or more declared test selectors are unmatched"
+        ],
+        "sourceChecks": [
+          {
+            "selector": {
+              "pathPattern": "backend/src/main/java/example/customers/CustomerResponse.java",
+              "pattern": "String displayName"
+            },
+            "status": "unmatched",
+            "reason": "No supplied file matches the path selector",
+            "matchingFileCount": 0,
+            "searchedFileCount": 0,
+            "searchedProjectIds": [
+              "quality"
+            ],
+            "evidence": [],
+            "evidenceTruncated": false
+          },
+          {
+            "selector": {
+              "pathPattern": "frontend/src/CustomerResult.tsx",
+              "pattern": "result?.displayName"
+            },
+            "status": "unmatched",
+            "reason": "No supplied file matches the path selector",
+            "matchingFileCount": 0,
+            "searchedFileCount": 0,
+            "searchedProjectIds": [
+              "quality"
+            ],
+            "evidence": [],
+            "evidenceTruncated": false
+          }
+        ],
+        "testChecks": [
+          {
+            "selector": {
+              "pathPattern": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+              "name": "returnsDisplayName"
+            },
+            "status": "unmatched",
+            "reason": "No supplied file matches the path selector",
+            "matchingFileCount": 0,
+            "searchedFileCount": 0,
+            "searchedProjectIds": [
+              "quality"
+            ],
+            "evidence": [],
+            "evidenceTruncated": false
+          }
+        ],
+        "sourceEvidence": [],
+        "testEvidence": [],
+        "edgeCases": [],
+        "missingEdgeCases": [],
+        "runtime": "unverified"
+      },
+      {
+        "id": "blank-identifier",
+        "description": "A blank customer identifier is rejected before a lookup request.",
+        "assessment": "unverified",
+        "reasons": [
+          "Checklist is draft; business criteria have not been asserted as confirmed",
+          "One or more declared source selectors are unmatched",
+          "One or more declared test selectors are unmatched",
+          "Declared edge cases have missing test source evidence"
+        ],
+        "sourceChecks": [
+          {
+            "selector": {
+              "pathPattern": "frontend/src/customerApi.ts",
+              "pattern": "if (!id.trim())"
+            },
+            "status": "unmatched",
+            "reason": "No supplied file matches the path selector",
+            "matchingFileCount": 0,
+            "searchedFileCount": 0,
+            "searchedProjectIds": [
+              "quality"
+            ],
+            "evidence": [],
+            "evidenceTruncated": false
+          }
+        ],
+        "testChecks": [
+          {
+            "selector": {
+              "pathPattern": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+              "name": "rejectsBlankIdentifier"
+            },
+            "status": "unmatched",
+            "reason": "No supplied file matches the path selector",
+            "matchingFileCount": 0,
+            "searchedFileCount": 0,
+            "searchedProjectIds": [
+              "quality"
+            ],
+            "evidence": [],
+            "evidenceTruncated": false
+          }
+        ],
+        "sourceEvidence": [],
+        "testEvidence": [],
+        "edgeCases": [
+          {
+            "id": "empty-id",
+            "description": "An empty identifier produces validation feedback and no request.",
+            "assessment": "missing",
+            "checks": [
+              {
+                "selector": {
+                  "pathPattern": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+                  "name": "rejectsBlankIdentifier"
+                },
+                "status": "unmatched",
+                "reason": "No supplied file matches the path selector",
+                "matchingFileCount": 0,
+                "searchedFileCount": 0,
+                "searchedProjectIds": [
+                  "quality"
+                ],
+                "evidence": [],
+                "evidenceTruncated": false
+              }
+            ],
+            "testEvidence": [],
+            "runtime": "unverified",
+            "reason": "One or more declared edge-case test selectors are unmatched"
+          },
+          {
+            "id": "whitespace-id",
+            "description": "A whitespace-only identifier also produces validation feedback.",
+            "assessment": "missing",
+            "checks": [],
+            "testEvidence": [],
+            "runtime": "unverified",
+            "reason": "No explicit test selector supplied for this edge case"
+          }
+        ],
+        "missingEdgeCases": [
+          {
+            "id": "empty-id",
+            "description": "An empty identifier produces validation feedback and no request.",
+            "reason": "One or more declared edge-case test selectors are unmatched",
+            "checks": [
+              {
+                "selector": {
+                  "pathPattern": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+                  "name": "rejectsBlankIdentifier"
+                },
+                "status": "unmatched",
+                "reason": "No supplied file matches the path selector",
+                "matchingFileCount": 0,
+                "searchedFileCount": 0,
+                "searchedProjectIds": [
+                  "quality"
+                ],
+                "evidence": [],
+                "evidenceTruncated": false
+              }
+            ]
+          },
+          {
+            "id": "whitespace-id",
+            "description": "A whitespace-only identifier also produces validation feedback.",
+            "reason": "No explicit test selector supplied for this edge case",
+            "checks": []
+          }
+        ],
+        "runtime": "unverified"
+      },
+      {
+        "id": "customer-not-found",
+        "description": "A customer that does not exist receives a clear not-found response.",
+        "assessment": "unverified",
+        "reasons": [
+          "Checklist is draft; business criteria have not been asserted as confirmed",
+          "One or more declared source selectors are unmatched",
+          "One or more declared test selectors are unmatched",
+          "Declared edge cases have missing test source evidence"
+        ],
+        "sourceChecks": [
+          {
+            "selector": {
+              "pathPattern": "frontend/src/customerApi.ts",
+              "pattern": "throw new Error('Customer lookup failed')"
+            },
+            "status": "unmatched",
+            "reason": "No supplied file matches the path selector",
+            "matchingFileCount": 0,
+            "searchedFileCount": 0,
+            "searchedProjectIds": [
+              "quality"
+            ],
+            "evidence": [],
+            "evidenceTruncated": false
+          }
+        ],
+        "testChecks": [
+          {
+            "selector": {
+              "pathPattern": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+              "name": "returns404WhenCustomerMissing"
+            },
+            "status": "unmatched",
+            "reason": "No supplied file matches the path selector",
+            "matchingFileCount": 0,
+            "searchedFileCount": 0,
+            "searchedProjectIds": [
+              "quality"
+            ],
+            "evidence": [],
+            "evidenceTruncated": false
+          }
+        ],
+        "sourceEvidence": [],
+        "testEvidence": [],
+        "edgeCases": [
+          {
+            "id": "unknown-customer",
+            "description": "An unknown identifier is handled separately from a server failure.",
+            "assessment": "missing",
+            "checks": [
+              {
+                "selector": {
+                  "pathPattern": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+                  "name": "returns404WhenCustomerMissing"
+                },
+                "status": "unmatched",
+                "reason": "No supplied file matches the path selector",
+                "matchingFileCount": 0,
+                "searchedFileCount": 0,
+                "searchedProjectIds": [
+                  "quality"
+                ],
+                "evidence": [],
+                "evidenceTruncated": false
+              }
+            ],
+            "testEvidence": [],
+            "runtime": "unverified",
+            "reason": "One or more declared edge-case test selectors are unmatched"
+          }
+        ],
+        "missingEdgeCases": [
+          {
+            "id": "unknown-customer",
+            "description": "An unknown identifier is handled separately from a server failure.",
+            "reason": "One or more declared edge-case test selectors are unmatched",
+            "checks": [
+              {
+                "selector": {
+                  "pathPattern": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+                  "name": "returns404WhenCustomerMissing"
+                },
+                "status": "unmatched",
+                "reason": "No supplied file matches the path selector",
+                "matchingFileCount": 0,
+                "searchedFileCount": 0,
+                "searchedProjectIds": [
+                  "quality"
+                ],
+                "evidence": [],
+                "evidenceTruncated": false
+              }
+            ]
+          }
+        ],
+        "runtime": "unverified"
+      },
+      {
+        "id": "loading-state",
+        "description": "The user sees a loading label before the customer response arrives.",
+        "assessment": "unverified",
+        "reasons": [
+          "Checklist is draft; business criteria have not been asserted as confirmed",
+          "One or more declared source selectors are unmatched",
+          "One or more declared test selectors are unmatched",
+          "Declared edge cases have missing test source evidence"
+        ],
+        "sourceChecks": [
+          {
+            "selector": {
+              "pathPattern": "frontend/src/CustomerResult.tsx",
+              "pattern": "Loading customer…"
+            },
+            "status": "unmatched",
+            "reason": "No supplied file matches the path selector",
+            "matchingFileCount": 0,
+            "searchedFileCount": 0,
+            "searchedProjectIds": [
+              "quality"
+            ],
+            "evidence": [],
+            "evidenceTruncated": false
+          }
+        ],
+        "testChecks": [
+          {
+            "selector": {
+              "pathPattern": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+              "name": "showsLoadingBeforeResponse"
+            },
+            "status": "unmatched",
+            "reason": "No supplied file matches the path selector",
+            "matchingFileCount": 0,
+            "searchedFileCount": 0,
+            "searchedProjectIds": [
+              "quality"
+            ],
+            "evidence": [],
+            "evidenceTruncated": false
+          }
+        ],
+        "sourceEvidence": [],
+        "testEvidence": [],
+        "edgeCases": [
+          {
+            "id": "slow-response",
+            "description": "The loading state persists while the response is delayed.",
+            "assessment": "missing",
+            "checks": [
+              {
+                "selector": {
+                  "pathPattern": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+                  "name": "keepsLoadingUntilResponse"
+                },
+                "status": "unmatched",
+                "reason": "No supplied file matches the path selector",
+                "matchingFileCount": 0,
+                "searchedFileCount": 0,
+                "searchedProjectIds": [
+                  "quality"
+                ],
+                "evidence": [],
+                "evidenceTruncated": false
+              }
+            ],
+            "testEvidence": [],
+            "runtime": "unverified",
+            "reason": "One or more declared edge-case test selectors are unmatched"
+          }
+        ],
+        "missingEdgeCases": [
+          {
+            "id": "slow-response",
+            "description": "The loading state persists while the response is delayed.",
+            "reason": "One or more declared edge-case test selectors are unmatched",
+            "checks": [
+              {
+                "selector": {
+                  "pathPattern": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+                  "name": "keepsLoadingUntilResponse"
+                },
+                "status": "unmatched",
+                "reason": "No supplied file matches the path selector",
+                "matchingFileCount": 0,
+                "searchedFileCount": 0,
+                "searchedProjectIds": [
+                  "quality"
+                ],
+                "evidence": [],
+                "evidenceTruncated": false
+              }
+            ]
+          }
+        ],
+        "runtime": "unverified"
+      },
+      {
+        "id": "confirmation-needed-detail",
+        "description": "An owner must provide explicit source and test selectors for the customer authorization rule.",
+        "assessment": "unverified",
+        "reasons": [
+          "Checklist is draft; business criteria have not been asserted as confirmed",
+          "No explicit source selectors supplied",
+          "No explicit test selectors supplied"
+        ],
+        "sourceChecks": [],
+        "testChecks": [],
+        "sourceEvidence": [],
+        "testEvidence": [],
+        "edgeCases": [],
+        "missingEdgeCases": [],
+        "runtime": "unverified"
+      }
+    ],
+    "summary": {
+      "total": 6,
+      "evidenced": 0,
+      "potentialMismatch": 0,
+      "unverified": 6,
+      "missingEdgeCases": 5
+    },
+    "runtime": "unverified",
+    "limitations": [
+      "Confirmation metadata is a supplied assertion; the engine does not authenticate an owner or invent approval. Simulated confirmations are demonstration data.",
+      "Literal source matches, including symbol and test-name anchors, show text presence only. Comments and string literals can match; declarations, assertions and business behavior are not proved.",
+      "Test source evidence does not show that tests were executed, passed, or cover the criterion at runtime. Runtime behavior always remains unverified.",
+      "Only supplied snapshot files are searched. Test selectors are limited to test/spec filenames, Java Test/Tests names, or test/tests/__tests__ directories.",
+      "Missing edge cases are only those explicitly listed in the checklist. The engine cannot infer all necessary business scenarios or permit skipping full regression.",
+      "Path selectors use bounded * and ** globs; all other selectors are case-sensitive literal text. No user regular expressions, external AI, or local models are run.",
+      "Snapshot revisions are supplied by the snapshot reader; file SHA256 values are checked against supplied text. Without evidenceScope, confirmation has no pinned source revision.",
+      "Workspace criteria are evaluated once across selected project snapshots. Unscoped selectors search every selected project; explicit projectId selectors search only that project. Evidence preserves each project ID, original path, revision and file hash.",
+      "An optional dependency graph was supplied but is not used to infer semantic satisfaction of business criteria."
+    ]
+  },
+  "unknowns": [
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "String",
+      "evidence": {
+        "path": "backend/Quality.java",
+        "range": {
+          "startLine": 3,
+          "endLine": 3
+        },
+        "revision": "tree-sha256:571c7ffdee41d629dea48f196950a8d93f43fb35977bc9036a40da3efe8330c9",
+        "fileHash": "bb14ae21fdf8620bdf5cd243ad2b68a0ff448431ba0fbc1af5334b9b47e0c046",
+        "excerpt": "  public String safe(String input) {",
+        "projectId": "quality",
+        "repository": "example/quality"
+      },
+      "phase": "baseline",
+      "projectId": "quality"
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "String",
+      "evidence": {
+        "path": "backend/Quality.java",
+        "range": {
+          "startLine": 3,
+          "endLine": 3
+        },
+        "revision": "tree-sha256:571c7ffdee41d629dea48f196950a8d93f43fb35977bc9036a40da3efe8330c9",
+        "fileHash": "bb14ae21fdf8620bdf5cd243ad2b68a0ff448431ba0fbc1af5334b9b47e0c046",
+        "excerpt": "  public String safe(String input) {",
+        "projectId": "quality",
+        "repository": "example/quality"
+      },
+      "phase": "baseline",
+      "projectId": "quality"
+    },
+    {
+      "reason": "unresolved-call",
+      "detail": "isEmpty",
+      "evidence": {
+        "path": "backend/Quality.java",
+        "range": {
+          "startLine": 4,
+          "endLine": 4
+        },
+        "revision": "tree-sha256:571c7ffdee41d629dea48f196950a8d93f43fb35977bc9036a40da3efe8330c9",
+        "fileHash": "bb14ae21fdf8620bdf5cd243ad2b68a0ff448431ba0fbc1af5334b9b47e0c046",
+        "excerpt": "    if (input != null && !input.isEmpty()) return input;",
+        "projectId": "quality",
+        "repository": "example/quality"
+      },
+      "candidates": [],
+      "phase": "baseline",
+      "projectId": "quality"
+    },
+    {
+      "reason": "unresolved_call",
+      "range": {
+        "startLine": 18,
+        "endLine": 18
+      },
+      "detail": "console.log",
+      "evidence": {
+        "path": "frontend/review.ts",
+        "range": {
+          "startLine": 18,
+          "endLine": 18
+        },
+        "revision": "tree-sha256:571c7ffdee41d629dea48f196950a8d93f43fb35977bc9036a40da3efe8330c9",
+        "fileHash": "917c3f46cef70fc195d1c044650994971313b8eadbf88e6b48d5794fe42e7035",
+        "excerpt": "  console.log('unreachable in baseline');",
+        "projectId": "quality",
+        "repository": "example/quality"
+      },
+      "phase": "baseline",
+      "projectId": "quality"
+    },
+    {
+      "reason": "unresolved-call",
+      "detail": "log",
+      "evidence": {
+        "path": "frontend/review.ts",
+        "range": {
+          "startLine": 18,
+          "endLine": 18
+        },
+        "revision": "tree-sha256:571c7ffdee41d629dea48f196950a8d93f43fb35977bc9036a40da3efe8330c9",
+        "fileHash": "917c3f46cef70fc195d1c044650994971313b8eadbf88e6b48d5794fe42e7035",
+        "excerpt": "  console.log('unreachable in baseline');",
+        "projectId": "quality",
+        "repository": "example/quality"
+      },
+      "phase": "baseline",
+      "projectId": "quality"
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "java.io.FileInputStream",
+      "evidence": {
+        "path": "backend/Quality.java",
+        "range": {
+          "startLine": 2,
+          "endLine": 2
+        },
+        "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+        "fileHash": "841ae26e08ef903b2cdd2f68b3ba0d438ec8058ae6f3e7b727cf2fb1fb7358e9",
+        "excerpt": "import java.io.FileInputStream;",
+        "projectId": "quality",
+        "repository": "example/quality"
+      },
+      "phase": "candidate",
+      "projectId": "quality"
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "java.io.IOException",
+      "evidence": {
+        "path": "backend/Quality.java",
+        "range": {
+          "startLine": 3,
+          "endLine": 3
+        },
+        "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+        "fileHash": "841ae26e08ef903b2cdd2f68b3ba0d438ec8058ae6f3e7b727cf2fb1fb7358e9",
+        "excerpt": "import java.io.IOException;",
+        "projectId": "quality",
+        "repository": "example/quality"
+      },
+      "phase": "candidate",
+      "projectId": "quality"
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "String",
+      "evidence": {
+        "path": "backend/Quality.java",
+        "range": {
+          "startLine": 6,
+          "endLine": 6
+        },
+        "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+        "fileHash": "841ae26e08ef903b2cdd2f68b3ba0d438ec8058ae6f3e7b727cf2fb1fb7358e9",
+        "excerpt": "  public String broken(String input) {",
+        "projectId": "quality",
+        "repository": "example/quality"
+      },
+      "phase": "candidate",
+      "projectId": "quality"
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "String",
+      "evidence": {
+        "path": "backend/Quality.java",
+        "range": {
+          "startLine": 6,
+          "endLine": 6
+        },
+        "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+        "fileHash": "841ae26e08ef903b2cdd2f68b3ba0d438ec8058ae6f3e7b727cf2fb1fb7358e9",
+        "excerpt": "  public String broken(String input) {",
+        "projectId": "quality",
+        "repository": "example/quality"
+      },
+      "phase": "candidate",
+      "projectId": "quality"
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "String",
+      "evidence": {
+        "path": "backend/Quality.java",
+        "range": {
+          "startLine": 10,
+          "endLine": 10
+        },
+        "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+        "fileHash": "841ae26e08ef903b2cdd2f68b3ba0d438ec8058ae6f3e7b727cf2fb1fb7358e9",
+        "excerpt": "  public int unclosed(String filename) throws IOException {",
+        "projectId": "quality",
+        "repository": "example/quality"
+      },
+      "phase": "candidate",
+      "projectId": "quality"
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "java.io.IOException",
+      "evidence": {
+        "path": "backend/Quality.java",
+        "range": {
+          "startLine": 10,
+          "endLine": 10
+        },
+        "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+        "fileHash": "841ae26e08ef903b2cdd2f68b3ba0d438ec8058ae6f3e7b727cf2fb1fb7358e9",
+        "excerpt": "  public int unclosed(String filename) throws IOException {",
+        "projectId": "quality",
+        "repository": "example/quality"
+      },
+      "phase": "candidate",
+      "projectId": "quality"
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "java.io.FileInputStream",
+      "evidence": {
+        "path": "backend/Quality.java",
+        "range": {
+          "startLine": 11,
+          "endLine": 11
+        },
+        "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+        "fileHash": "841ae26e08ef903b2cdd2f68b3ba0d438ec8058ae6f3e7b727cf2fb1fb7358e9",
+        "excerpt": "    FileInputStream stream = new FileInputStream(filename);",
+        "projectId": "quality",
+        "repository": "example/quality"
+      },
+      "phase": "candidate",
+      "projectId": "quality"
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "java.io.FileInputStream",
+      "evidence": {
+        "path": "backend/Quality.java",
+        "range": {
+          "startLine": 11,
+          "endLine": 11
+        },
+        "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+        "fileHash": "841ae26e08ef903b2cdd2f68b3ba0d438ec8058ae6f3e7b727cf2fb1fb7358e9",
+        "excerpt": "    FileInputStream stream = new FileInputStream(filename);",
+        "projectId": "quality",
+        "repository": "example/quality"
+      },
+      "phase": "candidate",
+      "projectId": "quality"
+    },
+    {
+      "reason": "unresolved-call",
+      "detail": "isEmpty",
+      "evidence": {
+        "path": "backend/Quality.java",
+        "range": {
+          "startLine": 7,
+          "endLine": 7
+        },
+        "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+        "fileHash": "841ae26e08ef903b2cdd2f68b3ba0d438ec8058ae6f3e7b727cf2fb1fb7358e9",
+        "excerpt": "    if (input != null || !input.isEmpty()) return input;",
+        "projectId": "quality",
+        "repository": "example/quality"
+      },
+      "candidates": [],
+      "phase": "candidate",
+      "projectId": "quality"
+    },
+    {
+      "reason": "unresolved-call",
+      "detail": "read",
+      "evidence": {
+        "path": "backend/Quality.java",
+        "range": {
+          "startLine": 12,
+          "endLine": 12
+        },
+        "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+        "fileHash": "841ae26e08ef903b2cdd2f68b3ba0d438ec8058ae6f3e7b727cf2fb1fb7358e9",
+        "excerpt": "    return stream.read();",
+        "projectId": "quality",
+        "repository": "example/quality"
+      },
+      "candidates": [],
+      "phase": "candidate",
+      "projectId": "quality"
+    },
+    {
+      "reason": "external-module",
+      "detail": "@angular/core",
+      "evidence": {
+        "path": "frontend/domain/order.ts",
+        "range": {
+          "startLine": 1,
+          "endLine": 1
+        },
+        "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+        "fileHash": "866a650d284a15d72d11ddfbcbaca8efec0052c80270e976d06c1035766aafeb",
+        "excerpt": "import { Injectable } from '@angular/core';",
+        "projectId": "quality",
+        "repository": "example/quality"
+      },
+      "phase": "candidate",
+      "projectId": "quality"
+    },
+    {
+      "reason": "unresolved_call",
+      "range": {
+        "startLine": 29,
+        "endLine": 29
+      },
+      "detail": "resolve",
+      "evidence": {
+        "path": "frontend/review.ts",
+        "range": {
+          "startLine": 29,
+          "endLine": 29
+        },
+        "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+        "fileHash": "a85423a3a2b3710203eea1289845495c9362bbf9c5a367a9a30b570ab1674183",
+        "excerpt": "  resolve(1);",
+        "projectId": "quality",
+        "repository": "example/quality"
+      },
+      "phase": "candidate",
+      "projectId": "quality"
+    },
+    {
+      "reason": "unresolved-call",
+      "detail": "Promise",
+      "evidence": {
+        "path": "frontend/review.ts",
+        "range": {
+          "startLine": 28,
+          "endLine": 30
+        },
+        "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+        "fileHash": "a85423a3a2b3710203eea1289845495c9362bbf9c5a367a9a30b570ab1674183",
+        "excerpt": "export const asyncIssue = new Promise(async resolve => {\n  resolve(1);\n});",
+        "projectId": "quality",
+        "repository": "example/quality"
+      },
+      "phase": "candidate",
+      "projectId": "quality"
+    },
+    {
+      "reason": "unresolved-call",
+      "detail": "resolve",
+      "evidence": {
+        "path": "frontend/review.ts",
+        "range": {
+          "startLine": 29,
+          "endLine": 29
+        },
+        "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+        "fileHash": "a85423a3a2b3710203eea1289845495c9362bbf9c5a367a9a30b570ab1674183",
+        "excerpt": "  resolve(1);",
+        "projectId": "quality",
+        "repository": "example/quality"
+      },
+      "phase": "candidate",
+      "projectId": "quality"
+    },
+    {
+      "reason": "unresolved-imported-binding",
+      "evidence": {
+        "path": "frontend/view.tsx",
+        "range": {
+          "startLine": 3,
+          "endLine": 3
+        },
+        "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+        "fileHash": "fd7c97d2996557138fc6c02d6b2fb56514defda30e0247c56c2818e9422424ef",
+        "excerpt": "export const model = new Order();",
+        "projectId": "quality",
+        "repository": "example/quality"
+      },
+      "detail": "Order",
+      "phase": "candidate",
+      "projectId": "quality"
+    }
+  ],
+  "focusedTests": [
+    {
+      "kind": "contract",
+      "reason": "Verify safe parameter, return and payload compatibility; removed declarations need caller compile checks",
+      "evidence": {
+        "path": "backend/Quality.java",
+        "range": {
+          "startLine": 3,
+          "endLine": 6
+        },
+        "revision": "tree-sha256:571c7ffdee41d629dea48f196950a8d93f43fb35977bc9036a40da3efe8330c9",
+        "fileHash": "bb14ae21fdf8620bdf5cd243ad2b68a0ff448431ba0fbc1af5334b9b47e0c046",
+        "excerpt": "  public String safe(String input) {\n    if (input != null && !input.isEmpty()) return input;\n    return \"\";\n  }"
+      },
+      "projectId": "quality"
+    },
+    {
+      "kind": "contract",
+      "reason": "Verify mutable parameter, return and payload compatibility; removed declarations need caller compile checks",
+      "evidence": {
+        "path": "backend/Quality.java",
+        "range": {
+          "startLine": 5,
+          "endLine": 5
+        },
+        "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+        "fileHash": "841ae26e08ef903b2cdd2f68b3ba0d438ec8058ae6f3e7b727cf2fb1fb7358e9",
+        "excerpt": "  public int mutable;"
+      },
+      "projectId": "quality"
+    },
+    {
+      "kind": "contract",
+      "reason": "Verify broken parameter, return and payload compatibility; removed declarations need caller compile checks",
+      "evidence": {
+        "path": "backend/Quality.java",
+        "range": {
+          "startLine": 6,
+          "endLine": 9
+        },
+        "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+        "fileHash": "841ae26e08ef903b2cdd2f68b3ba0d438ec8058ae6f3e7b727cf2fb1fb7358e9",
+        "excerpt": "  public String broken(String input) {\n    if (input != null || !input.isEmpty()) return input;\n    return \"\";\n  }"
+      },
+      "projectId": "quality"
+    },
+    {
+      "kind": "contract",
+      "reason": "Verify unclosed parameter, return and payload compatibility; removed declarations need caller compile checks",
+      "evidence": {
+        "path": "backend/Quality.java",
+        "range": {
+          "startLine": 10,
+          "endLine": 13
+        },
+        "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+        "fileHash": "841ae26e08ef903b2cdd2f68b3ba0d438ec8058ae6f3e7b727cf2fb1fb7358e9",
+        "excerpt": "  public int unclosed(String filename) throws IOException {\n    FileInputStream stream = new FileInputStream(filename);\n    return stream.read();\n  }"
+      },
+      "projectId": "quality"
+    },
+    {
+      "kind": "contract",
+      "reason": "Verify conditional parameter, return and payload compatibility; removed declarations need caller compile checks",
+      "evidence": {
+        "path": "backend/Quality.java",
+        "range": {
+          "startLine": 14,
+          "endLine": 17
+        },
+        "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+        "fileHash": "841ae26e08ef903b2cdd2f68b3ba0d438ec8058ae6f3e7b727cf2fb1fb7358e9",
+        "excerpt": "  public boolean conditional() {\n    if (true) return true;\n    return false;\n  }"
+      },
+      "projectId": "quality"
+    },
+    {
+      "kind": "contract",
+      "reason": "Verify Order parameter, return and payload compatibility; removed declarations need caller compile checks",
+      "evidence": {
+        "path": "frontend/domain/order.ts",
+        "range": {
+          "startLine": 3,
+          "endLine": 11
+        },
+        "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+        "fileHash": "866a650d284a15d72d11ddfbcbaca8efec0052c80270e976d06c1035766aafeb",
+        "excerpt": "@Injectable()\nexport class Order {\n  public total = 0;\n  private internal = 0;\n  readonly id = 'order';\n  submit(a: string, b: string, c: string, d: string, e: string, f: string) {\n    return view(a + b + c + d + e + f + this.internal);\n  }\n}"
+      },
+      "projectId": "quality"
+    },
+    {
+      "kind": "contract",
+      "reason": "Verify total parameter, return and payload compatibility; removed declarations need caller compile checks",
+      "evidence": {
+        "path": "frontend/domain/order.ts",
+        "range": {
+          "startLine": 5,
+          "endLine": 5
+        },
+        "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+        "fileHash": "866a650d284a15d72d11ddfbcbaca8efec0052c80270e976d06c1035766aafeb",
+        "excerpt": "  public total = 0;"
+      },
+      "projectId": "quality"
+    },
+    {
+      "kind": "contract",
+      "reason": "Verify internal parameter, return and payload compatibility; removed declarations need caller compile checks",
+      "evidence": {
+        "path": "frontend/domain/order.ts",
+        "range": {
+          "startLine": 6,
+          "endLine": 6
+        },
+        "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+        "fileHash": "866a650d284a15d72d11ddfbcbaca8efec0052c80270e976d06c1035766aafeb",
+        "excerpt": "  private internal = 0;"
+      },
+      "projectId": "quality"
+    },
+    {
+      "kind": "contract",
+      "reason": "Verify id parameter, return and payload compatibility; removed declarations need caller compile checks",
+      "evidence": {
+        "path": "frontend/domain/order.ts",
+        "range": {
+          "startLine": 7,
+          "endLine": 7
+        },
+        "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+        "fileHash": "866a650d284a15d72d11ddfbcbaca8efec0052c80270e976d06c1035766aafeb",
+        "excerpt": "  readonly id = 'order';"
+      },
+      "projectId": "quality"
+    },
+    {
+      "kind": "contract",
+      "reason": "Verify submit parameter, return and payload compatibility; removed declarations need caller compile checks",
+      "evidence": {
+        "path": "frontend/domain/order.ts",
+        "range": {
+          "startLine": 8,
+          "endLine": 10
+        },
+        "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+        "fileHash": "866a650d284a15d72d11ddfbcbaca8efec0052c80270e976d06c1035766aafeb",
+        "excerpt": "  submit(a: string, b: string, c: string, d: string, e: string, f: string) {\n    return view(a + b + c + d + e + f + this.internal);\n  }"
+      },
+      "projectId": "quality"
+    },
+    {
+      "kind": "contract",
+      "reason": "Verify summarizeA parameter, return and payload compatibility; removed declarations need caller compile checks",
+      "evidence": {
+        "path": "frontend/duplicate-a.ts",
+        "range": {
+          "startLine": 1,
+          "endLine": 12
+        },
+        "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+        "fileHash": "cefd0da6057d393b87caf4f92d5bfc5f32b1b502b0df65268c693120d637ba83",
+        "excerpt": "export function summarizeA(values: number[]) {\n  let total = 0;\n  let accepted = 0;\n  for (const value of values) {\n    if (value > 0) {\n      total += value;\n      accepted += 1;\n    }\n  }\n  const average = accepted === 0 ? 0 : total / accepted;\n  return { total, accepted, average };\n}"
+      },
+      "projectId": "quality"
+    },
+    {
+      "kind": "contract",
+      "reason": "Verify summarizeB parameter, return and payload compatibility; removed declarations need caller compile checks",
+      "evidence": {
+        "path": "frontend/duplicate-b.ts",
+        "range": {
+          "startLine": 1,
+          "endLine": 12
+        },
+        "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+        "fileHash": "1f136709bdb12cd84215d92bb13c35362bf915679e6ffc17a22c2171e28bcece",
+        "excerpt": "export function summarizeB(values: number[]) {\n  let total = 0;\n  let accepted = 0;\n  for (const value of values) {\n    if (value > 0) {\n      total += value;\n      accepted += 1;\n    }\n  }\n  const average = accepted === 0 ? 0 : total / accepted;\n  return { total, accepted, average };\n}"
+      },
+      "projectId": "quality"
+    },
+    {
+      "kind": "contract",
+      "reason": "Verify newIssue parameter, return and payload compatibility; removed declarations need caller compile checks",
+      "evidence": {
+        "path": "frontend/review.ts",
+        "range": {
+          "startLine": 23,
+          "endLine": 26
+        },
+        "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+        "fileHash": "a85423a3a2b3710203eea1289845495c9362bbf9c5a367a9a30b570ab1674183",
+        "excerpt": "export function newIssue(value: number) {\n  if (true) return value;\n  return 0;\n}"
+      },
+      "projectId": "quality"
+    },
+    {
+      "kind": "contract",
+      "reason": "Verify asyncIssue parameter, return and payload compatibility; removed declarations need caller compile checks",
+      "evidence": {
+        "path": "frontend/review.ts",
+        "range": {
+          "startLine": 28,
+          "endLine": 30
+        },
+        "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+        "fileHash": "a85423a3a2b3710203eea1289845495c9362bbf9c5a367a9a30b570ab1674183",
+        "excerpt": "export const asyncIssue = new Promise(async resolve => {\n  resolve(1);\n});"
+      },
+      "projectId": "quality"
+    },
+    {
+      "kind": "contract",
+      "reason": "Verify view parameter, return and payload compatibility; removed declarations need caller compile checks",
+      "evidence": {
+        "path": "frontend/view.tsx",
+        "range": {
+          "startLine": 2,
+          "endLine": 2
+        },
+        "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+        "fileHash": "fd7c97d2996557138fc6c02d6b2fb56514defda30e0247c56c2818e9422424ef",
+        "excerpt": "export const view = (message: string) => <article>{message}</article>;"
+      },
+      "projectId": "quality"
+    },
+    {
+      "kind": "contract",
+      "reason": "Verify model parameter, return and payload compatibility; removed declarations need caller compile checks",
+      "evidence": {
+        "path": "frontend/view.tsx",
+        "range": {
+          "startLine": 3,
+          "endLine": 3
+        },
+        "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+        "fileHash": "fd7c97d2996557138fc6c02d6b2fb56514defda30e0247c56c2818e9422424ef",
+        "excerpt": "export const model = new Order();"
+      },
+      "projectId": "quality"
+    }
+  ],
+  "coverage": {
+    "complete": false,
+    "fullRegressionMayBeSkipped": false,
+    "limitations": [
+      "Source-only analysis; no Java/TypeScript semantic compilation, runtime dispatch, reflection, DI wiring, proxy/origin verification or transitive external package sources",
+      "Edges are evidence-backed approximations; indirect file dependencies do not prove execution",
+      "Renames inferred only for identical declaration key/signature/body; edited renames remain delete/add",
+      "Unknown syntax and unresolved/dynamic dependencies remain visible; passing fixture tests is not private-repository acceptance",
+      "Cross-project dependencies require explicit mappings; mappings are assertions, not deployment proof",
+      "Selected quality and SOLID signals do not establish universal design correctness",
+      "Requirement criteria are literal source/test evidence only; runtime remains unverified"
+    ]
+  },
+  "provenance": {
+    "projects": [
+      {
+        "projectId": "quality",
+        "baseline": {
+          "root": "/workspace/review-analysis/fixtures/quality/baseline",
+          "type": "directory",
+          "revision": "tree-sha256:571c7ffdee41d629dea48f196950a8d93f43fb35977bc9036a40da3efe8330c9",
+          "contentHash": "571c7ffdee41d629dea48f196950a8d93f43fb35977bc9036a40da3efe8330c9",
+          "dirty": false
+        },
+        "candidate": {
+          "root": "/workspace/review-analysis/fixtures/quality/candidate",
+          "type": "directory",
+          "revision": "tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+          "contentHash": "c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033",
+          "dirty": false
+        },
+        "rulesHash": "f18a7396f5e3d332ba600beed841870f72eef42f5929bc9d4bc5d695adc2cd42",
+        "baselineRulesHash": "f18a7396f5e3d332ba600beed841870f72eef42f5929bc9d4bc5d695adc2cd42",
+        "cacheKey": "8dd053d2dcacf30b5d7dcab26e4d932b063b7f71319f9d7f5d156f7dd5903966"
+      }
+    ]
+  },
+  "cache": {
+    "projects": [
+      {
+        "projectId": "quality",
+        "report": "miss",
+        "parsedFiles": 0,
+        "reusedFiles": 0,
+        "invalidEntries": 0
+      }
+    ],
+    "quality": [
+      {
+        "projectId": "quality",
+        "status": "miss"
+      }
+    ]
+  },
+  "metrics": {
+    "elapsedMs": 2003.07,
+    "projects": 1,
+    "sourceFiles": 6,
+    "edges": 3
+  }
+}

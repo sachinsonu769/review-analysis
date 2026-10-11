@@ -1,0 +1,642 @@
+[
+  {
+    "command": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "args": [
+      "/tmp/review-analysis-qa-v2-fsn7g676/src/cli.js",
+      "analyze",
+      "--baseline",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/01-http-lexical-static-dynamic/baseline",
+      "--candidate",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/01-http-lexical-static-dynamic/candidate",
+      "--rules",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/rules.json",
+      "--as-of",
+      "2026-10-11",
+      "--task",
+      "Global receiver and destructured parameter shadows; static templates versus constant concatenation; literal object override order",
+      "--format",
+      "json"
+    ],
+    "cwd": "/tmp/review-analysis-qa-v2-fsn7g676"
+  },
+  {
+    "command": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "args": [
+      "/tmp/review-analysis-qa-v2-fsn7g676/src/cli.js",
+      "analyze",
+      "--baseline",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/01-http-lexical-static-dynamic/baseline",
+      "--candidate",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/01-http-lexical-static-dynamic/candidate",
+      "--rules",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/rules.json",
+      "--as-of",
+      "2026-10-11",
+      "--task",
+      "Global receiver and destructured parameter shadows; static templates versus constant concatenation; literal object override order",
+      "--format",
+      "readable"
+    ],
+    "cwd": "/tmp/review-analysis-qa-v2-fsn7g676"
+  },
+  {
+    "command": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "args": [
+      "/tmp/review-analysis-qa-v2-fsn7g676/src/cli.js",
+      "analyze",
+      "--baseline",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/02-ts-import-shadow-missing/baseline",
+      "--candidate",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/02-ts-import-shadow-missing/candidate",
+      "--rules",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/rules.json",
+      "--as-of",
+      "2026-10-11",
+      "--task",
+      "Named and namespace bindings, nested forward local call, absent relative import",
+      "--format",
+      "json"
+    ],
+    "cwd": "/tmp/review-analysis-qa-v2-fsn7g676"
+  },
+  {
+    "command": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "args": [
+      "/tmp/review-analysis-qa-v2-fsn7g676/src/cli.js",
+      "analyze",
+      "--baseline",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/02-ts-import-shadow-missing/baseline",
+      "--candidate",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/02-ts-import-shadow-missing/candidate",
+      "--rules",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/rules.json",
+      "--as-of",
+      "2026-10-11",
+      "--task",
+      "Named and namespace bindings, nested forward local call, absent relative import",
+      "--format",
+      "readable"
+    ],
+    "cwd": "/tmp/review-analysis-qa-v2-fsn7g676"
+  },
+  {
+    "command": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "args": [
+      "/tmp/review-analysis-qa-v2-fsn7g676/src/cli.js",
+      "analyze",
+      "--baseline",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/03-ts-ambiguous-module/baseline",
+      "--candidate",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/03-ts-ambiguous-module/candidate",
+      "--rules",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/rules.json",
+      "--as-of",
+      "2026-10-11",
+      "--task",
+      "Both .ts and .tsx candidate files prevent unique imported call",
+      "--format",
+      "json"
+    ],
+    "cwd": "/tmp/review-analysis-qa-v2-fsn7g676"
+  },
+  {
+    "command": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "args": [
+      "/tmp/review-analysis-qa-v2-fsn7g676/src/cli.js",
+      "analyze",
+      "--baseline",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/03-ts-ambiguous-module/baseline",
+      "--candidate",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/03-ts-ambiguous-module/candidate",
+      "--rules",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/rules.json",
+      "--as-of",
+      "2026-10-11",
+      "--task",
+      "Both .ts and .tsx candidate files prevent unique imported call",
+      "--format",
+      "readable"
+    ],
+    "cwd": "/tmp/review-analysis-qa-v2-fsn7g676"
+  },
+  {
+    "command": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "args": [
+      "/tmp/review-analysis-qa-v2-fsn7g676/src/cli.js",
+      "analyze",
+      "--baseline",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/04-java-arity-prefix/baseline",
+      "--candidate",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/04-java-arity-prefix/candidate",
+      "--rules",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/rules.json",
+      "--as-of",
+      "2026-10-11",
+      "--task",
+      "Single-argument call cannot target a ten-argument declaration",
+      "--format",
+      "json"
+    ],
+    "cwd": "/tmp/review-analysis-qa-v2-fsn7g676"
+  },
+  {
+    "command": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "args": [
+      "/tmp/review-analysis-qa-v2-fsn7g676/src/cli.js",
+      "analyze",
+      "--baseline",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/04-java-arity-prefix/baseline",
+      "--candidate",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/04-java-arity-prefix/candidate",
+      "--rules",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/rules.json",
+      "--as-of",
+      "2026-10-11",
+      "--task",
+      "Single-argument call cannot target a ten-argument declaration",
+      "--format",
+      "readable"
+    ],
+    "cwd": "/tmp/review-analysis-qa-v2-fsn7g676"
+  },
+  {
+    "command": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "args": [
+      "/tmp/review-analysis-qa-v2-fsn7g676/src/cli.js",
+      "analyze",
+      "--baseline",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/05-java-overload-receiver-shadow/baseline",
+      "--candidate",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/05-java-overload-receiver-shadow/candidate",
+      "--rules",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/rules.json",
+      "--as-of",
+      "2026-10-11",
+      "--task",
+      "Same-arity overload candidate evidence plus typed Object and var field shadows",
+      "--format",
+      "json"
+    ],
+    "cwd": "/tmp/review-analysis-qa-v2-fsn7g676"
+  },
+  {
+    "command": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "args": [
+      "/tmp/review-analysis-qa-v2-fsn7g676/src/cli.js",
+      "analyze",
+      "--baseline",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/05-java-overload-receiver-shadow/baseline",
+      "--candidate",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/05-java-overload-receiver-shadow/candidate",
+      "--rules",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/rules.json",
+      "--as-of",
+      "2026-10-11",
+      "--task",
+      "Same-arity overload candidate evidence plus typed Object and var field shadows",
+      "--format",
+      "readable"
+    ],
+    "cwd": "/tmp/review-analysis-qa-v2-fsn7g676"
+  },
+  {
+    "command": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "args": [
+      "/tmp/review-analysis-qa-v2-fsn7g676/src/cli.js",
+      "analyze",
+      "--baseline",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/06-java-pattern-shadow/baseline",
+      "--candidate",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/06-java-pattern-shadow/candidate",
+      "--rules",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/rules.json",
+      "--as-of",
+      "2026-10-11",
+      "--task",
+      "Valid instanceof pattern binding must not inherit same-named field type",
+      "--format",
+      "json"
+    ],
+    "cwd": "/tmp/review-analysis-qa-v2-fsn7g676"
+  },
+  {
+    "command": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "args": [
+      "/tmp/review-analysis-qa-v2-fsn7g676/src/cli.js",
+      "analyze",
+      "--baseline",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/06-java-pattern-shadow/baseline",
+      "--candidate",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/06-java-pattern-shadow/candidate",
+      "--rules",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/rules.json",
+      "--as-of",
+      "2026-10-11",
+      "--task",
+      "Valid instanceof pattern binding must not inherit same-named field type",
+      "--format",
+      "readable"
+    ],
+    "cwd": "/tmp/review-analysis-qa-v2-fsn7g676"
+  },
+  {
+    "command": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "args": [
+      "/tmp/review-analysis-qa-v2-fsn7g676/src/cli.js",
+      "analyze",
+      "--baseline",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/07-java-static-constant-routing/baseline",
+      "--candidate",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/07-java-static-constant-routing/candidate",
+      "--rules",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/rules.json",
+      "--as-of",
+      "2026-10-11",
+      "--task",
+      "Literal mapping remains matchable while constant concatenation mapping stays unknown",
+      "--format",
+      "json"
+    ],
+    "cwd": "/tmp/review-analysis-qa-v2-fsn7g676"
+  },
+  {
+    "command": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "args": [
+      "/tmp/review-analysis-qa-v2-fsn7g676/src/cli.js",
+      "analyze",
+      "--baseline",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/07-java-static-constant-routing/baseline",
+      "--candidate",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/07-java-static-constant-routing/candidate",
+      "--rules",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/rules.json",
+      "--as-of",
+      "2026-10-11",
+      "--task",
+      "Literal mapping remains matchable while constant concatenation mapping stays unknown",
+      "--format",
+      "readable"
+    ],
+    "cwd": "/tmp/review-analysis-qa-v2-fsn7g676"
+  },
+  {
+    "command": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "args": [
+      "/tmp/review-analysis-qa-v2-fsn7g676/src/cli.js",
+      "analyze",
+      "--baseline",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/08-http-template-regex/baseline",
+      "--candidate",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/08-http-template-regex/candidate",
+      "--rules",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/rules.json",
+      "--as-of",
+      "2026-10-11",
+      "--task",
+      "Template regex constraints must not claim a literal nonmatching request maps to configured route",
+      "--format",
+      "json"
+    ],
+    "cwd": "/tmp/review-analysis-qa-v2-fsn7g676"
+  },
+  {
+    "command": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "args": [
+      "/tmp/review-analysis-qa-v2-fsn7g676/src/cli.js",
+      "analyze",
+      "--baseline",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/08-http-template-regex/baseline",
+      "--candidate",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/08-http-template-regex/candidate",
+      "--rules",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/rules.json",
+      "--as-of",
+      "2026-10-11",
+      "--task",
+      "Template regex constraints must not claim a literal nonmatching request maps to configured route",
+      "--format",
+      "readable"
+    ],
+    "cwd": "/tmp/review-analysis-qa-v2-fsn7g676"
+  },
+  {
+    "command": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "args": [
+      "/tmp/review-analysis-qa-v2-fsn7g676/src/cli.js",
+      "analyze",
+      "--baseline",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/09-http-ambiguous-controllers/baseline",
+      "--candidate",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/09-http-ambiguous-controllers/candidate",
+      "--rules",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/rules.json",
+      "--as-of",
+      "2026-10-11",
+      "--task",
+      "Duplicate matching endpoints across controllers remain ambiguous with source candidates",
+      "--format",
+      "json"
+    ],
+    "cwd": "/tmp/review-analysis-qa-v2-fsn7g676"
+  },
+  {
+    "command": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "args": [
+      "/tmp/review-analysis-qa-v2-fsn7g676/src/cli.js",
+      "analyze",
+      "--baseline",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/09-http-ambiguous-controllers/baseline",
+      "--candidate",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/09-http-ambiguous-controllers/candidate",
+      "--rules",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/rules.json",
+      "--as-of",
+      "2026-10-11",
+      "--task",
+      "Duplicate matching endpoints across controllers remain ambiguous with source candidates",
+      "--format",
+      "readable"
+    ],
+    "cwd": "/tmp/review-analysis-qa-v2-fsn7g676"
+  },
+  {
+    "command": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "args": [
+      "/tmp/review-analysis-qa-v2-fsn7g676/src/cli.js",
+      "analyze",
+      "--baseline",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/10-source-parse-diagnostics/baseline",
+      "--candidate",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/10-source-parse-diagnostics/candidate",
+      "--rules",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/rules.json",
+      "--as-of",
+      "2026-10-11",
+      "--task",
+      "Malformed supplied Java and TS must retain explicit diagnostics alongside any recovered declarations",
+      "--format",
+      "json"
+    ],
+    "cwd": "/tmp/review-analysis-qa-v2-fsn7g676"
+  },
+  {
+    "command": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "args": [
+      "/tmp/review-analysis-qa-v2-fsn7g676/src/cli.js",
+      "analyze",
+      "--baseline",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/10-source-parse-diagnostics/baseline",
+      "--candidate",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/10-source-parse-diagnostics/candidate",
+      "--rules",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/rules.json",
+      "--as-of",
+      "2026-10-11",
+      "--task",
+      "Malformed supplied Java and TS must retain explicit diagnostics alongside any recovered declarations",
+      "--format",
+      "readable"
+    ],
+    "cwd": "/tmp/review-analysis-qa-v2-fsn7g676"
+  },
+  {
+    "command": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "args": [
+      "/tmp/review-analysis-qa-v2-fsn7g676/src/cli.js",
+      "analyze",
+      "--baseline",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/11-ts-namespace-nested-member/baseline",
+      "--candidate",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/11-ts-namespace-nested-member/candidate",
+      "--rules",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/rules.json",
+      "--as-of",
+      "2026-10-11",
+      "--task",
+      "Nested property method on namespace import must not claim the container variable is the called declaration",
+      "--format",
+      "json"
+    ],
+    "cwd": "/tmp/review-analysis-qa-v2-fsn7g676"
+  },
+  {
+    "command": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "args": [
+      "/tmp/review-analysis-qa-v2-fsn7g676/src/cli.js",
+      "analyze",
+      "--baseline",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/11-ts-namespace-nested-member/baseline",
+      "--candidate",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/11-ts-namespace-nested-member/candidate",
+      "--rules",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/rules.json",
+      "--as-of",
+      "2026-10-11",
+      "--task",
+      "Nested property method on namespace import must not claim the container variable is the called declaration",
+      "--format",
+      "readable"
+    ],
+    "cwd": "/tmp/review-analysis-qa-v2-fsn7g676"
+  },
+  {
+    "command": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "args": [
+      "/tmp/review-analysis-qa-v2-fsn7g676/src/cli.js",
+      "analyze",
+      "--baseline",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/12-java-ambiguous-explicit-imports/baseline",
+      "--candidate",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/12-java-ambiguous-explicit-imports/candidate",
+      "--rules",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/rules.json",
+      "--as-of",
+      "2026-10-11",
+      "--task",
+      "Conflicting explicit imports cannot acquire a guessed first-import receiver target (source is semantically invalid)",
+      "--format",
+      "json"
+    ],
+    "cwd": "/tmp/review-analysis-qa-v2-fsn7g676"
+  },
+  {
+    "command": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "args": [
+      "/tmp/review-analysis-qa-v2-fsn7g676/src/cli.js",
+      "analyze",
+      "--baseline",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/12-java-ambiguous-explicit-imports/baseline",
+      "--candidate",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/12-java-ambiguous-explicit-imports/candidate",
+      "--rules",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/rules.json",
+      "--as-of",
+      "2026-10-11",
+      "--task",
+      "Conflicting explicit imports cannot acquire a guessed first-import receiver target (source is semantically invalid)",
+      "--format",
+      "readable"
+    ],
+    "cwd": "/tmp/review-analysis-qa-v2-fsn7g676"
+  },
+  {
+    "command": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "args": [
+      "/tmp/review-analysis-qa-v2-fsn7g676/src/cli.js",
+      "analyze",
+      "--baseline",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/13-ts-namespace-contract-member/baseline",
+      "--candidate",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/13-ts-namespace-contract-member/candidate",
+      "--rules",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/rules.json",
+      "--as-of",
+      "2026-10-11",
+      "--task",
+      "Nested exported namespace method must use qualified member declaration or explicit uncertainty",
+      "--format",
+      "json"
+    ],
+    "cwd": "/tmp/review-analysis-qa-v2-fsn7g676"
+  },
+  {
+    "command": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "args": [
+      "/tmp/review-analysis-qa-v2-fsn7g676/src/cli.js",
+      "analyze",
+      "--baseline",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/13-ts-namespace-contract-member/baseline",
+      "--candidate",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/13-ts-namespace-contract-member/candidate",
+      "--rules",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/rules.json",
+      "--as-of",
+      "2026-10-11",
+      "--task",
+      "Nested exported namespace method must use qualified member declaration or explicit uncertainty",
+      "--format",
+      "readable"
+    ],
+    "cwd": "/tmp/review-analysis-qa-v2-fsn7g676"
+  },
+  {
+    "command": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "args": [
+      "/tmp/review-analysis-qa-v2-fsn7g676/src/cli.js",
+      "analyze",
+      "--baseline",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/14-js-with-lexical-shadow/baseline",
+      "--candidate",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/14-js-with-lexical-shadow/candidate",
+      "--rules",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/rules.json",
+      "--as-of",
+      "2026-10-11",
+      "--task",
+      "Sloppy-script with object supplies custom fetch; outside global fetch remains a control",
+      "--format",
+      "json"
+    ],
+    "cwd": "/tmp/review-analysis-qa-v2-fsn7g676"
+  },
+  {
+    "command": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "args": [
+      "/tmp/review-analysis-qa-v2-fsn7g676/src/cli.js",
+      "analyze",
+      "--baseline",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/14-js-with-lexical-shadow/baseline",
+      "--candidate",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/14-js-with-lexical-shadow/candidate",
+      "--rules",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/rules.json",
+      "--as-of",
+      "2026-10-11",
+      "--task",
+      "Sloppy-script with object supplies custom fetch; outside global fetch remains a control",
+      "--format",
+      "readable"
+    ],
+    "cwd": "/tmp/review-analysis-qa-v2-fsn7g676"
+  },
+  {
+    "command": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "args": [
+      "/tmp/review-analysis-qa-v2-fsn7g676/src/cli.js",
+      "analyze",
+      "--baseline",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/15-java-varargs-overload/baseline",
+      "--candidate",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/15-java-varargs-overload/candidate",
+      "--rules",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/rules.json",
+      "--as-of",
+      "2026-10-11",
+      "--task",
+      "Valid two-string invocation must not resolve to int,int fixed overload when a varargs overload exists",
+      "--format",
+      "json"
+    ],
+    "cwd": "/tmp/review-analysis-qa-v2-fsn7g676"
+  },
+  {
+    "command": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "args": [
+      "/tmp/review-analysis-qa-v2-fsn7g676/src/cli.js",
+      "analyze",
+      "--baseline",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/15-java-varargs-overload/baseline",
+      "--candidate",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/15-java-varargs-overload/candidate",
+      "--rules",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/rules.json",
+      "--as-of",
+      "2026-10-11",
+      "--task",
+      "Valid two-string invocation must not resolve to int,int fixed overload when a varargs overload exists",
+      "--format",
+      "readable"
+    ],
+    "cwd": "/tmp/review-analysis-qa-v2-fsn7g676"
+  },
+  {
+    "command": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "args": [
+      "/tmp/review-analysis-qa-v2-fsn7g676/src/cli.js",
+      "analyze",
+      "--baseline",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/16-java-inherited-overload/baseline",
+      "--candidate",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/16-java-inherited-overload/candidate",
+      "--rules",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/rules.json",
+      "--as-of",
+      "2026-10-11",
+      "--task",
+      "Declared unsupported inherited overload should not be narrowed to incompatible locally declared member",
+      "--format",
+      "json"
+    ],
+    "cwd": "/tmp/review-analysis-qa-v2-fsn7g676"
+  },
+  {
+    "command": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "args": [
+      "/tmp/review-analysis-qa-v2-fsn7g676/src/cli.js",
+      "analyze",
+      "--baseline",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/16-java-inherited-overload/baseline",
+      "--candidate",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/16-java-inherited-overload/candidate",
+      "--rules",
+      "/tmp/review-analysis-adversarial-v2-NZrPxG/rules.json",
+      "--as-of",
+      "2026-10-11",
+      "--task",
+      "Declared unsupported inherited overload should not be narrowed to incompatible locally declared member",
+      "--format",
+      "readable"
+    ],
+    "cwd": "/tmp/review-analysis-qa-v2-fsn7g676"
+  }
+]

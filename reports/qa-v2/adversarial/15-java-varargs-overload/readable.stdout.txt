@@ -1,0 +1,51 @@
+Review Analysis — advisory source report
+Analyzer 0.1.0; build ca04bac50b7584aaafd9d5602acc8055152e81e25de5fa1b15bb710f76f53ac9
+As of 2026-10-11
+Baseline: tree-sha256:093f3e5a212707441937f86166f587edf9c7e8714f97619d68ea412a60a091c1
+Candidate: tree-sha256:a4a4763f68ed4d7853604c103d311ec7bea90d46495ba1eaa3631305e8e481c5
+
+Task: Valid two-string invocation must not resolve to int,int fixed overload when a varargs overload exists
+Applicable rules:
+- independent/http-contract vindependent-adversarial-v1; owner synthetic-qa: endpoint-contract-change
+No human approval is inferred. Reviewed examples/exceptions are assertions from supplied configuration; simulation records are demonstrations only.
+
+Changed declarations (3):
+- modified: qa.Worker; body/path changed
+  Before: backend/Worker.java:2-5 @ tree-sha256:093f3e5a212707441937f86166f587edf9c7e8714f97619d68ea412a60a091c1 (sha256 01571ea63b20b360bb7d1a0366d45bfec9bb57c371d00da3e6633f0207ac9935)
+  After: backend/Worker.java:2-5 @ tree-sha256:a4a4763f68ed4d7853604c103d311ec7bea90d46495ba1eaa3631305e8e481c5 (sha256 8c5056ff258b712ace834c690ed3051a39fe4419741a71bace8b0294cb5c0355)
+- modified: qa.Worker#run/1; body/path changed
+  Before: backend/Worker.java:3-3 @ tree-sha256:093f3e5a212707441937f86166f587edf9c7e8714f97619d68ea412a60a091c1 (sha256 01571ea63b20b360bb7d1a0366d45bfec9bb57c371d00da3e6633f0207ac9935)
+  After: backend/Worker.java:3-3 @ tree-sha256:a4a4763f68ed4d7853604c103d311ec7bea90d46495ba1eaa3631305e8e481c5 (sha256 8c5056ff258b712ace834c690ed3051a39fe4419741a71bace8b0294cb5c0355)
+- modified: qa.Worker#run/2; body/path changed
+  Before: backend/Worker.java:4-4 @ tree-sha256:093f3e5a212707441937f86166f587edf9c7e8714f97619d68ea412a60a091c1 (sha256 01571ea63b20b360bb7d1a0366d45bfec9bb57c371d00da3e6633f0207ac9935)
+  After: backend/Worker.java:4-4 @ tree-sha256:a4a4763f68ed4d7853604c103d311ec7bea90d46495ba1eaa3631305e8e481c5 (sha256 8c5056ff258b712ace834c690ed3051a39fe4419741a71bace8b0294cb5c0355)
+
+Direct dependencies (2):
+- backend/Caller.java -> backend/Worker.java (type, high): Java qualified import or same-package type resolves to supplied source
+  backend/Caller.java:3-3 @ tree-sha256:093f3e5a212707441937f86166f587edf9c7e8714f97619d68ea412a60a091c1 (sha256 65307490230e508a4da64deac8e3fa23bc942b1dce8cdf5f7a26596971ff4789)
+- backend/Caller.java -> backend/Worker.java (type, high): Java qualified import or same-package type resolves to supplied source
+  backend/Caller.java:3-3 @ tree-sha256:a4a4763f68ed4d7853604c103d311ec7bea90d46495ba1eaa3631305e8e481c5 (sha256 65307490230e508a4da64deac8e3fa23bc942b1dce8cdf5f7a26596971ff4789)
+
+Likely indirect dependencies (0):
+
+Architecture findings (0):
+
+Unknowns (8):
+- ambiguous-call: run; backend/Caller.java:4-4 @ tree-sha256:093f3e5a212707441937f86166f587edf9c7e8714f97619d68ea412a60a091c1 (sha256 65307490230e508a4da64deac8e3fa23bc942b1dce8cdf5f7a26596971ff4789)
+- external-or-missing-java-source: String; backend/Worker.java:3-3 @ tree-sha256:093f3e5a212707441937f86166f587edf9c7e8714f97619d68ea412a60a091c1 (sha256 01571ea63b20b360bb7d1a0366d45bfec9bb57c371d00da3e6633f0207ac9935)
+- external-or-missing-java-source: String; backend/Worker.java:3-3 @ tree-sha256:093f3e5a212707441937f86166f587edf9c7e8714f97619d68ea412a60a091c1 (sha256 01571ea63b20b360bb7d1a0366d45bfec9bb57c371d00da3e6633f0207ac9935)
+- external-or-missing-java-source: String; backend/Worker.java:4-4 @ tree-sha256:093f3e5a212707441937f86166f587edf9c7e8714f97619d68ea412a60a091c1 (sha256 01571ea63b20b360bb7d1a0366d45bfec9bb57c371d00da3e6633f0207ac9935)
+- ambiguous-call: run; backend/Caller.java:4-4 @ tree-sha256:a4a4763f68ed4d7853604c103d311ec7bea90d46495ba1eaa3631305e8e481c5 (sha256 65307490230e508a4da64deac8e3fa23bc942b1dce8cdf5f7a26596971ff4789)
+- external-or-missing-java-source: String; backend/Worker.java:3-3 @ tree-sha256:a4a4763f68ed4d7853604c103d311ec7bea90d46495ba1eaa3631305e8e481c5 (sha256 8c5056ff258b712ace834c690ed3051a39fe4419741a71bace8b0294cb5c0355)
+- external-or-missing-java-source: String; backend/Worker.java:3-3 @ tree-sha256:a4a4763f68ed4d7853604c103d311ec7bea90d46495ba1eaa3631305e8e481c5 (sha256 8c5056ff258b712ace834c690ed3051a39fe4419741a71bace8b0294cb5c0355)
+- external-or-missing-java-source: String; backend/Worker.java:4-4 @ tree-sha256:a4a4763f68ed4d7853604c103d311ec7bea90d46495ba1eaa3631305e8e481c5 (sha256 8c5056ff258b712ace834c690ed3051a39fe4419741a71bace8b0294cb5c0355)
+
+Focused tests (0; recommendations, not executed by analyzer):
+
+Coverage incomplete. This report never authorizes skipping full regression.
+- Source-only analysis; no Java/TypeScript semantic compilation, runtime dispatch, reflection, DI wiring, proxy/origin verification or transitive external package sources
+- Edges are evidence-backed approximations; indirect file dependencies do not prove execution
+- Renames inferred only for identical declaration key/signature/body; edited renames remain delete/add
+- Unknown syntax and unresolved/dynamic dependencies remain visible; passing fixture tests is not private-repository acceptance
+Cache: {"report":"disabled","parsedFiles":4,"reusedFiles":0,"invalidEntries":0}
+Analysis metrics: {"elapsedMs":21.82,"bytesRead":436,"reportCacheHit":false}

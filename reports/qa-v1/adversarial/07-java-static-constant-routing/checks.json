@@ -1,0 +1,52 @@
+{
+  "id": "07-java-static-constant-routing",
+  "description": "Literal mapping remains matchable while constant concatenation mapping stays unknown",
+  "status": "pass",
+  "exitCode": 0,
+  "sourcePaths": {
+    "baseline": "/tmp/review-analysis-adversarial-v1-anUajX/07-java-static-constant-routing/baseline",
+    "candidate": "/tmp/review-analysis-adversarial-v1-anUajX/07-java-static-constant-routing/candidate"
+  },
+  "sourceHashes": {
+    "baseline": {
+      "backend/Constants.java": "9e46360040ceb30e18c96af650042f54d8278619d1ab10d44a7adc8f67e01114",
+      "frontend/client.ts": "6b665567ac3bb0e85e4b4b9c8def051a7a08c23256653ad494cd0f47283d4edd"
+    },
+    "candidate": {
+      "backend/Constants.java": "f8c8bf0bc504c6e8ed3eb85f65948c2bade530cf4b70f7961e9de39f11e6cb97",
+      "frontend/client.ts": "6b665567ac3bb0e85e4b4b9c8def051a7a08c23256653ad494cd0f47283d4edd"
+    }
+  },
+  "evidence": {
+    "checkedEvidenceRecords": 50,
+    "errors": []
+  },
+  "assertions": [
+    {
+      "name": "constant mapping explicit unknown",
+      "status": "pass"
+    },
+    {
+      "name": "literal not contaminated by constant",
+      "status": "pass"
+    },
+    {
+      "name": "escaped literal routes supported",
+      "status": "pass"
+    },
+    {
+      "name": "all source evidence hashes/ranges/excerpts/revisions independently reproduce",
+      "status": "pass"
+    },
+    {
+      "name": "readable actual CLI exits 0",
+      "status": "pass"
+    }
+  ],
+  "reportStats": {
+    "changes": 4,
+    "directEdges": 4,
+    "unknowns": 26,
+    "sourceBuildHash": "8ee7fcacee9a1b276b2bfab2665d8d3ab771e40eee5f3924f1f301192426e68f"
+  }
+}

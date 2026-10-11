@@ -1,0 +1,600 @@
+{
+  "schemaVersion": "1.0",
+  "analyzer": {
+    "version": "0.1.0",
+    "sourceBuildHash": "ca04bac50b7584aaafd9d5602acc8055152e81e25de5fa1b15bb710f76f53ac9",
+    "parsers": {
+      "java": "java-parser@3.0.1",
+      "typescript": "typescript@5.9.3"
+    }
+  },
+  "advisory": true,
+  "asOf": "2026-10-11",
+  "provenance": {
+    "baseline": {
+      "root": "/tmp/review-analysis-adversarial-v2-NZrPxG/16-java-inherited-overload/baseline",
+      "type": "directory",
+      "revision": "tree-sha256:43b897cc8f8ba65d00773ac869ebca31fcec2c9cc35cf9a0b39444339e2125c6",
+      "contentHash": "43b897cc8f8ba65d00773ac869ebca31fcec2c9cc35cf9a0b39444339e2125c6",
+      "dirty": false
+    },
+    "candidate": {
+      "root": "/tmp/review-analysis-adversarial-v2-NZrPxG/16-java-inherited-overload/candidate",
+      "type": "directory",
+      "revision": "tree-sha256:bebb9626c6af0c3a0cafab0b57a30bf57b070b61cdcff749e9c464ed999ac10d",
+      "contentHash": "bebb9626c6af0c3a0cafab0b57a30bf57b070b61cdcff749e9c464ed999ac10d",
+      "dirty": false
+    },
+    "rulesHash": "90f33c2c080aa463115b0ef7e4058bb9bf0da4944dff79ed58eae2f01f9cd3f1",
+    "baselineRulesHash": "90f33c2c080aa463115b0ef7e4058bb9bf0da4944dff79ed58eae2f01f9cd3f1",
+    "cacheKey": "877f2e381c9a5830ffe20326f75a98f2cebdf1801839a6cfc367b177a1a7e232"
+  },
+  "changes": [
+    {
+      "kind": "modified",
+      "name": "Base",
+      "key": "qa.Base",
+      "language": "java",
+      "contractChanged": false,
+      "before": {
+        "path": "backend/Base.java",
+        "range": {
+          "startLine": 2,
+          "endLine": 2
+        },
+        "revision": "tree-sha256:43b897cc8f8ba65d00773ac869ebca31fcec2c9cc35cf9a0b39444339e2125c6",
+        "fileHash": "a7a37e9bbad27af27180fe504b0678e2e6e0314b492687ae64ba72f81b9a67fd",
+        "excerpt": "class Base { String run(String value) { return \"v1\"; } }"
+      },
+      "after": {
+        "path": "backend/Base.java",
+        "range": {
+          "startLine": 2,
+          "endLine": 2
+        },
+        "revision": "tree-sha256:bebb9626c6af0c3a0cafab0b57a30bf57b070b61cdcff749e9c464ed999ac10d",
+        "fileHash": "aa39806866edc40aea58b5112cb70e705a067f9ecda15bc35dbc64f62ca581bc",
+        "excerpt": "class Base { String run(String value) { return \"v2\"; } }"
+      }
+    },
+    {
+      "kind": "modified",
+      "name": "run",
+      "key": "qa.Base#run/1",
+      "language": "java",
+      "contractChanged": false,
+      "before": {
+        "path": "backend/Base.java",
+        "range": {
+          "startLine": 2,
+          "endLine": 2
+        },
+        "revision": "tree-sha256:43b897cc8f8ba65d00773ac869ebca31fcec2c9cc35cf9a0b39444339e2125c6",
+        "fileHash": "a7a37e9bbad27af27180fe504b0678e2e6e0314b492687ae64ba72f81b9a67fd",
+        "excerpt": "class Base { String run(String value) { return \"v1\"; } }"
+      },
+      "after": {
+        "path": "backend/Base.java",
+        "range": {
+          "startLine": 2,
+          "endLine": 2
+        },
+        "revision": "tree-sha256:bebb9626c6af0c3a0cafab0b57a30bf57b070b61cdcff749e9c464ed999ac10d",
+        "fileHash": "aa39806866edc40aea58b5112cb70e705a067f9ecda15bc35dbc64f62ca581bc",
+        "excerpt": "class Base { String run(String value) { return \"v2\"; } }"
+      }
+    },
+    {
+      "kind": "modified",
+      "name": "Child",
+      "key": "qa.Child",
+      "language": "java",
+      "contractChanged": false,
+      "before": {
+        "path": "backend/Child.java",
+        "range": {
+          "startLine": 2,
+          "endLine": 2
+        },
+        "revision": "tree-sha256:43b897cc8f8ba65d00773ac869ebca31fcec2c9cc35cf9a0b39444339e2125c6",
+        "fileHash": "b6819335d438a1ff2eee31838dd068058ef71c9f554fe624db6c50c8ddc2b5f9",
+        "excerpt": "class Child extends Base { String run(Integer value) { return \"v1\"; } }"
+      },
+      "after": {
+        "path": "backend/Child.java",
+        "range": {
+          "startLine": 2,
+          "endLine": 2
+        },
+        "revision": "tree-sha256:bebb9626c6af0c3a0cafab0b57a30bf57b070b61cdcff749e9c464ed999ac10d",
+        "fileHash": "55178789faacec884e6f737e7c3e7632a411e6616e25eeb98e17919cb9326217",
+        "excerpt": "class Child extends Base { String run(Integer value) { return \"v2\"; } }"
+      }
+    },
+    {
+      "kind": "modified",
+      "name": "run",
+      "key": "qa.Child#run/1",
+      "language": "java",
+      "contractChanged": false,
+      "before": {
+        "path": "backend/Child.java",
+        "range": {
+          "startLine": 2,
+          "endLine": 2
+        },
+        "revision": "tree-sha256:43b897cc8f8ba65d00773ac869ebca31fcec2c9cc35cf9a0b39444339e2125c6",
+        "fileHash": "b6819335d438a1ff2eee31838dd068058ef71c9f554fe624db6c50c8ddc2b5f9",
+        "excerpt": "class Child extends Base { String run(Integer value) { return \"v1\"; } }"
+      },
+      "after": {
+        "path": "backend/Child.java",
+        "range": {
+          "startLine": 2,
+          "endLine": 2
+        },
+        "revision": "tree-sha256:bebb9626c6af0c3a0cafab0b57a30bf57b070b61cdcff749e9c464ed999ac10d",
+        "fileHash": "55178789faacec884e6f737e7c3e7632a411e6616e25eeb98e17919cb9326217",
+        "excerpt": "class Child extends Base { String run(Integer value) { return \"v2\"; } }"
+      }
+    }
+  ],
+  "impact": {
+    "direct": [
+      {
+        "kind": "type",
+        "fromPath": "backend/Caller.java",
+        "toPath": "backend/Child.java",
+        "targetKey": "qa.Child",
+        "confidence": "high",
+        "reason": "Java qualified import or same-package type resolves to supplied source",
+        "evidence": {
+          "path": "backend/Caller.java",
+          "range": {
+            "startLine": 3,
+            "endLine": 3
+          },
+          "revision": "tree-sha256:43b897cc8f8ba65d00773ac869ebca31fcec2c9cc35cf9a0b39444339e2125c6",
+          "fileHash": "656d0a74c600dcd856612fe45a67348037b842f28374978ff203513bd6b93fd1",
+          "excerpt": " Child child;"
+        },
+        "targetEvidence": {
+          "path": "backend/Child.java",
+          "range": {
+            "startLine": 2,
+            "endLine": 2
+          },
+          "revision": "tree-sha256:43b897cc8f8ba65d00773ac869ebca31fcec2c9cc35cf9a0b39444339e2125c6",
+          "fileHash": "b6819335d438a1ff2eee31838dd068058ef71c9f554fe624db6c50c8ddc2b5f9",
+          "excerpt": "class Child extends Base { String run(Integer value) { return \"v1\"; } }"
+        }
+      },
+      {
+        "kind": "type",
+        "fromPath": "backend/Child.java",
+        "toPath": "backend/Base.java",
+        "targetKey": "qa.Base",
+        "confidence": "high",
+        "reason": "Java qualified import or same-package type resolves to supplied source",
+        "evidence": {
+          "path": "backend/Child.java",
+          "range": {
+            "startLine": 2,
+            "endLine": 2
+          },
+          "revision": "tree-sha256:43b897cc8f8ba65d00773ac869ebca31fcec2c9cc35cf9a0b39444339e2125c6",
+          "fileHash": "b6819335d438a1ff2eee31838dd068058ef71c9f554fe624db6c50c8ddc2b5f9",
+          "excerpt": "class Child extends Base { String run(Integer value) { return \"v1\"; } }"
+        },
+        "targetEvidence": {
+          "path": "backend/Base.java",
+          "range": {
+            "startLine": 2,
+            "endLine": 2
+          },
+          "revision": "tree-sha256:43b897cc8f8ba65d00773ac869ebca31fcec2c9cc35cf9a0b39444339e2125c6",
+          "fileHash": "a7a37e9bbad27af27180fe504b0678e2e6e0314b492687ae64ba72f81b9a67fd",
+          "excerpt": "class Base { String run(String value) { return \"v1\"; } }"
+        }
+      },
+      {
+        "kind": "type",
+        "fromPath": "backend/Caller.java",
+        "toPath": "backend/Child.java",
+        "targetKey": "qa.Child",
+        "confidence": "high",
+        "reason": "Java qualified import or same-package type resolves to supplied source",
+        "evidence": {
+          "path": "backend/Caller.java",
+          "range": {
+            "startLine": 3,
+            "endLine": 3
+          },
+          "revision": "tree-sha256:bebb9626c6af0c3a0cafab0b57a30bf57b070b61cdcff749e9c464ed999ac10d",
+          "fileHash": "656d0a74c600dcd856612fe45a67348037b842f28374978ff203513bd6b93fd1",
+          "excerpt": " Child child;"
+        },
+        "targetEvidence": {
+          "path": "backend/Child.java",
+          "range": {
+            "startLine": 2,
+            "endLine": 2
+          },
+          "revision": "tree-sha256:bebb9626c6af0c3a0cafab0b57a30bf57b070b61cdcff749e9c464ed999ac10d",
+          "fileHash": "55178789faacec884e6f737e7c3e7632a411e6616e25eeb98e17919cb9326217",
+          "excerpt": "class Child extends Base { String run(Integer value) { return \"v2\"; } }"
+        }
+      },
+      {
+        "kind": "type",
+        "fromPath": "backend/Child.java",
+        "toPath": "backend/Base.java",
+        "targetKey": "qa.Base",
+        "confidence": "high",
+        "reason": "Java qualified import or same-package type resolves to supplied source",
+        "evidence": {
+          "path": "backend/Child.java",
+          "range": {
+            "startLine": 2,
+            "endLine": 2
+          },
+          "revision": "tree-sha256:bebb9626c6af0c3a0cafab0b57a30bf57b070b61cdcff749e9c464ed999ac10d",
+          "fileHash": "55178789faacec884e6f737e7c3e7632a411e6616e25eeb98e17919cb9326217",
+          "excerpt": "class Child extends Base { String run(Integer value) { return \"v2\"; } }"
+        },
+        "targetEvidence": {
+          "path": "backend/Base.java",
+          "range": {
+            "startLine": 2,
+            "endLine": 2
+          },
+          "revision": "tree-sha256:bebb9626c6af0c3a0cafab0b57a30bf57b070b61cdcff749e9c464ed999ac10d",
+          "fileHash": "aa39806866edc40aea58b5112cb70e705a067f9ecda15bc35dbc64f62ca581bc",
+          "excerpt": "class Base { String run(String value) { return \"v2\"; } }"
+        }
+      }
+    ],
+    "indirect": [
+      {
+        "path": "backend/Caller.java",
+        "confidence": "low",
+        "reason": "Likely indirect file dependency; inspect whether the changed declaration is used",
+        "chain": [
+          {
+            "kind": "type",
+            "fromPath": "backend/Caller.java",
+            "toPath": "backend/Child.java",
+            "targetKey": "qa.Child",
+            "confidence": "high",
+            "reason": "Java qualified import or same-package type resolves to supplied source",
+            "evidence": {
+              "path": "backend/Caller.java",
+              "range": {
+                "startLine": 3,
+                "endLine": 3
+              },
+              "revision": "tree-sha256:43b897cc8f8ba65d00773ac869ebca31fcec2c9cc35cf9a0b39444339e2125c6",
+              "fileHash": "656d0a74c600dcd856612fe45a67348037b842f28374978ff203513bd6b93fd1",
+              "excerpt": " Child child;"
+            },
+            "targetEvidence": {
+              "path": "backend/Child.java",
+              "range": {
+                "startLine": 2,
+                "endLine": 2
+              },
+              "revision": "tree-sha256:43b897cc8f8ba65d00773ac869ebca31fcec2c9cc35cf9a0b39444339e2125c6",
+              "fileHash": "b6819335d438a1ff2eee31838dd068058ef71c9f554fe624db6c50c8ddc2b5f9",
+              "excerpt": "class Child extends Base { String run(Integer value) { return \"v1\"; } }"
+            }
+          },
+          {
+            "kind": "type",
+            "fromPath": "backend/Child.java",
+            "toPath": "backend/Base.java",
+            "targetKey": "qa.Base",
+            "confidence": "high",
+            "reason": "Java qualified import or same-package type resolves to supplied source",
+            "evidence": {
+              "path": "backend/Child.java",
+              "range": {
+                "startLine": 2,
+                "endLine": 2
+              },
+              "revision": "tree-sha256:43b897cc8f8ba65d00773ac869ebca31fcec2c9cc35cf9a0b39444339e2125c6",
+              "fileHash": "b6819335d438a1ff2eee31838dd068058ef71c9f554fe624db6c50c8ddc2b5f9",
+              "excerpt": "class Child extends Base { String run(Integer value) { return \"v1\"; } }"
+            },
+            "targetEvidence": {
+              "path": "backend/Base.java",
+              "range": {
+                "startLine": 2,
+                "endLine": 2
+              },
+              "revision": "tree-sha256:43b897cc8f8ba65d00773ac869ebca31fcec2c9cc35cf9a0b39444339e2125c6",
+              "fileHash": "a7a37e9bbad27af27180fe504b0678e2e6e0314b492687ae64ba72f81b9a67fd",
+              "excerpt": "class Base { String run(String value) { return \"v1\"; } }"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "findings": [],
+  "guidance": {
+    "task": "Declared unsupported inherited overload should not be narrowed to incompatible locally declared member",
+    "ruleSetVersion": "independent-adversarial-v1",
+    "approvalGap": "No human approval is inferred. Reviewed examples/exceptions are assertions from supplied configuration; simulation records are demonstrations only.",
+    "rules": [
+      {
+        "id": "independent/http-contract",
+        "kind": "endpoint-contract-change",
+        "owner": "synthetic-qa",
+        "version": "independent-adversarial-v1",
+        "severity": "warning",
+        "instruction": "endpoint-contract-change",
+        "examples": []
+      }
+    ]
+  },
+  "unknowns": [
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "String",
+      "evidence": {
+        "path": "backend/Base.java",
+        "range": {
+          "startLine": 2,
+          "endLine": 2
+        },
+        "revision": "tree-sha256:43b897cc8f8ba65d00773ac869ebca31fcec2c9cc35cf9a0b39444339e2125c6",
+        "fileHash": "a7a37e9bbad27af27180fe504b0678e2e6e0314b492687ae64ba72f81b9a67fd",
+        "excerpt": "class Base { String run(String value) { return \"v1\"; } }"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "String",
+      "evidence": {
+        "path": "backend/Base.java",
+        "range": {
+          "startLine": 2,
+          "endLine": 2
+        },
+        "revision": "tree-sha256:43b897cc8f8ba65d00773ac869ebca31fcec2c9cc35cf9a0b39444339e2125c6",
+        "fileHash": "a7a37e9bbad27af27180fe504b0678e2e6e0314b492687ae64ba72f81b9a67fd",
+        "excerpt": "class Base { String run(String value) { return \"v1\"; } }"
+      }
+    },
+    {
+      "reason": "java-inheritance-dispatch",
+      "detail": "run",
+      "evidence": {
+        "path": "backend/Caller.java",
+        "range": {
+          "startLine": 4,
+          "endLine": 4
+        },
+        "revision": "tree-sha256:43b897cc8f8ba65d00773ac869ebca31fcec2c9cc35cf9a0b39444339e2125c6",
+        "fileHash": "656d0a74c600dcd856612fe45a67348037b842f28374978ff203513bd6b93fd1",
+        "excerpt": " void use(){ child.run(\"x\"); } // inherited-overload"
+      },
+      "candidates": [
+        {
+          "path": "backend/Child.java",
+          "range": {
+            "startLine": 2,
+            "endLine": 2
+          },
+          "revision": "tree-sha256:43b897cc8f8ba65d00773ac869ebca31fcec2c9cc35cf9a0b39444339e2125c6",
+          "fileHash": "b6819335d438a1ff2eee31838dd068058ef71c9f554fe624db6c50c8ddc2b5f9",
+          "excerpt": "class Child extends Base { String run(Integer value) { return \"v1\"; } }"
+        }
+      ]
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "String",
+      "evidence": {
+        "path": "backend/Child.java",
+        "range": {
+          "startLine": 2,
+          "endLine": 2
+        },
+        "revision": "tree-sha256:43b897cc8f8ba65d00773ac869ebca31fcec2c9cc35cf9a0b39444339e2125c6",
+        "fileHash": "b6819335d438a1ff2eee31838dd068058ef71c9f554fe624db6c50c8ddc2b5f9",
+        "excerpt": "class Child extends Base { String run(Integer value) { return \"v1\"; } }"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "Integer",
+      "evidence": {
+        "path": "backend/Child.java",
+        "range": {
+          "startLine": 2,
+          "endLine": 2
+        },
+        "revision": "tree-sha256:43b897cc8f8ba65d00773ac869ebca31fcec2c9cc35cf9a0b39444339e2125c6",
+        "fileHash": "b6819335d438a1ff2eee31838dd068058ef71c9f554fe624db6c50c8ddc2b5f9",
+        "excerpt": "class Child extends Base { String run(Integer value) { return \"v1\"; } }"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "String",
+      "evidence": {
+        "path": "backend/Base.java",
+        "range": {
+          "startLine": 2,
+          "endLine": 2
+        },
+        "revision": "tree-sha256:bebb9626c6af0c3a0cafab0b57a30bf57b070b61cdcff749e9c464ed999ac10d",
+        "fileHash": "aa39806866edc40aea58b5112cb70e705a067f9ecda15bc35dbc64f62ca581bc",
+        "excerpt": "class Base { String run(String value) { return \"v2\"; } }"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "String",
+      "evidence": {
+        "path": "backend/Base.java",
+        "range": {
+          "startLine": 2,
+          "endLine": 2
+        },
+        "revision": "tree-sha256:bebb9626c6af0c3a0cafab0b57a30bf57b070b61cdcff749e9c464ed999ac10d",
+        "fileHash": "aa39806866edc40aea58b5112cb70e705a067f9ecda15bc35dbc64f62ca581bc",
+        "excerpt": "class Base { String run(String value) { return \"v2\"; } }"
+      }
+    },
+    {
+      "reason": "java-inheritance-dispatch",
+      "detail": "run",
+      "evidence": {
+        "path": "backend/Caller.java",
+        "range": {
+          "startLine": 4,
+          "endLine": 4
+        },
+        "revision": "tree-sha256:bebb9626c6af0c3a0cafab0b57a30bf57b070b61cdcff749e9c464ed999ac10d",
+        "fileHash": "656d0a74c600dcd856612fe45a67348037b842f28374978ff203513bd6b93fd1",
+        "excerpt": " void use(){ child.run(\"x\"); } // inherited-overload"
+      },
+      "candidates": [
+        {
+          "path": "backend/Child.java",
+          "range": {
+            "startLine": 2,
+            "endLine": 2
+          },
+          "revision": "tree-sha256:bebb9626c6af0c3a0cafab0b57a30bf57b070b61cdcff749e9c464ed999ac10d",
+          "fileHash": "55178789faacec884e6f737e7c3e7632a411e6616e25eeb98e17919cb9326217",
+          "excerpt": "class Child extends Base { String run(Integer value) { return \"v2\"; } }"
+        }
+      ]
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "String",
+      "evidence": {
+        "path": "backend/Child.java",
+        "range": {
+          "startLine": 2,
+          "endLine": 2
+        },
+        "revision": "tree-sha256:bebb9626c6af0c3a0cafab0b57a30bf57b070b61cdcff749e9c464ed999ac10d",
+        "fileHash": "55178789faacec884e6f737e7c3e7632a411e6616e25eeb98e17919cb9326217",
+        "excerpt": "class Child extends Base { String run(Integer value) { return \"v2\"; } }"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "Integer",
+      "evidence": {
+        "path": "backend/Child.java",
+        "range": {
+          "startLine": 2,
+          "endLine": 2
+        },
+        "revision": "tree-sha256:bebb9626c6af0c3a0cafab0b57a30bf57b070b61cdcff749e9c464ed999ac10d",
+        "fileHash": "55178789faacec884e6f737e7c3e7632a411e6616e25eeb98e17919cb9326217",
+        "excerpt": "class Child extends Base { String run(Integer value) { return \"v2\"; } }"
+      }
+    }
+  ],
+  "focusedTests": [
+    {
+      "kind": "indirect-consumer",
+      "reason": "Exercise likely indirect consumer with changed payload and failure/empty states",
+      "path": "backend/Caller.java",
+      "chain": [
+        {
+          "kind": "type",
+          "fromPath": "backend/Caller.java",
+          "toPath": "backend/Child.java",
+          "targetKey": "qa.Child",
+          "confidence": "high",
+          "reason": "Java qualified import or same-package type resolves to supplied source",
+          "evidence": {
+            "path": "backend/Caller.java",
+            "range": {
+              "startLine": 3,
+              "endLine": 3
+            },
+            "revision": "tree-sha256:43b897cc8f8ba65d00773ac869ebca31fcec2c9cc35cf9a0b39444339e2125c6",
+            "fileHash": "656d0a74c600dcd856612fe45a67348037b842f28374978ff203513bd6b93fd1",
+            "excerpt": " Child child;"
+          },
+          "targetEvidence": {
+            "path": "backend/Child.java",
+            "range": {
+              "startLine": 2,
+              "endLine": 2
+            },
+            "revision": "tree-sha256:43b897cc8f8ba65d00773ac869ebca31fcec2c9cc35cf9a0b39444339e2125c6",
+            "fileHash": "b6819335d438a1ff2eee31838dd068058ef71c9f554fe624db6c50c8ddc2b5f9",
+            "excerpt": "class Child extends Base { String run(Integer value) { return \"v1\"; } }"
+          }
+        },
+        {
+          "kind": "type",
+          "fromPath": "backend/Child.java",
+          "toPath": "backend/Base.java",
+          "targetKey": "qa.Base",
+          "confidence": "high",
+          "reason": "Java qualified import or same-package type resolves to supplied source",
+          "evidence": {
+            "path": "backend/Child.java",
+            "range": {
+              "startLine": 2,
+              "endLine": 2
+            },
+            "revision": "tree-sha256:43b897cc8f8ba65d00773ac869ebca31fcec2c9cc35cf9a0b39444339e2125c6",
+            "fileHash": "b6819335d438a1ff2eee31838dd068058ef71c9f554fe624db6c50c8ddc2b5f9",
+            "excerpt": "class Child extends Base { String run(Integer value) { return \"v1\"; } }"
+          },
+          "targetEvidence": {
+            "path": "backend/Base.java",
+            "range": {
+              "startLine": 2,
+              "endLine": 2
+            },
+            "revision": "tree-sha256:43b897cc8f8ba65d00773ac869ebca31fcec2c9cc35cf9a0b39444339e2125c6",
+            "fileHash": "a7a37e9bbad27af27180fe504b0678e2e6e0314b492687ae64ba72f81b9a67fd",
+            "excerpt": "class Base { String run(String value) { return \"v1\"; } }"
+          }
+        }
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": false,
+    "fullRegressionMayBeSkipped": false,
+    "sourceFiles": {
+      "baseline": 3,
+      "candidate": 3
+    },
+    "excluded": {
+      "baseline": [],
+      "candidate": []
+    },
+    "limitations": [
+      "Source-only analysis; no Java/TypeScript semantic compilation, runtime dispatch, reflection, DI wiring, proxy/origin verification or transitive external package sources",
+      "Edges are evidence-backed approximations; indirect file dependencies do not prove execution",
+      "Renames inferred only for identical declaration key/signature/body; edited renames remain delete/add",
+      "Unknown syntax and unresolved/dynamic dependencies remain visible; passing fixture tests is not private-repository acceptance"
+    ]
+  },
+  "cache": {
+    "report": "disabled",
+    "parsedFiles": 6,
+    "reusedFiles": 0,
+    "invalidEntries": 0
+  },
+  "metrics": {
+    "elapsedMs": 22.27,
+    "bytesRead": 492,
+    "reportCacheHit": false
+  }
+}

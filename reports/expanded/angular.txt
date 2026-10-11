@@ -1,0 +1,60 @@
+Review Analysis — Java / Spring + Angular
+
+Build: 0427f5fed8a45a3d4dbc5523f1d0f8afb57949bac0df1f9bef249fd73ae31061
+
+Advisory; incomplete source-only coverage; runtime and full regression remain unverified.
+
+10 changed declarations, 3 changed files, 33 edges.
+
+9 direct representative paths; 18 likely indirect paths (low certainty).
+
+Limits: depth 12; alternate/deeper paths may be omitted.
+
+Architecture findings: 1; quality/design findings: 0; unresolved source facts: 97.
+
+Checklist: draft; 6 criteria; runtime unverified.
+
+modified: com.example.lookup.LookupController
+  angular-monorepo:backend/src/main/java/com/example/lookup/LookupController.java:8-15 @ tree-sha256:e489cad57a534dd385a932998d3b038b1610ee6c8a6508bfb0f0c9ff11db9677 sha256:c70d66089a7fca972a02e36fbde3ce9a6c50948d0dedadd6c2f98e63a3163355
+
+modified: com.example.lookup.LookupController#lookup/1
+  angular-monorepo:backend/src/main/java/com/example/lookup/LookupController.java:11-14 @ tree-sha256:e489cad57a534dd385a932998d3b038b1610ee6c8a6508bfb0f0c9ff11db9677 sha256:c70d66089a7fca972a02e36fbde3ce9a6c50948d0dedadd6c2f98e63a3163355
+
+modified: com.example.lookup.LookupResponse
+  angular-monorepo:backend/src/main/java/com/example/lookup/LookupResponse.java:3-3 @ tree-sha256:e489cad57a534dd385a932998d3b038b1610ee6c8a6508bfb0f0c9ff11db9677 sha256:2283e210acfe8302da51d995f36357367ce0a572ada2caf73a817cda5f853f66
+
+deleted: com.example.lookup.LookupResponse#label
+  angular-monorepo:backend/src/main/java/com/example/lookup/LookupResponse.java:3-3 @ tree-sha256:c66dd1d1915680f76702799c8e9c804178562c702c0a3bce5a6ea3948e790b3f sha256:72db8b7e80b91c4e84e2ee9ed1b103acf16a8e34279444ac50ce7b66d64757af
+
+modified: LookupResponse
+  angular-monorepo:frontend/src/app/lookup.service.ts:4-7 @ tree-sha256:e489cad57a534dd385a932998d3b038b1610ee6c8a6508bfb0f0c9ff11db9677 sha256:a4f3eadd56faaddb5095bb5fb4736a6c1b2bf32a1e82853b9adaa6c9f40aebb2
+
+deleted: LookupResponse.label
+  angular-monorepo:frontend/src/app/lookup.service.ts:6-6 @ tree-sha256:c66dd1d1915680f76702799c8e9c804178562c702c0a3bce5a6ea3948e790b3f sha256:ca499f2f9935b1dd0183605d2264019822e481f9fd397ca128d370ea23dd97fb
+
+modified: LookupService
+  angular-monorepo:frontend/src/app/lookup.service.ts:9-20 @ tree-sha256:e489cad57a534dd385a932998d3b038b1610ee6c8a6508bfb0f0c9ff11db9677 sha256:a4f3eadd56faaddb5095bb5fb4736a6c1b2bf32a1e82853b9adaa6c9f40aebb2
+
+modified: LookupService.lookup
+  angular-monorepo:frontend/src/app/lookup.service.ts:13-15 @ tree-sha256:e489cad57a534dd385a932998d3b038b1610ee6c8a6508bfb0f0c9ff11db9677 sha256:a4f3eadd56faaddb5095bb5fb4736a6c1b2bf32a1e82853b9adaa6c9f40aebb2
+
+added: com.example.lookup.LookupResponse#displayName
+  angular-monorepo:backend/src/main/java/com/example/lookup/LookupResponse.java:3-3 @ tree-sha256:e489cad57a534dd385a932998d3b038b1610ee6c8a6508bfb0f0c9ff11db9677 sha256:2283e210acfe8302da51d995f36357367ce0a572ada2caf73a817cda5f853f66
+
+added: LookupResponse.displayName
+  angular-monorepo:frontend/src/app/lookup.service.ts:6-6 @ tree-sha256:e489cad57a534dd385a932998d3b038b1610ee6c8a6508bfb0f0c9ff11db9677 sha256:a4f3eadd56faaddb5095bb5fb4736a6c1b2bf32a1e82853b9adaa6c9f40aebb2
+
+Architecture new: api/contract-change: Removed or changed HTTP contract: GET /api/lookup
+  angular-monorepo:backend/src/main/java/com/example/lookup/LookupController.java:11-11 @ tree-sha256:c66dd1d1915680f76702799c8e9c804178562c702c0a3bce5a6ea3948e790b3f sha256:79260e8a3d3820370ca72d52f782ad910d3c346586e21733ff6e4460afd915f9
+
+Requirement unverified: customer-lookup-by-id; missing edge cases: 1; runtime unverified
+
+Requirement unverified: display-name; missing edge cases: 0; runtime unverified
+
+Requirement unverified: blank-identifier; missing edge cases: 2; runtime unverified
+
+Requirement unverified: customer-not-found; missing edge cases: 1; runtime unverified
+
+Requirement unverified: loading-state; missing edge cases: 1; runtime unverified
+
+Requirement unverified: confirmation-needed-detail; missing edge cases: 0; runtime unverified

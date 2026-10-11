@@ -1,0 +1,11 @@
+$ node --version
+v24.19.0
+exit=0
+
+$ npm --version
+11.9.0
+exit=0
+
+$ git --version
+git version 2.52.0
+exit=0

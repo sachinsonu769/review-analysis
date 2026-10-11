@@ -1,0 +1,30 @@
+{
+  "command": [
+    "docker",
+    "run",
+    "--rm",
+    "--read-only",
+    "--network",
+    "none",
+    "--user",
+    "1000:1000",
+    "--cap-drop",
+    "ALL",
+    "--security-opt",
+    "no-new-privileges",
+    "--tmpfs",
+    "/tmp:rw,exec,nosuid,nodev,size=536870912,mode=1777",
+    "--mount",
+    "type=bind,src=/workspace/review-analysis-deliverables/expanded-qa,dst=/qa/scripts,readonly",
+    "--entrypoint",
+    "node",
+    "sha256:56ce7b94faf0f817f0fc13a1358b6650ff0d950bbd68198f070d649e1c23c819",
+    "/qa/scripts/git-lazy-safety.mjs",
+    "0427f5fed8a45a3d4dbc5523f1d0f8afb57949bac0df1f9bef249fd73ae31061"
+  ],
+  "cwd": null,
+  "startedAt": "2026-10-11T17:48:58.755037+00:00",
+  "dockerConfig": "/tmp/review-analysis-docker-config",
+  "exitCode": 0,
+  "elapsedSeconds": 6.146
+}

@@ -1,0 +1,50 @@
+{
+  "id": "12-java-ambiguous-explicit-imports",
+  "description": "Conflicting explicit imports cannot acquire a guessed first-import receiver target (source is semantically invalid)",
+  "status": "pass",
+  "exitCode": 0,
+  "sourcePaths": {
+    "baseline": "/tmp/review-analysis-adversarial-v2-NZrPxG/12-java-ambiguous-explicit-imports/baseline",
+    "candidate": "/tmp/review-analysis-adversarial-v2-NZrPxG/12-java-ambiguous-explicit-imports/candidate"
+  },
+  "sourceHashes": {
+    "baseline": {
+      "backend/Caller.java": "a1aab558052caeea45ce53962b9306053f365cbd9d7495df9741dc5998e45d9a",
+      "backend/a/Target.java": "8975900bb8ad28d30e1d27a9da5e6b98b6a6340d8401749369cd611ebeeb173f",
+      "backend/b/Target.java": "348b07628db2c793993b980125169b03b52ad5356c04f6c54d881dda83e6e603"
+    },
+    "candidate": {
+      "backend/Caller.java": "a1aab558052caeea45ce53962b9306053f365cbd9d7495df9741dc5998e45d9a",
+      "backend/a/Target.java": "d3cd92707954342015ca2a17c62667b79bbe02c54115f3447a0e887e4ac065fb",
+      "backend/b/Target.java": "e9b4a26f8373aa1ccf1a9257272ffe2d1159496d9c17e4871b859ef7574c9056"
+    }
+  },
+  "evidence": {
+    "checkedEvidenceRecords": 20,
+    "errors": []
+  },
+  "assertions": [
+    {
+      "name": "no first-import call guess",
+      "status": "pass"
+    },
+    {
+      "name": "ambiguous binding explicit unknown",
+      "status": "pass"
+    },
+    {
+      "name": "all source evidence hashes/ranges/excerpts/revisions independently reproduce",
+      "status": "pass"
+    },
+    {
+      "name": "readable actual CLI exits 0",
+      "status": "pass"
+    }
+  ],
+  "reportStats": {
+    "changes": 4,
+    "directEdges": 4,
+    "unknowns": 4,
+    "sourceBuildHash": "ca04bac50b7584aaafd9d5602acc8055152e81e25de5fa1b15bb710f76f53ac9"
+  }
+}

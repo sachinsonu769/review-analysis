@@ -1,0 +1,35 @@
+{
+  "recordedAt": "2026-10-11T17:23:56.562Z",
+  "snapshotSourceHash": "40218ed972622892756bd9d8c027d6d8d11e6ca4ceec95d796e9efbb038766ac",
+  "runtime": {
+    "node": "v24.19.0",
+    "git": "git version 2.52.0"
+  },
+  "origin": "/workspace/review-analysis-deliverables/expanded-architect-review/cache-review/lazy-fetch-d7q6D9/synthetic-origin",
+  "partial": "/workspace/review-analysis-deliverables/expanded-architect-review/cache-review/lazy-fetch-d7q6D9/synthetic-partial-clone",
+  "head": "fb90c6ee6261889a4fb98f48d75b817a5681bbdf",
+  "configuredTransport": "/workspace/review-analysis-deliverables/expanded-architect-review/cache-review/lazy-fetch-d7q6D9/synthetic-local-promisor-transport",
+  "markerPath": "/workspace/review-analysis-deliverables/expanded-architect-review/cache-review/lazy-fetch-d7q6D9/synthetic-partial-clone/executed-by-promisor-transport.ts",
+  "markerBefore": false,
+  "markerAfter": true,
+  "packsBefore": [
+    "pack-091f785fafc523202b36ad4df6703b1562ab0117.idx",
+    "pack-091f785fafc523202b36ad4df6703b1562ab0117.pack",
+    "pack-091f785fafc523202b36ad4df6703b1562ab0117.promisor",
+    "pack-091f785fafc523202b36ad4df6703b1562ab0117.rev"
+  ],
+  "packsAfter": [
+    "pack-091f785fafc523202b36ad4df6703b1562ab0117.idx",
+    "pack-091f785fafc523202b36ad4df6703b1562ab0117.pack",
+    "pack-091f785fafc523202b36ad4df6703b1562ab0117.promisor",
+    "pack-091f785fafc523202b36ad4df6703b1562ab0117.rev",
+    "pack-d8c1b56a2b05de5481160efbe227b90b45743750.idx",
+    "pack-d8c1b56a2b05de5481160efbe227b90b45743750.pack",
+    "pack-d8c1b56a2b05de5481160efbe227b90b45743750.promisor",
+    "pack-d8c1b56a2b05de5481160efbe227b90b45743750.rev"
+  ],
+  "returnedSnapshotFiles": [
+    "a.ts"
+  ],
+  "transport": "Synthetic local Git ext transport; no external network or private repository used"
+}

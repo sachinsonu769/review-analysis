@@ -1,0 +1,52 @@
+[
+  {
+    "name": "endpoint-on-expiry",
+    "status": "pass",
+    "observed": {
+      "suppressed": true,
+      "exception": {
+        "status": "simulation-active",
+        "expires": "2026-10-11",
+        "approval": {
+          "status": "reviewed",
+          "reviewer": "Synthetic independent QA reviewer",
+          "evidence": "Synthetic testing assertion only",
+          "simulation": true
+        },
+        "approvalVerification": "User-supplied assertion; human identity and review authenticity are not independently verified"
+      },
+      "cache": {
+        "report": "miss",
+        "parsedFiles": 28,
+        "reusedFiles": 15,
+        "invalidEntries": 0
+      },
+      "cacheKey": "66edb622cb39035b5a9fc7ab27e6f3ae64fea3c4b703a63e5190e5ac3a639bb8"
+    }
+  },
+  {
+    "name": "endpoint-after-expiry",
+    "status": "pass",
+    "observed": {
+      "suppressed": false,
+      "exception": {
+        "status": "expired",
+        "expires": "2026-10-11",
+        "approval": {
+          "status": "reviewed",
+          "reviewer": "Synthetic independent QA reviewer",
+          "evidence": "Synthetic testing assertion only",
+          "simulation": true
+        },
+        "approvalVerification": "User-supplied assertion; human identity and review authenticity are not independently verified"
+      },
+      "cache": {
+        "report": "miss",
+        "parsedFiles": 0,
+        "reusedFiles": 43,
+        "invalidEntries": 0
+      },
+      "cacheKey": "2254d9b0f904df5581773c5ff274c02cd38ed916737fa0eee5e4292106d09b21"
+    }
+  }
+]

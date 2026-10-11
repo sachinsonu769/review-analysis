@@ -1,0 +1,98 @@
+{
+  "analyzer": {
+    "version": "0.1.0",
+    "sourceBuildHash": "ca04bac50b7584aaafd9d5602acc8055152e81e25de5fa1b15bb710f76f53ac9",
+    "parsers": {
+      "java": "java-parser@3.0.1",
+      "typescript": "typescript@5.9.3"
+    }
+  },
+  "advisory": true,
+  "provenance": {
+    "revision": "tree-sha256:30b95c46c9c66a28cd7cb1c9b3a292fd15195674948fdcb56309f3da8ce1787d",
+    "contentHash": "30b95c46c9c66a28cd7cb1c9b3a292fd15195674948fdcb56309f3da8ce1787d"
+  },
+  "guidance": {
+    "task": "Independent QA guidance",
+    "ruleSetVersion": "2026.10.1-fixture",
+    "approvalGap": "No human approval is inferred. Reviewed examples/exceptions are assertions from supplied configuration; simulation records are demonstrations only.",
+    "rules": [
+      {
+        "id": "architecture/no-raw-http",
+        "kind": "forbidden-import",
+        "owner": "example-platform",
+        "version": "2026.10.1-fixture",
+        "severity": "warning",
+        "instruction": "Call external systems through the project gateway abstraction.",
+        "examples": [
+          {
+            "path": "backend/src/main/java/org/demo/inventory/ChangeJournal.java",
+            "status": "unreviewed",
+            "approval": {
+              "status": "proposed",
+              "evidence": "Unreviewed candidate example; no human approval is asserted."
+            },
+            "evidence": {
+              "path": "backend/src/main/java/org/demo/inventory/ChangeJournal.java",
+              "range": {
+                "startLine": 1,
+                "endLine": 13
+              },
+              "revision": "tree-sha256:30b95c46c9c66a28cd7cb1c9b3a292fd15195674948fdcb56309f3da8ce1787d",
+              "fileHash": "1b1592e1f551a7200528c57ad9b793ab29d5a770e98beae8b51a65c9c93e1aa2",
+              "excerpt": "package org.demo.inventory;\n\nimport org.legacy.clients.RawHttpClient;\n\n// Newly introduced architecture violation; no reviewed exemption exists.\npublic class ChangeJournal {\n    private final RawHttpClient client;\n\n    public ChangeJournal(RawHttpClient client) {\n        this.client = client;\n    }\n}\n"
+            }
+          },
+          {
+            "path": "backend/src/main/java/org/demo/inventory/SimulatedTransport.java",
+            "status": "simulated-reviewed",
+            "approval": {
+              "status": "reviewed",
+              "reviewer": "SIMULATED FIXTURE REVIEWER — not a real person or approval",
+              "evidence": "fixtures/exception-review.simulation.md",
+              "simulation": true
+            },
+            "evidence": {
+              "path": "backend/src/main/java/org/demo/inventory/SimulatedTransport.java",
+              "range": {
+                "startLine": 1,
+                "endLine": 13
+              },
+              "revision": "tree-sha256:30b95c46c9c66a28cd7cb1c9b3a292fd15195674948fdcb56309f3da8ce1787d",
+              "fileHash": "5ab0a6358a6fa91025c281e2851ba0697c576d5125ac9c47481d7a296f0c6ff4",
+              "excerpt": "package org.demo.inventory;\n\nimport org.legacy.clients.RawHttpClient;\n\n// This fixture's exemption is simulated; it is not a real human approval.\npublic class SimulatedTransport {\n    private final RawHttpClient client;\n\n    public SimulatedTransport(RawHttpClient client) {\n        this.client = client;\n    }\n}\n"
+            }
+          }
+        ]
+      },
+      {
+        "id": "contracts/http-lookup",
+        "kind": "endpoint-contract-change",
+        "owner": "example-platform",
+        "version": "2026.10.1-fixture",
+        "severity": "warning",
+        "instruction": "Review known consumers whenever an HTTP endpoint contract changes.",
+        "examples": [
+          {
+            "path": "backend/src/main/java/org/demo/inventory/InventoryResource.java",
+            "status": "unreviewed",
+            "approval": {
+              "status": "proposed",
+              "evidence": "Proposed contract example; unreviewed."
+            },
+            "evidence": {
+              "path": "backend/src/main/java/org/demo/inventory/InventoryResource.java",
+              "range": {
+                "startLine": 1,
+                "endLine": 22
+              },
+              "revision": "tree-sha256:30b95c46c9c66a28cd7cb1c9b3a292fd15195674948fdcb56309f3da8ce1787d",
+              "fileHash": "920735e66d6213c8d0c30cd74c1256be750562bc331aaa4b7e12daea03563c77",
+              "excerpt": "package org.demo.inventory;\n\nimport org.springframework.web.bind.annotation.GetMapping;\nimport org.springframework.web.bind.annotation.RequestMapping;\nimport org.springframework.web.bind.annotation.RequestParam;\nimport org.springframework.web.bind.annotation.RestController;\n\n@RestController\n@RequestMapping(\"/api\")\npublic class InventoryResource {\n    private final InventoryResolver service;\n\n    public InventoryResource(InventoryResolver service) {\n        this.service = service;\n    }\n\n    @GetMapping(\"/warehouse/resolve\")\n    public ProductReply resolveInventory(@RequestParam(defaultValue = \"current\") String id) {\n        return service.resolveInventory(new InventoryInquiry(id));\n    }\n}\n"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

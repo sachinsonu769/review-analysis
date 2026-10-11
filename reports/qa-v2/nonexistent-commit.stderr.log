@@ -1,0 +1,4 @@
+fatal: Needed a single revision
+Review Analysis: Command failed: git -C /tmp/review-analysis-qa-integration-emot3gjm/repo rev-parse --verify --end-of-options 0000000000000000000000000000000000000000^{commit}
+fatal: Needed a single revision
+

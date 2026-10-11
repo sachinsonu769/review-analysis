@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#172d34">
+  <title>Review Analysis · Change workspace</title>
+  <link rel="stylesheet" href="/styles.css">
+  <script type="module" src="/app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#review-workspace">Skip to review</a>
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="Review Analysis home"><span class="brand-icon" aria-hidden="true">⌘</span><span>Review<span class="brand-light">Analysis</span></span><span class="version">0.2</span></a>
+    <div class="topbar-right"><span class="local-badge"><span class="status-dot"></span>Local workspace</span><button type="button" class="button quiet" id="report-download" data-testid="report-download" disabled>↓ Export report</button></div>
+  </header>
+  <main id="review-workspace">
+    <section class="intro" aria-labelledby="page-title">
+      <div><p class="eyebrow">SOURCE CHANGE REVIEW</p><h1 id="page-title">See the change. Trace the impact.</h1><p class="intro-copy">Architecture, dependencies, quality, and intent — connected to the same source evidence.</p></div>
+      <form id="analysis-form" class="analysis-form">
+        <label for="demo-select">Review workspace</label>
+        <div class="analysis-controls"><select id="demo-select" data-testid="demo-select"><option value="lookup">React + Spring · Lookup migration</option><option value="angular">Angular + Spring · Catalog migration</option><option value="split">Split repositories · Contract mapping</option></select><button class="button primary" id="analyze-button" data-testid="analyze-button" type="submit"><span aria-hidden="true">→</span> Analyze change</button></div>
+        <p id="demo-description">Provided source fixtures · baseline → candidate</p>
+        <label class="review-task-label" for="review-task">Developer review task</label>
+        <input class="review-task-input" id="review-task" data-testid="review-task" type="text" maxlength="2000" value="Review proposed API and lookup contract changes" placeholder="Describe the change you intend to make">
+      </form>
+    </section>
+    <div id="app-status" class="app-status" role="status" aria-live="polite" data-testid="app-status">Preparing review workspace…</div>
+    <details class="workspace-config" id="workspace-config" data-testid="workspace-config"><summary><span>Review your own mounted sources</span><span>Workspace configuration</span></summary><div class="workspace-editor"><div class="workspace-editor-heading"><p>Configure baseline and candidate sources for each project. User sources must be mounted read-only under <code>/inputs</code>. Explicit mappings connect split repositories.</p><label class="file-label">Load workspace JSON <input type="file" id="workspace-file" data-testid="workspace-file" accept=".json,application/json" aria-label="Load workspace JSON"></label></div><label for="workspace-json" class="visually-hidden">Workspace JSON configuration</label><textarea id="workspace-json" data-testid="workspace-json" spellcheck="false" aria-label="Workspace JSON configuration"></textarea><div class="workspace-editor-actions"><label><input type="checkbox" id="workspace-enable" data-testid="workspace-enable"> Use this workspace configuration for the next analysis</label><span>Source files stay read-only. The server validates configuration and mounted paths.</span></div></div></details>
+    <section class="summary-strip" aria-label="Analysis overview" id="summary-strip" data-testid="summary-strip">
+      <div class="summary-item"><span class="summary-icon mint">→</span><div><strong id="metric-changes">—</strong><span>Changed declarations</span></div></div>
+      <div class="summary-item"><span class="summary-icon blue">◎</span><div><strong id="metric-nodes">—</strong><span>Typed graph nodes</span></div></div>
+      <div class="summary-item"><span class="summary-icon amber">△</span><div><strong id="metric-findings">—</strong><span>Review findings</span></div></div>
+      <div class="summary-item"><span class="summary-icon violet">◇</span><div><strong id="metric-unknowns">—</strong><span>Unresolved references</span></div></div>
+      <div class="analysis-identity"><span class="pill neutral" id="analysis-state">Awaiting analysis</span><span id="build-identity" title="Exact analyzed build">Source evidence · deterministic analysis</span></div>
+    </section>
+    <section class="workbench" aria-label="Graph and source evidence">
+      <div class="graph-panel panel">
+        <div class="panel-heading"><div><p class="eyebrow">SHARED ANALYSIS ENGINE</p><h2>Dependency graph <span class="count-pill" id="graph-node-count">0</span></h2></div><div class="graph-actions"><button type="button" class="button tiny" id="graph-fit" data-testid="graph-fit" title="Fit graph">Fit</button><button type="button" class="button icon-button" id="zoom-out" data-testid="zoom-out" aria-label="Zoom out">−</button><button type="button" class="button icon-button" id="zoom-in" data-testid="zoom-in" aria-label="Zoom in">+</button></div></div>
+        <div class="graph-toolbar">
+          <label class="search-control"><span aria-hidden="true">⌕</span><input type="search" id="graph-search" data-testid="graph-search" placeholder="Find a file or symbol" aria-label="Search graph"></label>
+          <label class="compact-control"><span>Project</span><select id="project-filter" data-testid="project-filter"><option value="">All projects</option></select></label>
+          <label class="compact-control"><span>Repository</span><select id="repository-filter" data-testid="repository-filter"><option value="">All repositories</option></select></label>
+          <label class="compact-control"><span>Module</span><select id="module-filter" data-testid="module-filter"><option value="">All modules</option></select></label>
+        </div>
+        <div class="graph-subtoolbar"><label class="compact-control source-control"><span>Change to trace</span><select id="source-select" data-testid="source-select" aria-label="Select changed source"><option value="">Choose changed source</option></select></label><div class="graph-options"><label><input type="checkbox" id="changed-only" data-testid="changed-only"> Changed only</label><label><input type="checkbox" id="impact-only" data-testid="impact-only" checked> Impact neighborhood</label><label class="compact-control"><select id="node-level" data-testid="node-level" aria-label="Graph detail"><option value="files">File nodes</option><option value="all">Declaration counts</option></select></label><label class="compact-control"><select id="phase-filter" data-testid="phase-filter" aria-label="Source revision phase"><option value="">Both revisions</option><option value="candidate">Candidate</option><option value="baseline">Baseline</option></select></label><label class="compact-control"><select id="certainty-filter" data-testid="certainty-filter" aria-label="Edge certainty"><option value="">All certainty</option><option value="high">High certainty</option><option value="medium">Medium certainty</option><option value="low">Low certainty</option></select></label></div></div>
+        <div class="graph-stage" id="graph-stage"><svg id="graph" data-testid="graph" role="group" aria-label="Interactive typed source dependency graph" tabindex="0"><defs><marker id="arrow-high" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#79958f"/></marker><marker id="arrow-medium" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#ae943d"/></marker><marker id="arrow-low" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#9d93b5"/></marker><marker id="arrow-active" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#087a67"/></marker></defs><g id="graph-content"></g></svg><div id="graph-empty" class="graph-empty"><span aria-hidden="true">◎</span><strong>Your review starts with a graph.</strong><p>Analyze a workspace to connect changes with their callers and source evidence.</p></div><div class="graph-tip">Drag to pan · scroll to zoom · select a node for evidence</div></div>
+        <div class="graph-legend" aria-label="Graph legend"><span><i class="legend-node changed"></i>Changed</span><span><i class="legend-node"></i>Unchanged</span><span><i class="legend-line high"></i>High certainty</span><span><i class="legend-line medium"></i>Medium</span><span><i class="legend-line low"></i>Low</span><span class="graph-display-note" id="graph-display-note">Source → dependency</span></div>
+      </div>
+      <aside class="evidence-panel panel" id="node-evidence" data-testid="node-evidence" aria-labelledby="evidence-heading"><div class="panel-heading"><div><p class="eyebrow">INSPECT THE SOURCE</p><h2 id="evidence-heading">Evidence</h2></div><span class="pill neutral" id="evidence-kind">No selection</span></div><div id="evidence-content" class="evidence-content"><div class="empty-state"><span aria-hidden="true">⌁</span><h3>Every connection has a source.</h3><p>Select a graph node, edge, or finding to inspect its location, revision, file hash, and excerpt.</p></div></div></aside>
+    </section>
+    <section class="review-panel panel" aria-labelledby="review-heading">
+      <div class="review-heading"><div><p class="eyebrow">ONE CHANGE · FOUR REVIEW LENSES</p><h2 id="review-heading">Review surface</h2></div><span class="review-scope" id="review-scope">Evidence from the current workspace</span></div>
+      <div class="review-tabs" role="tablist" aria-label="Review lens"><button type="button" id="review-tab-architecture" data-testid="review-tab-architecture" role="tab" aria-selected="true" aria-controls="review-content" class="review-tab active" data-tab="architecture">Architecture <span id="count-architecture">0</span></button><button type="button" id="review-tab-impact" data-testid="review-tab-impact" role="tab" aria-selected="false" aria-controls="review-content" class="review-tab" data-tab="impact" tabindex="-1">Dependency impact <span id="count-impact">0</span></button><button type="button" id="review-tab-quality" data-testid="review-tab-quality" role="tab" aria-selected="false" aria-controls="review-content" class="review-tab" data-tab="quality" tabindex="-1">Code quality <span id="count-quality">0</span></button><button type="button" id="review-tab-requirements" data-testid="review-tab-requirements" role="tab" aria-selected="false" aria-controls="review-content" class="review-tab" data-tab="requirements" tabindex="-1">Requirements <span id="count-requirements">Draft</span></button></div>
+      <div id="review-content" data-testid="review-content" class="review-content" role="tabpanel" aria-labelledby="review-tab-architecture"><div class="empty-state compact"><p>Analyze a workspace to begin the review.</p></div></div>
+    </section>
+    <section class="context-panel" aria-label="Analysis scope and limitations"><details id="analysis-details"><summary><span>Analysis scope & unresolved evidence</span><span id="coverage-summary">Source-only · advisory</span></summary><div id="analysis-context" class="context-grid"><p>Build identity, coverage, and source limitations appear after analysis.</p></div></details></section>
+    <footer><span>Review Analysis <span class="version">0.2</span></span><span>Evidence guides review. Full regression remains necessary.</span><span class="footer-local"><span class="status-dot"></span>No external AI calls</span></footer>
+  </main>
+</body>
+</html>

@@ -1,0 +1,238 @@
+[
+  {
+    "case": "01-http-lexical-static-dynamic",
+    "inputFileCount": 5,
+    "allInputBytesIdentical": true,
+    "baselineRevisionIdentical": true,
+    "candidateRevisionIdentical": true,
+    "inputHashes": {
+      "baseline/backend/Resource.java": "3804feef0d2b303327d83f58c4c2c6d33f75f79ba6aa914d248183fa52cf67c4",
+      "baseline/frontend/http.ts": "aee5c10cb9dd8ad797e5d6c43c9c1766abbe3bcf1b81edfcba01463ff2a92588",
+      "candidate/backend/Resource.java": "9cc83dd7593fb95d69dde305e4e434d34375cb35681b969b0077437544f752b2",
+      "candidate/frontend/http.ts": "aee5c10cb9dd8ad797e5d6c43c9c1766abbe3bcf1b81edfcba01463ff2a92588",
+      "rules.json": "80aa7403a49a528b121a885afdb8eec21b55f5e240c9edb81c19b0be6f5432bc"
+    }
+  },
+  {
+    "case": "02-ts-import-shadow-missing",
+    "inputFileCount": 5,
+    "allInputBytesIdentical": true,
+    "baselineRevisionIdentical": true,
+    "candidateRevisionIdentical": true,
+    "inputHashes": {
+      "baseline/frontend/consumer.ts": "fa2c919715d474b2c8941ea1ce8b9ab1dc8449306f1d7e5460d491df4d9a8518",
+      "baseline/frontend/lib.ts": "6a17fb63c8c90e2ce7a1f7344a73bd815f27fdf6df05982abd610fe84ea3408b",
+      "candidate/frontend/consumer.ts": "fa2c919715d474b2c8941ea1ce8b9ab1dc8449306f1d7e5460d491df4d9a8518",
+      "candidate/frontend/lib.ts": "6745bcd12f9a1c706a5b88bc099841f1fb145a755425ede6614a1c4559e322d9",
+      "rules.json": "80aa7403a49a528b121a885afdb8eec21b55f5e240c9edb81c19b0be6f5432bc"
+    }
+  },
+  {
+    "case": "03-ts-ambiguous-module",
+    "inputFileCount": 7,
+    "allInputBytesIdentical": true,
+    "baselineRevisionIdentical": true,
+    "candidateRevisionIdentical": true,
+    "inputHashes": {
+      "baseline/frontend/consumer.ts": "b2f41335f5344a2d002632eda191eee705bfa333ef91e40267b2a65b406495e2",
+      "baseline/frontend/lib.ts": "6a17fb63c8c90e2ce7a1f7344a73bd815f27fdf6df05982abd610fe84ea3408b",
+      "baseline/frontend/lib.tsx": "6a17fb63c8c90e2ce7a1f7344a73bd815f27fdf6df05982abd610fe84ea3408b",
+      "candidate/frontend/consumer.ts": "b2f41335f5344a2d002632eda191eee705bfa333ef91e40267b2a65b406495e2",
+      "candidate/frontend/lib.ts": "6745bcd12f9a1c706a5b88bc099841f1fb145a755425ede6614a1c4559e322d9",
+      "candidate/frontend/lib.tsx": "6745bcd12f9a1c706a5b88bc099841f1fb145a755425ede6614a1c4559e322d9",
+      "rules.json": "80aa7403a49a528b121a885afdb8eec21b55f5e240c9edb81c19b0be6f5432bc"
+    }
+  },
+  {
+    "case": "04-java-arity-prefix",
+    "inputFileCount": 5,
+    "allInputBytesIdentical": true,
+    "baselineRevisionIdentical": true,
+    "candidateRevisionIdentical": true,
+    "inputHashes": {
+      "baseline/backend/Caller.java": "35a45fdf2632fb861fe1fbed526663d39dc9a6aaf5a2e3c011968459db077004",
+      "baseline/backend/Target.java": "76848536a24201b7975f52d4be3924dff6aab2bf8f2429f3f77eb952dc1bad3d",
+      "candidate/backend/Caller.java": "35a45fdf2632fb861fe1fbed526663d39dc9a6aaf5a2e3c011968459db077004",
+      "candidate/backend/Target.java": "35c271fb4952a2fd568a9e3b9bd5ad0fadface04f643f06c9815de8b4272d689",
+      "rules.json": "80aa7403a49a528b121a885afdb8eec21b55f5e240c9edb81c19b0be6f5432bc"
+    }
+  },
+  {
+    "case": "05-java-overload-receiver-shadow",
+    "inputFileCount": 5,
+    "allInputBytesIdentical": true,
+    "baselineRevisionIdentical": true,
+    "candidateRevisionIdentical": true,
+    "inputHashes": {
+      "baseline/backend/Caller.java": "565ce6efe62e6dbe6f4e43bdf1d1cd1475b0019d67d02593af6c9b5500feb549",
+      "baseline/backend/Service.java": "d3a42475956bd2df2a9590b19d5412ed0a40510315dd00c96b03ec93f77af449",
+      "candidate/backend/Caller.java": "565ce6efe62e6dbe6f4e43bdf1d1cd1475b0019d67d02593af6c9b5500feb549",
+      "candidate/backend/Service.java": "383c8d5afa487ed5becf8b5fa1a8ec2aa451627280815ccd16fd5b3a411e939d",
+      "rules.json": "80aa7403a49a528b121a885afdb8eec21b55f5e240c9edb81c19b0be6f5432bc"
+    }
+  },
+  {
+    "case": "06-java-pattern-shadow",
+    "inputFileCount": 7,
+    "allInputBytesIdentical": true,
+    "baselineRevisionIdentical": true,
+    "candidateRevisionIdentical": true,
+    "inputHashes": {
+      "baseline/backend/Caller.java": "61c9478ae93a9aecee4882d69d9b5b97490a7685461fca8fb33cd12ddd4ec468",
+      "baseline/backend/Other.java": "b3cbea9c2653245343cd6697741ffb14fc6fa624ddde12a233074af901d2136c",
+      "baseline/backend/Service.java": "d3a42475956bd2df2a9590b19d5412ed0a40510315dd00c96b03ec93f77af449",
+      "candidate/backend/Caller.java": "61c9478ae93a9aecee4882d69d9b5b97490a7685461fca8fb33cd12ddd4ec468",
+      "candidate/backend/Other.java": "2ffbf58ce807332b522855f8aedcceb441f7584b0a9769ddf7c27c6c8769cd01",
+      "candidate/backend/Service.java": "383c8d5afa487ed5becf8b5fa1a8ec2aa451627280815ccd16fd5b3a411e939d",
+      "rules.json": "80aa7403a49a528b121a885afdb8eec21b55f5e240c9edb81c19b0be6f5432bc"
+    }
+  },
+  {
+    "case": "07-java-static-constant-routing",
+    "inputFileCount": 5,
+    "allInputBytesIdentical": true,
+    "baselineRevisionIdentical": true,
+    "candidateRevisionIdentical": true,
+    "inputHashes": {
+      "baseline/backend/Constants.java": "9e46360040ceb30e18c96af650042f54d8278619d1ab10d44a7adc8f67e01114",
+      "baseline/frontend/client.ts": "6b665567ac3bb0e85e4b4b9c8def051a7a08c23256653ad494cd0f47283d4edd",
+      "candidate/backend/Constants.java": "f8c8bf0bc504c6e8ed3eb85f65948c2bade530cf4b70f7961e9de39f11e6cb97",
+      "candidate/frontend/client.ts": "6b665567ac3bb0e85e4b4b9c8def051a7a08c23256653ad494cd0f47283d4edd",
+      "rules.json": "80aa7403a49a528b121a885afdb8eec21b55f5e240c9edb81c19b0be6f5432bc"
+    }
+  },
+  {
+    "case": "08-http-template-regex",
+    "inputFileCount": 5,
+    "allInputBytesIdentical": true,
+    "baselineRevisionIdentical": true,
+    "candidateRevisionIdentical": true,
+    "inputHashes": {
+      "baseline/backend/NumericResource.java": "31ab75e86d9b05e9b403aa9265fd380219a178a6f5164e95e345b235fb2f034b",
+      "baseline/frontend/client.ts": "415dc3afda07ab495c6fdcdbac97a2e4ea725f18af71cfcc3dc44e31c37edf56",
+      "candidate/backend/NumericResource.java": "54bfc9935d6753fdf4ea5325d13d8e3d162d81589babdf6f4ec28bd75eb74b27",
+      "candidate/frontend/client.ts": "415dc3afda07ab495c6fdcdbac97a2e4ea725f18af71cfcc3dc44e31c37edf56",
+      "rules.json": "80aa7403a49a528b121a885afdb8eec21b55f5e240c9edb81c19b0be6f5432bc"
+    }
+  },
+  {
+    "case": "09-http-ambiguous-controllers",
+    "inputFileCount": 7,
+    "allInputBytesIdentical": true,
+    "baselineRevisionIdentical": true,
+    "candidateRevisionIdentical": true,
+    "inputHashes": {
+      "baseline/backend/OtherResource.java": "47ada7496999f9f9efb5426f19c1ae039fe27ce570f65673d98938c999242278",
+      "baseline/backend/Resource.java": "3804feef0d2b303327d83f58c4c2c6d33f75f79ba6aa914d248183fa52cf67c4",
+      "baseline/frontend/client.ts": "65f1a375a6d95ab6bfdcaa0e9666c7f739bcfc259229534ee4259f2da9019353",
+      "candidate/backend/OtherResource.java": "47ada7496999f9f9efb5426f19c1ae039fe27ce570f65673d98938c999242278",
+      "candidate/backend/Resource.java": "9cc83dd7593fb95d69dde305e4e434d34375cb35681b969b0077437544f752b2",
+      "candidate/frontend/client.ts": "65f1a375a6d95ab6bfdcaa0e9666c7f739bcfc259229534ee4259f2da9019353",
+      "rules.json": "80aa7403a49a528b121a885afdb8eec21b55f5e240c9edb81c19b0be6f5432bc"
+    }
+  },
+  {
+    "case": "10-source-parse-diagnostics",
+    "inputFileCount": 7,
+    "allInputBytesIdentical": true,
+    "baselineRevisionIdentical": true,
+    "candidateRevisionIdentical": true,
+    "inputHashes": {
+      "baseline/backend/Broken.java": "bfface44019bbb5e9d6c91b9cc06d0dc06b9c07e2552a5b82bbac91de4c6d175",
+      "baseline/frontend/broken.ts": "e5e9210c33039adcdcea2933ef1a7fb945d69b8a18b255c1e2e47fbd9026840b",
+      "baseline/frontend/lib.ts": "6a17fb63c8c90e2ce7a1f7344a73bd815f27fdf6df05982abd610fe84ea3408b",
+      "candidate/backend/Broken.java": "bfface44019bbb5e9d6c91b9cc06d0dc06b9c07e2552a5b82bbac91de4c6d175",
+      "candidate/frontend/broken.ts": "e5e9210c33039adcdcea2933ef1a7fb945d69b8a18b255c1e2e47fbd9026840b",
+      "candidate/frontend/lib.ts": "6745bcd12f9a1c706a5b88bc099841f1fb145a755425ede6614a1c4559e322d9",
+      "rules.json": "80aa7403a49a528b121a885afdb8eec21b55f5e240c9edb81c19b0be6f5432bc"
+    }
+  },
+  {
+    "case": "11-ts-namespace-nested-member",
+    "inputFileCount": 5,
+    "allInputBytesIdentical": true,
+    "baselineRevisionIdentical": true,
+    "candidateRevisionIdentical": true,
+    "inputHashes": {
+      "baseline/frontend/consumer.ts": "ca05ccd120f7628b555c06db8fce7255ee8af7f8fc0b14f0247ee10c1f66d618",
+      "baseline/frontend/lib.ts": "e5baaac6c7f48b2f1aad3f95b012292eb1d3f427930e61bbb1fd657be7dabce5",
+      "candidate/frontend/consumer.ts": "ca05ccd120f7628b555c06db8fce7255ee8af7f8fc0b14f0247ee10c1f66d618",
+      "candidate/frontend/lib.ts": "3869dfc22456e112777919330c43941ec3ea7da0ad84f1f760ce81717ad9c018",
+      "rules.json": "80aa7403a49a528b121a885afdb8eec21b55f5e240c9edb81c19b0be6f5432bc"
+    }
+  },
+  {
+    "case": "12-java-ambiguous-explicit-imports",
+    "inputFileCount": 7,
+    "allInputBytesIdentical": true,
+    "baselineRevisionIdentical": true,
+    "candidateRevisionIdentical": true,
+    "inputHashes": {
+      "baseline/backend/Caller.java": "a1aab558052caeea45ce53962b9306053f365cbd9d7495df9741dc5998e45d9a",
+      "baseline/backend/a/Target.java": "8975900bb8ad28d30e1d27a9da5e6b98b6a6340d8401749369cd611ebeeb173f",
+      "baseline/backend/b/Target.java": "348b07628db2c793993b980125169b03b52ad5356c04f6c54d881dda83e6e603",
+      "candidate/backend/Caller.java": "a1aab558052caeea45ce53962b9306053f365cbd9d7495df9741dc5998e45d9a",
+      "candidate/backend/a/Target.java": "d3cd92707954342015ca2a17c62667b79bbe02c54115f3447a0e887e4ac065fb",
+      "candidate/backend/b/Target.java": "e9b4a26f8373aa1ccf1a9257272ffe2d1159496d9c17e4871b859ef7574c9056",
+      "rules.json": "80aa7403a49a528b121a885afdb8eec21b55f5e240c9edb81c19b0be6f5432bc"
+    }
+  },
+  {
+    "case": "13-ts-namespace-contract-member",
+    "inputFileCount": 5,
+    "allInputBytesIdentical": true,
+    "baselineRevisionIdentical": true,
+    "candidateRevisionIdentical": true,
+    "inputHashes": {
+      "baseline/frontend/consumer.ts": "0ea13582782a29f0efecfd6f084810a4fa4baabf97fc1d99854e10f651fce687",
+      "baseline/frontend/lib.ts": "5d1eb563b8d431a3baae70baf61caa769b8ed1b384c71859ff060d2a36311950",
+      "candidate/frontend/consumer.ts": "0ea13582782a29f0efecfd6f084810a4fa4baabf97fc1d99854e10f651fce687",
+      "candidate/frontend/lib.ts": "ae28fabd402488e451dd36e907c07c5edbef985ea39b7304e2ad681ec13cfba0",
+      "rules.json": "80aa7403a49a528b121a885afdb8eec21b55f5e240c9edb81c19b0be6f5432bc"
+    }
+  },
+  {
+    "case": "14-js-with-lexical-shadow",
+    "inputFileCount": 5,
+    "allInputBytesIdentical": true,
+    "baselineRevisionIdentical": true,
+    "candidateRevisionIdentical": true,
+    "inputHashes": {
+      "baseline/backend/Resource.java": "3804feef0d2b303327d83f58c4c2c6d33f75f79ba6aa914d248183fa52cf67c4",
+      "baseline/frontend/shadow.js": "106156234a0c6d6e3105e8ef6d1fd842d611025f4e211886999daf0ecb91cad7",
+      "candidate/backend/Resource.java": "9e9c44affd6daae1cc4a1e4216829ec607ab4530301be37a8fb6ff54b8428641",
+      "candidate/frontend/shadow.js": "106156234a0c6d6e3105e8ef6d1fd842d611025f4e211886999daf0ecb91cad7",
+      "rules.json": "80aa7403a49a528b121a885afdb8eec21b55f5e240c9edb81c19b0be6f5432bc"
+    }
+  },
+  {
+    "case": "15-java-varargs-overload",
+    "inputFileCount": 5,
+    "allInputBytesIdentical": true,
+    "baselineRevisionIdentical": true,
+    "candidateRevisionIdentical": true,
+    "inputHashes": {
+      "baseline/backend/Caller.java": "65307490230e508a4da64deac8e3fa23bc942b1dce8cdf5f7a26596971ff4789",
+      "baseline/backend/Worker.java": "01571ea63b20b360bb7d1a0366d45bfec9bb57c371d00da3e6633f0207ac9935",
+      "candidate/backend/Caller.java": "65307490230e508a4da64deac8e3fa23bc942b1dce8cdf5f7a26596971ff4789",
+      "candidate/backend/Worker.java": "8c5056ff258b712ace834c690ed3051a39fe4419741a71bace8b0294cb5c0355",
+      "rules.json": "80aa7403a49a528b121a885afdb8eec21b55f5e240c9edb81c19b0be6f5432bc"
+    }
+  },
+  {
+    "case": "16-java-inherited-overload",
+    "inputFileCount": 7,
+    "allInputBytesIdentical": true,
+    "baselineRevisionIdentical": true,
+    "candidateRevisionIdentical": true,
+    "inputHashes": {
+      "baseline/backend/Base.java": "a7a37e9bbad27af27180fe504b0678e2e6e0314b492687ae64ba72f81b9a67fd",
+      "baseline/backend/Caller.java": "656d0a74c600dcd856612fe45a67348037b842f28374978ff203513bd6b93fd1",
+      "baseline/backend/Child.java": "b6819335d438a1ff2eee31838dd068058ef71c9f554fe624db6c50c8ddc2b5f9",
+      "candidate/backend/Base.java": "aa39806866edc40aea58b5112cb70e705a067f9ecda15bc35dbc64f62ca581bc",
+      "candidate/backend/Caller.java": "656d0a74c600dcd856612fe45a67348037b842f28374978ff203513bd6b93fd1",
+      "candidate/backend/Child.java": "55178789faacec884e6f737e7c3e7632a411e6616e25eeb98e17919cb9326217",
+      "rules.json": "80aa7403a49a528b121a885afdb8eec21b55f5e240c9edb81c19b0be6f5432bc"
+    }
+  }
+]

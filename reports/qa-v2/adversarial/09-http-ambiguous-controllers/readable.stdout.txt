@@ -1,0 +1,92 @@
+Review Analysis — advisory source report
+Analyzer 0.1.0; build ca04bac50b7584aaafd9d5602acc8055152e81e25de5fa1b15bb710f76f53ac9
+As of 2026-10-11
+Baseline: tree-sha256:367d52ee51bcfe809bce3b2e981c1f8a64de8fbc0252ec5638e44753f2bbb1c5
+Candidate: tree-sha256:e54ca70c774415da68a10289c6eacd5e5a135225f17f8963ad0eb2dc16b295c5
+
+Task: Duplicate matching endpoints across controllers remain ambiguous with source candidates
+Applicable rules:
+- independent/http-contract vindependent-adversarial-v1; owner synthetic-qa: endpoint-contract-change
+No human approval is inferred. Reviewed examples/exceptions are assertions from supplied configuration; simulation records are demonstrations only.
+
+Changed declarations (2):
+- modified: qa.Resource; body/path changed
+  Before: backend/Resource.java:5-10 @ tree-sha256:367d52ee51bcfe809bce3b2e981c1f8a64de8fbc0252ec5638e44753f2bbb1c5 (sha256 3804feef0d2b303327d83f58c4c2c6d33f75f79ba6aa914d248183fa52cf67c4)
+  After: backend/Resource.java:5-10 @ tree-sha256:e54ca70c774415da68a10289c6eacd5e5a135225f17f8963ad0eb2dc16b295c5 (sha256 9cc83dd7593fb95d69dde305e4e434d34375cb35681b969b0077437544f752b2)
+- modified: qa.Resource#real/0; body/path changed
+  Before: backend/Resource.java:7-7 @ tree-sha256:367d52ee51bcfe809bce3b2e981c1f8a64de8fbc0252ec5638e44753f2bbb1c5 (sha256 3804feef0d2b303327d83f58c4c2c6d33f75f79ba6aa914d248183fa52cf67c4)
+  After: backend/Resource.java:7-7 @ tree-sha256:e54ca70c774415da68a10289c6eacd5e5a135225f17f8963ad0eb2dc16b295c5 (sha256 9cc83dd7593fb95d69dde305e4e434d34375cb35681b969b0077437544f752b2)
+
+Direct dependencies (0):
+
+Likely indirect dependencies (0):
+
+Architecture findings (0):
+
+Unknowns (56):
+- external-or-missing-java-source: org.springframework.web.bind.annotation.GetMapping; backend/OtherResource.java:2-2 @ tree-sha256:367d52ee51bcfe809bce3b2e981c1f8a64de8fbc0252ec5638e44753f2bbb1c5 (sha256 47ada7496999f9f9efb5426f19c1ae039fe27ce570f65673d98938c999242278)
+- external-or-missing-java-source: org.springframework.web.bind.annotation.PostMapping; backend/OtherResource.java:3-3 @ tree-sha256:367d52ee51bcfe809bce3b2e981c1f8a64de8fbc0252ec5638e44753f2bbb1c5 (sha256 47ada7496999f9f9efb5426f19c1ae039fe27ce570f65673d98938c999242278)
+- external-or-missing-java-source: org.springframework.web.bind.annotation.RequestMapping; backend/OtherResource.java:4-4 @ tree-sha256:367d52ee51bcfe809bce3b2e981c1f8a64de8fbc0252ec5638e44753f2bbb1c5 (sha256 47ada7496999f9f9efb5426f19c1ae039fe27ce570f65673d98938c999242278)
+- external-or-missing-java-source: org.springframework.web.bind.annotation.RequestMapping; backend/OtherResource.java:5-5 @ tree-sha256:367d52ee51bcfe809bce3b2e981c1f8a64de8fbc0252ec5638e44753f2bbb1c5 (sha256 47ada7496999f9f9efb5426f19c1ae039fe27ce570f65673d98938c999242278)
+- external-or-missing-java-source: org.springframework.web.bind.annotation.GetMapping; backend/OtherResource.java:7-7 @ tree-sha256:367d52ee51bcfe809bce3b2e981c1f8a64de8fbc0252ec5638e44753f2bbb1c5 (sha256 47ada7496999f9f9efb5426f19c1ae039fe27ce570f65673d98938c999242278)
+- external-or-missing-java-source: String; backend/OtherResource.java:7-7 @ tree-sha256:367d52ee51bcfe809bce3b2e981c1f8a64de8fbc0252ec5638e44753f2bbb1c5 (sha256 47ada7496999f9f9efb5426f19c1ae039fe27ce570f65673d98938c999242278)
+- external-or-missing-java-source: org.springframework.web.bind.annotation.GetMapping; backend/OtherResource.java:8-8 @ tree-sha256:367d52ee51bcfe809bce3b2e981c1f8a64de8fbc0252ec5638e44753f2bbb1c5 (sha256 47ada7496999f9f9efb5426f19c1ae039fe27ce570f65673d98938c999242278)
+- external-or-missing-java-source: String; backend/OtherResource.java:8-8 @ tree-sha256:367d52ee51bcfe809bce3b2e981c1f8a64de8fbc0252ec5638e44753f2bbb1c5 (sha256 47ada7496999f9f9efb5426f19c1ae039fe27ce570f65673d98938c999242278)
+- external-or-missing-java-source: org.springframework.web.bind.annotation.PostMapping; backend/OtherResource.java:9-9 @ tree-sha256:367d52ee51bcfe809bce3b2e981c1f8a64de8fbc0252ec5638e44753f2bbb1c5 (sha256 47ada7496999f9f9efb5426f19c1ae039fe27ce570f65673d98938c999242278)
+- external-or-missing-java-source: String; backend/OtherResource.java:9-9 @ tree-sha256:367d52ee51bcfe809bce3b2e981c1f8a64de8fbc0252ec5638e44753f2bbb1c5 (sha256 47ada7496999f9f9efb5426f19c1ae039fe27ce570f65673d98938c999242278)
+- ambiguous-endpoint: ; backend/OtherResource.java:7-7 @ tree-sha256:367d52ee51bcfe809bce3b2e981c1f8a64de8fbc0252ec5638e44753f2bbb1c5 (sha256 47ada7496999f9f9efb5426f19c1ae039fe27ce570f65673d98938c999242278)
+- ambiguous-endpoint: ; backend/OtherResource.java:8-8 @ tree-sha256:367d52ee51bcfe809bce3b2e981c1f8a64de8fbc0252ec5638e44753f2bbb1c5 (sha256 47ada7496999f9f9efb5426f19c1ae039fe27ce570f65673d98938c999242278)
+- ambiguous-endpoint: ; backend/OtherResource.java:9-9 @ tree-sha256:367d52ee51bcfe809bce3b2e981c1f8a64de8fbc0252ec5638e44753f2bbb1c5 (sha256 47ada7496999f9f9efb5426f19c1ae039fe27ce570f65673d98938c999242278)
+- external-or-missing-java-source: org.springframework.web.bind.annotation.GetMapping; backend/Resource.java:2-2 @ tree-sha256:367d52ee51bcfe809bce3b2e981c1f8a64de8fbc0252ec5638e44753f2bbb1c5 (sha256 3804feef0d2b303327d83f58c4c2c6d33f75f79ba6aa914d248183fa52cf67c4)
+- external-or-missing-java-source: org.springframework.web.bind.annotation.PostMapping; backend/Resource.java:3-3 @ tree-sha256:367d52ee51bcfe809bce3b2e981c1f8a64de8fbc0252ec5638e44753f2bbb1c5 (sha256 3804feef0d2b303327d83f58c4c2c6d33f75f79ba6aa914d248183fa52cf67c4)
+- external-or-missing-java-source: org.springframework.web.bind.annotation.RequestMapping; backend/Resource.java:4-4 @ tree-sha256:367d52ee51bcfe809bce3b2e981c1f8a64de8fbc0252ec5638e44753f2bbb1c5 (sha256 3804feef0d2b303327d83f58c4c2c6d33f75f79ba6aa914d248183fa52cf67c4)
+- external-or-missing-java-source: org.springframework.web.bind.annotation.RequestMapping; backend/Resource.java:5-5 @ tree-sha256:367d52ee51bcfe809bce3b2e981c1f8a64de8fbc0252ec5638e44753f2bbb1c5 (sha256 3804feef0d2b303327d83f58c4c2c6d33f75f79ba6aa914d248183fa52cf67c4)
+- external-or-missing-java-source: org.springframework.web.bind.annotation.GetMapping; backend/Resource.java:7-7 @ tree-sha256:367d52ee51bcfe809bce3b2e981c1f8a64de8fbc0252ec5638e44753f2bbb1c5 (sha256 3804feef0d2b303327d83f58c4c2c6d33f75f79ba6aa914d248183fa52cf67c4)
+- external-or-missing-java-source: String; backend/Resource.java:7-7 @ tree-sha256:367d52ee51bcfe809bce3b2e981c1f8a64de8fbc0252ec5638e44753f2bbb1c5 (sha256 3804feef0d2b303327d83f58c4c2c6d33f75f79ba6aa914d248183fa52cf67c4)
+- external-or-missing-java-source: org.springframework.web.bind.annotation.GetMapping; backend/Resource.java:8-8 @ tree-sha256:367d52ee51bcfe809bce3b2e981c1f8a64de8fbc0252ec5638e44753f2bbb1c5 (sha256 3804feef0d2b303327d83f58c4c2c6d33f75f79ba6aa914d248183fa52cf67c4)
+- external-or-missing-java-source: String; backend/Resource.java:8-8 @ tree-sha256:367d52ee51bcfe809bce3b2e981c1f8a64de8fbc0252ec5638e44753f2bbb1c5 (sha256 3804feef0d2b303327d83f58c4c2c6d33f75f79ba6aa914d248183fa52cf67c4)
+- external-or-missing-java-source: org.springframework.web.bind.annotation.PostMapping; backend/Resource.java:9-9 @ tree-sha256:367d52ee51bcfe809bce3b2e981c1f8a64de8fbc0252ec5638e44753f2bbb1c5 (sha256 3804feef0d2b303327d83f58c4c2c6d33f75f79ba6aa914d248183fa52cf67c4)
+- external-or-missing-java-source: String; backend/Resource.java:9-9 @ tree-sha256:367d52ee51bcfe809bce3b2e981c1f8a64de8fbc0252ec5638e44753f2bbb1c5 (sha256 3804feef0d2b303327d83f58c4c2c6d33f75f79ba6aa914d248183fa52cf67c4)
+- ambiguous-endpoint: ; backend/Resource.java:7-7 @ tree-sha256:367d52ee51bcfe809bce3b2e981c1f8a64de8fbc0252ec5638e44753f2bbb1c5 (sha256 3804feef0d2b303327d83f58c4c2c6d33f75f79ba6aa914d248183fa52cf67c4)
+- ambiguous-endpoint: ; backend/Resource.java:8-8 @ tree-sha256:367d52ee51bcfe809bce3b2e981c1f8a64de8fbc0252ec5638e44753f2bbb1c5 (sha256 3804feef0d2b303327d83f58c4c2c6d33f75f79ba6aa914d248183fa52cf67c4)
+- ambiguous-endpoint: ; backend/Resource.java:9-9 @ tree-sha256:367d52ee51bcfe809bce3b2e981c1f8a64de8fbc0252ec5638e44753f2bbb1c5 (sha256 3804feef0d2b303327d83f58c4c2c6d33f75f79ba6aa914d248183fa52cf67c4)
+- unresolved-call: fetch; frontend/client.ts:1-1 @ tree-sha256:367d52ee51bcfe809bce3b2e981c1f8a64de8fbc0252ec5638e44753f2bbb1c5 (sha256 65f1a375a6d95ab6bfdcaa0e9666c7f739bcfc259229534ee4259f2da9019353)
+- ambiguous-endpoint: ; frontend/client.ts:1-1 @ tree-sha256:367d52ee51bcfe809bce3b2e981c1f8a64de8fbc0252ec5638e44753f2bbb1c5 (sha256 65f1a375a6d95ab6bfdcaa0e9666c7f739bcfc259229534ee4259f2da9019353)
+- external-or-missing-java-source: org.springframework.web.bind.annotation.GetMapping; backend/OtherResource.java:2-2 @ tree-sha256:e54ca70c774415da68a10289c6eacd5e5a135225f17f8963ad0eb2dc16b295c5 (sha256 47ada7496999f9f9efb5426f19c1ae039fe27ce570f65673d98938c999242278)
+- external-or-missing-java-source: org.springframework.web.bind.annotation.PostMapping; backend/OtherResource.java:3-3 @ tree-sha256:e54ca70c774415da68a10289c6eacd5e5a135225f17f8963ad0eb2dc16b295c5 (sha256 47ada7496999f9f9efb5426f19c1ae039fe27ce570f65673d98938c999242278)
+- external-or-missing-java-source: org.springframework.web.bind.annotation.RequestMapping; backend/OtherResource.java:4-4 @ tree-sha256:e54ca70c774415da68a10289c6eacd5e5a135225f17f8963ad0eb2dc16b295c5 (sha256 47ada7496999f9f9efb5426f19c1ae039fe27ce570f65673d98938c999242278)
+- external-or-missing-java-source: org.springframework.web.bind.annotation.RequestMapping; backend/OtherResource.java:5-5 @ tree-sha256:e54ca70c774415da68a10289c6eacd5e5a135225f17f8963ad0eb2dc16b295c5 (sha256 47ada7496999f9f9efb5426f19c1ae039fe27ce570f65673d98938c999242278)
+- external-or-missing-java-source: org.springframework.web.bind.annotation.GetMapping; backend/OtherResource.java:7-7 @ tree-sha256:e54ca70c774415da68a10289c6eacd5e5a135225f17f8963ad0eb2dc16b295c5 (sha256 47ada7496999f9f9efb5426f19c1ae039fe27ce570f65673d98938c999242278)
+- external-or-missing-java-source: String; backend/OtherResource.java:7-7 @ tree-sha256:e54ca70c774415da68a10289c6eacd5e5a135225f17f8963ad0eb2dc16b295c5 (sha256 47ada7496999f9f9efb5426f19c1ae039fe27ce570f65673d98938c999242278)
+- external-or-missing-java-source: org.springframework.web.bind.annotation.GetMapping; backend/OtherResource.java:8-8 @ tree-sha256:e54ca70c774415da68a10289c6eacd5e5a135225f17f8963ad0eb2dc16b295c5 (sha256 47ada7496999f9f9efb5426f19c1ae039fe27ce570f65673d98938c999242278)
+- external-or-missing-java-source: String; backend/OtherResource.java:8-8 @ tree-sha256:e54ca70c774415da68a10289c6eacd5e5a135225f17f8963ad0eb2dc16b295c5 (sha256 47ada7496999f9f9efb5426f19c1ae039fe27ce570f65673d98938c999242278)
+- external-or-missing-java-source: org.springframework.web.bind.annotation.PostMapping; backend/OtherResource.java:9-9 @ tree-sha256:e54ca70c774415da68a10289c6eacd5e5a135225f17f8963ad0eb2dc16b295c5 (sha256 47ada7496999f9f9efb5426f19c1ae039fe27ce570f65673d98938c999242278)
+- external-or-missing-java-source: String; backend/OtherResource.java:9-9 @ tree-sha256:e54ca70c774415da68a10289c6eacd5e5a135225f17f8963ad0eb2dc16b295c5 (sha256 47ada7496999f9f9efb5426f19c1ae039fe27ce570f65673d98938c999242278)
+- ambiguous-endpoint: ; backend/OtherResource.java:7-7 @ tree-sha256:e54ca70c774415da68a10289c6eacd5e5a135225f17f8963ad0eb2dc16b295c5 (sha256 47ada7496999f9f9efb5426f19c1ae039fe27ce570f65673d98938c999242278)
+- ambiguous-endpoint: ; backend/OtherResource.java:8-8 @ tree-sha256:e54ca70c774415da68a10289c6eacd5e5a135225f17f8963ad0eb2dc16b295c5 (sha256 47ada7496999f9f9efb5426f19c1ae039fe27ce570f65673d98938c999242278)
+- ambiguous-endpoint: ; backend/OtherResource.java:9-9 @ tree-sha256:e54ca70c774415da68a10289c6eacd5e5a135225f17f8963ad0eb2dc16b295c5 (sha256 47ada7496999f9f9efb5426f19c1ae039fe27ce570f65673d98938c999242278)
+- external-or-missing-java-source: org.springframework.web.bind.annotation.GetMapping; backend/Resource.java:2-2 @ tree-sha256:e54ca70c774415da68a10289c6eacd5e5a135225f17f8963ad0eb2dc16b295c5 (sha256 9cc83dd7593fb95d69dde305e4e434d34375cb35681b969b0077437544f752b2)
+- external-or-missing-java-source: org.springframework.web.bind.annotation.PostMapping; backend/Resource.java:3-3 @ tree-sha256:e54ca70c774415da68a10289c6eacd5e5a135225f17f8963ad0eb2dc16b295c5 (sha256 9cc83dd7593fb95d69dde305e4e434d34375cb35681b969b0077437544f752b2)
+- external-or-missing-java-source: org.springframework.web.bind.annotation.RequestMapping; backend/Resource.java:4-4 @ tree-sha256:e54ca70c774415da68a10289c6eacd5e5a135225f17f8963ad0eb2dc16b295c5 (sha256 9cc83dd7593fb95d69dde305e4e434d34375cb35681b969b0077437544f752b2)
+- external-or-missing-java-source: org.springframework.web.bind.annotation.RequestMapping; backend/Resource.java:5-5 @ tree-sha256:e54ca70c774415da68a10289c6eacd5e5a135225f17f8963ad0eb2dc16b295c5 (sha256 9cc83dd7593fb95d69dde305e4e434d34375cb35681b969b0077437544f752b2)
+- external-or-missing-java-source: org.springframework.web.bind.annotation.GetMapping; backend/Resource.java:7-7 @ tree-sha256:e54ca70c774415da68a10289c6eacd5e5a135225f17f8963ad0eb2dc16b295c5 (sha256 9cc83dd7593fb95d69dde305e4e434d34375cb35681b969b0077437544f752b2)
+- external-or-missing-java-source: String; backend/Resource.java:7-7 @ tree-sha256:e54ca70c774415da68a10289c6eacd5e5a135225f17f8963ad0eb2dc16b295c5 (sha256 9cc83dd7593fb95d69dde305e4e434d34375cb35681b969b0077437544f752b2)
+- external-or-missing-java-source: org.springframework.web.bind.annotation.GetMapping; backend/Resource.java:8-8 @ tree-sha256:e54ca70c774415da68a10289c6eacd5e5a135225f17f8963ad0eb2dc16b295c5 (sha256 9cc83dd7593fb95d69dde305e4e434d34375cb35681b969b0077437544f752b2)
+- external-or-missing-java-source: String; backend/Resource.java:8-8 @ tree-sha256:e54ca70c774415da68a10289c6eacd5e5a135225f17f8963ad0eb2dc16b295c5 (sha256 9cc83dd7593fb95d69dde305e4e434d34375cb35681b969b0077437544f752b2)
+- external-or-missing-java-source: org.springframework.web.bind.annotation.PostMapping; backend/Resource.java:9-9 @ tree-sha256:e54ca70c774415da68a10289c6eacd5e5a135225f17f8963ad0eb2dc16b295c5 (sha256 9cc83dd7593fb95d69dde305e4e434d34375cb35681b969b0077437544f752b2)
+- external-or-missing-java-source: String; backend/Resource.java:9-9 @ tree-sha256:e54ca70c774415da68a10289c6eacd5e5a135225f17f8963ad0eb2dc16b295c5 (sha256 9cc83dd7593fb95d69dde305e4e434d34375cb35681b969b0077437544f752b2)
+- ambiguous-endpoint: ; backend/Resource.java:7-7 @ tree-sha256:e54ca70c774415da68a10289c6eacd5e5a135225f17f8963ad0eb2dc16b295c5 (sha256 9cc83dd7593fb95d69dde305e4e434d34375cb35681b969b0077437544f752b2)
+- ambiguous-endpoint: ; backend/Resource.java:8-8 @ tree-sha256:e54ca70c774415da68a10289c6eacd5e5a135225f17f8963ad0eb2dc16b295c5 (sha256 9cc83dd7593fb95d69dde305e4e434d34375cb35681b969b0077437544f752b2)
+- ambiguous-endpoint: ; backend/Resource.java:9-9 @ tree-sha256:e54ca70c774415da68a10289c6eacd5e5a135225f17f8963ad0eb2dc16b295c5 (sha256 9cc83dd7593fb95d69dde305e4e434d34375cb35681b969b0077437544f752b2)
+- unresolved-call: fetch; frontend/client.ts:1-1 @ tree-sha256:e54ca70c774415da68a10289c6eacd5e5a135225f17f8963ad0eb2dc16b295c5 (sha256 65f1a375a6d95ab6bfdcaa0e9666c7f739bcfc259229534ee4259f2da9019353)
+- ambiguous-endpoint: ; frontend/client.ts:1-1 @ tree-sha256:e54ca70c774415da68a10289c6eacd5e5a135225f17f8963ad0eb2dc16b295c5 (sha256 65f1a375a6d95ab6bfdcaa0e9666c7f739bcfc259229534ee4259f2da9019353)
+
+Focused tests (0; recommendations, not executed by analyzer):
+
+Coverage incomplete. This report never authorizes skipping full regression.
+- Source-only analysis; no Java/TypeScript semantic compilation, runtime dispatch, reflection, DI wiring, proxy/origin verification or transitive external package sources
+- Edges are evidence-backed approximations; indirect file dependencies do not prove execution
+- Renames inferred only for identical declaration key/signature/body; edited renames remain delete/add
+- Unknown syntax and unresolved/dynamic dependencies remain visible; passing fixture tests is not private-repository acceptance
+Cache: {"report":"disabled","parsedFiles":6,"reusedFiles":0,"invalidEntries":0}
+Analysis metrics: {"elapsedMs":50.52,"bytesRead":1646,"reportCacheHit":false}

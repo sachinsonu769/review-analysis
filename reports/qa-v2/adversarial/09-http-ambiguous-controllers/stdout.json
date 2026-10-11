@@ -1,0 +1,1079 @@
+{
+  "schemaVersion": "1.0",
+  "analyzer": {
+    "version": "0.1.0",
+    "sourceBuildHash": "ca04bac50b7584aaafd9d5602acc8055152e81e25de5fa1b15bb710f76f53ac9",
+    "parsers": {
+      "java": "java-parser@3.0.1",
+      "typescript": "typescript@5.9.3"
+    }
+  },
+  "advisory": true,
+  "asOf": "2026-10-11",
+  "provenance": {
+    "baseline": {
+      "root": "/tmp/review-analysis-adversarial-v2-NZrPxG/09-http-ambiguous-controllers/baseline",
+      "type": "directory",
+      "revision": "tree-sha256:367d52ee51bcfe809bce3b2e981c1f8a64de8fbc0252ec5638e44753f2bbb1c5",
+      "contentHash": "367d52ee51bcfe809bce3b2e981c1f8a64de8fbc0252ec5638e44753f2bbb1c5",
+      "dirty": false
+    },
+    "candidate": {
+      "root": "/tmp/review-analysis-adversarial-v2-NZrPxG/09-http-ambiguous-controllers/candidate",
+      "type": "directory",
+      "revision": "tree-sha256:e54ca70c774415da68a10289c6eacd5e5a135225f17f8963ad0eb2dc16b295c5",
+      "contentHash": "e54ca70c774415da68a10289c6eacd5e5a135225f17f8963ad0eb2dc16b295c5",
+      "dirty": false
+    },
+    "rulesHash": "90f33c2c080aa463115b0ef7e4058bb9bf0da4944dff79ed58eae2f01f9cd3f1",
+    "baselineRulesHash": "90f33c2c080aa463115b0ef7e4058bb9bf0da4944dff79ed58eae2f01f9cd3f1",
+    "cacheKey": "458e268378ca5b3eea34c1bf11696113075c530123b8637f8f432067ccb63d89"
+  },
+  "changes": [
+    {
+      "kind": "modified",
+      "name": "Resource",
+      "key": "qa.Resource",
+      "language": "java",
+      "contractChanged": false,
+      "before": {
+        "path": "backend/Resource.java",
+        "range": {
+          "startLine": 5,
+          "endLine": 10
+        },
+        "revision": "tree-sha256:367d52ee51bcfe809bce3b2e981c1f8a64de8fbc0252ec5638e44753f2bbb1c5",
+        "fileHash": "3804feef0d2b303327d83f58c4c2c6d33f75f79ba6aa914d248183fa52cf67c4",
+        "excerpt": "@RequestMapping(\"/audit\")\nclass Resource {\n @GetMapping(\"/real\") String real() { return \"v1\"; }\n @GetMapping(\"/fake\") String fake() { return \"v1\"; }\n @PostMapping(\"/real\") String post() { return \"v1\"; }\n}"
+      },
+      "after": {
+        "path": "backend/Resource.java",
+        "range": {
+          "startLine": 5,
+          "endLine": 10
+        },
+        "revision": "tree-sha256:e54ca70c774415da68a10289c6eacd5e5a135225f17f8963ad0eb2dc16b295c5",
+        "fileHash": "9cc83dd7593fb95d69dde305e4e434d34375cb35681b969b0077437544f752b2",
+        "excerpt": "@RequestMapping(\"/audit\")\nclass Resource {\n @GetMapping(\"/real\") String real() { return \"v2\"; }\n @GetMapping(\"/fake\") String fake() { return \"v1\"; }\n @PostMapping(\"/real\") String post() { return \"v1\"; }\n}"
+      }
+    },
+    {
+      "kind": "modified",
+      "name": "real",
+      "key": "qa.Resource#real/0",
+      "language": "java",
+      "contractChanged": false,
+      "before": {
+        "path": "backend/Resource.java",
+        "range": {
+          "startLine": 7,
+          "endLine": 7
+        },
+        "revision": "tree-sha256:367d52ee51bcfe809bce3b2e981c1f8a64de8fbc0252ec5638e44753f2bbb1c5",
+        "fileHash": "3804feef0d2b303327d83f58c4c2c6d33f75f79ba6aa914d248183fa52cf67c4",
+        "excerpt": " @GetMapping(\"/real\") String real() { return \"v1\"; }"
+      },
+      "after": {
+        "path": "backend/Resource.java",
+        "range": {
+          "startLine": 7,
+          "endLine": 7
+        },
+        "revision": "tree-sha256:e54ca70c774415da68a10289c6eacd5e5a135225f17f8963ad0eb2dc16b295c5",
+        "fileHash": "9cc83dd7593fb95d69dde305e4e434d34375cb35681b969b0077437544f752b2",
+        "excerpt": " @GetMapping(\"/real\") String real() { return \"v2\"; }"
+      }
+    }
+  ],
+  "impact": {
+    "direct": [],
+    "indirect": []
+  },
+  "findings": [],
+  "guidance": {
+    "task": "Duplicate matching endpoints across controllers remain ambiguous with source candidates",
+    "ruleSetVersion": "independent-adversarial-v1",
+    "approvalGap": "No human approval is inferred. Reviewed examples/exceptions are assertions from supplied configuration; simulation records are demonstrations only.",
+    "rules": [
+      {
+        "id": "independent/http-contract",
+        "kind": "endpoint-contract-change",
+        "owner": "synthetic-qa",
+        "version": "independent-adversarial-v1",
+        "severity": "warning",
+        "instruction": "endpoint-contract-change",
+        "examples": []
+      }
+    ]
+  },
+  "unknowns": [
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "org.springframework.web.bind.annotation.GetMapping",
+      "evidence": {
+        "path": "backend/OtherResource.java",
+        "range": {
+          "startLine": 2,
+          "endLine": 2
+        },
+        "revision": "tree-sha256:367d52ee51bcfe809bce3b2e981c1f8a64de8fbc0252ec5638e44753f2bbb1c5",
+        "fileHash": "47ada7496999f9f9efb5426f19c1ae039fe27ce570f65673d98938c999242278",
+        "excerpt": "import org.springframework.web.bind.annotation.GetMapping;"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "org.springframework.web.bind.annotation.PostMapping",
+      "evidence": {
+        "path": "backend/OtherResource.java",
+        "range": {
+          "startLine": 3,
+          "endLine": 3
+        },
+        "revision": "tree-sha256:367d52ee51bcfe809bce3b2e981c1f8a64de8fbc0252ec5638e44753f2bbb1c5",
+        "fileHash": "47ada7496999f9f9efb5426f19c1ae039fe27ce570f65673d98938c999242278",
+        "excerpt": "import org.springframework.web.bind.annotation.PostMapping;"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "org.springframework.web.bind.annotation.RequestMapping",
+      "evidence": {
+        "path": "backend/OtherResource.java",
+        "range": {
+          "startLine": 4,
+          "endLine": 4
+        },
+        "revision": "tree-sha256:367d52ee51bcfe809bce3b2e981c1f8a64de8fbc0252ec5638e44753f2bbb1c5",
+        "fileHash": "47ada7496999f9f9efb5426f19c1ae039fe27ce570f65673d98938c999242278",
+        "excerpt": "import org.springframework.web.bind.annotation.RequestMapping;"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "org.springframework.web.bind.annotation.RequestMapping",
+      "evidence": {
+        "path": "backend/OtherResource.java",
+        "range": {
+          "startLine": 5,
+          "endLine": 5
+        },
+        "revision": "tree-sha256:367d52ee51bcfe809bce3b2e981c1f8a64de8fbc0252ec5638e44753f2bbb1c5",
+        "fileHash": "47ada7496999f9f9efb5426f19c1ae039fe27ce570f65673d98938c999242278",
+        "excerpt": "@RequestMapping(\"/audit\")"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "org.springframework.web.bind.annotation.GetMapping",
+      "evidence": {
+        "path": "backend/OtherResource.java",
+        "range": {
+          "startLine": 7,
+          "endLine": 7
+        },
+        "revision": "tree-sha256:367d52ee51bcfe809bce3b2e981c1f8a64de8fbc0252ec5638e44753f2bbb1c5",
+        "fileHash": "47ada7496999f9f9efb5426f19c1ae039fe27ce570f65673d98938c999242278",
+        "excerpt": " @GetMapping(\"/real\") String real() { return \"v1\"; }"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "String",
+      "evidence": {
+        "path": "backend/OtherResource.java",
+        "range": {
+          "startLine": 7,
+          "endLine": 7
+        },
+        "revision": "tree-sha256:367d52ee51bcfe809bce3b2e981c1f8a64de8fbc0252ec5638e44753f2bbb1c5",
+        "fileHash": "47ada7496999f9f9efb5426f19c1ae039fe27ce570f65673d98938c999242278",
+        "excerpt": " @GetMapping(\"/real\") String real() { return \"v1\"; }"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "org.springframework.web.bind.annotation.GetMapping",
+      "evidence": {
+        "path": "backend/OtherResource.java",
+        "range": {
+          "startLine": 8,
+          "endLine": 8
+        },
+        "revision": "tree-sha256:367d52ee51bcfe809bce3b2e981c1f8a64de8fbc0252ec5638e44753f2bbb1c5",
+        "fileHash": "47ada7496999f9f9efb5426f19c1ae039fe27ce570f65673d98938c999242278",
+        "excerpt": " @GetMapping(\"/fake\") String fake() { return \"v1\"; }"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "String",
+      "evidence": {
+        "path": "backend/OtherResource.java",
+        "range": {
+          "startLine": 8,
+          "endLine": 8
+        },
+        "revision": "tree-sha256:367d52ee51bcfe809bce3b2e981c1f8a64de8fbc0252ec5638e44753f2bbb1c5",
+        "fileHash": "47ada7496999f9f9efb5426f19c1ae039fe27ce570f65673d98938c999242278",
+        "excerpt": " @GetMapping(\"/fake\") String fake() { return \"v1\"; }"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "org.springframework.web.bind.annotation.PostMapping",
+      "evidence": {
+        "path": "backend/OtherResource.java",
+        "range": {
+          "startLine": 9,
+          "endLine": 9
+        },
+        "revision": "tree-sha256:367d52ee51bcfe809bce3b2e981c1f8a64de8fbc0252ec5638e44753f2bbb1c5",
+        "fileHash": "47ada7496999f9f9efb5426f19c1ae039fe27ce570f65673d98938c999242278",
+        "excerpt": " @PostMapping(\"/real\") String post() { return \"v1\"; }"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "String",
+      "evidence": {
+        "path": "backend/OtherResource.java",
+        "range": {
+          "startLine": 9,
+          "endLine": 9
+        },
+        "revision": "tree-sha256:367d52ee51bcfe809bce3b2e981c1f8a64de8fbc0252ec5638e44753f2bbb1c5",
+        "fileHash": "47ada7496999f9f9efb5426f19c1ae039fe27ce570f65673d98938c999242278",
+        "excerpt": " @PostMapping(\"/real\") String post() { return \"v1\"; }"
+      }
+    },
+    {
+      "reason": "ambiguous-endpoint",
+      "evidence": {
+        "path": "backend/OtherResource.java",
+        "range": {
+          "startLine": 7,
+          "endLine": 7
+        },
+        "revision": "tree-sha256:367d52ee51bcfe809bce3b2e981c1f8a64de8fbc0252ec5638e44753f2bbb1c5",
+        "fileHash": "47ada7496999f9f9efb5426f19c1ae039fe27ce570f65673d98938c999242278",
+        "excerpt": " @GetMapping(\"/real\") String real() { return \"v1\"; }"
+      },
+      "candidates": [
+        {
+          "path": "backend/OtherResource.java",
+          "url": "/audit/real",
+          "method": "GET"
+        },
+        {
+          "path": "backend/Resource.java",
+          "url": "/audit/real",
+          "method": "GET"
+        }
+      ]
+    },
+    {
+      "reason": "ambiguous-endpoint",
+      "evidence": {
+        "path": "backend/OtherResource.java",
+        "range": {
+          "startLine": 8,
+          "endLine": 8
+        },
+        "revision": "tree-sha256:367d52ee51bcfe809bce3b2e981c1f8a64de8fbc0252ec5638e44753f2bbb1c5",
+        "fileHash": "47ada7496999f9f9efb5426f19c1ae039fe27ce570f65673d98938c999242278",
+        "excerpt": " @GetMapping(\"/fake\") String fake() { return \"v1\"; }"
+      },
+      "candidates": [
+        {
+          "path": "backend/OtherResource.java",
+          "url": "/audit/fake",
+          "method": "GET"
+        },
+        {
+          "path": "backend/Resource.java",
+          "url": "/audit/fake",
+          "method": "GET"
+        }
+      ]
+    },
+    {
+      "reason": "ambiguous-endpoint",
+      "evidence": {
+        "path": "backend/OtherResource.java",
+        "range": {
+          "startLine": 9,
+          "endLine": 9
+        },
+        "revision": "tree-sha256:367d52ee51bcfe809bce3b2e981c1f8a64de8fbc0252ec5638e44753f2bbb1c5",
+        "fileHash": "47ada7496999f9f9efb5426f19c1ae039fe27ce570f65673d98938c999242278",
+        "excerpt": " @PostMapping(\"/real\") String post() { return \"v1\"; }"
+      },
+      "candidates": [
+        {
+          "path": "backend/OtherResource.java",
+          "url": "/audit/real",
+          "method": "POST"
+        },
+        {
+          "path": "backend/Resource.java",
+          "url": "/audit/real",
+          "method": "POST"
+        }
+      ]
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "org.springframework.web.bind.annotation.GetMapping",
+      "evidence": {
+        "path": "backend/Resource.java",
+        "range": {
+          "startLine": 2,
+          "endLine": 2
+        },
+        "revision": "tree-sha256:367d52ee51bcfe809bce3b2e981c1f8a64de8fbc0252ec5638e44753f2bbb1c5",
+        "fileHash": "3804feef0d2b303327d83f58c4c2c6d33f75f79ba6aa914d248183fa52cf67c4",
+        "excerpt": "import org.springframework.web.bind.annotation.GetMapping;"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "org.springframework.web.bind.annotation.PostMapping",
+      "evidence": {
+        "path": "backend/Resource.java",
+        "range": {
+          "startLine": 3,
+          "endLine": 3
+        },
+        "revision": "tree-sha256:367d52ee51bcfe809bce3b2e981c1f8a64de8fbc0252ec5638e44753f2bbb1c5",
+        "fileHash": "3804feef0d2b303327d83f58c4c2c6d33f75f79ba6aa914d248183fa52cf67c4",
+        "excerpt": "import org.springframework.web.bind.annotation.PostMapping;"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "org.springframework.web.bind.annotation.RequestMapping",
+      "evidence": {
+        "path": "backend/Resource.java",
+        "range": {
+          "startLine": 4,
+          "endLine": 4
+        },
+        "revision": "tree-sha256:367d52ee51bcfe809bce3b2e981c1f8a64de8fbc0252ec5638e44753f2bbb1c5",
+        "fileHash": "3804feef0d2b303327d83f58c4c2c6d33f75f79ba6aa914d248183fa52cf67c4",
+        "excerpt": "import org.springframework.web.bind.annotation.RequestMapping;"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "org.springframework.web.bind.annotation.RequestMapping",
+      "evidence": {
+        "path": "backend/Resource.java",
+        "range": {
+          "startLine": 5,
+          "endLine": 5
+        },
+        "revision": "tree-sha256:367d52ee51bcfe809bce3b2e981c1f8a64de8fbc0252ec5638e44753f2bbb1c5",
+        "fileHash": "3804feef0d2b303327d83f58c4c2c6d33f75f79ba6aa914d248183fa52cf67c4",
+        "excerpt": "@RequestMapping(\"/audit\")"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "org.springframework.web.bind.annotation.GetMapping",
+      "evidence": {
+        "path": "backend/Resource.java",
+        "range": {
+          "startLine": 7,
+          "endLine": 7
+        },
+        "revision": "tree-sha256:367d52ee51bcfe809bce3b2e981c1f8a64de8fbc0252ec5638e44753f2bbb1c5",
+        "fileHash": "3804feef0d2b303327d83f58c4c2c6d33f75f79ba6aa914d248183fa52cf67c4",
+        "excerpt": " @GetMapping(\"/real\") String real() { return \"v1\"; }"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "String",
+      "evidence": {
+        "path": "backend/Resource.java",
+        "range": {
+          "startLine": 7,
+          "endLine": 7
+        },
+        "revision": "tree-sha256:367d52ee51bcfe809bce3b2e981c1f8a64de8fbc0252ec5638e44753f2bbb1c5",
+        "fileHash": "3804feef0d2b303327d83f58c4c2c6d33f75f79ba6aa914d248183fa52cf67c4",
+        "excerpt": " @GetMapping(\"/real\") String real() { return \"v1\"; }"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "org.springframework.web.bind.annotation.GetMapping",
+      "evidence": {
+        "path": "backend/Resource.java",
+        "range": {
+          "startLine": 8,
+          "endLine": 8
+        },
+        "revision": "tree-sha256:367d52ee51bcfe809bce3b2e981c1f8a64de8fbc0252ec5638e44753f2bbb1c5",
+        "fileHash": "3804feef0d2b303327d83f58c4c2c6d33f75f79ba6aa914d248183fa52cf67c4",
+        "excerpt": " @GetMapping(\"/fake\") String fake() { return \"v1\"; }"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "String",
+      "evidence": {
+        "path": "backend/Resource.java",
+        "range": {
+          "startLine": 8,
+          "endLine": 8
+        },
+        "revision": "tree-sha256:367d52ee51bcfe809bce3b2e981c1f8a64de8fbc0252ec5638e44753f2bbb1c5",
+        "fileHash": "3804feef0d2b303327d83f58c4c2c6d33f75f79ba6aa914d248183fa52cf67c4",
+        "excerpt": " @GetMapping(\"/fake\") String fake() { return \"v1\"; }"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "org.springframework.web.bind.annotation.PostMapping",
+      "evidence": {
+        "path": "backend/Resource.java",
+        "range": {
+          "startLine": 9,
+          "endLine": 9
+        },
+        "revision": "tree-sha256:367d52ee51bcfe809bce3b2e981c1f8a64de8fbc0252ec5638e44753f2bbb1c5",
+        "fileHash": "3804feef0d2b303327d83f58c4c2c6d33f75f79ba6aa914d248183fa52cf67c4",
+        "excerpt": " @PostMapping(\"/real\") String post() { return \"v1\"; }"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "String",
+      "evidence": {
+        "path": "backend/Resource.java",
+        "range": {
+          "startLine": 9,
+          "endLine": 9
+        },
+        "revision": "tree-sha256:367d52ee51bcfe809bce3b2e981c1f8a64de8fbc0252ec5638e44753f2bbb1c5",
+        "fileHash": "3804feef0d2b303327d83f58c4c2c6d33f75f79ba6aa914d248183fa52cf67c4",
+        "excerpt": " @PostMapping(\"/real\") String post() { return \"v1\"; }"
+      }
+    },
+    {
+      "reason": "ambiguous-endpoint",
+      "evidence": {
+        "path": "backend/Resource.java",
+        "range": {
+          "startLine": 7,
+          "endLine": 7
+        },
+        "revision": "tree-sha256:367d52ee51bcfe809bce3b2e981c1f8a64de8fbc0252ec5638e44753f2bbb1c5",
+        "fileHash": "3804feef0d2b303327d83f58c4c2c6d33f75f79ba6aa914d248183fa52cf67c4",
+        "excerpt": " @GetMapping(\"/real\") String real() { return \"v1\"; }"
+      },
+      "candidates": [
+        {
+          "path": "backend/OtherResource.java",
+          "url": "/audit/real",
+          "method": "GET"
+        },
+        {
+          "path": "backend/Resource.java",
+          "url": "/audit/real",
+          "method": "GET"
+        }
+      ]
+    },
+    {
+      "reason": "ambiguous-endpoint",
+      "evidence": {
+        "path": "backend/Resource.java",
+        "range": {
+          "startLine": 8,
+          "endLine": 8
+        },
+        "revision": "tree-sha256:367d52ee51bcfe809bce3b2e981c1f8a64de8fbc0252ec5638e44753f2bbb1c5",
+        "fileHash": "3804feef0d2b303327d83f58c4c2c6d33f75f79ba6aa914d248183fa52cf67c4",
+        "excerpt": " @GetMapping(\"/fake\") String fake() { return \"v1\"; }"
+      },
+      "candidates": [
+        {
+          "path": "backend/OtherResource.java",
+          "url": "/audit/fake",
+          "method": "GET"
+        },
+        {
+          "path": "backend/Resource.java",
+          "url": "/audit/fake",
+          "method": "GET"
+        }
+      ]
+    },
+    {
+      "reason": "ambiguous-endpoint",
+      "evidence": {
+        "path": "backend/Resource.java",
+        "range": {
+          "startLine": 9,
+          "endLine": 9
+        },
+        "revision": "tree-sha256:367d52ee51bcfe809bce3b2e981c1f8a64de8fbc0252ec5638e44753f2bbb1c5",
+        "fileHash": "3804feef0d2b303327d83f58c4c2c6d33f75f79ba6aa914d248183fa52cf67c4",
+        "excerpt": " @PostMapping(\"/real\") String post() { return \"v1\"; }"
+      },
+      "candidates": [
+        {
+          "path": "backend/OtherResource.java",
+          "url": "/audit/real",
+          "method": "POST"
+        },
+        {
+          "path": "backend/Resource.java",
+          "url": "/audit/real",
+          "method": "POST"
+        }
+      ]
+    },
+    {
+      "reason": "unresolved-call",
+      "detail": "fetch",
+      "evidence": {
+        "path": "frontend/client.ts",
+        "range": {
+          "startLine": 1,
+          "endLine": 1
+        },
+        "revision": "tree-sha256:367d52ee51bcfe809bce3b2e981c1f8a64de8fbc0252ec5638e44753f2bbb1c5",
+        "fileHash": "65f1a375a6d95ab6bfdcaa0e9666c7f739bcfc259229534ee4259f2da9019353",
+        "excerpt": "fetch('/audit/real');"
+      }
+    },
+    {
+      "reason": "ambiguous-endpoint",
+      "evidence": {
+        "path": "frontend/client.ts",
+        "range": {
+          "startLine": 1,
+          "endLine": 1
+        },
+        "revision": "tree-sha256:367d52ee51bcfe809bce3b2e981c1f8a64de8fbc0252ec5638e44753f2bbb1c5",
+        "fileHash": "65f1a375a6d95ab6bfdcaa0e9666c7f739bcfc259229534ee4259f2da9019353",
+        "excerpt": "fetch('/audit/real');"
+      },
+      "candidates": [
+        {
+          "path": "backend/OtherResource.java",
+          "url": "/audit/real",
+          "method": "GET"
+        },
+        {
+          "path": "backend/Resource.java",
+          "url": "/audit/real",
+          "method": "GET"
+        }
+      ]
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "org.springframework.web.bind.annotation.GetMapping",
+      "evidence": {
+        "path": "backend/OtherResource.java",
+        "range": {
+          "startLine": 2,
+          "endLine": 2
+        },
+        "revision": "tree-sha256:e54ca70c774415da68a10289c6eacd5e5a135225f17f8963ad0eb2dc16b295c5",
+        "fileHash": "47ada7496999f9f9efb5426f19c1ae039fe27ce570f65673d98938c999242278",
+        "excerpt": "import org.springframework.web.bind.annotation.GetMapping;"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "org.springframework.web.bind.annotation.PostMapping",
+      "evidence": {
+        "path": "backend/OtherResource.java",
+        "range": {
+          "startLine": 3,
+          "endLine": 3
+        },
+        "revision": "tree-sha256:e54ca70c774415da68a10289c6eacd5e5a135225f17f8963ad0eb2dc16b295c5",
+        "fileHash": "47ada7496999f9f9efb5426f19c1ae039fe27ce570f65673d98938c999242278",
+        "excerpt": "import org.springframework.web.bind.annotation.PostMapping;"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "org.springframework.web.bind.annotation.RequestMapping",
+      "evidence": {
+        "path": "backend/OtherResource.java",
+        "range": {
+          "startLine": 4,
+          "endLine": 4
+        },
+        "revision": "tree-sha256:e54ca70c774415da68a10289c6eacd5e5a135225f17f8963ad0eb2dc16b295c5",
+        "fileHash": "47ada7496999f9f9efb5426f19c1ae039fe27ce570f65673d98938c999242278",
+        "excerpt": "import org.springframework.web.bind.annotation.RequestMapping;"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "org.springframework.web.bind.annotation.RequestMapping",
+      "evidence": {
+        "path": "backend/OtherResource.java",
+        "range": {
+          "startLine": 5,
+          "endLine": 5
+        },
+        "revision": "tree-sha256:e54ca70c774415da68a10289c6eacd5e5a135225f17f8963ad0eb2dc16b295c5",
+        "fileHash": "47ada7496999f9f9efb5426f19c1ae039fe27ce570f65673d98938c999242278",
+        "excerpt": "@RequestMapping(\"/audit\")"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "org.springframework.web.bind.annotation.GetMapping",
+      "evidence": {
+        "path": "backend/OtherResource.java",
+        "range": {
+          "startLine": 7,
+          "endLine": 7
+        },
+        "revision": "tree-sha256:e54ca70c774415da68a10289c6eacd5e5a135225f17f8963ad0eb2dc16b295c5",
+        "fileHash": "47ada7496999f9f9efb5426f19c1ae039fe27ce570f65673d98938c999242278",
+        "excerpt": " @GetMapping(\"/real\") String real() { return \"v1\"; }"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "String",
+      "evidence": {
+        "path": "backend/OtherResource.java",
+        "range": {
+          "startLine": 7,
+          "endLine": 7
+        },
+        "revision": "tree-sha256:e54ca70c774415da68a10289c6eacd5e5a135225f17f8963ad0eb2dc16b295c5",
+        "fileHash": "47ada7496999f9f9efb5426f19c1ae039fe27ce570f65673d98938c999242278",
+        "excerpt": " @GetMapping(\"/real\") String real() { return \"v1\"; }"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "org.springframework.web.bind.annotation.GetMapping",
+      "evidence": {
+        "path": "backend/OtherResource.java",
+        "range": {
+          "startLine": 8,
+          "endLine": 8
+        },
+        "revision": "tree-sha256:e54ca70c774415da68a10289c6eacd5e5a135225f17f8963ad0eb2dc16b295c5",
+        "fileHash": "47ada7496999f9f9efb5426f19c1ae039fe27ce570f65673d98938c999242278",
+        "excerpt": " @GetMapping(\"/fake\") String fake() { return \"v1\"; }"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "String",
+      "evidence": {
+        "path": "backend/OtherResource.java",
+        "range": {
+          "startLine": 8,
+          "endLine": 8
+        },
+        "revision": "tree-sha256:e54ca70c774415da68a10289c6eacd5e5a135225f17f8963ad0eb2dc16b295c5",
+        "fileHash": "47ada7496999f9f9efb5426f19c1ae039fe27ce570f65673d98938c999242278",
+        "excerpt": " @GetMapping(\"/fake\") String fake() { return \"v1\"; }"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "org.springframework.web.bind.annotation.PostMapping",
+      "evidence": {
+        "path": "backend/OtherResource.java",
+        "range": {
+          "startLine": 9,
+          "endLine": 9
+        },
+        "revision": "tree-sha256:e54ca70c774415da68a10289c6eacd5e5a135225f17f8963ad0eb2dc16b295c5",
+        "fileHash": "47ada7496999f9f9efb5426f19c1ae039fe27ce570f65673d98938c999242278",
+        "excerpt": " @PostMapping(\"/real\") String post() { return \"v1\"; }"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "String",
+      "evidence": {
+        "path": "backend/OtherResource.java",
+        "range": {
+          "startLine": 9,
+          "endLine": 9
+        },
+        "revision": "tree-sha256:e54ca70c774415da68a10289c6eacd5e5a135225f17f8963ad0eb2dc16b295c5",
+        "fileHash": "47ada7496999f9f9efb5426f19c1ae039fe27ce570f65673d98938c999242278",
+        "excerpt": " @PostMapping(\"/real\") String post() { return \"v1\"; }"
+      }
+    },
+    {
+      "reason": "ambiguous-endpoint",
+      "evidence": {
+        "path": "backend/OtherResource.java",
+        "range": {
+          "startLine": 7,
+          "endLine": 7
+        },
+        "revision": "tree-sha256:e54ca70c774415da68a10289c6eacd5e5a135225f17f8963ad0eb2dc16b295c5",
+        "fileHash": "47ada7496999f9f9efb5426f19c1ae039fe27ce570f65673d98938c999242278",
+        "excerpt": " @GetMapping(\"/real\") String real() { return \"v1\"; }"
+      },
+      "candidates": [
+        {
+          "path": "backend/OtherResource.java",
+          "url": "/audit/real",
+          "method": "GET"
+        },
+        {
+          "path": "backend/Resource.java",
+          "url": "/audit/real",
+          "method": "GET"
+        }
+      ]
+    },
+    {
+      "reason": "ambiguous-endpoint",
+      "evidence": {
+        "path": "backend/OtherResource.java",
+        "range": {
+          "startLine": 8,
+          "endLine": 8
+        },
+        "revision": "tree-sha256:e54ca70c774415da68a10289c6eacd5e5a135225f17f8963ad0eb2dc16b295c5",
+        "fileHash": "47ada7496999f9f9efb5426f19c1ae039fe27ce570f65673d98938c999242278",
+        "excerpt": " @GetMapping(\"/fake\") String fake() { return \"v1\"; }"
+      },
+      "candidates": [
+        {
+          "path": "backend/OtherResource.java",
+          "url": "/audit/fake",
+          "method": "GET"
+        },
+        {
+          "path": "backend/Resource.java",
+          "url": "/audit/fake",
+          "method": "GET"
+        }
+      ]
+    },
+    {
+      "reason": "ambiguous-endpoint",
+      "evidence": {
+        "path": "backend/OtherResource.java",
+        "range": {
+          "startLine": 9,
+          "endLine": 9
+        },
+        "revision": "tree-sha256:e54ca70c774415da68a10289c6eacd5e5a135225f17f8963ad0eb2dc16b295c5",
+        "fileHash": "47ada7496999f9f9efb5426f19c1ae039fe27ce570f65673d98938c999242278",
+        "excerpt": " @PostMapping(\"/real\") String post() { return \"v1\"; }"
+      },
+      "candidates": [
+        {
+          "path": "backend/OtherResource.java",
+          "url": "/audit/real",
+          "method": "POST"
+        },
+        {
+          "path": "backend/Resource.java",
+          "url": "/audit/real",
+          "method": "POST"
+        }
+      ]
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "org.springframework.web.bind.annotation.GetMapping",
+      "evidence": {
+        "path": "backend/Resource.java",
+        "range": {
+          "startLine": 2,
+          "endLine": 2
+        },
+        "revision": "tree-sha256:e54ca70c774415da68a10289c6eacd5e5a135225f17f8963ad0eb2dc16b295c5",
+        "fileHash": "9cc83dd7593fb95d69dde305e4e434d34375cb35681b969b0077437544f752b2",
+        "excerpt": "import org.springframework.web.bind.annotation.GetMapping;"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "org.springframework.web.bind.annotation.PostMapping",
+      "evidence": {
+        "path": "backend/Resource.java",
+        "range": {
+          "startLine": 3,
+          "endLine": 3
+        },
+        "revision": "tree-sha256:e54ca70c774415da68a10289c6eacd5e5a135225f17f8963ad0eb2dc16b295c5",
+        "fileHash": "9cc83dd7593fb95d69dde305e4e434d34375cb35681b969b0077437544f752b2",
+        "excerpt": "import org.springframework.web.bind.annotation.PostMapping;"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "org.springframework.web.bind.annotation.RequestMapping",
+      "evidence": {
+        "path": "backend/Resource.java",
+        "range": {
+          "startLine": 4,
+          "endLine": 4
+        },
+        "revision": "tree-sha256:e54ca70c774415da68a10289c6eacd5e5a135225f17f8963ad0eb2dc16b295c5",
+        "fileHash": "9cc83dd7593fb95d69dde305e4e434d34375cb35681b969b0077437544f752b2",
+        "excerpt": "import org.springframework.web.bind.annotation.RequestMapping;"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "org.springframework.web.bind.annotation.RequestMapping",
+      "evidence": {
+        "path": "backend/Resource.java",
+        "range": {
+          "startLine": 5,
+          "endLine": 5
+        },
+        "revision": "tree-sha256:e54ca70c774415da68a10289c6eacd5e5a135225f17f8963ad0eb2dc16b295c5",
+        "fileHash": "9cc83dd7593fb95d69dde305e4e434d34375cb35681b969b0077437544f752b2",
+        "excerpt": "@RequestMapping(\"/audit\")"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "org.springframework.web.bind.annotation.GetMapping",
+      "evidence": {
+        "path": "backend/Resource.java",
+        "range": {
+          "startLine": 7,
+          "endLine": 7
+        },
+        "revision": "tree-sha256:e54ca70c774415da68a10289c6eacd5e5a135225f17f8963ad0eb2dc16b295c5",
+        "fileHash": "9cc83dd7593fb95d69dde305e4e434d34375cb35681b969b0077437544f752b2",
+        "excerpt": " @GetMapping(\"/real\") String real() { return \"v2\"; }"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "String",
+      "evidence": {
+        "path": "backend/Resource.java",
+        "range": {
+          "startLine": 7,
+          "endLine": 7
+        },
+        "revision": "tree-sha256:e54ca70c774415da68a10289c6eacd5e5a135225f17f8963ad0eb2dc16b295c5",
+        "fileHash": "9cc83dd7593fb95d69dde305e4e434d34375cb35681b969b0077437544f752b2",
+        "excerpt": " @GetMapping(\"/real\") String real() { return \"v2\"; }"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "org.springframework.web.bind.annotation.GetMapping",
+      "evidence": {
+        "path": "backend/Resource.java",
+        "range": {
+          "startLine": 8,
+          "endLine": 8
+        },
+        "revision": "tree-sha256:e54ca70c774415da68a10289c6eacd5e5a135225f17f8963ad0eb2dc16b295c5",
+        "fileHash": "9cc83dd7593fb95d69dde305e4e434d34375cb35681b969b0077437544f752b2",
+        "excerpt": " @GetMapping(\"/fake\") String fake() { return \"v1\"; }"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "String",
+      "evidence": {
+        "path": "backend/Resource.java",
+        "range": {
+          "startLine": 8,
+          "endLine": 8
+        },
+        "revision": "tree-sha256:e54ca70c774415da68a10289c6eacd5e5a135225f17f8963ad0eb2dc16b295c5",
+        "fileHash": "9cc83dd7593fb95d69dde305e4e434d34375cb35681b969b0077437544f752b2",
+        "excerpt": " @GetMapping(\"/fake\") String fake() { return \"v1\"; }"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "org.springframework.web.bind.annotation.PostMapping",
+      "evidence": {
+        "path": "backend/Resource.java",
+        "range": {
+          "startLine": 9,
+          "endLine": 9
+        },
+        "revision": "tree-sha256:e54ca70c774415da68a10289c6eacd5e5a135225f17f8963ad0eb2dc16b295c5",
+        "fileHash": "9cc83dd7593fb95d69dde305e4e434d34375cb35681b969b0077437544f752b2",
+        "excerpt": " @PostMapping(\"/real\") String post() { return \"v1\"; }"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "String",
+      "evidence": {
+        "path": "backend/Resource.java",
+        "range": {
+          "startLine": 9,
+          "endLine": 9
+        },
+        "revision": "tree-sha256:e54ca70c774415da68a10289c6eacd5e5a135225f17f8963ad0eb2dc16b295c5",
+        "fileHash": "9cc83dd7593fb95d69dde305e4e434d34375cb35681b969b0077437544f752b2",
+        "excerpt": " @PostMapping(\"/real\") String post() { return \"v1\"; }"
+      }
+    },
+    {
+      "reason": "ambiguous-endpoint",
+      "evidence": {
+        "path": "backend/Resource.java",
+        "range": {
+          "startLine": 7,
+          "endLine": 7
+        },
+        "revision": "tree-sha256:e54ca70c774415da68a10289c6eacd5e5a135225f17f8963ad0eb2dc16b295c5",
+        "fileHash": "9cc83dd7593fb95d69dde305e4e434d34375cb35681b969b0077437544f752b2",
+        "excerpt": " @GetMapping(\"/real\") String real() { return \"v2\"; }"
+      },
+      "candidates": [
+        {
+          "path": "backend/OtherResource.java",
+          "url": "/audit/real",
+          "method": "GET"
+        },
+        {
+          "path": "backend/Resource.java",
+          "url": "/audit/real",
+          "method": "GET"
+        }
+      ]
+    },
+    {
+      "reason": "ambiguous-endpoint",
+      "evidence": {
+        "path": "backend/Resource.java",
+        "range": {
+          "startLine": 8,
+          "endLine": 8
+        },
+        "revision": "tree-sha256:e54ca70c774415da68a10289c6eacd5e5a135225f17f8963ad0eb2dc16b295c5",
+        "fileHash": "9cc83dd7593fb95d69dde305e4e434d34375cb35681b969b0077437544f752b2",
+        "excerpt": " @GetMapping(\"/fake\") String fake() { return \"v1\"; }"
+      },
+      "candidates": [
+        {
+          "path": "backend/OtherResource.java",
+          "url": "/audit/fake",
+          "method": "GET"
+        },
+        {
+          "path": "backend/Resource.java",
+          "url": "/audit/fake",
+          "method": "GET"
+        }
+      ]
+    },
+    {
+      "reason": "ambiguous-endpoint",
+      "evidence": {
+        "path": "backend/Resource.java",
+        "range": {
+          "startLine": 9,
+          "endLine": 9
+        },
+        "revision": "tree-sha256:e54ca70c774415da68a10289c6eacd5e5a135225f17f8963ad0eb2dc16b295c5",
+        "fileHash": "9cc83dd7593fb95d69dde305e4e434d34375cb35681b969b0077437544f752b2",
+        "excerpt": " @PostMapping(\"/real\") String post() { return \"v1\"; }"
+      },
+      "candidates": [
+        {
+          "path": "backend/OtherResource.java",
+          "url": "/audit/real",
+          "method": "POST"
+        },
+        {
+          "path": "backend/Resource.java",
+          "url": "/audit/real",
+          "method": "POST"
+        }
+      ]
+    },
+    {
+      "reason": "unresolved-call",
+      "detail": "fetch",
+      "evidence": {
+        "path": "frontend/client.ts",
+        "range": {
+          "startLine": 1,
+          "endLine": 1
+        },
+        "revision": "tree-sha256:e54ca70c774415da68a10289c6eacd5e5a135225f17f8963ad0eb2dc16b295c5",
+        "fileHash": "65f1a375a6d95ab6bfdcaa0e9666c7f739bcfc259229534ee4259f2da9019353",
+        "excerpt": "fetch('/audit/real');"
+      }
+    },
+    {
+      "reason": "ambiguous-endpoint",
+      "evidence": {
+        "path": "frontend/client.ts",
+        "range": {
+          "startLine": 1,
+          "endLine": 1
+        },
+        "revision": "tree-sha256:e54ca70c774415da68a10289c6eacd5e5a135225f17f8963ad0eb2dc16b295c5",
+        "fileHash": "65f1a375a6d95ab6bfdcaa0e9666c7f739bcfc259229534ee4259f2da9019353",
+        "excerpt": "fetch('/audit/real');"
+      },
+      "candidates": [
+        {
+          "path": "backend/OtherResource.java",
+          "url": "/audit/real",
+          "method": "GET"
+        },
+        {
+          "path": "backend/Resource.java",
+          "url": "/audit/real",
+          "method": "GET"
+        }
+      ]
+    }
+  ],
+  "focusedTests": [],
+  "coverage": {
+    "complete": false,
+    "fullRegressionMayBeSkipped": false,
+    "sourceFiles": {
+      "baseline": 3,
+      "candidate": 3
+    },
+    "excluded": {
+      "baseline": [],
+      "candidate": []
+    },
+    "limitations": [
+      "Source-only analysis; no Java/TypeScript semantic compilation, runtime dispatch, reflection, DI wiring, proxy/origin verification or transitive external package sources",
+      "Edges are evidence-backed approximations; indirect file dependencies do not prove execution",
+      "Renames inferred only for identical declaration key/signature/body; edited renames remain delete/add",
+      "Unknown syntax and unresolved/dynamic dependencies remain visible; passing fixture tests is not private-repository acceptance"
+    ]
+  },
+  "cache": {
+    "report": "disabled",
+    "parsedFiles": 6,
+    "reusedFiles": 0,
+    "invalidEntries": 0
+  },
+  "metrics": {
+    "elapsedMs": 45.72,
+    "bytesRead": 1646,
+    "reportCacheHit": false
+  }
+}

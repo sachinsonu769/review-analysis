@@ -1,0 +1,52 @@
+{
+  "id": "14-js-with-lexical-shadow",
+  "description": "Sloppy-script with object supplies custom fetch; outside global fetch remains a control",
+  "status": "pass",
+  "exitCode": 0,
+  "sourcePaths": {
+    "baseline": "/tmp/review-analysis-adversarial-v2-NZrPxG/14-js-with-lexical-shadow/baseline",
+    "candidate": "/tmp/review-analysis-adversarial-v2-NZrPxG/14-js-with-lexical-shadow/candidate"
+  },
+  "sourceHashes": {
+    "baseline": {
+      "backend/Resource.java": "3804feef0d2b303327d83f58c4c2c6d33f75f79ba6aa914d248183fa52cf67c4",
+      "frontend/shadow.js": "106156234a0c6d6e3105e8ef6d1fd842d611025f4e211886999daf0ecb91cad7"
+    },
+    "candidate": {
+      "backend/Resource.java": "9e9c44affd6daae1cc4a1e4216829ec607ab4530301be37a8fb6ff54b8428641",
+      "frontend/shadow.js": "106156234a0c6d6e3105e8ef6d1fd842d611025f4e211886999daf0ecb91cad7"
+    }
+  },
+  "evidence": {
+    "checkedEvidenceRecords": 44,
+    "errors": []
+  },
+  "assertions": [
+    {
+      "name": "with object fetch never fabricates HTTP edge",
+      "status": "pass"
+    },
+    {
+      "name": "unsupported with scope explicit uncertainty",
+      "status": "pass"
+    },
+    {
+      "name": "outside fetch still maps known route",
+      "status": "pass"
+    },
+    {
+      "name": "all source evidence hashes/ranges/excerpts/revisions independently reproduce",
+      "status": "pass"
+    },
+    {
+      "name": "readable actual CLI exits 0",
+      "status": "pass"
+    }
+  ],
+  "reportStats": {
+    "changes": 4,
+    "directEdges": 2,
+    "unknowns": 28,
+    "sourceBuildHash": "ca04bac50b7584aaafd9d5602acc8055152e81e25de5fa1b15bb710f76f53ac9"
+  }
+}

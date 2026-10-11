@@ -1,0 +1,48 @@
+{
+  "id": "15-java-varargs-overload",
+  "description": "Valid two-string invocation must not resolve to int,int fixed overload when a varargs overload exists",
+  "status": "pass",
+  "exitCode": 0,
+  "sourcePaths": {
+    "baseline": "/tmp/review-analysis-adversarial-v2-NZrPxG/15-java-varargs-overload/baseline",
+    "candidate": "/tmp/review-analysis-adversarial-v2-NZrPxG/15-java-varargs-overload/candidate"
+  },
+  "sourceHashes": {
+    "baseline": {
+      "backend/Caller.java": "65307490230e508a4da64deac8e3fa23bc942b1dce8cdf5f7a26596971ff4789",
+      "backend/Worker.java": "01571ea63b20b360bb7d1a0366d45bfec9bb57c371d00da3e6633f0207ac9935"
+    },
+    "candidate": {
+      "backend/Caller.java": "65307490230e508a4da64deac8e3fa23bc942b1dce8cdf5f7a26596971ff4789",
+      "backend/Worker.java": "8c5056ff258b712ace834c690ed3051a39fe4419741a71bace8b0294cb5c0355"
+    }
+  },
+  "evidence": {
+    "checkedEvidenceRecords": 22,
+    "errors": []
+  },
+  "assertions": [
+    {
+      "name": "no incompatible fixed-arity call target",
+      "status": "pass"
+    },
+    {
+      "name": "varargs alternative produces uncertainty or correct target",
+      "status": "pass"
+    },
+    {
+      "name": "all source evidence hashes/ranges/excerpts/revisions independently reproduce",
+      "status": "pass"
+    },
+    {
+      "name": "readable actual CLI exits 0",
+      "status": "pass"
+    }
+  ],
+  "reportStats": {
+    "changes": 3,
+    "directEdges": 2,
+    "unknowns": 8,
+    "sourceBuildHash": "ca04bac50b7584aaafd9d5602acc8055152e81e25de5fa1b15bb710f76f53ac9"
+  }
+}

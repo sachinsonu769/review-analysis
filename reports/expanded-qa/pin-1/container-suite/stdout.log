@@ -1,0 +1,166 @@
+v24.21.0
+git version 2.39.5
+  ████                            ████
+  ██                                ██
+  ██  █████ █ ███    ███  ███████   ██
+ ███  ██  ███ ████  ████  ██    ██  ███
+ ███  ███████ ██ ████ ██  ██    ██  ███
+  ██  ██      ██  ██  ██  ███████   ██
+  ██                                ██
+  ████                            ████
+PMD 7.17.0 (d2942d5ded8e3f967ba8872f3dc58a7bdffa73bf, 2025-09-12T07:17:26Z)
+Java version: 21.0.12.1, vendor: Eclipse Adoptium, runtime: /opt/java/openjdk
+
+> review-analysis-poc@0.2.0 build
+> tsc -p tsconfig.json
+
+✔ verified Angular decorators capture aliased/namespace metadata and source dependencies (57.909153ms)
+✔ Angular facts never arise from unverified decorator names or lexical shadows (9.809891ms)
+✔ metadata defaults stay unspecified and dynamic properties/dependencies remain unknown (8.239924ms)
+✔ inline Angular template text and external template URLs cannot fabricate TypeScript calls (4.389051ms)
+✔ HttpClient typed lexical constructor properties, fields, parameters and namespace aliases yield literal HTTP references (21.953789ms)
+✔ fake HttpClient declarations, wrong imports, type/receiver shadows, inference and computed calls cannot become HTTP edges (36.476538ms)
+✔ dynamic HttpClient URLs/methods and HttpRequest overloads stay explicit; RxJS execution remains unverified (14.8565ms)
+✔ Angular consuming the same Spring API change has evidenced direct HTTP and indirect component paths (371.834784ms)
+✔ equivalent renamed Angular source preserves generic parser and engine detection (243.745419ms)
+✔ report cache repeated hit and incremental parse reuse cannot hide content edits (75.194622ms)
+✔ rule/date/task/analyzer changes invalidate exact report cache (21.369882ms)
+✔ cache corruption and stale payload fail closed to recomputation (81.138288ms)
+✔ exact Git revisions are pinned and dirty working trees bypass report cache without mutation (263.14365ms)
+✔ cache/output locations inside examined roots and symlink aliases are rejected (1257.049323ms)
+✔ symlinked source is never followed and unsupported source is explicitly excluded (8.653235ms)
+✔ CLI emits JSON/readable and guidance, and errors clearly on invalid arguments (5034.18848ms)
+✔ valid dates, rules and task are required rather than guessed (0.911469ms)
+✔ severity worsening and removed import debt are distinct from new debt (12.663396ms)
+✔ dangling output/cache symlinks cannot write inside analyzed source (1354.62825ms)
+✔ reports route, DTO member, and same-arity service signature changes from source evidence (420.513406ms)
+✔ finds direct Java callers and literal HTTP consumers with source-to-target evidence (0.492109ms)
+✔ marks React import chains as likely indirect impact and excludes unrelated or nonexecuting text (0.489916ms)
+✔ distinguishes new violations from retained debt and keeps exception state explicit (0.329214ms)
+✔ guidance preserves proposed status, configured ownership, version, and simulated review evidence (0.283215ms)
+✔ explicitly reports dynamic HTTP, missing imports, and ambiguous overloads instead of inventing links (0.711488ms)
+✔ accounts for deletion and a content-preserving file rename with both revisions (0.577498ms)
+✔ evidence hashes and line ranges reproduce the actual baseline and candidate source (143.909238ms)
+✔ renaming every application identifier preserves semantic detection and dependency structure (159.746386ms)
+✔ an identical snapshot yields no changes or impact and no new architecture violations (145.211993ms)
+✔ CST declarations include annotated DTO contracts, nested types, interfaces, and records (33.468916ms)
+✔ method keys preserve parameter contract changes and distinguish overload collisions (6.783215ms)
+✔ literal Spring mappings combine class/method routes, arrays, HTTP restrictions, and exact lines (134.974476ms)
+✔ fully qualified annotations, static method imports, unrestricted methods, and Java string escapes (6.392769ms)
+✔ Spring constant expressions, config placeholders, custom names, and ambiguous annotations remain unknown (39.355626ms)
+✔ lexical field, parameter, local, and current-instance calls carry conservative receiver information (11.562662ms)
+✔ block shadowing, inferred locals, chains, array receivers, and method references avoid invented targets (6.172729ms)
+✔ generic parameters, varargs, and lambda shadows cannot bind to concrete receiver types (7.6522ms)
+✔ initializer, enhanced-for, and resource scopes do not leak into iterable expressions or catch/finally (3.963392ms)
+✔ anonymous and local classes do not merge methods or fields into a named owner (17.920059ms)
+✔ Spring enum constant shadows and wildcard composition remain unknown; empty arrays use defaults (22.208017ms)
+✔ CST parsing ignores fake code in comments and strings and reports bounded diagnostics (15.580746ms)
+✔ parsing has deterministic JSON output and preserves input unchanged (6.979651ms)
+✔ trusted analyzers compare existing, worsened, resolved and new TypeScript findings (951.037227ms)
+✔ line insertions and unrelated declarations preserve semantic issue identity (11.871058ms)
+✔ named arrow-function complexity matches the function when declaration order changes (11.289283ms)
+✔ source text and project config are inert, and inline ESLint suppressions cannot change review rules (7.807925ms)
+✔ unparseable candidate source cannot falsely resolve an existing issue (12.456927ms)
+✔ governed import boundaries are separate from potential design conventions (65.523659ms)
+✔ method-count increase has stable identity and import-prefix boundaries avoid false positives (3.538053ms)
+✔ configuration is numeric/structural data only, with mandatory policy governance (0.63261ms)
+✖ trusted PMD identity changes for a modified script or JAR at the same installation path (2.506315ms)
+✔ findings with uncovered related source remain candidate-unverified (0.826712ms)
+✔ unsafe virtual source paths are rejected before materialization (0.440722ms)
+✔ Java PMD reports null, resource and literal-condition evidence when installed (3551.386093ms)
+✔ PMD processing gaps preserve healthy-file findings and cannot resolve old Java debt (2397.917963ms)
+✔ default business checklist is draft and cannot establish confirmed requirements (14.655869ms)
+✔ confirmed simulation maps multiple customer criteria and retains negative cases (1.475506ms)
+✔ real-looking confirmation remains an assertion and never authenticates an owner (1.183968ms)
+✔ evidence uses exact snapshot revision, validated file hashes, and line excerpts (0.396706ms)
+✔ stale revision and source fingerprints suppress satisfaction without hiding matches (0.601854ms)
+✔ supplied snapshot digest cannot certify different file text (0.621974ms)
+✔ explicit anchors must occur together in a selected file, rather than across files (0.554242ms)
+✔ globs handle nested and zero-depth paths with literal regex punctuation (0.806281ms)
+✔ test/spec TS, TSX, JSX, Java names and test directories are recognized as source evidence (0.737187ms)
+✔ descriptions alone and omitted test selectors remain unverified (0.387191ms)
+✔ only listed edge cases are inspected and missing explicit edge selectors stay visible (0.370286ms)
+✔ comments and string decoys are labeled text presence rather than behavioral proof (0.308794ms)
+✔ regex-looking literal selectors are never interpreted as regex (0.311708ms)
+✔ invalid confirmations, schema fields, IDs and unsafe paths fail explicitly (0.626661ms)
+✔ bounded input and evidence output handle oversized selectors and long lines (8.406043ms)
+✔ adversarial wildcard work is stopped by a deterministic review budget (137.554308ms)
+✔ one criterion combines backend source and frontend tests with original project provenance (1.216066ms)
+✔ same-path projects remain distinct and explicit project selectors never broaden (0.476706ms)
+✔ unscoped selectors search selected projects and retain same-path evidence identities (5.330324ms)
+✔ literal anchors cannot be combined across projects even when paths are identical (0.489806ms)
+✔ per-project fingerprints detect stale revisions, changed files and missing projects (3.987628ms)
+✔ workspace API rejects ambiguous global fingerprints and malformed project identities (0.498819ms)
+✔ single-snapshot project selectors require an explicitly supplied matching identity (0.670888ms)
+✔ split customer lookup fixture evaluates confirmed and draft business requirements once (6.200501ms)
+✔ same-package interface, record and enum consumers retain type edges (30.256987ms)
+✔ missing same-package Java types remain explicit unknowns (3.481028ms)
+✔ TS names nested in namespaces or unexported declarations do not become imported call targets (39.996593ms)
+✔ multiple named imports and repeated statements retain one pre-existing debt identity (11.749805ms)
+✔ new policy does not label retained source debt as newly introduced code (2.869059ms)
+✔ example provenance rejects stale hashes and impossible configured ranges (1.408085ms)
+✔ reviewed fixture exception expiry is inclusive and cached date rollover cannot keep suppression (9.646046ms)
+✔ HTTP endpoint exception remains visibly simulated and consistently advisory-suppressed (35.853682ms)
+✔ Java call arity must be an exact integer rather than a key prefix (15.614929ms)
+✔ constrained Spring routes never equate unsupported literal URLs to endpoint matches (10.349653ms)
+✔ imported nested object member calls cannot target a non-callable exported variable (15.927188ms)
+✔ conflicting explicit Java imports never select the first receiver target (11.026028ms)
+✔ JS with-object shadowing leaves global fetch and lexical calls unknown (12.72554ms)
+✔ Java varargs and inherited overload sets remain unresolved rather than selecting incompatible methods (8.626555ms)
+✔ extracts declarations, member contracts, annotations and exact source ranges (51.157034ms)
+✔ stable declaration identities separate contract changes from implementation changes (11.322994ms)
+✔ combines overload signatures without losing the implementation or stable identity (4.120859ms)
+✔ captures named/default/namespace import aliases and source-only local targets (12.073911ms)
+✔ shadowing, destructured parameters, catch bindings and block locals prevent false HTTP/import resolution (19.290329ms)
+✔ maps class and interface members only when a local Compiler API symbol resolves (9.82872ms)
+✔ extracts fetch HTTP literals, aliases, static templates and method defaults (2.886114ms)
+✔ supports imported axios callable, config, request, namespace and HTTP verb forms (27.134829ms)
+✔ dynamic URLs, methods and nonliteral options are explicit unknowns (4.165176ms)
+✔ object spreads and computed options cannot be mistaken for known HTTP contracts (1.739983ms)
+✔ computed property and indirect calls emit unknowns without fabricated targets (1.517088ms)
+✔ comments and strings are captured as source but never interpreted as calls or routes (4.931636ms)
+✔ TSX supports React component references while JSX text remains text (2.19805ms)
+✔ TS generic arrow syntax is not parsed as JSX and optional calls retain bindings (3.13604ms)
+✔ syntax errors produce diagnostics with source ranges instead of throwing (1.556608ms)
+✔ renamed equivalent fixtures retain generic parser behavior (1.765862ms)
+✔ returned data is deterministic JSON with source-relative line ranges (1.633723ms)
+✔ namespace members, destructured bindings, enums and type-only calls remain explicit (2.319803ms)
+✔ central graph maps split HTTP dependencies only through explicit versioned mappings (1913.141534ms)
+✔ typed graph keeps same-phase bounded paths and low certainty for indirect chains (32.368529ms)
+✔ import-only edits mark changed nodes and their incoming impact without inventing declarations (308.749398ms)
+✔ explicit package-source mapping has missing-source and safe-path negatives (385.673841ms)
+✔ all central edge provenance reproduces exact project source and revisions (496.203634ms)
+✔ repeated workspace quality cache invalidates configuration while keeping source read-only (572.192507ms)
+✔ repository fsmonitor cannot execute during worktree reads and generated exclusion is consistent (283.379704ms)
+✔ replacement refs cannot alter bytes attributed to the original exact commit (207.944199ms)
+✔ reviewed source example expiry is evaluated against the analysis date (1.479302ms)
+✔ workspace identity fields are strings rather than coerced numbers or missing values (0.624538ms)
+ℹ tests 121
+ℹ suites 0
+ℹ pass 120
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 10898.25997
+
+✖ failing tests:
+
+test at test/quality.test.js:91:1
+✖ trusted PMD identity changes for a modified script or JAR at the same installation path (2.506315ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'unreadable'
+  - 'available'
+  
+      at TestContext.<anonymous> (file:///tmp/exact-qa-source/test/quality.test.js:97:52)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'unreadable',
+    expected: 'available',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

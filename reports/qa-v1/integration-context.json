@@ -1,0 +1,8 @@
+{
+  "temporaryRoot": "/tmp/review-analysis-qa-integration-q2ryoreb",
+  "repo": "/tmp/review-analysis-qa-integration-q2ryoreb/repo",
+  "baselineCommit": "c96d8162bc648b171aa07362c5f3298d4330992e",
+  "candidateCommit": "d01fb950ad205f327232a0df9c24fed33e65fcae",
+  "cache": "/tmp/review-analysis-qa-integration-q2ryoreb/cache",
+  "dirtyStatus": "M backend/src/main/java/com/example/lookup/LookupService.java\n?? untracked.ts"
+}

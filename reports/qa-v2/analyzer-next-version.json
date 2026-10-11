@@ -1,0 +1,141 @@
+{
+  "schemaVersion": "1.0",
+  "analyzer": {
+    "version": "independent-qa-next-version",
+    "sourceBuildHash": "ca04bac50b7584aaafd9d5602acc8055152e81e25de5fa1b15bb710f76f53ac9",
+    "parsers": {
+      "java": "java-parser@3.0.1",
+      "typescript": "typescript@5.9.3"
+    }
+  },
+  "advisory": true,
+  "asOf": "2026-10-11",
+  "provenance": {
+    "baseline": {
+      "root": "/tmp/review-analysis-qa-extra-dUi1QJ/before",
+      "type": "directory",
+      "revision": "tree-sha256:c4eb0ef10d67aa631447409f77e5eaf264d5f0d3d8923dcc6c38fda4305701ed",
+      "contentHash": "c4eb0ef10d67aa631447409f77e5eaf264d5f0d3d8923dcc6c38fda4305701ed",
+      "dirty": false
+    },
+    "candidate": {
+      "root": "/tmp/review-analysis-qa-extra-dUi1QJ/after",
+      "type": "directory",
+      "revision": "tree-sha256:bd3bac24ab7f0f31672e225bd67ccafb9e20be1af47197a50424268c1d8f547b",
+      "contentHash": "bd3bac24ab7f0f31672e225bd67ccafb9e20be1af47197a50424268c1d8f547b",
+      "dirty": false
+    },
+    "rulesHash": "0d30388f244acad5a50a9b97c38feee9a12e4e6e47adeb6f1694581527d1dd54",
+    "baselineRulesHash": "0d30388f244acad5a50a9b97c38feee9a12e4e6e47adeb6f1694581527d1dd54",
+    "cacheKey": "25adeaa551715bc28ed6fd788f2545c67a72c40936ec485480da0099824b7570"
+  },
+  "changes": [
+    {
+      "kind": "deleted",
+      "name": "renameCandidate",
+      "key": "renameCandidate",
+      "language": "typescript",
+      "contractChanged": true,
+      "before": {
+        "path": "old.ts",
+        "range": {
+          "startLine": 1,
+          "endLine": 1
+        },
+        "revision": "tree-sha256:c4eb0ef10d67aa631447409f77e5eaf264d5f0d3d8923dcc6c38fda4305701ed",
+        "fileHash": "38368d37993d8d75fbcdc41609a0355e42008518fb6f3cc616524d5fe6394688",
+        "excerpt": "export function renameCandidate(): string { return \"old\"; }"
+      },
+      "after": null
+    },
+    {
+      "kind": "added",
+      "name": "renameCandidate",
+      "key": "renameCandidate",
+      "language": "typescript",
+      "contractChanged": true,
+      "before": null,
+      "after": {
+        "path": "new.ts",
+        "range": {
+          "startLine": 1,
+          "endLine": 1
+        },
+        "revision": "tree-sha256:bd3bac24ab7f0f31672e225bd67ccafb9e20be1af47197a50424268c1d8f547b",
+        "fileHash": "34ab8e7187b1da61b29a6286a1fccf54fdbd6bfb3f29946dd179c8697c4415db",
+        "excerpt": "export function renameCandidate(): string { return \"edited\"; }"
+      }
+    }
+  ],
+  "impact": {
+    "direct": [],
+    "indirect": []
+  },
+  "findings": [],
+  "guidance": {
+    "task": "Review changed source contracts",
+    "ruleSetVersion": "qa-1",
+    "approvalGap": "No human approval is inferred. Reviewed examples/exceptions are assertions from supplied configuration; simulation records are demonstrations only.",
+    "rules": []
+  },
+  "unknowns": [],
+  "focusedTests": [
+    {
+      "kind": "contract",
+      "reason": "Verify renameCandidate parameter, return and payload compatibility; removed declarations need caller compile checks",
+      "evidence": {
+        "path": "old.ts",
+        "range": {
+          "startLine": 1,
+          "endLine": 1
+        },
+        "revision": "tree-sha256:c4eb0ef10d67aa631447409f77e5eaf264d5f0d3d8923dcc6c38fda4305701ed",
+        "fileHash": "38368d37993d8d75fbcdc41609a0355e42008518fb6f3cc616524d5fe6394688",
+        "excerpt": "export function renameCandidate(): string { return \"old\"; }"
+      }
+    },
+    {
+      "kind": "contract",
+      "reason": "Verify renameCandidate parameter, return and payload compatibility; removed declarations need caller compile checks",
+      "evidence": {
+        "path": "new.ts",
+        "range": {
+          "startLine": 1,
+          "endLine": 1
+        },
+        "revision": "tree-sha256:bd3bac24ab7f0f31672e225bd67ccafb9e20be1af47197a50424268c1d8f547b",
+        "fileHash": "34ab8e7187b1da61b29a6286a1fccf54fdbd6bfb3f29946dd179c8697c4415db",
+        "excerpt": "export function renameCandidate(): string { return \"edited\"; }"
+      }
+    }
+  ],
+  "coverage": {
+    "complete": false,
+    "fullRegressionMayBeSkipped": false,
+    "sourceFiles": {
+      "baseline": 1,
+      "candidate": 1
+    },
+    "excluded": {
+      "baseline": [],
+      "candidate": []
+    },
+    "limitations": [
+      "Source-only analysis; no Java/TypeScript semantic compilation, runtime dispatch, reflection, DI wiring, proxy/origin verification or transitive external package sources",
+      "Edges are evidence-backed approximations; indirect file dependencies do not prove execution",
+      "Renames inferred only for identical declaration key/signature/body; edited renames remain delete/add",
+      "Unknown syntax and unresolved/dynamic dependencies remain visible; passing fixture tests is not private-repository acceptance"
+    ]
+  },
+  "cache": {
+    "report": "miss",
+    "parsedFiles": 2,
+    "reusedFiles": 0,
+    "invalidEntries": 0
+  },
+  "metrics": {
+    "elapsedMs": 2.17,
+    "bytesRead": 123,
+    "reportCacheHit": false
+  }
+}

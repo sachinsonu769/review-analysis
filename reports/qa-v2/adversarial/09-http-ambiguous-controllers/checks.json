@@ -1,0 +1,50 @@
+{
+  "id": "09-http-ambiguous-controllers",
+  "description": "Duplicate matching endpoints across controllers remain ambiguous with source candidates",
+  "status": "pass",
+  "exitCode": 0,
+  "sourcePaths": {
+    "baseline": "/tmp/review-analysis-adversarial-v2-NZrPxG/09-http-ambiguous-controllers/baseline",
+    "candidate": "/tmp/review-analysis-adversarial-v2-NZrPxG/09-http-ambiguous-controllers/candidate"
+  },
+  "sourceHashes": {
+    "baseline": {
+      "backend/OtherResource.java": "47ada7496999f9f9efb5426f19c1ae039fe27ce570f65673d98938c999242278",
+      "backend/Resource.java": "3804feef0d2b303327d83f58c4c2c6d33f75f79ba6aa914d248183fa52cf67c4",
+      "frontend/client.ts": "65f1a375a6d95ab6bfdcaa0e9666c7f739bcfc259229534ee4259f2da9019353"
+    },
+    "candidate": {
+      "backend/OtherResource.java": "47ada7496999f9f9efb5426f19c1ae039fe27ce570f65673d98938c999242278",
+      "backend/Resource.java": "9cc83dd7593fb95d69dde305e4e434d34375cb35681b969b0077437544f752b2",
+      "frontend/client.ts": "65f1a375a6d95ab6bfdcaa0e9666c7f739bcfc259229534ee4259f2da9019353"
+    }
+  },
+  "evidence": {
+    "checkedEvidenceRecords": 60,
+    "errors": []
+  },
+  "assertions": [
+    {
+      "name": "multiple mappings remain unknown",
+      "status": "pass"
+    },
+    {
+      "name": "no unique HTTP edge",
+      "status": "pass"
+    },
+    {
+      "name": "all source evidence hashes/ranges/excerpts/revisions independently reproduce",
+      "status": "pass"
+    },
+    {
+      "name": "readable actual CLI exits 0",
+      "status": "pass"
+    }
+  ],
+  "reportStats": {
+    "changes": 2,
+    "directEdges": 0,
+    "unknowns": 56,
+    "sourceBuildHash": "ca04bac50b7584aaafd9d5602acc8055152e81e25de5fa1b15bb710f76f53ac9"
+  }
+}

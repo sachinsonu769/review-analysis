@@ -1,0 +1,20 @@
+{
+  "command": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+  "args": [
+    "/tmp/review-analysis-qa-v2-fsn7g676/src/cli.js",
+    "analyze",
+    "--baseline",
+    "/tmp/review-analysis-adversarial-v2-NZrPxG/09-http-ambiguous-controllers/baseline",
+    "--candidate",
+    "/tmp/review-analysis-adversarial-v2-NZrPxG/09-http-ambiguous-controllers/candidate",
+    "--rules",
+    "/tmp/review-analysis-adversarial-v2-NZrPxG/rules.json",
+    "--as-of",
+    "2026-10-11",
+    "--task",
+    "Duplicate matching endpoints across controllers remain ambiguous with source candidates",
+    "--format",
+    "json"
+  ],
+  "cwd": "/tmp/review-analysis-qa-v2-fsn7g676"
+}

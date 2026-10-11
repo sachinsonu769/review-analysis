@@ -1,0 +1,31 @@
+{
+  "recordedAt": "2026-10-11T17:26:10.486Z",
+  "expectation": "fixed source refuses missing local blob without transport execution or object writes",
+  "snapshotSourceHash": "6dfaf74bfc3c4aa716176e56ae7c4f7b95a0b5c8fe452a4d3910565473386faa",
+  "runtime": {
+    "node": "v24.19.0",
+    "git": "git version 2.52.0"
+  },
+  "origin": "/workspace/review-analysis-deliverables/expanded-architect-review/cache-review/lazy-fetch-1NPX4q/synthetic-origin",
+  "partial": "/workspace/review-analysis-deliverables/expanded-architect-review/cache-review/lazy-fetch-1NPX4q/synthetic-partial-clone",
+  "head": "af44efefdaf48608c0e09f74906be474a7a6fd34",
+  "configuredTransport": "/workspace/review-analysis-deliverables/expanded-architect-review/cache-review/lazy-fetch-1NPX4q/synthetic-local-promisor-transport",
+  "markerPath": "/workspace/review-analysis-deliverables/expanded-architect-review/cache-review/lazy-fetch-1NPX4q/synthetic-partial-clone/executed-by-promisor-transport.ts",
+  "markerBefore": false,
+  "markerAfter": false,
+  "packsBefore": [
+    "pack-efadab2a67a9e0a4b88bb6e867b33c461a3322e5.idx",
+    "pack-efadab2a67a9e0a4b88bb6e867b33c461a3322e5.pack",
+    "pack-efadab2a67a9e0a4b88bb6e867b33c461a3322e5.promisor",
+    "pack-efadab2a67a9e0a4b88bb6e867b33c461a3322e5.rev"
+  ],
+  "packsAfter": [
+    "pack-efadab2a67a9e0a4b88bb6e867b33c461a3322e5.idx",
+    "pack-efadab2a67a9e0a4b88bb6e867b33c461a3322e5.pack",
+    "pack-efadab2a67a9e0a4b88bb6e867b33c461a3322e5.promisor",
+    "pack-efadab2a67a9e0a4b88bb6e867b33c461a3322e5.rev"
+  ],
+  "returnedSnapshotFiles": null,
+  "snapshotError": "Command failed: git -c core.fsmonitor=false -c core.hooksPath=/dev/null -c core.untrackedCache=false -C /workspace/review-analysis-deliverables/expanded-architect-review/cache-review/lazy-fetch-1NPX4q/synthetic-partial-clone show af44efefdaf48608c0e09f74906be474a7a6fd34:a.ts\nfatal: bad object af44efefdaf48608c0e09f74906be474a7a6fd34:a.ts\n",
+  "transport": "Synthetic local Git ext transport; no external network or private repository used"
+}

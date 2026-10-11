@@ -1,0 +1,161 @@
+{
+  "schemaVersion": "1",
+  "revision": "customer-lookup-checklist-example-v1",
+  "owner": "Example product owner (unconfirmed demonstration)",
+  "confirmation": {
+    "status": "draft"
+  },
+  "criteria": [
+    {
+      "id": "customer-lookup-by-id",
+      "description": "A customer can request a lookup by identifier and receive the matching customer identifier.",
+      "source": [
+        {
+          "pathPattern": "backend/src/main/java/example/customers/CustomerLookupController.java",
+          "symbol": "lookup",
+          "pattern": "@GetMapping(\"/customers/lookup\")"
+        },
+        {
+          "pathPattern": "frontend/src/customerApi.ts",
+          "symbol": "lookupCustomer",
+          "pattern": "/api/customers/lookup?id="
+        }
+      ],
+      "tests": [
+        {
+          "pathPattern": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+          "name": "lookupByIdReturnsMatchingCustomer"
+        }
+      ],
+      "edgeCases": [
+        {
+          "id": "known-customer",
+          "description": "A known identifier is preserved in the returned customer.",
+          "tests": [
+            {
+              "pathPattern": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+              "name": "lookupByIdReturnsMatchingCustomer"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "display-name",
+      "description": "The customer result displays the displayName property from the lookup response.",
+      "source": [
+        {
+          "pathPattern": "backend/src/main/java/example/customers/CustomerResponse.java",
+          "pattern": "String displayName"
+        },
+        {
+          "pathPattern": "frontend/src/CustomerResult.tsx",
+          "pattern": "result?.displayName"
+        }
+      ],
+      "tests": [
+        {
+          "pathPattern": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+          "name": "returnsDisplayName"
+        }
+      ],
+      "edgeCases": []
+    },
+    {
+      "id": "blank-identifier",
+      "description": "A blank customer identifier is rejected before a lookup request.",
+      "source": [
+        {
+          "pathPattern": "frontend/src/customerApi.ts",
+          "pattern": "if (!id.trim())"
+        }
+      ],
+      "tests": [
+        {
+          "pathPattern": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+          "name": "rejectsBlankIdentifier"
+        }
+      ],
+      "edgeCases": [
+        {
+          "id": "empty-id",
+          "description": "An empty identifier produces validation feedback and no request.",
+          "tests": [
+            {
+              "pathPattern": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+              "name": "rejectsBlankIdentifier"
+            }
+          ]
+        },
+        {
+          "id": "whitespace-id",
+          "description": "A whitespace-only identifier also produces validation feedback.",
+          "tests": []
+        }
+      ]
+    },
+    {
+      "id": "customer-not-found",
+      "description": "A customer that does not exist receives a clear not-found response.",
+      "source": [
+        {
+          "pathPattern": "frontend/src/customerApi.ts",
+          "pattern": "throw new Error('Customer lookup failed')"
+        }
+      ],
+      "tests": [
+        {
+          "pathPattern": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+          "name": "returns404WhenCustomerMissing"
+        }
+      ],
+      "edgeCases": [
+        {
+          "id": "unknown-customer",
+          "description": "An unknown identifier is handled separately from a server failure.",
+          "tests": [
+            {
+              "pathPattern": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+              "name": "returns404WhenCustomerMissing"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loading-state",
+      "description": "The user sees a loading label before the customer response arrives.",
+      "source": [
+        {
+          "pathPattern": "frontend/src/CustomerResult.tsx",
+          "pattern": "Loading customer…"
+        }
+      ],
+      "tests": [
+        {
+          "pathPattern": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+          "name": "showsLoadingBeforeResponse"
+        }
+      ],
+      "edgeCases": [
+        {
+          "id": "slow-response",
+          "description": "The loading state persists while the response is delayed.",
+          "tests": [
+            {
+              "pathPattern": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+              "name": "keepsLoadingUntilResponse"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "confirmation-needed-detail",
+      "description": "An owner must provide explicit source and test selectors for the customer authorization rule.",
+      "source": [],
+      "tests": [],
+      "edgeCases": []
+    }
+  ]
+}

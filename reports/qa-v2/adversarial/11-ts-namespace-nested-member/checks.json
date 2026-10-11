@@ -1,0 +1,48 @@
+{
+  "id": "11-ts-namespace-nested-member",
+  "description": "Nested property method on namespace import must not claim the container variable is the called declaration",
+  "status": "pass",
+  "exitCode": 0,
+  "sourcePaths": {
+    "baseline": "/tmp/review-analysis-adversarial-v2-NZrPxG/11-ts-namespace-nested-member/baseline",
+    "candidate": "/tmp/review-analysis-adversarial-v2-NZrPxG/11-ts-namespace-nested-member/candidate"
+  },
+  "sourceHashes": {
+    "baseline": {
+      "frontend/consumer.ts": "ca05ccd120f7628b555c06db8fce7255ee8af7f8fc0b14f0247ee10c1f66d618",
+      "frontend/lib.ts": "e5baaac6c7f48b2f1aad3f95b012292eb1d3f427930e61bbb1fd657be7dabce5"
+    },
+    "candidate": {
+      "frontend/consumer.ts": "ca05ccd120f7628b555c06db8fce7255ee8af7f8fc0b14f0247ee10c1f66d618",
+      "frontend/lib.ts": "3869dfc22456e112777919330c43941ec3ea7da0ad84f1f760ce81717ad9c018"
+    }
+  },
+  "evidence": {
+    "checkedEvidenceRecords": 8,
+    "errors": []
+  },
+  "assertions": [
+    {
+      "name": "no wrong container call declaration",
+      "status": "pass"
+    },
+    {
+      "name": "file-level import still resolves",
+      "status": "pass"
+    },
+    {
+      "name": "all source evidence hashes/ranges/excerpts/revisions independently reproduce",
+      "status": "pass"
+    },
+    {
+      "name": "readable actual CLI exits 0",
+      "status": "pass"
+    }
+  ],
+  "reportStats": {
+    "changes": 1,
+    "directEdges": 2,
+    "unknowns": 2,
+    "sourceBuildHash": "ca04bac50b7584aaafd9d5602acc8055152e81e25de5fa1b15bb710f76f53ac9"
+  }
+}

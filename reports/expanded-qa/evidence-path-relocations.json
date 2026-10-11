@@ -1,0 +1,14 @@
+[
+  {
+    "originalPath": "synthetic-inputs/foreign-owned-git/.git/config",
+    "packagedPath": "synthetic-inputs/foreign-owned-git/git-evidence/config.txt",
+    "sha256": "71c17a98311180cc0423076c98ef9c99d04a50d4fa7914fa78cd1885057f6ce2",
+    "reason": "Preserve synthetic text evidence outside nested Git metadata"
+  },
+  {
+    "originalPath": "synthetic-inputs/foreign-owned-git/.git/qa-fsmonitor",
+    "packagedPath": "synthetic-inputs/foreign-owned-git/git-evidence/qa-fsmonitor.sh",
+    "sha256": "94e7631c1a15108595845607f68e058a92cb6a07d17cb4da65902b7a5d2671e9",
+    "reason": "Preserve synthetic text evidence outside nested Git metadata"
+  }
+]

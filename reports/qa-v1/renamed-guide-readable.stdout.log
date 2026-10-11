@@ -1,0 +1,12 @@
+Review Analysis — advisory source report
+Analyzer 0.1.0; build 8ee7fcacee9a1b276b2bfab2665d8d3ab771e40eee5f3924f1f301192426e68f
+As of pre-code guidance
+
+Task: Independent QA guidance
+Applicable rules:
+- architecture/no-raw-http v2026.10.1-fixture; owner example-platform: Call external systems through the project gateway abstraction.
+  Example (unreviewed): backend/src/main/java/org/demo/inventory/ChangeJournal.java:1-13 @ tree-sha256:30b95c46c9c66a28cd7cb1c9b3a292fd15195674948fdcb56309f3da8ce1787d (sha256 1b1592e1f551a7200528c57ad9b793ab29d5a770e98beae8b51a65c9c93e1aa2)
+  Example (simulated-reviewed): backend/src/main/java/org/demo/inventory/SimulatedTransport.java:1-13 @ tree-sha256:30b95c46c9c66a28cd7cb1c9b3a292fd15195674948fdcb56309f3da8ce1787d (sha256 5ab0a6358a6fa91025c281e2851ba0697c576d5125ac9c47481d7a296f0c6ff4)
+- contracts/http-lookup v2026.10.1-fixture; owner example-platform: Review known consumers whenever an HTTP endpoint contract changes.
+  Example (unreviewed): backend/src/main/java/org/demo/inventory/InventoryResource.java:1-22 @ tree-sha256:30b95c46c9c66a28cd7cb1c9b3a292fd15195674948fdcb56309f3da8ce1787d (sha256 920735e66d6213c8d0c30cd74c1256be750562bc331aaa4b7e12daea03563c77)
+No human approval is inferred. Reviewed examples/exceptions are assertions from supplied configuration; simulation records are demonstrations only.

@@ -1,0 +1,3840 @@
+{
+  "status": 200,
+  "headers": {
+    "cache-control": "no-store",
+    "connection": "keep-alive",
+    "content-type": "application/json; charset=utf-8",
+    "date": "Sun, 11 Oct 2026 17:48:27 GMT",
+    "keep-alive": "timeout=5",
+    "transfer-encoding": "chunked",
+    "x-content-type-options": "nosniff"
+  },
+  "body": {
+    "schemaVersion": "2.0",
+    "build": {
+      "version": "0.2.0",
+      "sourceBuildHash": "0427f5fed8a45a3d4dbc5523f1d0f8afb57949bac0df1f9bef249fd73ae31061",
+      "parsers": {
+        "java": "java-parser@3.0.1",
+        "typescript": "typescript@5.9.3"
+      }
+    },
+    "analyzer": {
+      "version": "0.2.0",
+      "sourceBuildHash": "0427f5fed8a45a3d4dbc5523f1d0f8afb57949bac0df1f9bef249fd73ae31061",
+      "parsers": {
+        "java": "java-parser@3.0.1",
+        "typescript": "typescript@5.9.3"
+      }
+    },
+    "advisory": true,
+    "asOf": "2026-10-11",
+    "graph": {
+      "nodes": [
+        {
+          "id": "backend::src/main/java/example/customers/CustomerLookupController.java",
+          "kind": "file",
+          "label": "CustomerLookupController.java",
+          "path": "src/main/java/example/customers/CustomerLookupController.java",
+          "projectId": "backend",
+          "repository": "synthetic/backend",
+          "module": "backend",
+          "language": "java",
+          "changed": false,
+          "changeKinds": [],
+          "evidence": {
+            "path": "src/main/java/example/customers/CustomerLookupController.java",
+            "range": {
+              "startLine": 1,
+              "endLine": 1
+            },
+            "revision": "tree-sha256:1e6b5d01ce25a42b4ebfa1863b87c068c2d233113f7e71015207ba89f2a34b88",
+            "fileHash": "28ec39a06652ee166d68a1c9e489c6ad1c43c970fd21d48c4d7675b79401300b",
+            "excerpt": "package example.customers;",
+            "projectId": "backend",
+            "repository": "synthetic/backend"
+          },
+          "declarations": [
+            {
+              "key": "example.customers.CustomerLookupController",
+              "name": "CustomerLookupController",
+              "kind": "class",
+              "signature": "@RestController\n@RequestMapping(\"/api\")\npublic class CustomerLookupController",
+              "evidence": {
+                "path": "src/main/java/example/customers/CustomerLookupController.java",
+                "range": {
+                  "startLine": 9,
+                  "endLine": 16
+                },
+                "revision": "tree-sha256:1e6b5d01ce25a42b4ebfa1863b87c068c2d233113f7e71015207ba89f2a34b88",
+                "fileHash": "28ec39a06652ee166d68a1c9e489c6ad1c43c970fd21d48c4d7675b79401300b",
+                "excerpt": "@RestController\n@RequestMapping(\"/api\")\npublic class CustomerLookupController {\n    @GetMapping(\"/customers/lookup\")\n    public CustomerResponse lookup(@RequestParam String id) {\n        return new CustomerResponse(id, \"Ada Example\");\n    }\n}",
+                "projectId": "backend",
+                "repository": "synthetic/backend"
+              }
+            },
+            {
+              "key": "example.customers.CustomerLookupController#lookup/1",
+              "name": "lookup",
+              "kind": "method",
+              "signature": "@GetMapping(\"/customers/lookup\")\n    public CustomerResponse lookup(@RequestParam String id)",
+              "evidence": {
+                "path": "src/main/java/example/customers/CustomerLookupController.java",
+                "range": {
+                  "startLine": 12,
+                  "endLine": 15
+                },
+                "revision": "tree-sha256:1e6b5d01ce25a42b4ebfa1863b87c068c2d233113f7e71015207ba89f2a34b88",
+                "fileHash": "28ec39a06652ee166d68a1c9e489c6ad1c43c970fd21d48c4d7675b79401300b",
+                "excerpt": "    @GetMapping(\"/customers/lookup\")\n    public CustomerResponse lookup(@RequestParam String id) {\n        return new CustomerResponse(id, \"Ada Example\");\n    }",
+                "projectId": "backend",
+                "repository": "synthetic/backend"
+              }
+            }
+          ],
+          "phases": [
+            "baseline",
+            "candidate"
+          ]
+        },
+        {
+          "id": "backend::src/main/java/example/customers/CustomerResponse.java",
+          "kind": "file",
+          "label": "CustomerResponse.java",
+          "path": "src/main/java/example/customers/CustomerResponse.java",
+          "projectId": "backend",
+          "repository": "synthetic/backend",
+          "module": "backend",
+          "language": "java",
+          "changed": false,
+          "changeKinds": [],
+          "evidence": {
+            "path": "src/main/java/example/customers/CustomerResponse.java",
+            "range": {
+              "startLine": 1,
+              "endLine": 1
+            },
+            "revision": "tree-sha256:1e6b5d01ce25a42b4ebfa1863b87c068c2d233113f7e71015207ba89f2a34b88",
+            "fileHash": "fe4a076477f47074f1ca4a4140e45648ce3e2110fef9cf31fd934ad2bd1dfe4a",
+            "excerpt": "package example.customers;",
+            "projectId": "backend",
+            "repository": "synthetic/backend"
+          },
+          "declarations": [
+            {
+              "key": "example.customers.CustomerResponse",
+              "name": "CustomerResponse",
+              "kind": "record",
+              "signature": "public record CustomerResponse(String id, String displayName)",
+              "evidence": {
+                "path": "src/main/java/example/customers/CustomerResponse.java",
+                "range": {
+                  "startLine": 3,
+                  "endLine": 3
+                },
+                "revision": "tree-sha256:1e6b5d01ce25a42b4ebfa1863b87c068c2d233113f7e71015207ba89f2a34b88",
+                "fileHash": "fe4a076477f47074f1ca4a4140e45648ce3e2110fef9cf31fd934ad2bd1dfe4a",
+                "excerpt": "public record CustomerResponse(String id, String displayName) {}",
+                "projectId": "backend",
+                "repository": "synthetic/backend"
+              }
+            },
+            {
+              "key": "example.customers.CustomerResponse#displayName",
+              "name": "displayName",
+              "kind": "component",
+              "signature": "String displayName",
+              "evidence": {
+                "path": "src/main/java/example/customers/CustomerResponse.java",
+                "range": {
+                  "startLine": 3,
+                  "endLine": 3
+                },
+                "revision": "tree-sha256:1e6b5d01ce25a42b4ebfa1863b87c068c2d233113f7e71015207ba89f2a34b88",
+                "fileHash": "fe4a076477f47074f1ca4a4140e45648ce3e2110fef9cf31fd934ad2bd1dfe4a",
+                "excerpt": "public record CustomerResponse(String id, String displayName) {}",
+                "projectId": "backend",
+                "repository": "synthetic/backend"
+              }
+            },
+            {
+              "key": "example.customers.CustomerResponse#id",
+              "name": "id",
+              "kind": "component",
+              "signature": "String id",
+              "evidence": {
+                "path": "src/main/java/example/customers/CustomerResponse.java",
+                "range": {
+                  "startLine": 3,
+                  "endLine": 3
+                },
+                "revision": "tree-sha256:1e6b5d01ce25a42b4ebfa1863b87c068c2d233113f7e71015207ba89f2a34b88",
+                "fileHash": "fe4a076477f47074f1ca4a4140e45648ce3e2110fef9cf31fd934ad2bd1dfe4a",
+                "excerpt": "public record CustomerResponse(String id, String displayName) {}",
+                "projectId": "backend",
+                "repository": "synthetic/backend"
+              }
+            }
+          ],
+          "phases": [
+            "baseline",
+            "candidate"
+          ]
+        },
+        {
+          "id": "backend::src/test/java/example/customers/CustomerLookupControllerTest.java",
+          "kind": "file",
+          "label": "CustomerLookupControllerTest.java",
+          "path": "src/test/java/example/customers/CustomerLookupControllerTest.java",
+          "projectId": "backend",
+          "repository": "synthetic/backend",
+          "module": "backend",
+          "language": "java",
+          "changed": false,
+          "changeKinds": [],
+          "evidence": {
+            "path": "src/test/java/example/customers/CustomerLookupControllerTest.java",
+            "range": {
+              "startLine": 1,
+              "endLine": 1
+            },
+            "revision": "tree-sha256:1e6b5d01ce25a42b4ebfa1863b87c068c2d233113f7e71015207ba89f2a34b88",
+            "fileHash": "aa3a223914ae9a6772826e29cf6c8d54eec522fa0869dcaff96832f265bb5184",
+            "excerpt": "package example.customers;",
+            "projectId": "backend",
+            "repository": "synthetic/backend"
+          },
+          "declarations": [
+            {
+              "key": "example.customers.CustomerLookupControllerTest",
+              "name": "CustomerLookupControllerTest",
+              "kind": "class",
+              "signature": "class CustomerLookupControllerTest",
+              "evidence": {
+                "path": "src/test/java/example/customers/CustomerLookupControllerTest.java",
+                "range": {
+                  "startLine": 7,
+                  "endLine": 19
+                },
+                "revision": "tree-sha256:1e6b5d01ce25a42b4ebfa1863b87c068c2d233113f7e71015207ba89f2a34b88",
+                "fileHash": "aa3a223914ae9a6772826e29cf6c8d54eec522fa0869dcaff96832f265bb5184",
+                "excerpt": "class CustomerLookupControllerTest {\n    @Test\n    void lookupByIdReturnsMatchingCustomer() {\n        var response = new CustomerLookupController().lookup(\"customer-1\");\n        assertEquals(\"customer-1\", response.id());\n    }\n\n    @Test\n    void returnsDisplayName() {\n        var response = new CustomerLookupController().lookup(\"customer-1\");\n        assertEquals(\"Ada Example\", response.displayName());\n    }\n}",
+                "projectId": "backend",
+                "repository": "synthetic/backend"
+              }
+            },
+            {
+              "key": "example.customers.CustomerLookupControllerTest#lookupByIdReturnsMatchingCustomer/0",
+              "name": "lookupByIdReturnsMatchingCustomer",
+              "kind": "method",
+              "signature": "@Test\n    void lookupByIdReturnsMatchingCustomer()",
+              "evidence": {
+                "path": "src/test/java/example/customers/CustomerLookupControllerTest.java",
+                "range": {
+                  "startLine": 8,
+                  "endLine": 12
+                },
+                "revision": "tree-sha256:1e6b5d01ce25a42b4ebfa1863b87c068c2d233113f7e71015207ba89f2a34b88",
+                "fileHash": "aa3a223914ae9a6772826e29cf6c8d54eec522fa0869dcaff96832f265bb5184",
+                "excerpt": "    @Test\n    void lookupByIdReturnsMatchingCustomer() {\n        var response = new CustomerLookupController().lookup(\"customer-1\");\n        assertEquals(\"customer-1\", response.id());\n    }",
+                "projectId": "backend",
+                "repository": "synthetic/backend"
+              }
+            },
+            {
+              "key": "example.customers.CustomerLookupControllerTest#returnsDisplayName/0",
+              "name": "returnsDisplayName",
+              "kind": "method",
+              "signature": "@Test\n    void returnsDisplayName()",
+              "evidence": {
+                "path": "src/test/java/example/customers/CustomerLookupControllerTest.java",
+                "range": {
+                  "startLine": 14,
+                  "endLine": 18
+                },
+                "revision": "tree-sha256:1e6b5d01ce25a42b4ebfa1863b87c068c2d233113f7e71015207ba89f2a34b88",
+                "fileHash": "aa3a223914ae9a6772826e29cf6c8d54eec522fa0869dcaff96832f265bb5184",
+                "excerpt": "    @Test\n    void returnsDisplayName() {\n        var response = new CustomerLookupController().lookup(\"customer-1\");\n        assertEquals(\"Ada Example\", response.displayName());\n    }",
+                "projectId": "backend",
+                "repository": "synthetic/backend"
+              }
+            }
+          ],
+          "phases": [
+            "baseline",
+            "candidate"
+          ]
+        },
+        {
+          "id": "frontend::src/customerApi.ts",
+          "kind": "file",
+          "label": "customerApi.ts",
+          "path": "src/customerApi.ts",
+          "projectId": "frontend",
+          "repository": "synthetic/frontend",
+          "module": "frontend",
+          "language": "typescript",
+          "changed": false,
+          "changeKinds": [],
+          "evidence": {
+            "path": "src/customerApi.ts",
+            "range": {
+              "startLine": 1,
+              "endLine": 1
+            },
+            "revision": "tree-sha256:cb1428398ae523807aebfe0b726102d6c698d766aa08cdc469c758646e846138",
+            "fileHash": "2cdee9cc200708bdb5c3184490c8e02a2597c6ada3b97b79ff5b66eb4c6a7095",
+            "excerpt": "export interface CustomerResponse {",
+            "projectId": "frontend",
+            "repository": "synthetic/frontend"
+          },
+          "declarations": [
+            {
+              "key": "CustomerResponse",
+              "name": "CustomerResponse",
+              "kind": "interface",
+              "signature": "export interface CustomerResponse {\nid: string;\ndisplayName: string;\n}",
+              "evidence": {
+                "path": "src/customerApi.ts",
+                "range": {
+                  "startLine": 1,
+                  "endLine": 4
+                },
+                "revision": "tree-sha256:cb1428398ae523807aebfe0b726102d6c698d766aa08cdc469c758646e846138",
+                "fileHash": "2cdee9cc200708bdb5c3184490c8e02a2597c6ada3b97b79ff5b66eb4c6a7095",
+                "excerpt": "export interface CustomerResponse {\n  id: string;\n  displayName: string;\n}",
+                "projectId": "frontend",
+                "repository": "synthetic/frontend"
+              }
+            },
+            {
+              "key": "CustomerResponse.id",
+              "name": "id",
+              "kind": "property",
+              "signature": "id: string;",
+              "evidence": {
+                "path": "src/customerApi.ts",
+                "range": {
+                  "startLine": 2,
+                  "endLine": 2
+                },
+                "revision": "tree-sha256:cb1428398ae523807aebfe0b726102d6c698d766aa08cdc469c758646e846138",
+                "fileHash": "2cdee9cc200708bdb5c3184490c8e02a2597c6ada3b97b79ff5b66eb4c6a7095",
+                "excerpt": "  id: string;",
+                "projectId": "frontend",
+                "repository": "synthetic/frontend"
+              }
+            },
+            {
+              "key": "CustomerResponse.displayName",
+              "name": "displayName",
+              "kind": "property",
+              "signature": "displayName: string;",
+              "evidence": {
+                "path": "src/customerApi.ts",
+                "range": {
+                  "startLine": 3,
+                  "endLine": 3
+                },
+                "revision": "tree-sha256:cb1428398ae523807aebfe0b726102d6c698d766aa08cdc469c758646e846138",
+                "fileHash": "2cdee9cc200708bdb5c3184490c8e02a2597c6ada3b97b79ff5b66eb4c6a7095",
+                "excerpt": "  displayName: string;",
+                "projectId": "frontend",
+                "repository": "synthetic/frontend"
+              }
+            },
+            {
+              "key": "lookupCustomer",
+              "name": "lookupCustomer",
+              "kind": "function",
+              "signature": "export async function lookupCustomer(id: string): Promise<CustomerResponse>",
+              "evidence": {
+                "path": "src/customerApi.ts",
+                "range": {
+                  "startLine": 7,
+                  "endLine": 11
+                },
+                "revision": "tree-sha256:cb1428398ae523807aebfe0b726102d6c698d766aa08cdc469c758646e846138",
+                "fileHash": "2cdee9cc200708bdb5c3184490c8e02a2597c6ada3b97b79ff5b66eb4c6a7095",
+                "excerpt": "export async function lookupCustomer(id: string): Promise<CustomerResponse> {\n  const response = await fetch(`/api/customers/lookup?id=${encodeURIComponent(id)}`);\n  if (!response.ok) throw new Error('Customer lookup failed');\n  return response.json();\n}",
+                "projectId": "frontend",
+                "repository": "synthetic/frontend"
+              }
+            }
+          ],
+          "phases": [
+            "baseline",
+            "candidate"
+          ]
+        },
+        {
+          "id": "frontend::src/customerLookup.spec.ts",
+          "kind": "file",
+          "label": "customerLookup.spec.ts",
+          "path": "src/customerLookup.spec.ts",
+          "projectId": "frontend",
+          "repository": "synthetic/frontend",
+          "module": "frontend",
+          "language": "typescript",
+          "changed": false,
+          "changeKinds": [],
+          "evidence": {
+            "path": "src/customerLookup.spec.ts",
+            "range": {
+              "startLine": 1,
+              "endLine": 1
+            },
+            "revision": "tree-sha256:cb1428398ae523807aebfe0b726102d6c698d766aa08cdc469c758646e846138",
+            "fileHash": "b033953aaf51f31b7481fedd383143894cd18d3f4aebbc230e99d70bee5db305",
+            "excerpt": "import {test, expect} from '@playwright/test';",
+            "projectId": "frontend",
+            "repository": "synthetic/frontend"
+          },
+          "declarations": [],
+          "phases": [
+            "baseline",
+            "candidate"
+          ]
+        },
+        {
+          "id": "frontend::src/CustomerResult.tsx",
+          "kind": "file",
+          "label": "CustomerResult.tsx",
+          "path": "src/CustomerResult.tsx",
+          "projectId": "frontend",
+          "repository": "synthetic/frontend",
+          "module": "frontend",
+          "language": "typescript",
+          "changed": false,
+          "changeKinds": [],
+          "evidence": {
+            "path": "src/CustomerResult.tsx",
+            "range": {
+              "startLine": 1,
+              "endLine": 1
+            },
+            "revision": "tree-sha256:cb1428398ae523807aebfe0b726102d6c698d766aa08cdc469c758646e846138",
+            "fileHash": "fd213c059dcdf53b40bc3e55e70809aea60b0b0fba019ce3073338108db96655",
+            "excerpt": "import React from 'react';",
+            "projectId": "frontend",
+            "repository": "synthetic/frontend"
+          },
+          "declarations": [
+            {
+              "key": "CustomerResult",
+              "name": "CustomerResult",
+              "kind": "function",
+              "signature": "export function CustomerResult({result}: {result: CustomerResponse | null})",
+              "evidence": {
+                "path": "src/CustomerResult.tsx",
+                "range": {
+                  "startLine": 4,
+                  "endLine": 6
+                },
+                "revision": "tree-sha256:cb1428398ae523807aebfe0b726102d6c698d766aa08cdc469c758646e846138",
+                "fileHash": "fd213c059dcdf53b40bc3e55e70809aea60b0b0fba019ce3073338108db96655",
+                "excerpt": "export function CustomerResult({result}: {result: CustomerResponse | null}) {\n  return <section aria-label=\"Customer result\">{result?.displayName ?? 'Loading customer…'}</section>;\n}",
+                "projectId": "frontend",
+                "repository": "synthetic/frontend"
+              }
+            }
+          ],
+          "phases": [
+            "baseline",
+            "candidate"
+          ]
+        }
+      ],
+      "edges": [
+        {
+          "id": "76ce3a2a1c3d75c99d38032b",
+          "source": "backend::src/main/java/example/customers/CustomerLookupController.java",
+          "target": "backend::src/main/java/example/customers/CustomerResponse.java",
+          "kind": "type",
+          "confidence": "high",
+          "reason": "Java qualified import or same-package type resolves to supplied source",
+          "evidence": {
+            "path": "src/main/java/example/customers/CustomerLookupController.java",
+            "range": {
+              "startLine": 13,
+              "endLine": 13
+            },
+            "revision": "tree-sha256:1e6b5d01ce25a42b4ebfa1863b87c068c2d233113f7e71015207ba89f2a34b88",
+            "fileHash": "28ec39a06652ee166d68a1c9e489c6ad1c43c970fd21d48c4d7675b79401300b",
+            "excerpt": "    public CustomerResponse lookup(@RequestParam String id) {",
+            "projectId": "backend",
+            "repository": "synthetic/backend"
+          },
+          "targetEvidence": {
+            "path": "src/main/java/example/customers/CustomerResponse.java",
+            "range": {
+              "startLine": 3,
+              "endLine": 3
+            },
+            "revision": "tree-sha256:1e6b5d01ce25a42b4ebfa1863b87c068c2d233113f7e71015207ba89f2a34b88",
+            "fileHash": "fe4a076477f47074f1ca4a4140e45648ce3e2110fef9cf31fd934ad2bd1dfe4a",
+            "excerpt": "public record CustomerResponse(String id, String displayName) {}",
+            "projectId": "backend",
+            "repository": "synthetic/backend"
+          },
+          "phase": "baseline",
+          "crossRepository": false,
+          "targetKey": "example.customers.CustomerResponse"
+        },
+        {
+          "id": "d48cd01bfd910f602704e7ae",
+          "source": "backend::src/main/java/example/customers/CustomerLookupController.java",
+          "target": "backend::src/main/java/example/customers/CustomerResponse.java",
+          "kind": "type",
+          "confidence": "high",
+          "reason": "Java qualified import or same-package type resolves to supplied source",
+          "evidence": {
+            "path": "src/main/java/example/customers/CustomerLookupController.java",
+            "range": {
+              "startLine": 14,
+              "endLine": 14
+            },
+            "revision": "tree-sha256:1e6b5d01ce25a42b4ebfa1863b87c068c2d233113f7e71015207ba89f2a34b88",
+            "fileHash": "28ec39a06652ee166d68a1c9e489c6ad1c43c970fd21d48c4d7675b79401300b",
+            "excerpt": "        return new CustomerResponse(id, \"Ada Example\");",
+            "projectId": "backend",
+            "repository": "synthetic/backend"
+          },
+          "targetEvidence": {
+            "path": "src/main/java/example/customers/CustomerResponse.java",
+            "range": {
+              "startLine": 3,
+              "endLine": 3
+            },
+            "revision": "tree-sha256:1e6b5d01ce25a42b4ebfa1863b87c068c2d233113f7e71015207ba89f2a34b88",
+            "fileHash": "fe4a076477f47074f1ca4a4140e45648ce3e2110fef9cf31fd934ad2bd1dfe4a",
+            "excerpt": "public record CustomerResponse(String id, String displayName) {}",
+            "projectId": "backend",
+            "repository": "synthetic/backend"
+          },
+          "phase": "baseline",
+          "crossRepository": false,
+          "targetKey": "example.customers.CustomerResponse"
+        },
+        {
+          "id": "f24862f90c486df06b954d40",
+          "source": "backend::src/main/java/example/customers/CustomerLookupController.java",
+          "target": "backend::src/main/java/example/customers/CustomerLookupController.java",
+          "kind": "http",
+          "confidence": "medium",
+          "reason": "Literal HTTP verb/path matches source Spring mapping; runtime origin/proxy not verified",
+          "evidence": {
+            "path": "src/main/java/example/customers/CustomerLookupController.java",
+            "range": {
+              "startLine": 12,
+              "endLine": 12
+            },
+            "revision": "tree-sha256:1e6b5d01ce25a42b4ebfa1863b87c068c2d233113f7e71015207ba89f2a34b88",
+            "fileHash": "28ec39a06652ee166d68a1c9e489c6ad1c43c970fd21d48c4d7675b79401300b",
+            "excerpt": "    @GetMapping(\"/customers/lookup\")",
+            "projectId": "backend",
+            "repository": "synthetic/backend"
+          },
+          "targetEvidence": {
+            "path": "src/main/java/example/customers/CustomerLookupController.java",
+            "range": {
+              "startLine": 12,
+              "endLine": 15
+            },
+            "revision": "tree-sha256:1e6b5d01ce25a42b4ebfa1863b87c068c2d233113f7e71015207ba89f2a34b88",
+            "fileHash": "28ec39a06652ee166d68a1c9e489c6ad1c43c970fd21d48c4d7675b79401300b",
+            "excerpt": "    @GetMapping(\"/customers/lookup\")\n    public CustomerResponse lookup(@RequestParam String id) {\n        return new CustomerResponse(id, \"Ada Example\");\n    }",
+            "projectId": "backend",
+            "repository": "synthetic/backend"
+          },
+          "phase": "baseline",
+          "crossRepository": false,
+          "targetKey": "example.customers.CustomerLookupController#lookup/1"
+        },
+        {
+          "id": "75834bdd501086f3bdbd6243",
+          "source": "backend::src/test/java/example/customers/CustomerLookupControllerTest.java",
+          "target": "backend::src/main/java/example/customers/CustomerLookupController.java",
+          "kind": "type",
+          "confidence": "high",
+          "reason": "Java qualified import or same-package type resolves to supplied source",
+          "evidence": {
+            "path": "src/test/java/example/customers/CustomerLookupControllerTest.java",
+            "range": {
+              "startLine": 10,
+              "endLine": 10
+            },
+            "revision": "tree-sha256:1e6b5d01ce25a42b4ebfa1863b87c068c2d233113f7e71015207ba89f2a34b88",
+            "fileHash": "aa3a223914ae9a6772826e29cf6c8d54eec522fa0869dcaff96832f265bb5184",
+            "excerpt": "        var response = new CustomerLookupController().lookup(\"customer-1\");",
+            "projectId": "backend",
+            "repository": "synthetic/backend"
+          },
+          "targetEvidence": {
+            "path": "src/main/java/example/customers/CustomerLookupController.java",
+            "range": {
+              "startLine": 9,
+              "endLine": 16
+            },
+            "revision": "tree-sha256:1e6b5d01ce25a42b4ebfa1863b87c068c2d233113f7e71015207ba89f2a34b88",
+            "fileHash": "28ec39a06652ee166d68a1c9e489c6ad1c43c970fd21d48c4d7675b79401300b",
+            "excerpt": "@RestController\n@RequestMapping(\"/api\")\npublic class CustomerLookupController {\n    @GetMapping(\"/customers/lookup\")\n    public CustomerResponse lookup(@RequestParam String id) {\n        return new CustomerResponse(id, \"Ada Example\");\n    }\n}",
+            "projectId": "backend",
+            "repository": "synthetic/backend"
+          },
+          "phase": "baseline",
+          "crossRepository": false,
+          "targetKey": "example.customers.CustomerLookupController"
+        },
+        {
+          "id": "00df0ab813caff3768292318",
+          "source": "backend::src/test/java/example/customers/CustomerLookupControllerTest.java",
+          "target": "backend::src/main/java/example/customers/CustomerLookupController.java",
+          "kind": "type",
+          "confidence": "high",
+          "reason": "Java qualified import or same-package type resolves to supplied source",
+          "evidence": {
+            "path": "src/test/java/example/customers/CustomerLookupControllerTest.java",
+            "range": {
+              "startLine": 16,
+              "endLine": 16
+            },
+            "revision": "tree-sha256:1e6b5d01ce25a42b4ebfa1863b87c068c2d233113f7e71015207ba89f2a34b88",
+            "fileHash": "aa3a223914ae9a6772826e29cf6c8d54eec522fa0869dcaff96832f265bb5184",
+            "excerpt": "        var response = new CustomerLookupController().lookup(\"customer-1\");",
+            "projectId": "backend",
+            "repository": "synthetic/backend"
+          },
+          "targetEvidence": {
+            "path": "src/main/java/example/customers/CustomerLookupController.java",
+            "range": {
+              "startLine": 9,
+              "endLine": 16
+            },
+            "revision": "tree-sha256:1e6b5d01ce25a42b4ebfa1863b87c068c2d233113f7e71015207ba89f2a34b88",
+            "fileHash": "28ec39a06652ee166d68a1c9e489c6ad1c43c970fd21d48c4d7675b79401300b",
+            "excerpt": "@RestController\n@RequestMapping(\"/api\")\npublic class CustomerLookupController {\n    @GetMapping(\"/customers/lookup\")\n    public CustomerResponse lookup(@RequestParam String id) {\n        return new CustomerResponse(id, \"Ada Example\");\n    }\n}",
+            "projectId": "backend",
+            "repository": "synthetic/backend"
+          },
+          "phase": "baseline",
+          "crossRepository": false,
+          "targetKey": "example.customers.CustomerLookupController"
+        },
+        {
+          "id": "be2356af34328ec3695e9ebf",
+          "source": "backend::src/main/java/example/customers/CustomerLookupController.java",
+          "target": "backend::src/main/java/example/customers/CustomerResponse.java",
+          "kind": "type",
+          "confidence": "high",
+          "reason": "Java qualified import or same-package type resolves to supplied source",
+          "evidence": {
+            "path": "src/main/java/example/customers/CustomerLookupController.java",
+            "range": {
+              "startLine": 13,
+              "endLine": 13
+            },
+            "revision": "tree-sha256:1e6b5d01ce25a42b4ebfa1863b87c068c2d233113f7e71015207ba89f2a34b88",
+            "fileHash": "28ec39a06652ee166d68a1c9e489c6ad1c43c970fd21d48c4d7675b79401300b",
+            "excerpt": "    public CustomerResponse lookup(@RequestParam String id) {",
+            "projectId": "backend",
+            "repository": "synthetic/backend"
+          },
+          "targetEvidence": {
+            "path": "src/main/java/example/customers/CustomerResponse.java",
+            "range": {
+              "startLine": 3,
+              "endLine": 3
+            },
+            "revision": "tree-sha256:1e6b5d01ce25a42b4ebfa1863b87c068c2d233113f7e71015207ba89f2a34b88",
+            "fileHash": "fe4a076477f47074f1ca4a4140e45648ce3e2110fef9cf31fd934ad2bd1dfe4a",
+            "excerpt": "public record CustomerResponse(String id, String displayName) {}",
+            "projectId": "backend",
+            "repository": "synthetic/backend"
+          },
+          "phase": "candidate",
+          "crossRepository": false,
+          "targetKey": "example.customers.CustomerResponse"
+        },
+        {
+          "id": "270489a4517bfcd646697b43",
+          "source": "backend::src/main/java/example/customers/CustomerLookupController.java",
+          "target": "backend::src/main/java/example/customers/CustomerResponse.java",
+          "kind": "type",
+          "confidence": "high",
+          "reason": "Java qualified import or same-package type resolves to supplied source",
+          "evidence": {
+            "path": "src/main/java/example/customers/CustomerLookupController.java",
+            "range": {
+              "startLine": 14,
+              "endLine": 14
+            },
+            "revision": "tree-sha256:1e6b5d01ce25a42b4ebfa1863b87c068c2d233113f7e71015207ba89f2a34b88",
+            "fileHash": "28ec39a06652ee166d68a1c9e489c6ad1c43c970fd21d48c4d7675b79401300b",
+            "excerpt": "        return new CustomerResponse(id, \"Ada Example\");",
+            "projectId": "backend",
+            "repository": "synthetic/backend"
+          },
+          "targetEvidence": {
+            "path": "src/main/java/example/customers/CustomerResponse.java",
+            "range": {
+              "startLine": 3,
+              "endLine": 3
+            },
+            "revision": "tree-sha256:1e6b5d01ce25a42b4ebfa1863b87c068c2d233113f7e71015207ba89f2a34b88",
+            "fileHash": "fe4a076477f47074f1ca4a4140e45648ce3e2110fef9cf31fd934ad2bd1dfe4a",
+            "excerpt": "public record CustomerResponse(String id, String displayName) {}",
+            "projectId": "backend",
+            "repository": "synthetic/backend"
+          },
+          "phase": "candidate",
+          "crossRepository": false,
+          "targetKey": "example.customers.CustomerResponse"
+        },
+        {
+          "id": "6eafd017d7b78d96bc0b14fa",
+          "source": "backend::src/main/java/example/customers/CustomerLookupController.java",
+          "target": "backend::src/main/java/example/customers/CustomerLookupController.java",
+          "kind": "http",
+          "confidence": "medium",
+          "reason": "Literal HTTP verb/path matches source Spring mapping; runtime origin/proxy not verified",
+          "evidence": {
+            "path": "src/main/java/example/customers/CustomerLookupController.java",
+            "range": {
+              "startLine": 12,
+              "endLine": 12
+            },
+            "revision": "tree-sha256:1e6b5d01ce25a42b4ebfa1863b87c068c2d233113f7e71015207ba89f2a34b88",
+            "fileHash": "28ec39a06652ee166d68a1c9e489c6ad1c43c970fd21d48c4d7675b79401300b",
+            "excerpt": "    @GetMapping(\"/customers/lookup\")",
+            "projectId": "backend",
+            "repository": "synthetic/backend"
+          },
+          "targetEvidence": {
+            "path": "src/main/java/example/customers/CustomerLookupController.java",
+            "range": {
+              "startLine": 12,
+              "endLine": 15
+            },
+            "revision": "tree-sha256:1e6b5d01ce25a42b4ebfa1863b87c068c2d233113f7e71015207ba89f2a34b88",
+            "fileHash": "28ec39a06652ee166d68a1c9e489c6ad1c43c970fd21d48c4d7675b79401300b",
+            "excerpt": "    @GetMapping(\"/customers/lookup\")\n    public CustomerResponse lookup(@RequestParam String id) {\n        return new CustomerResponse(id, \"Ada Example\");\n    }",
+            "projectId": "backend",
+            "repository": "synthetic/backend"
+          },
+          "phase": "candidate",
+          "crossRepository": false,
+          "targetKey": "example.customers.CustomerLookupController#lookup/1"
+        },
+        {
+          "id": "20cc056408b44e5c766f53c3",
+          "source": "backend::src/test/java/example/customers/CustomerLookupControllerTest.java",
+          "target": "backend::src/main/java/example/customers/CustomerLookupController.java",
+          "kind": "type",
+          "confidence": "high",
+          "reason": "Java qualified import or same-package type resolves to supplied source",
+          "evidence": {
+            "path": "src/test/java/example/customers/CustomerLookupControllerTest.java",
+            "range": {
+              "startLine": 10,
+              "endLine": 10
+            },
+            "revision": "tree-sha256:1e6b5d01ce25a42b4ebfa1863b87c068c2d233113f7e71015207ba89f2a34b88",
+            "fileHash": "aa3a223914ae9a6772826e29cf6c8d54eec522fa0869dcaff96832f265bb5184",
+            "excerpt": "        var response = new CustomerLookupController().lookup(\"customer-1\");",
+            "projectId": "backend",
+            "repository": "synthetic/backend"
+          },
+          "targetEvidence": {
+            "path": "src/main/java/example/customers/CustomerLookupController.java",
+            "range": {
+              "startLine": 9,
+              "endLine": 16
+            },
+            "revision": "tree-sha256:1e6b5d01ce25a42b4ebfa1863b87c068c2d233113f7e71015207ba89f2a34b88",
+            "fileHash": "28ec39a06652ee166d68a1c9e489c6ad1c43c970fd21d48c4d7675b79401300b",
+            "excerpt": "@RestController\n@RequestMapping(\"/api\")\npublic class CustomerLookupController {\n    @GetMapping(\"/customers/lookup\")\n    public CustomerResponse lookup(@RequestParam String id) {\n        return new CustomerResponse(id, \"Ada Example\");\n    }\n}",
+            "projectId": "backend",
+            "repository": "synthetic/backend"
+          },
+          "phase": "candidate",
+          "crossRepository": false,
+          "targetKey": "example.customers.CustomerLookupController"
+        },
+        {
+          "id": "da42f9a4294889c2cba0d143",
+          "source": "backend::src/test/java/example/customers/CustomerLookupControllerTest.java",
+          "target": "backend::src/main/java/example/customers/CustomerLookupController.java",
+          "kind": "type",
+          "confidence": "high",
+          "reason": "Java qualified import or same-package type resolves to supplied source",
+          "evidence": {
+            "path": "src/test/java/example/customers/CustomerLookupControllerTest.java",
+            "range": {
+              "startLine": 16,
+              "endLine": 16
+            },
+            "revision": "tree-sha256:1e6b5d01ce25a42b4ebfa1863b87c068c2d233113f7e71015207ba89f2a34b88",
+            "fileHash": "aa3a223914ae9a6772826e29cf6c8d54eec522fa0869dcaff96832f265bb5184",
+            "excerpt": "        var response = new CustomerLookupController().lookup(\"customer-1\");",
+            "projectId": "backend",
+            "repository": "synthetic/backend"
+          },
+          "targetEvidence": {
+            "path": "src/main/java/example/customers/CustomerLookupController.java",
+            "range": {
+              "startLine": 9,
+              "endLine": 16
+            },
+            "revision": "tree-sha256:1e6b5d01ce25a42b4ebfa1863b87c068c2d233113f7e71015207ba89f2a34b88",
+            "fileHash": "28ec39a06652ee166d68a1c9e489c6ad1c43c970fd21d48c4d7675b79401300b",
+            "excerpt": "@RestController\n@RequestMapping(\"/api\")\npublic class CustomerLookupController {\n    @GetMapping(\"/customers/lookup\")\n    public CustomerResponse lookup(@RequestParam String id) {\n        return new CustomerResponse(id, \"Ada Example\");\n    }\n}",
+            "projectId": "backend",
+            "repository": "synthetic/backend"
+          },
+          "phase": "candidate",
+          "crossRepository": false,
+          "targetKey": "example.customers.CustomerLookupController"
+        },
+        {
+          "id": "37765d10566cd3fe4846746d",
+          "source": "frontend::src/customerApi.ts",
+          "target": "frontend::src/customerApi.ts",
+          "kind": "type",
+          "confidence": "high",
+          "reason": "Same-file lexical binding",
+          "evidence": {
+            "path": "src/customerApi.ts",
+            "range": {
+              "startLine": 7,
+              "endLine": 7
+            },
+            "revision": "tree-sha256:cb1428398ae523807aebfe0b726102d6c698d766aa08cdc469c758646e846138",
+            "fileHash": "2cdee9cc200708bdb5c3184490c8e02a2597c6ada3b97b79ff5b66eb4c6a7095",
+            "excerpt": "export async function lookupCustomer(id: string): Promise<CustomerResponse> {",
+            "projectId": "frontend",
+            "repository": "synthetic/frontend"
+          },
+          "targetEvidence": {
+            "path": "src/customerApi.ts",
+            "range": {
+              "startLine": 1,
+              "endLine": 4
+            },
+            "revision": "tree-sha256:cb1428398ae523807aebfe0b726102d6c698d766aa08cdc469c758646e846138",
+            "fileHash": "2cdee9cc200708bdb5c3184490c8e02a2597c6ada3b97b79ff5b66eb4c6a7095",
+            "excerpt": "export interface CustomerResponse {\n  id: string;\n  displayName: string;\n}",
+            "projectId": "frontend",
+            "repository": "synthetic/frontend"
+          },
+          "phase": "baseline",
+          "crossRepository": false,
+          "targetKey": "CustomerResponse"
+        },
+        {
+          "id": "448e749c6314f5790104d273",
+          "source": "frontend::src/CustomerResult.tsx",
+          "target": "frontend::src/customerApi.ts",
+          "kind": "import",
+          "confidence": "high",
+          "reason": "Relative import resolves to supplied source file",
+          "evidence": {
+            "path": "src/CustomerResult.tsx",
+            "range": {
+              "startLine": 2,
+              "endLine": 2
+            },
+            "revision": "tree-sha256:cb1428398ae523807aebfe0b726102d6c698d766aa08cdc469c758646e846138",
+            "fileHash": "fd213c059dcdf53b40bc3e55e70809aea60b0b0fba019ce3073338108db96655",
+            "excerpt": "import type {CustomerResponse} from './customerApi';",
+            "projectId": "frontend",
+            "repository": "synthetic/frontend"
+          },
+          "targetEvidence": {
+            "path": "src/customerApi.ts",
+            "range": {
+              "startLine": 1,
+              "endLine": 1
+            },
+            "revision": "tree-sha256:cb1428398ae523807aebfe0b726102d6c698d766aa08cdc469c758646e846138",
+            "fileHash": "2cdee9cc200708bdb5c3184490c8e02a2597c6ada3b97b79ff5b66eb4c6a7095",
+            "excerpt": "export interface CustomerResponse {",
+            "projectId": "frontend",
+            "repository": "synthetic/frontend"
+          },
+          "phase": "baseline",
+          "crossRepository": false,
+          "targetKey": null
+        },
+        {
+          "id": "6528f0e403e30bf21ffae720",
+          "source": "frontend::src/CustomerResult.tsx",
+          "target": "frontend::src/customerApi.ts",
+          "kind": "type",
+          "confidence": "high",
+          "reason": "Imported binding resolves to a supplied named declaration",
+          "evidence": {
+            "path": "src/CustomerResult.tsx",
+            "range": {
+              "startLine": 4,
+              "endLine": 4
+            },
+            "revision": "tree-sha256:cb1428398ae523807aebfe0b726102d6c698d766aa08cdc469c758646e846138",
+            "fileHash": "fd213c059dcdf53b40bc3e55e70809aea60b0b0fba019ce3073338108db96655",
+            "excerpt": "export function CustomerResult({result}: {result: CustomerResponse | null}) {",
+            "projectId": "frontend",
+            "repository": "synthetic/frontend"
+          },
+          "targetEvidence": {
+            "path": "src/customerApi.ts",
+            "range": {
+              "startLine": 1,
+              "endLine": 4
+            },
+            "revision": "tree-sha256:cb1428398ae523807aebfe0b726102d6c698d766aa08cdc469c758646e846138",
+            "fileHash": "2cdee9cc200708bdb5c3184490c8e02a2597c6ada3b97b79ff5b66eb4c6a7095",
+            "excerpt": "export interface CustomerResponse {\n  id: string;\n  displayName: string;\n}",
+            "projectId": "frontend",
+            "repository": "synthetic/frontend"
+          },
+          "phase": "baseline",
+          "crossRepository": false,
+          "targetKey": "CustomerResponse"
+        },
+        {
+          "id": "a2c617ae6ac151851ea5b021",
+          "source": "frontend::src/customerApi.ts",
+          "target": "frontend::src/customerApi.ts",
+          "kind": "type",
+          "confidence": "high",
+          "reason": "Same-file lexical binding",
+          "evidence": {
+            "path": "src/customerApi.ts",
+            "range": {
+              "startLine": 7,
+              "endLine": 7
+            },
+            "revision": "tree-sha256:cb1428398ae523807aebfe0b726102d6c698d766aa08cdc469c758646e846138",
+            "fileHash": "2cdee9cc200708bdb5c3184490c8e02a2597c6ada3b97b79ff5b66eb4c6a7095",
+            "excerpt": "export async function lookupCustomer(id: string): Promise<CustomerResponse> {",
+            "projectId": "frontend",
+            "repository": "synthetic/frontend"
+          },
+          "targetEvidence": {
+            "path": "src/customerApi.ts",
+            "range": {
+              "startLine": 1,
+              "endLine": 4
+            },
+            "revision": "tree-sha256:cb1428398ae523807aebfe0b726102d6c698d766aa08cdc469c758646e846138",
+            "fileHash": "2cdee9cc200708bdb5c3184490c8e02a2597c6ada3b97b79ff5b66eb4c6a7095",
+            "excerpt": "export interface CustomerResponse {\n  id: string;\n  displayName: string;\n}",
+            "projectId": "frontend",
+            "repository": "synthetic/frontend"
+          },
+          "phase": "candidate",
+          "crossRepository": false,
+          "targetKey": "CustomerResponse"
+        },
+        {
+          "id": "2d0547fe52e64a005fa4c457",
+          "source": "frontend::src/CustomerResult.tsx",
+          "target": "frontend::src/customerApi.ts",
+          "kind": "import",
+          "confidence": "high",
+          "reason": "Relative import resolves to supplied source file",
+          "evidence": {
+            "path": "src/CustomerResult.tsx",
+            "range": {
+              "startLine": 2,
+              "endLine": 2
+            },
+            "revision": "tree-sha256:cb1428398ae523807aebfe0b726102d6c698d766aa08cdc469c758646e846138",
+            "fileHash": "fd213c059dcdf53b40bc3e55e70809aea60b0b0fba019ce3073338108db96655",
+            "excerpt": "import type {CustomerResponse} from './customerApi';",
+            "projectId": "frontend",
+            "repository": "synthetic/frontend"
+          },
+          "targetEvidence": {
+            "path": "src/customerApi.ts",
+            "range": {
+              "startLine": 1,
+              "endLine": 1
+            },
+            "revision": "tree-sha256:cb1428398ae523807aebfe0b726102d6c698d766aa08cdc469c758646e846138",
+            "fileHash": "2cdee9cc200708bdb5c3184490c8e02a2597c6ada3b97b79ff5b66eb4c6a7095",
+            "excerpt": "export interface CustomerResponse {",
+            "projectId": "frontend",
+            "repository": "synthetic/frontend"
+          },
+          "phase": "candidate",
+          "crossRepository": false,
+          "targetKey": null
+        },
+        {
+          "id": "e04391ac1197a79f8ad56ad3",
+          "source": "frontend::src/CustomerResult.tsx",
+          "target": "frontend::src/customerApi.ts",
+          "kind": "type",
+          "confidence": "high",
+          "reason": "Imported binding resolves to a supplied named declaration",
+          "evidence": {
+            "path": "src/CustomerResult.tsx",
+            "range": {
+              "startLine": 4,
+              "endLine": 4
+            },
+            "revision": "tree-sha256:cb1428398ae523807aebfe0b726102d6c698d766aa08cdc469c758646e846138",
+            "fileHash": "fd213c059dcdf53b40bc3e55e70809aea60b0b0fba019ce3073338108db96655",
+            "excerpt": "export function CustomerResult({result}: {result: CustomerResponse | null}) {",
+            "projectId": "frontend",
+            "repository": "synthetic/frontend"
+          },
+          "targetEvidence": {
+            "path": "src/customerApi.ts",
+            "range": {
+              "startLine": 1,
+              "endLine": 4
+            },
+            "revision": "tree-sha256:cb1428398ae523807aebfe0b726102d6c698d766aa08cdc469c758646e846138",
+            "fileHash": "2cdee9cc200708bdb5c3184490c8e02a2597c6ada3b97b79ff5b66eb4c6a7095",
+            "excerpt": "export interface CustomerResponse {\n  id: string;\n  displayName: string;\n}",
+            "projectId": "frontend",
+            "repository": "synthetic/frontend"
+          },
+          "phase": "candidate",
+          "crossRepository": false,
+          "targetKey": "CustomerResponse"
+        }
+      ],
+      "complete": false,
+      "direction": "consumer-to-dependency"
+    },
+    "projectMetadata": [
+      {
+        "id": "backend",
+        "label": "backend",
+        "repository": "synthetic/backend",
+        "module": "backend"
+      },
+      {
+        "id": "frontend",
+        "label": "frontend",
+        "repository": "synthetic/frontend",
+        "module": "frontend"
+      }
+    ],
+    "workspace": {
+      "version": "qa-mounted-requirements-1",
+      "mappings": [
+        {
+          "id": "qa-explicit-api",
+          "kind": "http",
+          "fromProject": "frontend",
+          "toProject": "backend",
+          "urlPrefix": "/api/",
+          "owner": "Synthetic QA",
+          "version": "1"
+        }
+      ],
+      "configHash": "e70fd0d57d6fa6ea0cbf028e36eb690e69edfd3a37666426185c2ace298336c5"
+    },
+    "changes": [],
+    "impact": {
+      "paths": [],
+      "limits": {
+        "maxDepth": 12,
+        "representativePaths": true,
+        "complete": false,
+        "reason": "One bounded representative chain per expanded node and phase; alternate paths and deeper chains may be omitted"
+      },
+      "direct": [],
+      "indirect": []
+    },
+    "findings": [],
+    "guidance": {
+      "projects": [
+        {
+          "projectId": "backend",
+          "task": "Review proposed API and lookup contract changes",
+          "ruleSetVersion": "qa-synthetic-1",
+          "approvalGap": "No human approval is inferred. Reviewed examples/exceptions are assertions from supplied configuration; simulation records are demonstrations only.",
+          "rules": []
+        },
+        {
+          "projectId": "frontend",
+          "task": "Review proposed API and lookup contract changes",
+          "ruleSetVersion": "qa-synthetic-1",
+          "approvalGap": "No human approval is inferred. Reviewed examples/exceptions are assertions from supplied configuration; simulation records are demonstrations only.",
+          "rules": []
+        }
+      ]
+    },
+    "quality": {
+      "tools": [
+        {
+          "name": "eslint",
+          "version": "10.12.0",
+          "parser": "@typescript-eslint/parser@8.71.1",
+          "rules": [
+            "complexity",
+            "no-unreachable",
+            "no-constant-condition",
+            "no-constant-binary-expression",
+            "no-dupe-else-if",
+            "no-unsafe-finally",
+            "no-async-promise-executor",
+            "require-atomic-updates",
+            "@typescript-eslint/no-non-null-assertion",
+            "@typescript-eslint/no-non-null-asserted-optional-chain"
+          ],
+          "sourceOnly": true
+        },
+        {
+          "name": "jscpd",
+          "version": "4.0.5",
+          "rules": [
+            "duplicate-block"
+          ],
+          "sourceOnly": true
+        },
+        {
+          "name": "pmd",
+          "version": "7.17.0",
+          "status": "available",
+          "rules": [
+            "CyclomaticComplexity",
+            "BrokenNullCheck",
+            "CloseResource",
+            "UnconditionalIfStatement"
+          ],
+          "sourceOnly": true
+        },
+        {
+          "name": "eslint",
+          "version": "10.12.0",
+          "parser": "@typescript-eslint/parser@8.71.1",
+          "rules": [
+            "complexity",
+            "no-unreachable",
+            "no-constant-condition",
+            "no-constant-binary-expression",
+            "no-dupe-else-if",
+            "no-unsafe-finally",
+            "no-async-promise-executor",
+            "require-atomic-updates",
+            "@typescript-eslint/no-non-null-assertion",
+            "@typescript-eslint/no-non-null-asserted-optional-chain"
+          ],
+          "sourceOnly": true
+        },
+        {
+          "name": "jscpd",
+          "version": "4.0.5",
+          "rules": [
+            "duplicate-block"
+          ],
+          "sourceOnly": true
+        },
+        {
+          "name": "pmd",
+          "version": null,
+          "status": "unavailable",
+          "rules": [
+            "CyclomaticComplexity",
+            "BrokenNullCheck",
+            "CloseResource",
+            "UnconditionalIfStatement"
+          ],
+          "sourceOnly": true
+        }
+      ],
+      "findings": [],
+      "unsupported": [
+        {
+          "tool": "typescript-eslint",
+          "reason": "type-aware-checks-unavailable",
+          "detail": "No repository tsconfig, dependencies or compiler project is loaded; no-floating-promises, no-unnecessary-condition and typed null/async rules are not run",
+          "projectId": "backend"
+        },
+        {
+          "tool": "pmd",
+          "reason": "source-only-type-resolution",
+          "detail": "JDK types only; external Java dependency types, dispatch and resource ownership contracts are not verified",
+          "projectId": "backend"
+        },
+        {
+          "tool": "source-design",
+          "reason": "bounded-design-coverage",
+          "detail": "Selected import boundaries and declaration conventions only; no universal SRP/OCP/LSP/ISP/DIP judgment, runtime DI resolution, inheritance substitutability or behavioral proof",
+          "projectId": "backend"
+        },
+        {
+          "tool": "typescript-eslint",
+          "reason": "type-aware-checks-unavailable",
+          "detail": "No repository tsconfig, dependencies or compiler project is loaded; no-floating-promises, no-unnecessary-condition and typed null/async rules are not run",
+          "projectId": "frontend"
+        },
+        {
+          "tool": "pmd",
+          "reason": "source-only-type-resolution",
+          "detail": "JDK types only; external Java dependency types, dispatch and resource ownership contracts are not verified",
+          "projectId": "frontend"
+        },
+        {
+          "tool": "source-design",
+          "reason": "bounded-design-coverage",
+          "detail": "Selected import boundaries and declaration conventions only; no universal SRP/OCP/LSP/ISP/DIP judgment, runtime DI resolution, inheritance substitutability or behavioral proof",
+          "projectId": "frontend"
+        }
+      ],
+      "projects": [
+        {
+          "configHash": "a2ee4ddf65b11ddd9d572f41575b37f55c0141f30e531b11fe09d18a64e2dc58",
+          "config": {
+            "complexityThreshold": 10,
+            "duplication": {
+              "minTokens": 50,
+              "minLines": 5
+            },
+            "pmdEnabled": true
+          },
+          "tools": [
+            {
+              "name": "eslint",
+              "version": "10.12.0",
+              "parser": "@typescript-eslint/parser@8.71.1",
+              "rules": [
+                "complexity",
+                "no-unreachable",
+                "no-constant-condition",
+                "no-constant-binary-expression",
+                "no-dupe-else-if",
+                "no-unsafe-finally",
+                "no-async-promise-executor",
+                "require-atomic-updates",
+                "@typescript-eslint/no-non-null-assertion",
+                "@typescript-eslint/no-non-null-asserted-optional-chain"
+              ],
+              "sourceOnly": true
+            },
+            {
+              "name": "jscpd",
+              "version": "4.0.5",
+              "rules": [
+                "duplicate-block"
+              ],
+              "sourceOnly": true
+            },
+            {
+              "name": "pmd",
+              "version": "7.17.0",
+              "status": "available",
+              "rules": [
+                "CyclomaticComplexity",
+                "BrokenNullCheck",
+                "CloseResource",
+                "UnconditionalIfStatement"
+              ],
+              "sourceOnly": true
+            }
+          ],
+          "findings": [],
+          "unsupported": [
+            {
+              "tool": "typescript-eslint",
+              "reason": "type-aware-checks-unavailable",
+              "detail": "No repository tsconfig, dependencies or compiler project is loaded; no-floating-promises, no-unnecessary-condition and typed null/async rules are not run",
+              "projectId": "backend"
+            },
+            {
+              "tool": "pmd",
+              "reason": "source-only-type-resolution",
+              "detail": "JDK types only; external Java dependency types, dispatch and resource ownership contracts are not verified",
+              "projectId": "backend"
+            },
+            {
+              "tool": "source-design",
+              "reason": "bounded-design-coverage",
+              "detail": "Selected import boundaries and declaration conventions only; no universal SRP/OCP/LSP/ISP/DIP judgment, runtime DI resolution, inheritance substitutability or behavioral proof",
+              "projectId": "backend"
+            }
+          ],
+          "metrics": {
+            "elapsedMs": 1532.87,
+            "analyzedFiles": {
+              "baseline": {
+                "eslint": 0,
+                "pmd": 3,
+                "jscpd": 3
+              },
+              "candidate": {
+                "eslint": 0,
+                "pmd": 3,
+                "jscpd": 3
+              }
+            },
+            "duplication": {
+              "baseline": {
+                "lines": 35,
+                "tokens": 271,
+                "sources": 2,
+                "clones": 0,
+                "duplicatedLines": 0,
+                "duplicatedTokens": 0,
+                "percentage": 0,
+                "percentageTokens": 0,
+                "newDuplicatedLines": 0,
+                "newClones": 0
+              },
+              "candidate": {
+                "lines": 35,
+                "tokens": 271,
+                "sources": 2,
+                "clones": 0,
+                "duplicatedLines": 0,
+                "duplicatedTokens": 0,
+                "percentage": 0,
+                "percentageTokens": 0,
+                "newDuplicatedLines": 0,
+                "newClones": 0
+              }
+            }
+          },
+          "conventions": {
+            "configHash": "a0c3afb1e366ef4040a5019cacaf21eaed3e19335582e5366b1220659d28c64d",
+            "config": {
+              "forbiddenImports": [],
+              "maxParameters": 5,
+              "maxClassMethods": 20,
+              "checkPublicMutableFields": true,
+              "checkModuleCycles": true
+            },
+            "tools": [
+              {
+                "name": "source-design",
+                "version": "1.0",
+                "rules": [
+                  "forbidden-import",
+                  "parameter-count",
+                  "class-method-count",
+                  "public-mutable-field",
+                  "module-cycle"
+                ],
+                "sourceOnly": true
+              }
+            ],
+            "findings": [],
+            "unsupported": [
+              {
+                "tool": "source-design",
+                "reason": "bounded-design-coverage",
+                "detail": "Selected import boundaries and declaration conventions only; no universal SRP/OCP/LSP/ISP/DIP judgment, runtime DI resolution, inheritance substitutability or behavioral proof"
+              }
+            ],
+            "metrics": {
+              "configuredPolicies": 0,
+              "baselineFindings": 0,
+              "candidateFindings": 0
+            }
+          },
+          "projectId": "backend",
+          "cache": "miss"
+        },
+        {
+          "configHash": "a2ee4ddf65b11ddd9d572f41575b37f55c0141f30e531b11fe09d18a64e2dc58",
+          "config": {
+            "complexityThreshold": 10,
+            "duplication": {
+              "minTokens": 50,
+              "minLines": 5
+            },
+            "pmdEnabled": true
+          },
+          "tools": [
+            {
+              "name": "eslint",
+              "version": "10.12.0",
+              "parser": "@typescript-eslint/parser@8.71.1",
+              "rules": [
+                "complexity",
+                "no-unreachable",
+                "no-constant-condition",
+                "no-constant-binary-expression",
+                "no-dupe-else-if",
+                "no-unsafe-finally",
+                "no-async-promise-executor",
+                "require-atomic-updates",
+                "@typescript-eslint/no-non-null-assertion",
+                "@typescript-eslint/no-non-null-asserted-optional-chain"
+              ],
+              "sourceOnly": true
+            },
+            {
+              "name": "jscpd",
+              "version": "4.0.5",
+              "rules": [
+                "duplicate-block"
+              ],
+              "sourceOnly": true
+            },
+            {
+              "name": "pmd",
+              "version": null,
+              "status": "unavailable",
+              "rules": [
+                "CyclomaticComplexity",
+                "BrokenNullCheck",
+                "CloseResource",
+                "UnconditionalIfStatement"
+              ],
+              "sourceOnly": true
+            }
+          ],
+          "findings": [],
+          "unsupported": [
+            {
+              "tool": "typescript-eslint",
+              "reason": "type-aware-checks-unavailable",
+              "detail": "No repository tsconfig, dependencies or compiler project is loaded; no-floating-promises, no-unnecessary-condition and typed null/async rules are not run",
+              "projectId": "frontend"
+            },
+            {
+              "tool": "pmd",
+              "reason": "source-only-type-resolution",
+              "detail": "JDK types only; external Java dependency types, dispatch and resource ownership contracts are not verified",
+              "projectId": "frontend"
+            },
+            {
+              "tool": "source-design",
+              "reason": "bounded-design-coverage",
+              "detail": "Selected import boundaries and declaration conventions only; no universal SRP/OCP/LSP/ISP/DIP judgment, runtime DI resolution, inheritance substitutability or behavioral proof",
+              "projectId": "frontend"
+            }
+          ],
+          "metrics": {
+            "elapsedMs": 357.65,
+            "analyzedFiles": {
+              "baseline": {
+                "eslint": 3,
+                "pmd": 0,
+                "jscpd": 3
+              },
+              "candidate": {
+                "eslint": 3,
+                "pmd": 0,
+                "jscpd": 3
+              }
+            },
+            "duplication": {
+              "baseline": {
+                "lines": 25,
+                "tokens": 248,
+                "sources": 3,
+                "clones": 0,
+                "duplicatedLines": 0,
+                "duplicatedTokens": 0,
+                "percentage": 0,
+                "percentageTokens": 0,
+                "newDuplicatedLines": 0,
+                "newClones": 0
+              },
+              "candidate": {
+                "lines": 25,
+                "tokens": 248,
+                "sources": 3,
+                "clones": 0,
+                "duplicatedLines": 0,
+                "duplicatedTokens": 0,
+                "percentage": 0,
+                "percentageTokens": 0,
+                "newDuplicatedLines": 0,
+                "newClones": 0
+              }
+            }
+          },
+          "conventions": {
+            "configHash": "a0c3afb1e366ef4040a5019cacaf21eaed3e19335582e5366b1220659d28c64d",
+            "config": {
+              "forbiddenImports": [],
+              "maxParameters": 5,
+              "maxClassMethods": 20,
+              "checkPublicMutableFields": true,
+              "checkModuleCycles": true
+            },
+            "tools": [
+              {
+                "name": "source-design",
+                "version": "1.0",
+                "rules": [
+                  "forbidden-import",
+                  "parameter-count",
+                  "class-method-count",
+                  "public-mutable-field",
+                  "module-cycle"
+                ],
+                "sourceOnly": true
+              }
+            ],
+            "findings": [],
+            "unsupported": [
+              {
+                "tool": "source-design",
+                "reason": "bounded-design-coverage",
+                "detail": "Selected import boundaries and declaration conventions only; no universal SRP/OCP/LSP/ISP/DIP judgment, runtime DI resolution, inheritance substitutability or behavioral proof"
+              }
+            ],
+            "metrics": {
+              "configuredPolicies": 0,
+              "baselineFindings": 0,
+              "candidateFindings": 0
+            }
+          },
+          "projectId": "frontend",
+          "cache": "miss"
+        }
+      ]
+    },
+    "requirements": {
+      "schemaVersion": "1",
+      "status": "simulated-confirmed",
+      "advisory": true,
+      "confirmation": {
+        "status": "confirmed",
+        "simulation": true,
+        "confirmedBy": "SIMULATED fixture reviewer; not a real approval",
+        "confirmedAt": "2026-10-11T12:00:00Z"
+      },
+      "checklist": {
+        "revision": "cross-project-customer-checklist-example-v1",
+        "owner": "SIMULATED workspace product owner; no real customer confirmation",
+        "hash": "51c3ca391653110d41da03019bc9b94809f423b4e1b229f641230a15b4596d89"
+      },
+      "provenance": {
+        "mode": "workspace",
+        "fileHashesVerified": true,
+        "projects": [
+          {
+            "id": "backend",
+            "revision": "tree-sha256:1e6b5d01ce25a42b4ebfa1863b87c068c2d233113f7e71015207ba89f2a34b88",
+            "contentHash": "1e6b5d01ce25a42b4ebfa1863b87c068c2d233113f7e71015207ba89f2a34b88"
+          },
+          {
+            "id": "frontend",
+            "revision": "tree-sha256:cb1428398ae523807aebfe0b726102d6c698d766aa08cdc469c758646e846138",
+            "contentHash": "cb1428398ae523807aebfe0b726102d6c698d766aa08cdc469c758646e846138"
+          }
+        ],
+        "scope": {
+          "status": "unscoped",
+          "issues": []
+        }
+      },
+      "criteria": [
+        {
+          "id": "cross-project-display-name",
+          "description": "The frontend displays the displayName supplied by the customer lookup backend.",
+          "assessment": "evidenced",
+          "reasons": [
+            "Explicit source and test literals were found; behavioral correctness and test execution remain unverified"
+          ],
+          "sourceChecks": [
+            {
+              "selector": {
+                "pathPattern": "src/main/java/example/customers/CustomerResponse.java",
+                "projectId": "backend",
+                "pattern": "String displayName"
+              },
+              "status": "matched",
+              "reason": "All explicit literal anchors occur in the same supplied file",
+              "matchingFileCount": 1,
+              "searchedFileCount": 1,
+              "searchedProjectIds": [
+                "backend"
+              ],
+              "evidence": [
+                {
+                  "path": "src/main/java/example/customers/CustomerResponse.java",
+                  "range": {
+                    "startLine": 3,
+                    "endLine": 3
+                  },
+                  "revision": "tree-sha256:1e6b5d01ce25a42b4ebfa1863b87c068c2d233113f7e71015207ba89f2a34b88",
+                  "fileHash": "fe4a076477f47074f1ca4a4140e45648ce3e2110fef9cf31fd934ad2bd1dfe4a",
+                  "excerpt": "public record CustomerResponse(String id, String displayName) {}",
+                  "projectId": "backend",
+                  "kind": "source-literal",
+                  "anchor": "pattern",
+                  "matchedLiteral": "String displayName",
+                  "execution": "unverified"
+                }
+              ],
+              "evidenceTruncated": false
+            },
+            {
+              "selector": {
+                "pathPattern": "src/CustomerResult.tsx",
+                "projectId": "frontend",
+                "pattern": "result?.displayName"
+              },
+              "status": "matched",
+              "reason": "All explicit literal anchors occur in the same supplied file",
+              "matchingFileCount": 1,
+              "searchedFileCount": 1,
+              "searchedProjectIds": [
+                "frontend"
+              ],
+              "evidence": [
+                {
+                  "path": "src/CustomerResult.tsx",
+                  "range": {
+                    "startLine": 5,
+                    "endLine": 5
+                  },
+                  "revision": "tree-sha256:cb1428398ae523807aebfe0b726102d6c698d766aa08cdc469c758646e846138",
+                  "fileHash": "fd213c059dcdf53b40bc3e55e70809aea60b0b0fba019ce3073338108db96655",
+                  "excerpt": "  return <section aria-label=\"Customer result\">{result?.displayName ?? 'Loading customer…'}</section>;",
+                  "projectId": "frontend",
+                  "kind": "source-literal",
+                  "anchor": "pattern",
+                  "matchedLiteral": "result?.displayName",
+                  "execution": "unverified"
+                }
+              ],
+              "evidenceTruncated": false
+            }
+          ],
+          "testChecks": [
+            {
+              "selector": {
+                "pathPattern": "src/test/java/example/customers/CustomerLookupControllerTest.java",
+                "projectId": "backend",
+                "name": "returnsDisplayName"
+              },
+              "status": "matched",
+              "reason": "All explicit literal anchors occur in the same supplied file",
+              "matchingFileCount": 1,
+              "searchedFileCount": 1,
+              "searchedProjectIds": [
+                "backend"
+              ],
+              "evidence": [
+                {
+                  "path": "src/test/java/example/customers/CustomerLookupControllerTest.java",
+                  "range": {
+                    "startLine": 15,
+                    "endLine": 15
+                  },
+                  "revision": "tree-sha256:1e6b5d01ce25a42b4ebfa1863b87c068c2d233113f7e71015207ba89f2a34b88",
+                  "fileHash": "aa3a223914ae9a6772826e29cf6c8d54eec522fa0869dcaff96832f265bb5184",
+                  "excerpt": "    void returnsDisplayName() {",
+                  "projectId": "backend",
+                  "kind": "test-source-literal",
+                  "anchor": "name",
+                  "matchedLiteral": "returnsDisplayName",
+                  "execution": "unverified"
+                }
+              ],
+              "evidenceTruncated": false
+            },
+            {
+              "selector": {
+                "pathPattern": "src/customerLookup.spec.ts",
+                "projectId": "frontend",
+                "name": "renders customer display name"
+              },
+              "status": "matched",
+              "reason": "All explicit literal anchors occur in the same supplied file",
+              "matchingFileCount": 1,
+              "searchedFileCount": 1,
+              "searchedProjectIds": [
+                "frontend"
+              ],
+              "evidence": [
+                {
+                  "path": "src/customerLookup.spec.ts",
+                  "range": {
+                    "startLine": 5,
+                    "endLine": 5
+                  },
+                  "revision": "tree-sha256:cb1428398ae523807aebfe0b726102d6c698d766aa08cdc469c758646e846138",
+                  "fileHash": "b033953aaf51f31b7481fedd383143894cd18d3f4aebbc230e99d70bee5db305",
+                  "excerpt": "test('renders customer display name', async ({page}) => {",
+                  "projectId": "frontend",
+                  "kind": "test-source-literal",
+                  "anchor": "name",
+                  "matchedLiteral": "renders customer display name",
+                  "execution": "unverified"
+                }
+              ],
+              "evidenceTruncated": false
+            }
+          ],
+          "sourceEvidence": [
+            {
+              "path": "src/main/java/example/customers/CustomerResponse.java",
+              "range": {
+                "startLine": 3,
+                "endLine": 3
+              },
+              "revision": "tree-sha256:1e6b5d01ce25a42b4ebfa1863b87c068c2d233113f7e71015207ba89f2a34b88",
+              "fileHash": "fe4a076477f47074f1ca4a4140e45648ce3e2110fef9cf31fd934ad2bd1dfe4a",
+              "excerpt": "public record CustomerResponse(String id, String displayName) {}",
+              "projectId": "backend",
+              "kind": "source-literal",
+              "anchor": "pattern",
+              "matchedLiteral": "String displayName",
+              "execution": "unverified"
+            },
+            {
+              "path": "src/CustomerResult.tsx",
+              "range": {
+                "startLine": 5,
+                "endLine": 5
+              },
+              "revision": "tree-sha256:cb1428398ae523807aebfe0b726102d6c698d766aa08cdc469c758646e846138",
+              "fileHash": "fd213c059dcdf53b40bc3e55e70809aea60b0b0fba019ce3073338108db96655",
+              "excerpt": "  return <section aria-label=\"Customer result\">{result?.displayName ?? 'Loading customer…'}</section>;",
+              "projectId": "frontend",
+              "kind": "source-literal",
+              "anchor": "pattern",
+              "matchedLiteral": "result?.displayName",
+              "execution": "unverified"
+            }
+          ],
+          "testEvidence": [
+            {
+              "path": "src/test/java/example/customers/CustomerLookupControllerTest.java",
+              "range": {
+                "startLine": 15,
+                "endLine": 15
+              },
+              "revision": "tree-sha256:1e6b5d01ce25a42b4ebfa1863b87c068c2d233113f7e71015207ba89f2a34b88",
+              "fileHash": "aa3a223914ae9a6772826e29cf6c8d54eec522fa0869dcaff96832f265bb5184",
+              "excerpt": "    void returnsDisplayName() {",
+              "projectId": "backend",
+              "kind": "test-source-literal",
+              "anchor": "name",
+              "matchedLiteral": "returnsDisplayName",
+              "execution": "unverified"
+            },
+            {
+              "path": "src/customerLookup.spec.ts",
+              "range": {
+                "startLine": 5,
+                "endLine": 5
+              },
+              "revision": "tree-sha256:cb1428398ae523807aebfe0b726102d6c698d766aa08cdc469c758646e846138",
+              "fileHash": "b033953aaf51f31b7481fedd383143894cd18d3f4aebbc230e99d70bee5db305",
+              "excerpt": "test('renders customer display name', async ({page}) => {",
+              "projectId": "frontend",
+              "kind": "test-source-literal",
+              "anchor": "name",
+              "matchedLiteral": "renders customer display name",
+              "execution": "unverified"
+            }
+          ],
+          "edgeCases": [
+            {
+              "id": "known-customer",
+              "description": "A known customer has its display name rendered.",
+              "assessment": "evidenced",
+              "checks": [
+                {
+                  "selector": {
+                    "pathPattern": "src/customerLookup.spec.ts",
+                    "projectId": "frontend",
+                    "name": "renders customer display name"
+                  },
+                  "status": "matched",
+                  "reason": "All explicit literal anchors occur in the same supplied file",
+                  "matchingFileCount": 1,
+                  "searchedFileCount": 1,
+                  "searchedProjectIds": [
+                    "frontend"
+                  ],
+                  "evidence": [
+                    {
+                      "path": "src/customerLookup.spec.ts",
+                      "range": {
+                        "startLine": 5,
+                        "endLine": 5
+                      },
+                      "revision": "tree-sha256:cb1428398ae523807aebfe0b726102d6c698d766aa08cdc469c758646e846138",
+                      "fileHash": "b033953aaf51f31b7481fedd383143894cd18d3f4aebbc230e99d70bee5db305",
+                      "excerpt": "test('renders customer display name', async ({page}) => {",
+                      "projectId": "frontend",
+                      "kind": "test-source-literal",
+                      "anchor": "name",
+                      "matchedLiteral": "renders customer display name",
+                      "execution": "unverified"
+                    }
+                  ],
+                  "evidenceTruncated": false
+                }
+              ],
+              "testEvidence": [
+                {
+                  "path": "src/customerLookup.spec.ts",
+                  "range": {
+                    "startLine": 5,
+                    "endLine": 5
+                  },
+                  "revision": "tree-sha256:cb1428398ae523807aebfe0b726102d6c698d766aa08cdc469c758646e846138",
+                  "fileHash": "b033953aaf51f31b7481fedd383143894cd18d3f4aebbc230e99d70bee5db305",
+                  "excerpt": "test('renders customer display name', async ({page}) => {",
+                  "projectId": "frontend",
+                  "kind": "test-source-literal",
+                  "anchor": "name",
+                  "matchedLiteral": "renders customer display name",
+                  "execution": "unverified"
+                }
+              ],
+              "runtime": "unverified"
+            }
+          ],
+          "missingEdgeCases": [],
+          "runtime": "unverified"
+        },
+        {
+          "id": "cross-project-not-found",
+          "description": "A missing backend customer produces a clear not-found message in the frontend.",
+          "assessment": "potential-mismatch",
+          "reasons": [
+            "One or more declared test selectors are unmatched",
+            "Declared edge cases have missing test source evidence"
+          ],
+          "sourceChecks": [
+            {
+              "selector": {
+                "pathPattern": "src/customerApi.ts",
+                "projectId": "frontend",
+                "pattern": "throw new Error('Customer lookup failed')"
+              },
+              "status": "matched",
+              "reason": "All explicit literal anchors occur in the same supplied file",
+              "matchingFileCount": 1,
+              "searchedFileCount": 1,
+              "searchedProjectIds": [
+                "frontend"
+              ],
+              "evidence": [
+                {
+                  "path": "src/customerApi.ts",
+                  "range": {
+                    "startLine": 9,
+                    "endLine": 9
+                  },
+                  "revision": "tree-sha256:cb1428398ae523807aebfe0b726102d6c698d766aa08cdc469c758646e846138",
+                  "fileHash": "2cdee9cc200708bdb5c3184490c8e02a2597c6ada3b97b79ff5b66eb4c6a7095",
+                  "excerpt": "  if (!response.ok) throw new Error('Customer lookup failed');",
+                  "projectId": "frontend",
+                  "kind": "source-literal",
+                  "anchor": "pattern",
+                  "matchedLiteral": "throw new Error('Customer lookup failed')",
+                  "execution": "unverified"
+                }
+              ],
+              "evidenceTruncated": false
+            }
+          ],
+          "testChecks": [
+            {
+              "selector": {
+                "pathPattern": "src/customerLookup.spec.ts",
+                "projectId": "frontend",
+                "name": "renders not-found message"
+              },
+              "status": "unmatched",
+              "reason": "No eligible file contains all explicit literal anchors",
+              "matchingFileCount": 0,
+              "searchedFileCount": 1,
+              "searchedProjectIds": [
+                "frontend"
+              ],
+              "evidence": [],
+              "evidenceTruncated": false
+            }
+          ],
+          "sourceEvidence": [
+            {
+              "path": "src/customerApi.ts",
+              "range": {
+                "startLine": 9,
+                "endLine": 9
+              },
+              "revision": "tree-sha256:cb1428398ae523807aebfe0b726102d6c698d766aa08cdc469c758646e846138",
+              "fileHash": "2cdee9cc200708bdb5c3184490c8e02a2597c6ada3b97b79ff5b66eb4c6a7095",
+              "excerpt": "  if (!response.ok) throw new Error('Customer lookup failed');",
+              "projectId": "frontend",
+              "kind": "source-literal",
+              "anchor": "pattern",
+              "matchedLiteral": "throw new Error('Customer lookup failed')",
+              "execution": "unverified"
+            }
+          ],
+          "testEvidence": [],
+          "edgeCases": [
+            {
+              "id": "unknown-id",
+              "description": "An unknown identifier produces a not-found message rather than a generic lookup error.",
+              "assessment": "missing",
+              "checks": [
+                {
+                  "selector": {
+                    "pathPattern": "src/customerLookup.spec.ts",
+                    "projectId": "frontend",
+                    "name": "renders not-found message"
+                  },
+                  "status": "unmatched",
+                  "reason": "No eligible file contains all explicit literal anchors",
+                  "matchingFileCount": 0,
+                  "searchedFileCount": 1,
+                  "searchedProjectIds": [
+                    "frontend"
+                  ],
+                  "evidence": [],
+                  "evidenceTruncated": false
+                }
+              ],
+              "testEvidence": [],
+              "runtime": "unverified",
+              "reason": "One or more declared edge-case test selectors are unmatched"
+            }
+          ],
+          "missingEdgeCases": [
+            {
+              "id": "unknown-id",
+              "description": "An unknown identifier produces a not-found message rather than a generic lookup error.",
+              "reason": "One or more declared edge-case test selectors are unmatched",
+              "checks": [
+                {
+                  "selector": {
+                    "pathPattern": "src/customerLookup.spec.ts",
+                    "projectId": "frontend",
+                    "name": "renders not-found message"
+                  },
+                  "status": "unmatched",
+                  "reason": "No eligible file contains all explicit literal anchors",
+                  "matchingFileCount": 0,
+                  "searchedFileCount": 1,
+                  "searchedProjectIds": [
+                    "frontend"
+                  ],
+                  "evidence": [],
+                  "evidenceTruncated": false
+                }
+              ]
+            }
+          ],
+          "runtime": "unverified"
+        }
+      ],
+      "summary": {
+        "total": 2,
+        "evidenced": 1,
+        "potentialMismatch": 1,
+        "unverified": 0,
+        "missingEdgeCases": 1
+      },
+      "runtime": "unverified",
+      "limitations": [
+        "Confirmation metadata is a supplied assertion; the engine does not authenticate an owner or invent approval. Simulated confirmations are demonstration data.",
+        "Literal source matches, including symbol and test-name anchors, show text presence only. Comments and string literals can match; declarations, assertions and business behavior are not proved.",
+        "Test source evidence does not show that tests were executed, passed, or cover the criterion at runtime. Runtime behavior always remains unverified.",
+        "Only supplied snapshot files are searched. Test selectors are limited to test/spec filenames, Java Test/Tests names, or test/tests/__tests__ directories.",
+        "Missing edge cases are only those explicitly listed in the checklist. The engine cannot infer all necessary business scenarios or permit skipping full regression.",
+        "Path selectors use bounded * and ** globs; all other selectors are case-sensitive literal text. No user regular expressions, external AI, or local models are run.",
+        "Snapshot revisions are supplied by the snapshot reader; file SHA256 values are checked against supplied text. Without evidenceScope, confirmation has no pinned source revision.",
+        "Workspace criteria are evaluated once across selected project snapshots. Unscoped selectors search every selected project; explicit projectId selectors search only that project. Evidence preserves each project ID, original path, revision and file hash.",
+        "An optional dependency graph was supplied but is not used to infer semantic satisfaction of business criteria."
+      ]
+    },
+    "unknowns": [
+      {
+        "reason": "external-or-missing-java-source",
+        "detail": "org.springframework.web.bind.annotation.GetMapping",
+        "evidence": {
+          "path": "src/main/java/example/customers/CustomerLookupController.java",
+          "range": {
+            "startLine": 3,
+            "endLine": 3
+          },
+          "revision": "tree-sha256:1e6b5d01ce25a42b4ebfa1863b87c068c2d233113f7e71015207ba89f2a34b88",
+          "fileHash": "28ec39a06652ee166d68a1c9e489c6ad1c43c970fd21d48c4d7675b79401300b",
+          "excerpt": "import org.springframework.web.bind.annotation.GetMapping;",
+          "projectId": "backend",
+          "repository": "synthetic/backend"
+        },
+        "phase": "baseline",
+        "projectId": "backend"
+      },
+      {
+        "reason": "external-or-missing-java-source",
+        "detail": "org.springframework.web.bind.annotation.RequestMapping",
+        "evidence": {
+          "path": "src/main/java/example/customers/CustomerLookupController.java",
+          "range": {
+            "startLine": 4,
+            "endLine": 4
+          },
+          "revision": "tree-sha256:1e6b5d01ce25a42b4ebfa1863b87c068c2d233113f7e71015207ba89f2a34b88",
+          "fileHash": "28ec39a06652ee166d68a1c9e489c6ad1c43c970fd21d48c4d7675b79401300b",
+          "excerpt": "import org.springframework.web.bind.annotation.RequestMapping;",
+          "projectId": "backend",
+          "repository": "synthetic/backend"
+        },
+        "phase": "baseline",
+        "projectId": "backend"
+      },
+      {
+        "reason": "external-or-missing-java-source",
+        "detail": "org.springframework.web.bind.annotation.RequestParam",
+        "evidence": {
+          "path": "src/main/java/example/customers/CustomerLookupController.java",
+          "range": {
+            "startLine": 5,
+            "endLine": 5
+          },
+          "revision": "tree-sha256:1e6b5d01ce25a42b4ebfa1863b87c068c2d233113f7e71015207ba89f2a34b88",
+          "fileHash": "28ec39a06652ee166d68a1c9e489c6ad1c43c970fd21d48c4d7675b79401300b",
+          "excerpt": "import org.springframework.web.bind.annotation.RequestParam;",
+          "projectId": "backend",
+          "repository": "synthetic/backend"
+        },
+        "phase": "baseline",
+        "projectId": "backend"
+      },
+      {
+        "reason": "external-or-missing-java-source",
+        "detail": "org.springframework.web.bind.annotation.RestController",
+        "evidence": {
+          "path": "src/main/java/example/customers/CustomerLookupController.java",
+          "range": {
+            "startLine": 6,
+            "endLine": 6
+          },
+          "revision": "tree-sha256:1e6b5d01ce25a42b4ebfa1863b87c068c2d233113f7e71015207ba89f2a34b88",
+          "fileHash": "28ec39a06652ee166d68a1c9e489c6ad1c43c970fd21d48c4d7675b79401300b",
+          "excerpt": "import org.springframework.web.bind.annotation.RestController;",
+          "projectId": "backend",
+          "repository": "synthetic/backend"
+        },
+        "phase": "baseline",
+        "projectId": "backend"
+      },
+      {
+        "reason": "external-or-missing-java-source",
+        "detail": "org.springframework.web.bind.annotation.RestController",
+        "evidence": {
+          "path": "src/main/java/example/customers/CustomerLookupController.java",
+          "range": {
+            "startLine": 9,
+            "endLine": 9
+          },
+          "revision": "tree-sha256:1e6b5d01ce25a42b4ebfa1863b87c068c2d233113f7e71015207ba89f2a34b88",
+          "fileHash": "28ec39a06652ee166d68a1c9e489c6ad1c43c970fd21d48c4d7675b79401300b",
+          "excerpt": "@RestController",
+          "projectId": "backend",
+          "repository": "synthetic/backend"
+        },
+        "phase": "baseline",
+        "projectId": "backend"
+      },
+      {
+        "reason": "external-or-missing-java-source",
+        "detail": "org.springframework.web.bind.annotation.RequestMapping",
+        "evidence": {
+          "path": "src/main/java/example/customers/CustomerLookupController.java",
+          "range": {
+            "startLine": 10,
+            "endLine": 10
+          },
+          "revision": "tree-sha256:1e6b5d01ce25a42b4ebfa1863b87c068c2d233113f7e71015207ba89f2a34b88",
+          "fileHash": "28ec39a06652ee166d68a1c9e489c6ad1c43c970fd21d48c4d7675b79401300b",
+          "excerpt": "@RequestMapping(\"/api\")",
+          "projectId": "backend",
+          "repository": "synthetic/backend"
+        },
+        "phase": "baseline",
+        "projectId": "backend"
+      },
+      {
+        "reason": "external-or-missing-java-source",
+        "detail": "org.springframework.web.bind.annotation.GetMapping",
+        "evidence": {
+          "path": "src/main/java/example/customers/CustomerLookupController.java",
+          "range": {
+            "startLine": 12,
+            "endLine": 12
+          },
+          "revision": "tree-sha256:1e6b5d01ce25a42b4ebfa1863b87c068c2d233113f7e71015207ba89f2a34b88",
+          "fileHash": "28ec39a06652ee166d68a1c9e489c6ad1c43c970fd21d48c4d7675b79401300b",
+          "excerpt": "    @GetMapping(\"/customers/lookup\")",
+          "projectId": "backend",
+          "repository": "synthetic/backend"
+        },
+        "phase": "baseline",
+        "projectId": "backend"
+      },
+      {
+        "reason": "external-or-missing-java-source",
+        "detail": "org.springframework.web.bind.annotation.RequestParam",
+        "evidence": {
+          "path": "src/main/java/example/customers/CustomerLookupController.java",
+          "range": {
+            "startLine": 13,
+            "endLine": 13
+          },
+          "revision": "tree-sha256:1e6b5d01ce25a42b4ebfa1863b87c068c2d233113f7e71015207ba89f2a34b88",
+          "fileHash": "28ec39a06652ee166d68a1c9e489c6ad1c43c970fd21d48c4d7675b79401300b",
+          "excerpt": "    public CustomerResponse lookup(@RequestParam String id) {",
+          "projectId": "backend",
+          "repository": "synthetic/backend"
+        },
+        "phase": "baseline",
+        "projectId": "backend"
+      },
+      {
+        "reason": "external-or-missing-java-source",
+        "detail": "String",
+        "evidence": {
+          "path": "src/main/java/example/customers/CustomerLookupController.java",
+          "range": {
+            "startLine": 13,
+            "endLine": 13
+          },
+          "revision": "tree-sha256:1e6b5d01ce25a42b4ebfa1863b87c068c2d233113f7e71015207ba89f2a34b88",
+          "fileHash": "28ec39a06652ee166d68a1c9e489c6ad1c43c970fd21d48c4d7675b79401300b",
+          "excerpt": "    public CustomerResponse lookup(@RequestParam String id) {",
+          "projectId": "backend",
+          "repository": "synthetic/backend"
+        },
+        "phase": "baseline",
+        "projectId": "backend"
+      },
+      {
+        "reason": "external-or-missing-java-source",
+        "detail": "String",
+        "evidence": {
+          "path": "src/main/java/example/customers/CustomerResponse.java",
+          "range": {
+            "startLine": 3,
+            "endLine": 3
+          },
+          "revision": "tree-sha256:1e6b5d01ce25a42b4ebfa1863b87c068c2d233113f7e71015207ba89f2a34b88",
+          "fileHash": "fe4a076477f47074f1ca4a4140e45648ce3e2110fef9cf31fd934ad2bd1dfe4a",
+          "excerpt": "public record CustomerResponse(String id, String displayName) {}",
+          "projectId": "backend",
+          "repository": "synthetic/backend"
+        },
+        "phase": "baseline",
+        "projectId": "backend"
+      },
+      {
+        "reason": "external-or-missing-java-source",
+        "detail": "String",
+        "evidence": {
+          "path": "src/main/java/example/customers/CustomerResponse.java",
+          "range": {
+            "startLine": 3,
+            "endLine": 3
+          },
+          "revision": "tree-sha256:1e6b5d01ce25a42b4ebfa1863b87c068c2d233113f7e71015207ba89f2a34b88",
+          "fileHash": "fe4a076477f47074f1ca4a4140e45648ce3e2110fef9cf31fd934ad2bd1dfe4a",
+          "excerpt": "public record CustomerResponse(String id, String displayName) {}",
+          "projectId": "backend",
+          "repository": "synthetic/backend"
+        },
+        "phase": "baseline",
+        "projectId": "backend"
+      },
+      {
+        "reason": "Java local receiver type is not inferred",
+        "range": {
+          "startLine": 10,
+          "endLine": 10
+        },
+        "detail": "var",
+        "evidence": {
+          "path": "src/test/java/example/customers/CustomerLookupControllerTest.java",
+          "range": {
+            "startLine": 10,
+            "endLine": 10
+          },
+          "revision": "tree-sha256:1e6b5d01ce25a42b4ebfa1863b87c068c2d233113f7e71015207ba89f2a34b88",
+          "fileHash": "aa3a223914ae9a6772826e29cf6c8d54eec522fa0869dcaff96832f265bb5184",
+          "excerpt": "        var response = new CustomerLookupController().lookup(\"customer-1\");",
+          "projectId": "backend",
+          "repository": "synthetic/backend"
+        },
+        "phase": "baseline",
+        "projectId": "backend"
+      },
+      {
+        "reason": "Java local receiver type is not inferred",
+        "range": {
+          "startLine": 16,
+          "endLine": 16
+        },
+        "detail": "var",
+        "evidence": {
+          "path": "src/test/java/example/customers/CustomerLookupControllerTest.java",
+          "range": {
+            "startLine": 16,
+            "endLine": 16
+          },
+          "revision": "tree-sha256:1e6b5d01ce25a42b4ebfa1863b87c068c2d233113f7e71015207ba89f2a34b88",
+          "fileHash": "aa3a223914ae9a6772826e29cf6c8d54eec522fa0869dcaff96832f265bb5184",
+          "excerpt": "        var response = new CustomerLookupController().lookup(\"customer-1\");",
+          "projectId": "backend",
+          "repository": "synthetic/backend"
+        },
+        "phase": "baseline",
+        "projectId": "backend"
+      },
+      {
+        "reason": "Java call receiver is unresolved",
+        "range": {
+          "startLine": 10,
+          "endLine": 10
+        },
+        "detail": "new CustomerLookupController()",
+        "evidence": {
+          "path": "src/test/java/example/customers/CustomerLookupControllerTest.java",
+          "range": {
+            "startLine": 10,
+            "endLine": 10
+          },
+          "revision": "tree-sha256:1e6b5d01ce25a42b4ebfa1863b87c068c2d233113f7e71015207ba89f2a34b88",
+          "fileHash": "aa3a223914ae9a6772826e29cf6c8d54eec522fa0869dcaff96832f265bb5184",
+          "excerpt": "        var response = new CustomerLookupController().lookup(\"customer-1\");",
+          "projectId": "backend",
+          "repository": "synthetic/backend"
+        },
+        "phase": "baseline",
+        "projectId": "backend"
+      },
+      {
+        "reason": "Java call receiver is unresolved",
+        "range": {
+          "startLine": 11,
+          "endLine": 11
+        },
+        "detail": "response",
+        "evidence": {
+          "path": "src/test/java/example/customers/CustomerLookupControllerTest.java",
+          "range": {
+            "startLine": 11,
+            "endLine": 11
+          },
+          "revision": "tree-sha256:1e6b5d01ce25a42b4ebfa1863b87c068c2d233113f7e71015207ba89f2a34b88",
+          "fileHash": "aa3a223914ae9a6772826e29cf6c8d54eec522fa0869dcaff96832f265bb5184",
+          "excerpt": "        assertEquals(\"customer-1\", response.id());",
+          "projectId": "backend",
+          "repository": "synthetic/backend"
+        },
+        "phase": "baseline",
+        "projectId": "backend"
+      },
+      {
+        "reason": "Java call receiver is unresolved",
+        "range": {
+          "startLine": 16,
+          "endLine": 16
+        },
+        "detail": "new CustomerLookupController()",
+        "evidence": {
+          "path": "src/test/java/example/customers/CustomerLookupControllerTest.java",
+          "range": {
+            "startLine": 16,
+            "endLine": 16
+          },
+          "revision": "tree-sha256:1e6b5d01ce25a42b4ebfa1863b87c068c2d233113f7e71015207ba89f2a34b88",
+          "fileHash": "aa3a223914ae9a6772826e29cf6c8d54eec522fa0869dcaff96832f265bb5184",
+          "excerpt": "        var response = new CustomerLookupController().lookup(\"customer-1\");",
+          "projectId": "backend",
+          "repository": "synthetic/backend"
+        },
+        "phase": "baseline",
+        "projectId": "backend"
+      },
+      {
+        "reason": "Java call receiver is unresolved",
+        "range": {
+          "startLine": 17,
+          "endLine": 17
+        },
+        "detail": "response",
+        "evidence": {
+          "path": "src/test/java/example/customers/CustomerLookupControllerTest.java",
+          "range": {
+            "startLine": 17,
+            "endLine": 17
+          },
+          "revision": "tree-sha256:1e6b5d01ce25a42b4ebfa1863b87c068c2d233113f7e71015207ba89f2a34b88",
+          "fileHash": "aa3a223914ae9a6772826e29cf6c8d54eec522fa0869dcaff96832f265bb5184",
+          "excerpt": "        assertEquals(\"Ada Example\", response.displayName());",
+          "projectId": "backend",
+          "repository": "synthetic/backend"
+        },
+        "phase": "baseline",
+        "projectId": "backend"
+      },
+      {
+        "reason": "external-or-missing-java-source",
+        "detail": "org.junit.jupiter.api.Test",
+        "evidence": {
+          "path": "src/test/java/example/customers/CustomerLookupControllerTest.java",
+          "range": {
+            "startLine": 3,
+            "endLine": 3
+          },
+          "revision": "tree-sha256:1e6b5d01ce25a42b4ebfa1863b87c068c2d233113f7e71015207ba89f2a34b88",
+          "fileHash": "aa3a223914ae9a6772826e29cf6c8d54eec522fa0869dcaff96832f265bb5184",
+          "excerpt": "import org.junit.jupiter.api.Test;",
+          "projectId": "backend",
+          "repository": "synthetic/backend"
+        },
+        "phase": "baseline",
+        "projectId": "backend"
+      },
+      {
+        "reason": "external-or-missing-java-source",
+        "detail": "org.junit.jupiter.api.Assertions.assertEquals",
+        "evidence": {
+          "path": "src/test/java/example/customers/CustomerLookupControllerTest.java",
+          "range": {
+            "startLine": 4,
+            "endLine": 4
+          },
+          "revision": "tree-sha256:1e6b5d01ce25a42b4ebfa1863b87c068c2d233113f7e71015207ba89f2a34b88",
+          "fileHash": "aa3a223914ae9a6772826e29cf6c8d54eec522fa0869dcaff96832f265bb5184",
+          "excerpt": "import static org.junit.jupiter.api.Assertions.assertEquals;",
+          "projectId": "backend",
+          "repository": "synthetic/backend"
+        },
+        "phase": "baseline",
+        "projectId": "backend"
+      },
+      {
+        "reason": "external-or-missing-java-source",
+        "detail": "org.junit.jupiter.api.Test",
+        "evidence": {
+          "path": "src/test/java/example/customers/CustomerLookupControllerTest.java",
+          "range": {
+            "startLine": 8,
+            "endLine": 8
+          },
+          "revision": "tree-sha256:1e6b5d01ce25a42b4ebfa1863b87c068c2d233113f7e71015207ba89f2a34b88",
+          "fileHash": "aa3a223914ae9a6772826e29cf6c8d54eec522fa0869dcaff96832f265bb5184",
+          "excerpt": "    @Test",
+          "projectId": "backend",
+          "repository": "synthetic/backend"
+        },
+        "phase": "baseline",
+        "projectId": "backend"
+      },
+      {
+        "reason": "external-or-missing-java-source",
+        "detail": "var",
+        "evidence": {
+          "path": "src/test/java/example/customers/CustomerLookupControllerTest.java",
+          "range": {
+            "startLine": 10,
+            "endLine": 10
+          },
+          "revision": "tree-sha256:1e6b5d01ce25a42b4ebfa1863b87c068c2d233113f7e71015207ba89f2a34b88",
+          "fileHash": "aa3a223914ae9a6772826e29cf6c8d54eec522fa0869dcaff96832f265bb5184",
+          "excerpt": "        var response = new CustomerLookupController().lookup(\"customer-1\");",
+          "projectId": "backend",
+          "repository": "synthetic/backend"
+        },
+        "phase": "baseline",
+        "projectId": "backend"
+      },
+      {
+        "reason": "external-or-missing-java-source",
+        "detail": "org.junit.jupiter.api.Test",
+        "evidence": {
+          "path": "src/test/java/example/customers/CustomerLookupControllerTest.java",
+          "range": {
+            "startLine": 14,
+            "endLine": 14
+          },
+          "revision": "tree-sha256:1e6b5d01ce25a42b4ebfa1863b87c068c2d233113f7e71015207ba89f2a34b88",
+          "fileHash": "aa3a223914ae9a6772826e29cf6c8d54eec522fa0869dcaff96832f265bb5184",
+          "excerpt": "    @Test",
+          "projectId": "backend",
+          "repository": "synthetic/backend"
+        },
+        "phase": "baseline",
+        "projectId": "backend"
+      },
+      {
+        "reason": "external-or-missing-java-source",
+        "detail": "var",
+        "evidence": {
+          "path": "src/test/java/example/customers/CustomerLookupControllerTest.java",
+          "range": {
+            "startLine": 16,
+            "endLine": 16
+          },
+          "revision": "tree-sha256:1e6b5d01ce25a42b4ebfa1863b87c068c2d233113f7e71015207ba89f2a34b88",
+          "fileHash": "aa3a223914ae9a6772826e29cf6c8d54eec522fa0869dcaff96832f265bb5184",
+          "excerpt": "        var response = new CustomerLookupController().lookup(\"customer-1\");",
+          "projectId": "backend",
+          "repository": "synthetic/backend"
+        },
+        "phase": "baseline",
+        "projectId": "backend"
+      },
+      {
+        "reason": "dynamic-dependency",
+        "detail": "Runtime value prevents a resolved edge",
+        "evidence": {
+          "path": "src/test/java/example/customers/CustomerLookupControllerTest.java",
+          "range": {
+            "startLine": 10,
+            "endLine": 10
+          },
+          "revision": "tree-sha256:1e6b5d01ce25a42b4ebfa1863b87c068c2d233113f7e71015207ba89f2a34b88",
+          "fileHash": "aa3a223914ae9a6772826e29cf6c8d54eec522fa0869dcaff96832f265bb5184",
+          "excerpt": "        var response = new CustomerLookupController().lookup(\"customer-1\");",
+          "projectId": "backend",
+          "repository": "synthetic/backend"
+        },
+        "phase": "baseline",
+        "projectId": "backend"
+      },
+      {
+        "reason": "unresolved-call",
+        "detail": "assertEquals",
+        "evidence": {
+          "path": "src/test/java/example/customers/CustomerLookupControllerTest.java",
+          "range": {
+            "startLine": 11,
+            "endLine": 11
+          },
+          "revision": "tree-sha256:1e6b5d01ce25a42b4ebfa1863b87c068c2d233113f7e71015207ba89f2a34b88",
+          "fileHash": "aa3a223914ae9a6772826e29cf6c8d54eec522fa0869dcaff96832f265bb5184",
+          "excerpt": "        assertEquals(\"customer-1\", response.id());",
+          "projectId": "backend",
+          "repository": "synthetic/backend"
+        },
+        "candidates": [],
+        "phase": "baseline",
+        "projectId": "backend"
+      },
+      {
+        "reason": "dynamic-dependency",
+        "detail": "Runtime value prevents a resolved edge",
+        "evidence": {
+          "path": "src/test/java/example/customers/CustomerLookupControllerTest.java",
+          "range": {
+            "startLine": 11,
+            "endLine": 11
+          },
+          "revision": "tree-sha256:1e6b5d01ce25a42b4ebfa1863b87c068c2d233113f7e71015207ba89f2a34b88",
+          "fileHash": "aa3a223914ae9a6772826e29cf6c8d54eec522fa0869dcaff96832f265bb5184",
+          "excerpt": "        assertEquals(\"customer-1\", response.id());",
+          "projectId": "backend",
+          "repository": "synthetic/backend"
+        },
+        "phase": "baseline",
+        "projectId": "backend"
+      },
+      {
+        "reason": "dynamic-dependency",
+        "detail": "Runtime value prevents a resolved edge",
+        "evidence": {
+          "path": "src/test/java/example/customers/CustomerLookupControllerTest.java",
+          "range": {
+            "startLine": 16,
+            "endLine": 16
+          },
+          "revision": "tree-sha256:1e6b5d01ce25a42b4ebfa1863b87c068c2d233113f7e71015207ba89f2a34b88",
+          "fileHash": "aa3a223914ae9a6772826e29cf6c8d54eec522fa0869dcaff96832f265bb5184",
+          "excerpt": "        var response = new CustomerLookupController().lookup(\"customer-1\");",
+          "projectId": "backend",
+          "repository": "synthetic/backend"
+        },
+        "phase": "baseline",
+        "projectId": "backend"
+      },
+      {
+        "reason": "unresolved-call",
+        "detail": "assertEquals",
+        "evidence": {
+          "path": "src/test/java/example/customers/CustomerLookupControllerTest.java",
+          "range": {
+            "startLine": 17,
+            "endLine": 17
+          },
+          "revision": "tree-sha256:1e6b5d01ce25a42b4ebfa1863b87c068c2d233113f7e71015207ba89f2a34b88",
+          "fileHash": "aa3a223914ae9a6772826e29cf6c8d54eec522fa0869dcaff96832f265bb5184",
+          "excerpt": "        assertEquals(\"Ada Example\", response.displayName());",
+          "projectId": "backend",
+          "repository": "synthetic/backend"
+        },
+        "candidates": [],
+        "phase": "baseline",
+        "projectId": "backend"
+      },
+      {
+        "reason": "dynamic-dependency",
+        "detail": "Runtime value prevents a resolved edge",
+        "evidence": {
+          "path": "src/test/java/example/customers/CustomerLookupControllerTest.java",
+          "range": {
+            "startLine": 17,
+            "endLine": 17
+          },
+          "revision": "tree-sha256:1e6b5d01ce25a42b4ebfa1863b87c068c2d233113f7e71015207ba89f2a34b88",
+          "fileHash": "aa3a223914ae9a6772826e29cf6c8d54eec522fa0869dcaff96832f265bb5184",
+          "excerpt": "        assertEquals(\"Ada Example\", response.displayName());",
+          "projectId": "backend",
+          "repository": "synthetic/backend"
+        },
+        "phase": "baseline",
+        "projectId": "backend"
+      },
+      {
+        "reason": "external-or-missing-java-source",
+        "detail": "org.springframework.web.bind.annotation.GetMapping",
+        "evidence": {
+          "path": "src/main/java/example/customers/CustomerLookupController.java",
+          "range": {
+            "startLine": 3,
+            "endLine": 3
+          },
+          "revision": "tree-sha256:1e6b5d01ce25a42b4ebfa1863b87c068c2d233113f7e71015207ba89f2a34b88",
+          "fileHash": "28ec39a06652ee166d68a1c9e489c6ad1c43c970fd21d48c4d7675b79401300b",
+          "excerpt": "import org.springframework.web.bind.annotation.GetMapping;",
+          "projectId": "backend",
+          "repository": "synthetic/backend"
+        },
+        "phase": "candidate",
+        "projectId": "backend"
+      },
+      {
+        "reason": "external-or-missing-java-source",
+        "detail": "org.springframework.web.bind.annotation.RequestMapping",
+        "evidence": {
+          "path": "src/main/java/example/customers/CustomerLookupController.java",
+          "range": {
+            "startLine": 4,
+            "endLine": 4
+          },
+          "revision": "tree-sha256:1e6b5d01ce25a42b4ebfa1863b87c068c2d233113f7e71015207ba89f2a34b88",
+          "fileHash": "28ec39a06652ee166d68a1c9e489c6ad1c43c970fd21d48c4d7675b79401300b",
+          "excerpt": "import org.springframework.web.bind.annotation.RequestMapping;",
+          "projectId": "backend",
+          "repository": "synthetic/backend"
+        },
+        "phase": "candidate",
+        "projectId": "backend"
+      },
+      {
+        "reason": "external-or-missing-java-source",
+        "detail": "org.springframework.web.bind.annotation.RequestParam",
+        "evidence": {
+          "path": "src/main/java/example/customers/CustomerLookupController.java",
+          "range": {
+            "startLine": 5,
+            "endLine": 5
+          },
+          "revision": "tree-sha256:1e6b5d01ce25a42b4ebfa1863b87c068c2d233113f7e71015207ba89f2a34b88",
+          "fileHash": "28ec39a06652ee166d68a1c9e489c6ad1c43c970fd21d48c4d7675b79401300b",
+          "excerpt": "import org.springframework.web.bind.annotation.RequestParam;",
+          "projectId": "backend",
+          "repository": "synthetic/backend"
+        },
+        "phase": "candidate",
+        "projectId": "backend"
+      },
+      {
+        "reason": "external-or-missing-java-source",
+        "detail": "org.springframework.web.bind.annotation.RestController",
+        "evidence": {
+          "path": "src/main/java/example/customers/CustomerLookupController.java",
+          "range": {
+            "startLine": 6,
+            "endLine": 6
+          },
+          "revision": "tree-sha256:1e6b5d01ce25a42b4ebfa1863b87c068c2d233113f7e71015207ba89f2a34b88",
+          "fileHash": "28ec39a06652ee166d68a1c9e489c6ad1c43c970fd21d48c4d7675b79401300b",
+          "excerpt": "import org.springframework.web.bind.annotation.RestController;",
+          "projectId": "backend",
+          "repository": "synthetic/backend"
+        },
+        "phase": "candidate",
+        "projectId": "backend"
+      },
+      {
+        "reason": "external-or-missing-java-source",
+        "detail": "org.springframework.web.bind.annotation.RestController",
+        "evidence": {
+          "path": "src/main/java/example/customers/CustomerLookupController.java",
+          "range": {
+            "startLine": 9,
+            "endLine": 9
+          },
+          "revision": "tree-sha256:1e6b5d01ce25a42b4ebfa1863b87c068c2d233113f7e71015207ba89f2a34b88",
+          "fileHash": "28ec39a06652ee166d68a1c9e489c6ad1c43c970fd21d48c4d7675b79401300b",
+          "excerpt": "@RestController",
+          "projectId": "backend",
+          "repository": "synthetic/backend"
+        },
+        "phase": "candidate",
+        "projectId": "backend"
+      },
+      {
+        "reason": "external-or-missing-java-source",
+        "detail": "org.springframework.web.bind.annotation.RequestMapping",
+        "evidence": {
+          "path": "src/main/java/example/customers/CustomerLookupController.java",
+          "range": {
+            "startLine": 10,
+            "endLine": 10
+          },
+          "revision": "tree-sha256:1e6b5d01ce25a42b4ebfa1863b87c068c2d233113f7e71015207ba89f2a34b88",
+          "fileHash": "28ec39a06652ee166d68a1c9e489c6ad1c43c970fd21d48c4d7675b79401300b",
+          "excerpt": "@RequestMapping(\"/api\")",
+          "projectId": "backend",
+          "repository": "synthetic/backend"
+        },
+        "phase": "candidate",
+        "projectId": "backend"
+      },
+      {
+        "reason": "external-or-missing-java-source",
+        "detail": "org.springframework.web.bind.annotation.GetMapping",
+        "evidence": {
+          "path": "src/main/java/example/customers/CustomerLookupController.java",
+          "range": {
+            "startLine": 12,
+            "endLine": 12
+          },
+          "revision": "tree-sha256:1e6b5d01ce25a42b4ebfa1863b87c068c2d233113f7e71015207ba89f2a34b88",
+          "fileHash": "28ec39a06652ee166d68a1c9e489c6ad1c43c970fd21d48c4d7675b79401300b",
+          "excerpt": "    @GetMapping(\"/customers/lookup\")",
+          "projectId": "backend",
+          "repository": "synthetic/backend"
+        },
+        "phase": "candidate",
+        "projectId": "backend"
+      },
+      {
+        "reason": "external-or-missing-java-source",
+        "detail": "org.springframework.web.bind.annotation.RequestParam",
+        "evidence": {
+          "path": "src/main/java/example/customers/CustomerLookupController.java",
+          "range": {
+            "startLine": 13,
+            "endLine": 13
+          },
+          "revision": "tree-sha256:1e6b5d01ce25a42b4ebfa1863b87c068c2d233113f7e71015207ba89f2a34b88",
+          "fileHash": "28ec39a06652ee166d68a1c9e489c6ad1c43c970fd21d48c4d7675b79401300b",
+          "excerpt": "    public CustomerResponse lookup(@RequestParam String id) {",
+          "projectId": "backend",
+          "repository": "synthetic/backend"
+        },
+        "phase": "candidate",
+        "projectId": "backend"
+      },
+      {
+        "reason": "external-or-missing-java-source",
+        "detail": "String",
+        "evidence": {
+          "path": "src/main/java/example/customers/CustomerLookupController.java",
+          "range": {
+            "startLine": 13,
+            "endLine": 13
+          },
+          "revision": "tree-sha256:1e6b5d01ce25a42b4ebfa1863b87c068c2d233113f7e71015207ba89f2a34b88",
+          "fileHash": "28ec39a06652ee166d68a1c9e489c6ad1c43c970fd21d48c4d7675b79401300b",
+          "excerpt": "    public CustomerResponse lookup(@RequestParam String id) {",
+          "projectId": "backend",
+          "repository": "synthetic/backend"
+        },
+        "phase": "candidate",
+        "projectId": "backend"
+      },
+      {
+        "reason": "external-or-missing-java-source",
+        "detail": "String",
+        "evidence": {
+          "path": "src/main/java/example/customers/CustomerResponse.java",
+          "range": {
+            "startLine": 3,
+            "endLine": 3
+          },
+          "revision": "tree-sha256:1e6b5d01ce25a42b4ebfa1863b87c068c2d233113f7e71015207ba89f2a34b88",
+          "fileHash": "fe4a076477f47074f1ca4a4140e45648ce3e2110fef9cf31fd934ad2bd1dfe4a",
+          "excerpt": "public record CustomerResponse(String id, String displayName) {}",
+          "projectId": "backend",
+          "repository": "synthetic/backend"
+        },
+        "phase": "candidate",
+        "projectId": "backend"
+      },
+      {
+        "reason": "external-or-missing-java-source",
+        "detail": "String",
+        "evidence": {
+          "path": "src/main/java/example/customers/CustomerResponse.java",
+          "range": {
+            "startLine": 3,
+            "endLine": 3
+          },
+          "revision": "tree-sha256:1e6b5d01ce25a42b4ebfa1863b87c068c2d233113f7e71015207ba89f2a34b88",
+          "fileHash": "fe4a076477f47074f1ca4a4140e45648ce3e2110fef9cf31fd934ad2bd1dfe4a",
+          "excerpt": "public record CustomerResponse(String id, String displayName) {}",
+          "projectId": "backend",
+          "repository": "synthetic/backend"
+        },
+        "phase": "candidate",
+        "projectId": "backend"
+      },
+      {
+        "reason": "Java local receiver type is not inferred",
+        "range": {
+          "startLine": 10,
+          "endLine": 10
+        },
+        "detail": "var",
+        "evidence": {
+          "path": "src/test/java/example/customers/CustomerLookupControllerTest.java",
+          "range": {
+            "startLine": 10,
+            "endLine": 10
+          },
+          "revision": "tree-sha256:1e6b5d01ce25a42b4ebfa1863b87c068c2d233113f7e71015207ba89f2a34b88",
+          "fileHash": "aa3a223914ae9a6772826e29cf6c8d54eec522fa0869dcaff96832f265bb5184",
+          "excerpt": "        var response = new CustomerLookupController().lookup(\"customer-1\");",
+          "projectId": "backend",
+          "repository": "synthetic/backend"
+        },
+        "phase": "candidate",
+        "projectId": "backend"
+      },
+      {
+        "reason": "Java local receiver type is not inferred",
+        "range": {
+          "startLine": 16,
+          "endLine": 16
+        },
+        "detail": "var",
+        "evidence": {
+          "path": "src/test/java/example/customers/CustomerLookupControllerTest.java",
+          "range": {
+            "startLine": 16,
+            "endLine": 16
+          },
+          "revision": "tree-sha256:1e6b5d01ce25a42b4ebfa1863b87c068c2d233113f7e71015207ba89f2a34b88",
+          "fileHash": "aa3a223914ae9a6772826e29cf6c8d54eec522fa0869dcaff96832f265bb5184",
+          "excerpt": "        var response = new CustomerLookupController().lookup(\"customer-1\");",
+          "projectId": "backend",
+          "repository": "synthetic/backend"
+        },
+        "phase": "candidate",
+        "projectId": "backend"
+      },
+      {
+        "reason": "Java call receiver is unresolved",
+        "range": {
+          "startLine": 10,
+          "endLine": 10
+        },
+        "detail": "new CustomerLookupController()",
+        "evidence": {
+          "path": "src/test/java/example/customers/CustomerLookupControllerTest.java",
+          "range": {
+            "startLine": 10,
+            "endLine": 10
+          },
+          "revision": "tree-sha256:1e6b5d01ce25a42b4ebfa1863b87c068c2d233113f7e71015207ba89f2a34b88",
+          "fileHash": "aa3a223914ae9a6772826e29cf6c8d54eec522fa0869dcaff96832f265bb5184",
+          "excerpt": "        var response = new CustomerLookupController().lookup(\"customer-1\");",
+          "projectId": "backend",
+          "repository": "synthetic/backend"
+        },
+        "phase": "candidate",
+        "projectId": "backend"
+      },
+      {
+        "reason": "Java call receiver is unresolved",
+        "range": {
+          "startLine": 11,
+          "endLine": 11
+        },
+        "detail": "response",
+        "evidence": {
+          "path": "src/test/java/example/customers/CustomerLookupControllerTest.java",
+          "range": {
+            "startLine": 11,
+            "endLine": 11
+          },
+          "revision": "tree-sha256:1e6b5d01ce25a42b4ebfa1863b87c068c2d233113f7e71015207ba89f2a34b88",
+          "fileHash": "aa3a223914ae9a6772826e29cf6c8d54eec522fa0869dcaff96832f265bb5184",
+          "excerpt": "        assertEquals(\"customer-1\", response.id());",
+          "projectId": "backend",
+          "repository": "synthetic/backend"
+        },
+        "phase": "candidate",
+        "projectId": "backend"
+      },
+      {
+        "reason": "Java call receiver is unresolved",
+        "range": {
+          "startLine": 16,
+          "endLine": 16
+        },
+        "detail": "new CustomerLookupController()",
+        "evidence": {
+          "path": "src/test/java/example/customers/CustomerLookupControllerTest.java",
+          "range": {
+            "startLine": 16,
+            "endLine": 16
+          },
+          "revision": "tree-sha256:1e6b5d01ce25a42b4ebfa1863b87c068c2d233113f7e71015207ba89f2a34b88",
+          "fileHash": "aa3a223914ae9a6772826e29cf6c8d54eec522fa0869dcaff96832f265bb5184",
+          "excerpt": "        var response = new CustomerLookupController().lookup(\"customer-1\");",
+          "projectId": "backend",
+          "repository": "synthetic/backend"
+        },
+        "phase": "candidate",
+        "projectId": "backend"
+      },
+      {
+        "reason": "Java call receiver is unresolved",
+        "range": {
+          "startLine": 17,
+          "endLine": 17
+        },
+        "detail": "response",
+        "evidence": {
+          "path": "src/test/java/example/customers/CustomerLookupControllerTest.java",
+          "range": {
+            "startLine": 17,
+            "endLine": 17
+          },
+          "revision": "tree-sha256:1e6b5d01ce25a42b4ebfa1863b87c068c2d233113f7e71015207ba89f2a34b88",
+          "fileHash": "aa3a223914ae9a6772826e29cf6c8d54eec522fa0869dcaff96832f265bb5184",
+          "excerpt": "        assertEquals(\"Ada Example\", response.displayName());",
+          "projectId": "backend",
+          "repository": "synthetic/backend"
+        },
+        "phase": "candidate",
+        "projectId": "backend"
+      },
+      {
+        "reason": "external-or-missing-java-source",
+        "detail": "org.junit.jupiter.api.Test",
+        "evidence": {
+          "path": "src/test/java/example/customers/CustomerLookupControllerTest.java",
+          "range": {
+            "startLine": 3,
+            "endLine": 3
+          },
+          "revision": "tree-sha256:1e6b5d01ce25a42b4ebfa1863b87c068c2d233113f7e71015207ba89f2a34b88",
+          "fileHash": "aa3a223914ae9a6772826e29cf6c8d54eec522fa0869dcaff96832f265bb5184",
+          "excerpt": "import org.junit.jupiter.api.Test;",
+          "projectId": "backend",
+          "repository": "synthetic/backend"
+        },
+        "phase": "candidate",
+        "projectId": "backend"
+      },
+      {
+        "reason": "external-or-missing-java-source",
+        "detail": "org.junit.jupiter.api.Assertions.assertEquals",
+        "evidence": {
+          "path": "src/test/java/example/customers/CustomerLookupControllerTest.java",
+          "range": {
+            "startLine": 4,
+            "endLine": 4
+          },
+          "revision": "tree-sha256:1e6b5d01ce25a42b4ebfa1863b87c068c2d233113f7e71015207ba89f2a34b88",
+          "fileHash": "aa3a223914ae9a6772826e29cf6c8d54eec522fa0869dcaff96832f265bb5184",
+          "excerpt": "import static org.junit.jupiter.api.Assertions.assertEquals;",
+          "projectId": "backend",
+          "repository": "synthetic/backend"
+        },
+        "phase": "candidate",
+        "projectId": "backend"
+      },
+      {
+        "reason": "external-or-missing-java-source",
+        "detail": "org.junit.jupiter.api.Test",
+        "evidence": {
+          "path": "src/test/java/example/customers/CustomerLookupControllerTest.java",
+          "range": {
+            "startLine": 8,
+            "endLine": 8
+          },
+          "revision": "tree-sha256:1e6b5d01ce25a42b4ebfa1863b87c068c2d233113f7e71015207ba89f2a34b88",
+          "fileHash": "aa3a223914ae9a6772826e29cf6c8d54eec522fa0869dcaff96832f265bb5184",
+          "excerpt": "    @Test",
+          "projectId": "backend",
+          "repository": "synthetic/backend"
+        },
+        "phase": "candidate",
+        "projectId": "backend"
+      },
+      {
+        "reason": "external-or-missing-java-source",
+        "detail": "var",
+        "evidence": {
+          "path": "src/test/java/example/customers/CustomerLookupControllerTest.java",
+          "range": {
+            "startLine": 10,
+            "endLine": 10
+          },
+          "revision": "tree-sha256:1e6b5d01ce25a42b4ebfa1863b87c068c2d233113f7e71015207ba89f2a34b88",
+          "fileHash": "aa3a223914ae9a6772826e29cf6c8d54eec522fa0869dcaff96832f265bb5184",
+          "excerpt": "        var response = new CustomerLookupController().lookup(\"customer-1\");",
+          "projectId": "backend",
+          "repository": "synthetic/backend"
+        },
+        "phase": "candidate",
+        "projectId": "backend"
+      },
+      {
+        "reason": "external-or-missing-java-source",
+        "detail": "org.junit.jupiter.api.Test",
+        "evidence": {
+          "path": "src/test/java/example/customers/CustomerLookupControllerTest.java",
+          "range": {
+            "startLine": 14,
+            "endLine": 14
+          },
+          "revision": "tree-sha256:1e6b5d01ce25a42b4ebfa1863b87c068c2d233113f7e71015207ba89f2a34b88",
+          "fileHash": "aa3a223914ae9a6772826e29cf6c8d54eec522fa0869dcaff96832f265bb5184",
+          "excerpt": "    @Test",
+          "projectId": "backend",
+          "repository": "synthetic/backend"
+        },
+        "phase": "candidate",
+        "projectId": "backend"
+      },
+      {
+        "reason": "external-or-missing-java-source",
+        "detail": "var",
+        "evidence": {
+          "path": "src/test/java/example/customers/CustomerLookupControllerTest.java",
+          "range": {
+            "startLine": 16,
+            "endLine": 16
+          },
+          "revision": "tree-sha256:1e6b5d01ce25a42b4ebfa1863b87c068c2d233113f7e71015207ba89f2a34b88",
+          "fileHash": "aa3a223914ae9a6772826e29cf6c8d54eec522fa0869dcaff96832f265bb5184",
+          "excerpt": "        var response = new CustomerLookupController().lookup(\"customer-1\");",
+          "projectId": "backend",
+          "repository": "synthetic/backend"
+        },
+        "phase": "candidate",
+        "projectId": "backend"
+      },
+      {
+        "reason": "dynamic-dependency",
+        "detail": "Runtime value prevents a resolved edge",
+        "evidence": {
+          "path": "src/test/java/example/customers/CustomerLookupControllerTest.java",
+          "range": {
+            "startLine": 10,
+            "endLine": 10
+          },
+          "revision": "tree-sha256:1e6b5d01ce25a42b4ebfa1863b87c068c2d233113f7e71015207ba89f2a34b88",
+          "fileHash": "aa3a223914ae9a6772826e29cf6c8d54eec522fa0869dcaff96832f265bb5184",
+          "excerpt": "        var response = new CustomerLookupController().lookup(\"customer-1\");",
+          "projectId": "backend",
+          "repository": "synthetic/backend"
+        },
+        "phase": "candidate",
+        "projectId": "backend"
+      },
+      {
+        "reason": "unresolved-call",
+        "detail": "assertEquals",
+        "evidence": {
+          "path": "src/test/java/example/customers/CustomerLookupControllerTest.java",
+          "range": {
+            "startLine": 11,
+            "endLine": 11
+          },
+          "revision": "tree-sha256:1e6b5d01ce25a42b4ebfa1863b87c068c2d233113f7e71015207ba89f2a34b88",
+          "fileHash": "aa3a223914ae9a6772826e29cf6c8d54eec522fa0869dcaff96832f265bb5184",
+          "excerpt": "        assertEquals(\"customer-1\", response.id());",
+          "projectId": "backend",
+          "repository": "synthetic/backend"
+        },
+        "candidates": [],
+        "phase": "candidate",
+        "projectId": "backend"
+      },
+      {
+        "reason": "dynamic-dependency",
+        "detail": "Runtime value prevents a resolved edge",
+        "evidence": {
+          "path": "src/test/java/example/customers/CustomerLookupControllerTest.java",
+          "range": {
+            "startLine": 11,
+            "endLine": 11
+          },
+          "revision": "tree-sha256:1e6b5d01ce25a42b4ebfa1863b87c068c2d233113f7e71015207ba89f2a34b88",
+          "fileHash": "aa3a223914ae9a6772826e29cf6c8d54eec522fa0869dcaff96832f265bb5184",
+          "excerpt": "        assertEquals(\"customer-1\", response.id());",
+          "projectId": "backend",
+          "repository": "synthetic/backend"
+        },
+        "phase": "candidate",
+        "projectId": "backend"
+      },
+      {
+        "reason": "dynamic-dependency",
+        "detail": "Runtime value prevents a resolved edge",
+        "evidence": {
+          "path": "src/test/java/example/customers/CustomerLookupControllerTest.java",
+          "range": {
+            "startLine": 16,
+            "endLine": 16
+          },
+          "revision": "tree-sha256:1e6b5d01ce25a42b4ebfa1863b87c068c2d233113f7e71015207ba89f2a34b88",
+          "fileHash": "aa3a223914ae9a6772826e29cf6c8d54eec522fa0869dcaff96832f265bb5184",
+          "excerpt": "        var response = new CustomerLookupController().lookup(\"customer-1\");",
+          "projectId": "backend",
+          "repository": "synthetic/backend"
+        },
+        "phase": "candidate",
+        "projectId": "backend"
+      },
+      {
+        "reason": "unresolved-call",
+        "detail": "assertEquals",
+        "evidence": {
+          "path": "src/test/java/example/customers/CustomerLookupControllerTest.java",
+          "range": {
+            "startLine": 17,
+            "endLine": 17
+          },
+          "revision": "tree-sha256:1e6b5d01ce25a42b4ebfa1863b87c068c2d233113f7e71015207ba89f2a34b88",
+          "fileHash": "aa3a223914ae9a6772826e29cf6c8d54eec522fa0869dcaff96832f265bb5184",
+          "excerpt": "        assertEquals(\"Ada Example\", response.displayName());",
+          "projectId": "backend",
+          "repository": "synthetic/backend"
+        },
+        "candidates": [],
+        "phase": "candidate",
+        "projectId": "backend"
+      },
+      {
+        "reason": "dynamic-dependency",
+        "detail": "Runtime value prevents a resolved edge",
+        "evidence": {
+          "path": "src/test/java/example/customers/CustomerLookupControllerTest.java",
+          "range": {
+            "startLine": 17,
+            "endLine": 17
+          },
+          "revision": "tree-sha256:1e6b5d01ce25a42b4ebfa1863b87c068c2d233113f7e71015207ba89f2a34b88",
+          "fileHash": "aa3a223914ae9a6772826e29cf6c8d54eec522fa0869dcaff96832f265bb5184",
+          "excerpt": "        assertEquals(\"Ada Example\", response.displayName());",
+          "projectId": "backend",
+          "repository": "synthetic/backend"
+        },
+        "phase": "candidate",
+        "projectId": "backend"
+      },
+      {
+        "reason": "dynamic_http_url",
+        "range": {
+          "startLine": 8,
+          "endLine": 8
+        },
+        "detail": "`/api/customers/lookup?id=${encodeURIComponent(id)}`",
+        "evidence": {
+          "path": "src/customerApi.ts",
+          "range": {
+            "startLine": 8,
+            "endLine": 8
+          },
+          "revision": "tree-sha256:cb1428398ae523807aebfe0b726102d6c698d766aa08cdc469c758646e846138",
+          "fileHash": "2cdee9cc200708bdb5c3184490c8e02a2597c6ada3b97b79ff5b66eb4c6a7095",
+          "excerpt": "  const response = await fetch(`/api/customers/lookup?id=${encodeURIComponent(id)}`);",
+          "projectId": "frontend",
+          "repository": "synthetic/frontend"
+        },
+        "phase": "baseline",
+        "projectId": "frontend"
+      },
+      {
+        "reason": "unresolved_call",
+        "range": {
+          "startLine": 8,
+          "endLine": 8
+        },
+        "detail": "encodeURIComponent",
+        "evidence": {
+          "path": "src/customerApi.ts",
+          "range": {
+            "startLine": 8,
+            "endLine": 8
+          },
+          "revision": "tree-sha256:cb1428398ae523807aebfe0b726102d6c698d766aa08cdc469c758646e846138",
+          "fileHash": "2cdee9cc200708bdb5c3184490c8e02a2597c6ada3b97b79ff5b66eb4c6a7095",
+          "excerpt": "  const response = await fetch(`/api/customers/lookup?id=${encodeURIComponent(id)}`);",
+          "projectId": "frontend",
+          "repository": "synthetic/frontend"
+        },
+        "phase": "baseline",
+        "projectId": "frontend"
+      },
+      {
+        "reason": "unresolved_call",
+        "range": {
+          "startLine": 10,
+          "endLine": 10
+        },
+        "detail": "response.json",
+        "evidence": {
+          "path": "src/customerApi.ts",
+          "range": {
+            "startLine": 10,
+            "endLine": 10
+          },
+          "revision": "tree-sha256:cb1428398ae523807aebfe0b726102d6c698d766aa08cdc469c758646e846138",
+          "fileHash": "2cdee9cc200708bdb5c3184490c8e02a2597c6ada3b97b79ff5b66eb4c6a7095",
+          "excerpt": "  return response.json();",
+          "projectId": "frontend",
+          "repository": "synthetic/frontend"
+        },
+        "phase": "baseline",
+        "projectId": "frontend"
+      },
+      {
+        "reason": "unresolved-call",
+        "detail": "Promise",
+        "evidence": {
+          "path": "src/customerApi.ts",
+          "range": {
+            "startLine": 7,
+            "endLine": 7
+          },
+          "revision": "tree-sha256:cb1428398ae523807aebfe0b726102d6c698d766aa08cdc469c758646e846138",
+          "fileHash": "2cdee9cc200708bdb5c3184490c8e02a2597c6ada3b97b79ff5b66eb4c6a7095",
+          "excerpt": "export async function lookupCustomer(id: string): Promise<CustomerResponse> {",
+          "projectId": "frontend",
+          "repository": "synthetic/frontend"
+        },
+        "phase": "baseline",
+        "projectId": "frontend"
+      },
+      {
+        "reason": "unresolved-call",
+        "detail": "fetch",
+        "evidence": {
+          "path": "src/customerApi.ts",
+          "range": {
+            "startLine": 8,
+            "endLine": 8
+          },
+          "revision": "tree-sha256:cb1428398ae523807aebfe0b726102d6c698d766aa08cdc469c758646e846138",
+          "fileHash": "2cdee9cc200708bdb5c3184490c8e02a2597c6ada3b97b79ff5b66eb4c6a7095",
+          "excerpt": "  const response = await fetch(`/api/customers/lookup?id=${encodeURIComponent(id)}`);",
+          "projectId": "frontend",
+          "repository": "synthetic/frontend"
+        },
+        "phase": "baseline",
+        "projectId": "frontend"
+      },
+      {
+        "reason": "dynamic-dependency",
+        "detail": "Runtime value prevents a resolved edge",
+        "evidence": {
+          "path": "src/customerApi.ts",
+          "range": {
+            "startLine": 8,
+            "endLine": 8
+          },
+          "revision": "tree-sha256:cb1428398ae523807aebfe0b726102d6c698d766aa08cdc469c758646e846138",
+          "fileHash": "2cdee9cc200708bdb5c3184490c8e02a2597c6ada3b97b79ff5b66eb4c6a7095",
+          "excerpt": "  const response = await fetch(`/api/customers/lookup?id=${encodeURIComponent(id)}`);",
+          "projectId": "frontend",
+          "repository": "synthetic/frontend"
+        },
+        "phase": "baseline",
+        "projectId": "frontend"
+      },
+      {
+        "reason": "unresolved-call",
+        "detail": "encodeURIComponent",
+        "evidence": {
+          "path": "src/customerApi.ts",
+          "range": {
+            "startLine": 8,
+            "endLine": 8
+          },
+          "revision": "tree-sha256:cb1428398ae523807aebfe0b726102d6c698d766aa08cdc469c758646e846138",
+          "fileHash": "2cdee9cc200708bdb5c3184490c8e02a2597c6ada3b97b79ff5b66eb4c6a7095",
+          "excerpt": "  const response = await fetch(`/api/customers/lookup?id=${encodeURIComponent(id)}`);",
+          "projectId": "frontend",
+          "repository": "synthetic/frontend"
+        },
+        "phase": "baseline",
+        "projectId": "frontend"
+      },
+      {
+        "reason": "unresolved-call",
+        "detail": "Error",
+        "evidence": {
+          "path": "src/customerApi.ts",
+          "range": {
+            "startLine": 9,
+            "endLine": 9
+          },
+          "revision": "tree-sha256:cb1428398ae523807aebfe0b726102d6c698d766aa08cdc469c758646e846138",
+          "fileHash": "2cdee9cc200708bdb5c3184490c8e02a2597c6ada3b97b79ff5b66eb4c6a7095",
+          "excerpt": "  if (!response.ok) throw new Error('Customer lookup failed');",
+          "projectId": "frontend",
+          "repository": "synthetic/frontend"
+        },
+        "phase": "baseline",
+        "projectId": "frontend"
+      },
+      {
+        "reason": "unresolved-call",
+        "detail": "json",
+        "evidence": {
+          "path": "src/customerApi.ts",
+          "range": {
+            "startLine": 10,
+            "endLine": 10
+          },
+          "revision": "tree-sha256:cb1428398ae523807aebfe0b726102d6c698d766aa08cdc469c758646e846138",
+          "fileHash": "2cdee9cc200708bdb5c3184490c8e02a2597c6ada3b97b79ff5b66eb4c6a7095",
+          "excerpt": "  return response.json();",
+          "projectId": "frontend",
+          "repository": "synthetic/frontend"
+        },
+        "phase": "baseline",
+        "projectId": "frontend"
+      },
+      {
+        "reason": "unresolved_call",
+        "range": {
+          "startLine": 6,
+          "endLine": 6
+        },
+        "detail": "page.goto",
+        "evidence": {
+          "path": "src/customerLookup.spec.ts",
+          "range": {
+            "startLine": 6,
+            "endLine": 6
+          },
+          "revision": "tree-sha256:cb1428398ae523807aebfe0b726102d6c698d766aa08cdc469c758646e846138",
+          "fileHash": "b033953aaf51f31b7481fedd383143894cd18d3f4aebbc230e99d70bee5db305",
+          "excerpt": "  await page.goto('/customers');",
+          "projectId": "frontend",
+          "repository": "synthetic/frontend"
+        },
+        "phase": "baseline",
+        "projectId": "frontend"
+      },
+      {
+        "reason": "unresolved_call",
+        "range": {
+          "startLine": 7,
+          "endLine": 7
+        },
+        "detail": "expect(page.getByLabel('Customer result')).toHaveText",
+        "evidence": {
+          "path": "src/customerLookup.spec.ts",
+          "range": {
+            "startLine": 7,
+            "endLine": 7
+          },
+          "revision": "tree-sha256:cb1428398ae523807aebfe0b726102d6c698d766aa08cdc469c758646e846138",
+          "fileHash": "b033953aaf51f31b7481fedd383143894cd18d3f4aebbc230e99d70bee5db305",
+          "excerpt": "  await expect(page.getByLabel('Customer result')).toHaveText('Ada Example');",
+          "projectId": "frontend",
+          "repository": "synthetic/frontend"
+        },
+        "phase": "baseline",
+        "projectId": "frontend"
+      },
+      {
+        "reason": "unresolved_call",
+        "range": {
+          "startLine": 7,
+          "endLine": 7
+        },
+        "detail": "page.getByLabel",
+        "evidence": {
+          "path": "src/customerLookup.spec.ts",
+          "range": {
+            "startLine": 7,
+            "endLine": 7
+          },
+          "revision": "tree-sha256:cb1428398ae523807aebfe0b726102d6c698d766aa08cdc469c758646e846138",
+          "fileHash": "b033953aaf51f31b7481fedd383143894cd18d3f4aebbc230e99d70bee5db305",
+          "excerpt": "  await expect(page.getByLabel('Customer result')).toHaveText('Ada Example');",
+          "projectId": "frontend",
+          "repository": "synthetic/frontend"
+        },
+        "phase": "baseline",
+        "projectId": "frontend"
+      },
+      {
+        "reason": "external-module",
+        "detail": "@playwright/test",
+        "evidence": {
+          "path": "src/customerLookup.spec.ts",
+          "range": {
+            "startLine": 1,
+            "endLine": 1
+          },
+          "revision": "tree-sha256:cb1428398ae523807aebfe0b726102d6c698d766aa08cdc469c758646e846138",
+          "fileHash": "b033953aaf51f31b7481fedd383143894cd18d3f4aebbc230e99d70bee5db305",
+          "excerpt": "import {test, expect} from '@playwright/test';",
+          "projectId": "frontend",
+          "repository": "synthetic/frontend"
+        },
+        "phase": "baseline",
+        "projectId": "frontend"
+      },
+      {
+        "reason": "external-module",
+        "detail": "@playwright/test",
+        "evidence": {
+          "path": "src/customerLookup.spec.ts",
+          "range": {
+            "startLine": 1,
+            "endLine": 1
+          },
+          "revision": "tree-sha256:cb1428398ae523807aebfe0b726102d6c698d766aa08cdc469c758646e846138",
+          "fileHash": "b033953aaf51f31b7481fedd383143894cd18d3f4aebbc230e99d70bee5db305",
+          "excerpt": "import {test, expect} from '@playwright/test';",
+          "projectId": "frontend",
+          "repository": "synthetic/frontend"
+        },
+        "phase": "baseline",
+        "projectId": "frontend"
+      },
+      {
+        "reason": "unresolved-call",
+        "detail": "goto",
+        "evidence": {
+          "path": "src/customerLookup.spec.ts",
+          "range": {
+            "startLine": 6,
+            "endLine": 6
+          },
+          "revision": "tree-sha256:cb1428398ae523807aebfe0b726102d6c698d766aa08cdc469c758646e846138",
+          "fileHash": "b033953aaf51f31b7481fedd383143894cd18d3f4aebbc230e99d70bee5db305",
+          "excerpt": "  await page.goto('/customers');",
+          "projectId": "frontend",
+          "repository": "synthetic/frontend"
+        },
+        "phase": "baseline",
+        "projectId": "frontend"
+      },
+      {
+        "reason": "unresolved-call",
+        "detail": "toHaveText",
+        "evidence": {
+          "path": "src/customerLookup.spec.ts",
+          "range": {
+            "startLine": 7,
+            "endLine": 7
+          },
+          "revision": "tree-sha256:cb1428398ae523807aebfe0b726102d6c698d766aa08cdc469c758646e846138",
+          "fileHash": "b033953aaf51f31b7481fedd383143894cd18d3f4aebbc230e99d70bee5db305",
+          "excerpt": "  await expect(page.getByLabel('Customer result')).toHaveText('Ada Example');",
+          "projectId": "frontend",
+          "repository": "synthetic/frontend"
+        },
+        "phase": "baseline",
+        "projectId": "frontend"
+      },
+      {
+        "reason": "unresolved-call",
+        "detail": "getByLabel",
+        "evidence": {
+          "path": "src/customerLookup.spec.ts",
+          "range": {
+            "startLine": 7,
+            "endLine": 7
+          },
+          "revision": "tree-sha256:cb1428398ae523807aebfe0b726102d6c698d766aa08cdc469c758646e846138",
+          "fileHash": "b033953aaf51f31b7481fedd383143894cd18d3f4aebbc230e99d70bee5db305",
+          "excerpt": "  await expect(page.getByLabel('Customer result')).toHaveText('Ada Example');",
+          "projectId": "frontend",
+          "repository": "synthetic/frontend"
+        },
+        "phase": "baseline",
+        "projectId": "frontend"
+      },
+      {
+        "reason": "external-module",
+        "detail": "react",
+        "evidence": {
+          "path": "src/CustomerResult.tsx",
+          "range": {
+            "startLine": 1,
+            "endLine": 1
+          },
+          "revision": "tree-sha256:cb1428398ae523807aebfe0b726102d6c698d766aa08cdc469c758646e846138",
+          "fileHash": "fd213c059dcdf53b40bc3e55e70809aea60b0b0fba019ce3073338108db96655",
+          "excerpt": "import React from 'react';",
+          "projectId": "frontend",
+          "repository": "synthetic/frontend"
+        },
+        "phase": "baseline",
+        "projectId": "frontend"
+      },
+      {
+        "reason": "dynamic_http_url",
+        "range": {
+          "startLine": 8,
+          "endLine": 8
+        },
+        "detail": "`/api/customers/lookup?id=${encodeURIComponent(id)}`",
+        "evidence": {
+          "path": "src/customerApi.ts",
+          "range": {
+            "startLine": 8,
+            "endLine": 8
+          },
+          "revision": "tree-sha256:cb1428398ae523807aebfe0b726102d6c698d766aa08cdc469c758646e846138",
+          "fileHash": "2cdee9cc200708bdb5c3184490c8e02a2597c6ada3b97b79ff5b66eb4c6a7095",
+          "excerpt": "  const response = await fetch(`/api/customers/lookup?id=${encodeURIComponent(id)}`);",
+          "projectId": "frontend",
+          "repository": "synthetic/frontend"
+        },
+        "phase": "candidate",
+        "projectId": "frontend"
+      },
+      {
+        "reason": "unresolved_call",
+        "range": {
+          "startLine": 8,
+          "endLine": 8
+        },
+        "detail": "encodeURIComponent",
+        "evidence": {
+          "path": "src/customerApi.ts",
+          "range": {
+            "startLine": 8,
+            "endLine": 8
+          },
+          "revision": "tree-sha256:cb1428398ae523807aebfe0b726102d6c698d766aa08cdc469c758646e846138",
+          "fileHash": "2cdee9cc200708bdb5c3184490c8e02a2597c6ada3b97b79ff5b66eb4c6a7095",
+          "excerpt": "  const response = await fetch(`/api/customers/lookup?id=${encodeURIComponent(id)}`);",
+          "projectId": "frontend",
+          "repository": "synthetic/frontend"
+        },
+        "phase": "candidate",
+        "projectId": "frontend"
+      },
+      {
+        "reason": "unresolved_call",
+        "range": {
+          "startLine": 10,
+          "endLine": 10
+        },
+        "detail": "response.json",
+        "evidence": {
+          "path": "src/customerApi.ts",
+          "range": {
+            "startLine": 10,
+            "endLine": 10
+          },
+          "revision": "tree-sha256:cb1428398ae523807aebfe0b726102d6c698d766aa08cdc469c758646e846138",
+          "fileHash": "2cdee9cc200708bdb5c3184490c8e02a2597c6ada3b97b79ff5b66eb4c6a7095",
+          "excerpt": "  return response.json();",
+          "projectId": "frontend",
+          "repository": "synthetic/frontend"
+        },
+        "phase": "candidate",
+        "projectId": "frontend"
+      },
+      {
+        "reason": "unresolved-call",
+        "detail": "Promise",
+        "evidence": {
+          "path": "src/customerApi.ts",
+          "range": {
+            "startLine": 7,
+            "endLine": 7
+          },
+          "revision": "tree-sha256:cb1428398ae523807aebfe0b726102d6c698d766aa08cdc469c758646e846138",
+          "fileHash": "2cdee9cc200708bdb5c3184490c8e02a2597c6ada3b97b79ff5b66eb4c6a7095",
+          "excerpt": "export async function lookupCustomer(id: string): Promise<CustomerResponse> {",
+          "projectId": "frontend",
+          "repository": "synthetic/frontend"
+        },
+        "phase": "candidate",
+        "projectId": "frontend"
+      },
+      {
+        "reason": "unresolved-call",
+        "detail": "fetch",
+        "evidence": {
+          "path": "src/customerApi.ts",
+          "range": {
+            "startLine": 8,
+            "endLine": 8
+          },
+          "revision": "tree-sha256:cb1428398ae523807aebfe0b726102d6c698d766aa08cdc469c758646e846138",
+          "fileHash": "2cdee9cc200708bdb5c3184490c8e02a2597c6ada3b97b79ff5b66eb4c6a7095",
+          "excerpt": "  const response = await fetch(`/api/customers/lookup?id=${encodeURIComponent(id)}`);",
+          "projectId": "frontend",
+          "repository": "synthetic/frontend"
+        },
+        "phase": "candidate",
+        "projectId": "frontend"
+      },
+      {
+        "reason": "dynamic-dependency",
+        "detail": "Runtime value prevents a resolved edge",
+        "evidence": {
+          "path": "src/customerApi.ts",
+          "range": {
+            "startLine": 8,
+            "endLine": 8
+          },
+          "revision": "tree-sha256:cb1428398ae523807aebfe0b726102d6c698d766aa08cdc469c758646e846138",
+          "fileHash": "2cdee9cc200708bdb5c3184490c8e02a2597c6ada3b97b79ff5b66eb4c6a7095",
+          "excerpt": "  const response = await fetch(`/api/customers/lookup?id=${encodeURIComponent(id)}`);",
+          "projectId": "frontend",
+          "repository": "synthetic/frontend"
+        },
+        "phase": "candidate",
+        "projectId": "frontend"
+      },
+      {
+        "reason": "unresolved-call",
+        "detail": "encodeURIComponent",
+        "evidence": {
+          "path": "src/customerApi.ts",
+          "range": {
+            "startLine": 8,
+            "endLine": 8
+          },
+          "revision": "tree-sha256:cb1428398ae523807aebfe0b726102d6c698d766aa08cdc469c758646e846138",
+          "fileHash": "2cdee9cc200708bdb5c3184490c8e02a2597c6ada3b97b79ff5b66eb4c6a7095",
+          "excerpt": "  const response = await fetch(`/api/customers/lookup?id=${encodeURIComponent(id)}`);",
+          "projectId": "frontend",
+          "repository": "synthetic/frontend"
+        },
+        "phase": "candidate",
+        "projectId": "frontend"
+      },
+      {
+        "reason": "unresolved-call",
+        "detail": "Error",
+        "evidence": {
+          "path": "src/customerApi.ts",
+          "range": {
+            "startLine": 9,
+            "endLine": 9
+          },
+          "revision": "tree-sha256:cb1428398ae523807aebfe0b726102d6c698d766aa08cdc469c758646e846138",
+          "fileHash": "2cdee9cc200708bdb5c3184490c8e02a2597c6ada3b97b79ff5b66eb4c6a7095",
+          "excerpt": "  if (!response.ok) throw new Error('Customer lookup failed');",
+          "projectId": "frontend",
+          "repository": "synthetic/frontend"
+        },
+        "phase": "candidate",
+        "projectId": "frontend"
+      },
+      {
+        "reason": "unresolved-call",
+        "detail": "json",
+        "evidence": {
+          "path": "src/customerApi.ts",
+          "range": {
+            "startLine": 10,
+            "endLine": 10
+          },
+          "revision": "tree-sha256:cb1428398ae523807aebfe0b726102d6c698d766aa08cdc469c758646e846138",
+          "fileHash": "2cdee9cc200708bdb5c3184490c8e02a2597c6ada3b97b79ff5b66eb4c6a7095",
+          "excerpt": "  return response.json();",
+          "projectId": "frontend",
+          "repository": "synthetic/frontend"
+        },
+        "phase": "candidate",
+        "projectId": "frontend"
+      },
+      {
+        "reason": "unresolved_call",
+        "range": {
+          "startLine": 6,
+          "endLine": 6
+        },
+        "detail": "page.goto",
+        "evidence": {
+          "path": "src/customerLookup.spec.ts",
+          "range": {
+            "startLine": 6,
+            "endLine": 6
+          },
+          "revision": "tree-sha256:cb1428398ae523807aebfe0b726102d6c698d766aa08cdc469c758646e846138",
+          "fileHash": "b033953aaf51f31b7481fedd383143894cd18d3f4aebbc230e99d70bee5db305",
+          "excerpt": "  await page.goto('/customers');",
+          "projectId": "frontend",
+          "repository": "synthetic/frontend"
+        },
+        "phase": "candidate",
+        "projectId": "frontend"
+      },
+      {
+        "reason": "unresolved_call",
+        "range": {
+          "startLine": 7,
+          "endLine": 7
+        },
+        "detail": "expect(page.getByLabel('Customer result')).toHaveText",
+        "evidence": {
+          "path": "src/customerLookup.spec.ts",
+          "range": {
+            "startLine": 7,
+            "endLine": 7
+          },
+          "revision": "tree-sha256:cb1428398ae523807aebfe0b726102d6c698d766aa08cdc469c758646e846138",
+          "fileHash": "b033953aaf51f31b7481fedd383143894cd18d3f4aebbc230e99d70bee5db305",
+          "excerpt": "  await expect(page.getByLabel('Customer result')).toHaveText('Ada Example');",
+          "projectId": "frontend",
+          "repository": "synthetic/frontend"
+        },
+        "phase": "candidate",
+        "projectId": "frontend"
+      },
+      {
+        "reason": "unresolved_call",
+        "range": {
+          "startLine": 7,
+          "endLine": 7
+        },
+        "detail": "page.getByLabel",
+        "evidence": {
+          "path": "src/customerLookup.spec.ts",
+          "range": {
+            "startLine": 7,
+            "endLine": 7
+          },
+          "revision": "tree-sha256:cb1428398ae523807aebfe0b726102d6c698d766aa08cdc469c758646e846138",
+          "fileHash": "b033953aaf51f31b7481fedd383143894cd18d3f4aebbc230e99d70bee5db305",
+          "excerpt": "  await expect(page.getByLabel('Customer result')).toHaveText('Ada Example');",
+          "projectId": "frontend",
+          "repository": "synthetic/frontend"
+        },
+        "phase": "candidate",
+        "projectId": "frontend"
+      },
+      {
+        "reason": "external-module",
+        "detail": "@playwright/test",
+        "evidence": {
+          "path": "src/customerLookup.spec.ts",
+          "range": {
+            "startLine": 1,
+            "endLine": 1
+          },
+          "revision": "tree-sha256:cb1428398ae523807aebfe0b726102d6c698d766aa08cdc469c758646e846138",
+          "fileHash": "b033953aaf51f31b7481fedd383143894cd18d3f4aebbc230e99d70bee5db305",
+          "excerpt": "import {test, expect} from '@playwright/test';",
+          "projectId": "frontend",
+          "repository": "synthetic/frontend"
+        },
+        "phase": "candidate",
+        "projectId": "frontend"
+      },
+      {
+        "reason": "external-module",
+        "detail": "@playwright/test",
+        "evidence": {
+          "path": "src/customerLookup.spec.ts",
+          "range": {
+            "startLine": 1,
+            "endLine": 1
+          },
+          "revision": "tree-sha256:cb1428398ae523807aebfe0b726102d6c698d766aa08cdc469c758646e846138",
+          "fileHash": "b033953aaf51f31b7481fedd383143894cd18d3f4aebbc230e99d70bee5db305",
+          "excerpt": "import {test, expect} from '@playwright/test';",
+          "projectId": "frontend",
+          "repository": "synthetic/frontend"
+        },
+        "phase": "candidate",
+        "projectId": "frontend"
+      },
+      {
+        "reason": "unresolved-call",
+        "detail": "goto",
+        "evidence": {
+          "path": "src/customerLookup.spec.ts",
+          "range": {
+            "startLine": 6,
+            "endLine": 6
+          },
+          "revision": "tree-sha256:cb1428398ae523807aebfe0b726102d6c698d766aa08cdc469c758646e846138",
+          "fileHash": "b033953aaf51f31b7481fedd383143894cd18d3f4aebbc230e99d70bee5db305",
+          "excerpt": "  await page.goto('/customers');",
+          "projectId": "frontend",
+          "repository": "synthetic/frontend"
+        },
+        "phase": "candidate",
+        "projectId": "frontend"
+      },
+      {
+        "reason": "unresolved-call",
+        "detail": "toHaveText",
+        "evidence": {
+          "path": "src/customerLookup.spec.ts",
+          "range": {
+            "startLine": 7,
+            "endLine": 7
+          },
+          "revision": "tree-sha256:cb1428398ae523807aebfe0b726102d6c698d766aa08cdc469c758646e846138",
+          "fileHash": "b033953aaf51f31b7481fedd383143894cd18d3f4aebbc230e99d70bee5db305",
+          "excerpt": "  await expect(page.getByLabel('Customer result')).toHaveText('Ada Example');",
+          "projectId": "frontend",
+          "repository": "synthetic/frontend"
+        },
+        "phase": "candidate",
+        "projectId": "frontend"
+      },
+      {
+        "reason": "unresolved-call",
+        "detail": "getByLabel",
+        "evidence": {
+          "path": "src/customerLookup.spec.ts",
+          "range": {
+            "startLine": 7,
+            "endLine": 7
+          },
+          "revision": "tree-sha256:cb1428398ae523807aebfe0b726102d6c698d766aa08cdc469c758646e846138",
+          "fileHash": "b033953aaf51f31b7481fedd383143894cd18d3f4aebbc230e99d70bee5db305",
+          "excerpt": "  await expect(page.getByLabel('Customer result')).toHaveText('Ada Example');",
+          "projectId": "frontend",
+          "repository": "synthetic/frontend"
+        },
+        "phase": "candidate",
+        "projectId": "frontend"
+      },
+      {
+        "reason": "external-module",
+        "detail": "react",
+        "evidence": {
+          "path": "src/CustomerResult.tsx",
+          "range": {
+            "startLine": 1,
+            "endLine": 1
+          },
+          "revision": "tree-sha256:cb1428398ae523807aebfe0b726102d6c698d766aa08cdc469c758646e846138",
+          "fileHash": "fd213c059dcdf53b40bc3e55e70809aea60b0b0fba019ce3073338108db96655",
+          "excerpt": "import React from 'react';",
+          "projectId": "frontend",
+          "repository": "synthetic/frontend"
+        },
+        "phase": "candidate",
+        "projectId": "frontend"
+      }
+    ],
+    "focusedTests": [],
+    "coverage": {
+      "complete": false,
+      "fullRegressionMayBeSkipped": false,
+      "limitations": [
+        "Source-only analysis; no Java/TypeScript semantic compilation, runtime dispatch, reflection, DI wiring, proxy/origin verification or transitive external package sources",
+        "Edges are evidence-backed approximations; indirect file dependencies do not prove execution",
+        "Renames inferred only for identical declaration key/signature/body; edited renames remain delete/add",
+        "Unknown syntax and unresolved/dynamic dependencies remain visible; passing fixture tests is not private-repository acceptance",
+        "Cross-project dependencies require explicit mappings; mappings are assertions, not deployment proof",
+        "Selected quality and SOLID signals do not establish universal design correctness",
+        "Requirement criteria are literal source/test evidence only; runtime remains unverified"
+      ]
+    },
+    "provenance": {
+      "projects": [
+        {
+          "projectId": "backend",
+          "baseline": {
+            "root": "/inputs/requirements/backend",
+            "type": "directory",
+            "revision": "tree-sha256:1e6b5d01ce25a42b4ebfa1863b87c068c2d233113f7e71015207ba89f2a34b88",
+            "contentHash": "1e6b5d01ce25a42b4ebfa1863b87c068c2d233113f7e71015207ba89f2a34b88",
+            "dirty": false
+          },
+          "candidate": {
+            "root": "/inputs/requirements/backend",
+            "type": "directory",
+            "revision": "tree-sha256:1e6b5d01ce25a42b4ebfa1863b87c068c2d233113f7e71015207ba89f2a34b88",
+            "contentHash": "1e6b5d01ce25a42b4ebfa1863b87c068c2d233113f7e71015207ba89f2a34b88",
+            "dirty": false
+          },
+          "rulesHash": "0d5e2b6ecbb54e8ca1b94e4d870ca7ca17bc2cce02b0b5f7ec012536d8647877",
+          "baselineRulesHash": "0d5e2b6ecbb54e8ca1b94e4d870ca7ca17bc2cce02b0b5f7ec012536d8647877",
+          "cacheKey": "a7202ab3992aff61cebcf87a2dabc7feaf8dadef96508b7bcdf7080553555f94"
+        },
+        {
+          "projectId": "frontend",
+          "baseline": {
+            "root": "/inputs/requirements/frontend",
+            "type": "directory",
+            "revision": "tree-sha256:cb1428398ae523807aebfe0b726102d6c698d766aa08cdc469c758646e846138",
+            "contentHash": "cb1428398ae523807aebfe0b726102d6c698d766aa08cdc469c758646e846138",
+            "dirty": false
+          },
+          "candidate": {
+            "root": "/inputs/requirements/frontend",
+            "type": "directory",
+            "revision": "tree-sha256:cb1428398ae523807aebfe0b726102d6c698d766aa08cdc469c758646e846138",
+            "contentHash": "cb1428398ae523807aebfe0b726102d6c698d766aa08cdc469c758646e846138",
+            "dirty": false
+          },
+          "rulesHash": "0d5e2b6ecbb54e8ca1b94e4d870ca7ca17bc2cce02b0b5f7ec012536d8647877",
+          "baselineRulesHash": "0d5e2b6ecbb54e8ca1b94e4d870ca7ca17bc2cce02b0b5f7ec012536d8647877",
+          "cacheKey": "aab910bfc9b1d449b7f6e7ccfecf91d2bdc6b64ee27bc41fd9af7249f026246f"
+        }
+      ]
+    },
+    "cache": {
+      "projects": [
+        {
+          "projectId": "backend",
+          "report": "miss",
+          "parsedFiles": 0,
+          "reusedFiles": 0,
+          "invalidEntries": 0
+        },
+        {
+          "projectId": "frontend",
+          "report": "miss",
+          "parsedFiles": 0,
+          "reusedFiles": 0,
+          "invalidEntries": 0
+        }
+      ],
+      "quality": [
+        {
+          "projectId": "backend",
+          "status": "miss"
+        },
+        {
+          "projectId": "frontend",
+          "status": "miss"
+        }
+      ]
+    },
+    "metrics": {
+      "elapsedMs": 1998.45,
+      "projects": 2,
+      "sourceFiles": 6,
+      "edges": 16
+    }
+  }
+}

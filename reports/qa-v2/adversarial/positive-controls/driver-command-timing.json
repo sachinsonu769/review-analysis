@@ -1,0 +1,20 @@
+{
+  "argv": [
+    "node",
+    "/workspace/review-analysis-deliverables/qa-v2/adversarial/positive-controls-runner.mjs"
+  ],
+  "cwd": "/workspace",
+  "environmentOverrides": {
+    "ADVERSARIAL_BUILD": "/tmp/review-analysis-qa-v2-fsn7g676",
+    "ADVERSARIAL_OUT": "/workspace/review-analysis-deliverables/qa-v2/adversarial/positive-controls",
+    "ADVERSARIAL_CASE_ROOT": "/tmp/review-analysis-adversarial-v2-NZrPxG/positive-controls",
+    "ADVERSARIAL_ARTIFACT_SHA256": "a140834fe7d26c707a04dc43ae225178bc39756154ca52e63f8dd7db91582897"
+  },
+  "runnerSha256": "50ca55625ade5a87107969a30f2cb8ee90bc52044e773aed821fb3e72bb491b1",
+  "startedAtUTC": "2026-10-11T16:57:02.063948+00:00",
+  "endedAtUTC": "2026-10-11T16:57:04.259610+00:00",
+  "wallSeconds": 2.196,
+  "exitCode": 0,
+  "stdout": "/workspace/review-analysis-deliverables/qa-v2/adversarial/positive-controls/run.stdout.log",
+  "stderr": "/workspace/review-analysis-deliverables/qa-v2/adversarial/positive-controls/run.stderr.log"
+}

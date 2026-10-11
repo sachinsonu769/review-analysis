@@ -1,0 +1,505 @@
+{
+  "schemaVersion": "1.0",
+  "analyzer": {
+    "version": "0.1.0",
+    "sourceBuildHash": "ca04bac50b7584aaafd9d5602acc8055152e81e25de5fa1b15bb710f76f53ac9",
+    "parsers": {
+      "java": "java-parser@3.0.1",
+      "typescript": "typescript@5.9.3"
+    }
+  },
+  "advisory": true,
+  "asOf": "2026-10-11",
+  "provenance": {
+    "baseline": {
+      "root": "/tmp/review-analysis-adversarial-v2-NZrPxG/08-http-template-regex/baseline",
+      "type": "directory",
+      "revision": "tree-sha256:ab15463908a56ea3ec52c9b578c156c104f41ce151bb877796e176866d72f80e",
+      "contentHash": "ab15463908a56ea3ec52c9b578c156c104f41ce151bb877796e176866d72f80e",
+      "dirty": false
+    },
+    "candidate": {
+      "root": "/tmp/review-analysis-adversarial-v2-NZrPxG/08-http-template-regex/candidate",
+      "type": "directory",
+      "revision": "tree-sha256:74f3c0b34a05c971f16c0079619ecb767f8f192c7818849399cb3f32053b898c",
+      "contentHash": "74f3c0b34a05c971f16c0079619ecb767f8f192c7818849399cb3f32053b898c",
+      "dirty": false
+    },
+    "rulesHash": "90f33c2c080aa463115b0ef7e4058bb9bf0da4944dff79ed58eae2f01f9cd3f1",
+    "baselineRulesHash": "90f33c2c080aa463115b0ef7e4058bb9bf0da4944dff79ed58eae2f01f9cd3f1",
+    "cacheKey": "3f5252359e65f527b8627974804c1bc18fe59e9188629045aef0575e85d98649"
+  },
+  "changes": [
+    {
+      "kind": "modified",
+      "name": "NumericResource",
+      "key": "qa.NumericResource",
+      "language": "java",
+      "contractChanged": false,
+      "before": {
+        "path": "backend/NumericResource.java",
+        "range": {
+          "startLine": 5,
+          "endLine": 7
+        },
+        "revision": "tree-sha256:ab15463908a56ea3ec52c9b578c156c104f41ce151bb877796e176866d72f80e",
+        "fileHash": "31ab75e86d9b05e9b403aa9265fd380219a178a6f5164e95e345b235fb2f034b",
+        "excerpt": "class NumericResource {\n @GetMapping(\"/numeric/{id:[0-9]+}\") String numeric() { return \"v1\"; }\n}"
+      },
+      "after": {
+        "path": "backend/NumericResource.java",
+        "range": {
+          "startLine": 5,
+          "endLine": 7
+        },
+        "revision": "tree-sha256:74f3c0b34a05c971f16c0079619ecb767f8f192c7818849399cb3f32053b898c",
+        "fileHash": "54bfc9935d6753fdf4ea5325d13d8e3d162d81589babdf6f4ec28bd75eb74b27",
+        "excerpt": "class NumericResource {\n @GetMapping(\"/numeric/{id:[0-9]+}\") String numeric() { return \"v2\"; }\n}"
+      }
+    },
+    {
+      "kind": "modified",
+      "name": "numeric",
+      "key": "qa.NumericResource#numeric/0",
+      "language": "java",
+      "contractChanged": false,
+      "before": {
+        "path": "backend/NumericResource.java",
+        "range": {
+          "startLine": 6,
+          "endLine": 6
+        },
+        "revision": "tree-sha256:ab15463908a56ea3ec52c9b578c156c104f41ce151bb877796e176866d72f80e",
+        "fileHash": "31ab75e86d9b05e9b403aa9265fd380219a178a6f5164e95e345b235fb2f034b",
+        "excerpt": " @GetMapping(\"/numeric/{id:[0-9]+}\") String numeric() { return \"v1\"; }"
+      },
+      "after": {
+        "path": "backend/NumericResource.java",
+        "range": {
+          "startLine": 6,
+          "endLine": 6
+        },
+        "revision": "tree-sha256:74f3c0b34a05c971f16c0079619ecb767f8f192c7818849399cb3f32053b898c",
+        "fileHash": "54bfc9935d6753fdf4ea5325d13d8e3d162d81589babdf6f4ec28bd75eb74b27",
+        "excerpt": " @GetMapping(\"/numeric/{id:[0-9]+}\") String numeric() { return \"v2\"; }"
+      }
+    }
+  ],
+  "impact": {
+    "direct": [],
+    "indirect": []
+  },
+  "findings": [],
+  "guidance": {
+    "task": "Template regex constraints must not claim a literal nonmatching request maps to configured route",
+    "ruleSetVersion": "independent-adversarial-v1",
+    "approvalGap": "No human approval is inferred. Reviewed examples/exceptions are assertions from supplied configuration; simulation records are demonstrations only.",
+    "rules": [
+      {
+        "id": "independent/http-contract",
+        "kind": "endpoint-contract-change",
+        "owner": "synthetic-qa",
+        "version": "independent-adversarial-v1",
+        "severity": "warning",
+        "instruction": "endpoint-contract-change",
+        "examples": []
+      }
+    ]
+  },
+  "unknowns": [
+    {
+      "reason": "unsupported-route-constraint",
+      "detail": "/numeric/{id:[0-9]+}",
+      "evidence": {
+        "path": "backend/NumericResource.java",
+        "range": {
+          "startLine": 6,
+          "endLine": 6
+        },
+        "revision": "tree-sha256:ab15463908a56ea3ec52c9b578c156c104f41ce151bb877796e176866d72f80e",
+        "fileHash": "31ab75e86d9b05e9b403aa9265fd380219a178a6f5164e95e345b235fb2f034b",
+        "excerpt": " @GetMapping(\"/numeric/{id:[0-9]+}\") String numeric() { return \"v1\"; }"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "org.springframework.web.bind.annotation.GetMapping",
+      "evidence": {
+        "path": "backend/NumericResource.java",
+        "range": {
+          "startLine": 2,
+          "endLine": 2
+        },
+        "revision": "tree-sha256:ab15463908a56ea3ec52c9b578c156c104f41ce151bb877796e176866d72f80e",
+        "fileHash": "31ab75e86d9b05e9b403aa9265fd380219a178a6f5164e95e345b235fb2f034b",
+        "excerpt": "import org.springframework.web.bind.annotation.GetMapping;"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "org.springframework.web.bind.annotation.PostMapping",
+      "evidence": {
+        "path": "backend/NumericResource.java",
+        "range": {
+          "startLine": 3,
+          "endLine": 3
+        },
+        "revision": "tree-sha256:ab15463908a56ea3ec52c9b578c156c104f41ce151bb877796e176866d72f80e",
+        "fileHash": "31ab75e86d9b05e9b403aa9265fd380219a178a6f5164e95e345b235fb2f034b",
+        "excerpt": "import org.springframework.web.bind.annotation.PostMapping;"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "org.springframework.web.bind.annotation.RequestMapping",
+      "evidence": {
+        "path": "backend/NumericResource.java",
+        "range": {
+          "startLine": 4,
+          "endLine": 4
+        },
+        "revision": "tree-sha256:ab15463908a56ea3ec52c9b578c156c104f41ce151bb877796e176866d72f80e",
+        "fileHash": "31ab75e86d9b05e9b403aa9265fd380219a178a6f5164e95e345b235fb2f034b",
+        "excerpt": "import org.springframework.web.bind.annotation.RequestMapping;"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "org.springframework.web.bind.annotation.GetMapping",
+      "evidence": {
+        "path": "backend/NumericResource.java",
+        "range": {
+          "startLine": 6,
+          "endLine": 6
+        },
+        "revision": "tree-sha256:ab15463908a56ea3ec52c9b578c156c104f41ce151bb877796e176866d72f80e",
+        "fileHash": "31ab75e86d9b05e9b403aa9265fd380219a178a6f5164e95e345b235fb2f034b",
+        "excerpt": " @GetMapping(\"/numeric/{id:[0-9]+}\") String numeric() { return \"v1\"; }"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "String",
+      "evidence": {
+        "path": "backend/NumericResource.java",
+        "range": {
+          "startLine": 6,
+          "endLine": 6
+        },
+        "revision": "tree-sha256:ab15463908a56ea3ec52c9b578c156c104f41ce151bb877796e176866d72f80e",
+        "fileHash": "31ab75e86d9b05e9b403aa9265fd380219a178a6f5164e95e345b235fb2f034b",
+        "excerpt": " @GetMapping(\"/numeric/{id:[0-9]+}\") String numeric() { return \"v1\"; }"
+      }
+    },
+    {
+      "reason": "unmatched-endpoint",
+      "evidence": {
+        "path": "backend/NumericResource.java",
+        "range": {
+          "startLine": 6,
+          "endLine": 6
+        },
+        "revision": "tree-sha256:ab15463908a56ea3ec52c9b578c156c104f41ce151bb877796e176866d72f80e",
+        "fileHash": "31ab75e86d9b05e9b403aa9265fd380219a178a6f5164e95e345b235fb2f034b",
+        "excerpt": " @GetMapping(\"/numeric/{id:[0-9]+}\") String numeric() { return \"v1\"; }"
+      },
+      "candidates": []
+    },
+    {
+      "reason": "unresolved-call",
+      "detail": "fetch",
+      "evidence": {
+        "path": "frontend/client.ts",
+        "range": {
+          "startLine": 1,
+          "endLine": 1
+        },
+        "revision": "tree-sha256:ab15463908a56ea3ec52c9b578c156c104f41ce151bb877796e176866d72f80e",
+        "fileHash": "415dc3afda07ab495c6fdcdbac97a2e4ea725f18af71cfcc3dc44e31c37edf56",
+        "excerpt": "fetch('/numeric/123'); // valid-template"
+      }
+    },
+    {
+      "reason": "unmatched-endpoint",
+      "evidence": {
+        "path": "frontend/client.ts",
+        "range": {
+          "startLine": 1,
+          "endLine": 1
+        },
+        "revision": "tree-sha256:ab15463908a56ea3ec52c9b578c156c104f41ce151bb877796e176866d72f80e",
+        "fileHash": "415dc3afda07ab495c6fdcdbac97a2e4ea725f18af71cfcc3dc44e31c37edf56",
+        "excerpt": "fetch('/numeric/123'); // valid-template"
+      },
+      "candidates": []
+    },
+    {
+      "reason": "unresolved-call",
+      "detail": "fetch",
+      "evidence": {
+        "path": "frontend/client.ts",
+        "range": {
+          "startLine": 2,
+          "endLine": 2
+        },
+        "revision": "tree-sha256:ab15463908a56ea3ec52c9b578c156c104f41ce151bb877796e176866d72f80e",
+        "fileHash": "415dc3afda07ab495c6fdcdbac97a2e4ea725f18af71cfcc3dc44e31c37edf56",
+        "excerpt": "fetch('/numeric/nope'); // excluded-by-regex"
+      }
+    },
+    {
+      "reason": "unmatched-endpoint",
+      "evidence": {
+        "path": "frontend/client.ts",
+        "range": {
+          "startLine": 2,
+          "endLine": 2
+        },
+        "revision": "tree-sha256:ab15463908a56ea3ec52c9b578c156c104f41ce151bb877796e176866d72f80e",
+        "fileHash": "415dc3afda07ab495c6fdcdbac97a2e4ea725f18af71cfcc3dc44e31c37edf56",
+        "excerpt": "fetch('/numeric/nope'); // excluded-by-regex"
+      },
+      "candidates": []
+    },
+    {
+      "reason": "unresolved-call",
+      "detail": "fetch",
+      "evidence": {
+        "path": "frontend/client.ts",
+        "range": {
+          "startLine": 3,
+          "endLine": 3
+        },
+        "revision": "tree-sha256:ab15463908a56ea3ec52c9b578c156c104f41ce151bb877796e176866d72f80e",
+        "fileHash": "415dc3afda07ab495c6fdcdbac97a2e4ea725f18af71cfcc3dc44e31c37edf56",
+        "excerpt": "fetch('https://other.example/numeric/123'); // unknown-origin"
+      }
+    },
+    {
+      "reason": "unmatched-endpoint",
+      "evidence": {
+        "path": "frontend/client.ts",
+        "range": {
+          "startLine": 3,
+          "endLine": 3
+        },
+        "revision": "tree-sha256:ab15463908a56ea3ec52c9b578c156c104f41ce151bb877796e176866d72f80e",
+        "fileHash": "415dc3afda07ab495c6fdcdbac97a2e4ea725f18af71cfcc3dc44e31c37edf56",
+        "excerpt": "fetch('https://other.example/numeric/123'); // unknown-origin"
+      },
+      "candidates": []
+    },
+    {
+      "reason": "unsupported-route-constraint",
+      "detail": "/numeric/{id:[0-9]+}",
+      "evidence": {
+        "path": "backend/NumericResource.java",
+        "range": {
+          "startLine": 6,
+          "endLine": 6
+        },
+        "revision": "tree-sha256:74f3c0b34a05c971f16c0079619ecb767f8f192c7818849399cb3f32053b898c",
+        "fileHash": "54bfc9935d6753fdf4ea5325d13d8e3d162d81589babdf6f4ec28bd75eb74b27",
+        "excerpt": " @GetMapping(\"/numeric/{id:[0-9]+}\") String numeric() { return \"v2\"; }"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "org.springframework.web.bind.annotation.GetMapping",
+      "evidence": {
+        "path": "backend/NumericResource.java",
+        "range": {
+          "startLine": 2,
+          "endLine": 2
+        },
+        "revision": "tree-sha256:74f3c0b34a05c971f16c0079619ecb767f8f192c7818849399cb3f32053b898c",
+        "fileHash": "54bfc9935d6753fdf4ea5325d13d8e3d162d81589babdf6f4ec28bd75eb74b27",
+        "excerpt": "import org.springframework.web.bind.annotation.GetMapping;"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "org.springframework.web.bind.annotation.PostMapping",
+      "evidence": {
+        "path": "backend/NumericResource.java",
+        "range": {
+          "startLine": 3,
+          "endLine": 3
+        },
+        "revision": "tree-sha256:74f3c0b34a05c971f16c0079619ecb767f8f192c7818849399cb3f32053b898c",
+        "fileHash": "54bfc9935d6753fdf4ea5325d13d8e3d162d81589babdf6f4ec28bd75eb74b27",
+        "excerpt": "import org.springframework.web.bind.annotation.PostMapping;"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "org.springframework.web.bind.annotation.RequestMapping",
+      "evidence": {
+        "path": "backend/NumericResource.java",
+        "range": {
+          "startLine": 4,
+          "endLine": 4
+        },
+        "revision": "tree-sha256:74f3c0b34a05c971f16c0079619ecb767f8f192c7818849399cb3f32053b898c",
+        "fileHash": "54bfc9935d6753fdf4ea5325d13d8e3d162d81589babdf6f4ec28bd75eb74b27",
+        "excerpt": "import org.springframework.web.bind.annotation.RequestMapping;"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "org.springframework.web.bind.annotation.GetMapping",
+      "evidence": {
+        "path": "backend/NumericResource.java",
+        "range": {
+          "startLine": 6,
+          "endLine": 6
+        },
+        "revision": "tree-sha256:74f3c0b34a05c971f16c0079619ecb767f8f192c7818849399cb3f32053b898c",
+        "fileHash": "54bfc9935d6753fdf4ea5325d13d8e3d162d81589babdf6f4ec28bd75eb74b27",
+        "excerpt": " @GetMapping(\"/numeric/{id:[0-9]+}\") String numeric() { return \"v2\"; }"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "String",
+      "evidence": {
+        "path": "backend/NumericResource.java",
+        "range": {
+          "startLine": 6,
+          "endLine": 6
+        },
+        "revision": "tree-sha256:74f3c0b34a05c971f16c0079619ecb767f8f192c7818849399cb3f32053b898c",
+        "fileHash": "54bfc9935d6753fdf4ea5325d13d8e3d162d81589babdf6f4ec28bd75eb74b27",
+        "excerpt": " @GetMapping(\"/numeric/{id:[0-9]+}\") String numeric() { return \"v2\"; }"
+      }
+    },
+    {
+      "reason": "unmatched-endpoint",
+      "evidence": {
+        "path": "backend/NumericResource.java",
+        "range": {
+          "startLine": 6,
+          "endLine": 6
+        },
+        "revision": "tree-sha256:74f3c0b34a05c971f16c0079619ecb767f8f192c7818849399cb3f32053b898c",
+        "fileHash": "54bfc9935d6753fdf4ea5325d13d8e3d162d81589babdf6f4ec28bd75eb74b27",
+        "excerpt": " @GetMapping(\"/numeric/{id:[0-9]+}\") String numeric() { return \"v2\"; }"
+      },
+      "candidates": []
+    },
+    {
+      "reason": "unresolved-call",
+      "detail": "fetch",
+      "evidence": {
+        "path": "frontend/client.ts",
+        "range": {
+          "startLine": 1,
+          "endLine": 1
+        },
+        "revision": "tree-sha256:74f3c0b34a05c971f16c0079619ecb767f8f192c7818849399cb3f32053b898c",
+        "fileHash": "415dc3afda07ab495c6fdcdbac97a2e4ea725f18af71cfcc3dc44e31c37edf56",
+        "excerpt": "fetch('/numeric/123'); // valid-template"
+      }
+    },
+    {
+      "reason": "unmatched-endpoint",
+      "evidence": {
+        "path": "frontend/client.ts",
+        "range": {
+          "startLine": 1,
+          "endLine": 1
+        },
+        "revision": "tree-sha256:74f3c0b34a05c971f16c0079619ecb767f8f192c7818849399cb3f32053b898c",
+        "fileHash": "415dc3afda07ab495c6fdcdbac97a2e4ea725f18af71cfcc3dc44e31c37edf56",
+        "excerpt": "fetch('/numeric/123'); // valid-template"
+      },
+      "candidates": []
+    },
+    {
+      "reason": "unresolved-call",
+      "detail": "fetch",
+      "evidence": {
+        "path": "frontend/client.ts",
+        "range": {
+          "startLine": 2,
+          "endLine": 2
+        },
+        "revision": "tree-sha256:74f3c0b34a05c971f16c0079619ecb767f8f192c7818849399cb3f32053b898c",
+        "fileHash": "415dc3afda07ab495c6fdcdbac97a2e4ea725f18af71cfcc3dc44e31c37edf56",
+        "excerpt": "fetch('/numeric/nope'); // excluded-by-regex"
+      }
+    },
+    {
+      "reason": "unmatched-endpoint",
+      "evidence": {
+        "path": "frontend/client.ts",
+        "range": {
+          "startLine": 2,
+          "endLine": 2
+        },
+        "revision": "tree-sha256:74f3c0b34a05c971f16c0079619ecb767f8f192c7818849399cb3f32053b898c",
+        "fileHash": "415dc3afda07ab495c6fdcdbac97a2e4ea725f18af71cfcc3dc44e31c37edf56",
+        "excerpt": "fetch('/numeric/nope'); // excluded-by-regex"
+      },
+      "candidates": []
+    },
+    {
+      "reason": "unresolved-call",
+      "detail": "fetch",
+      "evidence": {
+        "path": "frontend/client.ts",
+        "range": {
+          "startLine": 3,
+          "endLine": 3
+        },
+        "revision": "tree-sha256:74f3c0b34a05c971f16c0079619ecb767f8f192c7818849399cb3f32053b898c",
+        "fileHash": "415dc3afda07ab495c6fdcdbac97a2e4ea725f18af71cfcc3dc44e31c37edf56",
+        "excerpt": "fetch('https://other.example/numeric/123'); // unknown-origin"
+      }
+    },
+    {
+      "reason": "unmatched-endpoint",
+      "evidence": {
+        "path": "frontend/client.ts",
+        "range": {
+          "startLine": 3,
+          "endLine": 3
+        },
+        "revision": "tree-sha256:74f3c0b34a05c971f16c0079619ecb767f8f192c7818849399cb3f32053b898c",
+        "fileHash": "415dc3afda07ab495c6fdcdbac97a2e4ea725f18af71cfcc3dc44e31c37edf56",
+        "excerpt": "fetch('https://other.example/numeric/123'); // unknown-origin"
+      },
+      "candidates": []
+    }
+  ],
+  "focusedTests": [],
+  "coverage": {
+    "complete": false,
+    "fullRegressionMayBeSkipped": false,
+    "sourceFiles": {
+      "baseline": 2,
+      "candidate": 2
+    },
+    "excluded": {
+      "baseline": [],
+      "candidate": []
+    },
+    "limitations": [
+      "Source-only analysis; no Java/TypeScript semantic compilation, runtime dispatch, reflection, DI wiring, proxy/origin verification or transitive external package sources",
+      "Edges are evidence-backed approximations; indirect file dependencies do not prove execution",
+      "Renames inferred only for identical declaration key/signature/body; edited renames remain delete/add",
+      "Unknown syntax and unresolved/dynamic dependencies remain visible; passing fixture tests is not private-repository acceptance"
+    ]
+  },
+  "cache": {
+    "report": "disabled",
+    "parsedFiles": 4,
+    "reusedFiles": 0,
+    "invalidEntries": 0
+  },
+  "metrics": {
+    "elapsedMs": 40.11,
+    "bytesRead": 876,
+    "reportCacheHit": false
+  }
+}

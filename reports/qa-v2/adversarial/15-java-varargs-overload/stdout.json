@@ -1,0 +1,381 @@
+{
+  "schemaVersion": "1.0",
+  "analyzer": {
+    "version": "0.1.0",
+    "sourceBuildHash": "ca04bac50b7584aaafd9d5602acc8055152e81e25de5fa1b15bb710f76f53ac9",
+    "parsers": {
+      "java": "java-parser@3.0.1",
+      "typescript": "typescript@5.9.3"
+    }
+  },
+  "advisory": true,
+  "asOf": "2026-10-11",
+  "provenance": {
+    "baseline": {
+      "root": "/tmp/review-analysis-adversarial-v2-NZrPxG/15-java-varargs-overload/baseline",
+      "type": "directory",
+      "revision": "tree-sha256:093f3e5a212707441937f86166f587edf9c7e8714f97619d68ea412a60a091c1",
+      "contentHash": "093f3e5a212707441937f86166f587edf9c7e8714f97619d68ea412a60a091c1",
+      "dirty": false
+    },
+    "candidate": {
+      "root": "/tmp/review-analysis-adversarial-v2-NZrPxG/15-java-varargs-overload/candidate",
+      "type": "directory",
+      "revision": "tree-sha256:a4a4763f68ed4d7853604c103d311ec7bea90d46495ba1eaa3631305e8e481c5",
+      "contentHash": "a4a4763f68ed4d7853604c103d311ec7bea90d46495ba1eaa3631305e8e481c5",
+      "dirty": false
+    },
+    "rulesHash": "90f33c2c080aa463115b0ef7e4058bb9bf0da4944dff79ed58eae2f01f9cd3f1",
+    "baselineRulesHash": "90f33c2c080aa463115b0ef7e4058bb9bf0da4944dff79ed58eae2f01f9cd3f1",
+    "cacheKey": "317f451d32e2d36a1b123500507611509ad0009790d9cfec2c60d47b3f145413"
+  },
+  "changes": [
+    {
+      "kind": "modified",
+      "name": "Worker",
+      "key": "qa.Worker",
+      "language": "java",
+      "contractChanged": false,
+      "before": {
+        "path": "backend/Worker.java",
+        "range": {
+          "startLine": 2,
+          "endLine": 5
+        },
+        "revision": "tree-sha256:093f3e5a212707441937f86166f587edf9c7e8714f97619d68ea412a60a091c1",
+        "fileHash": "01571ea63b20b360bb7d1a0366d45bfec9bb57c371d00da3e6633f0207ac9935",
+        "excerpt": "class Worker {\n String run(String... values) { return \"v1\"; }\n String run(int a, int b) { return \"v1\"; }\n}"
+      },
+      "after": {
+        "path": "backend/Worker.java",
+        "range": {
+          "startLine": 2,
+          "endLine": 5
+        },
+        "revision": "tree-sha256:a4a4763f68ed4d7853604c103d311ec7bea90d46495ba1eaa3631305e8e481c5",
+        "fileHash": "8c5056ff258b712ace834c690ed3051a39fe4419741a71bace8b0294cb5c0355",
+        "excerpt": "class Worker {\n String run(String... values) { return \"v2\"; }\n String run(int a, int b) { return \"v2\"; }\n}"
+      }
+    },
+    {
+      "kind": "modified",
+      "name": "run",
+      "key": "qa.Worker#run/1",
+      "language": "java",
+      "contractChanged": false,
+      "before": {
+        "path": "backend/Worker.java",
+        "range": {
+          "startLine": 3,
+          "endLine": 3
+        },
+        "revision": "tree-sha256:093f3e5a212707441937f86166f587edf9c7e8714f97619d68ea412a60a091c1",
+        "fileHash": "01571ea63b20b360bb7d1a0366d45bfec9bb57c371d00da3e6633f0207ac9935",
+        "excerpt": " String run(String... values) { return \"v1\"; }"
+      },
+      "after": {
+        "path": "backend/Worker.java",
+        "range": {
+          "startLine": 3,
+          "endLine": 3
+        },
+        "revision": "tree-sha256:a4a4763f68ed4d7853604c103d311ec7bea90d46495ba1eaa3631305e8e481c5",
+        "fileHash": "8c5056ff258b712ace834c690ed3051a39fe4419741a71bace8b0294cb5c0355",
+        "excerpt": " String run(String... values) { return \"v2\"; }"
+      }
+    },
+    {
+      "kind": "modified",
+      "name": "run",
+      "key": "qa.Worker#run/2",
+      "language": "java",
+      "contractChanged": false,
+      "before": {
+        "path": "backend/Worker.java",
+        "range": {
+          "startLine": 4,
+          "endLine": 4
+        },
+        "revision": "tree-sha256:093f3e5a212707441937f86166f587edf9c7e8714f97619d68ea412a60a091c1",
+        "fileHash": "01571ea63b20b360bb7d1a0366d45bfec9bb57c371d00da3e6633f0207ac9935",
+        "excerpt": " String run(int a, int b) { return \"v1\"; }"
+      },
+      "after": {
+        "path": "backend/Worker.java",
+        "range": {
+          "startLine": 4,
+          "endLine": 4
+        },
+        "revision": "tree-sha256:a4a4763f68ed4d7853604c103d311ec7bea90d46495ba1eaa3631305e8e481c5",
+        "fileHash": "8c5056ff258b712ace834c690ed3051a39fe4419741a71bace8b0294cb5c0355",
+        "excerpt": " String run(int a, int b) { return \"v2\"; }"
+      }
+    }
+  ],
+  "impact": {
+    "direct": [
+      {
+        "kind": "type",
+        "fromPath": "backend/Caller.java",
+        "toPath": "backend/Worker.java",
+        "targetKey": "qa.Worker",
+        "confidence": "high",
+        "reason": "Java qualified import or same-package type resolves to supplied source",
+        "evidence": {
+          "path": "backend/Caller.java",
+          "range": {
+            "startLine": 3,
+            "endLine": 3
+          },
+          "revision": "tree-sha256:093f3e5a212707441937f86166f587edf9c7e8714f97619d68ea412a60a091c1",
+          "fileHash": "65307490230e508a4da64deac8e3fa23bc942b1dce8cdf5f7a26596971ff4789",
+          "excerpt": " Worker worker;"
+        },
+        "targetEvidence": {
+          "path": "backend/Worker.java",
+          "range": {
+            "startLine": 2,
+            "endLine": 5
+          },
+          "revision": "tree-sha256:093f3e5a212707441937f86166f587edf9c7e8714f97619d68ea412a60a091c1",
+          "fileHash": "01571ea63b20b360bb7d1a0366d45bfec9bb57c371d00da3e6633f0207ac9935",
+          "excerpt": "class Worker {\n String run(String... values) { return \"v1\"; }\n String run(int a, int b) { return \"v1\"; }\n}"
+        }
+      },
+      {
+        "kind": "type",
+        "fromPath": "backend/Caller.java",
+        "toPath": "backend/Worker.java",
+        "targetKey": "qa.Worker",
+        "confidence": "high",
+        "reason": "Java qualified import or same-package type resolves to supplied source",
+        "evidence": {
+          "path": "backend/Caller.java",
+          "range": {
+            "startLine": 3,
+            "endLine": 3
+          },
+          "revision": "tree-sha256:a4a4763f68ed4d7853604c103d311ec7bea90d46495ba1eaa3631305e8e481c5",
+          "fileHash": "65307490230e508a4da64deac8e3fa23bc942b1dce8cdf5f7a26596971ff4789",
+          "excerpt": " Worker worker;"
+        },
+        "targetEvidence": {
+          "path": "backend/Worker.java",
+          "range": {
+            "startLine": 2,
+            "endLine": 5
+          },
+          "revision": "tree-sha256:a4a4763f68ed4d7853604c103d311ec7bea90d46495ba1eaa3631305e8e481c5",
+          "fileHash": "8c5056ff258b712ace834c690ed3051a39fe4419741a71bace8b0294cb5c0355",
+          "excerpt": "class Worker {\n String run(String... values) { return \"v2\"; }\n String run(int a, int b) { return \"v2\"; }\n}"
+        }
+      }
+    ],
+    "indirect": []
+  },
+  "findings": [],
+  "guidance": {
+    "task": "Valid two-string invocation must not resolve to int,int fixed overload when a varargs overload exists",
+    "ruleSetVersion": "independent-adversarial-v1",
+    "approvalGap": "No human approval is inferred. Reviewed examples/exceptions are assertions from supplied configuration; simulation records are demonstrations only.",
+    "rules": [
+      {
+        "id": "independent/http-contract",
+        "kind": "endpoint-contract-change",
+        "owner": "synthetic-qa",
+        "version": "independent-adversarial-v1",
+        "severity": "warning",
+        "instruction": "endpoint-contract-change",
+        "examples": []
+      }
+    ]
+  },
+  "unknowns": [
+    {
+      "reason": "ambiguous-call",
+      "detail": "run",
+      "evidence": {
+        "path": "backend/Caller.java",
+        "range": {
+          "startLine": 4,
+          "endLine": 4
+        },
+        "revision": "tree-sha256:093f3e5a212707441937f86166f587edf9c7e8714f97619d68ea412a60a091c1",
+        "fileHash": "65307490230e508a4da64deac8e3fa23bc942b1dce8cdf5f7a26596971ff4789",
+        "excerpt": " void use(){ worker.run(\"x\", \"y\"); } // vararg-overload"
+      },
+      "candidates": [
+        {
+          "path": "backend/Worker.java",
+          "range": {
+            "startLine": 3,
+            "endLine": 3
+          },
+          "revision": "tree-sha256:093f3e5a212707441937f86166f587edf9c7e8714f97619d68ea412a60a091c1",
+          "fileHash": "01571ea63b20b360bb7d1a0366d45bfec9bb57c371d00da3e6633f0207ac9935",
+          "excerpt": " String run(String... values) { return \"v1\"; }"
+        },
+        {
+          "path": "backend/Worker.java",
+          "range": {
+            "startLine": 4,
+            "endLine": 4
+          },
+          "revision": "tree-sha256:093f3e5a212707441937f86166f587edf9c7e8714f97619d68ea412a60a091c1",
+          "fileHash": "01571ea63b20b360bb7d1a0366d45bfec9bb57c371d00da3e6633f0207ac9935",
+          "excerpt": " String run(int a, int b) { return \"v1\"; }"
+        }
+      ]
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "String",
+      "evidence": {
+        "path": "backend/Worker.java",
+        "range": {
+          "startLine": 3,
+          "endLine": 3
+        },
+        "revision": "tree-sha256:093f3e5a212707441937f86166f587edf9c7e8714f97619d68ea412a60a091c1",
+        "fileHash": "01571ea63b20b360bb7d1a0366d45bfec9bb57c371d00da3e6633f0207ac9935",
+        "excerpt": " String run(String... values) { return \"v1\"; }"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "String",
+      "evidence": {
+        "path": "backend/Worker.java",
+        "range": {
+          "startLine": 3,
+          "endLine": 3
+        },
+        "revision": "tree-sha256:093f3e5a212707441937f86166f587edf9c7e8714f97619d68ea412a60a091c1",
+        "fileHash": "01571ea63b20b360bb7d1a0366d45bfec9bb57c371d00da3e6633f0207ac9935",
+        "excerpt": " String run(String... values) { return \"v1\"; }"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "String",
+      "evidence": {
+        "path": "backend/Worker.java",
+        "range": {
+          "startLine": 4,
+          "endLine": 4
+        },
+        "revision": "tree-sha256:093f3e5a212707441937f86166f587edf9c7e8714f97619d68ea412a60a091c1",
+        "fileHash": "01571ea63b20b360bb7d1a0366d45bfec9bb57c371d00da3e6633f0207ac9935",
+        "excerpt": " String run(int a, int b) { return \"v1\"; }"
+      }
+    },
+    {
+      "reason": "ambiguous-call",
+      "detail": "run",
+      "evidence": {
+        "path": "backend/Caller.java",
+        "range": {
+          "startLine": 4,
+          "endLine": 4
+        },
+        "revision": "tree-sha256:a4a4763f68ed4d7853604c103d311ec7bea90d46495ba1eaa3631305e8e481c5",
+        "fileHash": "65307490230e508a4da64deac8e3fa23bc942b1dce8cdf5f7a26596971ff4789",
+        "excerpt": " void use(){ worker.run(\"x\", \"y\"); } // vararg-overload"
+      },
+      "candidates": [
+        {
+          "path": "backend/Worker.java",
+          "range": {
+            "startLine": 3,
+            "endLine": 3
+          },
+          "revision": "tree-sha256:a4a4763f68ed4d7853604c103d311ec7bea90d46495ba1eaa3631305e8e481c5",
+          "fileHash": "8c5056ff258b712ace834c690ed3051a39fe4419741a71bace8b0294cb5c0355",
+          "excerpt": " String run(String... values) { return \"v2\"; }"
+        },
+        {
+          "path": "backend/Worker.java",
+          "range": {
+            "startLine": 4,
+            "endLine": 4
+          },
+          "revision": "tree-sha256:a4a4763f68ed4d7853604c103d311ec7bea90d46495ba1eaa3631305e8e481c5",
+          "fileHash": "8c5056ff258b712ace834c690ed3051a39fe4419741a71bace8b0294cb5c0355",
+          "excerpt": " String run(int a, int b) { return \"v2\"; }"
+        }
+      ]
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "String",
+      "evidence": {
+        "path": "backend/Worker.java",
+        "range": {
+          "startLine": 3,
+          "endLine": 3
+        },
+        "revision": "tree-sha256:a4a4763f68ed4d7853604c103d311ec7bea90d46495ba1eaa3631305e8e481c5",
+        "fileHash": "8c5056ff258b712ace834c690ed3051a39fe4419741a71bace8b0294cb5c0355",
+        "excerpt": " String run(String... values) { return \"v2\"; }"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "String",
+      "evidence": {
+        "path": "backend/Worker.java",
+        "range": {
+          "startLine": 3,
+          "endLine": 3
+        },
+        "revision": "tree-sha256:a4a4763f68ed4d7853604c103d311ec7bea90d46495ba1eaa3631305e8e481c5",
+        "fileHash": "8c5056ff258b712ace834c690ed3051a39fe4419741a71bace8b0294cb5c0355",
+        "excerpt": " String run(String... values) { return \"v2\"; }"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "String",
+      "evidence": {
+        "path": "backend/Worker.java",
+        "range": {
+          "startLine": 4,
+          "endLine": 4
+        },
+        "revision": "tree-sha256:a4a4763f68ed4d7853604c103d311ec7bea90d46495ba1eaa3631305e8e481c5",
+        "fileHash": "8c5056ff258b712ace834c690ed3051a39fe4419741a71bace8b0294cb5c0355",
+        "excerpt": " String run(int a, int b) { return \"v2\"; }"
+      }
+    }
+  ],
+  "focusedTests": [],
+  "coverage": {
+    "complete": false,
+    "fullRegressionMayBeSkipped": false,
+    "sourceFiles": {
+      "baseline": 2,
+      "candidate": 2
+    },
+    "excluded": {
+      "baseline": [],
+      "candidate": []
+    },
+    "limitations": [
+      "Source-only analysis; no Java/TypeScript semantic compilation, runtime dispatch, reflection, DI wiring, proxy/origin verification or transitive external package sources",
+      "Edges are evidence-backed approximations; indirect file dependencies do not prove execution",
+      "Renames inferred only for identical declaration key/signature/body; edited renames remain delete/add",
+      "Unknown syntax and unresolved/dynamic dependencies remain visible; passing fixture tests is not private-repository acceptance"
+    ]
+  },
+  "cache": {
+    "report": "disabled",
+    "parsedFiles": 4,
+    "reusedFiles": 0,
+    "invalidEntries": 0
+  },
+  "metrics": {
+    "elapsedMs": 20.8,
+    "bytesRead": 436,
+    "reportCacheHit": false
+  }
+}

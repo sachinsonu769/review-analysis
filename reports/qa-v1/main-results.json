@@ -1,0 +1,241 @@
+[
+  {
+    "name": "npm-test",
+    "argv": [
+      "npm",
+      "test"
+    ],
+    "cwd": "/tmp/review-analysis-qa-v1-nn0cdauu",
+    "startedUtc": "2026-10-11T16:46:00.343166+00:00",
+    "durationSeconds": 4.166,
+    "exitCode": 0,
+    "expectedExitCode": 0,
+    "status": "pass"
+  },
+  {
+    "name": "benchmark",
+    "argv": [
+      "npm",
+      "run",
+      "benchmark"
+    ],
+    "cwd": "/tmp/review-analysis-qa-v1-nn0cdauu",
+    "startedUtc": "2026-10-11T16:46:04.509641+00:00",
+    "durationSeconds": 2.691,
+    "exitCode": 0,
+    "expectedExitCode": 0,
+    "status": "pass"
+  },
+  {
+    "name": "lookup-directory",
+    "argv": [
+      "node",
+      "/tmp/review-analysis-qa-v1-nn0cdauu/src/cli.js",
+      "analyze",
+      "--baseline",
+      "/tmp/review-analysis-qa-v1-nn0cdauu/fixtures/lookup/baseline",
+      "--candidate",
+      "/tmp/review-analysis-qa-v1-nn0cdauu/fixtures/lookup/candidate",
+      "--rules",
+      "/tmp/review-analysis-qa-v1-nn0cdauu/fixtures/rules.json",
+      "--as-of",
+      "2026-10-11",
+      "--task",
+      "Independent QA route and payload migration"
+    ],
+    "cwd": "/tmp/review-analysis-qa-v1-nn0cdauu",
+    "startedUtc": "2026-10-11T16:46:07.201168+00:00",
+    "durationSeconds": 0.619,
+    "exitCode": 0,
+    "expectedExitCode": 0,
+    "status": "pass"
+  },
+  {
+    "name": "lookup-evidence",
+    "status": "pass",
+    "evidenceCount": 312,
+    "issues": []
+  },
+  {
+    "name": "lookup-readable",
+    "argv": [
+      "node",
+      "/tmp/review-analysis-qa-v1-nn0cdauu/src/cli.js",
+      "analyze",
+      "--baseline",
+      "/tmp/review-analysis-qa-v1-nn0cdauu/fixtures/lookup/baseline",
+      "--candidate",
+      "/tmp/review-analysis-qa-v1-nn0cdauu/fixtures/lookup/candidate",
+      "--rules",
+      "/tmp/review-analysis-qa-v1-nn0cdauu/fixtures/rules.json",
+      "--as-of",
+      "2026-10-11",
+      "--task",
+      "Independent QA route and payload migration",
+      "--format",
+      "readable"
+    ],
+    "cwd": "/tmp/review-analysis-qa-v1-nn0cdauu",
+    "startedUtc": "2026-10-11T16:46:07.830799+00:00",
+    "durationSeconds": 0.609,
+    "exitCode": 0,
+    "expectedExitCode": 0,
+    "status": "pass"
+  },
+  {
+    "name": "lookup-guide",
+    "argv": [
+      "node",
+      "/tmp/review-analysis-qa-v1-nn0cdauu/src/cli.js",
+      "guide",
+      "--root",
+      "/tmp/review-analysis-qa-v1-nn0cdauu/fixtures/lookup/candidate",
+      "--rules",
+      "/tmp/review-analysis-qa-v1-nn0cdauu/fixtures/rules.json",
+      "--task",
+      "Independent QA guidance",
+      "--paths",
+      "backend/src/main/java/com/example/lookup/LookupController.java"
+    ],
+    "cwd": "/tmp/review-analysis-qa-v1-nn0cdauu",
+    "startedUtc": "2026-10-11T16:46:08.439571+00:00",
+    "durationSeconds": 0.481,
+    "exitCode": 0,
+    "expectedExitCode": 0,
+    "status": "pass"
+  },
+  {
+    "name": "lookup-guide-evidence",
+    "status": "pass",
+    "evidenceCount": 3,
+    "issues": []
+  },
+  {
+    "name": "lookup-guide-readable",
+    "argv": [
+      "node",
+      "/tmp/review-analysis-qa-v1-nn0cdauu/src/cli.js",
+      "guide",
+      "--root",
+      "/tmp/review-analysis-qa-v1-nn0cdauu/fixtures/lookup/candidate",
+      "--rules",
+      "/tmp/review-analysis-qa-v1-nn0cdauu/fixtures/rules.json",
+      "--task",
+      "Independent QA guidance",
+      "--format",
+      "readable"
+    ],
+    "cwd": "/tmp/review-analysis-qa-v1-nn0cdauu",
+    "startedUtc": "2026-10-11T16:46:08.920731+00:00",
+    "durationSeconds": 0.501,
+    "exitCode": 0,
+    "expectedExitCode": 0,
+    "status": "pass"
+  },
+  {
+    "name": "renamed-directory",
+    "argv": [
+      "node",
+      "/tmp/review-analysis-qa-v1-nn0cdauu/src/cli.js",
+      "analyze",
+      "--baseline",
+      "/tmp/review-analysis-qa-v1-nn0cdauu/fixtures/renamed/baseline",
+      "--candidate",
+      "/tmp/review-analysis-qa-v1-nn0cdauu/fixtures/renamed/candidate",
+      "--rules",
+      "/tmp/review-analysis-qa-v1-nn0cdauu/fixtures/renamed-rules.json",
+      "--as-of",
+      "2026-10-11",
+      "--task",
+      "Independent QA route and payload migration"
+    ],
+    "cwd": "/tmp/review-analysis-qa-v1-nn0cdauu",
+    "startedUtc": "2026-10-11T16:46:09.421538+00:00",
+    "durationSeconds": 0.682,
+    "exitCode": 0,
+    "expectedExitCode": 0,
+    "status": "pass"
+  },
+  {
+    "name": "renamed-evidence",
+    "status": "pass",
+    "evidenceCount": 312,
+    "issues": []
+  },
+  {
+    "name": "renamed-readable",
+    "argv": [
+      "node",
+      "/tmp/review-analysis-qa-v1-nn0cdauu/src/cli.js",
+      "analyze",
+      "--baseline",
+      "/tmp/review-analysis-qa-v1-nn0cdauu/fixtures/renamed/baseline",
+      "--candidate",
+      "/tmp/review-analysis-qa-v1-nn0cdauu/fixtures/renamed/candidate",
+      "--rules",
+      "/tmp/review-analysis-qa-v1-nn0cdauu/fixtures/renamed-rules.json",
+      "--as-of",
+      "2026-10-11",
+      "--task",
+      "Independent QA route and payload migration",
+      "--format",
+      "readable"
+    ],
+    "cwd": "/tmp/review-analysis-qa-v1-nn0cdauu",
+    "startedUtc": "2026-10-11T16:46:10.112886+00:00",
+    "durationSeconds": 0.632,
+    "exitCode": 0,
+    "expectedExitCode": 0,
+    "status": "pass"
+  },
+  {
+    "name": "renamed-guide",
+    "argv": [
+      "node",
+      "/tmp/review-analysis-qa-v1-nn0cdauu/src/cli.js",
+      "guide",
+      "--root",
+      "/tmp/review-analysis-qa-v1-nn0cdauu/fixtures/renamed/candidate",
+      "--rules",
+      "/tmp/review-analysis-qa-v1-nn0cdauu/fixtures/renamed-rules.json",
+      "--task",
+      "Independent QA guidance",
+      "--paths",
+      "backend/src/main/java/org/demo/inventory/InventoryResource.java"
+    ],
+    "cwd": "/tmp/review-analysis-qa-v1-nn0cdauu",
+    "startedUtc": "2026-10-11T16:46:10.744693+00:00",
+    "durationSeconds": 0.512,
+    "exitCode": 0,
+    "expectedExitCode": 0,
+    "status": "pass"
+  },
+  {
+    "name": "renamed-guide-evidence",
+    "status": "pass",
+    "evidenceCount": 3,
+    "issues": []
+  },
+  {
+    "name": "renamed-guide-readable",
+    "argv": [
+      "node",
+      "/tmp/review-analysis-qa-v1-nn0cdauu/src/cli.js",
+      "guide",
+      "--root",
+      "/tmp/review-analysis-qa-v1-nn0cdauu/fixtures/renamed/candidate",
+      "--rules",
+      "/tmp/review-analysis-qa-v1-nn0cdauu/fixtures/renamed-rules.json",
+      "--task",
+      "Independent QA guidance",
+      "--format",
+      "readable"
+    ],
+    "cwd": "/tmp/review-analysis-qa-v1-nn0cdauu",
+    "startedUtc": "2026-10-11T16:46:11.256799+00:00",
+    "durationSeconds": 0.505,
+    "exitCode": 0,
+    "expectedExitCode": 0,
+    "status": "pass"
+  }
+]

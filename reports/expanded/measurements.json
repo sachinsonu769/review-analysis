@@ -1,0 +1,328 @@
+{
+  "build": {
+    "version": "0.2.0",
+    "sourceBuildHash": "0427f5fed8a45a3d4dbc5523f1d0f8afb57949bac0df1f9bef249fd73ae31061",
+    "parsers": {
+      "java": "java-parser@3.0.1",
+      "typescript": "typescript@5.9.3"
+    }
+  },
+  "runtime": "v24.19.0",
+  "platform": "linux",
+  "arch": "x64",
+  "method": "One cold and one repeated in-process workspace analysis per tiny fixture; all actual enabled tools. No scale or efficacy inference.",
+  "measurements": [
+    {
+      "demo": "lookup",
+      "coldMs": 2364.87,
+      "warmMs": 100.43,
+      "files": 24,
+      "edges": 50,
+      "qualityTools": [
+        {
+          "name": "eslint",
+          "version": "10.12.0",
+          "parser": "@typescript-eslint/parser@8.71.1",
+          "rules": [
+            "complexity",
+            "no-unreachable",
+            "no-constant-condition",
+            "no-constant-binary-expression",
+            "no-dupe-else-if",
+            "no-unsafe-finally",
+            "no-async-promise-executor",
+            "require-atomic-updates",
+            "@typescript-eslint/no-non-null-assertion",
+            "@typescript-eslint/no-non-null-asserted-optional-chain"
+          ],
+          "sourceOnly": true
+        },
+        {
+          "name": "jscpd",
+          "version": "4.0.5",
+          "rules": [
+            "duplicate-block"
+          ],
+          "sourceOnly": true
+        },
+        {
+          "name": "pmd",
+          "version": "7.17.0",
+          "status": "available",
+          "rules": [
+            "CyclomaticComplexity",
+            "BrokenNullCheck",
+            "CloseResource",
+            "UnconditionalIfStatement"
+          ],
+          "sourceOnly": true
+        }
+      ],
+      "qualityCache": [
+        {
+          "projectId": "monorepo",
+          "status": "hit"
+        }
+      ],
+      "build": "0427f5fed8a45a3d4dbc5523f1d0f8afb57949bac0df1f9bef249fd73ae31061"
+    },
+    {
+      "demo": "angular",
+      "coldMs": 1711.06,
+      "warmMs": 87.06,
+      "files": 10,
+      "edges": 33,
+      "qualityTools": [
+        {
+          "name": "eslint",
+          "version": "10.12.0",
+          "parser": "@typescript-eslint/parser@8.71.1",
+          "rules": [
+            "complexity",
+            "no-unreachable",
+            "no-constant-condition",
+            "no-constant-binary-expression",
+            "no-dupe-else-if",
+            "no-unsafe-finally",
+            "no-async-promise-executor",
+            "require-atomic-updates",
+            "@typescript-eslint/no-non-null-assertion",
+            "@typescript-eslint/no-non-null-asserted-optional-chain"
+          ],
+          "sourceOnly": true
+        },
+        {
+          "name": "jscpd",
+          "version": "4.0.5",
+          "rules": [
+            "duplicate-block"
+          ],
+          "sourceOnly": true
+        },
+        {
+          "name": "pmd",
+          "version": "7.17.0",
+          "status": "available",
+          "rules": [
+            "CyclomaticComplexity",
+            "BrokenNullCheck",
+            "CloseResource",
+            "UnconditionalIfStatement"
+          ],
+          "sourceOnly": true
+        }
+      ],
+      "qualityCache": [
+        {
+          "projectId": "angular-monorepo",
+          "status": "hit"
+        }
+      ],
+      "build": "0427f5fed8a45a3d4dbc5523f1d0f8afb57949bac0df1f9bef249fd73ae31061"
+    },
+    {
+      "demo": "split",
+      "coldMs": 2124.77,
+      "warmMs": 111.62,
+      "files": 24,
+      "edges": 61,
+      "qualityTools": [
+        {
+          "name": "eslint",
+          "version": "10.12.0",
+          "parser": "@typescript-eslint/parser@8.71.1",
+          "rules": [
+            "complexity",
+            "no-unreachable",
+            "no-constant-condition",
+            "no-constant-binary-expression",
+            "no-dupe-else-if",
+            "no-unsafe-finally",
+            "no-async-promise-executor",
+            "require-atomic-updates",
+            "@typescript-eslint/no-non-null-assertion",
+            "@typescript-eslint/no-non-null-asserted-optional-chain"
+          ],
+          "sourceOnly": true
+        },
+        {
+          "name": "jscpd",
+          "version": "4.0.5",
+          "rules": [
+            "duplicate-block"
+          ],
+          "sourceOnly": true
+        },
+        {
+          "name": "pmd",
+          "version": "7.17.0",
+          "status": "available",
+          "rules": [
+            "CyclomaticComplexity",
+            "BrokenNullCheck",
+            "CloseResource",
+            "UnconditionalIfStatement"
+          ],
+          "sourceOnly": true
+        },
+        {
+          "name": "eslint",
+          "version": "10.12.0",
+          "parser": "@typescript-eslint/parser@8.71.1",
+          "rules": [
+            "complexity",
+            "no-unreachable",
+            "no-constant-condition",
+            "no-constant-binary-expression",
+            "no-dupe-else-if",
+            "no-unsafe-finally",
+            "no-async-promise-executor",
+            "require-atomic-updates",
+            "@typescript-eslint/no-non-null-assertion",
+            "@typescript-eslint/no-non-null-asserted-optional-chain"
+          ],
+          "sourceOnly": true
+        },
+        {
+          "name": "jscpd",
+          "version": "4.0.5",
+          "rules": [
+            "duplicate-block"
+          ],
+          "sourceOnly": true
+        },
+        {
+          "name": "pmd",
+          "version": null,
+          "status": "unavailable",
+          "rules": [
+            "CyclomaticComplexity",
+            "BrokenNullCheck",
+            "CloseResource",
+            "UnconditionalIfStatement"
+          ],
+          "sourceOnly": true
+        }
+      ],
+      "qualityCache": [
+        {
+          "projectId": "backend",
+          "status": "hit"
+        },
+        {
+          "projectId": "react",
+          "status": "hit"
+        }
+      ],
+      "build": "0427f5fed8a45a3d4dbc5523f1d0f8afb57949bac0df1f9bef249fd73ae31061"
+    },
+    {
+      "demo": "quality",
+      "coldMs": 2003.08,
+      "warmMs": 86.32,
+      "files": 6,
+      "edges": 3,
+      "qualityTools": [
+        {
+          "name": "eslint",
+          "version": "10.12.0",
+          "parser": "@typescript-eslint/parser@8.71.1",
+          "rules": [
+            "complexity",
+            "no-unreachable",
+            "no-constant-condition",
+            "no-constant-binary-expression",
+            "no-dupe-else-if",
+            "no-unsafe-finally",
+            "no-async-promise-executor",
+            "require-atomic-updates",
+            "@typescript-eslint/no-non-null-assertion",
+            "@typescript-eslint/no-non-null-asserted-optional-chain"
+          ],
+          "sourceOnly": true
+        },
+        {
+          "name": "jscpd",
+          "version": "4.0.5",
+          "rules": [
+            "duplicate-block"
+          ],
+          "sourceOnly": true
+        },
+        {
+          "name": "pmd",
+          "version": "7.17.0",
+          "status": "available",
+          "rules": [
+            "CyclomaticComplexity",
+            "BrokenNullCheck",
+            "CloseResource",
+            "UnconditionalIfStatement"
+          ],
+          "sourceOnly": true
+        }
+      ],
+      "qualityCache": [
+        {
+          "projectId": "quality",
+          "status": "hit"
+        }
+      ],
+      "build": "0427f5fed8a45a3d4dbc5523f1d0f8afb57949bac0df1f9bef249fd73ae31061"
+    },
+    {
+      "demo": "requirements",
+      "coldMs": 1763.16,
+      "warmMs": 96.08,
+      "files": 6,
+      "edges": 12,
+      "qualityTools": [
+        {
+          "name": "eslint",
+          "version": "10.12.0",
+          "parser": "@typescript-eslint/parser@8.71.1",
+          "rules": [
+            "complexity",
+            "no-unreachable",
+            "no-constant-condition",
+            "no-constant-binary-expression",
+            "no-dupe-else-if",
+            "no-unsafe-finally",
+            "no-async-promise-executor",
+            "require-atomic-updates",
+            "@typescript-eslint/no-non-null-assertion",
+            "@typescript-eslint/no-non-null-asserted-optional-chain"
+          ],
+          "sourceOnly": true
+        },
+        {
+          "name": "jscpd",
+          "version": "4.0.5",
+          "rules": [
+            "duplicate-block"
+          ],
+          "sourceOnly": true
+        },
+        {
+          "name": "pmd",
+          "version": "7.17.0",
+          "status": "available",
+          "rules": [
+            "CyclomaticComplexity",
+            "BrokenNullCheck",
+            "CloseResource",
+            "UnconditionalIfStatement"
+          ],
+          "sourceOnly": true
+        }
+      ],
+      "qualityCache": [
+        {
+          "projectId": "requirements",
+          "status": "hit"
+        }
+      ],
+      "build": "0427f5fed8a45a3d4dbc5523f1d0f8afb57949bac0df1f9bef249fd73ae31061"
+    }
+  ]
+}

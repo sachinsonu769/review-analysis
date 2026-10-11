@@ -1,0 +1,11 @@
+{
+  "status": "pass",
+  "expectedBuild": "0427f5fed8a45a3d4dbc5523f1d0f8afb57949bac0df1f9bef249fd73ae31061",
+  "git": "git version 2.39.5",
+  "trustedFixtureFilesystem": "Executable ephemeral /tmp; a filesystem noexec restriction cannot mask hook/transport guard behavior",
+  "revision": "bcc43577ebac5f261f3de8383c799690b0782ddd",
+  "readError": "Command failed: git -c safe.directory=/tmp/expanded-qa-lazy-pltt2b/partial -c core.fsmonitor=false -c core.hooksPath=/dev/null -c core.untrackedCache=false -C /tmp/expanded-qa-lazy-pltt2b/partial show bcc43577ebac5f261f3de8383c799690b0782ddd:a.ts\nwarning: lazy fetching disabled; some objects may not be available\nfatal: could not fetch ec4495f6dcc00a3fee4472eec480022ca1bc27e6 from promisor remote\n",
+  "transportExecuted": false,
+  "gitFilesUnchanged": 26,
+  "network": "none; synthetic local origin only"
+}

@@ -1,0 +1,31 @@
+{
+  "archive": "/workspace/review-analysis-deliverables/expanded-source-qa1.zip",
+  "archiveSha256": "eb7499f26251154329d3439c822fbead0c5382dc1b5903bbbda395932cbec525",
+  "sourceRoot": "/workspace/review-analysis-deliverables/expanded-qa/pin-1/source",
+  "sourceTreeHash": "ddc270c01caba3e20bfb01955e7f00b84bd929cecd695a0b5fb9a686435849e5",
+  "manifestFilesVerified": 951,
+  "requiredFilesVerified": [
+    "src/server.js",
+    "src/snapshot.js",
+    "app/workspace.ts",
+    "app-dist/workspace.js",
+    "ui/index.html",
+    "ui/app.js",
+    "Dockerfile",
+    "compose.yaml",
+    "tsconfig.json",
+    "scripts/windows/start.cmd",
+    "scripts/windows/health.cmd",
+    "scripts/windows/stop.cmd",
+    "fixtures/requirements/workspace-confirmed-simulation-checklist.json"
+  ],
+  "expectedBuild": "0427f5fed8a45a3d4dbc5523f1d0f8afb57949bac0df1f9bef249fd73ae31061",
+  "appDist": {
+    "app-dist/graph-model.d.ts": "3fdbbc1c887312d16c3918810deffbbe09b3d65bdfc759e3fd91f06de11a3b0c",
+    "app-dist/graph-model.js": "c66608f35f1d9d37cfb230f82bbf55f3c0fff8cf5a66a3569ad4a463d2089e1b",
+    "app-dist/graph-model.js.map": "a414560f1f695748d1bcfc4303b9b93d30defa0194dca5a7b0e11691e2ce4380",
+    "app-dist/workspace.d.ts": "9897bcb4efe5c1d6e467e1801f7d8d289b9d12c404e881670d27431b29639759",
+    "app-dist/workspace.js": "9dc8816d66627a00ed94f9d1886a3736b54f11a0f97b7904538b5211f876491c",
+    "app-dist/workspace.js.map": "c2e9e9b0557fc0c97eeda667b59715e27940191ce862d1e753ce6ba0beeb810a"
+  }
+}

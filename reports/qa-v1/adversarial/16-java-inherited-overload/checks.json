@@ -1,0 +1,50 @@
+{
+  "id": "16-java-inherited-overload",
+  "description": "Declared unsupported inherited overload should not be narrowed to incompatible locally declared member",
+  "status": "fail",
+  "exitCode": 0,
+  "sourcePaths": {
+    "baseline": "/tmp/review-analysis-adversarial-v1-anUajX/16-java-inherited-overload/baseline",
+    "candidate": "/tmp/review-analysis-adversarial-v1-anUajX/16-java-inherited-overload/candidate"
+  },
+  "sourceHashes": {
+    "baseline": {
+      "backend/Base.java": "a7a37e9bbad27af27180fe504b0678e2e6e0314b492687ae64ba72f81b9a67fd",
+      "backend/Caller.java": "656d0a74c600dcd856612fe45a67348037b842f28374978ff203513bd6b93fd1",
+      "backend/Child.java": "b6819335d438a1ff2eee31838dd068058ef71c9f554fe624db6c50c8ddc2b5f9"
+    },
+    "candidate": {
+      "backend/Base.java": "aa39806866edc40aea58b5112cb70e705a067f9ecda15bc35dbc64f62ca581bc",
+      "backend/Caller.java": "656d0a74c600dcd856612fe45a67348037b842f28374978ff203513bd6b93fd1",
+      "backend/Child.java": "55178789faacec884e6f737e7c3e7632a411e6616e25eeb98e17919cb9326217"
+    }
+  },
+  "evidence": {
+    "checkedEvidenceRecords": 36,
+    "errors": []
+  },
+  "assertions": [
+    {
+      "name": "no incompatible Child Integer call target",
+      "status": "fail"
+    },
+    {
+      "name": "inheritance alternative remains uncertainty or correct target",
+      "status": "fail"
+    },
+    {
+      "name": "all source evidence hashes/ranges/excerpts/revisions independently reproduce",
+      "status": "pass"
+    },
+    {
+      "name": "readable actual CLI exits 0",
+      "status": "pass"
+    }
+  ],
+  "reportStats": {
+    "changes": 4,
+    "directEdges": 6,
+    "unknowns": 8,
+    "sourceBuildHash": "8ee7fcacee9a1b276b2bfab2665d8d3ab771e40eee5f3924f1f301192426e68f"
+  }
+}

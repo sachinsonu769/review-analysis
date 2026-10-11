@@ -1,0 +1,440 @@
+{
+  "at": "2026-10-11T17:42:29.990Z",
+  "root": "/workspace/review-analysis-deliverables/expanded-architect-review/exact-source-qa1",
+  "buildBefore": {
+    "version": "0.2.0",
+    "sourceBuildHash": "0427f5fed8a45a3d4dbc5523f1d0f8afb57949bac0df1f9bef249fd73ae31061",
+    "parsers": {
+      "java": "java-parser@3.0.1",
+      "typescript": "typescript@5.9.3"
+    }
+  },
+  "buildAfter": {
+    "version": "0.2.0",
+    "sourceBuildHash": "0427f5fed8a45a3d4dbc5523f1d0f8afb57949bac0df1f9bef249fd73ae31061",
+    "parsers": {
+      "java": "java-parser@3.0.1",
+      "typescript": "typescript@5.9.3"
+    }
+  },
+  "sourceHashes": {
+    "app/workspace.ts": "1fdf7df29c7c4907d02ffa9a7e0c9a1db8bc942269269fc05525c96025c84dc9",
+    "app/graph-model.ts": "a6e8a8962ca6ef29a69e2e5e991fcaf9cda4dbc8e339b9ca1c3df2f1ad41f2be",
+    "src/engine.js": "7b6033b2c2149ddf61394cf10f82e10cf7bba0c873b65620d257e5cbbf1abc02",
+    "src/snapshot.js": "88e9930b38dec03265c17ae2c34900b84f06be09f085fdc79edd3780e5c66e22",
+    "src/rules.js": "f2b6214e614555de76bbe645aa21ac26422999ea16d64045626258dad7b04b36",
+    "src/requirements.js": "69222fe6ff39889ed6fd542a4062ea09aa473f12c96f38e35d5be8afcdadd760",
+    "src/quality.js": "8d5874aa0a8ba5d0d3216dbc019c18cfee3bb66978b23afb1848d0d2e2e4e89a",
+    "src/server.js": "22b40aac4ba346b52891d52b15201df9c1f198fae408f2cc208ddd019a21c7c6",
+    "ui/app.js": "1d763d8f5761c1df128a25fc0ddb8d6987207e922c5fa4242cae2e74620c141b",
+    "Dockerfile": "151eac6d7da93c6564e99b880e7452180da81e98057a0268c223b90e1db743d6",
+    "compose.yaml": "af845e605fcc0d272bac5b8a5a973bc2af82bb1e4ea1b59dd7c74af8de1659b0"
+  },
+  "checks": [
+    {
+      "id": "typed-workspace-rejects-coerced-identifiers",
+      "pass": true
+    },
+    {
+      "id": "absent-checklist-remains-draft",
+      "pass": true
+    },
+    {
+      "id": "import-only-source-change-node-and-impact",
+      "pass": true
+    },
+    {
+      "id": "all-graph-evidence-binds-same-phase",
+      "pass": true
+    },
+    {
+      "id": "cross-revision-paths-never-combined",
+      "pass": true
+    },
+    {
+      "id": "likely-indirect-certainty-is-low",
+      "pass": true
+    },
+    {
+      "id": "source-example-expiry-remains-inclusive",
+      "pass": true
+    },
+    {
+      "id": "cross-project-checklist-criterion-evaluated-once",
+      "pass": true
+    },
+    {
+      "id": "examined-inputs-unchanged",
+      "pass": true
+    },
+    {
+      "id": "exact-git-replacement-ref-ignored",
+      "pass": true
+    },
+    {
+      "id": "source-build-identity-stable-during-probes",
+      "pass": true
+    }
+  ],
+  "detail": {
+    "typed-workspace-rejects-coerced-identifiers": {
+      "missingAndNumericIds": "rejected"
+    },
+    "absent-checklist-remains-draft": {
+      "requirements": "draft",
+      "build": {
+        "version": "0.2.0",
+        "sourceBuildHash": "0427f5fed8a45a3d4dbc5523f1d0f8afb57949bac0df1f9bef249fd73ae31061",
+        "parsers": {
+          "java": "java-parser@3.0.1",
+          "typescript": "typescript@5.9.3"
+        }
+      }
+    },
+    "import-only-source-change-node-and-impact": {
+      "declarationChanges": 0,
+      "node": {
+        "id": "app::consumer.ts",
+        "kind": "file",
+        "label": "consumer.ts",
+        "path": "consumer.ts",
+        "projectId": "app",
+        "repository": "synthetic/app",
+        "module": "app",
+        "language": "typescript",
+        "changed": true,
+        "changeKinds": [
+          "source-modified"
+        ],
+        "evidence": {
+          "path": "consumer.ts",
+          "range": {
+            "startLine": 1,
+            "endLine": 1
+          },
+          "revision": "tree-sha256:02424b830c1e509f0ec76396bfffa3145d18172a27e96fc03b1ced4433096a4e",
+          "fileHash": "02ca6bee10d441a19ee9b43100f8930aece2b7dbc5df44cddde6e06ea88b0928",
+          "excerpt": "import './replacement';",
+          "projectId": "app",
+          "repository": "synthetic/app"
+        },
+        "declarations": [],
+        "phases": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      "paths": [
+        {
+          "source": "app::upstream.ts",
+          "target": "app::consumer.ts",
+          "edgeIds": [
+            "4b44738bd6cbb688dffdc204"
+          ],
+          "nodeIds": [
+            "app::upstream.ts",
+            "app::consumer.ts"
+          ],
+          "phase": "baseline",
+          "confidence": "high",
+          "kind": "direct"
+        },
+        {
+          "source": "app::upstream.ts",
+          "target": "app::consumer.ts",
+          "edgeIds": [
+            "f58ebb286ab386836cce7e44"
+          ],
+          "nodeIds": [
+            "app::upstream.ts",
+            "app::consumer.ts"
+          ],
+          "phase": "candidate",
+          "confidence": "high",
+          "kind": "direct"
+        }
+      ]
+    },
+    "all-graph-evidence-binds-same-phase": {
+      "evidenceRecords": 8,
+      "paths": 2
+    },
+    "cross-revision-paths-never-combined": [
+      {
+        "source": "B",
+        "target": "C",
+        "edgeIds": [
+          "bc"
+        ],
+        "nodeIds": [
+          "B",
+          "C"
+        ],
+        "phase": "candidate",
+        "confidence": "high",
+        "kind": "direct"
+      }
+    ],
+    "likely-indirect-certainty-is-low": [
+      {
+        "source": "B",
+        "target": "C",
+        "edgeIds": [
+          "bc"
+        ],
+        "nodeIds": [
+          "B",
+          "C"
+        ],
+        "phase": "candidate",
+        "confidence": "high",
+        "kind": "direct"
+      },
+      {
+        "source": "A",
+        "target": "C",
+        "edgeIds": [
+          "ab",
+          "bc"
+        ],
+        "nodeIds": [
+          "A",
+          "B",
+          "C"
+        ],
+        "phase": "candidate",
+        "confidence": "low",
+        "kind": "likely-indirect"
+      }
+    ],
+    "source-example-expiry-remains-inclusive": {
+      "onDay": {
+        "path": "dep.ts",
+        "status": "simulated-reviewed",
+        "approval": {
+          "status": "reviewed",
+          "reviewer": "SIMULATION",
+          "evidence": "synthetic only",
+          "simulation": true
+        },
+        "expiry": "active",
+        "expires": "2026-10-11",
+        "asOf": "2026-10-11",
+        "evidence": {
+          "path": "dep.ts",
+          "range": {
+            "startLine": 1,
+            "endLine": 2
+          },
+          "revision": "tree-sha256:02424b830c1e509f0ec76396bfffa3145d18172a27e96fc03b1ced4433096a4e",
+          "fileHash": "0df9c550337acd97a06bca85ce4ce1ee7a7ea66762c49373ce7aa1e5eb228001",
+          "excerpt": "export const x=1;\n"
+        }
+      },
+      "nextDay": {
+        "path": "dep.ts",
+        "status": "expired-example",
+        "approval": {
+          "status": "reviewed",
+          "reviewer": "SIMULATION",
+          "evidence": "synthetic only",
+          "simulation": true
+        },
+        "expiry": "expired",
+        "expires": "2026-10-11",
+        "asOf": "2026-10-12",
+        "evidence": {
+          "path": "dep.ts",
+          "range": {
+            "startLine": 1,
+            "endLine": 2
+          },
+          "revision": "tree-sha256:02424b830c1e509f0ec76396bfffa3145d18172a27e96fc03b1ced4433096a4e",
+          "fileHash": "0df9c550337acd97a06bca85ce4ce1ee7a7ea66762c49373ce7aa1e5eb228001",
+          "excerpt": "export const x=1;\n"
+        }
+      }
+    },
+    "cross-project-checklist-criterion-evaluated-once": {
+      "schemaVersion": "1",
+      "status": "simulated-confirmed",
+      "advisory": true,
+      "confirmation": {
+        "status": "confirmed",
+        "simulation": true,
+        "confirmedBy": "SIMULATED reviewer",
+        "confirmedAt": "2026-10-11T12:00:00Z"
+      },
+      "checklist": {
+        "revision": "architect-probe",
+        "owner": "Synthetic owner",
+        "hash": "737b4f7cad9348d8d06b0ea32ca481b8637e0ba098e2bddb4cca66230c386964"
+      },
+      "provenance": {
+        "mode": "workspace",
+        "fileHashesVerified": true,
+        "projects": [
+          {
+            "id": "backend",
+            "revision": "synthetic:aa2062b65562f2e2a6d1e4d89cde452ddd2837939836aaeb412426ceac06815f",
+            "contentHash": "ea16094f5c823a6eba687d9a654ff29747131a75cfba4123a2a9b0b8501c5496"
+          },
+          {
+            "id": "frontend",
+            "revision": "synthetic:8d2dad0723b13789c5c2fc0db1f88af50a2b970fdbd87e6e180623269fd23be9",
+            "contentHash": "fc0832bdd3e6037bdc53966602fb01c3279e319aabb72e5d429888cd0efdde9f"
+          }
+        ],
+        "scope": {
+          "status": "unscoped",
+          "issues": []
+        }
+      },
+      "criteria": [
+        {
+          "id": "cross",
+          "description": "Source and test literal in separate supplied projects",
+          "assessment": "evidenced",
+          "reasons": [
+            "Explicit source and test literals were found; behavioral correctness and test execution remain unverified"
+          ],
+          "sourceChecks": [
+            {
+              "selector": {
+                "pathPattern": "src/service.ts",
+                "projectId": "backend",
+                "pattern": "businessCriterion"
+              },
+              "status": "matched",
+              "reason": "All explicit literal anchors occur in the same supplied file",
+              "matchingFileCount": 1,
+              "searchedFileCount": 1,
+              "searchedProjectIds": [
+                "backend"
+              ],
+              "evidence": [
+                {
+                  "path": "src/service.ts",
+                  "range": {
+                    "startLine": 1,
+                    "endLine": 1
+                  },
+                  "revision": "synthetic:aa2062b65562f2e2a6d1e4d89cde452ddd2837939836aaeb412426ceac06815f",
+                  "fileHash": "aa2062b65562f2e2a6d1e4d89cde452ddd2837939836aaeb412426ceac06815f",
+                  "excerpt": "export const businessCriterion = true;",
+                  "projectId": "backend",
+                  "kind": "source-literal",
+                  "anchor": "pattern",
+                  "matchedLiteral": "businessCriterion",
+                  "execution": "unverified"
+                }
+              ],
+              "evidenceTruncated": false
+            }
+          ],
+          "testChecks": [
+            {
+              "selector": {
+                "pathPattern": "src/service.test.ts",
+                "projectId": "frontend",
+                "pattern": "proves criterion"
+              },
+              "status": "matched",
+              "reason": "All explicit literal anchors occur in the same supplied file",
+              "matchingFileCount": 1,
+              "searchedFileCount": 1,
+              "searchedProjectIds": [
+                "frontend"
+              ],
+              "evidence": [
+                {
+                  "path": "src/service.test.ts",
+                  "range": {
+                    "startLine": 1,
+                    "endLine": 1
+                  },
+                  "revision": "synthetic:8d2dad0723b13789c5c2fc0db1f88af50a2b970fdbd87e6e180623269fd23be9",
+                  "fileHash": "8d2dad0723b13789c5c2fc0db1f88af50a2b970fdbd87e6e180623269fd23be9",
+                  "excerpt": "test(\"proves criterion\", () => {});",
+                  "projectId": "frontend",
+                  "kind": "test-source-literal",
+                  "anchor": "pattern",
+                  "matchedLiteral": "proves criterion",
+                  "execution": "unverified"
+                }
+              ],
+              "evidenceTruncated": false
+            }
+          ],
+          "sourceEvidence": [
+            {
+              "path": "src/service.ts",
+              "range": {
+                "startLine": 1,
+                "endLine": 1
+              },
+              "revision": "synthetic:aa2062b65562f2e2a6d1e4d89cde452ddd2837939836aaeb412426ceac06815f",
+              "fileHash": "aa2062b65562f2e2a6d1e4d89cde452ddd2837939836aaeb412426ceac06815f",
+              "excerpt": "export const businessCriterion = true;",
+              "projectId": "backend",
+              "kind": "source-literal",
+              "anchor": "pattern",
+              "matchedLiteral": "businessCriterion",
+              "execution": "unverified"
+            }
+          ],
+          "testEvidence": [
+            {
+              "path": "src/service.test.ts",
+              "range": {
+                "startLine": 1,
+                "endLine": 1
+              },
+              "revision": "synthetic:8d2dad0723b13789c5c2fc0db1f88af50a2b970fdbd87e6e180623269fd23be9",
+              "fileHash": "8d2dad0723b13789c5c2fc0db1f88af50a2b970fdbd87e6e180623269fd23be9",
+              "excerpt": "test(\"proves criterion\", () => {});",
+              "projectId": "frontend",
+              "kind": "test-source-literal",
+              "anchor": "pattern",
+              "matchedLiteral": "proves criterion",
+              "execution": "unverified"
+            }
+          ],
+          "edgeCases": [],
+          "missingEdgeCases": [],
+          "runtime": "unverified"
+        }
+      ],
+      "summary": {
+        "total": 1,
+        "evidenced": 1,
+        "potentialMismatch": 0,
+        "unverified": 0,
+        "missingEdgeCases": 0
+      },
+      "runtime": "unverified",
+      "limitations": [
+        "Confirmation metadata is a supplied assertion; the engine does not authenticate an owner or invent approval. Simulated confirmations are demonstration data.",
+        "Literal source matches, including symbol and test-name anchors, show text presence only. Comments and string literals can match; declarations, assertions and business behavior are not proved.",
+        "Test source evidence does not show that tests were executed, passed, or cover the criterion at runtime. Runtime behavior always remains unverified.",
+        "Only supplied snapshot files are searched. Test selectors are limited to test/spec filenames, Java Test/Tests names, or test/tests/__tests__ directories.",
+        "Missing edge cases are only those explicitly listed in the checklist. The engine cannot infer all necessary business scenarios or permit skipping full regression.",
+        "Path selectors use bounded * and ** globs; all other selectors are case-sensitive literal text. No user regular expressions, external AI, or local models are run.",
+        "Snapshot revisions are supplied by the snapshot reader; file SHA256 values are checked against supplied text. Without evidenceScope, confirmation has no pinned source revision.",
+        "Workspace criteria are evaluated once across selected project snapshots. Unscoped selectors search every selected project; explicit projectId selectors search only that project. Evidence preserves each project ID, original path, revision and file hash."
+      ]
+    },
+    "examined-inputs-unchanged": {
+      "inputHashes": {
+        "baseline": "465e82f8979c4dba9fbe44ba0889d36354525a1b64c541fce3486539deee032a",
+        "candidate": "02424b830c1e509f0ec76396bfffa3145d18172a27e96fc03b1ced4433096a4e"
+      }
+    },
+    "exact-git-replacement-ref-ignored": {
+      "requestedRevision": "b2c7e85d49214fa6e79c999a4563060c973ca66f",
+      "source": "export const original=1;\n"
+    }
+  },
+  "passed": true,
+  "limits": "Architecture-specific synthetic probes. PMD disabled only here; full tool/container/UI suite is owned by independent exact-build QA. Windows NOT RUN; no private repository acceptance."
+}

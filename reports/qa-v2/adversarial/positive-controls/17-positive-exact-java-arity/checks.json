@@ -1,0 +1,52 @@
+{
+  "id": "17-positive-exact-java-arity",
+  "description": "One and ten arguments select only matching formal arity and retain direct call evidence",
+  "status": "pass",
+  "exitCode": 0,
+  "sourcePaths": {
+    "baseline": "/tmp/review-analysis-adversarial-v2-NZrPxG/positive-controls/17-positive-exact-java-arity/baseline",
+    "candidate": "/tmp/review-analysis-adversarial-v2-NZrPxG/positive-controls/17-positive-exact-java-arity/candidate"
+  },
+  "sourceHashes": {
+    "baseline": {
+      "backend/Caller.java": "fa453a2563ce71d7c8f6e4b8c11b8199fb3e77b4f103bfdf55ed460d9f7f381a",
+      "backend/Worker.java": "facf19194fb5e28f7cf60099ddcf4cd06d81657faa77c53956c4feecb7efb1af"
+    },
+    "candidate": {
+      "backend/Caller.java": "fa453a2563ce71d7c8f6e4b8c11b8199fb3e77b4f103bfdf55ed460d9f7f381a",
+      "backend/Worker.java": "c73dd8de418b6ba44b29d58799e74ec195a6177ca80832b373c6a17c1afede40"
+    }
+  },
+  "evidence": {
+    "checkedEvidenceRecords": 18,
+    "errors": []
+  },
+  "assertions": [
+    {
+      "name": "one arg resolves only /1",
+      "status": "pass"
+    },
+    {
+      "name": "ten args resolve only /10",
+      "status": "pass"
+    },
+    {
+      "name": "supported calls have no unresolved/ambiguous call unknown",
+      "status": "pass"
+    },
+    {
+      "name": "all source evidence hashes/ranges/excerpts/revisions independently reproduce",
+      "status": "pass"
+    },
+    {
+      "name": "readable actual CLI exits 0",
+      "status": "pass"
+    }
+  ],
+  "reportStats": {
+    "changes": 3,
+    "directEdges": 6,
+    "unknowns": 0,
+    "sourceBuildHash": "ca04bac50b7584aaafd9d5602acc8055152e81e25de5fa1b15bb710f76f53ac9"
+  }
+}

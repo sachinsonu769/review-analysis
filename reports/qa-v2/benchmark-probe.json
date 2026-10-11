@@ -1,0 +1,9 @@
+{
+  "target": "/tmp/review-analysis-benchmark-X6GDHV/candidate/frontend/src/api/lookupApi.ts",
+  "targetExisted": true,
+  "actualApiPath": "/tmp/review-analysis-benchmark-X6GDHV/candidate/frontend/src/api/lookupApi.ts",
+  "actualApiHash": "8b9224af601766edbb0617ffe30c2b85aa82fb82e97d13ed8467849175b8bcda",
+  "targetNowExists": true,
+  "actualApiHashAfter": "24235d96e685874c7de797bba874a768d435fe110a5b68f6cef15ca4ab899f36",
+  "targetText": "export interface LookupResponse {\n  id: string;\n  displayName: string;\n}\n\nexport async function lookup(): Promise<LookupResponse> {\n  const response = await fetch('/api/catalog/lookup');\n  if (!response.ok) throw new Error('Lookup failed');\n  return response.json();\n}\n\n// incremental content change for benchmark\n"
+}

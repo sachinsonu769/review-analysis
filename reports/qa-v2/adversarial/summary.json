@@ -1,0 +1,881 @@
+{
+  "artifactZipSha256": "a140834fe7d26c707a04dc43ae225178bc39756154ca52e63f8dd7db91582897",
+  "build": "/tmp/review-analysis-qa-v2-fsn7g676",
+  "caseRoot": "/tmp/review-analysis-adversarial-v2-NZrPxG",
+  "cases": 16,
+  "passed": 16,
+  "failed": 0,
+  "notRun": 0,
+  "manifestErrorsBefore": [],
+  "manifestErrorsAfter": [],
+  "results": [
+    {
+      "id": "01-http-lexical-static-dynamic",
+      "description": "Global receiver and destructured parameter shadows; static templates versus constant concatenation; literal object override order",
+      "status": "pass",
+      "exitCode": 0,
+      "sourcePaths": {
+        "baseline": "/tmp/review-analysis-adversarial-v2-NZrPxG/01-http-lexical-static-dynamic/baseline",
+        "candidate": "/tmp/review-analysis-adversarial-v2-NZrPxG/01-http-lexical-static-dynamic/candidate"
+      },
+      "sourceHashes": {
+        "baseline": {
+          "backend/Resource.java": "3804feef0d2b303327d83f58c4c2c6d33f75f79ba6aa914d248183fa52cf67c4",
+          "frontend/http.ts": "aee5c10cb9dd8ad797e5d6c43c9c1766abbe3bcf1b81edfcba01463ff2a92588"
+        },
+        "candidate": {
+          "backend/Resource.java": "9cc83dd7593fb95d69dde305e4e434d34375cb35681b969b0077437544f752b2",
+          "frontend/http.ts": "aee5c10cb9dd8ad797e5d6c43c9c1766abbe3bcf1b81edfcba01463ff2a92588"
+        }
+      },
+      "evidence": {
+        "checkedEvidenceRecords": 114,
+        "errors": []
+      },
+      "assertions": [
+        {
+          "name": "positive-global",
+          "status": "pass"
+        },
+        {
+          "name": "positive-template",
+          "status": "pass"
+        },
+        {
+          "name": "positive-member",
+          "status": "pass"
+        },
+        {
+          "name": "positive-axios",
+          "status": "pass"
+        },
+        {
+          "name": "positive-last-property",
+          "status": "pass"
+        },
+        {
+          "name": "negative-window",
+          "status": "pass"
+        },
+        {
+          "name": "negative-self",
+          "status": "pass"
+        },
+        {
+          "name": "negative-globalthis",
+          "status": "pass"
+        },
+        {
+          "name": "negative-fetch",
+          "status": "pass"
+        },
+        {
+          "name": "negative-axios",
+          "status": "pass"
+        },
+        {
+          "name": "negative-string",
+          "status": "pass"
+        },
+        {
+          "name": "negative-comment",
+          "status": "pass"
+        },
+        {
+          "name": "dynamic-concat",
+          "status": "pass"
+        },
+        {
+          "name": "dynamic-options",
+          "status": "pass"
+        },
+        {
+          "name": "dynamic-spread",
+          "status": "pass"
+        },
+        {
+          "name": "all source evidence hashes/ranges/excerpts/revisions independently reproduce",
+          "status": "pass"
+        },
+        {
+          "name": "readable actual CLI exits 0",
+          "status": "pass"
+        }
+      ],
+      "reportStats": {
+        "changes": 2,
+        "directEdges": 10,
+        "unknowns": 70,
+        "sourceBuildHash": "ca04bac50b7584aaafd9d5602acc8055152e81e25de5fa1b15bb710f76f53ac9"
+      }
+    },
+    {
+      "id": "02-ts-import-shadow-missing",
+      "description": "Named and namespace bindings, nested forward local call, absent relative import",
+      "status": "pass",
+      "exitCode": 0,
+      "sourcePaths": {
+        "baseline": "/tmp/review-analysis-adversarial-v2-NZrPxG/02-ts-import-shadow-missing/baseline",
+        "candidate": "/tmp/review-analysis-adversarial-v2-NZrPxG/02-ts-import-shadow-missing/candidate"
+      },
+      "sourceHashes": {
+        "baseline": {
+          "frontend/consumer.ts": "fa2c919715d474b2c8941ea1ce8b9ab1dc8449306f1d7e5460d491df4d9a8518",
+          "frontend/lib.ts": "6a17fb63c8c90e2ce7a1f7344a73bd815f27fdf6df05982abd610fe84ea3408b"
+        },
+        "candidate": {
+          "frontend/consumer.ts": "fa2c919715d474b2c8941ea1ce8b9ab1dc8449306f1d7e5460d491df4d9a8518",
+          "frontend/lib.ts": "6745bcd12f9a1c706a5b88bc099841f1fb145a755425ede6614a1c4559e322d9"
+        }
+      },
+      "evidence": {
+        "checkedEvidenceRecords": 32,
+        "errors": []
+      },
+      "assertions": [
+        {
+          "name": "named import call",
+          "status": "pass"
+        },
+        {
+          "name": "namespace import call",
+          "status": "pass"
+        },
+        {
+          "name": "parameter does not inherit imported target",
+          "status": "pass"
+        },
+        {
+          "name": "missing source remains unknown",
+          "status": "pass"
+        },
+        {
+          "name": "nested function does not target top-level import",
+          "status": "pass"
+        },
+        {
+          "name": "all source evidence hashes/ranges/excerpts/revisions independently reproduce",
+          "status": "pass"
+        },
+        {
+          "name": "readable actual CLI exits 0",
+          "status": "pass"
+        }
+      ],
+      "reportStats": {
+        "changes": 1,
+        "directEdges": 10,
+        "unknowns": 10,
+        "sourceBuildHash": "ca04bac50b7584aaafd9d5602acc8055152e81e25de5fa1b15bb710f76f53ac9"
+      }
+    },
+    {
+      "id": "03-ts-ambiguous-module",
+      "description": "Both .ts and .tsx candidate files prevent unique imported call",
+      "status": "pass",
+      "exitCode": 0,
+      "sourcePaths": {
+        "baseline": "/tmp/review-analysis-adversarial-v2-NZrPxG/03-ts-ambiguous-module/baseline",
+        "candidate": "/tmp/review-analysis-adversarial-v2-NZrPxG/03-ts-ambiguous-module/candidate"
+      },
+      "sourceHashes": {
+        "baseline": {
+          "frontend/consumer.ts": "b2f41335f5344a2d002632eda191eee705bfa333ef91e40267b2a65b406495e2",
+          "frontend/lib.ts": "6a17fb63c8c90e2ce7a1f7344a73bd815f27fdf6df05982abd610fe84ea3408b",
+          "frontend/lib.tsx": "6a17fb63c8c90e2ce7a1f7344a73bd815f27fdf6df05982abd610fe84ea3408b"
+        },
+        "candidate": {
+          "frontend/consumer.ts": "b2f41335f5344a2d002632eda191eee705bfa333ef91e40267b2a65b406495e2",
+          "frontend/lib.ts": "6745bcd12f9a1c706a5b88bc099841f1fb145a755425ede6614a1c4559e322d9",
+          "frontend/lib.tsx": "6745bcd12f9a1c706a5b88bc099841f1fb145a755425ede6614a1c4559e322d9"
+        }
+      },
+      "evidence": {
+        "checkedEvidenceRecords": 6,
+        "errors": []
+      },
+      "assertions": [
+        {
+          "name": "ambiguous source reported",
+          "status": "pass"
+        },
+        {
+          "name": "no fabricated call edge",
+          "status": "pass"
+        },
+        {
+          "name": "all source evidence hashes/ranges/excerpts/revisions independently reproduce",
+          "status": "pass"
+        },
+        {
+          "name": "readable actual CLI exits 0",
+          "status": "pass"
+        }
+      ],
+      "reportStats": {
+        "changes": 2,
+        "directEdges": 0,
+        "unknowns": 2,
+        "sourceBuildHash": "ca04bac50b7584aaafd9d5602acc8055152e81e25de5fa1b15bb710f76f53ac9"
+      }
+    },
+    {
+      "id": "04-java-arity-prefix",
+      "description": "Single-argument call cannot target a ten-argument declaration",
+      "status": "pass",
+      "exitCode": 0,
+      "sourcePaths": {
+        "baseline": "/tmp/review-analysis-adversarial-v2-NZrPxG/04-java-arity-prefix/baseline",
+        "candidate": "/tmp/review-analysis-adversarial-v2-NZrPxG/04-java-arity-prefix/candidate"
+      },
+      "sourceHashes": {
+        "baseline": {
+          "backend/Caller.java": "35a45fdf2632fb861fe1fbed526663d39dc9a6aaf5a2e3c011968459db077004",
+          "backend/Target.java": "76848536a24201b7975f52d4be3924dff6aab2bf8f2429f3f77eb952dc1bad3d"
+        },
+        "candidate": {
+          "backend/Caller.java": "35a45fdf2632fb861fe1fbed526663d39dc9a6aaf5a2e3c011968459db077004",
+          "backend/Target.java": "35c271fb4952a2fd568a9e3b9bd5ad0fadface04f643f06c9815de8b4272d689"
+        }
+      },
+      "evidence": {
+        "checkedEvidenceRecords": 10,
+        "errors": []
+      },
+      "assertions": [
+        {
+          "name": "no false ten-argument call target",
+          "status": "pass"
+        },
+        {
+          "name": "arity mismatch remains unknown",
+          "status": "pass"
+        },
+        {
+          "name": "all source evidence hashes/ranges/excerpts/revisions independently reproduce",
+          "status": "pass"
+        },
+        {
+          "name": "readable actual CLI exits 0",
+          "status": "pass"
+        }
+      ],
+      "reportStats": {
+        "changes": 2,
+        "directEdges": 2,
+        "unknowns": 2,
+        "sourceBuildHash": "ca04bac50b7584aaafd9d5602acc8055152e81e25de5fa1b15bb710f76f53ac9"
+      }
+    },
+    {
+      "id": "05-java-overload-receiver-shadow",
+      "description": "Same-arity overload candidate evidence plus typed Object and var field shadows",
+      "status": "pass",
+      "exitCode": 0,
+      "sourcePaths": {
+        "baseline": "/tmp/review-analysis-adversarial-v2-NZrPxG/05-java-overload-receiver-shadow/baseline",
+        "candidate": "/tmp/review-analysis-adversarial-v2-NZrPxG/05-java-overload-receiver-shadow/candidate"
+      },
+      "sourceHashes": {
+        "baseline": {
+          "backend/Caller.java": "565ce6efe62e6dbe6f4e43bdf1d1cd1475b0019d67d02593af6c9b5500feb549",
+          "backend/Service.java": "d3a42475956bd2df2a9590b19d5412ed0a40510315dd00c96b03ec93f77af449"
+        },
+        "candidate": {
+          "backend/Caller.java": "565ce6efe62e6dbe6f4e43bdf1d1cd1475b0019d67d02593af6c9b5500feb549",
+          "backend/Service.java": "383c8d5afa487ed5becf8b5fa1a8ec2aa451627280815ccd16fd5b3a411e939d"
+        }
+      },
+      "evidence": {
+        "checkedEvidenceRecords": 50,
+        "errors": []
+      },
+      "assertions": [
+        {
+          "name": "overload stays ambiguous with candidate evidence",
+          "status": "pass"
+        },
+        {
+          "name": "unique zero-arg call resolves",
+          "status": "pass"
+        },
+        {
+          "name": "Object parameter shadows field receiver",
+          "status": "pass"
+        },
+        {
+          "name": "var shadow remains dynamic; restored field resolves",
+          "status": "pass"
+        },
+        {
+          "name": "all source evidence hashes/ranges/excerpts/revisions independently reproduce",
+          "status": "pass"
+        },
+        {
+          "name": "readable actual CLI exits 0",
+          "status": "pass"
+        }
+      ],
+      "reportStats": {
+        "changes": 4,
+        "directEdges": 6,
+        "unknowns": 26,
+        "sourceBuildHash": "ca04bac50b7584aaafd9d5602acc8055152e81e25de5fa1b15bb710f76f53ac9"
+      }
+    },
+    {
+      "id": "06-java-pattern-shadow",
+      "description": "Valid instanceof pattern binding must not inherit same-named field type",
+      "status": "pass",
+      "exitCode": 0,
+      "sourcePaths": {
+        "baseline": "/tmp/review-analysis-adversarial-v2-NZrPxG/06-java-pattern-shadow/baseline",
+        "candidate": "/tmp/review-analysis-adversarial-v2-NZrPxG/06-java-pattern-shadow/candidate"
+      },
+      "sourceHashes": {
+        "baseline": {
+          "backend/Caller.java": "61c9478ae93a9aecee4882d69d9b5b97490a7685461fca8fb33cd12ddd4ec468",
+          "backend/Other.java": "b3cbea9c2653245343cd6697741ffb14fc6fa624ddde12a233074af901d2136c",
+          "backend/Service.java": "d3a42475956bd2df2a9590b19d5412ed0a40510315dd00c96b03ec93f77af449"
+        },
+        "candidate": {
+          "backend/Caller.java": "61c9478ae93a9aecee4882d69d9b5b97490a7685461fca8fb33cd12ddd4ec468",
+          "backend/Other.java": "2ffbf58ce807332b522855f8aedcceb441f7584b0a9769ddf7c27c6c8769cd01",
+          "backend/Service.java": "383c8d5afa487ed5becf8b5fa1a8ec2aa451627280815ccd16fd5b3a411e939d"
+        }
+      },
+      "evidence": {
+        "checkedEvidenceRecords": 40,
+        "errors": []
+      },
+      "assertions": [
+        {
+          "name": "pattern call never binds field Service",
+          "status": "pass"
+        },
+        {
+          "name": "Other or explicit unknown",
+          "status": "pass"
+        },
+        {
+          "name": "all source evidence hashes/ranges/excerpts/revisions independently reproduce",
+          "status": "pass"
+        },
+        {
+          "name": "readable actual CLI exits 0",
+          "status": "pass"
+        }
+      ],
+      "reportStats": {
+        "changes": 6,
+        "directEdges": 4,
+        "unknowns": 20,
+        "sourceBuildHash": "ca04bac50b7584aaafd9d5602acc8055152e81e25de5fa1b15bb710f76f53ac9"
+      }
+    },
+    {
+      "id": "07-java-static-constant-routing",
+      "description": "Literal mapping remains matchable while constant concatenation mapping stays unknown",
+      "status": "pass",
+      "exitCode": 0,
+      "sourcePaths": {
+        "baseline": "/tmp/review-analysis-adversarial-v2-NZrPxG/07-java-static-constant-routing/baseline",
+        "candidate": "/tmp/review-analysis-adversarial-v2-NZrPxG/07-java-static-constant-routing/candidate"
+      },
+      "sourceHashes": {
+        "baseline": {
+          "backend/Constants.java": "9e46360040ceb30e18c96af650042f54d8278619d1ab10d44a7adc8f67e01114",
+          "frontend/client.ts": "6b665567ac3bb0e85e4b4b9c8def051a7a08c23256653ad494cd0f47283d4edd"
+        },
+        "candidate": {
+          "backend/Constants.java": "f8c8bf0bc504c6e8ed3eb85f65948c2bade530cf4b70f7961e9de39f11e6cb97",
+          "frontend/client.ts": "6b665567ac3bb0e85e4b4b9c8def051a7a08c23256653ad494cd0f47283d4edd"
+        }
+      },
+      "evidence": {
+        "checkedEvidenceRecords": 50,
+        "errors": []
+      },
+      "assertions": [
+        {
+          "name": "constant mapping explicit unknown",
+          "status": "pass"
+        },
+        {
+          "name": "literal not contaminated by constant",
+          "status": "pass"
+        },
+        {
+          "name": "escaped literal routes supported",
+          "status": "pass"
+        },
+        {
+          "name": "all source evidence hashes/ranges/excerpts/revisions independently reproduce",
+          "status": "pass"
+        },
+        {
+          "name": "readable actual CLI exits 0",
+          "status": "pass"
+        }
+      ],
+      "reportStats": {
+        "changes": 4,
+        "directEdges": 4,
+        "unknowns": 26,
+        "sourceBuildHash": "ca04bac50b7584aaafd9d5602acc8055152e81e25de5fa1b15bb710f76f53ac9"
+      }
+    },
+    {
+      "id": "08-http-template-regex",
+      "description": "Template regex constraints must not claim a literal nonmatching request maps to configured route",
+      "status": "pass",
+      "exitCode": 0,
+      "sourcePaths": {
+        "baseline": "/tmp/review-analysis-adversarial-v2-NZrPxG/08-http-template-regex/baseline",
+        "candidate": "/tmp/review-analysis-adversarial-v2-NZrPxG/08-http-template-regex/candidate"
+      },
+      "sourceHashes": {
+        "baseline": {
+          "backend/NumericResource.java": "31ab75e86d9b05e9b403aa9265fd380219a178a6f5164e95e345b235fb2f034b",
+          "frontend/client.ts": "415dc3afda07ab495c6fdcdbac97a2e4ea725f18af71cfcc3dc44e31c37edf56"
+        },
+        "candidate": {
+          "backend/NumericResource.java": "54bfc9935d6753fdf4ea5325d13d8e3d162d81589babdf6f4ec28bd75eb74b27",
+          "frontend/client.ts": "415dc3afda07ab495c6fdcdbac97a2e4ea725f18af71cfcc3dc44e31c37edf56"
+        }
+      },
+      "evidence": {
+        "checkedEvidenceRecords": 30,
+        "errors": []
+      },
+      "assertions": [
+        {
+          "name": "valid template supported or explicit unknown",
+          "status": "pass"
+        },
+        {
+          "name": "regex-rejected literal has no matching edge",
+          "status": "pass"
+        },
+        {
+          "name": "absolute origin never matched to local route",
+          "status": "pass"
+        },
+        {
+          "name": "all source evidence hashes/ranges/excerpts/revisions independently reproduce",
+          "status": "pass"
+        },
+        {
+          "name": "readable actual CLI exits 0",
+          "status": "pass"
+        }
+      ],
+      "reportStats": {
+        "changes": 2,
+        "directEdges": 0,
+        "unknowns": 26,
+        "sourceBuildHash": "ca04bac50b7584aaafd9d5602acc8055152e81e25de5fa1b15bb710f76f53ac9"
+      }
+    },
+    {
+      "id": "09-http-ambiguous-controllers",
+      "description": "Duplicate matching endpoints across controllers remain ambiguous with source candidates",
+      "status": "pass",
+      "exitCode": 0,
+      "sourcePaths": {
+        "baseline": "/tmp/review-analysis-adversarial-v2-NZrPxG/09-http-ambiguous-controllers/baseline",
+        "candidate": "/tmp/review-analysis-adversarial-v2-NZrPxG/09-http-ambiguous-controllers/candidate"
+      },
+      "sourceHashes": {
+        "baseline": {
+          "backend/OtherResource.java": "47ada7496999f9f9efb5426f19c1ae039fe27ce570f65673d98938c999242278",
+          "backend/Resource.java": "3804feef0d2b303327d83f58c4c2c6d33f75f79ba6aa914d248183fa52cf67c4",
+          "frontend/client.ts": "65f1a375a6d95ab6bfdcaa0e9666c7f739bcfc259229534ee4259f2da9019353"
+        },
+        "candidate": {
+          "backend/OtherResource.java": "47ada7496999f9f9efb5426f19c1ae039fe27ce570f65673d98938c999242278",
+          "backend/Resource.java": "9cc83dd7593fb95d69dde305e4e434d34375cb35681b969b0077437544f752b2",
+          "frontend/client.ts": "65f1a375a6d95ab6bfdcaa0e9666c7f739bcfc259229534ee4259f2da9019353"
+        }
+      },
+      "evidence": {
+        "checkedEvidenceRecords": 60,
+        "errors": []
+      },
+      "assertions": [
+        {
+          "name": "multiple mappings remain unknown",
+          "status": "pass"
+        },
+        {
+          "name": "no unique HTTP edge",
+          "status": "pass"
+        },
+        {
+          "name": "all source evidence hashes/ranges/excerpts/revisions independently reproduce",
+          "status": "pass"
+        },
+        {
+          "name": "readable actual CLI exits 0",
+          "status": "pass"
+        }
+      ],
+      "reportStats": {
+        "changes": 2,
+        "directEdges": 0,
+        "unknowns": 56,
+        "sourceBuildHash": "ca04bac50b7584aaafd9d5602acc8055152e81e25de5fa1b15bb710f76f53ac9"
+      }
+    },
+    {
+      "id": "10-source-parse-diagnostics",
+      "description": "Malformed supplied Java and TS must retain explicit diagnostics alongside any recovered declarations",
+      "status": "pass",
+      "exitCode": 0,
+      "sourcePaths": {
+        "baseline": "/tmp/review-analysis-adversarial-v2-NZrPxG/10-source-parse-diagnostics/baseline",
+        "candidate": "/tmp/review-analysis-adversarial-v2-NZrPxG/10-source-parse-diagnostics/candidate"
+      },
+      "sourceHashes": {
+        "baseline": {
+          "backend/Broken.java": "bfface44019bbb5e9d6c91b9cc06d0dc06b9c07e2552a5b82bbac91de4c6d175",
+          "frontend/broken.ts": "e5e9210c33039adcdcea2933ef1a7fb945d69b8a18b255c1e2e47fbd9026840b",
+          "frontend/lib.ts": "6a17fb63c8c90e2ce7a1f7344a73bd815f27fdf6df05982abd610fe84ea3408b"
+        },
+        "candidate": {
+          "backend/Broken.java": "bfface44019bbb5e9d6c91b9cc06d0dc06b9c07e2552a5b82bbac91de4c6d175",
+          "frontend/broken.ts": "e5e9210c33039adcdcea2933ef1a7fb945d69b8a18b255c1e2e47fbd9026840b",
+          "frontend/lib.ts": "6745bcd12f9a1c706a5b88bc099841f1fb145a755425ede6614a1c4559e322d9"
+        }
+      },
+      "evidence": {
+        "checkedEvidenceRecords": 10,
+        "errors": []
+      },
+      "assertions": [
+        {
+          "name": "Java parse failure visible",
+          "status": "pass"
+        },
+        {
+          "name": "TS syntax diagnostic visible",
+          "status": "pass"
+        },
+        {
+          "name": "advisory flags preserved",
+          "status": "pass"
+        },
+        {
+          "name": "all source evidence hashes/ranges/excerpts/revisions independently reproduce",
+          "status": "pass"
+        },
+        {
+          "name": "readable actual CLI exits 0",
+          "status": "pass"
+        }
+      ],
+      "reportStats": {
+        "changes": 1,
+        "directEdges": 2,
+        "unknowns": 4,
+        "sourceBuildHash": "ca04bac50b7584aaafd9d5602acc8055152e81e25de5fa1b15bb710f76f53ac9"
+      }
+    },
+    {
+      "id": "11-ts-namespace-nested-member",
+      "description": "Nested property method on namespace import must not claim the container variable is the called declaration",
+      "status": "pass",
+      "exitCode": 0,
+      "sourcePaths": {
+        "baseline": "/tmp/review-analysis-adversarial-v2-NZrPxG/11-ts-namespace-nested-member/baseline",
+        "candidate": "/tmp/review-analysis-adversarial-v2-NZrPxG/11-ts-namespace-nested-member/candidate"
+      },
+      "sourceHashes": {
+        "baseline": {
+          "frontend/consumer.ts": "ca05ccd120f7628b555c06db8fce7255ee8af7f8fc0b14f0247ee10c1f66d618",
+          "frontend/lib.ts": "e5baaac6c7f48b2f1aad3f95b012292eb1d3f427930e61bbb1fd657be7dabce5"
+        },
+        "candidate": {
+          "frontend/consumer.ts": "ca05ccd120f7628b555c06db8fce7255ee8af7f8fc0b14f0247ee10c1f66d618",
+          "frontend/lib.ts": "3869dfc22456e112777919330c43941ec3ea7da0ad84f1f760ce81717ad9c018"
+        }
+      },
+      "evidence": {
+        "checkedEvidenceRecords": 8,
+        "errors": []
+      },
+      "assertions": [
+        {
+          "name": "no wrong container call declaration",
+          "status": "pass"
+        },
+        {
+          "name": "file-level import still resolves",
+          "status": "pass"
+        },
+        {
+          "name": "all source evidence hashes/ranges/excerpts/revisions independently reproduce",
+          "status": "pass"
+        },
+        {
+          "name": "readable actual CLI exits 0",
+          "status": "pass"
+        }
+      ],
+      "reportStats": {
+        "changes": 1,
+        "directEdges": 2,
+        "unknowns": 2,
+        "sourceBuildHash": "ca04bac50b7584aaafd9d5602acc8055152e81e25de5fa1b15bb710f76f53ac9"
+      }
+    },
+    {
+      "id": "12-java-ambiguous-explicit-imports",
+      "description": "Conflicting explicit imports cannot acquire a guessed first-import receiver target (source is semantically invalid)",
+      "status": "pass",
+      "exitCode": 0,
+      "sourcePaths": {
+        "baseline": "/tmp/review-analysis-adversarial-v2-NZrPxG/12-java-ambiguous-explicit-imports/baseline",
+        "candidate": "/tmp/review-analysis-adversarial-v2-NZrPxG/12-java-ambiguous-explicit-imports/candidate"
+      },
+      "sourceHashes": {
+        "baseline": {
+          "backend/Caller.java": "a1aab558052caeea45ce53962b9306053f365cbd9d7495df9741dc5998e45d9a",
+          "backend/a/Target.java": "8975900bb8ad28d30e1d27a9da5e6b98b6a6340d8401749369cd611ebeeb173f",
+          "backend/b/Target.java": "348b07628db2c793993b980125169b03b52ad5356c04f6c54d881dda83e6e603"
+        },
+        "candidate": {
+          "backend/Caller.java": "a1aab558052caeea45ce53962b9306053f365cbd9d7495df9741dc5998e45d9a",
+          "backend/a/Target.java": "d3cd92707954342015ca2a17c62667b79bbe02c54115f3447a0e887e4ac065fb",
+          "backend/b/Target.java": "e9b4a26f8373aa1ccf1a9257272ffe2d1159496d9c17e4871b859ef7574c9056"
+        }
+      },
+      "evidence": {
+        "checkedEvidenceRecords": 20,
+        "errors": []
+      },
+      "assertions": [
+        {
+          "name": "no first-import call guess",
+          "status": "pass"
+        },
+        {
+          "name": "ambiguous binding explicit unknown",
+          "status": "pass"
+        },
+        {
+          "name": "all source evidence hashes/ranges/excerpts/revisions independently reproduce",
+          "status": "pass"
+        },
+        {
+          "name": "readable actual CLI exits 0",
+          "status": "pass"
+        }
+      ],
+      "reportStats": {
+        "changes": 4,
+        "directEdges": 4,
+        "unknowns": 4,
+        "sourceBuildHash": "ca04bac50b7584aaafd9d5602acc8055152e81e25de5fa1b15bb710f76f53ac9"
+      }
+    },
+    {
+      "id": "13-ts-namespace-contract-member",
+      "description": "Nested exported namespace method must use qualified member declaration or explicit uncertainty",
+      "status": "pass",
+      "exitCode": 0,
+      "sourcePaths": {
+        "baseline": "/tmp/review-analysis-adversarial-v2-NZrPxG/13-ts-namespace-contract-member/baseline",
+        "candidate": "/tmp/review-analysis-adversarial-v2-NZrPxG/13-ts-namespace-contract-member/candidate"
+      },
+      "sourceHashes": {
+        "baseline": {
+          "frontend/consumer.ts": "0ea13582782a29f0efecfd6f084810a4fa4baabf97fc1d99854e10f651fce687",
+          "frontend/lib.ts": "5d1eb563b8d431a3baae70baf61caa769b8ed1b384c71859ff060d2a36311950"
+        },
+        "candidate": {
+          "frontend/consumer.ts": "0ea13582782a29f0efecfd6f084810a4fa4baabf97fc1d99854e10f651fce687",
+          "frontend/lib.ts": "ae28fabd402488e451dd36e907c07c5edbef985ea39b7304e2ad681ec13cfba0"
+        }
+      },
+      "evidence": {
+        "checkedEvidenceRecords": 10,
+        "errors": []
+      },
+      "assertions": [
+        {
+          "name": "no wrong namespace declaration for method call",
+          "status": "pass"
+        },
+        {
+          "name": "qualified member or explicit uncertainty",
+          "status": "pass"
+        },
+        {
+          "name": "all source evidence hashes/ranges/excerpts/revisions independently reproduce",
+          "status": "pass"
+        },
+        {
+          "name": "readable actual CLI exits 0",
+          "status": "pass"
+        }
+      ],
+      "reportStats": {
+        "changes": 2,
+        "directEdges": 2,
+        "unknowns": 2,
+        "sourceBuildHash": "ca04bac50b7584aaafd9d5602acc8055152e81e25de5fa1b15bb710f76f53ac9"
+      }
+    },
+    {
+      "id": "14-js-with-lexical-shadow",
+      "description": "Sloppy-script with object supplies custom fetch; outside global fetch remains a control",
+      "status": "pass",
+      "exitCode": 0,
+      "sourcePaths": {
+        "baseline": "/tmp/review-analysis-adversarial-v2-NZrPxG/14-js-with-lexical-shadow/baseline",
+        "candidate": "/tmp/review-analysis-adversarial-v2-NZrPxG/14-js-with-lexical-shadow/candidate"
+      },
+      "sourceHashes": {
+        "baseline": {
+          "backend/Resource.java": "3804feef0d2b303327d83f58c4c2c6d33f75f79ba6aa914d248183fa52cf67c4",
+          "frontend/shadow.js": "106156234a0c6d6e3105e8ef6d1fd842d611025f4e211886999daf0ecb91cad7"
+        },
+        "candidate": {
+          "backend/Resource.java": "9e9c44affd6daae1cc4a1e4216829ec607ab4530301be37a8fb6ff54b8428641",
+          "frontend/shadow.js": "106156234a0c6d6e3105e8ef6d1fd842d611025f4e211886999daf0ecb91cad7"
+        }
+      },
+      "evidence": {
+        "checkedEvidenceRecords": 44,
+        "errors": []
+      },
+      "assertions": [
+        {
+          "name": "with object fetch never fabricates HTTP edge",
+          "status": "pass"
+        },
+        {
+          "name": "unsupported with scope explicit uncertainty",
+          "status": "pass"
+        },
+        {
+          "name": "outside fetch still maps known route",
+          "status": "pass"
+        },
+        {
+          "name": "all source evidence hashes/ranges/excerpts/revisions independently reproduce",
+          "status": "pass"
+        },
+        {
+          "name": "readable actual CLI exits 0",
+          "status": "pass"
+        }
+      ],
+      "reportStats": {
+        "changes": 4,
+        "directEdges": 2,
+        "unknowns": 28,
+        "sourceBuildHash": "ca04bac50b7584aaafd9d5602acc8055152e81e25de5fa1b15bb710f76f53ac9"
+      }
+    },
+    {
+      "id": "15-java-varargs-overload",
+      "description": "Valid two-string invocation must not resolve to int,int fixed overload when a varargs overload exists",
+      "status": "pass",
+      "exitCode": 0,
+      "sourcePaths": {
+        "baseline": "/tmp/review-analysis-adversarial-v2-NZrPxG/15-java-varargs-overload/baseline",
+        "candidate": "/tmp/review-analysis-adversarial-v2-NZrPxG/15-java-varargs-overload/candidate"
+      },
+      "sourceHashes": {
+        "baseline": {
+          "backend/Caller.java": "65307490230e508a4da64deac8e3fa23bc942b1dce8cdf5f7a26596971ff4789",
+          "backend/Worker.java": "01571ea63b20b360bb7d1a0366d45bfec9bb57c371d00da3e6633f0207ac9935"
+        },
+        "candidate": {
+          "backend/Caller.java": "65307490230e508a4da64deac8e3fa23bc942b1dce8cdf5f7a26596971ff4789",
+          "backend/Worker.java": "8c5056ff258b712ace834c690ed3051a39fe4419741a71bace8b0294cb5c0355"
+        }
+      },
+      "evidence": {
+        "checkedEvidenceRecords": 22,
+        "errors": []
+      },
+      "assertions": [
+        {
+          "name": "no incompatible fixed-arity call target",
+          "status": "pass"
+        },
+        {
+          "name": "varargs alternative produces uncertainty or correct target",
+          "status": "pass"
+        },
+        {
+          "name": "all source evidence hashes/ranges/excerpts/revisions independently reproduce",
+          "status": "pass"
+        },
+        {
+          "name": "readable actual CLI exits 0",
+          "status": "pass"
+        }
+      ],
+      "reportStats": {
+        "changes": 3,
+        "directEdges": 2,
+        "unknowns": 8,
+        "sourceBuildHash": "ca04bac50b7584aaafd9d5602acc8055152e81e25de5fa1b15bb710f76f53ac9"
+      }
+    },
+    {
+      "id": "16-java-inherited-overload",
+      "description": "Declared unsupported inherited overload should not be narrowed to incompatible locally declared member",
+      "status": "pass",
+      "exitCode": 0,
+      "sourcePaths": {
+        "baseline": "/tmp/review-analysis-adversarial-v2-NZrPxG/16-java-inherited-overload/baseline",
+        "candidate": "/tmp/review-analysis-adversarial-v2-NZrPxG/16-java-inherited-overload/candidate"
+      },
+      "sourceHashes": {
+        "baseline": {
+          "backend/Base.java": "a7a37e9bbad27af27180fe504b0678e2e6e0314b492687ae64ba72f81b9a67fd",
+          "backend/Caller.java": "656d0a74c600dcd856612fe45a67348037b842f28374978ff203513bd6b93fd1",
+          "backend/Child.java": "b6819335d438a1ff2eee31838dd068058ef71c9f554fe624db6c50c8ddc2b5f9"
+        },
+        "candidate": {
+          "backend/Base.java": "aa39806866edc40aea58b5112cb70e705a067f9ecda15bc35dbc64f62ca581bc",
+          "backend/Caller.java": "656d0a74c600dcd856612fe45a67348037b842f28374978ff203513bd6b93fd1",
+          "backend/Child.java": "55178789faacec884e6f737e7c3e7632a411e6616e25eeb98e17919cb9326217"
+        }
+      },
+      "evidence": {
+        "checkedEvidenceRecords": 36,
+        "errors": []
+      },
+      "assertions": [
+        {
+          "name": "no incompatible Child Integer call target",
+          "status": "pass"
+        },
+        {
+          "name": "inheritance alternative remains uncertainty or correct target",
+          "status": "pass"
+        },
+        {
+          "name": "all source evidence hashes/ranges/excerpts/revisions independently reproduce",
+          "status": "pass"
+        },
+        {
+          "name": "readable actual CLI exits 0",
+          "status": "pass"
+        }
+      ],
+      "reportStats": {
+        "changes": 4,
+        "directEdges": 4,
+        "unknowns": 10,
+        "sourceBuildHash": "ca04bac50b7584aaafd9d5602acc8055152e81e25de5fa1b15bb710f76f53ac9"
+      }
+    }
+  ]
+}

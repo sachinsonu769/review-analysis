@@ -1,0 +1,14 @@
+{
+  "command": [
+    "docker",
+    "compose",
+    "-p",
+    "expanded-qa-pin1",
+    "down"
+  ],
+  "cwd": "/workspace/review-analysis-deliverables/expanded-qa/pin-1/source",
+  "startedAt": "2026-10-11T17:47:52.379321+00:00",
+  "dockerConfig": "/tmp/review-analysis-docker-config",
+  "exitCode": 0,
+  "elapsedSeconds": 0.619
+}

@@ -1,0 +1,1707 @@
+{
+  "schemaVersion": "1.0",
+  "analyzer": {
+    "version": "0.1.0",
+    "sourceBuildHash": "ca04bac50b7584aaafd9d5602acc8055152e81e25de5fa1b15bb710f76f53ac9",
+    "parsers": {
+      "java": "java-parser@3.0.1",
+      "typescript": "typescript@5.9.3"
+    }
+  },
+  "advisory": true,
+  "asOf": "2026-10-11",
+  "provenance": {
+    "baseline": {
+      "root": "/tmp/review-analysis-adversarial-v2-NZrPxG/01-http-lexical-static-dynamic/baseline",
+      "type": "directory",
+      "revision": "tree-sha256:f93c1c7eebeaf4a396dabdf7bd1799de0551b2f83dad958dc95d5d1a451211ba",
+      "contentHash": "f93c1c7eebeaf4a396dabdf7bd1799de0551b2f83dad958dc95d5d1a451211ba",
+      "dirty": false
+    },
+    "candidate": {
+      "root": "/tmp/review-analysis-adversarial-v2-NZrPxG/01-http-lexical-static-dynamic/candidate",
+      "type": "directory",
+      "revision": "tree-sha256:35acd6679079ca0dea90bf44341226c4995219adc9814ecfa951ac18730ccd9a",
+      "contentHash": "35acd6679079ca0dea90bf44341226c4995219adc9814ecfa951ac18730ccd9a",
+      "dirty": false
+    },
+    "rulesHash": "90f33c2c080aa463115b0ef7e4058bb9bf0da4944dff79ed58eae2f01f9cd3f1",
+    "baselineRulesHash": "90f33c2c080aa463115b0ef7e4058bb9bf0da4944dff79ed58eae2f01f9cd3f1",
+    "cacheKey": "8d05d930fae9499ff10290fb9ad26ffb8759db4a404f939da765a1f54b73f3e0"
+  },
+  "changes": [
+    {
+      "kind": "modified",
+      "name": "Resource",
+      "key": "qa.Resource",
+      "language": "java",
+      "contractChanged": false,
+      "before": {
+        "path": "backend/Resource.java",
+        "range": {
+          "startLine": 5,
+          "endLine": 10
+        },
+        "revision": "tree-sha256:f93c1c7eebeaf4a396dabdf7bd1799de0551b2f83dad958dc95d5d1a451211ba",
+        "fileHash": "3804feef0d2b303327d83f58c4c2c6d33f75f79ba6aa914d248183fa52cf67c4",
+        "excerpt": "@RequestMapping(\"/audit\")\nclass Resource {\n @GetMapping(\"/real\") String real() { return \"v1\"; }\n @GetMapping(\"/fake\") String fake() { return \"v1\"; }\n @PostMapping(\"/real\") String post() { return \"v1\"; }\n}"
+      },
+      "after": {
+        "path": "backend/Resource.java",
+        "range": {
+          "startLine": 5,
+          "endLine": 10
+        },
+        "revision": "tree-sha256:35acd6679079ca0dea90bf44341226c4995219adc9814ecfa951ac18730ccd9a",
+        "fileHash": "9cc83dd7593fb95d69dde305e4e434d34375cb35681b969b0077437544f752b2",
+        "excerpt": "@RequestMapping(\"/audit\")\nclass Resource {\n @GetMapping(\"/real\") String real() { return \"v2\"; }\n @GetMapping(\"/fake\") String fake() { return \"v1\"; }\n @PostMapping(\"/real\") String post() { return \"v1\"; }\n}"
+      }
+    },
+    {
+      "kind": "modified",
+      "name": "real",
+      "key": "qa.Resource#real/0",
+      "language": "java",
+      "contractChanged": false,
+      "before": {
+        "path": "backend/Resource.java",
+        "range": {
+          "startLine": 7,
+          "endLine": 7
+        },
+        "revision": "tree-sha256:f93c1c7eebeaf4a396dabdf7bd1799de0551b2f83dad958dc95d5d1a451211ba",
+        "fileHash": "3804feef0d2b303327d83f58c4c2c6d33f75f79ba6aa914d248183fa52cf67c4",
+        "excerpt": " @GetMapping(\"/real\") String real() { return \"v1\"; }"
+      },
+      "after": {
+        "path": "backend/Resource.java",
+        "range": {
+          "startLine": 7,
+          "endLine": 7
+        },
+        "revision": "tree-sha256:35acd6679079ca0dea90bf44341226c4995219adc9814ecfa951ac18730ccd9a",
+        "fileHash": "9cc83dd7593fb95d69dde305e4e434d34375cb35681b969b0077437544f752b2",
+        "excerpt": " @GetMapping(\"/real\") String real() { return \"v2\"; }"
+      }
+    }
+  ],
+  "impact": {
+    "direct": [
+      {
+        "kind": "http",
+        "fromPath": "frontend/http.ts",
+        "toPath": "backend/Resource.java",
+        "targetKey": "qa.Resource#real/0",
+        "confidence": "medium",
+        "reason": "Literal HTTP verb/path matches source Spring mapping; runtime origin/proxy not verified",
+        "evidence": {
+          "path": "frontend/http.ts",
+          "range": {
+            "startLine": 2,
+            "endLine": 2
+          },
+          "revision": "tree-sha256:f93c1c7eebeaf4a396dabdf7bd1799de0551b2f83dad958dc95d5d1a451211ba",
+          "fileHash": "aee5c10cb9dd8ad797e5d6c43c9c1766abbe3bcf1b81edfcba01463ff2a92588",
+          "excerpt": "fetch('/audit/real'); // positive-global"
+        },
+        "targetEvidence": {
+          "path": "backend/Resource.java",
+          "range": {
+            "startLine": 7,
+            "endLine": 7
+          },
+          "revision": "tree-sha256:f93c1c7eebeaf4a396dabdf7bd1799de0551b2f83dad958dc95d5d1a451211ba",
+          "fileHash": "3804feef0d2b303327d83f58c4c2c6d33f75f79ba6aa914d248183fa52cf67c4",
+          "excerpt": " @GetMapping(\"/real\") String real() { return \"v1\"; }"
+        }
+      },
+      {
+        "kind": "http",
+        "fromPath": "frontend/http.ts",
+        "toPath": "backend/Resource.java",
+        "targetKey": "qa.Resource#real/0",
+        "confidence": "medium",
+        "reason": "Literal HTTP verb/path matches source Spring mapping; runtime origin/proxy not verified",
+        "evidence": {
+          "path": "frontend/http.ts",
+          "range": {
+            "startLine": 3,
+            "endLine": 3
+          },
+          "revision": "tree-sha256:f93c1c7eebeaf4a396dabdf7bd1799de0551b2f83dad958dc95d5d1a451211ba",
+          "fileHash": "aee5c10cb9dd8ad797e5d6c43c9c1766abbe3bcf1b81edfcba01463ff2a92588",
+          "excerpt": "fetch(`/audit/real`); // positive-template"
+        },
+        "targetEvidence": {
+          "path": "backend/Resource.java",
+          "range": {
+            "startLine": 7,
+            "endLine": 7
+          },
+          "revision": "tree-sha256:f93c1c7eebeaf4a396dabdf7bd1799de0551b2f83dad958dc95d5d1a451211ba",
+          "fileHash": "3804feef0d2b303327d83f58c4c2c6d33f75f79ba6aa914d248183fa52cf67c4",
+          "excerpt": " @GetMapping(\"/real\") String real() { return \"v1\"; }"
+        }
+      },
+      {
+        "kind": "http",
+        "fromPath": "frontend/http.ts",
+        "toPath": "backend/Resource.java",
+        "targetKey": "qa.Resource#real/0",
+        "confidence": "medium",
+        "reason": "Literal HTTP verb/path matches source Spring mapping; runtime origin/proxy not verified",
+        "evidence": {
+          "path": "frontend/http.ts",
+          "range": {
+            "startLine": 4,
+            "endLine": 4
+          },
+          "revision": "tree-sha256:f93c1c7eebeaf4a396dabdf7bd1799de0551b2f83dad958dc95d5d1a451211ba",
+          "fileHash": "aee5c10cb9dd8ad797e5d6c43c9c1766abbe3bcf1b81edfcba01463ff2a92588",
+          "excerpt": "globalThis.fetch('/audit/real'); // positive-member"
+        },
+        "targetEvidence": {
+          "path": "backend/Resource.java",
+          "range": {
+            "startLine": 7,
+            "endLine": 7
+          },
+          "revision": "tree-sha256:f93c1c7eebeaf4a396dabdf7bd1799de0551b2f83dad958dc95d5d1a451211ba",
+          "fileHash": "3804feef0d2b303327d83f58c4c2c6d33f75f79ba6aa914d248183fa52cf67c4",
+          "excerpt": " @GetMapping(\"/real\") String real() { return \"v1\"; }"
+        }
+      },
+      {
+        "kind": "http",
+        "fromPath": "frontend/http.ts",
+        "toPath": "backend/Resource.java",
+        "targetKey": "qa.Resource#real/0",
+        "confidence": "medium",
+        "reason": "Literal HTTP verb/path matches source Spring mapping; runtime origin/proxy not verified",
+        "evidence": {
+          "path": "frontend/http.ts",
+          "range": {
+            "startLine": 5,
+            "endLine": 5
+          },
+          "revision": "tree-sha256:f93c1c7eebeaf4a396dabdf7bd1799de0551b2f83dad958dc95d5d1a451211ba",
+          "fileHash": "aee5c10cb9dd8ad797e5d6c43c9c1766abbe3bcf1b81edfcba01463ff2a92588",
+          "excerpt": "transport.get('/audit/real'); // positive-axios"
+        },
+        "targetEvidence": {
+          "path": "backend/Resource.java",
+          "range": {
+            "startLine": 7,
+            "endLine": 7
+          },
+          "revision": "tree-sha256:f93c1c7eebeaf4a396dabdf7bd1799de0551b2f83dad958dc95d5d1a451211ba",
+          "fileHash": "3804feef0d2b303327d83f58c4c2c6d33f75f79ba6aa914d248183fa52cf67c4",
+          "excerpt": " @GetMapping(\"/real\") String real() { return \"v1\"; }"
+        }
+      },
+      {
+        "kind": "http",
+        "fromPath": "frontend/http.ts",
+        "toPath": "backend/Resource.java",
+        "targetKey": "qa.Resource#post/0",
+        "confidence": "medium",
+        "reason": "Literal HTTP verb/path matches source Spring mapping; runtime origin/proxy not verified",
+        "evidence": {
+          "path": "frontend/http.ts",
+          "range": {
+            "startLine": 19,
+            "endLine": 19
+          },
+          "revision": "tree-sha256:f93c1c7eebeaf4a396dabdf7bd1799de0551b2f83dad958dc95d5d1a451211ba",
+          "fileHash": "aee5c10cb9dd8ad797e5d6c43c9c1766abbe3bcf1b81edfcba01463ff2a92588",
+          "excerpt": "fetch('/audit/real', {method: 'GET', method: 'POST'}); // positive-last-property"
+        },
+        "targetEvidence": {
+          "path": "backend/Resource.java",
+          "range": {
+            "startLine": 9,
+            "endLine": 9
+          },
+          "revision": "tree-sha256:f93c1c7eebeaf4a396dabdf7bd1799de0551b2f83dad958dc95d5d1a451211ba",
+          "fileHash": "3804feef0d2b303327d83f58c4c2c6d33f75f79ba6aa914d248183fa52cf67c4",
+          "excerpt": " @PostMapping(\"/real\") String post() { return \"v1\"; }"
+        }
+      },
+      {
+        "kind": "http",
+        "fromPath": "frontend/http.ts",
+        "toPath": "backend/Resource.java",
+        "targetKey": "qa.Resource#real/0",
+        "confidence": "medium",
+        "reason": "Literal HTTP verb/path matches source Spring mapping; runtime origin/proxy not verified",
+        "evidence": {
+          "path": "frontend/http.ts",
+          "range": {
+            "startLine": 2,
+            "endLine": 2
+          },
+          "revision": "tree-sha256:35acd6679079ca0dea90bf44341226c4995219adc9814ecfa951ac18730ccd9a",
+          "fileHash": "aee5c10cb9dd8ad797e5d6c43c9c1766abbe3bcf1b81edfcba01463ff2a92588",
+          "excerpt": "fetch('/audit/real'); // positive-global"
+        },
+        "targetEvidence": {
+          "path": "backend/Resource.java",
+          "range": {
+            "startLine": 7,
+            "endLine": 7
+          },
+          "revision": "tree-sha256:35acd6679079ca0dea90bf44341226c4995219adc9814ecfa951ac18730ccd9a",
+          "fileHash": "9cc83dd7593fb95d69dde305e4e434d34375cb35681b969b0077437544f752b2",
+          "excerpt": " @GetMapping(\"/real\") String real() { return \"v2\"; }"
+        }
+      },
+      {
+        "kind": "http",
+        "fromPath": "frontend/http.ts",
+        "toPath": "backend/Resource.java",
+        "targetKey": "qa.Resource#real/0",
+        "confidence": "medium",
+        "reason": "Literal HTTP verb/path matches source Spring mapping; runtime origin/proxy not verified",
+        "evidence": {
+          "path": "frontend/http.ts",
+          "range": {
+            "startLine": 3,
+            "endLine": 3
+          },
+          "revision": "tree-sha256:35acd6679079ca0dea90bf44341226c4995219adc9814ecfa951ac18730ccd9a",
+          "fileHash": "aee5c10cb9dd8ad797e5d6c43c9c1766abbe3bcf1b81edfcba01463ff2a92588",
+          "excerpt": "fetch(`/audit/real`); // positive-template"
+        },
+        "targetEvidence": {
+          "path": "backend/Resource.java",
+          "range": {
+            "startLine": 7,
+            "endLine": 7
+          },
+          "revision": "tree-sha256:35acd6679079ca0dea90bf44341226c4995219adc9814ecfa951ac18730ccd9a",
+          "fileHash": "9cc83dd7593fb95d69dde305e4e434d34375cb35681b969b0077437544f752b2",
+          "excerpt": " @GetMapping(\"/real\") String real() { return \"v2\"; }"
+        }
+      },
+      {
+        "kind": "http",
+        "fromPath": "frontend/http.ts",
+        "toPath": "backend/Resource.java",
+        "targetKey": "qa.Resource#real/0",
+        "confidence": "medium",
+        "reason": "Literal HTTP verb/path matches source Spring mapping; runtime origin/proxy not verified",
+        "evidence": {
+          "path": "frontend/http.ts",
+          "range": {
+            "startLine": 4,
+            "endLine": 4
+          },
+          "revision": "tree-sha256:35acd6679079ca0dea90bf44341226c4995219adc9814ecfa951ac18730ccd9a",
+          "fileHash": "aee5c10cb9dd8ad797e5d6c43c9c1766abbe3bcf1b81edfcba01463ff2a92588",
+          "excerpt": "globalThis.fetch('/audit/real'); // positive-member"
+        },
+        "targetEvidence": {
+          "path": "backend/Resource.java",
+          "range": {
+            "startLine": 7,
+            "endLine": 7
+          },
+          "revision": "tree-sha256:35acd6679079ca0dea90bf44341226c4995219adc9814ecfa951ac18730ccd9a",
+          "fileHash": "9cc83dd7593fb95d69dde305e4e434d34375cb35681b969b0077437544f752b2",
+          "excerpt": " @GetMapping(\"/real\") String real() { return \"v2\"; }"
+        }
+      },
+      {
+        "kind": "http",
+        "fromPath": "frontend/http.ts",
+        "toPath": "backend/Resource.java",
+        "targetKey": "qa.Resource#real/0",
+        "confidence": "medium",
+        "reason": "Literal HTTP verb/path matches source Spring mapping; runtime origin/proxy not verified",
+        "evidence": {
+          "path": "frontend/http.ts",
+          "range": {
+            "startLine": 5,
+            "endLine": 5
+          },
+          "revision": "tree-sha256:35acd6679079ca0dea90bf44341226c4995219adc9814ecfa951ac18730ccd9a",
+          "fileHash": "aee5c10cb9dd8ad797e5d6c43c9c1766abbe3bcf1b81edfcba01463ff2a92588",
+          "excerpt": "transport.get('/audit/real'); // positive-axios"
+        },
+        "targetEvidence": {
+          "path": "backend/Resource.java",
+          "range": {
+            "startLine": 7,
+            "endLine": 7
+          },
+          "revision": "tree-sha256:35acd6679079ca0dea90bf44341226c4995219adc9814ecfa951ac18730ccd9a",
+          "fileHash": "9cc83dd7593fb95d69dde305e4e434d34375cb35681b969b0077437544f752b2",
+          "excerpt": " @GetMapping(\"/real\") String real() { return \"v2\"; }"
+        }
+      },
+      {
+        "kind": "http",
+        "fromPath": "frontend/http.ts",
+        "toPath": "backend/Resource.java",
+        "targetKey": "qa.Resource#post/0",
+        "confidence": "medium",
+        "reason": "Literal HTTP verb/path matches source Spring mapping; runtime origin/proxy not verified",
+        "evidence": {
+          "path": "frontend/http.ts",
+          "range": {
+            "startLine": 19,
+            "endLine": 19
+          },
+          "revision": "tree-sha256:35acd6679079ca0dea90bf44341226c4995219adc9814ecfa951ac18730ccd9a",
+          "fileHash": "aee5c10cb9dd8ad797e5d6c43c9c1766abbe3bcf1b81edfcba01463ff2a92588",
+          "excerpt": "fetch('/audit/real', {method: 'GET', method: 'POST'}); // positive-last-property"
+        },
+        "targetEvidence": {
+          "path": "backend/Resource.java",
+          "range": {
+            "startLine": 9,
+            "endLine": 9
+          },
+          "revision": "tree-sha256:35acd6679079ca0dea90bf44341226c4995219adc9814ecfa951ac18730ccd9a",
+          "fileHash": "9cc83dd7593fb95d69dde305e4e434d34375cb35681b969b0077437544f752b2",
+          "excerpt": " @PostMapping(\"/real\") String post() { return \"v1\"; }"
+        }
+      }
+    ],
+    "indirect": []
+  },
+  "findings": [],
+  "guidance": {
+    "task": "Global receiver and destructured parameter shadows; static templates versus constant concatenation; literal object override order",
+    "ruleSetVersion": "independent-adversarial-v1",
+    "approvalGap": "No human approval is inferred. Reviewed examples/exceptions are assertions from supplied configuration; simulation records are demonstrations only.",
+    "rules": [
+      {
+        "id": "independent/http-contract",
+        "kind": "endpoint-contract-change",
+        "owner": "synthetic-qa",
+        "version": "independent-adversarial-v1",
+        "severity": "warning",
+        "instruction": "endpoint-contract-change",
+        "examples": []
+      }
+    ]
+  },
+  "unknowns": [
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "org.springframework.web.bind.annotation.GetMapping",
+      "evidence": {
+        "path": "backend/Resource.java",
+        "range": {
+          "startLine": 2,
+          "endLine": 2
+        },
+        "revision": "tree-sha256:f93c1c7eebeaf4a396dabdf7bd1799de0551b2f83dad958dc95d5d1a451211ba",
+        "fileHash": "3804feef0d2b303327d83f58c4c2c6d33f75f79ba6aa914d248183fa52cf67c4",
+        "excerpt": "import org.springframework.web.bind.annotation.GetMapping;"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "org.springframework.web.bind.annotation.PostMapping",
+      "evidence": {
+        "path": "backend/Resource.java",
+        "range": {
+          "startLine": 3,
+          "endLine": 3
+        },
+        "revision": "tree-sha256:f93c1c7eebeaf4a396dabdf7bd1799de0551b2f83dad958dc95d5d1a451211ba",
+        "fileHash": "3804feef0d2b303327d83f58c4c2c6d33f75f79ba6aa914d248183fa52cf67c4",
+        "excerpt": "import org.springframework.web.bind.annotation.PostMapping;"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "org.springframework.web.bind.annotation.RequestMapping",
+      "evidence": {
+        "path": "backend/Resource.java",
+        "range": {
+          "startLine": 4,
+          "endLine": 4
+        },
+        "revision": "tree-sha256:f93c1c7eebeaf4a396dabdf7bd1799de0551b2f83dad958dc95d5d1a451211ba",
+        "fileHash": "3804feef0d2b303327d83f58c4c2c6d33f75f79ba6aa914d248183fa52cf67c4",
+        "excerpt": "import org.springframework.web.bind.annotation.RequestMapping;"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "org.springframework.web.bind.annotation.RequestMapping",
+      "evidence": {
+        "path": "backend/Resource.java",
+        "range": {
+          "startLine": 5,
+          "endLine": 5
+        },
+        "revision": "tree-sha256:f93c1c7eebeaf4a396dabdf7bd1799de0551b2f83dad958dc95d5d1a451211ba",
+        "fileHash": "3804feef0d2b303327d83f58c4c2c6d33f75f79ba6aa914d248183fa52cf67c4",
+        "excerpt": "@RequestMapping(\"/audit\")"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "org.springframework.web.bind.annotation.GetMapping",
+      "evidence": {
+        "path": "backend/Resource.java",
+        "range": {
+          "startLine": 7,
+          "endLine": 7
+        },
+        "revision": "tree-sha256:f93c1c7eebeaf4a396dabdf7bd1799de0551b2f83dad958dc95d5d1a451211ba",
+        "fileHash": "3804feef0d2b303327d83f58c4c2c6d33f75f79ba6aa914d248183fa52cf67c4",
+        "excerpt": " @GetMapping(\"/real\") String real() { return \"v1\"; }"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "String",
+      "evidence": {
+        "path": "backend/Resource.java",
+        "range": {
+          "startLine": 7,
+          "endLine": 7
+        },
+        "revision": "tree-sha256:f93c1c7eebeaf4a396dabdf7bd1799de0551b2f83dad958dc95d5d1a451211ba",
+        "fileHash": "3804feef0d2b303327d83f58c4c2c6d33f75f79ba6aa914d248183fa52cf67c4",
+        "excerpt": " @GetMapping(\"/real\") String real() { return \"v1\"; }"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "org.springframework.web.bind.annotation.GetMapping",
+      "evidence": {
+        "path": "backend/Resource.java",
+        "range": {
+          "startLine": 8,
+          "endLine": 8
+        },
+        "revision": "tree-sha256:f93c1c7eebeaf4a396dabdf7bd1799de0551b2f83dad958dc95d5d1a451211ba",
+        "fileHash": "3804feef0d2b303327d83f58c4c2c6d33f75f79ba6aa914d248183fa52cf67c4",
+        "excerpt": " @GetMapping(\"/fake\") String fake() { return \"v1\"; }"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "String",
+      "evidence": {
+        "path": "backend/Resource.java",
+        "range": {
+          "startLine": 8,
+          "endLine": 8
+        },
+        "revision": "tree-sha256:f93c1c7eebeaf4a396dabdf7bd1799de0551b2f83dad958dc95d5d1a451211ba",
+        "fileHash": "3804feef0d2b303327d83f58c4c2c6d33f75f79ba6aa914d248183fa52cf67c4",
+        "excerpt": " @GetMapping(\"/fake\") String fake() { return \"v1\"; }"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "org.springframework.web.bind.annotation.PostMapping",
+      "evidence": {
+        "path": "backend/Resource.java",
+        "range": {
+          "startLine": 9,
+          "endLine": 9
+        },
+        "revision": "tree-sha256:f93c1c7eebeaf4a396dabdf7bd1799de0551b2f83dad958dc95d5d1a451211ba",
+        "fileHash": "3804feef0d2b303327d83f58c4c2c6d33f75f79ba6aa914d248183fa52cf67c4",
+        "excerpt": " @PostMapping(\"/real\") String post() { return \"v1\"; }"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "String",
+      "evidence": {
+        "path": "backend/Resource.java",
+        "range": {
+          "startLine": 9,
+          "endLine": 9
+        },
+        "revision": "tree-sha256:f93c1c7eebeaf4a396dabdf7bd1799de0551b2f83dad958dc95d5d1a451211ba",
+        "fileHash": "3804feef0d2b303327d83f58c4c2c6d33f75f79ba6aa914d248183fa52cf67c4",
+        "excerpt": " @PostMapping(\"/real\") String post() { return \"v1\"; }"
+      }
+    },
+    {
+      "reason": "unresolved_call",
+      "range": {
+        "startLine": 7,
+        "endLine": 7
+      },
+      "detail": "window.fetch",
+      "evidence": {
+        "path": "frontend/http.ts",
+        "range": {
+          "startLine": 7,
+          "endLine": 7
+        },
+        "revision": "tree-sha256:f93c1c7eebeaf4a396dabdf7bd1799de0551b2f83dad958dc95d5d1a451211ba",
+        "fileHash": "aee5c10cb9dd8ad797e5d6c43c9c1766abbe3bcf1b81edfcba01463ff2a92588",
+        "excerpt": " window.fetch('/audit/fake'); // negative-window"
+      }
+    },
+    {
+      "reason": "unresolved_call",
+      "range": {
+        "startLine": 8,
+        "endLine": 8
+      },
+      "detail": "self.fetch",
+      "evidence": {
+        "path": "frontend/http.ts",
+        "range": {
+          "startLine": 8,
+          "endLine": 8
+        },
+        "revision": "tree-sha256:f93c1c7eebeaf4a396dabdf7bd1799de0551b2f83dad958dc95d5d1a451211ba",
+        "fileHash": "aee5c10cb9dd8ad797e5d6c43c9c1766abbe3bcf1b81edfcba01463ff2a92588",
+        "excerpt": " self.fetch('/audit/fake'); // negative-self"
+      }
+    },
+    {
+      "reason": "unresolved_call",
+      "range": {
+        "startLine": 9,
+        "endLine": 9
+      },
+      "detail": "globalThis.fetch",
+      "evidence": {
+        "path": "frontend/http.ts",
+        "range": {
+          "startLine": 9,
+          "endLine": 9
+        },
+        "revision": "tree-sha256:f93c1c7eebeaf4a396dabdf7bd1799de0551b2f83dad958dc95d5d1a451211ba",
+        "fileHash": "aee5c10cb9dd8ad797e5d6c43c9c1766abbe3bcf1b81edfcba01463ff2a92588",
+        "excerpt": " globalThis.fetch('/audit/fake'); // negative-globalthis"
+      }
+    },
+    {
+      "reason": "unresolved_call",
+      "range": {
+        "startLine": 12,
+        "endLine": 12
+      },
+      "detail": "fetch",
+      "evidence": {
+        "path": "frontend/http.ts",
+        "range": {
+          "startLine": 12,
+          "endLine": 12
+        },
+        "revision": "tree-sha256:f93c1c7eebeaf4a396dabdf7bd1799de0551b2f83dad958dc95d5d1a451211ba",
+        "fileHash": "aee5c10cb9dd8ad797e5d6c43c9c1766abbe3bcf1b81edfcba01463ff2a92588",
+        "excerpt": " fetch('/audit/fake'); // negative-fetch"
+      }
+    },
+    {
+      "reason": "unresolved_call",
+      "range": {
+        "startLine": 13,
+        "endLine": 13
+      },
+      "detail": "transport.get",
+      "evidence": {
+        "path": "frontend/http.ts",
+        "range": {
+          "startLine": 13,
+          "endLine": 13
+        },
+        "revision": "tree-sha256:f93c1c7eebeaf4a396dabdf7bd1799de0551b2f83dad958dc95d5d1a451211ba",
+        "fileHash": "aee5c10cb9dd8ad797e5d6c43c9c1766abbe3bcf1b81edfcba01463ff2a92588",
+        "excerpt": " transport.get('/audit/fake'); // negative-axios"
+      }
+    },
+    {
+      "reason": "dynamic_http_url",
+      "range": {
+        "startLine": 16,
+        "endLine": 16
+      },
+      "detail": "prefix + '/real'",
+      "evidence": {
+        "path": "frontend/http.ts",
+        "range": {
+          "startLine": 16,
+          "endLine": 16
+        },
+        "revision": "tree-sha256:f93c1c7eebeaf4a396dabdf7bd1799de0551b2f83dad958dc95d5d1a451211ba",
+        "fileHash": "aee5c10cb9dd8ad797e5d6c43c9c1766abbe3bcf1b81edfcba01463ff2a92588",
+        "excerpt": "fetch(prefix + '/real'); // dynamic-concat"
+      }
+    },
+    {
+      "reason": "dynamic_http_method",
+      "range": {
+        "startLine": 18,
+        "endLine": 18
+      },
+      "detail": "Method is not a direct literal or options may override it.",
+      "evidence": {
+        "path": "frontend/http.ts",
+        "range": {
+          "startLine": 18,
+          "endLine": 18
+        },
+        "revision": "tree-sha256:f93c1c7eebeaf4a396dabdf7bd1799de0551b2f83dad958dc95d5d1a451211ba",
+        "fileHash": "aee5c10cb9dd8ad797e5d6c43c9c1766abbe3bcf1b81edfcba01463ff2a92588",
+        "excerpt": "fetch('/audit/real', options); // dynamic-options"
+      }
+    },
+    {
+      "reason": "dynamic_http_method",
+      "range": {
+        "startLine": 20,
+        "endLine": 20
+      },
+      "detail": "Method is not a direct literal or options may override it.",
+      "evidence": {
+        "path": "frontend/http.ts",
+        "range": {
+          "startLine": 20,
+          "endLine": 20
+        },
+        "revision": "tree-sha256:f93c1c7eebeaf4a396dabdf7bd1799de0551b2f83dad958dc95d5d1a451211ba",
+        "fileHash": "aee5c10cb9dd8ad797e5d6c43c9c1766abbe3bcf1b81edfcba01463ff2a92588",
+        "excerpt": "fetch('/audit/real', {method: 'GET', ...options}); // dynamic-spread"
+      }
+    },
+    {
+      "reason": "external-module",
+      "detail": "axios",
+      "evidence": {
+        "path": "frontend/http.ts",
+        "range": {
+          "startLine": 1,
+          "endLine": 1
+        },
+        "revision": "tree-sha256:f93c1c7eebeaf4a396dabdf7bd1799de0551b2f83dad958dc95d5d1a451211ba",
+        "fileHash": "aee5c10cb9dd8ad797e5d6c43c9c1766abbe3bcf1b81edfcba01463ff2a92588",
+        "excerpt": "import transport from 'axios';"
+      }
+    },
+    {
+      "reason": "unresolved-call",
+      "detail": "fetch",
+      "evidence": {
+        "path": "frontend/http.ts",
+        "range": {
+          "startLine": 2,
+          "endLine": 2
+        },
+        "revision": "tree-sha256:f93c1c7eebeaf4a396dabdf7bd1799de0551b2f83dad958dc95d5d1a451211ba",
+        "fileHash": "aee5c10cb9dd8ad797e5d6c43c9c1766abbe3bcf1b81edfcba01463ff2a92588",
+        "excerpt": "fetch('/audit/real'); // positive-global"
+      }
+    },
+    {
+      "reason": "unresolved-call",
+      "detail": "fetch",
+      "evidence": {
+        "path": "frontend/http.ts",
+        "range": {
+          "startLine": 3,
+          "endLine": 3
+        },
+        "revision": "tree-sha256:f93c1c7eebeaf4a396dabdf7bd1799de0551b2f83dad958dc95d5d1a451211ba",
+        "fileHash": "aee5c10cb9dd8ad797e5d6c43c9c1766abbe3bcf1b81edfcba01463ff2a92588",
+        "excerpt": "fetch(`/audit/real`); // positive-template"
+      }
+    },
+    {
+      "reason": "unresolved-call",
+      "detail": "fetch",
+      "evidence": {
+        "path": "frontend/http.ts",
+        "range": {
+          "startLine": 4,
+          "endLine": 4
+        },
+        "revision": "tree-sha256:f93c1c7eebeaf4a396dabdf7bd1799de0551b2f83dad958dc95d5d1a451211ba",
+        "fileHash": "aee5c10cb9dd8ad797e5d6c43c9c1766abbe3bcf1b81edfcba01463ff2a92588",
+        "excerpt": "globalThis.fetch('/audit/real'); // positive-member"
+      }
+    },
+    {
+      "reason": "unresolved-imported-member",
+      "detail": "get",
+      "evidence": {
+        "path": "frontend/http.ts",
+        "range": {
+          "startLine": 5,
+          "endLine": 5
+        },
+        "revision": "tree-sha256:f93c1c7eebeaf4a396dabdf7bd1799de0551b2f83dad958dc95d5d1a451211ba",
+        "fileHash": "aee5c10cb9dd8ad797e5d6c43c9c1766abbe3bcf1b81edfcba01463ff2a92588",
+        "excerpt": "transport.get('/audit/real'); // positive-axios"
+      }
+    },
+    {
+      "reason": "unresolved-call",
+      "detail": "fetch",
+      "evidence": {
+        "path": "frontend/http.ts",
+        "range": {
+          "startLine": 7,
+          "endLine": 7
+        },
+        "revision": "tree-sha256:f93c1c7eebeaf4a396dabdf7bd1799de0551b2f83dad958dc95d5d1a451211ba",
+        "fileHash": "aee5c10cb9dd8ad797e5d6c43c9c1766abbe3bcf1b81edfcba01463ff2a92588",
+        "excerpt": " window.fetch('/audit/fake'); // negative-window"
+      }
+    },
+    {
+      "reason": "unresolved-call",
+      "detail": "fetch",
+      "evidence": {
+        "path": "frontend/http.ts",
+        "range": {
+          "startLine": 8,
+          "endLine": 8
+        },
+        "revision": "tree-sha256:f93c1c7eebeaf4a396dabdf7bd1799de0551b2f83dad958dc95d5d1a451211ba",
+        "fileHash": "aee5c10cb9dd8ad797e5d6c43c9c1766abbe3bcf1b81edfcba01463ff2a92588",
+        "excerpt": " self.fetch('/audit/fake'); // negative-self"
+      }
+    },
+    {
+      "reason": "unresolved-call",
+      "detail": "fetch",
+      "evidence": {
+        "path": "frontend/http.ts",
+        "range": {
+          "startLine": 9,
+          "endLine": 9
+        },
+        "revision": "tree-sha256:f93c1c7eebeaf4a396dabdf7bd1799de0551b2f83dad958dc95d5d1a451211ba",
+        "fileHash": "aee5c10cb9dd8ad797e5d6c43c9c1766abbe3bcf1b81edfcba01463ff2a92588",
+        "excerpt": " globalThis.fetch('/audit/fake'); // negative-globalthis"
+      }
+    },
+    {
+      "reason": "unresolved-call",
+      "detail": "fetch",
+      "evidence": {
+        "path": "frontend/http.ts",
+        "range": {
+          "startLine": 12,
+          "endLine": 12
+        },
+        "revision": "tree-sha256:f93c1c7eebeaf4a396dabdf7bd1799de0551b2f83dad958dc95d5d1a451211ba",
+        "fileHash": "aee5c10cb9dd8ad797e5d6c43c9c1766abbe3bcf1b81edfcba01463ff2a92588",
+        "excerpt": " fetch('/audit/fake'); // negative-fetch"
+      }
+    },
+    {
+      "reason": "unresolved-call",
+      "detail": "get",
+      "evidence": {
+        "path": "frontend/http.ts",
+        "range": {
+          "startLine": 13,
+          "endLine": 13
+        },
+        "revision": "tree-sha256:f93c1c7eebeaf4a396dabdf7bd1799de0551b2f83dad958dc95d5d1a451211ba",
+        "fileHash": "aee5c10cb9dd8ad797e5d6c43c9c1766abbe3bcf1b81edfcba01463ff2a92588",
+        "excerpt": " transport.get('/audit/fake'); // negative-axios"
+      }
+    },
+    {
+      "reason": "unresolved-call",
+      "detail": "fetch",
+      "evidence": {
+        "path": "frontend/http.ts",
+        "range": {
+          "startLine": 16,
+          "endLine": 16
+        },
+        "revision": "tree-sha256:f93c1c7eebeaf4a396dabdf7bd1799de0551b2f83dad958dc95d5d1a451211ba",
+        "fileHash": "aee5c10cb9dd8ad797e5d6c43c9c1766abbe3bcf1b81edfcba01463ff2a92588",
+        "excerpt": "fetch(prefix + '/real'); // dynamic-concat"
+      }
+    },
+    {
+      "reason": "dynamic-dependency",
+      "detail": "Runtime value prevents a resolved edge",
+      "evidence": {
+        "path": "frontend/http.ts",
+        "range": {
+          "startLine": 16,
+          "endLine": 16
+        },
+        "revision": "tree-sha256:f93c1c7eebeaf4a396dabdf7bd1799de0551b2f83dad958dc95d5d1a451211ba",
+        "fileHash": "aee5c10cb9dd8ad797e5d6c43c9c1766abbe3bcf1b81edfcba01463ff2a92588",
+        "excerpt": "fetch(prefix + '/real'); // dynamic-concat"
+      }
+    },
+    {
+      "reason": "unresolved-call",
+      "detail": "fetch",
+      "evidence": {
+        "path": "frontend/http.ts",
+        "range": {
+          "startLine": 18,
+          "endLine": 18
+        },
+        "revision": "tree-sha256:f93c1c7eebeaf4a396dabdf7bd1799de0551b2f83dad958dc95d5d1a451211ba",
+        "fileHash": "aee5c10cb9dd8ad797e5d6c43c9c1766abbe3bcf1b81edfcba01463ff2a92588",
+        "excerpt": "fetch('/audit/real', options); // dynamic-options"
+      }
+    },
+    {
+      "reason": "dynamic-dependency",
+      "detail": "Runtime value prevents a resolved edge",
+      "evidence": {
+        "path": "frontend/http.ts",
+        "range": {
+          "startLine": 18,
+          "endLine": 18
+        },
+        "revision": "tree-sha256:f93c1c7eebeaf4a396dabdf7bd1799de0551b2f83dad958dc95d5d1a451211ba",
+        "fileHash": "aee5c10cb9dd8ad797e5d6c43c9c1766abbe3bcf1b81edfcba01463ff2a92588",
+        "excerpt": "fetch('/audit/real', options); // dynamic-options"
+      }
+    },
+    {
+      "reason": "unresolved-call",
+      "detail": "fetch",
+      "evidence": {
+        "path": "frontend/http.ts",
+        "range": {
+          "startLine": 19,
+          "endLine": 19
+        },
+        "revision": "tree-sha256:f93c1c7eebeaf4a396dabdf7bd1799de0551b2f83dad958dc95d5d1a451211ba",
+        "fileHash": "aee5c10cb9dd8ad797e5d6c43c9c1766abbe3bcf1b81edfcba01463ff2a92588",
+        "excerpt": "fetch('/audit/real', {method: 'GET', method: 'POST'}); // positive-last-property"
+      }
+    },
+    {
+      "reason": "unresolved-call",
+      "detail": "fetch",
+      "evidence": {
+        "path": "frontend/http.ts",
+        "range": {
+          "startLine": 20,
+          "endLine": 20
+        },
+        "revision": "tree-sha256:f93c1c7eebeaf4a396dabdf7bd1799de0551b2f83dad958dc95d5d1a451211ba",
+        "fileHash": "aee5c10cb9dd8ad797e5d6c43c9c1766abbe3bcf1b81edfcba01463ff2a92588",
+        "excerpt": "fetch('/audit/real', {method: 'GET', ...options}); // dynamic-spread"
+      }
+    },
+    {
+      "reason": "dynamic-dependency",
+      "detail": "Runtime value prevents a resolved edge",
+      "evidence": {
+        "path": "frontend/http.ts",
+        "range": {
+          "startLine": 20,
+          "endLine": 20
+        },
+        "revision": "tree-sha256:f93c1c7eebeaf4a396dabdf7bd1799de0551b2f83dad958dc95d5d1a451211ba",
+        "fileHash": "aee5c10cb9dd8ad797e5d6c43c9c1766abbe3bcf1b81edfcba01463ff2a92588",
+        "excerpt": "fetch('/audit/real', {method: 'GET', ...options}); // dynamic-spread"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "org.springframework.web.bind.annotation.GetMapping",
+      "evidence": {
+        "path": "backend/Resource.java",
+        "range": {
+          "startLine": 2,
+          "endLine": 2
+        },
+        "revision": "tree-sha256:35acd6679079ca0dea90bf44341226c4995219adc9814ecfa951ac18730ccd9a",
+        "fileHash": "9cc83dd7593fb95d69dde305e4e434d34375cb35681b969b0077437544f752b2",
+        "excerpt": "import org.springframework.web.bind.annotation.GetMapping;"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "org.springframework.web.bind.annotation.PostMapping",
+      "evidence": {
+        "path": "backend/Resource.java",
+        "range": {
+          "startLine": 3,
+          "endLine": 3
+        },
+        "revision": "tree-sha256:35acd6679079ca0dea90bf44341226c4995219adc9814ecfa951ac18730ccd9a",
+        "fileHash": "9cc83dd7593fb95d69dde305e4e434d34375cb35681b969b0077437544f752b2",
+        "excerpt": "import org.springframework.web.bind.annotation.PostMapping;"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "org.springframework.web.bind.annotation.RequestMapping",
+      "evidence": {
+        "path": "backend/Resource.java",
+        "range": {
+          "startLine": 4,
+          "endLine": 4
+        },
+        "revision": "tree-sha256:35acd6679079ca0dea90bf44341226c4995219adc9814ecfa951ac18730ccd9a",
+        "fileHash": "9cc83dd7593fb95d69dde305e4e434d34375cb35681b969b0077437544f752b2",
+        "excerpt": "import org.springframework.web.bind.annotation.RequestMapping;"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "org.springframework.web.bind.annotation.RequestMapping",
+      "evidence": {
+        "path": "backend/Resource.java",
+        "range": {
+          "startLine": 5,
+          "endLine": 5
+        },
+        "revision": "tree-sha256:35acd6679079ca0dea90bf44341226c4995219adc9814ecfa951ac18730ccd9a",
+        "fileHash": "9cc83dd7593fb95d69dde305e4e434d34375cb35681b969b0077437544f752b2",
+        "excerpt": "@RequestMapping(\"/audit\")"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "org.springframework.web.bind.annotation.GetMapping",
+      "evidence": {
+        "path": "backend/Resource.java",
+        "range": {
+          "startLine": 7,
+          "endLine": 7
+        },
+        "revision": "tree-sha256:35acd6679079ca0dea90bf44341226c4995219adc9814ecfa951ac18730ccd9a",
+        "fileHash": "9cc83dd7593fb95d69dde305e4e434d34375cb35681b969b0077437544f752b2",
+        "excerpt": " @GetMapping(\"/real\") String real() { return \"v2\"; }"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "String",
+      "evidence": {
+        "path": "backend/Resource.java",
+        "range": {
+          "startLine": 7,
+          "endLine": 7
+        },
+        "revision": "tree-sha256:35acd6679079ca0dea90bf44341226c4995219adc9814ecfa951ac18730ccd9a",
+        "fileHash": "9cc83dd7593fb95d69dde305e4e434d34375cb35681b969b0077437544f752b2",
+        "excerpt": " @GetMapping(\"/real\") String real() { return \"v2\"; }"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "org.springframework.web.bind.annotation.GetMapping",
+      "evidence": {
+        "path": "backend/Resource.java",
+        "range": {
+          "startLine": 8,
+          "endLine": 8
+        },
+        "revision": "tree-sha256:35acd6679079ca0dea90bf44341226c4995219adc9814ecfa951ac18730ccd9a",
+        "fileHash": "9cc83dd7593fb95d69dde305e4e434d34375cb35681b969b0077437544f752b2",
+        "excerpt": " @GetMapping(\"/fake\") String fake() { return \"v1\"; }"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "String",
+      "evidence": {
+        "path": "backend/Resource.java",
+        "range": {
+          "startLine": 8,
+          "endLine": 8
+        },
+        "revision": "tree-sha256:35acd6679079ca0dea90bf44341226c4995219adc9814ecfa951ac18730ccd9a",
+        "fileHash": "9cc83dd7593fb95d69dde305e4e434d34375cb35681b969b0077437544f752b2",
+        "excerpt": " @GetMapping(\"/fake\") String fake() { return \"v1\"; }"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "org.springframework.web.bind.annotation.PostMapping",
+      "evidence": {
+        "path": "backend/Resource.java",
+        "range": {
+          "startLine": 9,
+          "endLine": 9
+        },
+        "revision": "tree-sha256:35acd6679079ca0dea90bf44341226c4995219adc9814ecfa951ac18730ccd9a",
+        "fileHash": "9cc83dd7593fb95d69dde305e4e434d34375cb35681b969b0077437544f752b2",
+        "excerpt": " @PostMapping(\"/real\") String post() { return \"v1\"; }"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "String",
+      "evidence": {
+        "path": "backend/Resource.java",
+        "range": {
+          "startLine": 9,
+          "endLine": 9
+        },
+        "revision": "tree-sha256:35acd6679079ca0dea90bf44341226c4995219adc9814ecfa951ac18730ccd9a",
+        "fileHash": "9cc83dd7593fb95d69dde305e4e434d34375cb35681b969b0077437544f752b2",
+        "excerpt": " @PostMapping(\"/real\") String post() { return \"v1\"; }"
+      }
+    },
+    {
+      "reason": "unresolved_call",
+      "range": {
+        "startLine": 7,
+        "endLine": 7
+      },
+      "detail": "window.fetch",
+      "evidence": {
+        "path": "frontend/http.ts",
+        "range": {
+          "startLine": 7,
+          "endLine": 7
+        },
+        "revision": "tree-sha256:35acd6679079ca0dea90bf44341226c4995219adc9814ecfa951ac18730ccd9a",
+        "fileHash": "aee5c10cb9dd8ad797e5d6c43c9c1766abbe3bcf1b81edfcba01463ff2a92588",
+        "excerpt": " window.fetch('/audit/fake'); // negative-window"
+      }
+    },
+    {
+      "reason": "unresolved_call",
+      "range": {
+        "startLine": 8,
+        "endLine": 8
+      },
+      "detail": "self.fetch",
+      "evidence": {
+        "path": "frontend/http.ts",
+        "range": {
+          "startLine": 8,
+          "endLine": 8
+        },
+        "revision": "tree-sha256:35acd6679079ca0dea90bf44341226c4995219adc9814ecfa951ac18730ccd9a",
+        "fileHash": "aee5c10cb9dd8ad797e5d6c43c9c1766abbe3bcf1b81edfcba01463ff2a92588",
+        "excerpt": " self.fetch('/audit/fake'); // negative-self"
+      }
+    },
+    {
+      "reason": "unresolved_call",
+      "range": {
+        "startLine": 9,
+        "endLine": 9
+      },
+      "detail": "globalThis.fetch",
+      "evidence": {
+        "path": "frontend/http.ts",
+        "range": {
+          "startLine": 9,
+          "endLine": 9
+        },
+        "revision": "tree-sha256:35acd6679079ca0dea90bf44341226c4995219adc9814ecfa951ac18730ccd9a",
+        "fileHash": "aee5c10cb9dd8ad797e5d6c43c9c1766abbe3bcf1b81edfcba01463ff2a92588",
+        "excerpt": " globalThis.fetch('/audit/fake'); // negative-globalthis"
+      }
+    },
+    {
+      "reason": "unresolved_call",
+      "range": {
+        "startLine": 12,
+        "endLine": 12
+      },
+      "detail": "fetch",
+      "evidence": {
+        "path": "frontend/http.ts",
+        "range": {
+          "startLine": 12,
+          "endLine": 12
+        },
+        "revision": "tree-sha256:35acd6679079ca0dea90bf44341226c4995219adc9814ecfa951ac18730ccd9a",
+        "fileHash": "aee5c10cb9dd8ad797e5d6c43c9c1766abbe3bcf1b81edfcba01463ff2a92588",
+        "excerpt": " fetch('/audit/fake'); // negative-fetch"
+      }
+    },
+    {
+      "reason": "unresolved_call",
+      "range": {
+        "startLine": 13,
+        "endLine": 13
+      },
+      "detail": "transport.get",
+      "evidence": {
+        "path": "frontend/http.ts",
+        "range": {
+          "startLine": 13,
+          "endLine": 13
+        },
+        "revision": "tree-sha256:35acd6679079ca0dea90bf44341226c4995219adc9814ecfa951ac18730ccd9a",
+        "fileHash": "aee5c10cb9dd8ad797e5d6c43c9c1766abbe3bcf1b81edfcba01463ff2a92588",
+        "excerpt": " transport.get('/audit/fake'); // negative-axios"
+      }
+    },
+    {
+      "reason": "dynamic_http_url",
+      "range": {
+        "startLine": 16,
+        "endLine": 16
+      },
+      "detail": "prefix + '/real'",
+      "evidence": {
+        "path": "frontend/http.ts",
+        "range": {
+          "startLine": 16,
+          "endLine": 16
+        },
+        "revision": "tree-sha256:35acd6679079ca0dea90bf44341226c4995219adc9814ecfa951ac18730ccd9a",
+        "fileHash": "aee5c10cb9dd8ad797e5d6c43c9c1766abbe3bcf1b81edfcba01463ff2a92588",
+        "excerpt": "fetch(prefix + '/real'); // dynamic-concat"
+      }
+    },
+    {
+      "reason": "dynamic_http_method",
+      "range": {
+        "startLine": 18,
+        "endLine": 18
+      },
+      "detail": "Method is not a direct literal or options may override it.",
+      "evidence": {
+        "path": "frontend/http.ts",
+        "range": {
+          "startLine": 18,
+          "endLine": 18
+        },
+        "revision": "tree-sha256:35acd6679079ca0dea90bf44341226c4995219adc9814ecfa951ac18730ccd9a",
+        "fileHash": "aee5c10cb9dd8ad797e5d6c43c9c1766abbe3bcf1b81edfcba01463ff2a92588",
+        "excerpt": "fetch('/audit/real', options); // dynamic-options"
+      }
+    },
+    {
+      "reason": "dynamic_http_method",
+      "range": {
+        "startLine": 20,
+        "endLine": 20
+      },
+      "detail": "Method is not a direct literal or options may override it.",
+      "evidence": {
+        "path": "frontend/http.ts",
+        "range": {
+          "startLine": 20,
+          "endLine": 20
+        },
+        "revision": "tree-sha256:35acd6679079ca0dea90bf44341226c4995219adc9814ecfa951ac18730ccd9a",
+        "fileHash": "aee5c10cb9dd8ad797e5d6c43c9c1766abbe3bcf1b81edfcba01463ff2a92588",
+        "excerpt": "fetch('/audit/real', {method: 'GET', ...options}); // dynamic-spread"
+      }
+    },
+    {
+      "reason": "external-module",
+      "detail": "axios",
+      "evidence": {
+        "path": "frontend/http.ts",
+        "range": {
+          "startLine": 1,
+          "endLine": 1
+        },
+        "revision": "tree-sha256:35acd6679079ca0dea90bf44341226c4995219adc9814ecfa951ac18730ccd9a",
+        "fileHash": "aee5c10cb9dd8ad797e5d6c43c9c1766abbe3bcf1b81edfcba01463ff2a92588",
+        "excerpt": "import transport from 'axios';"
+      }
+    },
+    {
+      "reason": "unresolved-call",
+      "detail": "fetch",
+      "evidence": {
+        "path": "frontend/http.ts",
+        "range": {
+          "startLine": 2,
+          "endLine": 2
+        },
+        "revision": "tree-sha256:35acd6679079ca0dea90bf44341226c4995219adc9814ecfa951ac18730ccd9a",
+        "fileHash": "aee5c10cb9dd8ad797e5d6c43c9c1766abbe3bcf1b81edfcba01463ff2a92588",
+        "excerpt": "fetch('/audit/real'); // positive-global"
+      }
+    },
+    {
+      "reason": "unresolved-call",
+      "detail": "fetch",
+      "evidence": {
+        "path": "frontend/http.ts",
+        "range": {
+          "startLine": 3,
+          "endLine": 3
+        },
+        "revision": "tree-sha256:35acd6679079ca0dea90bf44341226c4995219adc9814ecfa951ac18730ccd9a",
+        "fileHash": "aee5c10cb9dd8ad797e5d6c43c9c1766abbe3bcf1b81edfcba01463ff2a92588",
+        "excerpt": "fetch(`/audit/real`); // positive-template"
+      }
+    },
+    {
+      "reason": "unresolved-call",
+      "detail": "fetch",
+      "evidence": {
+        "path": "frontend/http.ts",
+        "range": {
+          "startLine": 4,
+          "endLine": 4
+        },
+        "revision": "tree-sha256:35acd6679079ca0dea90bf44341226c4995219adc9814ecfa951ac18730ccd9a",
+        "fileHash": "aee5c10cb9dd8ad797e5d6c43c9c1766abbe3bcf1b81edfcba01463ff2a92588",
+        "excerpt": "globalThis.fetch('/audit/real'); // positive-member"
+      }
+    },
+    {
+      "reason": "unresolved-imported-member",
+      "detail": "get",
+      "evidence": {
+        "path": "frontend/http.ts",
+        "range": {
+          "startLine": 5,
+          "endLine": 5
+        },
+        "revision": "tree-sha256:35acd6679079ca0dea90bf44341226c4995219adc9814ecfa951ac18730ccd9a",
+        "fileHash": "aee5c10cb9dd8ad797e5d6c43c9c1766abbe3bcf1b81edfcba01463ff2a92588",
+        "excerpt": "transport.get('/audit/real'); // positive-axios"
+      }
+    },
+    {
+      "reason": "unresolved-call",
+      "detail": "fetch",
+      "evidence": {
+        "path": "frontend/http.ts",
+        "range": {
+          "startLine": 7,
+          "endLine": 7
+        },
+        "revision": "tree-sha256:35acd6679079ca0dea90bf44341226c4995219adc9814ecfa951ac18730ccd9a",
+        "fileHash": "aee5c10cb9dd8ad797e5d6c43c9c1766abbe3bcf1b81edfcba01463ff2a92588",
+        "excerpt": " window.fetch('/audit/fake'); // negative-window"
+      }
+    },
+    {
+      "reason": "unresolved-call",
+      "detail": "fetch",
+      "evidence": {
+        "path": "frontend/http.ts",
+        "range": {
+          "startLine": 8,
+          "endLine": 8
+        },
+        "revision": "tree-sha256:35acd6679079ca0dea90bf44341226c4995219adc9814ecfa951ac18730ccd9a",
+        "fileHash": "aee5c10cb9dd8ad797e5d6c43c9c1766abbe3bcf1b81edfcba01463ff2a92588",
+        "excerpt": " self.fetch('/audit/fake'); // negative-self"
+      }
+    },
+    {
+      "reason": "unresolved-call",
+      "detail": "fetch",
+      "evidence": {
+        "path": "frontend/http.ts",
+        "range": {
+          "startLine": 9,
+          "endLine": 9
+        },
+        "revision": "tree-sha256:35acd6679079ca0dea90bf44341226c4995219adc9814ecfa951ac18730ccd9a",
+        "fileHash": "aee5c10cb9dd8ad797e5d6c43c9c1766abbe3bcf1b81edfcba01463ff2a92588",
+        "excerpt": " globalThis.fetch('/audit/fake'); // negative-globalthis"
+      }
+    },
+    {
+      "reason": "unresolved-call",
+      "detail": "fetch",
+      "evidence": {
+        "path": "frontend/http.ts",
+        "range": {
+          "startLine": 12,
+          "endLine": 12
+        },
+        "revision": "tree-sha256:35acd6679079ca0dea90bf44341226c4995219adc9814ecfa951ac18730ccd9a",
+        "fileHash": "aee5c10cb9dd8ad797e5d6c43c9c1766abbe3bcf1b81edfcba01463ff2a92588",
+        "excerpt": " fetch('/audit/fake'); // negative-fetch"
+      }
+    },
+    {
+      "reason": "unresolved-call",
+      "detail": "get",
+      "evidence": {
+        "path": "frontend/http.ts",
+        "range": {
+          "startLine": 13,
+          "endLine": 13
+        },
+        "revision": "tree-sha256:35acd6679079ca0dea90bf44341226c4995219adc9814ecfa951ac18730ccd9a",
+        "fileHash": "aee5c10cb9dd8ad797e5d6c43c9c1766abbe3bcf1b81edfcba01463ff2a92588",
+        "excerpt": " transport.get('/audit/fake'); // negative-axios"
+      }
+    },
+    {
+      "reason": "unresolved-call",
+      "detail": "fetch",
+      "evidence": {
+        "path": "frontend/http.ts",
+        "range": {
+          "startLine": 16,
+          "endLine": 16
+        },
+        "revision": "tree-sha256:35acd6679079ca0dea90bf44341226c4995219adc9814ecfa951ac18730ccd9a",
+        "fileHash": "aee5c10cb9dd8ad797e5d6c43c9c1766abbe3bcf1b81edfcba01463ff2a92588",
+        "excerpt": "fetch(prefix + '/real'); // dynamic-concat"
+      }
+    },
+    {
+      "reason": "dynamic-dependency",
+      "detail": "Runtime value prevents a resolved edge",
+      "evidence": {
+        "path": "frontend/http.ts",
+        "range": {
+          "startLine": 16,
+          "endLine": 16
+        },
+        "revision": "tree-sha256:35acd6679079ca0dea90bf44341226c4995219adc9814ecfa951ac18730ccd9a",
+        "fileHash": "aee5c10cb9dd8ad797e5d6c43c9c1766abbe3bcf1b81edfcba01463ff2a92588",
+        "excerpt": "fetch(prefix + '/real'); // dynamic-concat"
+      }
+    },
+    {
+      "reason": "unresolved-call",
+      "detail": "fetch",
+      "evidence": {
+        "path": "frontend/http.ts",
+        "range": {
+          "startLine": 18,
+          "endLine": 18
+        },
+        "revision": "tree-sha256:35acd6679079ca0dea90bf44341226c4995219adc9814ecfa951ac18730ccd9a",
+        "fileHash": "aee5c10cb9dd8ad797e5d6c43c9c1766abbe3bcf1b81edfcba01463ff2a92588",
+        "excerpt": "fetch('/audit/real', options); // dynamic-options"
+      }
+    },
+    {
+      "reason": "dynamic-dependency",
+      "detail": "Runtime value prevents a resolved edge",
+      "evidence": {
+        "path": "frontend/http.ts",
+        "range": {
+          "startLine": 18,
+          "endLine": 18
+        },
+        "revision": "tree-sha256:35acd6679079ca0dea90bf44341226c4995219adc9814ecfa951ac18730ccd9a",
+        "fileHash": "aee5c10cb9dd8ad797e5d6c43c9c1766abbe3bcf1b81edfcba01463ff2a92588",
+        "excerpt": "fetch('/audit/real', options); // dynamic-options"
+      }
+    },
+    {
+      "reason": "unresolved-call",
+      "detail": "fetch",
+      "evidence": {
+        "path": "frontend/http.ts",
+        "range": {
+          "startLine": 19,
+          "endLine": 19
+        },
+        "revision": "tree-sha256:35acd6679079ca0dea90bf44341226c4995219adc9814ecfa951ac18730ccd9a",
+        "fileHash": "aee5c10cb9dd8ad797e5d6c43c9c1766abbe3bcf1b81edfcba01463ff2a92588",
+        "excerpt": "fetch('/audit/real', {method: 'GET', method: 'POST'}); // positive-last-property"
+      }
+    },
+    {
+      "reason": "unresolved-call",
+      "detail": "fetch",
+      "evidence": {
+        "path": "frontend/http.ts",
+        "range": {
+          "startLine": 20,
+          "endLine": 20
+        },
+        "revision": "tree-sha256:35acd6679079ca0dea90bf44341226c4995219adc9814ecfa951ac18730ccd9a",
+        "fileHash": "aee5c10cb9dd8ad797e5d6c43c9c1766abbe3bcf1b81edfcba01463ff2a92588",
+        "excerpt": "fetch('/audit/real', {method: 'GET', ...options}); // dynamic-spread"
+      }
+    },
+    {
+      "reason": "dynamic-dependency",
+      "detail": "Runtime value prevents a resolved edge",
+      "evidence": {
+        "path": "frontend/http.ts",
+        "range": {
+          "startLine": 20,
+          "endLine": 20
+        },
+        "revision": "tree-sha256:35acd6679079ca0dea90bf44341226c4995219adc9814ecfa951ac18730ccd9a",
+        "fileHash": "aee5c10cb9dd8ad797e5d6c43c9c1766abbe3bcf1b81edfcba01463ff2a92588",
+        "excerpt": "fetch('/audit/real', {method: 'GET', ...options}); // dynamic-spread"
+      }
+    }
+  ],
+  "focusedTests": [
+    {
+      "kind": "api-consumer",
+      "reason": "Exercise HTTP route, verb, serialization, empty/not-found/error responses and consumer rendering",
+      "evidence": {
+        "path": "frontend/http.ts",
+        "range": {
+          "startLine": 2,
+          "endLine": 2
+        },
+        "revision": "tree-sha256:f93c1c7eebeaf4a396dabdf7bd1799de0551b2f83dad958dc95d5d1a451211ba",
+        "fileHash": "aee5c10cb9dd8ad797e5d6c43c9c1766abbe3bcf1b81edfcba01463ff2a92588",
+        "excerpt": "fetch('/audit/real'); // positive-global"
+      },
+      "targetEvidence": {
+        "path": "backend/Resource.java",
+        "range": {
+          "startLine": 7,
+          "endLine": 7
+        },
+        "revision": "tree-sha256:f93c1c7eebeaf4a396dabdf7bd1799de0551b2f83dad958dc95d5d1a451211ba",
+        "fileHash": "3804feef0d2b303327d83f58c4c2c6d33f75f79ba6aa914d248183fa52cf67c4",
+        "excerpt": " @GetMapping(\"/real\") String real() { return \"v1\"; }"
+      }
+    },
+    {
+      "kind": "api-consumer",
+      "reason": "Exercise HTTP route, verb, serialization, empty/not-found/error responses and consumer rendering",
+      "evidence": {
+        "path": "frontend/http.ts",
+        "range": {
+          "startLine": 3,
+          "endLine": 3
+        },
+        "revision": "tree-sha256:f93c1c7eebeaf4a396dabdf7bd1799de0551b2f83dad958dc95d5d1a451211ba",
+        "fileHash": "aee5c10cb9dd8ad797e5d6c43c9c1766abbe3bcf1b81edfcba01463ff2a92588",
+        "excerpt": "fetch(`/audit/real`); // positive-template"
+      },
+      "targetEvidence": {
+        "path": "backend/Resource.java",
+        "range": {
+          "startLine": 7,
+          "endLine": 7
+        },
+        "revision": "tree-sha256:f93c1c7eebeaf4a396dabdf7bd1799de0551b2f83dad958dc95d5d1a451211ba",
+        "fileHash": "3804feef0d2b303327d83f58c4c2c6d33f75f79ba6aa914d248183fa52cf67c4",
+        "excerpt": " @GetMapping(\"/real\") String real() { return \"v1\"; }"
+      }
+    },
+    {
+      "kind": "api-consumer",
+      "reason": "Exercise HTTP route, verb, serialization, empty/not-found/error responses and consumer rendering",
+      "evidence": {
+        "path": "frontend/http.ts",
+        "range": {
+          "startLine": 4,
+          "endLine": 4
+        },
+        "revision": "tree-sha256:f93c1c7eebeaf4a396dabdf7bd1799de0551b2f83dad958dc95d5d1a451211ba",
+        "fileHash": "aee5c10cb9dd8ad797e5d6c43c9c1766abbe3bcf1b81edfcba01463ff2a92588",
+        "excerpt": "globalThis.fetch('/audit/real'); // positive-member"
+      },
+      "targetEvidence": {
+        "path": "backend/Resource.java",
+        "range": {
+          "startLine": 7,
+          "endLine": 7
+        },
+        "revision": "tree-sha256:f93c1c7eebeaf4a396dabdf7bd1799de0551b2f83dad958dc95d5d1a451211ba",
+        "fileHash": "3804feef0d2b303327d83f58c4c2c6d33f75f79ba6aa914d248183fa52cf67c4",
+        "excerpt": " @GetMapping(\"/real\") String real() { return \"v1\"; }"
+      }
+    },
+    {
+      "kind": "api-consumer",
+      "reason": "Exercise HTTP route, verb, serialization, empty/not-found/error responses and consumer rendering",
+      "evidence": {
+        "path": "frontend/http.ts",
+        "range": {
+          "startLine": 5,
+          "endLine": 5
+        },
+        "revision": "tree-sha256:f93c1c7eebeaf4a396dabdf7bd1799de0551b2f83dad958dc95d5d1a451211ba",
+        "fileHash": "aee5c10cb9dd8ad797e5d6c43c9c1766abbe3bcf1b81edfcba01463ff2a92588",
+        "excerpt": "transport.get('/audit/real'); // positive-axios"
+      },
+      "targetEvidence": {
+        "path": "backend/Resource.java",
+        "range": {
+          "startLine": 7,
+          "endLine": 7
+        },
+        "revision": "tree-sha256:f93c1c7eebeaf4a396dabdf7bd1799de0551b2f83dad958dc95d5d1a451211ba",
+        "fileHash": "3804feef0d2b303327d83f58c4c2c6d33f75f79ba6aa914d248183fa52cf67c4",
+        "excerpt": " @GetMapping(\"/real\") String real() { return \"v1\"; }"
+      }
+    },
+    {
+      "kind": "api-consumer",
+      "reason": "Exercise HTTP route, verb, serialization, empty/not-found/error responses and consumer rendering",
+      "evidence": {
+        "path": "frontend/http.ts",
+        "range": {
+          "startLine": 19,
+          "endLine": 19
+        },
+        "revision": "tree-sha256:f93c1c7eebeaf4a396dabdf7bd1799de0551b2f83dad958dc95d5d1a451211ba",
+        "fileHash": "aee5c10cb9dd8ad797e5d6c43c9c1766abbe3bcf1b81edfcba01463ff2a92588",
+        "excerpt": "fetch('/audit/real', {method: 'GET', method: 'POST'}); // positive-last-property"
+      },
+      "targetEvidence": {
+        "path": "backend/Resource.java",
+        "range": {
+          "startLine": 9,
+          "endLine": 9
+        },
+        "revision": "tree-sha256:f93c1c7eebeaf4a396dabdf7bd1799de0551b2f83dad958dc95d5d1a451211ba",
+        "fileHash": "3804feef0d2b303327d83f58c4c2c6d33f75f79ba6aa914d248183fa52cf67c4",
+        "excerpt": " @PostMapping(\"/real\") String post() { return \"v1\"; }"
+      }
+    },
+    {
+      "kind": "api-consumer",
+      "reason": "Exercise HTTP route, verb, serialization, empty/not-found/error responses and consumer rendering",
+      "evidence": {
+        "path": "frontend/http.ts",
+        "range": {
+          "startLine": 2,
+          "endLine": 2
+        },
+        "revision": "tree-sha256:35acd6679079ca0dea90bf44341226c4995219adc9814ecfa951ac18730ccd9a",
+        "fileHash": "aee5c10cb9dd8ad797e5d6c43c9c1766abbe3bcf1b81edfcba01463ff2a92588",
+        "excerpt": "fetch('/audit/real'); // positive-global"
+      },
+      "targetEvidence": {
+        "path": "backend/Resource.java",
+        "range": {
+          "startLine": 7,
+          "endLine": 7
+        },
+        "revision": "tree-sha256:35acd6679079ca0dea90bf44341226c4995219adc9814ecfa951ac18730ccd9a",
+        "fileHash": "9cc83dd7593fb95d69dde305e4e434d34375cb35681b969b0077437544f752b2",
+        "excerpt": " @GetMapping(\"/real\") String real() { return \"v2\"; }"
+      }
+    },
+    {
+      "kind": "api-consumer",
+      "reason": "Exercise HTTP route, verb, serialization, empty/not-found/error responses and consumer rendering",
+      "evidence": {
+        "path": "frontend/http.ts",
+        "range": {
+          "startLine": 3,
+          "endLine": 3
+        },
+        "revision": "tree-sha256:35acd6679079ca0dea90bf44341226c4995219adc9814ecfa951ac18730ccd9a",
+        "fileHash": "aee5c10cb9dd8ad797e5d6c43c9c1766abbe3bcf1b81edfcba01463ff2a92588",
+        "excerpt": "fetch(`/audit/real`); // positive-template"
+      },
+      "targetEvidence": {
+        "path": "backend/Resource.java",
+        "range": {
+          "startLine": 7,
+          "endLine": 7
+        },
+        "revision": "tree-sha256:35acd6679079ca0dea90bf44341226c4995219adc9814ecfa951ac18730ccd9a",
+        "fileHash": "9cc83dd7593fb95d69dde305e4e434d34375cb35681b969b0077437544f752b2",
+        "excerpt": " @GetMapping(\"/real\") String real() { return \"v2\"; }"
+      }
+    },
+    {
+      "kind": "api-consumer",
+      "reason": "Exercise HTTP route, verb, serialization, empty/not-found/error responses and consumer rendering",
+      "evidence": {
+        "path": "frontend/http.ts",
+        "range": {
+          "startLine": 4,
+          "endLine": 4
+        },
+        "revision": "tree-sha256:35acd6679079ca0dea90bf44341226c4995219adc9814ecfa951ac18730ccd9a",
+        "fileHash": "aee5c10cb9dd8ad797e5d6c43c9c1766abbe3bcf1b81edfcba01463ff2a92588",
+        "excerpt": "globalThis.fetch('/audit/real'); // positive-member"
+      },
+      "targetEvidence": {
+        "path": "backend/Resource.java",
+        "range": {
+          "startLine": 7,
+          "endLine": 7
+        },
+        "revision": "tree-sha256:35acd6679079ca0dea90bf44341226c4995219adc9814ecfa951ac18730ccd9a",
+        "fileHash": "9cc83dd7593fb95d69dde305e4e434d34375cb35681b969b0077437544f752b2",
+        "excerpt": " @GetMapping(\"/real\") String real() { return \"v2\"; }"
+      }
+    },
+    {
+      "kind": "api-consumer",
+      "reason": "Exercise HTTP route, verb, serialization, empty/not-found/error responses and consumer rendering",
+      "evidence": {
+        "path": "frontend/http.ts",
+        "range": {
+          "startLine": 5,
+          "endLine": 5
+        },
+        "revision": "tree-sha256:35acd6679079ca0dea90bf44341226c4995219adc9814ecfa951ac18730ccd9a",
+        "fileHash": "aee5c10cb9dd8ad797e5d6c43c9c1766abbe3bcf1b81edfcba01463ff2a92588",
+        "excerpt": "transport.get('/audit/real'); // positive-axios"
+      },
+      "targetEvidence": {
+        "path": "backend/Resource.java",
+        "range": {
+          "startLine": 7,
+          "endLine": 7
+        },
+        "revision": "tree-sha256:35acd6679079ca0dea90bf44341226c4995219adc9814ecfa951ac18730ccd9a",
+        "fileHash": "9cc83dd7593fb95d69dde305e4e434d34375cb35681b969b0077437544f752b2",
+        "excerpt": " @GetMapping(\"/real\") String real() { return \"v2\"; }"
+      }
+    },
+    {
+      "kind": "api-consumer",
+      "reason": "Exercise HTTP route, verb, serialization, empty/not-found/error responses and consumer rendering",
+      "evidence": {
+        "path": "frontend/http.ts",
+        "range": {
+          "startLine": 19,
+          "endLine": 19
+        },
+        "revision": "tree-sha256:35acd6679079ca0dea90bf44341226c4995219adc9814ecfa951ac18730ccd9a",
+        "fileHash": "aee5c10cb9dd8ad797e5d6c43c9c1766abbe3bcf1b81edfcba01463ff2a92588",
+        "excerpt": "fetch('/audit/real', {method: 'GET', method: 'POST'}); // positive-last-property"
+      },
+      "targetEvidence": {
+        "path": "backend/Resource.java",
+        "range": {
+          "startLine": 9,
+          "endLine": 9
+        },
+        "revision": "tree-sha256:35acd6679079ca0dea90bf44341226c4995219adc9814ecfa951ac18730ccd9a",
+        "fileHash": "9cc83dd7593fb95d69dde305e4e434d34375cb35681b969b0077437544f752b2",
+        "excerpt": " @PostMapping(\"/real\") String post() { return \"v1\"; }"
+      }
+    }
+  ],
+  "coverage": {
+    "complete": false,
+    "fullRegressionMayBeSkipped": false,
+    "sourceFiles": {
+      "baseline": 2,
+      "candidate": 2
+    },
+    "excluded": {
+      "baseline": [],
+      "candidate": []
+    },
+    "limitations": [
+      "Source-only analysis; no Java/TypeScript semantic compilation, runtime dispatch, reflection, DI wiring, proxy/origin verification or transitive external package sources",
+      "Edges are evidence-backed approximations; indirect file dependencies do not prove execution",
+      "Renames inferred only for identical declaration key/signature/body; edited renames remain delete/add",
+      "Unknown syntax and unresolved/dynamic dependencies remain visible; passing fixture tests is not private-repository acceptance"
+    ]
+  },
+  "cache": {
+    "report": "disabled",
+    "parsedFiles": 4,
+    "reusedFiles": 0,
+    "invalidEntries": 0
+  },
+  "metrics": {
+    "elapsedMs": 59.42,
+    "bytesRead": 2724,
+    "reportCacheHit": false
+  }
+}

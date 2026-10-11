@@ -1,0 +1,24 @@
+{
+  "command": [
+    "docker",
+    "run",
+    "--rm",
+    "--network",
+    "none",
+    "--user",
+    "0:0",
+    "--mount",
+    "type=bind,src=/workspace/review-analysis-deliverables/expanded-qa,dst=/qa/scripts,readonly",
+    "--mount",
+    "type=bind,src=/workspace/review-analysis-deliverables/expanded-qa/pin-1/browser-api/inputs,dst=/inputs",
+    "--entrypoint",
+    "sh",
+    "sha256:56ce7b94faf0f817f0fc13a1358b6650ff0d950bbd68198f070d649e1c23c819",
+    "/qa/scripts/prepare-foreign-git.sh"
+  ],
+  "cwd": null,
+  "startedAt": "2026-10-11T17:43:12.768769+00:00",
+  "dockerConfig": "/tmp/review-analysis-docker-config",
+  "exitCode": 128,
+  "elapsedSeconds": 8.491
+}

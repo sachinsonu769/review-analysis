@@ -1,0 +1,15 @@
+{
+  "command": [
+    "docker",
+    "exec",
+    "expanded-qa-pin1-app-1",
+    "node",
+    "-e",
+    "const fs=require(\"fs\");const check=file=>{try{fs.writeFileSync(file,\"QA write probe\");fs.unlinkSync(file);return \"unexpected-write-success\"}catch(e){return e.code}};console.log(JSON.stringify({uid:process.getuid(),inputOwner:fs.statSync(\"/inputs/foreign-owned-git\").uid,readonlyInput:check(\"/inputs/requirements/qa-write-probe\"),readonlyRoot:check(\"/opt/review-analysis/src/qa-write-probe\"),tmpMount:fs.readFileSync(\"/proc/mounts\",\"utf8\").split(\"\\n\").filter(line=>line.split(\" \")[1]===\"/tmp\"),fsmonitorExecuted:fs.existsSync(\"/tmp/expanded-qa-foreign-fsmonitor-executed\")},null,2))"
+  ],
+  "cwd": null,
+  "startedAt": "2026-10-11T17:49:42.834414+00:00",
+  "dockerConfig": "/tmp/review-analysis-docker-config",
+  "exitCode": 0,
+  "elapsedSeconds": 0.114
+}

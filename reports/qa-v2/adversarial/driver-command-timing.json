@@ -1,0 +1,20 @@
+{
+  "argv": [
+    "node",
+    "/workspace/review-analysis-deliverables/qa-v1/adversarial/run-adversarial.mjs"
+  ],
+  "cwd": "/workspace",
+  "environmentOverrides": {
+    "ADVERSARIAL_BUILD": "/tmp/review-analysis-qa-v2-fsn7g676",
+    "ADVERSARIAL_OUT": "/workspace/review-analysis-deliverables/qa-v2/adversarial",
+    "ADVERSARIAL_CASE_ROOT": "/tmp/review-analysis-adversarial-v2-NZrPxG",
+    "ADVERSARIAL_ARTIFACT_SHA256": "a140834fe7d26c707a04dc43ae225178bc39756154ca52e63f8dd7db91582897"
+  },
+  "runnerSha256": "dff08148606b024ceb86778083229ba14b1039c70563614bc3a9eb066f449fdc",
+  "startedAtUTC": "2026-10-11T16:55:56.277870+00:00",
+  "endedAtUTC": "2026-10-11T16:56:13.264982+00:00",
+  "wallSeconds": 16.987,
+  "exitCode": 0,
+  "stdout": "/workspace/review-analysis-deliverables/qa-v2/adversarial/run.stdout.log",
+  "stderr": "/workspace/review-analysis-deliverables/qa-v2/adversarial/run.stderr.log"
+}

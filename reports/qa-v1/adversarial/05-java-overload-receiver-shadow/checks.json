@@ -1,0 +1,56 @@
+{
+  "id": "05-java-overload-receiver-shadow",
+  "description": "Same-arity overload candidate evidence plus typed Object and var field shadows",
+  "status": "pass",
+  "exitCode": 0,
+  "sourcePaths": {
+    "baseline": "/tmp/review-analysis-adversarial-v1-anUajX/05-java-overload-receiver-shadow/baseline",
+    "candidate": "/tmp/review-analysis-adversarial-v1-anUajX/05-java-overload-receiver-shadow/candidate"
+  },
+  "sourceHashes": {
+    "baseline": {
+      "backend/Caller.java": "565ce6efe62e6dbe6f4e43bdf1d1cd1475b0019d67d02593af6c9b5500feb549",
+      "backend/Service.java": "d3a42475956bd2df2a9590b19d5412ed0a40510315dd00c96b03ec93f77af449"
+    },
+    "candidate": {
+      "backend/Caller.java": "565ce6efe62e6dbe6f4e43bdf1d1cd1475b0019d67d02593af6c9b5500feb549",
+      "backend/Service.java": "383c8d5afa487ed5becf8b5fa1a8ec2aa451627280815ccd16fd5b3a411e939d"
+    }
+  },
+  "evidence": {
+    "checkedEvidenceRecords": 50,
+    "errors": []
+  },
+  "assertions": [
+    {
+      "name": "overload stays ambiguous with candidate evidence",
+      "status": "pass"
+    },
+    {
+      "name": "unique zero-arg call resolves",
+      "status": "pass"
+    },
+    {
+      "name": "Object parameter shadows field receiver",
+      "status": "pass"
+    },
+    {
+      "name": "var shadow remains dynamic; restored field resolves",
+      "status": "pass"
+    },
+    {
+      "name": "all source evidence hashes/ranges/excerpts/revisions independently reproduce",
+      "status": "pass"
+    },
+    {
+      "name": "readable actual CLI exits 0",
+      "status": "pass"
+    }
+  ],
+  "reportStats": {
+    "changes": 4,
+    "directEdges": 6,
+    "unknowns": 26,
+    "sourceBuildHash": "8ee7fcacee9a1b276b2bfab2665d8d3ab771e40eee5f3924f1f301192426e68f"
+  }
+}

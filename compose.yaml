@@ -1,0 +1,25 @@
+name: review-analysis
+services:
+  app:
+    image: review-analysis:0.2.0
+    platform: linux/amd64
+    pull_policy: never
+    init: true
+    user: "1000:1000"
+    read_only: true
+    ports:
+      - "127.0.0.1:8787:8787"
+    environment:
+      NODE_ENV: production
+      HOST: 0.0.0.0
+      PORT: "8787"
+      REVIEW_ANALYSIS_PMD_BIN: /opt/pmd/bin/pmd
+    tmpfs:
+      - /tmp:rw,nosuid,nodev,size=536870912,mode=1777
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    mem_limit: 1g
+    pids_limit: 256
+    restart: "no"

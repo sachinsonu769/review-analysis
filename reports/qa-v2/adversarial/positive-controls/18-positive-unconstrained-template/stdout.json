@@ -1,0 +1,1145 @@
+{
+  "schemaVersion": "1.0",
+  "analyzer": {
+    "version": "0.1.0",
+    "sourceBuildHash": "ca04bac50b7584aaafd9d5602acc8055152e81e25de5fa1b15bb710f76f53ac9",
+    "parsers": {
+      "java": "java-parser@3.0.1",
+      "typescript": "typescript@5.9.3"
+    }
+  },
+  "advisory": true,
+  "asOf": "2026-10-11",
+  "provenance": {
+    "baseline": {
+      "root": "/tmp/review-analysis-adversarial-v2-NZrPxG/positive-controls/18-positive-unconstrained-template/baseline",
+      "type": "directory",
+      "revision": "tree-sha256:e124251a13f936ab7ffc056fd2a4e6b0264435259d0cd11c9912a940d2c6f8ad",
+      "contentHash": "e124251a13f936ab7ffc056fd2a4e6b0264435259d0cd11c9912a940d2c6f8ad",
+      "dirty": false
+    },
+    "candidate": {
+      "root": "/tmp/review-analysis-adversarial-v2-NZrPxG/positive-controls/18-positive-unconstrained-template/candidate",
+      "type": "directory",
+      "revision": "tree-sha256:fcfc714c61d1d8ade56937eb3c29cf14d79ce37c3f5d2d3851b365143ad7ec8d",
+      "contentHash": "fcfc714c61d1d8ade56937eb3c29cf14d79ce37c3f5d2d3851b365143ad7ec8d",
+      "dirty": false
+    },
+    "rulesHash": "90f33c2c080aa463115b0ef7e4058bb9bf0da4944dff79ed58eae2f01f9cd3f1",
+    "baselineRulesHash": "90f33c2c080aa463115b0ef7e4058bb9bf0da4944dff79ed58eae2f01f9cd3f1",
+    "cacheKey": "3a8c18135c55577c6b9dfb73f6f26fb9fb81625a18ad765f62cde6a026bd8243"
+  },
+  "changes": [
+    {
+      "kind": "modified",
+      "name": "TemplateResource",
+      "key": "qa.TemplateResource",
+      "language": "java",
+      "contractChanged": false,
+      "before": {
+        "path": "backend/TemplateResource.java",
+        "range": {
+          "startLine": 5,
+          "endLine": 9
+        },
+        "revision": "tree-sha256:e124251a13f936ab7ffc056fd2a4e6b0264435259d0cd11c9912a940d2c6f8ad",
+        "fileHash": "2b3d1c8a325859e4a48f21d32cb3d1565e4d057e8b799f5f0f6ef04348cd9b1a",
+        "excerpt": "class TemplateResource {\n @GetMapping(\"/catalog/{id}\") String get() { return \"v1\"; }\n @GetMapping(\"/catalog/{id}/details\") String details() { return \"v1\"; }\n @GetMapping(\"/numbers/{id:[0-9]+}\") String constrained() { return \"v1\"; }\n}"
+      },
+      "after": {
+        "path": "backend/TemplateResource.java",
+        "range": {
+          "startLine": 5,
+          "endLine": 9
+        },
+        "revision": "tree-sha256:fcfc714c61d1d8ade56937eb3c29cf14d79ce37c3f5d2d3851b365143ad7ec8d",
+        "fileHash": "95fc5719caca4672b76cab0d153a175a93d3c0aba88fff5e16fa64f5194f1fc3",
+        "excerpt": "class TemplateResource {\n @GetMapping(\"/catalog/{id}\") String get() { return \"v2\"; }\n @GetMapping(\"/catalog/{id}/details\") String details() { return \"v2\"; }\n @GetMapping(\"/numbers/{id:[0-9]+}\") String constrained() { return \"v2\"; }\n}"
+      }
+    },
+    {
+      "kind": "modified",
+      "name": "get",
+      "key": "qa.TemplateResource#get/0",
+      "language": "java",
+      "contractChanged": false,
+      "before": {
+        "path": "backend/TemplateResource.java",
+        "range": {
+          "startLine": 6,
+          "endLine": 6
+        },
+        "revision": "tree-sha256:e124251a13f936ab7ffc056fd2a4e6b0264435259d0cd11c9912a940d2c6f8ad",
+        "fileHash": "2b3d1c8a325859e4a48f21d32cb3d1565e4d057e8b799f5f0f6ef04348cd9b1a",
+        "excerpt": " @GetMapping(\"/catalog/{id}\") String get() { return \"v1\"; }"
+      },
+      "after": {
+        "path": "backend/TemplateResource.java",
+        "range": {
+          "startLine": 6,
+          "endLine": 6
+        },
+        "revision": "tree-sha256:fcfc714c61d1d8ade56937eb3c29cf14d79ce37c3f5d2d3851b365143ad7ec8d",
+        "fileHash": "95fc5719caca4672b76cab0d153a175a93d3c0aba88fff5e16fa64f5194f1fc3",
+        "excerpt": " @GetMapping(\"/catalog/{id}\") String get() { return \"v2\"; }"
+      }
+    },
+    {
+      "kind": "modified",
+      "name": "details",
+      "key": "qa.TemplateResource#details/0",
+      "language": "java",
+      "contractChanged": false,
+      "before": {
+        "path": "backend/TemplateResource.java",
+        "range": {
+          "startLine": 7,
+          "endLine": 7
+        },
+        "revision": "tree-sha256:e124251a13f936ab7ffc056fd2a4e6b0264435259d0cd11c9912a940d2c6f8ad",
+        "fileHash": "2b3d1c8a325859e4a48f21d32cb3d1565e4d057e8b799f5f0f6ef04348cd9b1a",
+        "excerpt": " @GetMapping(\"/catalog/{id}/details\") String details() { return \"v1\"; }"
+      },
+      "after": {
+        "path": "backend/TemplateResource.java",
+        "range": {
+          "startLine": 7,
+          "endLine": 7
+        },
+        "revision": "tree-sha256:fcfc714c61d1d8ade56937eb3c29cf14d79ce37c3f5d2d3851b365143ad7ec8d",
+        "fileHash": "95fc5719caca4672b76cab0d153a175a93d3c0aba88fff5e16fa64f5194f1fc3",
+        "excerpt": " @GetMapping(\"/catalog/{id}/details\") String details() { return \"v2\"; }"
+      }
+    },
+    {
+      "kind": "modified",
+      "name": "constrained",
+      "key": "qa.TemplateResource#constrained/0",
+      "language": "java",
+      "contractChanged": false,
+      "before": {
+        "path": "backend/TemplateResource.java",
+        "range": {
+          "startLine": 8,
+          "endLine": 8
+        },
+        "revision": "tree-sha256:e124251a13f936ab7ffc056fd2a4e6b0264435259d0cd11c9912a940d2c6f8ad",
+        "fileHash": "2b3d1c8a325859e4a48f21d32cb3d1565e4d057e8b799f5f0f6ef04348cd9b1a",
+        "excerpt": " @GetMapping(\"/numbers/{id:[0-9]+}\") String constrained() { return \"v1\"; }"
+      },
+      "after": {
+        "path": "backend/TemplateResource.java",
+        "range": {
+          "startLine": 8,
+          "endLine": 8
+        },
+        "revision": "tree-sha256:fcfc714c61d1d8ade56937eb3c29cf14d79ce37c3f5d2d3851b365143ad7ec8d",
+        "fileHash": "95fc5719caca4672b76cab0d153a175a93d3c0aba88fff5e16fa64f5194f1fc3",
+        "excerpt": " @GetMapping(\"/numbers/{id:[0-9]+}\") String constrained() { return \"v2\"; }"
+      }
+    }
+  ],
+  "impact": {
+    "direct": [
+      {
+        "kind": "http",
+        "fromPath": "frontend/client.ts",
+        "toPath": "backend/TemplateResource.java",
+        "targetKey": "qa.TemplateResource#get/0",
+        "confidence": "medium",
+        "reason": "Literal HTTP verb/path matches source Spring mapping; runtime origin/proxy not verified",
+        "evidence": {
+          "path": "frontend/client.ts",
+          "range": {
+            "startLine": 1,
+            "endLine": 1
+          },
+          "revision": "tree-sha256:e124251a13f936ab7ffc056fd2a4e6b0264435259d0cd11c9912a940d2c6f8ad",
+          "fileHash": "799e030fb0e5e01a15d9d9e1045aa949b59429a234f3a0ad7bc2eb2676efd5e0",
+          "excerpt": "fetch('/catalog/abc'); // simple-template"
+        },
+        "targetEvidence": {
+          "path": "backend/TemplateResource.java",
+          "range": {
+            "startLine": 6,
+            "endLine": 6
+          },
+          "revision": "tree-sha256:e124251a13f936ab7ffc056fd2a4e6b0264435259d0cd11c9912a940d2c6f8ad",
+          "fileHash": "2b3d1c8a325859e4a48f21d32cb3d1565e4d057e8b799f5f0f6ef04348cd9b1a",
+          "excerpt": " @GetMapping(\"/catalog/{id}\") String get() { return \"v1\"; }"
+        }
+      },
+      {
+        "kind": "http",
+        "fromPath": "frontend/client.ts",
+        "toPath": "backend/TemplateResource.java",
+        "targetKey": "qa.TemplateResource#get/0",
+        "confidence": "medium",
+        "reason": "Literal HTTP verb/path matches source Spring mapping; runtime origin/proxy not verified",
+        "evidence": {
+          "path": "frontend/client.ts",
+          "range": {
+            "startLine": 2,
+            "endLine": 2
+          },
+          "revision": "tree-sha256:e124251a13f936ab7ffc056fd2a4e6b0264435259d0cd11c9912a940d2c6f8ad",
+          "fileHash": "799e030fb0e5e01a15d9d9e1045aa949b59429a234f3a0ad7bc2eb2676efd5e0",
+          "excerpt": "fetch('/catalog/a?trace=1'); // query-template"
+        },
+        "targetEvidence": {
+          "path": "backend/TemplateResource.java",
+          "range": {
+            "startLine": 6,
+            "endLine": 6
+          },
+          "revision": "tree-sha256:e124251a13f936ab7ffc056fd2a4e6b0264435259d0cd11c9912a940d2c6f8ad",
+          "fileHash": "2b3d1c8a325859e4a48f21d32cb3d1565e4d057e8b799f5f0f6ef04348cd9b1a",
+          "excerpt": " @GetMapping(\"/catalog/{id}\") String get() { return \"v1\"; }"
+        }
+      },
+      {
+        "kind": "http",
+        "fromPath": "frontend/client.ts",
+        "toPath": "backend/TemplateResource.java",
+        "targetKey": "qa.TemplateResource#get/0",
+        "confidence": "medium",
+        "reason": "Literal HTTP verb/path matches source Spring mapping; runtime origin/proxy not verified",
+        "evidence": {
+          "path": "frontend/client.ts",
+          "range": {
+            "startLine": 3,
+            "endLine": 3
+          },
+          "revision": "tree-sha256:e124251a13f936ab7ffc056fd2a4e6b0264435259d0cd11c9912a940d2c6f8ad",
+          "fileHash": "799e030fb0e5e01a15d9d9e1045aa949b59429a234f3a0ad7bc2eb2676efd5e0",
+          "excerpt": "fetch('/catalog/a/'); // trailing-template"
+        },
+        "targetEvidence": {
+          "path": "backend/TemplateResource.java",
+          "range": {
+            "startLine": 6,
+            "endLine": 6
+          },
+          "revision": "tree-sha256:e124251a13f936ab7ffc056fd2a4e6b0264435259d0cd11c9912a940d2c6f8ad",
+          "fileHash": "2b3d1c8a325859e4a48f21d32cb3d1565e4d057e8b799f5f0f6ef04348cd9b1a",
+          "excerpt": " @GetMapping(\"/catalog/{id}\") String get() { return \"v1\"; }"
+        }
+      },
+      {
+        "kind": "http",
+        "fromPath": "frontend/client.ts",
+        "toPath": "backend/TemplateResource.java",
+        "targetKey": "qa.TemplateResource#details/0",
+        "confidence": "medium",
+        "reason": "Literal HTTP verb/path matches source Spring mapping; runtime origin/proxy not verified",
+        "evidence": {
+          "path": "frontend/client.ts",
+          "range": {
+            "startLine": 4,
+            "endLine": 4
+          },
+          "revision": "tree-sha256:e124251a13f936ab7ffc056fd2a4e6b0264435259d0cd11c9912a940d2c6f8ad",
+          "fileHash": "799e030fb0e5e01a15d9d9e1045aa949b59429a234f3a0ad7bc2eb2676efd5e0",
+          "excerpt": "fetch('/catalog/a/details'); // longer-template"
+        },
+        "targetEvidence": {
+          "path": "backend/TemplateResource.java",
+          "range": {
+            "startLine": 7,
+            "endLine": 7
+          },
+          "revision": "tree-sha256:e124251a13f936ab7ffc056fd2a4e6b0264435259d0cd11c9912a940d2c6f8ad",
+          "fileHash": "2b3d1c8a325859e4a48f21d32cb3d1565e4d057e8b799f5f0f6ef04348cd9b1a",
+          "excerpt": " @GetMapping(\"/catalog/{id}/details\") String details() { return \"v1\"; }"
+        }
+      },
+      {
+        "kind": "http",
+        "fromPath": "frontend/client.ts",
+        "toPath": "backend/TemplateResource.java",
+        "targetKey": "qa.TemplateResource#get/0",
+        "confidence": "medium",
+        "reason": "Literal HTTP verb/path matches source Spring mapping; runtime origin/proxy not verified",
+        "evidence": {
+          "path": "frontend/client.ts",
+          "range": {
+            "startLine": 1,
+            "endLine": 1
+          },
+          "revision": "tree-sha256:fcfc714c61d1d8ade56937eb3c29cf14d79ce37c3f5d2d3851b365143ad7ec8d",
+          "fileHash": "799e030fb0e5e01a15d9d9e1045aa949b59429a234f3a0ad7bc2eb2676efd5e0",
+          "excerpt": "fetch('/catalog/abc'); // simple-template"
+        },
+        "targetEvidence": {
+          "path": "backend/TemplateResource.java",
+          "range": {
+            "startLine": 6,
+            "endLine": 6
+          },
+          "revision": "tree-sha256:fcfc714c61d1d8ade56937eb3c29cf14d79ce37c3f5d2d3851b365143ad7ec8d",
+          "fileHash": "95fc5719caca4672b76cab0d153a175a93d3c0aba88fff5e16fa64f5194f1fc3",
+          "excerpt": " @GetMapping(\"/catalog/{id}\") String get() { return \"v2\"; }"
+        }
+      },
+      {
+        "kind": "http",
+        "fromPath": "frontend/client.ts",
+        "toPath": "backend/TemplateResource.java",
+        "targetKey": "qa.TemplateResource#get/0",
+        "confidence": "medium",
+        "reason": "Literal HTTP verb/path matches source Spring mapping; runtime origin/proxy not verified",
+        "evidence": {
+          "path": "frontend/client.ts",
+          "range": {
+            "startLine": 2,
+            "endLine": 2
+          },
+          "revision": "tree-sha256:fcfc714c61d1d8ade56937eb3c29cf14d79ce37c3f5d2d3851b365143ad7ec8d",
+          "fileHash": "799e030fb0e5e01a15d9d9e1045aa949b59429a234f3a0ad7bc2eb2676efd5e0",
+          "excerpt": "fetch('/catalog/a?trace=1'); // query-template"
+        },
+        "targetEvidence": {
+          "path": "backend/TemplateResource.java",
+          "range": {
+            "startLine": 6,
+            "endLine": 6
+          },
+          "revision": "tree-sha256:fcfc714c61d1d8ade56937eb3c29cf14d79ce37c3f5d2d3851b365143ad7ec8d",
+          "fileHash": "95fc5719caca4672b76cab0d153a175a93d3c0aba88fff5e16fa64f5194f1fc3",
+          "excerpt": " @GetMapping(\"/catalog/{id}\") String get() { return \"v2\"; }"
+        }
+      },
+      {
+        "kind": "http",
+        "fromPath": "frontend/client.ts",
+        "toPath": "backend/TemplateResource.java",
+        "targetKey": "qa.TemplateResource#get/0",
+        "confidence": "medium",
+        "reason": "Literal HTTP verb/path matches source Spring mapping; runtime origin/proxy not verified",
+        "evidence": {
+          "path": "frontend/client.ts",
+          "range": {
+            "startLine": 3,
+            "endLine": 3
+          },
+          "revision": "tree-sha256:fcfc714c61d1d8ade56937eb3c29cf14d79ce37c3f5d2d3851b365143ad7ec8d",
+          "fileHash": "799e030fb0e5e01a15d9d9e1045aa949b59429a234f3a0ad7bc2eb2676efd5e0",
+          "excerpt": "fetch('/catalog/a/'); // trailing-template"
+        },
+        "targetEvidence": {
+          "path": "backend/TemplateResource.java",
+          "range": {
+            "startLine": 6,
+            "endLine": 6
+          },
+          "revision": "tree-sha256:fcfc714c61d1d8ade56937eb3c29cf14d79ce37c3f5d2d3851b365143ad7ec8d",
+          "fileHash": "95fc5719caca4672b76cab0d153a175a93d3c0aba88fff5e16fa64f5194f1fc3",
+          "excerpt": " @GetMapping(\"/catalog/{id}\") String get() { return \"v2\"; }"
+        }
+      },
+      {
+        "kind": "http",
+        "fromPath": "frontend/client.ts",
+        "toPath": "backend/TemplateResource.java",
+        "targetKey": "qa.TemplateResource#details/0",
+        "confidence": "medium",
+        "reason": "Literal HTTP verb/path matches source Spring mapping; runtime origin/proxy not verified",
+        "evidence": {
+          "path": "frontend/client.ts",
+          "range": {
+            "startLine": 4,
+            "endLine": 4
+          },
+          "revision": "tree-sha256:fcfc714c61d1d8ade56937eb3c29cf14d79ce37c3f5d2d3851b365143ad7ec8d",
+          "fileHash": "799e030fb0e5e01a15d9d9e1045aa949b59429a234f3a0ad7bc2eb2676efd5e0",
+          "excerpt": "fetch('/catalog/a/details'); // longer-template"
+        },
+        "targetEvidence": {
+          "path": "backend/TemplateResource.java",
+          "range": {
+            "startLine": 7,
+            "endLine": 7
+          },
+          "revision": "tree-sha256:fcfc714c61d1d8ade56937eb3c29cf14d79ce37c3f5d2d3851b365143ad7ec8d",
+          "fileHash": "95fc5719caca4672b76cab0d153a175a93d3c0aba88fff5e16fa64f5194f1fc3",
+          "excerpt": " @GetMapping(\"/catalog/{id}/details\") String details() { return \"v2\"; }"
+        }
+      }
+    ],
+    "indirect": []
+  },
+  "findings": [],
+  "guidance": {
+    "task": "Unconstrained URI template consumers remain mapped after constrained route suppression",
+    "ruleSetVersion": "independent-adversarial-v1",
+    "approvalGap": "No human approval is inferred. Reviewed examples/exceptions are assertions from supplied configuration; simulation records are demonstrations only.",
+    "rules": [
+      {
+        "id": "independent/http-contract",
+        "kind": "endpoint-contract-change",
+        "owner": "synthetic-qa",
+        "version": "independent-adversarial-v1",
+        "severity": "warning",
+        "instruction": "endpoint-contract-change",
+        "examples": []
+      }
+    ]
+  },
+  "unknowns": [
+    {
+      "reason": "unsupported-route-constraint",
+      "detail": "/numbers/{id:[0-9]+}",
+      "evidence": {
+        "path": "backend/TemplateResource.java",
+        "range": {
+          "startLine": 8,
+          "endLine": 8
+        },
+        "revision": "tree-sha256:e124251a13f936ab7ffc056fd2a4e6b0264435259d0cd11c9912a940d2c6f8ad",
+        "fileHash": "2b3d1c8a325859e4a48f21d32cb3d1565e4d057e8b799f5f0f6ef04348cd9b1a",
+        "excerpt": " @GetMapping(\"/numbers/{id:[0-9]+}\") String constrained() { return \"v1\"; }"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "org.springframework.web.bind.annotation.GetMapping",
+      "evidence": {
+        "path": "backend/TemplateResource.java",
+        "range": {
+          "startLine": 2,
+          "endLine": 2
+        },
+        "revision": "tree-sha256:e124251a13f936ab7ffc056fd2a4e6b0264435259d0cd11c9912a940d2c6f8ad",
+        "fileHash": "2b3d1c8a325859e4a48f21d32cb3d1565e4d057e8b799f5f0f6ef04348cd9b1a",
+        "excerpt": "import org.springframework.web.bind.annotation.GetMapping;"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "org.springframework.web.bind.annotation.PostMapping",
+      "evidence": {
+        "path": "backend/TemplateResource.java",
+        "range": {
+          "startLine": 3,
+          "endLine": 3
+        },
+        "revision": "tree-sha256:e124251a13f936ab7ffc056fd2a4e6b0264435259d0cd11c9912a940d2c6f8ad",
+        "fileHash": "2b3d1c8a325859e4a48f21d32cb3d1565e4d057e8b799f5f0f6ef04348cd9b1a",
+        "excerpt": "import org.springframework.web.bind.annotation.PostMapping;"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "org.springframework.web.bind.annotation.RequestMapping",
+      "evidence": {
+        "path": "backend/TemplateResource.java",
+        "range": {
+          "startLine": 4,
+          "endLine": 4
+        },
+        "revision": "tree-sha256:e124251a13f936ab7ffc056fd2a4e6b0264435259d0cd11c9912a940d2c6f8ad",
+        "fileHash": "2b3d1c8a325859e4a48f21d32cb3d1565e4d057e8b799f5f0f6ef04348cd9b1a",
+        "excerpt": "import org.springframework.web.bind.annotation.RequestMapping;"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "org.springframework.web.bind.annotation.GetMapping",
+      "evidence": {
+        "path": "backend/TemplateResource.java",
+        "range": {
+          "startLine": 6,
+          "endLine": 6
+        },
+        "revision": "tree-sha256:e124251a13f936ab7ffc056fd2a4e6b0264435259d0cd11c9912a940d2c6f8ad",
+        "fileHash": "2b3d1c8a325859e4a48f21d32cb3d1565e4d057e8b799f5f0f6ef04348cd9b1a",
+        "excerpt": " @GetMapping(\"/catalog/{id}\") String get() { return \"v1\"; }"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "String",
+      "evidence": {
+        "path": "backend/TemplateResource.java",
+        "range": {
+          "startLine": 6,
+          "endLine": 6
+        },
+        "revision": "tree-sha256:e124251a13f936ab7ffc056fd2a4e6b0264435259d0cd11c9912a940d2c6f8ad",
+        "fileHash": "2b3d1c8a325859e4a48f21d32cb3d1565e4d057e8b799f5f0f6ef04348cd9b1a",
+        "excerpt": " @GetMapping(\"/catalog/{id}\") String get() { return \"v1\"; }"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "org.springframework.web.bind.annotation.GetMapping",
+      "evidence": {
+        "path": "backend/TemplateResource.java",
+        "range": {
+          "startLine": 7,
+          "endLine": 7
+        },
+        "revision": "tree-sha256:e124251a13f936ab7ffc056fd2a4e6b0264435259d0cd11c9912a940d2c6f8ad",
+        "fileHash": "2b3d1c8a325859e4a48f21d32cb3d1565e4d057e8b799f5f0f6ef04348cd9b1a",
+        "excerpt": " @GetMapping(\"/catalog/{id}/details\") String details() { return \"v1\"; }"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "String",
+      "evidence": {
+        "path": "backend/TemplateResource.java",
+        "range": {
+          "startLine": 7,
+          "endLine": 7
+        },
+        "revision": "tree-sha256:e124251a13f936ab7ffc056fd2a4e6b0264435259d0cd11c9912a940d2c6f8ad",
+        "fileHash": "2b3d1c8a325859e4a48f21d32cb3d1565e4d057e8b799f5f0f6ef04348cd9b1a",
+        "excerpt": " @GetMapping(\"/catalog/{id}/details\") String details() { return \"v1\"; }"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "org.springframework.web.bind.annotation.GetMapping",
+      "evidence": {
+        "path": "backend/TemplateResource.java",
+        "range": {
+          "startLine": 8,
+          "endLine": 8
+        },
+        "revision": "tree-sha256:e124251a13f936ab7ffc056fd2a4e6b0264435259d0cd11c9912a940d2c6f8ad",
+        "fileHash": "2b3d1c8a325859e4a48f21d32cb3d1565e4d057e8b799f5f0f6ef04348cd9b1a",
+        "excerpt": " @GetMapping(\"/numbers/{id:[0-9]+}\") String constrained() { return \"v1\"; }"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "String",
+      "evidence": {
+        "path": "backend/TemplateResource.java",
+        "range": {
+          "startLine": 8,
+          "endLine": 8
+        },
+        "revision": "tree-sha256:e124251a13f936ab7ffc056fd2a4e6b0264435259d0cd11c9912a940d2c6f8ad",
+        "fileHash": "2b3d1c8a325859e4a48f21d32cb3d1565e4d057e8b799f5f0f6ef04348cd9b1a",
+        "excerpt": " @GetMapping(\"/numbers/{id:[0-9]+}\") String constrained() { return \"v1\"; }"
+      }
+    },
+    {
+      "reason": "unmatched-endpoint",
+      "evidence": {
+        "path": "backend/TemplateResource.java",
+        "range": {
+          "startLine": 8,
+          "endLine": 8
+        },
+        "revision": "tree-sha256:e124251a13f936ab7ffc056fd2a4e6b0264435259d0cd11c9912a940d2c6f8ad",
+        "fileHash": "2b3d1c8a325859e4a48f21d32cb3d1565e4d057e8b799f5f0f6ef04348cd9b1a",
+        "excerpt": " @GetMapping(\"/numbers/{id:[0-9]+}\") String constrained() { return \"v1\"; }"
+      },
+      "candidates": []
+    },
+    {
+      "reason": "unresolved-call",
+      "detail": "fetch",
+      "evidence": {
+        "path": "frontend/client.ts",
+        "range": {
+          "startLine": 1,
+          "endLine": 1
+        },
+        "revision": "tree-sha256:e124251a13f936ab7ffc056fd2a4e6b0264435259d0cd11c9912a940d2c6f8ad",
+        "fileHash": "799e030fb0e5e01a15d9d9e1045aa949b59429a234f3a0ad7bc2eb2676efd5e0",
+        "excerpt": "fetch('/catalog/abc'); // simple-template"
+      }
+    },
+    {
+      "reason": "unresolved-call",
+      "detail": "fetch",
+      "evidence": {
+        "path": "frontend/client.ts",
+        "range": {
+          "startLine": 2,
+          "endLine": 2
+        },
+        "revision": "tree-sha256:e124251a13f936ab7ffc056fd2a4e6b0264435259d0cd11c9912a940d2c6f8ad",
+        "fileHash": "799e030fb0e5e01a15d9d9e1045aa949b59429a234f3a0ad7bc2eb2676efd5e0",
+        "excerpt": "fetch('/catalog/a?trace=1'); // query-template"
+      }
+    },
+    {
+      "reason": "unresolved-call",
+      "detail": "fetch",
+      "evidence": {
+        "path": "frontend/client.ts",
+        "range": {
+          "startLine": 3,
+          "endLine": 3
+        },
+        "revision": "tree-sha256:e124251a13f936ab7ffc056fd2a4e6b0264435259d0cd11c9912a940d2c6f8ad",
+        "fileHash": "799e030fb0e5e01a15d9d9e1045aa949b59429a234f3a0ad7bc2eb2676efd5e0",
+        "excerpt": "fetch('/catalog/a/'); // trailing-template"
+      }
+    },
+    {
+      "reason": "unresolved-call",
+      "detail": "fetch",
+      "evidence": {
+        "path": "frontend/client.ts",
+        "range": {
+          "startLine": 4,
+          "endLine": 4
+        },
+        "revision": "tree-sha256:e124251a13f936ab7ffc056fd2a4e6b0264435259d0cd11c9912a940d2c6f8ad",
+        "fileHash": "799e030fb0e5e01a15d9d9e1045aa949b59429a234f3a0ad7bc2eb2676efd5e0",
+        "excerpt": "fetch('/catalog/a/details'); // longer-template"
+      }
+    },
+    {
+      "reason": "unresolved-call",
+      "detail": "fetch",
+      "evidence": {
+        "path": "frontend/client.ts",
+        "range": {
+          "startLine": 5,
+          "endLine": 5
+        },
+        "revision": "tree-sha256:e124251a13f936ab7ffc056fd2a4e6b0264435259d0cd11c9912a940d2c6f8ad",
+        "fileHash": "799e030fb0e5e01a15d9d9e1045aa949b59429a234f3a0ad7bc2eb2676efd5e0",
+        "excerpt": "fetch('/catalog/a/b'); // reject-multiple-segments"
+      }
+    },
+    {
+      "reason": "unmatched-endpoint",
+      "evidence": {
+        "path": "frontend/client.ts",
+        "range": {
+          "startLine": 5,
+          "endLine": 5
+        },
+        "revision": "tree-sha256:e124251a13f936ab7ffc056fd2a4e6b0264435259d0cd11c9912a940d2c6f8ad",
+        "fileHash": "799e030fb0e5e01a15d9d9e1045aa949b59429a234f3a0ad7bc2eb2676efd5e0",
+        "excerpt": "fetch('/catalog/a/b'); // reject-multiple-segments"
+      },
+      "candidates": []
+    },
+    {
+      "reason": "unresolved-call",
+      "detail": "fetch",
+      "evidence": {
+        "path": "frontend/client.ts",
+        "range": {
+          "startLine": 6,
+          "endLine": 6
+        },
+        "revision": "tree-sha256:e124251a13f936ab7ffc056fd2a4e6b0264435259d0cd11c9912a940d2c6f8ad",
+        "fileHash": "799e030fb0e5e01a15d9d9e1045aa949b59429a234f3a0ad7bc2eb2676efd5e0",
+        "excerpt": "fetch('/numbers/nope'); // regex-stays-unknown"
+      }
+    },
+    {
+      "reason": "unmatched-endpoint",
+      "evidence": {
+        "path": "frontend/client.ts",
+        "range": {
+          "startLine": 6,
+          "endLine": 6
+        },
+        "revision": "tree-sha256:e124251a13f936ab7ffc056fd2a4e6b0264435259d0cd11c9912a940d2c6f8ad",
+        "fileHash": "799e030fb0e5e01a15d9d9e1045aa949b59429a234f3a0ad7bc2eb2676efd5e0",
+        "excerpt": "fetch('/numbers/nope'); // regex-stays-unknown"
+      },
+      "candidates": []
+    },
+    {
+      "reason": "unsupported-route-constraint",
+      "detail": "/numbers/{id:[0-9]+}",
+      "evidence": {
+        "path": "backend/TemplateResource.java",
+        "range": {
+          "startLine": 8,
+          "endLine": 8
+        },
+        "revision": "tree-sha256:fcfc714c61d1d8ade56937eb3c29cf14d79ce37c3f5d2d3851b365143ad7ec8d",
+        "fileHash": "95fc5719caca4672b76cab0d153a175a93d3c0aba88fff5e16fa64f5194f1fc3",
+        "excerpt": " @GetMapping(\"/numbers/{id:[0-9]+}\") String constrained() { return \"v2\"; }"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "org.springframework.web.bind.annotation.GetMapping",
+      "evidence": {
+        "path": "backend/TemplateResource.java",
+        "range": {
+          "startLine": 2,
+          "endLine": 2
+        },
+        "revision": "tree-sha256:fcfc714c61d1d8ade56937eb3c29cf14d79ce37c3f5d2d3851b365143ad7ec8d",
+        "fileHash": "95fc5719caca4672b76cab0d153a175a93d3c0aba88fff5e16fa64f5194f1fc3",
+        "excerpt": "import org.springframework.web.bind.annotation.GetMapping;"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "org.springframework.web.bind.annotation.PostMapping",
+      "evidence": {
+        "path": "backend/TemplateResource.java",
+        "range": {
+          "startLine": 3,
+          "endLine": 3
+        },
+        "revision": "tree-sha256:fcfc714c61d1d8ade56937eb3c29cf14d79ce37c3f5d2d3851b365143ad7ec8d",
+        "fileHash": "95fc5719caca4672b76cab0d153a175a93d3c0aba88fff5e16fa64f5194f1fc3",
+        "excerpt": "import org.springframework.web.bind.annotation.PostMapping;"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "org.springframework.web.bind.annotation.RequestMapping",
+      "evidence": {
+        "path": "backend/TemplateResource.java",
+        "range": {
+          "startLine": 4,
+          "endLine": 4
+        },
+        "revision": "tree-sha256:fcfc714c61d1d8ade56937eb3c29cf14d79ce37c3f5d2d3851b365143ad7ec8d",
+        "fileHash": "95fc5719caca4672b76cab0d153a175a93d3c0aba88fff5e16fa64f5194f1fc3",
+        "excerpt": "import org.springframework.web.bind.annotation.RequestMapping;"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "org.springframework.web.bind.annotation.GetMapping",
+      "evidence": {
+        "path": "backend/TemplateResource.java",
+        "range": {
+          "startLine": 6,
+          "endLine": 6
+        },
+        "revision": "tree-sha256:fcfc714c61d1d8ade56937eb3c29cf14d79ce37c3f5d2d3851b365143ad7ec8d",
+        "fileHash": "95fc5719caca4672b76cab0d153a175a93d3c0aba88fff5e16fa64f5194f1fc3",
+        "excerpt": " @GetMapping(\"/catalog/{id}\") String get() { return \"v2\"; }"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "String",
+      "evidence": {
+        "path": "backend/TemplateResource.java",
+        "range": {
+          "startLine": 6,
+          "endLine": 6
+        },
+        "revision": "tree-sha256:fcfc714c61d1d8ade56937eb3c29cf14d79ce37c3f5d2d3851b365143ad7ec8d",
+        "fileHash": "95fc5719caca4672b76cab0d153a175a93d3c0aba88fff5e16fa64f5194f1fc3",
+        "excerpt": " @GetMapping(\"/catalog/{id}\") String get() { return \"v2\"; }"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "org.springframework.web.bind.annotation.GetMapping",
+      "evidence": {
+        "path": "backend/TemplateResource.java",
+        "range": {
+          "startLine": 7,
+          "endLine": 7
+        },
+        "revision": "tree-sha256:fcfc714c61d1d8ade56937eb3c29cf14d79ce37c3f5d2d3851b365143ad7ec8d",
+        "fileHash": "95fc5719caca4672b76cab0d153a175a93d3c0aba88fff5e16fa64f5194f1fc3",
+        "excerpt": " @GetMapping(\"/catalog/{id}/details\") String details() { return \"v2\"; }"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "String",
+      "evidence": {
+        "path": "backend/TemplateResource.java",
+        "range": {
+          "startLine": 7,
+          "endLine": 7
+        },
+        "revision": "tree-sha256:fcfc714c61d1d8ade56937eb3c29cf14d79ce37c3f5d2d3851b365143ad7ec8d",
+        "fileHash": "95fc5719caca4672b76cab0d153a175a93d3c0aba88fff5e16fa64f5194f1fc3",
+        "excerpt": " @GetMapping(\"/catalog/{id}/details\") String details() { return \"v2\"; }"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "org.springframework.web.bind.annotation.GetMapping",
+      "evidence": {
+        "path": "backend/TemplateResource.java",
+        "range": {
+          "startLine": 8,
+          "endLine": 8
+        },
+        "revision": "tree-sha256:fcfc714c61d1d8ade56937eb3c29cf14d79ce37c3f5d2d3851b365143ad7ec8d",
+        "fileHash": "95fc5719caca4672b76cab0d153a175a93d3c0aba88fff5e16fa64f5194f1fc3",
+        "excerpt": " @GetMapping(\"/numbers/{id:[0-9]+}\") String constrained() { return \"v2\"; }"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "String",
+      "evidence": {
+        "path": "backend/TemplateResource.java",
+        "range": {
+          "startLine": 8,
+          "endLine": 8
+        },
+        "revision": "tree-sha256:fcfc714c61d1d8ade56937eb3c29cf14d79ce37c3f5d2d3851b365143ad7ec8d",
+        "fileHash": "95fc5719caca4672b76cab0d153a175a93d3c0aba88fff5e16fa64f5194f1fc3",
+        "excerpt": " @GetMapping(\"/numbers/{id:[0-9]+}\") String constrained() { return \"v2\"; }"
+      }
+    },
+    {
+      "reason": "unmatched-endpoint",
+      "evidence": {
+        "path": "backend/TemplateResource.java",
+        "range": {
+          "startLine": 8,
+          "endLine": 8
+        },
+        "revision": "tree-sha256:fcfc714c61d1d8ade56937eb3c29cf14d79ce37c3f5d2d3851b365143ad7ec8d",
+        "fileHash": "95fc5719caca4672b76cab0d153a175a93d3c0aba88fff5e16fa64f5194f1fc3",
+        "excerpt": " @GetMapping(\"/numbers/{id:[0-9]+}\") String constrained() { return \"v2\"; }"
+      },
+      "candidates": []
+    },
+    {
+      "reason": "unresolved-call",
+      "detail": "fetch",
+      "evidence": {
+        "path": "frontend/client.ts",
+        "range": {
+          "startLine": 1,
+          "endLine": 1
+        },
+        "revision": "tree-sha256:fcfc714c61d1d8ade56937eb3c29cf14d79ce37c3f5d2d3851b365143ad7ec8d",
+        "fileHash": "799e030fb0e5e01a15d9d9e1045aa949b59429a234f3a0ad7bc2eb2676efd5e0",
+        "excerpt": "fetch('/catalog/abc'); // simple-template"
+      }
+    },
+    {
+      "reason": "unresolved-call",
+      "detail": "fetch",
+      "evidence": {
+        "path": "frontend/client.ts",
+        "range": {
+          "startLine": 2,
+          "endLine": 2
+        },
+        "revision": "tree-sha256:fcfc714c61d1d8ade56937eb3c29cf14d79ce37c3f5d2d3851b365143ad7ec8d",
+        "fileHash": "799e030fb0e5e01a15d9d9e1045aa949b59429a234f3a0ad7bc2eb2676efd5e0",
+        "excerpt": "fetch('/catalog/a?trace=1'); // query-template"
+      }
+    },
+    {
+      "reason": "unresolved-call",
+      "detail": "fetch",
+      "evidence": {
+        "path": "frontend/client.ts",
+        "range": {
+          "startLine": 3,
+          "endLine": 3
+        },
+        "revision": "tree-sha256:fcfc714c61d1d8ade56937eb3c29cf14d79ce37c3f5d2d3851b365143ad7ec8d",
+        "fileHash": "799e030fb0e5e01a15d9d9e1045aa949b59429a234f3a0ad7bc2eb2676efd5e0",
+        "excerpt": "fetch('/catalog/a/'); // trailing-template"
+      }
+    },
+    {
+      "reason": "unresolved-call",
+      "detail": "fetch",
+      "evidence": {
+        "path": "frontend/client.ts",
+        "range": {
+          "startLine": 4,
+          "endLine": 4
+        },
+        "revision": "tree-sha256:fcfc714c61d1d8ade56937eb3c29cf14d79ce37c3f5d2d3851b365143ad7ec8d",
+        "fileHash": "799e030fb0e5e01a15d9d9e1045aa949b59429a234f3a0ad7bc2eb2676efd5e0",
+        "excerpt": "fetch('/catalog/a/details'); // longer-template"
+      }
+    },
+    {
+      "reason": "unresolved-call",
+      "detail": "fetch",
+      "evidence": {
+        "path": "frontend/client.ts",
+        "range": {
+          "startLine": 5,
+          "endLine": 5
+        },
+        "revision": "tree-sha256:fcfc714c61d1d8ade56937eb3c29cf14d79ce37c3f5d2d3851b365143ad7ec8d",
+        "fileHash": "799e030fb0e5e01a15d9d9e1045aa949b59429a234f3a0ad7bc2eb2676efd5e0",
+        "excerpt": "fetch('/catalog/a/b'); // reject-multiple-segments"
+      }
+    },
+    {
+      "reason": "unmatched-endpoint",
+      "evidence": {
+        "path": "frontend/client.ts",
+        "range": {
+          "startLine": 5,
+          "endLine": 5
+        },
+        "revision": "tree-sha256:fcfc714c61d1d8ade56937eb3c29cf14d79ce37c3f5d2d3851b365143ad7ec8d",
+        "fileHash": "799e030fb0e5e01a15d9d9e1045aa949b59429a234f3a0ad7bc2eb2676efd5e0",
+        "excerpt": "fetch('/catalog/a/b'); // reject-multiple-segments"
+      },
+      "candidates": []
+    },
+    {
+      "reason": "unresolved-call",
+      "detail": "fetch",
+      "evidence": {
+        "path": "frontend/client.ts",
+        "range": {
+          "startLine": 6,
+          "endLine": 6
+        },
+        "revision": "tree-sha256:fcfc714c61d1d8ade56937eb3c29cf14d79ce37c3f5d2d3851b365143ad7ec8d",
+        "fileHash": "799e030fb0e5e01a15d9d9e1045aa949b59429a234f3a0ad7bc2eb2676efd5e0",
+        "excerpt": "fetch('/numbers/nope'); // regex-stays-unknown"
+      }
+    },
+    {
+      "reason": "unmatched-endpoint",
+      "evidence": {
+        "path": "frontend/client.ts",
+        "range": {
+          "startLine": 6,
+          "endLine": 6
+        },
+        "revision": "tree-sha256:fcfc714c61d1d8ade56937eb3c29cf14d79ce37c3f5d2d3851b365143ad7ec8d",
+        "fileHash": "799e030fb0e5e01a15d9d9e1045aa949b59429a234f3a0ad7bc2eb2676efd5e0",
+        "excerpt": "fetch('/numbers/nope'); // regex-stays-unknown"
+      },
+      "candidates": []
+    }
+  ],
+  "focusedTests": [
+    {
+      "kind": "api-consumer",
+      "reason": "Exercise HTTP route, verb, serialization, empty/not-found/error responses and consumer rendering",
+      "evidence": {
+        "path": "frontend/client.ts",
+        "range": {
+          "startLine": 1,
+          "endLine": 1
+        },
+        "revision": "tree-sha256:e124251a13f936ab7ffc056fd2a4e6b0264435259d0cd11c9912a940d2c6f8ad",
+        "fileHash": "799e030fb0e5e01a15d9d9e1045aa949b59429a234f3a0ad7bc2eb2676efd5e0",
+        "excerpt": "fetch('/catalog/abc'); // simple-template"
+      },
+      "targetEvidence": {
+        "path": "backend/TemplateResource.java",
+        "range": {
+          "startLine": 6,
+          "endLine": 6
+        },
+        "revision": "tree-sha256:e124251a13f936ab7ffc056fd2a4e6b0264435259d0cd11c9912a940d2c6f8ad",
+        "fileHash": "2b3d1c8a325859e4a48f21d32cb3d1565e4d057e8b799f5f0f6ef04348cd9b1a",
+        "excerpt": " @GetMapping(\"/catalog/{id}\") String get() { return \"v1\"; }"
+      }
+    },
+    {
+      "kind": "api-consumer",
+      "reason": "Exercise HTTP route, verb, serialization, empty/not-found/error responses and consumer rendering",
+      "evidence": {
+        "path": "frontend/client.ts",
+        "range": {
+          "startLine": 2,
+          "endLine": 2
+        },
+        "revision": "tree-sha256:e124251a13f936ab7ffc056fd2a4e6b0264435259d0cd11c9912a940d2c6f8ad",
+        "fileHash": "799e030fb0e5e01a15d9d9e1045aa949b59429a234f3a0ad7bc2eb2676efd5e0",
+        "excerpt": "fetch('/catalog/a?trace=1'); // query-template"
+      },
+      "targetEvidence": {
+        "path": "backend/TemplateResource.java",
+        "range": {
+          "startLine": 6,
+          "endLine": 6
+        },
+        "revision": "tree-sha256:e124251a13f936ab7ffc056fd2a4e6b0264435259d0cd11c9912a940d2c6f8ad",
+        "fileHash": "2b3d1c8a325859e4a48f21d32cb3d1565e4d057e8b799f5f0f6ef04348cd9b1a",
+        "excerpt": " @GetMapping(\"/catalog/{id}\") String get() { return \"v1\"; }"
+      }
+    },
+    {
+      "kind": "api-consumer",
+      "reason": "Exercise HTTP route, verb, serialization, empty/not-found/error responses and consumer rendering",
+      "evidence": {
+        "path": "frontend/client.ts",
+        "range": {
+          "startLine": 3,
+          "endLine": 3
+        },
+        "revision": "tree-sha256:e124251a13f936ab7ffc056fd2a4e6b0264435259d0cd11c9912a940d2c6f8ad",
+        "fileHash": "799e030fb0e5e01a15d9d9e1045aa949b59429a234f3a0ad7bc2eb2676efd5e0",
+        "excerpt": "fetch('/catalog/a/'); // trailing-template"
+      },
+      "targetEvidence": {
+        "path": "backend/TemplateResource.java",
+        "range": {
+          "startLine": 6,
+          "endLine": 6
+        },
+        "revision": "tree-sha256:e124251a13f936ab7ffc056fd2a4e6b0264435259d0cd11c9912a940d2c6f8ad",
+        "fileHash": "2b3d1c8a325859e4a48f21d32cb3d1565e4d057e8b799f5f0f6ef04348cd9b1a",
+        "excerpt": " @GetMapping(\"/catalog/{id}\") String get() { return \"v1\"; }"
+      }
+    },
+    {
+      "kind": "api-consumer",
+      "reason": "Exercise HTTP route, verb, serialization, empty/not-found/error responses and consumer rendering",
+      "evidence": {
+        "path": "frontend/client.ts",
+        "range": {
+          "startLine": 4,
+          "endLine": 4
+        },
+        "revision": "tree-sha256:e124251a13f936ab7ffc056fd2a4e6b0264435259d0cd11c9912a940d2c6f8ad",
+        "fileHash": "799e030fb0e5e01a15d9d9e1045aa949b59429a234f3a0ad7bc2eb2676efd5e0",
+        "excerpt": "fetch('/catalog/a/details'); // longer-template"
+      },
+      "targetEvidence": {
+        "path": "backend/TemplateResource.java",
+        "range": {
+          "startLine": 7,
+          "endLine": 7
+        },
+        "revision": "tree-sha256:e124251a13f936ab7ffc056fd2a4e6b0264435259d0cd11c9912a940d2c6f8ad",
+        "fileHash": "2b3d1c8a325859e4a48f21d32cb3d1565e4d057e8b799f5f0f6ef04348cd9b1a",
+        "excerpt": " @GetMapping(\"/catalog/{id}/details\") String details() { return \"v1\"; }"
+      }
+    },
+    {
+      "kind": "api-consumer",
+      "reason": "Exercise HTTP route, verb, serialization, empty/not-found/error responses and consumer rendering",
+      "evidence": {
+        "path": "frontend/client.ts",
+        "range": {
+          "startLine": 1,
+          "endLine": 1
+        },
+        "revision": "tree-sha256:fcfc714c61d1d8ade56937eb3c29cf14d79ce37c3f5d2d3851b365143ad7ec8d",
+        "fileHash": "799e030fb0e5e01a15d9d9e1045aa949b59429a234f3a0ad7bc2eb2676efd5e0",
+        "excerpt": "fetch('/catalog/abc'); // simple-template"
+      },
+      "targetEvidence": {
+        "path": "backend/TemplateResource.java",
+        "range": {
+          "startLine": 6,
+          "endLine": 6
+        },
+        "revision": "tree-sha256:fcfc714c61d1d8ade56937eb3c29cf14d79ce37c3f5d2d3851b365143ad7ec8d",
+        "fileHash": "95fc5719caca4672b76cab0d153a175a93d3c0aba88fff5e16fa64f5194f1fc3",
+        "excerpt": " @GetMapping(\"/catalog/{id}\") String get() { return \"v2\"; }"
+      }
+    },
+    {
+      "kind": "api-consumer",
+      "reason": "Exercise HTTP route, verb, serialization, empty/not-found/error responses and consumer rendering",
+      "evidence": {
+        "path": "frontend/client.ts",
+        "range": {
+          "startLine": 2,
+          "endLine": 2
+        },
+        "revision": "tree-sha256:fcfc714c61d1d8ade56937eb3c29cf14d79ce37c3f5d2d3851b365143ad7ec8d",
+        "fileHash": "799e030fb0e5e01a15d9d9e1045aa949b59429a234f3a0ad7bc2eb2676efd5e0",
+        "excerpt": "fetch('/catalog/a?trace=1'); // query-template"
+      },
+      "targetEvidence": {
+        "path": "backend/TemplateResource.java",
+        "range": {
+          "startLine": 6,
+          "endLine": 6
+        },
+        "revision": "tree-sha256:fcfc714c61d1d8ade56937eb3c29cf14d79ce37c3f5d2d3851b365143ad7ec8d",
+        "fileHash": "95fc5719caca4672b76cab0d153a175a93d3c0aba88fff5e16fa64f5194f1fc3",
+        "excerpt": " @GetMapping(\"/catalog/{id}\") String get() { return \"v2\"; }"
+      }
+    },
+    {
+      "kind": "api-consumer",
+      "reason": "Exercise HTTP route, verb, serialization, empty/not-found/error responses and consumer rendering",
+      "evidence": {
+        "path": "frontend/client.ts",
+        "range": {
+          "startLine": 3,
+          "endLine": 3
+        },
+        "revision": "tree-sha256:fcfc714c61d1d8ade56937eb3c29cf14d79ce37c3f5d2d3851b365143ad7ec8d",
+        "fileHash": "799e030fb0e5e01a15d9d9e1045aa949b59429a234f3a0ad7bc2eb2676efd5e0",
+        "excerpt": "fetch('/catalog/a/'); // trailing-template"
+      },
+      "targetEvidence": {
+        "path": "backend/TemplateResource.java",
+        "range": {
+          "startLine": 6,
+          "endLine": 6
+        },
+        "revision": "tree-sha256:fcfc714c61d1d8ade56937eb3c29cf14d79ce37c3f5d2d3851b365143ad7ec8d",
+        "fileHash": "95fc5719caca4672b76cab0d153a175a93d3c0aba88fff5e16fa64f5194f1fc3",
+        "excerpt": " @GetMapping(\"/catalog/{id}\") String get() { return \"v2\"; }"
+      }
+    },
+    {
+      "kind": "api-consumer",
+      "reason": "Exercise HTTP route, verb, serialization, empty/not-found/error responses and consumer rendering",
+      "evidence": {
+        "path": "frontend/client.ts",
+        "range": {
+          "startLine": 4,
+          "endLine": 4
+        },
+        "revision": "tree-sha256:fcfc714c61d1d8ade56937eb3c29cf14d79ce37c3f5d2d3851b365143ad7ec8d",
+        "fileHash": "799e030fb0e5e01a15d9d9e1045aa949b59429a234f3a0ad7bc2eb2676efd5e0",
+        "excerpt": "fetch('/catalog/a/details'); // longer-template"
+      },
+      "targetEvidence": {
+        "path": "backend/TemplateResource.java",
+        "range": {
+          "startLine": 7,
+          "endLine": 7
+        },
+        "revision": "tree-sha256:fcfc714c61d1d8ade56937eb3c29cf14d79ce37c3f5d2d3851b365143ad7ec8d",
+        "fileHash": "95fc5719caca4672b76cab0d153a175a93d3c0aba88fff5e16fa64f5194f1fc3",
+        "excerpt": " @GetMapping(\"/catalog/{id}/details\") String details() { return \"v2\"; }"
+      }
+    }
+  ],
+  "coverage": {
+    "complete": false,
+    "fullRegressionMayBeSkipped": false,
+    "sourceFiles": {
+      "baseline": 2,
+      "candidate": 2
+    },
+    "excluded": {
+      "baseline": [],
+      "candidate": []
+    },
+    "limitations": [
+      "Source-only analysis; no Java/TypeScript semantic compilation, runtime dispatch, reflection, DI wiring, proxy/origin verification or transitive external package sources",
+      "Edges are evidence-backed approximations; indirect file dependencies do not prove execution",
+      "Renames inferred only for identical declaration key/signature/body; edited renames remain delete/add",
+      "Unknown syntax and unresolved/dynamic dependencies remain visible; passing fixture tests is not private-repository acceptance"
+    ]
+  },
+  "cache": {
+    "report": "disabled",
+    "parsedFiles": 4,
+    "reusedFiles": 0,
+    "invalidEntries": 0
+  },
+  "metrics": {
+    "elapsedMs": 45.44,
+    "bytesRead": 1410,
+    "reportCacheHit": false
+  }
+}

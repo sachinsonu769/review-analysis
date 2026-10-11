@@ -1,0 +1,15 @@
+{
+  "status": "final-image-export-verified",
+  "recordedAt": "2026-10-11T17:44:41.968Z",
+  "sourceBuildHash": "0427f5fed8a45a3d4dbc5523f1d0f8afb57949bac0df1f9bef249fd73ae31061",
+  "imageId": "sha256:56ce7b94faf0f817f0fc13a1358b6650ff0d950bbd68198f070d649e1c23c819",
+  "archive": "/workspace/review-analysis-deliverables/review-analysis-image.tar.gz",
+  "archiveBytes": 250716775,
+  "archiveSha256": "3dcfa4adac6cf874d092ca2327c9bbfec5f145776d79ab6c01d67aaefef10bea",
+  "checksumVerified": true,
+  "gzipVerified": true,
+  "dockerLoadVerified": true,
+  "linuxDockerExecuted": true,
+  "windowsDesktopExecuted": false,
+  "smokeEvidence": "/tmp/review-analysis-docker-final-smoke.json"
+}

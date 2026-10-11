@@ -1,0 +1,15 @@
+{
+  "command": [
+    "node",
+    "/workspace/review-analysis-deliverables/expanded-qa/api-browser.mjs",
+    "/workspace/review-analysis-deliverables/expanded-qa/pin-1/source",
+    "/workspace/review-analysis-deliverables/expanded-qa/pin-1/browser-api-run-2-data",
+    "0427f5fed8a45a3d4dbc5523f1d0f8afb57949bac0df1f9bef249fd73ae31061",
+    "http://127.0.0.1:18787"
+  ],
+  "cwd": null,
+  "startedAt": "2026-10-11T17:48:14.669641+00:00",
+  "dockerConfig": "/tmp/review-analysis-docker-config",
+  "exitCode": 0,
+  "elapsedSeconds": 18.858
+}

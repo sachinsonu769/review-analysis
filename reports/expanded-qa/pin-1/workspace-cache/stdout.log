@@ -1,0 +1,428 @@
+{
+  "status": "pass",
+  "expectedBuild": "0427f5fed8a45a3d4dbc5523f1d0f8afb57949bac0df1f9bef249fd73ae31061",
+  "observations": [
+    {
+      "name": "cold",
+      "cache": {
+        "projects": [
+          {
+            "projectId": "qa",
+            "report": "miss",
+            "parsedFiles": 0,
+            "reusedFiles": 0,
+            "invalidEntries": 0
+          }
+        ],
+        "quality": [
+          {
+            "projectId": "qa",
+            "status": "miss"
+          }
+        ]
+      },
+      "changes": 0,
+      "qualityFindings": 1,
+      "provenance": {
+        "projects": [
+          {
+            "projectId": "qa",
+            "baseline": {
+              "root": "/tmp/expanded-qa-cache-GnNwNH/baseline",
+              "type": "directory",
+              "revision": "tree-sha256:8f47b693161630dd62a481379406f4fddc4620362bfd6f68977e1491ec8ecb27",
+              "contentHash": "8f47b693161630dd62a481379406f4fddc4620362bfd6f68977e1491ec8ecb27",
+              "dirty": false
+            },
+            "candidate": {
+              "root": "/tmp/expanded-qa-cache-GnNwNH/candidate",
+              "type": "directory",
+              "revision": "tree-sha256:8f47b693161630dd62a481379406f4fddc4620362bfd6f68977e1491ec8ecb27",
+              "contentHash": "8f47b693161630dd62a481379406f4fddc4620362bfd6f68977e1491ec8ecb27",
+              "dirty": false
+            },
+            "rulesHash": "3b0e96c425c2b2b13c614f4418f8ee3a56b5e6afbf330fb42be05a3e618ae336",
+            "baselineRulesHash": "3b0e96c425c2b2b13c614f4418f8ee3a56b5e6afbf330fb42be05a3e618ae336",
+            "cacheKey": "5b132b4eeebd59be335e1f4f18fe8b912acc0ed94a3448ba73b950572a38826a"
+          }
+        ]
+      }
+    },
+    {
+      "name": "warm",
+      "cache": {
+        "projects": [
+          {
+            "projectId": "qa",
+            "report": "hit",
+            "parsedFiles": 0,
+            "reusedFiles": 0,
+            "invalidEntries": 0
+          }
+        ],
+        "quality": [
+          {
+            "projectId": "qa",
+            "status": "hit"
+          }
+        ]
+      },
+      "changes": 0,
+      "qualityFindings": 1,
+      "provenance": {
+        "projects": [
+          {
+            "projectId": "qa",
+            "baseline": {
+              "root": "/tmp/expanded-qa-cache-GnNwNH/baseline",
+              "type": "directory",
+              "revision": "tree-sha256:8f47b693161630dd62a481379406f4fddc4620362bfd6f68977e1491ec8ecb27",
+              "contentHash": "8f47b693161630dd62a481379406f4fddc4620362bfd6f68977e1491ec8ecb27",
+              "dirty": false
+            },
+            "candidate": {
+              "root": "/tmp/expanded-qa-cache-GnNwNH/candidate",
+              "type": "directory",
+              "revision": "tree-sha256:8f47b693161630dd62a481379406f4fddc4620362bfd6f68977e1491ec8ecb27",
+              "contentHash": "8f47b693161630dd62a481379406f4fddc4620362bfd6f68977e1491ec8ecb27",
+              "dirty": false
+            },
+            "rulesHash": "3b0e96c425c2b2b13c614f4418f8ee3a56b5e6afbf330fb42be05a3e618ae336",
+            "baselineRulesHash": "3b0e96c425c2b2b13c614f4418f8ee3a56b5e6afbf330fb42be05a3e618ae336",
+            "cacheKey": "5b132b4eeebd59be335e1f4f18fe8b912acc0ed94a3448ba73b950572a38826a"
+          }
+        ]
+      }
+    },
+    {
+      "name": "date-change",
+      "cache": {
+        "projects": [
+          {
+            "projectId": "qa",
+            "report": "miss",
+            "parsedFiles": 0,
+            "reusedFiles": 0,
+            "invalidEntries": 0
+          }
+        ],
+        "quality": [
+          {
+            "projectId": "qa",
+            "status": "hit"
+          }
+        ]
+      },
+      "changes": 0,
+      "qualityFindings": 1,
+      "provenance": {
+        "projects": [
+          {
+            "projectId": "qa",
+            "baseline": {
+              "root": "/tmp/expanded-qa-cache-GnNwNH/baseline",
+              "type": "directory",
+              "revision": "tree-sha256:8f47b693161630dd62a481379406f4fddc4620362bfd6f68977e1491ec8ecb27",
+              "contentHash": "8f47b693161630dd62a481379406f4fddc4620362bfd6f68977e1491ec8ecb27",
+              "dirty": false
+            },
+            "candidate": {
+              "root": "/tmp/expanded-qa-cache-GnNwNH/candidate",
+              "type": "directory",
+              "revision": "tree-sha256:8f47b693161630dd62a481379406f4fddc4620362bfd6f68977e1491ec8ecb27",
+              "contentHash": "8f47b693161630dd62a481379406f4fddc4620362bfd6f68977e1491ec8ecb27",
+              "dirty": false
+            },
+            "rulesHash": "3b0e96c425c2b2b13c614f4418f8ee3a56b5e6afbf330fb42be05a3e618ae336",
+            "baselineRulesHash": "3b0e96c425c2b2b13c614f4418f8ee3a56b5e6afbf330fb42be05a3e618ae336",
+            "cacheKey": "2632c5522f6d6b4d9a854b1405d4ce185c032b298424b849eccc447066678a5c"
+          }
+        ]
+      }
+    },
+    {
+      "name": "task-change",
+      "cache": {
+        "projects": [
+          {
+            "projectId": "qa",
+            "report": "miss",
+            "parsedFiles": 0,
+            "reusedFiles": 0,
+            "invalidEntries": 0
+          }
+        ],
+        "quality": [
+          {
+            "projectId": "qa",
+            "status": "hit"
+          }
+        ]
+      },
+      "changes": 0,
+      "qualityFindings": 1,
+      "provenance": {
+        "projects": [
+          {
+            "projectId": "qa",
+            "baseline": {
+              "root": "/tmp/expanded-qa-cache-GnNwNH/baseline",
+              "type": "directory",
+              "revision": "tree-sha256:8f47b693161630dd62a481379406f4fddc4620362bfd6f68977e1491ec8ecb27",
+              "contentHash": "8f47b693161630dd62a481379406f4fddc4620362bfd6f68977e1491ec8ecb27",
+              "dirty": false
+            },
+            "candidate": {
+              "root": "/tmp/expanded-qa-cache-GnNwNH/candidate",
+              "type": "directory",
+              "revision": "tree-sha256:8f47b693161630dd62a481379406f4fddc4620362bfd6f68977e1491ec8ecb27",
+              "contentHash": "8f47b693161630dd62a481379406f4fddc4620362bfd6f68977e1491ec8ecb27",
+              "dirty": false
+            },
+            "rulesHash": "3b0e96c425c2b2b13c614f4418f8ee3a56b5e6afbf330fb42be05a3e618ae336",
+            "baselineRulesHash": "3b0e96c425c2b2b13c614f4418f8ee3a56b5e6afbf330fb42be05a3e618ae336",
+            "cacheKey": "1a6588366074879aa91e868b3f1f97aa680d778ee489fb4fda1145987ba8688e"
+          }
+        ]
+      }
+    },
+    {
+      "name": "rules-change",
+      "cache": {
+        "projects": [
+          {
+            "projectId": "qa",
+            "report": "miss",
+            "parsedFiles": 0,
+            "reusedFiles": 0,
+            "invalidEntries": 0
+          }
+        ],
+        "quality": [
+          {
+            "projectId": "qa",
+            "status": "hit"
+          }
+        ]
+      },
+      "changes": 0,
+      "qualityFindings": 1,
+      "provenance": {
+        "projects": [
+          {
+            "projectId": "qa",
+            "baseline": {
+              "root": "/tmp/expanded-qa-cache-GnNwNH/baseline",
+              "type": "directory",
+              "revision": "tree-sha256:8f47b693161630dd62a481379406f4fddc4620362bfd6f68977e1491ec8ecb27",
+              "contentHash": "8f47b693161630dd62a481379406f4fddc4620362bfd6f68977e1491ec8ecb27",
+              "dirty": false
+            },
+            "candidate": {
+              "root": "/tmp/expanded-qa-cache-GnNwNH/candidate",
+              "type": "directory",
+              "revision": "tree-sha256:8f47b693161630dd62a481379406f4fddc4620362bfd6f68977e1491ec8ecb27",
+              "contentHash": "8f47b693161630dd62a481379406f4fddc4620362bfd6f68977e1491ec8ecb27",
+              "dirty": false
+            },
+            "rulesHash": "602613117b39bff55464cd0424ad7d16294b8ee61fc9077300ba5de178f86670",
+            "baselineRulesHash": "602613117b39bff55464cd0424ad7d16294b8ee61fc9077300ba5de178f86670",
+            "cacheKey": "3a75e401344e3c225938b6695af8f3ff885d8d34a45e9e0fd97440cf3bf42c4a"
+          }
+        ]
+      }
+    },
+    {
+      "name": "quality-config-change",
+      "cache": {
+        "projects": [
+          {
+            "projectId": "qa",
+            "report": "hit",
+            "parsedFiles": 0,
+            "reusedFiles": 0,
+            "invalidEntries": 0
+          }
+        ],
+        "quality": [
+          {
+            "projectId": "qa",
+            "status": "miss"
+          }
+        ]
+      },
+      "changes": 0,
+      "qualityFindings": 1,
+      "provenance": {
+        "projects": [
+          {
+            "projectId": "qa",
+            "baseline": {
+              "root": "/tmp/expanded-qa-cache-GnNwNH/baseline",
+              "type": "directory",
+              "revision": "tree-sha256:8f47b693161630dd62a481379406f4fddc4620362bfd6f68977e1491ec8ecb27",
+              "contentHash": "8f47b693161630dd62a481379406f4fddc4620362bfd6f68977e1491ec8ecb27",
+              "dirty": false
+            },
+            "candidate": {
+              "root": "/tmp/expanded-qa-cache-GnNwNH/candidate",
+              "type": "directory",
+              "revision": "tree-sha256:8f47b693161630dd62a481379406f4fddc4620362bfd6f68977e1491ec8ecb27",
+              "contentHash": "8f47b693161630dd62a481379406f4fddc4620362bfd6f68977e1491ec8ecb27",
+              "dirty": false
+            },
+            "rulesHash": "3b0e96c425c2b2b13c614f4418f8ee3a56b5e6afbf330fb42be05a3e618ae336",
+            "baselineRulesHash": "3b0e96c425c2b2b13c614f4418f8ee3a56b5e6afbf330fb42be05a3e618ae336",
+            "cacheKey": "5b132b4eeebd59be335e1f4f18fe8b912acc0ed94a3448ba73b950572a38826a"
+          }
+        ]
+      }
+    },
+    {
+      "name": "source-content-change",
+      "cache": {
+        "projects": [
+          {
+            "projectId": "qa",
+            "report": "miss",
+            "parsedFiles": 0,
+            "reusedFiles": 0,
+            "invalidEntries": 0
+          }
+        ],
+        "quality": [
+          {
+            "projectId": "qa",
+            "status": "miss"
+          }
+        ]
+      },
+      "changes": 1,
+      "qualityFindings": 1,
+      "provenance": {
+        "projects": [
+          {
+            "projectId": "qa",
+            "baseline": {
+              "root": "/tmp/expanded-qa-cache-GnNwNH/baseline",
+              "type": "directory",
+              "revision": "tree-sha256:8f47b693161630dd62a481379406f4fddc4620362bfd6f68977e1491ec8ecb27",
+              "contentHash": "8f47b693161630dd62a481379406f4fddc4620362bfd6f68977e1491ec8ecb27",
+              "dirty": false
+            },
+            "candidate": {
+              "root": "/tmp/expanded-qa-cache-GnNwNH/candidate",
+              "type": "directory",
+              "revision": "tree-sha256:edb0a881b07cee32b381c9882bd4dcd74f9642ec99dfe84d3766e0eb552b43a7",
+              "contentHash": "edb0a881b07cee32b381c9882bd4dcd74f9642ec99dfe84d3766e0eb552b43a7",
+              "dirty": false
+            },
+            "rulesHash": "3b0e96c425c2b2b13c614f4418f8ee3a56b5e6afbf330fb42be05a3e618ae336",
+            "baselineRulesHash": "3b0e96c425c2b2b13c614f4418f8ee3a56b5e6afbf330fb42be05a3e618ae336",
+            "cacheKey": "22c5e412e732e4082573e6e9f6b5e757ae545c0f5a2ab8d3550222b0c2cfd54e"
+          }
+        ]
+      }
+    },
+    {
+      "name": "corrupt-report-cache",
+      "cache": {
+        "projects": [
+          {
+            "projectId": "qa",
+            "report": "miss",
+            "parsedFiles": 0,
+            "reusedFiles": 0,
+            "invalidEntries": 1
+          }
+        ],
+        "quality": [
+          {
+            "projectId": "qa",
+            "status": "hit"
+          }
+        ]
+      },
+      "changes": 1,
+      "qualityFindings": 1,
+      "provenance": {
+        "projects": [
+          {
+            "projectId": "qa",
+            "baseline": {
+              "root": "/tmp/expanded-qa-cache-GnNwNH/baseline",
+              "type": "directory",
+              "revision": "tree-sha256:8f47b693161630dd62a481379406f4fddc4620362bfd6f68977e1491ec8ecb27",
+              "contentHash": "8f47b693161630dd62a481379406f4fddc4620362bfd6f68977e1491ec8ecb27",
+              "dirty": false
+            },
+            "candidate": {
+              "root": "/tmp/expanded-qa-cache-GnNwNH/candidate",
+              "type": "directory",
+              "revision": "tree-sha256:edb0a881b07cee32b381c9882bd4dcd74f9642ec99dfe84d3766e0eb552b43a7",
+              "contentHash": "edb0a881b07cee32b381c9882bd4dcd74f9642ec99dfe84d3766e0eb552b43a7",
+              "dirty": false
+            },
+            "rulesHash": "3b0e96c425c2b2b13c614f4418f8ee3a56b5e6afbf330fb42be05a3e618ae336",
+            "baselineRulesHash": "3b0e96c425c2b2b13c614f4418f8ee3a56b5e6afbf330fb42be05a3e618ae336",
+            "cacheKey": "22c5e412e732e4082573e6e9f6b5e757ae545c0f5a2ab8d3550222b0c2cfd54e"
+          }
+        ]
+      }
+    },
+    {
+      "name": "dirty-worktree",
+      "cache": {
+        "projects": [
+          {
+            "projectId": "git",
+            "report": "bypass-dirty",
+            "parsedFiles": 0,
+            "reusedFiles": 0,
+            "invalidEntries": 0
+          }
+        ],
+        "quality": [
+          {
+            "projectId": "git",
+            "status": "bypass-dirty"
+          }
+        ]
+      },
+      "changes": 2,
+      "qualityFindings": 0,
+      "provenance": {
+        "projects": [
+          {
+            "projectId": "git",
+            "baseline": {
+              "root": "/tmp/expanded-qa-cache-GnNwNH/git",
+              "type": "git",
+              "revision": "66c1dcc6fe208744ed4d114aeec302a137db0539",
+              "contentHash": "955fe41356be8ff4e9da19abb9412a7b110a6a3e52d7dc62e7a4b2610e065baa",
+              "dirty": false
+            },
+            "candidate": {
+              "root": "/tmp/expanded-qa-cache-GnNwNH/git",
+              "type": "worktree",
+              "revision": "worktree:9ccd20751609690c6d23dae3a03c7a3f2049a7c9:eccda392c336abf8",
+              "contentHash": "eccda392c336abf8292ea0677b958acc22f7f81324777ede785b38d718b1aab8",
+              "dirty": true
+            },
+            "rulesHash": "8a1f7b48ab5db0a58862ea0d40785ffd712163e646aa4561935b061d69ea24cc",
+            "baselineRulesHash": "8a1f7b48ab5db0a58862ea0d40785ffd712163e646aa4561935b061d69ea24cc",
+            "cacheKey": "19e5f4c1883ec04050970c5343e81966fb6113ca121b8d0cbee1e36b4f448ccb"
+          }
+        ]
+      }
+    }
+  ],
+  "git": {
+    "original": "66c1dcc6fe208744ed4d114aeec302a137db0539",
+    "replacement": "9ccd20751609690c6d23dae3a03c7a3f2049a7c9",
+    "pinnedSource": "export const original=1;\n",
+    "hookExecuted": false,
+    "sourceUnchanged": true,
+    "indexUnchanged": true
+  }
+}

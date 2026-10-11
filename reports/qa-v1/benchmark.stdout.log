@@ -1,0 +1,89 @@
+
+> review-analysis-poc@0.1.0 benchmark
+> node scripts/benchmark.js
+
+{
+  "recordedAt": "2026-10-11T16:46:07.180Z",
+  "runtime": {
+    "node": "v24.19.0",
+    "platform": "linux",
+    "architecture": "x64"
+  },
+  "analyzer": {
+    "version": "0.1.0",
+    "sourceBuildHash": "8ee7fcacee9a1b276b2bfab2665d8d3ab771e40eee5f3924f1f301192426e68f",
+    "parsers": {
+      "java": "java-parser@3.0.1",
+      "typescript": "typescript@5.9.3"
+    }
+  },
+  "fixture": {
+    "sourceFiles": {
+      "baseline": 21,
+      "candidate": 22
+    },
+    "bytesRead": 10345,
+    "changes": 21
+  },
+  "coldProcess": {
+    "runs": [
+      {
+        "wallMs": 627.86,
+        "analysisMs": 110.64
+      },
+      {
+        "wallMs": 616.17,
+        "analysisMs": 108.64
+      },
+      {
+        "wallMs": 632.23,
+        "analysisMs": 121.7
+      }
+    ],
+    "medianWallMs": 627.86,
+    "medianAnalysisMs": 110.64
+  },
+  "sameProcessCold": {
+    "metrics": {
+      "elapsedMs": 117.72,
+      "bytesRead": 10345,
+      "reportCacheHit": false
+    },
+    "cache": {
+      "report": "miss",
+      "parsedFiles": 28,
+      "reusedFiles": 15,
+      "invalidEntries": 0
+    }
+  },
+  "sameProcessWarm": {
+    "runsMs": [
+      2.59,
+      2.4,
+      2.47,
+      2.44,
+      2.39
+    ],
+    "medianMs": 2.44,
+    "cache": {
+      "report": "hit",
+      "parsedFiles": 0,
+      "reusedFiles": 0,
+      "invalidEntries": 0
+    }
+  },
+  "incremental": {
+    "metrics": {
+      "elapsedMs": 4.63,
+      "bytesRead": 10390,
+      "reportCacheHit": false
+    },
+    "cache": {
+      "report": "miss",
+      "parsedFiles": 1,
+      "reusedFiles": 43,
+      "invalidEntries": 0
+    }
+  },
+  "limitations": "Tiny fixture measurement in this cloud environment; includes full source scan even on cache hits. Does not predict private repository scale or efficacy."
+}

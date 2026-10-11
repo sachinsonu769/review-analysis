@@ -1,0 +1,64 @@
+{
+  "timestamp": "2026-10-11T17:22:06.832Z",
+  "build": {
+    "version": "0.2.0",
+    "sourceBuildHash": "4432736c9ade4270d9c60920029f27c4bc21d9f36603f40514dbc76ee6e82194",
+    "parsers": {
+      "java": "java-parser@3.0.1",
+      "typescript": "typescript@5.9.3"
+    }
+  },
+  "sourceHashes": {
+    "app/workspace.ts": "b505e51b9c5e652e46c07101ad457274cd50c8cfdff08e0611457aa93d282354",
+    "app/graph-model.ts": "8c771a9a91c49cb77e7cf4655167bf248bc80c9128def8fd6e01972588c37935",
+    "src/graph.js": "aa7f3201ff91372d3a4f7141e60c688855e1920df6b0480ebb7dc47f567119d7",
+    "src/rules.js": "782259e20631a8618ef09f48702df019725a5529cf3913c18b5ea22d33ec8c94",
+    "src/requirements.js": "7bc70736d0aec84e6b773cd3962386c8359711f02588348a066d4f122d3b9c38",
+    "ui/app.js": "b9e72a0f659d83a325eb5eb8fae3677e969e03f429d8b68a54067d03f6640aac"
+  },
+  "importOnly": {
+    "reportChanges": [],
+    "reportDirect": [],
+    "changedFileHashes": [
+      "consumer.ts"
+    ],
+    "beforeHash": "b1e86681d6e475fe8bb947eb3affe36a1d797f4ab1c63eb248ee5206af9a8d8b",
+    "afterHash": "02ca6bee10d441a19ee9b43100f8930aece2b7dbc5df44cddde6e06ea88b0928"
+  },
+  "canonicalPhaseIsolation": [
+    {
+      "source": "B",
+      "target": "C",
+      "edgeIds": [
+        "bc"
+      ],
+      "nodeIds": [
+        "B",
+        "C"
+      ],
+      "phase": "candidate",
+      "confidence": "high",
+      "kind": "direct"
+    }
+  ],
+  "expiredExample": {
+    "path": "dep.ts",
+    "status": "simulated-reviewed",
+    "approval": {
+      "status": "reviewed",
+      "reviewer": "SIMULATED reviewer",
+      "evidence": "Synthetic only",
+      "simulation": true
+    },
+    "evidence": {
+      "path": "dep.ts",
+      "range": {
+        "startLine": 1,
+        "endLine": 2
+      },
+      "revision": "tree-sha256:02424b830c1e509f0ec76396bfffa3145d18172a27e96fc03b1ced4433096a4e",
+      "fileHash": "0df9c550337acd97a06bca85ce4ce1ee7a7ea66762c49373ce7aa1e5eb228001",
+      "excerpt": "export const x=1;\n"
+    }
+  }
+}

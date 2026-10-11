@@ -1,0 +1,50 @@
+{
+  "id": "06-java-pattern-shadow",
+  "description": "Valid instanceof pattern binding must not inherit same-named field type",
+  "status": "pass",
+  "exitCode": 0,
+  "sourcePaths": {
+    "baseline": "/tmp/review-analysis-adversarial-v1-anUajX/06-java-pattern-shadow/baseline",
+    "candidate": "/tmp/review-analysis-adversarial-v1-anUajX/06-java-pattern-shadow/candidate"
+  },
+  "sourceHashes": {
+    "baseline": {
+      "backend/Caller.java": "61c9478ae93a9aecee4882d69d9b5b97490a7685461fca8fb33cd12ddd4ec468",
+      "backend/Other.java": "b3cbea9c2653245343cd6697741ffb14fc6fa624ddde12a233074af901d2136c",
+      "backend/Service.java": "d3a42475956bd2df2a9590b19d5412ed0a40510315dd00c96b03ec93f77af449"
+    },
+    "candidate": {
+      "backend/Caller.java": "61c9478ae93a9aecee4882d69d9b5b97490a7685461fca8fb33cd12ddd4ec468",
+      "backend/Other.java": "2ffbf58ce807332b522855f8aedcceb441f7584b0a9769ddf7c27c6c8769cd01",
+      "backend/Service.java": "383c8d5afa487ed5becf8b5fa1a8ec2aa451627280815ccd16fd5b3a411e939d"
+    }
+  },
+  "evidence": {
+    "checkedEvidenceRecords": 40,
+    "errors": []
+  },
+  "assertions": [
+    {
+      "name": "pattern call never binds field Service",
+      "status": "pass"
+    },
+    {
+      "name": "Other or explicit unknown",
+      "status": "pass"
+    },
+    {
+      "name": "all source evidence hashes/ranges/excerpts/revisions independently reproduce",
+      "status": "pass"
+    },
+    {
+      "name": "readable actual CLI exits 0",
+      "status": "pass"
+    }
+  ],
+  "reportStats": {
+    "changes": 6,
+    "directEdges": 4,
+    "unknowns": 20,
+    "sourceBuildHash": "8ee7fcacee9a1b276b2bfab2665d8d3ab771e40eee5f3924f1f301192426e68f"
+  }
+}

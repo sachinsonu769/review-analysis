@@ -1,0 +1,64 @@
+{
+  "id": "18-positive-unconstrained-template",
+  "description": "Unconstrained URI template consumers remain mapped after constrained route suppression",
+  "status": "pass",
+  "exitCode": 0,
+  "sourcePaths": {
+    "baseline": "/tmp/review-analysis-adversarial-v2-NZrPxG/positive-controls/18-positive-unconstrained-template/baseline",
+    "candidate": "/tmp/review-analysis-adversarial-v2-NZrPxG/positive-controls/18-positive-unconstrained-template/candidate"
+  },
+  "sourceHashes": {
+    "baseline": {
+      "backend/TemplateResource.java": "2b3d1c8a325859e4a48f21d32cb3d1565e4d057e8b799f5f0f6ef04348cd9b1a",
+      "frontend/client.ts": "799e030fb0e5e01a15d9d9e1045aa949b59429a234f3a0ad7bc2eb2676efd5e0"
+    },
+    "candidate": {
+      "backend/TemplateResource.java": "95fc5719caca4672b76cab0d153a175a93d3c0aba88fff5e16fa64f5194f1fc3",
+      "frontend/client.ts": "799e030fb0e5e01a15d9d9e1045aa949b59429a234f3a0ad7bc2eb2676efd5e0"
+    }
+  },
+  "evidence": {
+    "checkedEvidenceRecords": 78,
+    "errors": []
+  },
+  "assertions": [
+    {
+      "name": "simple-template",
+      "status": "pass"
+    },
+    {
+      "name": "query-template",
+      "status": "pass"
+    },
+    {
+      "name": "trailing-template",
+      "status": "pass"
+    },
+    {
+      "name": "longer template selects details",
+      "status": "pass"
+    },
+    {
+      "name": "placeholder never spans slash",
+      "status": "pass"
+    },
+    {
+      "name": "constrained route suppression has explicit unknown",
+      "status": "pass"
+    },
+    {
+      "name": "all source evidence hashes/ranges/excerpts/revisions independently reproduce",
+      "status": "pass"
+    },
+    {
+      "name": "readable actual CLI exits 0",
+      "status": "pass"
+    }
+  ],
+  "reportStats": {
+    "changes": 4,
+    "directEdges": 8,
+    "unknowns": 38,
+    "sourceBuildHash": "ca04bac50b7584aaafd9d5602acc8055152e81e25de5fa1b15bb710f76f53ac9"
+  }
+}

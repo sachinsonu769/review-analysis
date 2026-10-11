@@ -1,0 +1,737 @@
+{
+  "timestampUtc": "2026-10-11T16:45:09.210037+00:00",
+  "files": [
+    {
+      "path": ".gitignore",
+      "expected": "5ee1f3c3f524573ef0c342cdedfdf67239ba63cbe0872ab834bffbf62459b437",
+      "actual": "5ee1f3c3f524573ef0c342cdedfdf67239ba63cbe0872ab834bffbf62459b437",
+      "pass": true
+    },
+    {
+      "path": "README.md",
+      "expected": "d61a372853ab033bc6afd87c2a789d2121dac8628ba9ef374366dda4e37569c3",
+      "actual": "d61a372853ab033bc6afd87c2a789d2121dac8628ba9ef374366dda4e37569c3",
+      "pass": true
+    },
+    {
+      "path": "docs/architecture.md",
+      "expected": "821e8ddcfae53ef680e2c1816cf806deaf1810a8714897758faf1d1ad5c8d0f6",
+      "actual": "821e8ddcfae53ef680e2c1816cf806deaf1810a8714897758faf1d1ad5c8d0f6",
+      "pass": true
+    },
+    {
+      "path": "docs/java-parser.md",
+      "expected": "8da4846ffb4744491849be3eaacfd6cc5c4118d533def7603bc880d5731d75ac",
+      "actual": "8da4846ffb4744491849be3eaacfd6cc5c4118d533def7603bc880d5731d75ac",
+      "pass": true
+    },
+    {
+      "path": "docs/parser-contract.md",
+      "expected": "6a02a61a7cc478cbfd71bf126781846c69d84412216c21e2512d45380587e8aa",
+      "actual": "6a02a61a7cc478cbfd71bf126781846c69d84412216c21e2512d45380587e8aa",
+      "pass": true
+    },
+    {
+      "path": "docs/typescript-parser.md",
+      "expected": "83e995c0e53634f9d3fbbe2213f57910e37a428a23bb8d13f43db9ff9ca5796a",
+      "actual": "83e995c0e53634f9d3fbbe2213f57910e37a428a23bb8d13f43db9ff9ca5796a",
+      "pass": true
+    },
+    {
+      "path": "docs/verification.md",
+      "expected": "b50e0d16b322ce1880ca916b954126ca32c541055da3a644ff32bb4cd9859efb",
+      "actual": "b50e0d16b322ce1880ca916b954126ca32c541055da3a644ff32bb4cd9859efb",
+      "pass": true
+    },
+    {
+      "path": "fixtures/README.md",
+      "expected": "f2502300ce26b29c9c0dee2700a0ccaf1ad81fff44d64319e4c2aeefe1a8596e",
+      "actual": "f2502300ce26b29c9c0dee2700a0ccaf1ad81fff44d64319e4c2aeefe1a8596e",
+      "pass": true
+    },
+    {
+      "path": "fixtures/exception-review.simulation.md",
+      "expected": "e4100869bc9fa7ef08d4e86da29c1ad26fb19c5743074e26af85186af2f006ac",
+      "actual": "e4100869bc9fa7ef08d4e86da29c1ad26fb19c5743074e26af85186af2f006ac",
+      "pass": true
+    },
+    {
+      "path": "fixtures/lookup/baseline/backend/src/main/java/com/example/lookup/AdminLookupJob.java",
+      "expected": "f9a1708fa084fd7ffe91a90d4e4fb773599bdb2550c4da1d2161b424292091ca",
+      "actual": "f9a1708fa084fd7ffe91a90d4e4fb773599bdb2550c4da1d2161b424292091ca",
+      "pass": true
+    },
+    {
+      "path": "fixtures/lookup/baseline/backend/src/main/java/com/example/lookup/ApprovedLegacyGateway.java",
+      "expected": "9ee96123e08adc4c3e2084333ccf04c76dfa3c3b368c4efce74f64605405cbc1",
+      "actual": "9ee96123e08adc4c3e2084333ccf04c76dfa3c3b368c4efce74f64605405cbc1",
+      "pass": true
+    },
+    {
+      "path": "fixtures/lookup/baseline/backend/src/main/java/com/example/lookup/ExpiredGateway.java",
+      "expected": "f224098b35f541905d2eb2e44e35758801fe5e744e4a165651296299910c4730",
+      "actual": "f224098b35f541905d2eb2e44e35758801fe5e744e4a165651296299910c4730",
+      "pass": true
+    },
+    {
+      "path": "fixtures/lookup/baseline/backend/src/main/java/com/example/lookup/LookupController.java",
+      "expected": "e02b44120ddbbde16d21d06fcca12d883994dd5dc928690adc6f6d2cc343e1cf",
+      "actual": "e02b44120ddbbde16d21d06fcca12d883994dd5dc928690adc6f6d2cc343e1cf",
+      "pass": true
+    },
+    {
+      "path": "fixtures/lookup/baseline/backend/src/main/java/com/example/lookup/LookupExporter.java",
+      "expected": "baf9f37a1e0176ba86e68c9f3930647311611253da8594d1b6387a7d8b3e5237",
+      "actual": "baf9f37a1e0176ba86e68c9f3930647311611253da8594d1b6387a7d8b3e5237",
+      "pass": true
+    },
+    {
+      "path": "fixtures/lookup/baseline/backend/src/main/java/com/example/lookup/LookupResponse.java",
+      "expected": "72db8b7e80b91c4e84e2ee9ed1b103acf16a8e34279444ac50ce7b66d64757af",
+      "actual": "72db8b7e80b91c4e84e2ee9ed1b103acf16a8e34279444ac50ce7b66d64757af",
+      "pass": true
+    },
+    {
+      "path": "fixtures/lookup/baseline/backend/src/main/java/com/example/lookup/LookupService.java",
+      "expected": "37b1d4a4d577831f31fc4a5d909e73af31533ed7e5c8015c6b5265b601677aab",
+      "actual": "37b1d4a4d577831f31fc4a5d909e73af31533ed7e5c8015c6b5265b601677aab",
+      "pass": true
+    },
+    {
+      "path": "fixtures/lookup/baseline/backend/src/main/java/com/example/lookup/OverloadConsumer.java",
+      "expected": "b39e2a4b93a115b2b6d814b0d6bafec34cc6a568631d8de522d536d42003e6f3",
+      "actual": "b39e2a4b93a115b2b6d814b0d6bafec34cc6a568631d8de522d536d42003e6f3",
+      "pass": true
+    },
+    {
+      "path": "fixtures/lookup/baseline/backend/src/main/java/com/example/lookup/OverloadedLookup.java",
+      "expected": "cb392c60d4bb4062876653adb01172d82fc5d362a0069697be85ffca650fbf11",
+      "actual": "cb392c60d4bb4062876653adb01172d82fc5d362a0069697be85ffca650fbf11",
+      "pass": true
+    },
+    {
+      "path": "fixtures/lookup/baseline/backend/src/main/java/com/example/lookup/RetiredLookupAdapter.java",
+      "expected": "291d044cc7dc51eb63e352c873894813b7494d6c5e78101e8e107974f3622a66",
+      "actual": "291d044cc7dc51eb63e352c873894813b7494d6c5e78101e8e107974f3622a66",
+      "pass": true
+    },
+    {
+      "path": "fixtures/lookup/baseline/backend/src/main/java/com/example/lookup/UnreviewedGateway.java",
+      "expected": "3d392a323d3d0ec99ec48753bb03078c9438a44f2b18ab761fa1c510fb8bc092",
+      "actual": "3d392a323d3d0ec99ec48753bb03078c9438a44f2b18ab761fa1c510fb8bc092",
+      "pass": true
+    },
+    {
+      "path": "fixtures/lookup/baseline/frontend/src/App.tsx",
+      "expected": "69400d053a623c54b30204dce811ea4ce0e860d759509e4529a5097436b5aff0",
+      "actual": "69400d053a623c54b30204dce811ea4ce0e860d759509e4529a5097436b5aff0",
+      "pass": true
+    },
+    {
+      "path": "fixtures/lookup/baseline/frontend/src/api/axiosLookup.ts",
+      "expected": "5626085d5f3e6abb042cb4edfdd91147e73d9c48d4975e0384bf01fb21ff287c",
+      "actual": "5626085d5f3e6abb042cb4edfdd91147e73d9c48d4975e0384bf01fb21ff287c",
+      "pass": true
+    },
+    {
+      "path": "fixtures/lookup/baseline/frontend/src/api/billingApi.ts",
+      "expected": "81a5dcf0e0e557a45250fc27e61664f1b2968c89d7d5b25ac08d5f871d45e8f2",
+      "actual": "81a5dcf0e0e557a45250fc27e61664f1b2968c89d7d5b25ac08d5f871d45e8f2",
+      "pass": true
+    },
+    {
+      "path": "fixtures/lookup/baseline/frontend/src/api/dynamicLookup.ts",
+      "expected": "1337225b6b8e751ead0593d436e4a9e3cf696c5f4ae393cbcaadd89bc59fcc33",
+      "actual": "1337225b6b8e751ead0593d436e4a9e3cf696c5f4ae393cbcaadd89bc59fcc33",
+      "pass": true
+    },
+    {
+      "path": "fixtures/lookup/baseline/frontend/src/api/lookupApi.ts",
+      "expected": "7f34f774878e38d86b5bde41fd4cc9255cd3db4c5ab34512570a0e7e40a1cfef",
+      "actual": "7f34f774878e38d86b5bde41fd4cc9255cd3db4c5ab34512570a0e7e40a1cfef",
+      "pass": true
+    },
+    {
+      "path": "fixtures/lookup/baseline/frontend/src/api/missingImport.ts",
+      "expected": "1b56d4b686c48138117807f5dfebb882228a10327395b77604bfaac226af9604",
+      "actual": "1b56d4b686c48138117807f5dfebb882228a10327395b77604bfaac226af9604",
+      "pass": true
+    },
+    {
+      "path": "fixtures/lookup/baseline/frontend/src/api/stringDecoys.ts",
+      "expected": "932c69651f9d22341df20a4b55a2e3939b447e75d2684711f7364bf152f342fb",
+      "actual": "932c69651f9d22341df20a4b55a2e3939b447e75d2684711f7364bf152f342fb",
+      "pass": true
+    },
+    {
+      "path": "fixtures/lookup/baseline/frontend/src/components/InvoicePanel.tsx",
+      "expected": "b30154304109029bb90f87595da70f50c1f04d64b71a29ffd7a72b11e2443269",
+      "actual": "b30154304109029bb90f87595da70f50c1f04d64b71a29ffd7a72b11e2443269",
+      "pass": true
+    },
+    {
+      "path": "fixtures/lookup/baseline/frontend/src/components/LookupBadge.ts",
+      "expected": "60a09a4a58d0e62f4abfbd81fd0038b75e0c4acc3c4973a649dd49df90e642f6",
+      "actual": "60a09a4a58d0e62f4abfbd81fd0038b75e0c4acc3c4973a649dd49df90e642f6",
+      "pass": true
+    },
+    {
+      "path": "fixtures/lookup/baseline/frontend/src/components/LookupPanel.tsx",
+      "expected": "1202a4f91837b99022202a532e704af67020a98b8beb02e77e6bc8173109a97f",
+      "actual": "1202a4f91837b99022202a532e704af67020a98b8beb02e77e6bc8173109a97f",
+      "pass": true
+    },
+    {
+      "path": "fixtures/lookup/candidate/backend/src/main/java/com/example/lookup/AdminLookupJob.java",
+      "expected": "f9a1708fa084fd7ffe91a90d4e4fb773599bdb2550c4da1d2161b424292091ca",
+      "actual": "f9a1708fa084fd7ffe91a90d4e4fb773599bdb2550c4da1d2161b424292091ca",
+      "pass": true
+    },
+    {
+      "path": "fixtures/lookup/candidate/backend/src/main/java/com/example/lookup/ApprovedLegacyGateway.java",
+      "expected": "9ee96123e08adc4c3e2084333ccf04c76dfa3c3b368c4efce74f64605405cbc1",
+      "actual": "9ee96123e08adc4c3e2084333ccf04c76dfa3c3b368c4efce74f64605405cbc1",
+      "pass": true
+    },
+    {
+      "path": "fixtures/lookup/candidate/backend/src/main/java/com/example/lookup/AuditLogger.java",
+      "expected": "7803c96b702ed924775aa4ba55f799d9fa0e8f3384fefd9d8ae231380309a71c",
+      "actual": "7803c96b702ed924775aa4ba55f799d9fa0e8f3384fefd9d8ae231380309a71c",
+      "pass": true
+    },
+    {
+      "path": "fixtures/lookup/candidate/backend/src/main/java/com/example/lookup/ExpiredGateway.java",
+      "expected": "f224098b35f541905d2eb2e44e35758801fe5e744e4a165651296299910c4730",
+      "actual": "f224098b35f541905d2eb2e44e35758801fe5e744e4a165651296299910c4730",
+      "pass": true
+    },
+    {
+      "path": "fixtures/lookup/candidate/backend/src/main/java/com/example/lookup/LookupController.java",
+      "expected": "92f524bf34c641cb2a9f4285babd636a368e11602757c9d3e158111027458175",
+      "actual": "92f524bf34c641cb2a9f4285babd636a368e11602757c9d3e158111027458175",
+      "pass": true
+    },
+    {
+      "path": "fixtures/lookup/candidate/backend/src/main/java/com/example/lookup/LookupExporter.java",
+      "expected": "baf9f37a1e0176ba86e68c9f3930647311611253da8594d1b6387a7d8b3e5237",
+      "actual": "baf9f37a1e0176ba86e68c9f3930647311611253da8594d1b6387a7d8b3e5237",
+      "pass": true
+    },
+    {
+      "path": "fixtures/lookup/candidate/backend/src/main/java/com/example/lookup/LookupQuery.java",
+      "expected": "9ce9c5da75987a71256a165962eb9c8eee7ca371bb1a88e926684387cf6aaca7",
+      "actual": "9ce9c5da75987a71256a165962eb9c8eee7ca371bb1a88e926684387cf6aaca7",
+      "pass": true
+    },
+    {
+      "path": "fixtures/lookup/candidate/backend/src/main/java/com/example/lookup/LookupResponse.java",
+      "expected": "2283e210acfe8302da51d995f36357367ce0a572ada2caf73a817cda5f853f66",
+      "actual": "2283e210acfe8302da51d995f36357367ce0a572ada2caf73a817cda5f853f66",
+      "pass": true
+    },
+    {
+      "path": "fixtures/lookup/candidate/backend/src/main/java/com/example/lookup/LookupService.java",
+      "expected": "5a20068f28bc00fc0d91ed0c098afd8c569a25a1c322264bcca660221cc93adb",
+      "actual": "5a20068f28bc00fc0d91ed0c098afd8c569a25a1c322264bcca660221cc93adb",
+      "pass": true
+    },
+    {
+      "path": "fixtures/lookup/candidate/backend/src/main/java/com/example/lookup/OverloadConsumer.java",
+      "expected": "b39e2a4b93a115b2b6d814b0d6bafec34cc6a568631d8de522d536d42003e6f3",
+      "actual": "b39e2a4b93a115b2b6d814b0d6bafec34cc6a568631d8de522d536d42003e6f3",
+      "pass": true
+    },
+    {
+      "path": "fixtures/lookup/candidate/backend/src/main/java/com/example/lookup/OverloadedLookup.java",
+      "expected": "cb392c60d4bb4062876653adb01172d82fc5d362a0069697be85ffca650fbf11",
+      "actual": "cb392c60d4bb4062876653adb01172d82fc5d362a0069697be85ffca650fbf11",
+      "pass": true
+    },
+    {
+      "path": "fixtures/lookup/candidate/backend/src/main/java/com/example/lookup/UnreviewedGateway.java",
+      "expected": "3d392a323d3d0ec99ec48753bb03078c9438a44f2b18ab761fa1c510fb8bc092",
+      "actual": "3d392a323d3d0ec99ec48753bb03078c9438a44f2b18ab761fa1c510fb8bc092",
+      "pass": true
+    },
+    {
+      "path": "fixtures/lookup/candidate/frontend/src/App.tsx",
+      "expected": "69400d053a623c54b30204dce811ea4ce0e860d759509e4529a5097436b5aff0",
+      "actual": "69400d053a623c54b30204dce811ea4ce0e860d759509e4529a5097436b5aff0",
+      "pass": true
+    },
+    {
+      "path": "fixtures/lookup/candidate/frontend/src/api/axiosLookup.ts",
+      "expected": "5626085d5f3e6abb042cb4edfdd91147e73d9c48d4975e0384bf01fb21ff287c",
+      "actual": "5626085d5f3e6abb042cb4edfdd91147e73d9c48d4975e0384bf01fb21ff287c",
+      "pass": true
+    },
+    {
+      "path": "fixtures/lookup/candidate/frontend/src/api/billingApi.ts",
+      "expected": "81a5dcf0e0e557a45250fc27e61664f1b2968c89d7d5b25ac08d5f871d45e8f2",
+      "actual": "81a5dcf0e0e557a45250fc27e61664f1b2968c89d7d5b25ac08d5f871d45e8f2",
+      "pass": true
+    },
+    {
+      "path": "fixtures/lookup/candidate/frontend/src/api/dynamicLookup.ts",
+      "expected": "1337225b6b8e751ead0593d436e4a9e3cf696c5f4ae393cbcaadd89bc59fcc33",
+      "actual": "1337225b6b8e751ead0593d436e4a9e3cf696c5f4ae393cbcaadd89bc59fcc33",
+      "pass": true
+    },
+    {
+      "path": "fixtures/lookup/candidate/frontend/src/api/lookupApi.ts",
+      "expected": "8b9224af601766edbb0617ffe30c2b85aa82fb82e97d13ed8467849175b8bcda",
+      "actual": "8b9224af601766edbb0617ffe30c2b85aa82fb82e97d13ed8467849175b8bcda",
+      "pass": true
+    },
+    {
+      "path": "fixtures/lookup/candidate/frontend/src/api/missingImport.ts",
+      "expected": "1b56d4b686c48138117807f5dfebb882228a10327395b77604bfaac226af9604",
+      "actual": "1b56d4b686c48138117807f5dfebb882228a10327395b77604bfaac226af9604",
+      "pass": true
+    },
+    {
+      "path": "fixtures/lookup/candidate/frontend/src/api/stringDecoys.ts",
+      "expected": "932c69651f9d22341df20a4b55a2e3939b447e75d2684711f7364bf152f342fb",
+      "actual": "932c69651f9d22341df20a4b55a2e3939b447e75d2684711f7364bf152f342fb",
+      "pass": true
+    },
+    {
+      "path": "fixtures/lookup/candidate/frontend/src/components/CatalogBadge.ts",
+      "expected": "60a09a4a58d0e62f4abfbd81fd0038b75e0c4acc3c4973a649dd49df90e642f6",
+      "actual": "60a09a4a58d0e62f4abfbd81fd0038b75e0c4acc3c4973a649dd49df90e642f6",
+      "pass": true
+    },
+    {
+      "path": "fixtures/lookup/candidate/frontend/src/components/InvoicePanel.tsx",
+      "expected": "b30154304109029bb90f87595da70f50c1f04d64b71a29ffd7a72b11e2443269",
+      "actual": "b30154304109029bb90f87595da70f50c1f04d64b71a29ffd7a72b11e2443269",
+      "pass": true
+    },
+    {
+      "path": "fixtures/lookup/candidate/frontend/src/components/LookupPanel.tsx",
+      "expected": "1202a4f91837b99022202a532e704af67020a98b8beb02e77e6bc8173109a97f",
+      "actual": "1202a4f91837b99022202a532e704af67020a98b8beb02e77e6bc8173109a97f",
+      "pass": true
+    },
+    {
+      "path": "fixtures/renamed-rules.json",
+      "expected": "dfd1cf872b5562d2271596581c2d918d517f4c53f57d32a9c48b0d7cfd1358fa",
+      "actual": "dfd1cf872b5562d2271596581c2d918d517f4c53f57d32a9c48b0d7cfd1358fa",
+      "pass": true
+    },
+    {
+      "path": "fixtures/renamed/baseline/backend/src/main/java/org/demo/inventory/ExpiredTransport.java",
+      "expected": "cd9e0c4fa2b7431393591bf883e26dd5d547ffb1fe563fdc1a52f09e0b8e94c1",
+      "actual": "cd9e0c4fa2b7431393591bf883e26dd5d547ffb1fe563fdc1a52f09e0b8e94c1",
+      "pass": true
+    },
+    {
+      "path": "fixtures/renamed/baseline/backend/src/main/java/org/demo/inventory/InventoryRefreshTask.java",
+      "expected": "eee17f5363adbf32f18d57c3585adcee1bdfd4655f474324b0b2f8adf6d5f125",
+      "actual": "eee17f5363adbf32f18d57c3585adcee1bdfd4655f474324b0b2f8adf6d5f125",
+      "pass": true
+    },
+    {
+      "path": "fixtures/renamed/baseline/backend/src/main/java/org/demo/inventory/InventoryResolver.java",
+      "expected": "81b5755bad8a500fdf54c441f381fdbcf1ebd06171e3790464011819b2d482eb",
+      "actual": "81b5755bad8a500fdf54c441f381fdbcf1ebd06171e3790464011819b2d482eb",
+      "pass": true
+    },
+    {
+      "path": "fixtures/renamed/baseline/backend/src/main/java/org/demo/inventory/InventoryResource.java",
+      "expected": "3ced81fdd43dd59d2af5d1851a58b8a5bf6b908ed9a1be1f87a9419a129fa0b0",
+      "actual": "3ced81fdd43dd59d2af5d1851a58b8a5bf6b908ed9a1be1f87a9419a129fa0b0",
+      "pass": true
+    },
+    {
+      "path": "fixtures/renamed/baseline/backend/src/main/java/org/demo/inventory/OverloadedInventory.java",
+      "expected": "6e41db57d6a0a85d57dc4228176dce8eed4878b51759f514fc8449418758b7bf",
+      "actual": "6e41db57d6a0a85d57dc4228176dce8eed4878b51759f514fc8449418758b7bf",
+      "pass": true
+    },
+    {
+      "path": "fixtures/renamed/baseline/backend/src/main/java/org/demo/inventory/ProductExport.java",
+      "expected": "4fca05b6faa871d2a7865cfd6e2b4bfbd1d1fac7582c4a101428d5c1d836d7b6",
+      "actual": "4fca05b6faa871d2a7865cfd6e2b4bfbd1d1fac7582c4a101428d5c1d836d7b6",
+      "pass": true
+    },
+    {
+      "path": "fixtures/renamed/baseline/backend/src/main/java/org/demo/inventory/ProductReply.java",
+      "expected": "7b0b7e5adbb06af614e27d6cdbcb5fa85ddb87165b1e8548f44b88ff4dfe4ba7",
+      "actual": "7b0b7e5adbb06af614e27d6cdbcb5fa85ddb87165b1e8548f44b88ff4dfe4ba7",
+      "pass": true
+    },
+    {
+      "path": "fixtures/renamed/baseline/backend/src/main/java/org/demo/inventory/ProposedTransport.java",
+      "expected": "7173d6fb80c679fd6450d071df36a3c266adf96eed86beeedc860582b32b11f7",
+      "actual": "7173d6fb80c679fd6450d071df36a3c266adf96eed86beeedc860582b32b11f7",
+      "pass": true
+    },
+    {
+      "path": "fixtures/renamed/baseline/backend/src/main/java/org/demo/inventory/ResolutionConsumer.java",
+      "expected": "303ac63c4749620dc4f33a3c16972c8a1bf0a781e23a3e3f873d2fa278b11ab1",
+      "actual": "303ac63c4749620dc4f33a3c16972c8a1bf0a781e23a3e3f873d2fa278b11ab1",
+      "pass": true
+    },
+    {
+      "path": "fixtures/renamed/baseline/backend/src/main/java/org/demo/inventory/RetiredInventoryAdapter.java",
+      "expected": "0e4e4d3f9852d4d7f2f190333a9c5857f273ba46ee7c89ab86cb8a88f1c313af",
+      "actual": "0e4e4d3f9852d4d7f2f190333a9c5857f273ba46ee7c89ab86cb8a88f1c313af",
+      "pass": true
+    },
+    {
+      "path": "fixtures/renamed/baseline/backend/src/main/java/org/demo/inventory/SimulatedTransport.java",
+      "expected": "5ab0a6358a6fa91025c281e2851ba0697c576d5125ac9c47481d7a296f0c6ff4",
+      "actual": "5ab0a6358a6fa91025c281e2851ba0697c576d5125ac9c47481d7a296f0c6ff4",
+      "pass": true
+    },
+    {
+      "path": "fixtures/renamed/baseline/frontend/src/App.tsx",
+      "expected": "0ea00eb604278684976e40b61e051dc5e5bdd64fa33c1e611280fd798687a731",
+      "actual": "0ea00eb604278684976e40b61e051dc5e5bdd64fa33c1e611280fd798687a731",
+      "pass": true
+    },
+    {
+      "path": "fixtures/renamed/baseline/frontend/src/api/axiosInventory.ts",
+      "expected": "4842f6133b139054967b943b47775bc40f365ecfde3a0cc1a3a508748986f378",
+      "actual": "4842f6133b139054967b943b47775bc40f365ecfde3a0cc1a3a508748986f378",
+      "pass": true
+    },
+    {
+      "path": "fixtures/renamed/baseline/frontend/src/api/billingApi.ts",
+      "expected": "471f860d9c3bcb12badcaca7cf4f534512b5c4e637ee2de7e239aff9a00bd77c",
+      "actual": "471f860d9c3bcb12badcaca7cf4f534512b5c4e637ee2de7e239aff9a00bd77c",
+      "pass": true
+    },
+    {
+      "path": "fixtures/renamed/baseline/frontend/src/api/dynamicInventory.ts",
+      "expected": "bc71680a170822f5d6684e1bd23cb9f6448ed65fe79f3455d79cc5fc5578be98",
+      "actual": "bc71680a170822f5d6684e1bd23cb9f6448ed65fe79f3455d79cc5fc5578be98",
+      "pass": true
+    },
+    {
+      "path": "fixtures/renamed/baseline/frontend/src/api/inventoryApi.ts",
+      "expected": "2d936a893de231d0564fd0a5dc97cd84736172dca947dc7d47c2987db43fa71f",
+      "actual": "2d936a893de231d0564fd0a5dc97cd84736172dca947dc7d47c2987db43fa71f",
+      "pass": true
+    },
+    {
+      "path": "fixtures/renamed/baseline/frontend/src/api/missingImport.ts",
+      "expected": "47c1bc143a8d819fba708ea06311d59b78986aa112464de3613bea0c2d75b2c6",
+      "actual": "47c1bc143a8d819fba708ea06311d59b78986aa112464de3613bea0c2d75b2c6",
+      "pass": true
+    },
+    {
+      "path": "fixtures/renamed/baseline/frontend/src/api/stringDecoys.ts",
+      "expected": "78063e661fe354230975ef86a2e0f5ce56e8dfe4fc62ccbb029324c8dc59fa2a",
+      "actual": "78063e661fe354230975ef86a2e0f5ce56e8dfe4fc62ccbb029324c8dc59fa2a",
+      "pass": true
+    },
+    {
+      "path": "fixtures/renamed/baseline/frontend/src/components/InvoicePanel.tsx",
+      "expected": "b30154304109029bb90f87595da70f50c1f04d64b71a29ffd7a72b11e2443269",
+      "actual": "b30154304109029bb90f87595da70f50c1f04d64b71a29ffd7a72b11e2443269",
+      "pass": true
+    },
+    {
+      "path": "fixtures/renamed/baseline/frontend/src/components/ProductBadge.ts",
+      "expected": "369f7d1dccbf3690cea5d378a82b043f257c8fc7e7656b8d6e02ae6d7dedf9e9",
+      "actual": "369f7d1dccbf3690cea5d378a82b043f257c8fc7e7656b8d6e02ae6d7dedf9e9",
+      "pass": true
+    },
+    {
+      "path": "fixtures/renamed/baseline/frontend/src/components/ProductPanel.tsx",
+      "expected": "7af456ba731b96e2200dfd46cb0e7e136ad12bcbd9afb3acb52cabb17620f871",
+      "actual": "7af456ba731b96e2200dfd46cb0e7e136ad12bcbd9afb3acb52cabb17620f871",
+      "pass": true
+    },
+    {
+      "path": "fixtures/renamed/candidate/backend/src/main/java/org/demo/inventory/ChangeJournal.java",
+      "expected": "1b1592e1f551a7200528c57ad9b793ab29d5a770e98beae8b51a65c9c93e1aa2",
+      "actual": "1b1592e1f551a7200528c57ad9b793ab29d5a770e98beae8b51a65c9c93e1aa2",
+      "pass": true
+    },
+    {
+      "path": "fixtures/renamed/candidate/backend/src/main/java/org/demo/inventory/ExpiredTransport.java",
+      "expected": "cd9e0c4fa2b7431393591bf883e26dd5d547ffb1fe563fdc1a52f09e0b8e94c1",
+      "actual": "cd9e0c4fa2b7431393591bf883e26dd5d547ffb1fe563fdc1a52f09e0b8e94c1",
+      "pass": true
+    },
+    {
+      "path": "fixtures/renamed/candidate/backend/src/main/java/org/demo/inventory/InventoryInquiry.java",
+      "expected": "e856141d124e035aaf0f7d7f63b1ce01a2b3c2365c6c53a5a36250df508ef6b3",
+      "actual": "e856141d124e035aaf0f7d7f63b1ce01a2b3c2365c6c53a5a36250df508ef6b3",
+      "pass": true
+    },
+    {
+      "path": "fixtures/renamed/candidate/backend/src/main/java/org/demo/inventory/InventoryRefreshTask.java",
+      "expected": "eee17f5363adbf32f18d57c3585adcee1bdfd4655f474324b0b2f8adf6d5f125",
+      "actual": "eee17f5363adbf32f18d57c3585adcee1bdfd4655f474324b0b2f8adf6d5f125",
+      "pass": true
+    },
+    {
+      "path": "fixtures/renamed/candidate/backend/src/main/java/org/demo/inventory/InventoryResolver.java",
+      "expected": "050f4ad80c36a509f5ded5da027b817d4902866a095045887447afcf84fd7675",
+      "actual": "050f4ad80c36a509f5ded5da027b817d4902866a095045887447afcf84fd7675",
+      "pass": true
+    },
+    {
+      "path": "fixtures/renamed/candidate/backend/src/main/java/org/demo/inventory/InventoryResource.java",
+      "expected": "920735e66d6213c8d0c30cd74c1256be750562bc331aaa4b7e12daea03563c77",
+      "actual": "920735e66d6213c8d0c30cd74c1256be750562bc331aaa4b7e12daea03563c77",
+      "pass": true
+    },
+    {
+      "path": "fixtures/renamed/candidate/backend/src/main/java/org/demo/inventory/OverloadedInventory.java",
+      "expected": "6e41db57d6a0a85d57dc4228176dce8eed4878b51759f514fc8449418758b7bf",
+      "actual": "6e41db57d6a0a85d57dc4228176dce8eed4878b51759f514fc8449418758b7bf",
+      "pass": true
+    },
+    {
+      "path": "fixtures/renamed/candidate/backend/src/main/java/org/demo/inventory/ProductExport.java",
+      "expected": "4fca05b6faa871d2a7865cfd6e2b4bfbd1d1fac7582c4a101428d5c1d836d7b6",
+      "actual": "4fca05b6faa871d2a7865cfd6e2b4bfbd1d1fac7582c4a101428d5c1d836d7b6",
+      "pass": true
+    },
+    {
+      "path": "fixtures/renamed/candidate/backend/src/main/java/org/demo/inventory/ProductReply.java",
+      "expected": "d73000988660d4f5992ba81ff519fff2fca9b0f121e1c7e8ca508dde6e1ee7ab",
+      "actual": "d73000988660d4f5992ba81ff519fff2fca9b0f121e1c7e8ca508dde6e1ee7ab",
+      "pass": true
+    },
+    {
+      "path": "fixtures/renamed/candidate/backend/src/main/java/org/demo/inventory/ProposedTransport.java",
+      "expected": "7173d6fb80c679fd6450d071df36a3c266adf96eed86beeedc860582b32b11f7",
+      "actual": "7173d6fb80c679fd6450d071df36a3c266adf96eed86beeedc860582b32b11f7",
+      "pass": true
+    },
+    {
+      "path": "fixtures/renamed/candidate/backend/src/main/java/org/demo/inventory/ResolutionConsumer.java",
+      "expected": "303ac63c4749620dc4f33a3c16972c8a1bf0a781e23a3e3f873d2fa278b11ab1",
+      "actual": "303ac63c4749620dc4f33a3c16972c8a1bf0a781e23a3e3f873d2fa278b11ab1",
+      "pass": true
+    },
+    {
+      "path": "fixtures/renamed/candidate/backend/src/main/java/org/demo/inventory/SimulatedTransport.java",
+      "expected": "5ab0a6358a6fa91025c281e2851ba0697c576d5125ac9c47481d7a296f0c6ff4",
+      "actual": "5ab0a6358a6fa91025c281e2851ba0697c576d5125ac9c47481d7a296f0c6ff4",
+      "pass": true
+    },
+    {
+      "path": "fixtures/renamed/candidate/frontend/src/App.tsx",
+      "expected": "0ea00eb604278684976e40b61e051dc5e5bdd64fa33c1e611280fd798687a731",
+      "actual": "0ea00eb604278684976e40b61e051dc5e5bdd64fa33c1e611280fd798687a731",
+      "pass": true
+    },
+    {
+      "path": "fixtures/renamed/candidate/frontend/src/api/axiosInventory.ts",
+      "expected": "4842f6133b139054967b943b47775bc40f365ecfde3a0cc1a3a508748986f378",
+      "actual": "4842f6133b139054967b943b47775bc40f365ecfde3a0cc1a3a508748986f378",
+      "pass": true
+    },
+    {
+      "path": "fixtures/renamed/candidate/frontend/src/api/billingApi.ts",
+      "expected": "471f860d9c3bcb12badcaca7cf4f534512b5c4e637ee2de7e239aff9a00bd77c",
+      "actual": "471f860d9c3bcb12badcaca7cf4f534512b5c4e637ee2de7e239aff9a00bd77c",
+      "pass": true
+    },
+    {
+      "path": "fixtures/renamed/candidate/frontend/src/api/dynamicInventory.ts",
+      "expected": "bc71680a170822f5d6684e1bd23cb9f6448ed65fe79f3455d79cc5fc5578be98",
+      "actual": "bc71680a170822f5d6684e1bd23cb9f6448ed65fe79f3455d79cc5fc5578be98",
+      "pass": true
+    },
+    {
+      "path": "fixtures/renamed/candidate/frontend/src/api/inventoryApi.ts",
+      "expected": "1ca0c5a63f61585441b9ec6412b37389bd1ec854ca542e82d279b60e86870790",
+      "actual": "1ca0c5a63f61585441b9ec6412b37389bd1ec854ca542e82d279b60e86870790",
+      "pass": true
+    },
+    {
+      "path": "fixtures/renamed/candidate/frontend/src/api/missingImport.ts",
+      "expected": "47c1bc143a8d819fba708ea06311d59b78986aa112464de3613bea0c2d75b2c6",
+      "actual": "47c1bc143a8d819fba708ea06311d59b78986aa112464de3613bea0c2d75b2c6",
+      "pass": true
+    },
+    {
+      "path": "fixtures/renamed/candidate/frontend/src/api/stringDecoys.ts",
+      "expected": "78063e661fe354230975ef86a2e0f5ce56e8dfe4fc62ccbb029324c8dc59fa2a",
+      "actual": "78063e661fe354230975ef86a2e0f5ce56e8dfe4fc62ccbb029324c8dc59fa2a",
+      "pass": true
+    },
+    {
+      "path": "fixtures/renamed/candidate/frontend/src/components/InvoicePanel.tsx",
+      "expected": "b30154304109029bb90f87595da70f50c1f04d64b71a29ffd7a72b11e2443269",
+      "actual": "b30154304109029bb90f87595da70f50c1f04d64b71a29ffd7a72b11e2443269",
+      "pass": true
+    },
+    {
+      "path": "fixtures/renamed/candidate/frontend/src/components/ProductPanel.tsx",
+      "expected": "7af456ba731b96e2200dfd46cb0e7e136ad12bcbd9afb3acb52cabb17620f871",
+      "actual": "7af456ba731b96e2200dfd46cb0e7e136ad12bcbd9afb3acb52cabb17620f871",
+      "pass": true
+    },
+    {
+      "path": "fixtures/renamed/candidate/frontend/src/components/WarehouseBadge.ts",
+      "expected": "369f7d1dccbf3690cea5d378a82b043f257c8fc7e7656b8d6e02ae6d7dedf9e9",
+      "actual": "369f7d1dccbf3690cea5d378a82b043f257c8fc7e7656b8d6e02ae6d7dedf9e9",
+      "pass": true
+    },
+    {
+      "path": "fixtures/rules.json",
+      "expected": "d5636fbf9e64b58757b59654ce73ed9295eebb80fe79cc3aa1559ddb901120f6",
+      "actual": "d5636fbf9e64b58757b59654ce73ed9295eebb80fe79cc3aa1559ddb901120f6",
+      "pass": true
+    },
+    {
+      "path": "package-lock.json",
+      "expected": "72257c7747ba8b4dff78c2d4cff609a4c0c6029d17dc3344184cc4f1bd376d3f",
+      "actual": "72257c7747ba8b4dff78c2d4cff609a4c0c6029d17dc3344184cc4f1bd376d3f",
+      "pass": true
+    },
+    {
+      "path": "package.json",
+      "expected": "ea4e09fc7efba6fa0f6362205119bc8520b1b045bafe03d9cf33ce6d5fed9ce7",
+      "actual": "ea4e09fc7efba6fa0f6362205119bc8520b1b045bafe03d9cf33ce6d5fed9ce7",
+      "pass": true
+    },
+    {
+      "path": "reports/benchmark.json",
+      "expected": "d23ed393cbe13a7ccff22589bb08a147fda8b89a6753c1aa8e9785253673d62e",
+      "actual": "d23ed393cbe13a7ccff22589bb08a147fda8b89a6753c1aa8e9785253673d62e",
+      "pass": true
+    },
+    {
+      "path": "reports/lookup-change.json",
+      "expected": "3e8746d0e0aff435903ba229113861272b37b1439fac0d98577db321b9097c6c",
+      "actual": "3e8746d0e0aff435903ba229113861272b37b1439fac0d98577db321b9097c6c",
+      "pass": true
+    },
+    {
+      "path": "reports/lookup-change.txt",
+      "expected": "261ac72583f6a60aed833cbfebf284ae6ee998b8a579fc084ffc7d1840903bd0",
+      "actual": "261ac72583f6a60aed833cbfebf284ae6ee998b8a579fc084ffc7d1840903bd0",
+      "pass": true
+    },
+    {
+      "path": "reports/pre-code-guidance.json",
+      "expected": "a943f8cf64f4525f05901be3e995e07057c20b7c2595f4fff64f77de7ae10987",
+      "actual": "a943f8cf64f4525f05901be3e995e07057c20b7c2595f4fff64f77de7ae10987",
+      "pass": true
+    },
+    {
+      "path": "reports/pre-code-guidance.txt",
+      "expected": "ab1556b89502c5777652f3d615d6fe1c1f436f81fd0555801f1c845067f97aa3",
+      "actual": "ab1556b89502c5777652f3d615d6fe1c1f436f81fd0555801f1c845067f97aa3",
+      "pass": true
+    },
+    {
+      "path": "scripts/benchmark.js",
+      "expected": "79d1199ec5163ac07f8c4032a33fb208337b4876ab8056616306ed0ed90505ba",
+      "actual": "79d1199ec5163ac07f8c4032a33fb208337b4876ab8056616306ed0ed90505ba",
+      "pass": true
+    },
+    {
+      "path": "scripts/demo.js",
+      "expected": "b147bd450d0c98557ad7350be77a0d738272cca4cb013592b343d85fb95e0b87",
+      "actual": "b147bd450d0c98557ad7350be77a0d738272cca4cb013592b343d85fb95e0b87",
+      "pass": true
+    },
+    {
+      "path": "scripts/package.py",
+      "expected": "b0d472c607d1667a68811cfe5066824fe93dc47749b4dba84bf7d053a11c78d4",
+      "actual": "b0d472c607d1667a68811cfe5066824fe93dc47749b4dba84bf7d053a11c78d4",
+      "pass": true
+    },
+    {
+      "path": "src/cache.js",
+      "expected": "6876a054527bdd8645d527c015a7c196d9419ccad7ec605bdc533234eb239419",
+      "actual": "6876a054527bdd8645d527c015a7c196d9419ccad7ec605bdc533234eb239419",
+      "pass": true
+    },
+    {
+      "path": "src/cli.js",
+      "expected": "2745d4ca16e4013d26eb69ae1816ff72bc80ab3fa9d5dbb5b7835a622d3f1d93",
+      "actual": "2745d4ca16e4013d26eb69ae1816ff72bc80ab3fa9d5dbb5b7835a622d3f1d93",
+      "pass": true
+    },
+    {
+      "path": "src/engine.js",
+      "expected": "f62fe1a014736c88d6b95780a4bc31d4a7f3e501a1dda0ed15021286eb8de5c0",
+      "actual": "f62fe1a014736c88d6b95780a4bc31d4a7f3e501a1dda0ed15021286eb8de5c0",
+      "pass": true
+    },
+    {
+      "path": "src/graph.js",
+      "expected": "71ef4b40c4123918766a29bb783018a8473ebff6b18741410a79cf8469b72542",
+      "actual": "71ef4b40c4123918766a29bb783018a8473ebff6b18741410a79cf8469b72542",
+      "pass": true
+    },
+    {
+      "path": "src/java.js",
+      "expected": "53b23ef341c29095f0a7e9df8b3cc1d163fb5d3c04eec1cc863a1f808f18edad",
+      "actual": "53b23ef341c29095f0a7e9df8b3cc1d163fb5d3c04eec1cc863a1f808f18edad",
+      "pass": true
+    },
+    {
+      "path": "src/report.js",
+      "expected": "9e139810a8da8cc0d41c0116e28609bcb54fe3cec810cd6f7bddb05d18cc039e",
+      "actual": "9e139810a8da8cc0d41c0116e28609bcb54fe3cec810cd6f7bddb05d18cc039e",
+      "pass": true
+    },
+    {
+      "path": "src/rules.js",
+      "expected": "782259e20631a8618ef09f48702df019725a5529cf3913c18b5ea22d33ec8c94",
+      "actual": "782259e20631a8618ef09f48702df019725a5529cf3913c18b5ea22d33ec8c94",
+      "pass": true
+    },
+    {
+      "path": "src/snapshot.js",
+      "expected": "4b1ebaa5d3f07957510fe170a18cdf4ee6c39c1af29fd67afab1ea6641def640",
+      "actual": "4b1ebaa5d3f07957510fe170a18cdf4ee6c39c1af29fd67afab1ea6641def640",
+      "pass": true
+    },
+    {
+      "path": "src/typescript.js",
+      "expected": "d9744e3ad6d2c3cf936f8f813b7a6e319be8e79a602cf0d2ecd633978257cab6",
+      "actual": "d9744e3ad6d2c3cf936f8f813b7a6e319be8e79a602cf0d2ecd633978257cab6",
+      "pass": true
+    },
+    {
+      "path": "test/cache-cli.test.js",
+      "expected": "2a2014d85ef42b40501c147cfd0f46de56b7bb28d9388743c2bab6f5a8210ea1",
+      "actual": "2a2014d85ef42b40501c147cfd0f46de56b7bb28d9388743c2bab6f5a8210ea1",
+      "pass": true
+    },
+    {
+      "path": "test/engine.test.js",
+      "expected": "50c8dbaeb0903be836ed3e320b0c64a366a186869a3c52efc777b6b02099eb95",
+      "actual": "50c8dbaeb0903be836ed3e320b0c64a366a186869a3c52efc777b6b02099eb95",
+      "pass": true
+    },
+    {
+      "path": "test/java.test.js",
+      "expected": "3bf718a59f814e5f1bd1335f1c7f214d97b6a9bd7eff4389b4845ab34837279a",
+      "actual": "3bf718a59f814e5f1bd1335f1c7f214d97b6a9bd7eff4389b4845ab34837279a",
+      "pass": true
+    },
+    {
+      "path": "test/review-regressions.test.js",
+      "expected": "cc76f72219d9f78abea327779dbcdf49a31a26fd9ca8ad30cf4242b0b935f526",
+      "actual": "cc76f72219d9f78abea327779dbcdf49a31a26fd9ca8ad30cf4242b0b935f526",
+      "pass": true
+    },
+    {
+      "path": "test/typescript.test.js",
+      "expected": "37ce0be8ad0da6f47055678f060356bffbd71e282c87f41219c40f0a238b0570",
+      "actual": "37ce0be8ad0da6f47055678f060356bffbd71e282c87f41219c40f0a238b0570",
+      "pass": true
+    }
+  ],
+  "filesVerified": 121,
+  "allFilesPass": true,
+  "sourceTreeHash": "5b05da471692520b2b28f6939ee02683d6c4b9908a89b1c91cd5e05edf4fa943",
+  "sourceTreePass": true,
+  "analyzerBuildHash": "8ee7fcacee9a1b276b2bfab2665d8d3ab771e40eee5f3924f1f301192426e68f",
+  "analyzerPass": true
+}

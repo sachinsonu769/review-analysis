@@ -1,0 +1,511 @@
+{
+  "status": 200,
+  "headers": {
+    "cache-control": "no-store",
+    "connection": "keep-alive",
+    "content-type": "application/json; charset=utf-8",
+    "date": "Sun, 11 Oct 2026 17:48:14 GMT",
+    "keep-alive": "timeout=5",
+    "transfer-encoding": "chunked",
+    "x-content-type-options": "nosniff"
+  },
+  "body": {
+    "demos": [
+      {
+        "id": "lookup",
+        "label": "Java / Spring + React",
+        "description": "API contract migration, legacy debt, new deviations and conservative caller evidence.",
+        "workspace": {
+          "version": "demo-1",
+          "projects": [
+            {
+              "id": "monorepo",
+              "label": "backend + React",
+              "repository": "example/monorepo",
+              "module": "backend + React",
+              "modules": [
+                {
+                  "id": "Backend",
+                  "pathPrefix": "backend/"
+                },
+                {
+                  "id": "Frontend",
+                  "pathPrefix": "frontend/"
+                }
+              ],
+              "baseline": {
+                "type": "directory",
+                "root": "/opt/review-analysis/fixtures/lookup/baseline"
+              },
+              "candidate": {
+                "type": "directory",
+                "root": "/opt/review-analysis/fixtures/lookup/candidate"
+              },
+              "rules": {
+                "version": "2026.10.1-fixture",
+                "owners": [
+                  {
+                    "id": "example-platform",
+                    "displayName": "Synthetic platform team (fixture only)"
+                  }
+                ],
+                "rules": [
+                  {
+                    "id": "architecture/no-raw-http",
+                    "kind": "forbidden-import",
+                    "from": "^backend/",
+                    "target": "^org\\.legacy\\.clients\\.",
+                    "owner": "example-platform",
+                    "severity": "warning",
+                    "description": "Call external systems through the project gateway abstraction.",
+                    "exceptions": [
+                      {
+                        "path": "backend/src/main/java/com/example/lookup/ApprovedLegacyGateway.java",
+                        "expires": "2026-12-31",
+                        "approval": {
+                          "status": "reviewed",
+                          "reviewer": "SIMULATED FIXTURE REVIEWER — not a real person or approval",
+                          "evidence": "fixtures/exception-review.simulation.md",
+                          "simulation": true
+                        }
+                      },
+                      {
+                        "path": "backend/src/main/java/com/example/lookup/ExpiredGateway.java",
+                        "expires": "2026-01-01",
+                        "approval": {
+                          "status": "reviewed",
+                          "reviewer": "SIMULATED FIXTURE REVIEWER — not a real person or approval",
+                          "evidence": "fixtures/exception-review.simulation.md",
+                          "simulation": true
+                        }
+                      },
+                      {
+                        "path": "backend/src/main/java/com/example/lookup/UnreviewedGateway.java",
+                        "expires": "2026-12-31",
+                        "approval": {
+                          "status": "proposed",
+                          "evidence": "Candidate proposal only; nobody has reviewed or approved this exception."
+                        }
+                      }
+                    ],
+                    "examples": [
+                      {
+                        "path": "backend/src/main/java/com/example/lookup/AuditLogger.java",
+                        "approval": {
+                          "status": "proposed",
+                          "evidence": "Unreviewed candidate example; no human approval is asserted."
+                        }
+                      },
+                      {
+                        "path": "backend/src/main/java/com/example/lookup/ApprovedLegacyGateway.java",
+                        "approval": {
+                          "status": "reviewed",
+                          "reviewer": "SIMULATED FIXTURE REVIEWER — not a real person or approval",
+                          "evidence": "fixtures/exception-review.simulation.md",
+                          "simulation": true
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "id": "contracts/http-lookup",
+                    "kind": "endpoint-contract-change",
+                    "owner": "example-platform",
+                    "severity": "warning",
+                    "description": "Review known consumers whenever an HTTP endpoint contract changes.",
+                    "examples": [
+                      {
+                        "path": "backend/src/main/java/com/example/lookup/LookupController.java",
+                        "approval": {
+                          "status": "proposed",
+                          "evidence": "Proposed contract example; unreviewed."
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "mappings": []
+        }
+      },
+      {
+        "id": "angular",
+        "label": "Java / Spring + Angular",
+        "description": "Verified Angular decorators and typed HttpClient calls; templates and runtime remain unverified.",
+        "workspace": {
+          "version": "demo-angular-1",
+          "projects": [
+            {
+              "id": "angular-monorepo",
+              "label": "backend + Angular",
+              "repository": "example/angular-monorepo",
+              "module": "backend + Angular",
+              "modules": [
+                {
+                  "id": "Backend",
+                  "pathPrefix": "backend/"
+                },
+                {
+                  "id": "Frontend",
+                  "pathPrefix": "frontend/"
+                }
+              ],
+              "baseline": {
+                "type": "directory",
+                "root": "/opt/review-analysis/fixtures/angular/lookup/baseline"
+              },
+              "candidate": {
+                "type": "directory",
+                "root": "/opt/review-analysis/fixtures/angular/lookup/candidate"
+              },
+              "rules": {
+                "version": "demo-2026.10",
+                "rules": [
+                  {
+                    "id": "api/contract-change",
+                    "kind": "endpoint-contract-change",
+                    "owner": "Synthetic demo team",
+                    "severity": "warning",
+                    "description": "Review consumers and API compatibility before changing a lookup contract."
+                  }
+                ]
+              }
+            }
+          ],
+          "mappings": []
+        }
+      },
+      {
+        "id": "split",
+        "label": "Split backend / React repositories",
+        "description": "Separate source roots connected only by an explicit versioned HTTP mapping.",
+        "workspace": {
+          "version": "demo-split-1",
+          "projects": [
+            {
+              "id": "backend",
+              "label": "Spring API",
+              "repository": "example/backend",
+              "module": "Spring API",
+              "baseline": {
+                "type": "directory",
+                "root": "/opt/review-analysis/fixtures/lookup/baseline/backend"
+              },
+              "candidate": {
+                "type": "directory",
+                "root": "/opt/review-analysis/fixtures/lookup/candidate/backend"
+              },
+              "rules": {
+                "version": "demo-2026.10",
+                "rules": [
+                  {
+                    "id": "api/contract-change",
+                    "kind": "endpoint-contract-change",
+                    "owner": "Synthetic demo team",
+                    "severity": "warning",
+                    "description": "Review consumers and API compatibility before changing a lookup contract."
+                  }
+                ]
+              }
+            },
+            {
+              "id": "react",
+              "label": "React consumer",
+              "repository": "example/frontend",
+              "module": "React consumer",
+              "baseline": {
+                "type": "directory",
+                "root": "/opt/review-analysis/fixtures/lookup/baseline/frontend"
+              },
+              "candidate": {
+                "type": "directory",
+                "root": "/opt/review-analysis/fixtures/lookup/candidate/frontend"
+              },
+              "rules": {
+                "version": "demo-2026.10",
+                "rules": [
+                  {
+                    "id": "api/contract-change",
+                    "kind": "endpoint-contract-change",
+                    "owner": "Synthetic demo team",
+                    "severity": "warning",
+                    "description": "Review consumers and API compatibility before changing a lookup contract."
+                  }
+                ]
+              }
+            }
+          ],
+          "mappings": [
+            {
+              "id": "demo-api-origin",
+              "kind": "http",
+              "fromProject": "react",
+              "toProject": "backend",
+              "urlPrefix": "/api/",
+              "owner": "Synthetic demo team",
+              "version": "1"
+            }
+          ]
+        }
+      },
+      {
+        "id": "quality",
+        "label": "Code quality + checklist evidence",
+        "description": "Selected reputable analyzer checks and draft business criteria; confirmation is supplied by the user.",
+        "workspace": {
+          "version": "demo-quality-1",
+          "projects": [
+            {
+              "id": "quality",
+              "label": "Selected quality cases",
+              "repository": "example/quality",
+              "module": "Selected quality cases",
+              "modules": [
+                {
+                  "id": "Backend",
+                  "pathPrefix": "backend/"
+                },
+                {
+                  "id": "Frontend",
+                  "pathPrefix": "frontend/"
+                }
+              ],
+              "baseline": {
+                "type": "directory",
+                "root": "/opt/review-analysis/fixtures/quality/baseline"
+              },
+              "candidate": {
+                "type": "directory",
+                "root": "/opt/review-analysis/fixtures/quality/candidate"
+              },
+              "rules": {
+                "version": "demo-2026.10",
+                "rules": [
+                  {
+                    "id": "api/contract-change",
+                    "kind": "endpoint-contract-change",
+                    "owner": "Synthetic demo team",
+                    "severity": "warning",
+                    "description": "Review consumers and API compatibility before changing a lookup contract."
+                  }
+                ]
+              }
+            }
+          ],
+          "mappings": []
+        }
+      },
+      {
+        "id": "requirements",
+        "label": "Business checklist evidence",
+        "description": "Draft source/test criteria, missing edge cases and visibly unverified runtime behavior.",
+        "workspace": {
+          "version": "demo-requirements-1",
+          "projects": [
+            {
+              "id": "requirements",
+              "label": "Customer checklist sample",
+              "repository": "example/customer-sample",
+              "module": "Business evidence",
+              "modules": [
+                {
+                  "id": "Backend",
+                  "pathPrefix": "backend/"
+                },
+                {
+                  "id": "Frontend",
+                  "pathPrefix": "frontend/"
+                }
+              ],
+              "baseline": {
+                "type": "directory",
+                "root": "/opt/review-analysis/fixtures/requirements/sample"
+              },
+              "candidate": {
+                "type": "directory",
+                "root": "/opt/review-analysis/fixtures/requirements/sample"
+              },
+              "rules": {
+                "version": "demo-2026.10",
+                "rules": [
+                  {
+                    "id": "api/contract-change",
+                    "kind": "endpoint-contract-change",
+                    "owner": "Synthetic demo team",
+                    "severity": "warning",
+                    "description": "Review consumers and API compatibility before changing a lookup contract."
+                  }
+                ]
+              }
+            }
+          ],
+          "mappings": []
+        }
+      }
+    ],
+    "checklistDraft": {
+      "schemaVersion": "1",
+      "revision": "customer-lookup-checklist-example-v1",
+      "owner": "Example product owner (unconfirmed demonstration)",
+      "confirmation": {
+        "status": "draft"
+      },
+      "criteria": [
+        {
+          "id": "customer-lookup-by-id",
+          "description": "A customer can request a lookup by identifier and receive the matching customer identifier.",
+          "source": [
+            {
+              "pathPattern": "backend/src/main/java/example/customers/CustomerLookupController.java",
+              "symbol": "lookup",
+              "pattern": "@GetMapping(\"/customers/lookup\")"
+            },
+            {
+              "pathPattern": "frontend/src/customerApi.ts",
+              "symbol": "lookupCustomer",
+              "pattern": "/api/customers/lookup?id="
+            }
+          ],
+          "tests": [
+            {
+              "pathPattern": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+              "name": "lookupByIdReturnsMatchingCustomer"
+            }
+          ],
+          "edgeCases": [
+            {
+              "id": "known-customer",
+              "description": "A known identifier is preserved in the returned customer.",
+              "tests": [
+                {
+                  "pathPattern": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+                  "name": "lookupByIdReturnsMatchingCustomer"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "display-name",
+          "description": "The customer result displays the displayName property from the lookup response.",
+          "source": [
+            {
+              "pathPattern": "backend/src/main/java/example/customers/CustomerResponse.java",
+              "pattern": "String displayName"
+            },
+            {
+              "pathPattern": "frontend/src/CustomerResult.tsx",
+              "pattern": "result?.displayName"
+            }
+          ],
+          "tests": [
+            {
+              "pathPattern": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+              "name": "returnsDisplayName"
+            }
+          ],
+          "edgeCases": []
+        },
+        {
+          "id": "blank-identifier",
+          "description": "A blank customer identifier is rejected before a lookup request.",
+          "source": [
+            {
+              "pathPattern": "frontend/src/customerApi.ts",
+              "pattern": "if (!id.trim())"
+            }
+          ],
+          "tests": [
+            {
+              "pathPattern": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+              "name": "rejectsBlankIdentifier"
+            }
+          ],
+          "edgeCases": [
+            {
+              "id": "empty-id",
+              "description": "An empty identifier produces validation feedback and no request.",
+              "tests": [
+                {
+                  "pathPattern": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+                  "name": "rejectsBlankIdentifier"
+                }
+              ]
+            },
+            {
+              "id": "whitespace-id",
+              "description": "A whitespace-only identifier also produces validation feedback.",
+              "tests": []
+            }
+          ]
+        },
+        {
+          "id": "customer-not-found",
+          "description": "A customer that does not exist receives a clear not-found response.",
+          "source": [
+            {
+              "pathPattern": "frontend/src/customerApi.ts",
+              "pattern": "throw new Error('Customer lookup failed')"
+            }
+          ],
+          "tests": [
+            {
+              "pathPattern": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+              "name": "returns404WhenCustomerMissing"
+            }
+          ],
+          "edgeCases": [
+            {
+              "id": "unknown-customer",
+              "description": "An unknown identifier is handled separately from a server failure.",
+              "tests": [
+                {
+                  "pathPattern": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+                  "name": "returns404WhenCustomerMissing"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "loading-state",
+          "description": "The user sees a loading label before the customer response arrives.",
+          "source": [
+            {
+              "pathPattern": "frontend/src/CustomerResult.tsx",
+              "pattern": "Loading customer…"
+            }
+          ],
+          "tests": [
+            {
+              "pathPattern": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+              "name": "showsLoadingBeforeResponse"
+            }
+          ],
+          "edgeCases": [
+            {
+              "id": "slow-response",
+              "description": "The loading state persists while the response is delayed.",
+              "tests": [
+                {
+                  "pathPattern": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+                  "name": "keepsLoadingUntilResponse"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "confirmation-needed-detail",
+          "description": "An owner must provide explicit source and test selectors for the customer authorization rule.",
+          "source": [],
+          "tests": [],
+          "edgeCases": []
+        }
+      ]
+    },
+    "inputPolicy": "Configured read-only /inputs roots or bundled fixtures only"
+  }
+}

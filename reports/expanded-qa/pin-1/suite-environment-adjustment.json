@@ -1,0 +1,12 @@
+{
+  "originalRun": "container-suite",
+  "originalResult": "120/121 passed, 1 failed, 0 skipped",
+  "failure": "Synthetic trusted PMD script under default noexec /tmp failed fs.access(X_OK)",
+  "retestRun": "container-suite-exec-fixtures",
+  "testOnlyDeviation": "Explicit exec on ephemeral /tmp for trusted synthetic analyzer/hook fixtures",
+  "purpose": "Make executable-access/cache-identity and blocked-hook tests meaningful; no FS mocks, changed assertions, or skips",
+  "samePinnedImage": true,
+  "samePinnedSource": true,
+  "productionApp": "Runs unchanged delivered Compose defaults; no explicit exec added to application tmpfs",
+  "rootAuthorization": "Root requested this test-harness correction after reviewing preserved failure"
+}

@@ -1,0 +1,17 @@
+01-http-lexical-static-dynamic: pass 
+02-ts-import-shadow-missing: pass 
+03-ts-ambiguous-module: pass 
+04-java-arity-prefix: pass 
+05-java-overload-receiver-shadow: pass 
+06-java-pattern-shadow: pass 
+07-java-static-constant-routing: pass 
+08-http-template-regex: pass 
+09-http-ambiguous-controllers: pass 
+10-source-parse-diagnostics: pass 
+11-ts-namespace-nested-member: pass 
+12-java-ambiguous-explicit-imports: pass 
+13-ts-namespace-contract-member: pass 
+14-js-with-lexical-shadow: pass 
+15-java-varargs-overload: pass 
+16-java-inherited-overload: pass 
+{"cases":16,"passed":16,"failed":0,"notRun":0,"manifestErrorsAfter":[]}

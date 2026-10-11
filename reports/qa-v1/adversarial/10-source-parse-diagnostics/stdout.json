@@ -1,0 +1,243 @@
+{
+  "schemaVersion": "1.0",
+  "analyzer": {
+    "version": "0.1.0",
+    "sourceBuildHash": "8ee7fcacee9a1b276b2bfab2665d8d3ab771e40eee5f3924f1f301192426e68f",
+    "parsers": {
+      "java": "java-parser@3.0.1",
+      "typescript": "typescript@5.9.3"
+    }
+  },
+  "advisory": true,
+  "asOf": "2026-10-11",
+  "provenance": {
+    "baseline": {
+      "root": "/tmp/review-analysis-adversarial-v1-anUajX/10-source-parse-diagnostics/baseline",
+      "type": "directory",
+      "revision": "tree-sha256:0ab93d2bf00796f01537248c34d6f41e9740bfb7ea13948fb19bee0d26bc5009",
+      "contentHash": "0ab93d2bf00796f01537248c34d6f41e9740bfb7ea13948fb19bee0d26bc5009",
+      "dirty": false
+    },
+    "candidate": {
+      "root": "/tmp/review-analysis-adversarial-v1-anUajX/10-source-parse-diagnostics/candidate",
+      "type": "directory",
+      "revision": "tree-sha256:5feacfd5d4ec46a4ef8c83e3916f2074bf164a77a1e65d6caf3ad643043efe82",
+      "contentHash": "5feacfd5d4ec46a4ef8c83e3916f2074bf164a77a1e65d6caf3ad643043efe82",
+      "dirty": false
+    },
+    "rulesHash": "90f33c2c080aa463115b0ef7e4058bb9bf0da4944dff79ed58eae2f01f9cd3f1",
+    "baselineRulesHash": "90f33c2c080aa463115b0ef7e4058bb9bf0da4944dff79ed58eae2f01f9cd3f1",
+    "cacheKey": "4e8bc87440c48443f3087c9178de086a82cb9673c03955daac71edb5b75e60bb"
+  },
+  "changes": [
+    {
+      "kind": "modified",
+      "name": "work",
+      "key": "work",
+      "language": "typescript",
+      "contractChanged": false,
+      "before": {
+        "path": "frontend/lib.ts",
+        "range": {
+          "startLine": 1,
+          "endLine": 1
+        },
+        "revision": "tree-sha256:0ab93d2bf00796f01537248c34d6f41e9740bfb7ea13948fb19bee0d26bc5009",
+        "fileHash": "6a17fb63c8c90e2ce7a1f7344a73bd815f27fdf6df05982abd610fe84ea3408b",
+        "excerpt": "export function work(x: number): number { return 1; }"
+      },
+      "after": {
+        "path": "frontend/lib.ts",
+        "range": {
+          "startLine": 1,
+          "endLine": 1
+        },
+        "revision": "tree-sha256:5feacfd5d4ec46a4ef8c83e3916f2074bf164a77a1e65d6caf3ad643043efe82",
+        "fileHash": "6745bcd12f9a1c706a5b88bc099841f1fb145a755425ede6614a1c4559e322d9",
+        "excerpt": "export function work(x: number): number { return 2; }"
+      }
+    }
+  ],
+  "impact": {
+    "direct": [
+      {
+        "kind": "import",
+        "fromPath": "frontend/broken.ts",
+        "toPath": "frontend/lib.ts",
+        "targetKey": null,
+        "confidence": "high",
+        "reason": "Relative import resolves to supplied source file",
+        "evidence": {
+          "path": "frontend/broken.ts",
+          "range": {
+            "startLine": 1,
+            "endLine": 1
+          },
+          "revision": "tree-sha256:0ab93d2bf00796f01537248c34d6f41e9740bfb7ea13948fb19bee0d26bc5009",
+          "fileHash": "e5e9210c33039adcdcea2933ef1a7fb945d69b8a18b255c1e2e47fbd9026840b",
+          "excerpt": "import {work} from './lib';"
+        },
+        "targetEvidence": {
+          "path": "frontend/lib.ts",
+          "range": {
+            "startLine": 1,
+            "endLine": 1
+          },
+          "revision": "tree-sha256:0ab93d2bf00796f01537248c34d6f41e9740bfb7ea13948fb19bee0d26bc5009",
+          "fileHash": "6a17fb63c8c90e2ce7a1f7344a73bd815f27fdf6df05982abd610fe84ea3408b",
+          "excerpt": "export function work(x: number): number { return 1; }"
+        }
+      },
+      {
+        "kind": "import",
+        "fromPath": "frontend/broken.ts",
+        "toPath": "frontend/lib.ts",
+        "targetKey": null,
+        "confidence": "high",
+        "reason": "Relative import resolves to supplied source file",
+        "evidence": {
+          "path": "frontend/broken.ts",
+          "range": {
+            "startLine": 1,
+            "endLine": 1
+          },
+          "revision": "tree-sha256:5feacfd5d4ec46a4ef8c83e3916f2074bf164a77a1e65d6caf3ad643043efe82",
+          "fileHash": "e5e9210c33039adcdcea2933ef1a7fb945d69b8a18b255c1e2e47fbd9026840b",
+          "excerpt": "import {work} from './lib';"
+        },
+        "targetEvidence": {
+          "path": "frontend/lib.ts",
+          "range": {
+            "startLine": 1,
+            "endLine": 1
+          },
+          "revision": "tree-sha256:5feacfd5d4ec46a4ef8c83e3916f2074bf164a77a1e65d6caf3ad643043efe82",
+          "fileHash": "6745bcd12f9a1c706a5b88bc099841f1fb145a755425ede6614a1c4559e322d9",
+          "excerpt": "export function work(x: number): number { return 2; }"
+        }
+      }
+    ],
+    "indirect": []
+  },
+  "findings": [],
+  "guidance": {
+    "task": "Malformed supplied Java and TS must retain explicit diagnostics alongside any recovered declarations",
+    "ruleSetVersion": "independent-adversarial-v1",
+    "approvalGap": "No human approval is inferred. Reviewed examples/exceptions are assertions from supplied configuration; simulation records are demonstrations only.",
+    "rules": [
+      {
+        "id": "independent/http-contract",
+        "kind": "endpoint-contract-change",
+        "owner": "synthetic-qa",
+        "version": "independent-adversarial-v1",
+        "severity": "warning",
+        "instruction": "endpoint-contract-change",
+        "examples": []
+      }
+    ]
+  },
+  "unknowns": [
+    {
+      "reason": "Java parse error",
+      "detail": "Sad sad panda, lexing errors detected in line: 2, column: 30!\nunexpected character: ->\"<- at offset: 41, skipped 1 characters.",
+      "range": {
+        "startLine": 2,
+        "endLine": 2
+      },
+      "evidence": {
+        "path": "backend/Broken.java",
+        "range": {
+          "startLine": 2,
+          "endLine": 2
+        },
+        "revision": "tree-sha256:0ab93d2bf00796f01537248c34d6f41e9740bfb7ea13948fb19bee0d26bc5009",
+        "fileHash": "bfface44019bbb5e9d6c91b9cc06d0dc06b9c07e2552a5b82bbac91de4c6d175",
+        "excerpt": "class Broken { String text = \"unterminated;"
+      }
+    },
+    {
+      "reason": "parse_diagnostic",
+      "range": {
+        "startLine": 2,
+        "endLine": 2
+      },
+      "detail": "',' expected.",
+      "evidence": {
+        "path": "frontend/broken.ts",
+        "range": {
+          "startLine": 2,
+          "endLine": 2
+        },
+        "revision": "tree-sha256:0ab93d2bf00796f01537248c34d6f41e9740bfb7ea13948fb19bee0d26bc5009",
+        "fileHash": "e5e9210c33039adcdcea2933ef1a7fb945d69b8a18b255c1e2e47fbd9026840b",
+        "excerpt": "export function broken( { work(1); // syntax-broken"
+      }
+    },
+    {
+      "reason": "Java parse error",
+      "detail": "Sad sad panda, lexing errors detected in line: 2, column: 30!\nunexpected character: ->\"<- at offset: 41, skipped 1 characters.",
+      "range": {
+        "startLine": 2,
+        "endLine": 2
+      },
+      "evidence": {
+        "path": "backend/Broken.java",
+        "range": {
+          "startLine": 2,
+          "endLine": 2
+        },
+        "revision": "tree-sha256:5feacfd5d4ec46a4ef8c83e3916f2074bf164a77a1e65d6caf3ad643043efe82",
+        "fileHash": "bfface44019bbb5e9d6c91b9cc06d0dc06b9c07e2552a5b82bbac91de4c6d175",
+        "excerpt": "class Broken { String text = \"unterminated;"
+      }
+    },
+    {
+      "reason": "parse_diagnostic",
+      "range": {
+        "startLine": 2,
+        "endLine": 2
+      },
+      "detail": "',' expected.",
+      "evidence": {
+        "path": "frontend/broken.ts",
+        "range": {
+          "startLine": 2,
+          "endLine": 2
+        },
+        "revision": "tree-sha256:5feacfd5d4ec46a4ef8c83e3916f2074bf164a77a1e65d6caf3ad643043efe82",
+        "fileHash": "e5e9210c33039adcdcea2933ef1a7fb945d69b8a18b255c1e2e47fbd9026840b",
+        "excerpt": "export function broken( { work(1); // syntax-broken"
+      }
+    }
+  ],
+  "focusedTests": [],
+  "coverage": {
+    "complete": false,
+    "fullRegressionMayBeSkipped": false,
+    "sourceFiles": {
+      "baseline": 3,
+      "candidate": 3
+    },
+    "excluded": {
+      "baseline": [],
+      "candidate": []
+    },
+    "limitations": [
+      "Source-only analysis; no Java/TypeScript semantic compilation, runtime dispatch, reflection, DI wiring, proxy/origin verification or transitive external package sources",
+      "Edges are evidence-backed approximations; indirect file dependencies do not prove execution",
+      "Renames inferred only for identical declaration key/signature/body; edited renames remain delete/add",
+      "Unknown syntax and unresolved/dynamic dependencies remain visible; passing fixture tests is not private-repository acceptance"
+    ]
+  },
+  "cache": {
+    "report": "disabled",
+    "parsedFiles": 6,
+    "reusedFiles": 0,
+    "invalidEntries": 0
+  },
+  "metrics": {
+    "elapsedMs": 34.8,
+    "bytesRead": 524,
+    "reportCacheHit": false
+  }
+}

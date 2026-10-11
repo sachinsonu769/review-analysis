@@ -1,0 +1,9 @@
+[
+  {
+    "name": "health has exact pinned build",
+    "status": "fail",
+    "elapsedMs": 19,
+    "message": "fetch failed",
+    "stack": "TypeError: fetch failed"
+  }
+]

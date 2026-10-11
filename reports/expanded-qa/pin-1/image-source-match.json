@@ -1,0 +1,33 @@
+{
+  "status": "pass",
+  "image": "sha256:56ce7b94faf0f817f0fc13a1358b6650ff0d950bbd68198f070d649e1c23c819",
+  "build": {
+    "version": "0.2.0",
+    "sourceBuildHash": "0427f5fed8a45a3d4dbc5523f1d0f8afb57949bac0df1f9bef249fd73ae31061",
+    "parsers": {
+      "java": "java-parser@3.0.1",
+      "typescript": "typescript@5.9.3"
+    }
+  },
+  "runtime": "v24.21.0",
+  "java": "openjdk version \"21.0.12.1\" 2026-08-18 LTS\nOpenJDK Runtime Environment Temurin-21.0.12.1+1 (build 21.0.12.1+1-LTS)\nOpenJDK 64-Bit Server VM Temurin-21.0.12.1+1 (build 21.0.12.1+1-LTS, mixed mode, sharing)",
+  "pmd": "\u2588\u2588\u2588\u2588                            \u2588\u2588\u2588\u2588\n  \u2588\u2588                                \u2588\u2588\n  \u2588\u2588  \u2588\u2588\u2588\u2588\u2588 \u2588 \u2588\u2588\u2588    \u2588\u2588\u2588  \u2588\u2588\u2588\u2588\u2588\u2588\u2588   \u2588\u2588\n \u2588\u2588\u2588  \u2588\u2588  \u2588\u2588\u2588 \u2588\u2588\u2588\u2588  \u2588\u2588\u2588\u2588  \u2588\u2588    \u2588\u2588  \u2588\u2588\u2588\n \u2588\u2588\u2588  \u2588\u2588\u2588\u2588\u2588\u2588\u2588 \u2588\u2588 \u2588\u2588\u2588\u2588 \u2588\u2588  \u2588\u2588    \u2588\u2588  \u2588\u2588\u2588\n  \u2588\u2588  \u2588\u2588      \u2588\u2588  \u2588\u2588  \u2588\u2588  \u2588\u2588\u2588\u2588\u2588\u2588\u2588   \u2588\u2588\n  \u2588\u2588                                \u2588\u2588\n  \u2588\u2588\u2588\u2588                            \u2588\u2588\u2588\u2588\nPMD 7.17.0 (d2942d5ded8e3f967ba8872f3dc58a7bdffa73bf, 2025-09-12T07:17:26Z)\nJava version: 21.0.12.1, vendor: Eclipse Adoptium, runtime: /opt/java/openjdk",
+  "git": "git version 2.39.5",
+  "uid": 1000,
+  "imageFilesMatchingPinnedSource": 184,
+  "appDistExact": true,
+  "qualityToolchain": {
+    "eslint": "10.12.0",
+    "typescriptParser": "8.71.1",
+    "typescriptPlugin": "8.71.1",
+    "jscpd": "4.0.5",
+    "pmd": {
+      "status": "available",
+      "path": "/opt/pmd/bin/pmd",
+      "realpath": "/opt/pmd/bin/pmd",
+      "binaryHash": "664db66a730b7a703be2abe2250ba9a3cfc5d8bff9cd1ef722febcc604590a10",
+      "distributionHash": "3e73ea7aad9b105cfcef64e95a6eb558dbc1619005fd94edd2980c249e37bb98",
+      "jarCount": 106
+    }
+  }
+}

@@ -1,0 +1,1025 @@
+{
+  "status": 200,
+  "headers": {
+    "cache-control": "no-store",
+    "connection": "keep-alive",
+    "content-type": "application/json; charset=utf-8",
+    "date": "Sun, 11 Oct 2026 17:48:27 GMT",
+    "keep-alive": "timeout=5",
+    "transfer-encoding": "chunked",
+    "x-content-type-options": "nosniff"
+  },
+  "body": {
+    "schemaVersion": "2.0",
+    "build": {
+      "version": "0.2.0",
+      "sourceBuildHash": "0427f5fed8a45a3d4dbc5523f1d0f8afb57949bac0df1f9bef249fd73ae31061",
+      "parsers": {
+        "java": "java-parser@3.0.1",
+        "typescript": "typescript@5.9.3"
+      }
+    },
+    "analyzer": {
+      "version": "0.2.0",
+      "sourceBuildHash": "0427f5fed8a45a3d4dbc5523f1d0f8afb57949bac0df1f9bef249fd73ae31061",
+      "parsers": {
+        "java": "java-parser@3.0.1",
+        "typescript": "typescript@5.9.3"
+      }
+    },
+    "advisory": true,
+    "asOf": "2026-10-11",
+    "graph": {
+      "nodes": [
+        {
+          "id": "foreign_git::a.ts",
+          "kind": "file",
+          "label": "a.ts",
+          "path": "a.ts",
+          "projectId": "foreign_git",
+          "repository": "synthetic/root-owned",
+          "module": "git",
+          "language": "typescript",
+          "changed": true,
+          "changeKinds": [
+            "deleted",
+            "added"
+          ],
+          "evidence": {
+            "path": "a.ts",
+            "range": {
+              "startLine": 1,
+              "endLine": 1
+            },
+            "revision": "worktree:fc10350308d7f9151810354ecdcf14512e81b078:013181e8778e1cc9",
+            "fileHash": "179eb7b5d280175544d2d7a8f753bf79fa573c869a8410b9b099c9db003df3c8",
+            "excerpt": "export const dirty = 3;",
+            "projectId": "foreign_git",
+            "repository": "synthetic/root-owned"
+          },
+          "declarations": [
+            {
+              "key": "dirty",
+              "name": "dirty",
+              "kind": "variable",
+              "signature": "export const dirty",
+              "evidence": {
+                "path": "a.ts",
+                "range": {
+                  "startLine": 1,
+                  "endLine": 1
+                },
+                "revision": "worktree:fc10350308d7f9151810354ecdcf14512e81b078:013181e8778e1cc9",
+                "fileHash": "179eb7b5d280175544d2d7a8f753bf79fa573c869a8410b9b099c9db003df3c8",
+                "excerpt": "export const dirty = 3;",
+                "projectId": "foreign_git",
+                "repository": "synthetic/root-owned"
+              }
+            }
+          ],
+          "phases": [
+            "baseline",
+            "candidate"
+          ]
+        }
+      ],
+      "edges": [],
+      "complete": false,
+      "direction": "consumer-to-dependency"
+    },
+    "projectMetadata": [
+      {
+        "id": "foreign_git",
+        "label": "foreign_git",
+        "repository": "synthetic/root-owned",
+        "module": "git"
+      }
+    ],
+    "workspace": {
+      "version": "qa-foreign-git-1",
+      "mappings": [],
+      "configHash": "e50336bca7b267cd6bc6ad5f8f1d091585845e255799377696cf9a05643f6e1b"
+    },
+    "changes": [
+      {
+        "kind": "deleted",
+        "name": "original",
+        "key": "original",
+        "language": "typescript",
+        "contractChanged": true,
+        "before": {
+          "path": "a.ts",
+          "range": {
+            "startLine": 1,
+            "endLine": 1
+          },
+          "revision": "bca6a691b7f262726735c77423945b76fed6ab97",
+          "fileHash": "0ad9f46c29c2a881cebd1c5ec42f3ee36edbf1e1a1deeee5f5031e425aee467f",
+          "excerpt": "export const original = 1;",
+          "projectId": "foreign_git",
+          "repository": "synthetic/root-owned"
+        },
+        "after": null,
+        "projectId": "foreign_git"
+      },
+      {
+        "kind": "added",
+        "name": "dirty",
+        "key": "dirty",
+        "language": "typescript",
+        "contractChanged": true,
+        "before": null,
+        "after": {
+          "path": "a.ts",
+          "range": {
+            "startLine": 1,
+            "endLine": 1
+          },
+          "revision": "worktree:fc10350308d7f9151810354ecdcf14512e81b078:013181e8778e1cc9",
+          "fileHash": "179eb7b5d280175544d2d7a8f753bf79fa573c869a8410b9b099c9db003df3c8",
+          "excerpt": "export const dirty = 3;",
+          "projectId": "foreign_git",
+          "repository": "synthetic/root-owned"
+        },
+        "projectId": "foreign_git"
+      }
+    ],
+    "impact": {
+      "paths": [],
+      "limits": {
+        "maxDepth": 12,
+        "representativePaths": true,
+        "complete": false,
+        "reason": "One bounded representative chain per expanded node and phase; alternate paths and deeper chains may be omitted"
+      },
+      "direct": [],
+      "indirect": []
+    },
+    "findings": [],
+    "guidance": {
+      "projects": [
+        {
+          "projectId": "foreign_git",
+          "task": "Review proposed API and lookup contract changes",
+          "ruleSetVersion": "qa",
+          "approvalGap": "No human approval is inferred. Reviewed examples/exceptions are assertions from supplied configuration; simulation records are demonstrations only.",
+          "rules": []
+        }
+      ]
+    },
+    "quality": {
+      "tools": [
+        {
+          "name": "eslint",
+          "version": "10.12.0",
+          "parser": "@typescript-eslint/parser@8.71.1",
+          "rules": [
+            "complexity",
+            "no-unreachable",
+            "no-constant-condition",
+            "no-constant-binary-expression",
+            "no-dupe-else-if",
+            "no-unsafe-finally",
+            "no-async-promise-executor",
+            "require-atomic-updates",
+            "@typescript-eslint/no-non-null-assertion",
+            "@typescript-eslint/no-non-null-asserted-optional-chain"
+          ],
+          "sourceOnly": true
+        },
+        {
+          "name": "jscpd",
+          "version": "4.0.5",
+          "rules": [
+            "duplicate-block"
+          ],
+          "sourceOnly": true
+        },
+        {
+          "name": "pmd",
+          "version": null,
+          "status": "unavailable",
+          "rules": [
+            "CyclomaticComplexity",
+            "BrokenNullCheck",
+            "CloseResource",
+            "UnconditionalIfStatement"
+          ],
+          "sourceOnly": true
+        }
+      ],
+      "findings": [],
+      "unsupported": [
+        {
+          "tool": "typescript-eslint",
+          "reason": "type-aware-checks-unavailable",
+          "detail": "No repository tsconfig, dependencies or compiler project is loaded; no-floating-promises, no-unnecessary-condition and typed null/async rules are not run",
+          "projectId": "foreign_git"
+        },
+        {
+          "tool": "pmd",
+          "reason": "source-only-type-resolution",
+          "detail": "JDK types only; external Java dependency types, dispatch and resource ownership contracts are not verified",
+          "projectId": "foreign_git"
+        },
+        {
+          "tool": "source-design",
+          "reason": "bounded-design-coverage",
+          "detail": "Selected import boundaries and declaration conventions only; no universal SRP/OCP/LSP/ISP/DIP judgment, runtime DI resolution, inheritance substitutability or behavioral proof",
+          "projectId": "foreign_git"
+        }
+      ],
+      "projects": [
+        {
+          "configHash": "a2ee4ddf65b11ddd9d572f41575b37f55c0141f30e531b11fe09d18a64e2dc58",
+          "config": {
+            "complexityThreshold": 10,
+            "duplication": {
+              "minTokens": 50,
+              "minLines": 5
+            },
+            "pmdEnabled": true
+          },
+          "tools": [
+            {
+              "name": "eslint",
+              "version": "10.12.0",
+              "parser": "@typescript-eslint/parser@8.71.1",
+              "rules": [
+                "complexity",
+                "no-unreachable",
+                "no-constant-condition",
+                "no-constant-binary-expression",
+                "no-dupe-else-if",
+                "no-unsafe-finally",
+                "no-async-promise-executor",
+                "require-atomic-updates",
+                "@typescript-eslint/no-non-null-assertion",
+                "@typescript-eslint/no-non-null-asserted-optional-chain"
+              ],
+              "sourceOnly": true
+            },
+            {
+              "name": "jscpd",
+              "version": "4.0.5",
+              "rules": [
+                "duplicate-block"
+              ],
+              "sourceOnly": true
+            },
+            {
+              "name": "pmd",
+              "version": null,
+              "status": "unavailable",
+              "rules": [
+                "CyclomaticComplexity",
+                "BrokenNullCheck",
+                "CloseResource",
+                "UnconditionalIfStatement"
+              ],
+              "sourceOnly": true
+            }
+          ],
+          "findings": [],
+          "unsupported": [
+            {
+              "tool": "typescript-eslint",
+              "reason": "type-aware-checks-unavailable",
+              "detail": "No repository tsconfig, dependencies or compiler project is loaded; no-floating-promises, no-unnecessary-condition and typed null/async rules are not run",
+              "projectId": "foreign_git"
+            },
+            {
+              "tool": "pmd",
+              "reason": "source-only-type-resolution",
+              "detail": "JDK types only; external Java dependency types, dispatch and resource ownership contracts are not verified",
+              "projectId": "foreign_git"
+            },
+            {
+              "tool": "source-design",
+              "reason": "bounded-design-coverage",
+              "detail": "Selected import boundaries and declaration conventions only; no universal SRP/OCP/LSP/ISP/DIP judgment, runtime DI resolution, inheritance substitutability or behavioral proof",
+              "projectId": "foreign_git"
+            }
+          ],
+          "metrics": {
+            "elapsedMs": 4.5,
+            "analyzedFiles": {
+              "baseline": {
+                "eslint": 1,
+                "pmd": 0,
+                "jscpd": 1
+              },
+              "candidate": {
+                "eslint": 1,
+                "pmd": 0,
+                "jscpd": 1
+              }
+            },
+            "duplication": {
+              "baseline": {
+                "clones": 0,
+                "duplicatedLines": 0,
+                "duplicatedTokens": 0
+              },
+              "candidate": {
+                "clones": 0,
+                "duplicatedLines": 0,
+                "duplicatedTokens": 0
+              }
+            }
+          },
+          "conventions": {
+            "configHash": "a0c3afb1e366ef4040a5019cacaf21eaed3e19335582e5366b1220659d28c64d",
+            "config": {
+              "forbiddenImports": [],
+              "maxParameters": 5,
+              "maxClassMethods": 20,
+              "checkPublicMutableFields": true,
+              "checkModuleCycles": true
+            },
+            "tools": [
+              {
+                "name": "source-design",
+                "version": "1.0",
+                "rules": [
+                  "forbidden-import",
+                  "parameter-count",
+                  "class-method-count",
+                  "public-mutable-field",
+                  "module-cycle"
+                ],
+                "sourceOnly": true
+              }
+            ],
+            "findings": [],
+            "unsupported": [
+              {
+                "tool": "source-design",
+                "reason": "bounded-design-coverage",
+                "detail": "Selected import boundaries and declaration conventions only; no universal SRP/OCP/LSP/ISP/DIP judgment, runtime DI resolution, inheritance substitutability or behavioral proof"
+              }
+            ],
+            "metrics": {
+              "configuredPolicies": 0,
+              "baselineFindings": 0,
+              "candidateFindings": 0
+            }
+          },
+          "projectId": "foreign_git",
+          "cache": "bypass-dirty"
+        }
+      ]
+    },
+    "requirements": {
+      "schemaVersion": "1",
+      "status": "draft",
+      "advisory": true,
+      "confirmation": {
+        "status": "draft"
+      },
+      "checklist": {
+        "revision": "customer-lookup-checklist-example-v1",
+        "owner": "Example product owner (unconfirmed demonstration)",
+        "hash": "775651a6cdc32a97c972c816f4a97652639ad60bab94a5c166bac25cab5f7eb4"
+      },
+      "provenance": {
+        "mode": "workspace",
+        "fileHashesVerified": true,
+        "projects": [
+          {
+            "id": "foreign_git",
+            "revision": "worktree:fc10350308d7f9151810354ecdcf14512e81b078:013181e8778e1cc9",
+            "contentHash": "013181e8778e1cc98bf37da4341da487b8f0c257e83c60ef5b469db06505b99c"
+          }
+        ],
+        "scope": {
+          "status": "unscoped",
+          "issues": []
+        }
+      },
+      "criteria": [
+        {
+          "id": "customer-lookup-by-id",
+          "description": "A customer can request a lookup by identifier and receive the matching customer identifier.",
+          "assessment": "unverified",
+          "reasons": [
+            "Checklist is draft; business criteria have not been asserted as confirmed",
+            "One or more declared source selectors are unmatched",
+            "One or more declared test selectors are unmatched",
+            "Declared edge cases have missing test source evidence"
+          ],
+          "sourceChecks": [
+            {
+              "selector": {
+                "pathPattern": "backend/src/main/java/example/customers/CustomerLookupController.java",
+                "symbol": "lookup",
+                "pattern": "@GetMapping(\"/customers/lookup\")"
+              },
+              "status": "unmatched",
+              "reason": "No supplied file matches the path selector",
+              "matchingFileCount": 0,
+              "searchedFileCount": 0,
+              "searchedProjectIds": [
+                "foreign_git"
+              ],
+              "evidence": [],
+              "evidenceTruncated": false
+            },
+            {
+              "selector": {
+                "pathPattern": "frontend/src/customerApi.ts",
+                "symbol": "lookupCustomer",
+                "pattern": "/api/customers/lookup?id="
+              },
+              "status": "unmatched",
+              "reason": "No supplied file matches the path selector",
+              "matchingFileCount": 0,
+              "searchedFileCount": 0,
+              "searchedProjectIds": [
+                "foreign_git"
+              ],
+              "evidence": [],
+              "evidenceTruncated": false
+            }
+          ],
+          "testChecks": [
+            {
+              "selector": {
+                "pathPattern": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+                "name": "lookupByIdReturnsMatchingCustomer"
+              },
+              "status": "unmatched",
+              "reason": "No supplied file matches the path selector",
+              "matchingFileCount": 0,
+              "searchedFileCount": 0,
+              "searchedProjectIds": [
+                "foreign_git"
+              ],
+              "evidence": [],
+              "evidenceTruncated": false
+            }
+          ],
+          "sourceEvidence": [],
+          "testEvidence": [],
+          "edgeCases": [
+            {
+              "id": "known-customer",
+              "description": "A known identifier is preserved in the returned customer.",
+              "assessment": "missing",
+              "checks": [
+                {
+                  "selector": {
+                    "pathPattern": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+                    "name": "lookupByIdReturnsMatchingCustomer"
+                  },
+                  "status": "unmatched",
+                  "reason": "No supplied file matches the path selector",
+                  "matchingFileCount": 0,
+                  "searchedFileCount": 0,
+                  "searchedProjectIds": [
+                    "foreign_git"
+                  ],
+                  "evidence": [],
+                  "evidenceTruncated": false
+                }
+              ],
+              "testEvidence": [],
+              "runtime": "unverified",
+              "reason": "One or more declared edge-case test selectors are unmatched"
+            }
+          ],
+          "missingEdgeCases": [
+            {
+              "id": "known-customer",
+              "description": "A known identifier is preserved in the returned customer.",
+              "reason": "One or more declared edge-case test selectors are unmatched",
+              "checks": [
+                {
+                  "selector": {
+                    "pathPattern": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+                    "name": "lookupByIdReturnsMatchingCustomer"
+                  },
+                  "status": "unmatched",
+                  "reason": "No supplied file matches the path selector",
+                  "matchingFileCount": 0,
+                  "searchedFileCount": 0,
+                  "searchedProjectIds": [
+                    "foreign_git"
+                  ],
+                  "evidence": [],
+                  "evidenceTruncated": false
+                }
+              ]
+            }
+          ],
+          "runtime": "unverified"
+        },
+        {
+          "id": "display-name",
+          "description": "The customer result displays the displayName property from the lookup response.",
+          "assessment": "unverified",
+          "reasons": [
+            "Checklist is draft; business criteria have not been asserted as confirmed",
+            "One or more declared source selectors are unmatched",
+            "One or more declared test selectors are unmatched"
+          ],
+          "sourceChecks": [
+            {
+              "selector": {
+                "pathPattern": "backend/src/main/java/example/customers/CustomerResponse.java",
+                "pattern": "String displayName"
+              },
+              "status": "unmatched",
+              "reason": "No supplied file matches the path selector",
+              "matchingFileCount": 0,
+              "searchedFileCount": 0,
+              "searchedProjectIds": [
+                "foreign_git"
+              ],
+              "evidence": [],
+              "evidenceTruncated": false
+            },
+            {
+              "selector": {
+                "pathPattern": "frontend/src/CustomerResult.tsx",
+                "pattern": "result?.displayName"
+              },
+              "status": "unmatched",
+              "reason": "No supplied file matches the path selector",
+              "matchingFileCount": 0,
+              "searchedFileCount": 0,
+              "searchedProjectIds": [
+                "foreign_git"
+              ],
+              "evidence": [],
+              "evidenceTruncated": false
+            }
+          ],
+          "testChecks": [
+            {
+              "selector": {
+                "pathPattern": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+                "name": "returnsDisplayName"
+              },
+              "status": "unmatched",
+              "reason": "No supplied file matches the path selector",
+              "matchingFileCount": 0,
+              "searchedFileCount": 0,
+              "searchedProjectIds": [
+                "foreign_git"
+              ],
+              "evidence": [],
+              "evidenceTruncated": false
+            }
+          ],
+          "sourceEvidence": [],
+          "testEvidence": [],
+          "edgeCases": [],
+          "missingEdgeCases": [],
+          "runtime": "unverified"
+        },
+        {
+          "id": "blank-identifier",
+          "description": "A blank customer identifier is rejected before a lookup request.",
+          "assessment": "unverified",
+          "reasons": [
+            "Checklist is draft; business criteria have not been asserted as confirmed",
+            "One or more declared source selectors are unmatched",
+            "One or more declared test selectors are unmatched",
+            "Declared edge cases have missing test source evidence"
+          ],
+          "sourceChecks": [
+            {
+              "selector": {
+                "pathPattern": "frontend/src/customerApi.ts",
+                "pattern": "if (!id.trim())"
+              },
+              "status": "unmatched",
+              "reason": "No supplied file matches the path selector",
+              "matchingFileCount": 0,
+              "searchedFileCount": 0,
+              "searchedProjectIds": [
+                "foreign_git"
+              ],
+              "evidence": [],
+              "evidenceTruncated": false
+            }
+          ],
+          "testChecks": [
+            {
+              "selector": {
+                "pathPattern": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+                "name": "rejectsBlankIdentifier"
+              },
+              "status": "unmatched",
+              "reason": "No supplied file matches the path selector",
+              "matchingFileCount": 0,
+              "searchedFileCount": 0,
+              "searchedProjectIds": [
+                "foreign_git"
+              ],
+              "evidence": [],
+              "evidenceTruncated": false
+            }
+          ],
+          "sourceEvidence": [],
+          "testEvidence": [],
+          "edgeCases": [
+            {
+              "id": "empty-id",
+              "description": "An empty identifier produces validation feedback and no request.",
+              "assessment": "missing",
+              "checks": [
+                {
+                  "selector": {
+                    "pathPattern": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+                    "name": "rejectsBlankIdentifier"
+                  },
+                  "status": "unmatched",
+                  "reason": "No supplied file matches the path selector",
+                  "matchingFileCount": 0,
+                  "searchedFileCount": 0,
+                  "searchedProjectIds": [
+                    "foreign_git"
+                  ],
+                  "evidence": [],
+                  "evidenceTruncated": false
+                }
+              ],
+              "testEvidence": [],
+              "runtime": "unverified",
+              "reason": "One or more declared edge-case test selectors are unmatched"
+            },
+            {
+              "id": "whitespace-id",
+              "description": "A whitespace-only identifier also produces validation feedback.",
+              "assessment": "missing",
+              "checks": [],
+              "testEvidence": [],
+              "runtime": "unverified",
+              "reason": "No explicit test selector supplied for this edge case"
+            }
+          ],
+          "missingEdgeCases": [
+            {
+              "id": "empty-id",
+              "description": "An empty identifier produces validation feedback and no request.",
+              "reason": "One or more declared edge-case test selectors are unmatched",
+              "checks": [
+                {
+                  "selector": {
+                    "pathPattern": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+                    "name": "rejectsBlankIdentifier"
+                  },
+                  "status": "unmatched",
+                  "reason": "No supplied file matches the path selector",
+                  "matchingFileCount": 0,
+                  "searchedFileCount": 0,
+                  "searchedProjectIds": [
+                    "foreign_git"
+                  ],
+                  "evidence": [],
+                  "evidenceTruncated": false
+                }
+              ]
+            },
+            {
+              "id": "whitespace-id",
+              "description": "A whitespace-only identifier also produces validation feedback.",
+              "reason": "No explicit test selector supplied for this edge case",
+              "checks": []
+            }
+          ],
+          "runtime": "unverified"
+        },
+        {
+          "id": "customer-not-found",
+          "description": "A customer that does not exist receives a clear not-found response.",
+          "assessment": "unverified",
+          "reasons": [
+            "Checklist is draft; business criteria have not been asserted as confirmed",
+            "One or more declared source selectors are unmatched",
+            "One or more declared test selectors are unmatched",
+            "Declared edge cases have missing test source evidence"
+          ],
+          "sourceChecks": [
+            {
+              "selector": {
+                "pathPattern": "frontend/src/customerApi.ts",
+                "pattern": "throw new Error('Customer lookup failed')"
+              },
+              "status": "unmatched",
+              "reason": "No supplied file matches the path selector",
+              "matchingFileCount": 0,
+              "searchedFileCount": 0,
+              "searchedProjectIds": [
+                "foreign_git"
+              ],
+              "evidence": [],
+              "evidenceTruncated": false
+            }
+          ],
+          "testChecks": [
+            {
+              "selector": {
+                "pathPattern": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+                "name": "returns404WhenCustomerMissing"
+              },
+              "status": "unmatched",
+              "reason": "No supplied file matches the path selector",
+              "matchingFileCount": 0,
+              "searchedFileCount": 0,
+              "searchedProjectIds": [
+                "foreign_git"
+              ],
+              "evidence": [],
+              "evidenceTruncated": false
+            }
+          ],
+          "sourceEvidence": [],
+          "testEvidence": [],
+          "edgeCases": [
+            {
+              "id": "unknown-customer",
+              "description": "An unknown identifier is handled separately from a server failure.",
+              "assessment": "missing",
+              "checks": [
+                {
+                  "selector": {
+                    "pathPattern": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+                    "name": "returns404WhenCustomerMissing"
+                  },
+                  "status": "unmatched",
+                  "reason": "No supplied file matches the path selector",
+                  "matchingFileCount": 0,
+                  "searchedFileCount": 0,
+                  "searchedProjectIds": [
+                    "foreign_git"
+                  ],
+                  "evidence": [],
+                  "evidenceTruncated": false
+                }
+              ],
+              "testEvidence": [],
+              "runtime": "unverified",
+              "reason": "One or more declared edge-case test selectors are unmatched"
+            }
+          ],
+          "missingEdgeCases": [
+            {
+              "id": "unknown-customer",
+              "description": "An unknown identifier is handled separately from a server failure.",
+              "reason": "One or more declared edge-case test selectors are unmatched",
+              "checks": [
+                {
+                  "selector": {
+                    "pathPattern": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+                    "name": "returns404WhenCustomerMissing"
+                  },
+                  "status": "unmatched",
+                  "reason": "No supplied file matches the path selector",
+                  "matchingFileCount": 0,
+                  "searchedFileCount": 0,
+                  "searchedProjectIds": [
+                    "foreign_git"
+                  ],
+                  "evidence": [],
+                  "evidenceTruncated": false
+                }
+              ]
+            }
+          ],
+          "runtime": "unverified"
+        },
+        {
+          "id": "loading-state",
+          "description": "The user sees a loading label before the customer response arrives.",
+          "assessment": "unverified",
+          "reasons": [
+            "Checklist is draft; business criteria have not been asserted as confirmed",
+            "One or more declared source selectors are unmatched",
+            "One or more declared test selectors are unmatched",
+            "Declared edge cases have missing test source evidence"
+          ],
+          "sourceChecks": [
+            {
+              "selector": {
+                "pathPattern": "frontend/src/CustomerResult.tsx",
+                "pattern": "Loading customer…"
+              },
+              "status": "unmatched",
+              "reason": "No supplied file matches the path selector",
+              "matchingFileCount": 0,
+              "searchedFileCount": 0,
+              "searchedProjectIds": [
+                "foreign_git"
+              ],
+              "evidence": [],
+              "evidenceTruncated": false
+            }
+          ],
+          "testChecks": [
+            {
+              "selector": {
+                "pathPattern": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+                "name": "showsLoadingBeforeResponse"
+              },
+              "status": "unmatched",
+              "reason": "No supplied file matches the path selector",
+              "matchingFileCount": 0,
+              "searchedFileCount": 0,
+              "searchedProjectIds": [
+                "foreign_git"
+              ],
+              "evidence": [],
+              "evidenceTruncated": false
+            }
+          ],
+          "sourceEvidence": [],
+          "testEvidence": [],
+          "edgeCases": [
+            {
+              "id": "slow-response",
+              "description": "The loading state persists while the response is delayed.",
+              "assessment": "missing",
+              "checks": [
+                {
+                  "selector": {
+                    "pathPattern": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+                    "name": "keepsLoadingUntilResponse"
+                  },
+                  "status": "unmatched",
+                  "reason": "No supplied file matches the path selector",
+                  "matchingFileCount": 0,
+                  "searchedFileCount": 0,
+                  "searchedProjectIds": [
+                    "foreign_git"
+                  ],
+                  "evidence": [],
+                  "evidenceTruncated": false
+                }
+              ],
+              "testEvidence": [],
+              "runtime": "unverified",
+              "reason": "One or more declared edge-case test selectors are unmatched"
+            }
+          ],
+          "missingEdgeCases": [
+            {
+              "id": "slow-response",
+              "description": "The loading state persists while the response is delayed.",
+              "reason": "One or more declared edge-case test selectors are unmatched",
+              "checks": [
+                {
+                  "selector": {
+                    "pathPattern": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+                    "name": "keepsLoadingUntilResponse"
+                  },
+                  "status": "unmatched",
+                  "reason": "No supplied file matches the path selector",
+                  "matchingFileCount": 0,
+                  "searchedFileCount": 0,
+                  "searchedProjectIds": [
+                    "foreign_git"
+                  ],
+                  "evidence": [],
+                  "evidenceTruncated": false
+                }
+              ]
+            }
+          ],
+          "runtime": "unverified"
+        },
+        {
+          "id": "confirmation-needed-detail",
+          "description": "An owner must provide explicit source and test selectors for the customer authorization rule.",
+          "assessment": "unverified",
+          "reasons": [
+            "Checklist is draft; business criteria have not been asserted as confirmed",
+            "No explicit source selectors supplied",
+            "No explicit test selectors supplied"
+          ],
+          "sourceChecks": [],
+          "testChecks": [],
+          "sourceEvidence": [],
+          "testEvidence": [],
+          "edgeCases": [],
+          "missingEdgeCases": [],
+          "runtime": "unverified"
+        }
+      ],
+      "summary": {
+        "total": 6,
+        "evidenced": 0,
+        "potentialMismatch": 0,
+        "unverified": 6,
+        "missingEdgeCases": 5
+      },
+      "runtime": "unverified",
+      "limitations": [
+        "Confirmation metadata is a supplied assertion; the engine does not authenticate an owner or invent approval. Simulated confirmations are demonstration data.",
+        "Literal source matches, including symbol and test-name anchors, show text presence only. Comments and string literals can match; declarations, assertions and business behavior are not proved.",
+        "Test source evidence does not show that tests were executed, passed, or cover the criterion at runtime. Runtime behavior always remains unverified.",
+        "Only supplied snapshot files are searched. Test selectors are limited to test/spec filenames, Java Test/Tests names, or test/tests/__tests__ directories.",
+        "Missing edge cases are only those explicitly listed in the checklist. The engine cannot infer all necessary business scenarios or permit skipping full regression.",
+        "Path selectors use bounded * and ** globs; all other selectors are case-sensitive literal text. No user regular expressions, external AI, or local models are run.",
+        "Snapshot revisions are supplied by the snapshot reader; file SHA256 values are checked against supplied text. Without evidenceScope, confirmation has no pinned source revision.",
+        "Workspace criteria are evaluated once across selected project snapshots. Unscoped selectors search every selected project; explicit projectId selectors search only that project. Evidence preserves each project ID, original path, revision and file hash.",
+        "An optional dependency graph was supplied but is not used to infer semantic satisfaction of business criteria."
+      ]
+    },
+    "unknowns": [],
+    "focusedTests": [
+      {
+        "kind": "contract",
+        "reason": "Verify original parameter, return and payload compatibility; removed declarations need caller compile checks",
+        "evidence": {
+          "path": "a.ts",
+          "range": {
+            "startLine": 1,
+            "endLine": 1
+          },
+          "revision": "bca6a691b7f262726735c77423945b76fed6ab97",
+          "fileHash": "0ad9f46c29c2a881cebd1c5ec42f3ee36edbf1e1a1deeee5f5031e425aee467f",
+          "excerpt": "export const original = 1;"
+        },
+        "projectId": "foreign_git"
+      },
+      {
+        "kind": "contract",
+        "reason": "Verify dirty parameter, return and payload compatibility; removed declarations need caller compile checks",
+        "evidence": {
+          "path": "a.ts",
+          "range": {
+            "startLine": 1,
+            "endLine": 1
+          },
+          "revision": "worktree:fc10350308d7f9151810354ecdcf14512e81b078:013181e8778e1cc9",
+          "fileHash": "179eb7b5d280175544d2d7a8f753bf79fa573c869a8410b9b099c9db003df3c8",
+          "excerpt": "export const dirty = 3;"
+        },
+        "projectId": "foreign_git"
+      }
+    ],
+    "coverage": {
+      "complete": false,
+      "fullRegressionMayBeSkipped": false,
+      "limitations": [
+        "Source-only analysis; no Java/TypeScript semantic compilation, runtime dispatch, reflection, DI wiring, proxy/origin verification or transitive external package sources",
+        "Edges are evidence-backed approximations; indirect file dependencies do not prove execution",
+        "Renames inferred only for identical declaration key/signature/body; edited renames remain delete/add",
+        "Unknown syntax and unresolved/dynamic dependencies remain visible; passing fixture tests is not private-repository acceptance",
+        "Cross-project dependencies require explicit mappings; mappings are assertions, not deployment proof",
+        "Selected quality and SOLID signals do not establish universal design correctness",
+        "Requirement criteria are literal source/test evidence only; runtime remains unverified"
+      ]
+    },
+    "provenance": {
+      "projects": [
+        {
+          "projectId": "foreign_git",
+          "baseline": {
+            "root": "/inputs/foreign-owned-git",
+            "type": "git",
+            "revision": "bca6a691b7f262726735c77423945b76fed6ab97",
+            "contentHash": "6aa46e524827cd5fe62eb717f41f75d028e06ea1a213ff8b0b6d6f749a0c76d3",
+            "dirty": false
+          },
+          "candidate": {
+            "root": "/inputs/foreign-owned-git",
+            "type": "worktree",
+            "revision": "worktree:fc10350308d7f9151810354ecdcf14512e81b078:013181e8778e1cc9",
+            "contentHash": "013181e8778e1cc98bf37da4341da487b8f0c257e83c60ef5b469db06505b99c",
+            "dirty": true
+          },
+          "rulesHash": "8a1f7b48ab5db0a58862ea0d40785ffd712163e646aa4561935b061d69ea24cc",
+          "baselineRulesHash": "8a1f7b48ab5db0a58862ea0d40785ffd712163e646aa4561935b061d69ea24cc",
+          "cacheKey": "bd8a91685386d781949f98b5cd5f7725b43a9c03eb2fd038206057fc1179f450"
+        }
+      ]
+    },
+    "cache": {
+      "projects": [
+        {
+          "projectId": "foreign_git",
+          "report": "bypass-dirty",
+          "parsedFiles": 0,
+          "reusedFiles": 0,
+          "invalidEntries": 0
+        }
+      ],
+      "quality": [
+        {
+          "projectId": "foreign_git",
+          "status": "bypass-dirty"
+        }
+      ]
+    },
+    "metrics": {
+      "elapsedMs": 145.95,
+      "projects": 1,
+      "sourceFiles": 1,
+      "edges": 0
+    }
+  }
+}

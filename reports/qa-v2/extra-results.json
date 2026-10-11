@@ -1,0 +1,105 @@
+{
+  "temporaryRoot": "/tmp/review-analysis-qa-extra-dUi1QJ",
+  "results": [
+    {
+      "name": "analyzer-cache-version-invalidation",
+      "status": "pass",
+      "detail": {
+        "current": {
+          "report": "miss",
+          "parsedFiles": 2,
+          "reusedFiles": 0,
+          "invalidEntries": 0
+        },
+        "repeat": {
+          "report": "hit",
+          "parsedFiles": 0,
+          "reusedFiles": 0,
+          "invalidEntries": 0
+        },
+        "next": {
+          "report": "miss",
+          "parsedFiles": 2,
+          "reusedFiles": 0,
+          "invalidEntries": 0
+        },
+        "currentKey": "a904672f0aa01b9d40b5b59bbeb8f165df986a6d3b81b7b76a059faef0476b69",
+        "nextKey": "25adeaa551715bc28ed6fd788f2545c67a72c40936ec485480da0099824b7570"
+      }
+    },
+    {
+      "name": "edited-rename",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "name": "edited-rename-remains-delete-add",
+      "status": "pass",
+      "detail": [
+        {
+          "kind": "deleted",
+          "key": "renameCandidate"
+        },
+        {
+          "kind": "added",
+          "key": "renameCandidate"
+        }
+      ]
+    },
+    {
+      "name": "ambiguous-rename",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "name": "ambiguous-rename-not-inferred",
+      "status": "pass",
+      "detail": [
+        {
+          "kind": "deleted",
+          "key": "renameCandidate"
+        },
+        {
+          "kind": "added",
+          "key": "renameCandidate"
+        },
+        {
+          "kind": "added",
+          "key": "renameCandidate"
+        }
+      ]
+    },
+    {
+      "name": "source-symlink",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "name": "source-symlink-excluded",
+      "status": "pass",
+      "detail": [
+        {
+          "path": "linked.ts",
+          "reason": "symlink not followed"
+        }
+      ]
+    },
+    {
+      "name": "nonexistent-commit",
+      "status": "pass",
+      "detail": "fatal: Needed a single revision\nReview Analysis: Command failed: git -C /tmp/review-analysis-qa-integration-emot3gjm/repo rev-parse --verify --end-of-options 0000000000000000000000000000000000000000^{commit}\nfatal: Needed a single revision\n\n"
+    },
+    {
+      "name": "build-identity-still-exact",
+      "status": "pass",
+      "detail": {
+        "version": "0.1.0",
+        "sourceBuildHash": "ca04bac50b7584aaafd9d5602acc8055152e81e25de5fa1b15bb710f76f53ac9",
+        "parsers": {
+          "java": "java-parser@3.0.1",
+          "typescript": "typescript@5.9.3"
+        }
+      }
+    }
+  ]
+}

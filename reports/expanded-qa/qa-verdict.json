@@ -1,0 +1,65 @@
+{
+  "status": "pass",
+  "version": "0.2.0",
+  "recordedAt": "2026-10-11T17:53:46.538687+00:00",
+  "archiveSha256": "eb7499f26251154329d3439c822fbead0c5382dc1b5903bbbda395932cbec525",
+  "sourceTreeHash": "ddc270c01caba3e20bfb01955e7f00b84bd929cecd695a0b5fb9a686435849e5",
+  "sourceBuildHash": "0427f5fed8a45a3d4dbc5523f1d0f8afb57949bac0df1f9bef249fd73ae31061",
+  "imageId": "sha256:56ce7b94faf0f817f0fc13a1358b6650ff0d950bbd68198f070d649e1c23c819",
+  "suite": {
+    "tests": 121,
+    "pass": 121,
+    "fail": 0,
+    "skip": 0,
+    "realPmdAvailable": true
+  },
+  "browserApi": {
+    "checkpoints": 37,
+    "pass": 37,
+    "fail": 0
+  },
+  "imageFilesMatchingPinnedSource": 184,
+  "pinnedSourceFilesPreserved": 951,
+  "mountedInputFilesPreserved": 37,
+  "gitIndexPreserved": true,
+  "blockingImplementationDefects": [],
+  "additionalProbesPassed": [
+    "workspace cache content/task/rule/date/tool identity/corrupt report invalidation",
+    "dirty-worktree report and quality cache bypass",
+    "executable Git fsmonitor hook disabled by application guard",
+    "replace refs disabled; original commit source preserved",
+    "partial-clone missing blob rejects with no transport execution or Git writes",
+    "foreign-owned UID0 Git input readable by app UID1000 with exact scoped safe.directory",
+    "root/input read-only and production tmpfs noexec",
+    "Compose automatically includes optional read-only input override",
+    "phase-contiguous canonical source paths and UI filtering",
+    "same-image source/app-dist identity and post-run preservation"
+  ],
+  "preservedInitialFailures": [
+    {
+      "case": "container-suite",
+      "result": "120 pass / 1 fail / 0 skip",
+      "reason": "test synthetic executable on noexec tmpfs",
+      "correction": "explicit exec on trusted test-only tmpfs, unchanged source/image/assertions, no mocks/skips"
+    },
+    {
+      "case": "foreign-git-prepare",
+      "result": "fixture setup exit128",
+      "reason": "test setup ownership configuration",
+      "correction": "fixture directory chown before root-owned Git creation; unchanged application"
+    },
+    {
+      "case": "browser-api-run-1",
+      "result": "localhost connection refused",
+      "reason": "QA-only internal network disabled port publication",
+      "correction": "delivered default network, optional input override; unchanged image/source"
+    }
+  ],
+  "deliveryEnvelopeStatus": "Final user ZIP not yet independently verified; root will provide its final pin. Runtime verdict is complete for the pins recorded here.",
+  "limitations": [
+    "Cloud Linux Docker 28.4.0 / Compose 2.40.3 and Chromium; Windows Docker Desktop and CMD launchers not executed",
+    "Synthetic and bundled fixtures are bounded examples, not acceptance against private repositories",
+    "Static source/test/checklist evidence does not establish runtime business correctness or universal design coverage",
+    "Screenshots are local internal QA only and excluded from this payload"
+  ]
+}

@@ -1,0 +1,253 @@
+{
+  "schemaVersion": "1.0",
+  "analyzer": {
+    "version": "0.1.0",
+    "sourceBuildHash": "8ee7fcacee9a1b276b2bfab2665d8d3ab771e40eee5f3924f1f301192426e68f",
+    "parsers": {
+      "java": "java-parser@3.0.1",
+      "typescript": "typescript@5.9.3"
+    }
+  },
+  "advisory": true,
+  "asOf": "2026-10-11",
+  "provenance": {
+    "baseline": {
+      "root": "/tmp/review-analysis-adversarial-v1-anUajX/04-java-arity-prefix/baseline",
+      "type": "directory",
+      "revision": "tree-sha256:604d214e151b87b9b40949f32b35c0ce884203fda15412feb3e9c29dcfbf8afd",
+      "contentHash": "604d214e151b87b9b40949f32b35c0ce884203fda15412feb3e9c29dcfbf8afd",
+      "dirty": false
+    },
+    "candidate": {
+      "root": "/tmp/review-analysis-adversarial-v1-anUajX/04-java-arity-prefix/candidate",
+      "type": "directory",
+      "revision": "tree-sha256:6ebef925b0b41d27bfc06e052260ed3f8dc7331b24dca2bc6f4d4862388e2ebb",
+      "contentHash": "6ebef925b0b41d27bfc06e052260ed3f8dc7331b24dca2bc6f4d4862388e2ebb",
+      "dirty": false
+    },
+    "rulesHash": "90f33c2c080aa463115b0ef7e4058bb9bf0da4944dff79ed58eae2f01f9cd3f1",
+    "baselineRulesHash": "90f33c2c080aa463115b0ef7e4058bb9bf0da4944dff79ed58eae2f01f9cd3f1",
+    "cacheKey": "b8f5cd17dacf39b140e6c95e59e8f4581de266367c9acd25856bdbfd02dcf81d"
+  },
+  "changes": [
+    {
+      "kind": "modified",
+      "name": "Target",
+      "key": "qa.Target",
+      "language": "java",
+      "contractChanged": false,
+      "before": {
+        "path": "backend/Target.java",
+        "range": {
+          "startLine": 2,
+          "endLine": 4
+        },
+        "revision": "tree-sha256:604d214e151b87b9b40949f32b35c0ce884203fda15412feb3e9c29dcfbf8afd",
+        "fileHash": "76848536a24201b7975f52d4be3924dff6aab2bf8f2429f3f77eb952dc1bad3d",
+        "excerpt": "class Target {\n int run(int a,int b,int c,int d,int e,int f,int g,int h,int i,int j) { return 1; }\n}"
+      },
+      "after": {
+        "path": "backend/Target.java",
+        "range": {
+          "startLine": 2,
+          "endLine": 4
+        },
+        "revision": "tree-sha256:6ebef925b0b41d27bfc06e052260ed3f8dc7331b24dca2bc6f4d4862388e2ebb",
+        "fileHash": "35c271fb4952a2fd568a9e3b9bd5ad0fadface04f643f06c9815de8b4272d689",
+        "excerpt": "class Target {\n int run(int a,int b,int c,int d,int e,int f,int g,int h,int i,int j) { return 2; }\n}"
+      }
+    },
+    {
+      "kind": "modified",
+      "name": "run",
+      "key": "qa.Target#run/10",
+      "language": "java",
+      "contractChanged": false,
+      "before": {
+        "path": "backend/Target.java",
+        "range": {
+          "startLine": 3,
+          "endLine": 3
+        },
+        "revision": "tree-sha256:604d214e151b87b9b40949f32b35c0ce884203fda15412feb3e9c29dcfbf8afd",
+        "fileHash": "76848536a24201b7975f52d4be3924dff6aab2bf8f2429f3f77eb952dc1bad3d",
+        "excerpt": " int run(int a,int b,int c,int d,int e,int f,int g,int h,int i,int j) { return 1; }"
+      },
+      "after": {
+        "path": "backend/Target.java",
+        "range": {
+          "startLine": 3,
+          "endLine": 3
+        },
+        "revision": "tree-sha256:6ebef925b0b41d27bfc06e052260ed3f8dc7331b24dca2bc6f4d4862388e2ebb",
+        "fileHash": "35c271fb4952a2fd568a9e3b9bd5ad0fadface04f643f06c9815de8b4272d689",
+        "excerpt": " int run(int a,int b,int c,int d,int e,int f,int g,int h,int i,int j) { return 2; }"
+      }
+    }
+  ],
+  "impact": {
+    "direct": [
+      {
+        "kind": "type",
+        "fromPath": "backend/Caller.java",
+        "toPath": "backend/Target.java",
+        "targetKey": "qa.Target",
+        "confidence": "high",
+        "reason": "Java qualified import or same-package type resolves to supplied source",
+        "evidence": {
+          "path": "backend/Caller.java",
+          "range": {
+            "startLine": 3,
+            "endLine": 3
+          },
+          "revision": "tree-sha256:604d214e151b87b9b40949f32b35c0ce884203fda15412feb3e9c29dcfbf8afd",
+          "fileHash": "35a45fdf2632fb861fe1fbed526663d39dc9a6aaf5a2e3c011968459db077004",
+          "excerpt": " Target target;"
+        },
+        "targetEvidence": {
+          "path": "backend/Target.java",
+          "range": {
+            "startLine": 2,
+            "endLine": 4
+          },
+          "revision": "tree-sha256:604d214e151b87b9b40949f32b35c0ce884203fda15412feb3e9c29dcfbf8afd",
+          "fileHash": "76848536a24201b7975f52d4be3924dff6aab2bf8f2429f3f77eb952dc1bad3d",
+          "excerpt": "class Target {\n int run(int a,int b,int c,int d,int e,int f,int g,int h,int i,int j) { return 1; }\n}"
+        }
+      },
+      {
+        "kind": "call",
+        "fromPath": "backend/Caller.java",
+        "toPath": "backend/Target.java",
+        "targetKey": "qa.Target#run/10",
+        "confidence": "medium",
+        "reason": "Lexical receiver type and unique method name/arity match; no runtime dispatch proof",
+        "evidence": {
+          "path": "backend/Caller.java",
+          "range": {
+            "startLine": 4,
+            "endLine": 4
+          },
+          "revision": "tree-sha256:604d214e151b87b9b40949f32b35c0ce884203fda15412feb3e9c29dcfbf8afd",
+          "fileHash": "35a45fdf2632fb861fe1fbed526663d39dc9a6aaf5a2e3c011968459db077004",
+          "excerpt": " void use() { target.run(1); } // wrong-arity"
+        },
+        "targetEvidence": {
+          "path": "backend/Target.java",
+          "range": {
+            "startLine": 3,
+            "endLine": 3
+          },
+          "revision": "tree-sha256:604d214e151b87b9b40949f32b35c0ce884203fda15412feb3e9c29dcfbf8afd",
+          "fileHash": "76848536a24201b7975f52d4be3924dff6aab2bf8f2429f3f77eb952dc1bad3d",
+          "excerpt": " int run(int a,int b,int c,int d,int e,int f,int g,int h,int i,int j) { return 1; }"
+        }
+      },
+      {
+        "kind": "type",
+        "fromPath": "backend/Caller.java",
+        "toPath": "backend/Target.java",
+        "targetKey": "qa.Target",
+        "confidence": "high",
+        "reason": "Java qualified import or same-package type resolves to supplied source",
+        "evidence": {
+          "path": "backend/Caller.java",
+          "range": {
+            "startLine": 3,
+            "endLine": 3
+          },
+          "revision": "tree-sha256:6ebef925b0b41d27bfc06e052260ed3f8dc7331b24dca2bc6f4d4862388e2ebb",
+          "fileHash": "35a45fdf2632fb861fe1fbed526663d39dc9a6aaf5a2e3c011968459db077004",
+          "excerpt": " Target target;"
+        },
+        "targetEvidence": {
+          "path": "backend/Target.java",
+          "range": {
+            "startLine": 2,
+            "endLine": 4
+          },
+          "revision": "tree-sha256:6ebef925b0b41d27bfc06e052260ed3f8dc7331b24dca2bc6f4d4862388e2ebb",
+          "fileHash": "35c271fb4952a2fd568a9e3b9bd5ad0fadface04f643f06c9815de8b4272d689",
+          "excerpt": "class Target {\n int run(int a,int b,int c,int d,int e,int f,int g,int h,int i,int j) { return 2; }\n}"
+        }
+      },
+      {
+        "kind": "call",
+        "fromPath": "backend/Caller.java",
+        "toPath": "backend/Target.java",
+        "targetKey": "qa.Target#run/10",
+        "confidence": "medium",
+        "reason": "Lexical receiver type and unique method name/arity match; no runtime dispatch proof",
+        "evidence": {
+          "path": "backend/Caller.java",
+          "range": {
+            "startLine": 4,
+            "endLine": 4
+          },
+          "revision": "tree-sha256:6ebef925b0b41d27bfc06e052260ed3f8dc7331b24dca2bc6f4d4862388e2ebb",
+          "fileHash": "35a45fdf2632fb861fe1fbed526663d39dc9a6aaf5a2e3c011968459db077004",
+          "excerpt": " void use() { target.run(1); } // wrong-arity"
+        },
+        "targetEvidence": {
+          "path": "backend/Target.java",
+          "range": {
+            "startLine": 3,
+            "endLine": 3
+          },
+          "revision": "tree-sha256:6ebef925b0b41d27bfc06e052260ed3f8dc7331b24dca2bc6f4d4862388e2ebb",
+          "fileHash": "35c271fb4952a2fd568a9e3b9bd5ad0fadface04f643f06c9815de8b4272d689",
+          "excerpt": " int run(int a,int b,int c,int d,int e,int f,int g,int h,int i,int j) { return 2; }"
+        }
+      }
+    ],
+    "indirect": []
+  },
+  "findings": [],
+  "guidance": {
+    "task": "Single-argument call cannot target a ten-argument declaration",
+    "ruleSetVersion": "independent-adversarial-v1",
+    "approvalGap": "No human approval is inferred. Reviewed examples/exceptions are assertions from supplied configuration; simulation records are demonstrations only.",
+    "rules": [
+      {
+        "id": "independent/http-contract",
+        "kind": "endpoint-contract-change",
+        "owner": "synthetic-qa",
+        "version": "independent-adversarial-v1",
+        "severity": "warning",
+        "instruction": "endpoint-contract-change",
+        "examples": []
+      }
+    ]
+  },
+  "unknowns": [],
+  "focusedTests": [],
+  "coverage": {
+    "complete": false,
+    "fullRegressionMayBeSkipped": false,
+    "sourceFiles": {
+      "baseline": 2,
+      "candidate": 2
+    },
+    "excluded": {
+      "baseline": [],
+      "candidate": []
+    },
+    "limitations": [
+      "Source-only analysis; no Java/TypeScript semantic compilation, runtime dispatch, reflection, DI wiring, proxy/origin verification or transitive external package sources",
+      "Edges are evidence-backed approximations; indirect file dependencies do not prove execution",
+      "Renames inferred only for identical declaration key/signature/body; edited renames remain delete/add",
+      "Unknown syntax and unresolved/dynamic dependencies remain visible; passing fixture tests is not private-repository acceptance"
+    ]
+  },
+  "cache": {
+    "report": "disabled",
+    "parsedFiles": 4,
+    "reusedFiles": 0,
+    "invalidEntries": 0
+  },
+  "metrics": {
+    "elapsedMs": 22.08,
+    "bytesRead": 404,
+    "reportCacheHit": false
+  }
+}

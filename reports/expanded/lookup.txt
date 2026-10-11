@@ -1,0 +1,108 @@
+Review Analysis — Java / Spring + React
+
+Build: 0427f5fed8a45a3d4dbc5523f1d0f8afb57949bac0df1f9bef249fd73ae31061
+
+Advisory; incomplete source-only coverage; runtime and full regression remain unverified.
+
+21 changed declarations, 9 changed files, 50 edges.
+
+34 direct representative paths; 47 likely indirect paths (low certainty).
+
+Limits: depth 12; alternate/deeper paths may be omitted.
+
+Architecture findings: 6; quality/design findings: 0; unresolved source facts: 142.
+
+Checklist: draft; 6 criteria; runtime unverified.
+
+modified: com.example.lookup.LookupController
+  monorepo:backend/src/main/java/com/example/lookup/LookupController.java:8-21 @ tree-sha256:352388fa5262aa59fbe7c890ed017374bd12938c9edb4dd20562f947fb406c47 sha256:92f524bf34c641cb2a9f4285babd636a368e11602757c9d3e158111027458175
+
+modified: com.example.lookup.LookupController#lookup/1
+  monorepo:backend/src/main/java/com/example/lookup/LookupController.java:17-20 @ tree-sha256:352388fa5262aa59fbe7c890ed017374bd12938c9edb4dd20562f947fb406c47 sha256:92f524bf34c641cb2a9f4285babd636a368e11602757c9d3e158111027458175
+
+modified: com.example.lookup.LookupResponse
+  monorepo:backend/src/main/java/com/example/lookup/LookupResponse.java:3-3 @ tree-sha256:352388fa5262aa59fbe7c890ed017374bd12938c9edb4dd20562f947fb406c47 sha256:2283e210acfe8302da51d995f36357367ce0a572ada2caf73a817cda5f853f66
+
+deleted: com.example.lookup.LookupResponse#label
+  monorepo:backend/src/main/java/com/example/lookup/LookupResponse.java:3-3 @ tree-sha256:533e0d57b3dc65ada8026985010f31e9a005ed9b53f52835b681f7487891a5aa sha256:72db8b7e80b91c4e84e2ee9ed1b103acf16a8e34279444ac50ce7b66d64757af
+
+modified: com.example.lookup.LookupService
+  monorepo:backend/src/main/java/com/example/lookup/LookupService.java:6-17 @ tree-sha256:352388fa5262aa59fbe7c890ed017374bd12938c9edb4dd20562f947fb406c47 sha256:5a20068f28bc00fc0d91ed0c098afd8c569a25a1c322264bcca660221cc93adb
+
+modified: com.example.lookup.LookupService#lookup/1
+  monorepo:backend/src/main/java/com/example/lookup/LookupService.java:14-16 @ tree-sha256:352388fa5262aa59fbe7c890ed017374bd12938c9edb4dd20562f947fb406c47 sha256:5a20068f28bc00fc0d91ed0c098afd8c569a25a1c322264bcca660221cc93adb
+
+deleted: com.example.lookup.RetiredLookupAdapter
+  monorepo:backend/src/main/java/com/example/lookup/RetiredLookupAdapter.java:3-13 @ tree-sha256:533e0d57b3dc65ada8026985010f31e9a005ed9b53f52835b681f7487891a5aa sha256:291d044cc7dc51eb63e352c873894813b7494d6c5e78101e8e107974f3622a66
+
+deleted: com.example.lookup.RetiredLookupAdapter#service
+  monorepo:backend/src/main/java/com/example/lookup/RetiredLookupAdapter.java:4-4 @ tree-sha256:533e0d57b3dc65ada8026985010f31e9a005ed9b53f52835b681f7487891a5aa sha256:291d044cc7dc51eb63e352c873894813b7494d6c5e78101e8e107974f3622a66
+
+deleted: com.example.lookup.RetiredLookupAdapter#<init>/1
+  monorepo:backend/src/main/java/com/example/lookup/RetiredLookupAdapter.java:6-8 @ tree-sha256:533e0d57b3dc65ada8026985010f31e9a005ed9b53f52835b681f7487891a5aa sha256:291d044cc7dc51eb63e352c873894813b7494d6c5e78101e8e107974f3622a66
+
+deleted: com.example.lookup.RetiredLookupAdapter#lookupOld/1
+  monorepo:backend/src/main/java/com/example/lookup/RetiredLookupAdapter.java:10-12 @ tree-sha256:533e0d57b3dc65ada8026985010f31e9a005ed9b53f52835b681f7487891a5aa sha256:291d044cc7dc51eb63e352c873894813b7494d6c5e78101e8e107974f3622a66
+
+modified: LookupResponse
+  monorepo:frontend/src/api/lookupApi.ts:1-4 @ tree-sha256:352388fa5262aa59fbe7c890ed017374bd12938c9edb4dd20562f947fb406c47 sha256:8b9224af601766edbb0617ffe30c2b85aa82fb82e97d13ed8467849175b8bcda
+
+deleted: LookupResponse.label
+  monorepo:frontend/src/api/lookupApi.ts:3-3 @ tree-sha256:533e0d57b3dc65ada8026985010f31e9a005ed9b53f52835b681f7487891a5aa sha256:7f34f774878e38d86b5bde41fd4cc9255cd3db4c5ab34512570a0e7e40a1cfef
+
+modified: lookup
+  monorepo:frontend/src/api/lookupApi.ts:6-10 @ tree-sha256:352388fa5262aa59fbe7c890ed017374bd12938c9edb4dd20562f947fb406c47 sha256:8b9224af601766edbb0617ffe30c2b85aa82fb82e97d13ed8467849175b8bcda
+
+renamed: formatLookupBadge
+  monorepo:frontend/src/components/CatalogBadge.ts:1-3 @ tree-sha256:352388fa5262aa59fbe7c890ed017374bd12938c9edb4dd20562f947fb406c47 sha256:60a09a4a58d0e62f4abfbd81fd0038b75e0c4acc3c4973a649dd49df90e642f6
+
+added: com.example.lookup.AuditLogger
+  monorepo:backend/src/main/java/com/example/lookup/AuditLogger.java:6-12 @ tree-sha256:352388fa5262aa59fbe7c890ed017374bd12938c9edb4dd20562f947fb406c47 sha256:7803c96b702ed924775aa4ba55f799d9fa0e8f3384fefd9d8ae231380309a71c
+
+added: com.example.lookup.AuditLogger#client
+  monorepo:backend/src/main/java/com/example/lookup/AuditLogger.java:7-7 @ tree-sha256:352388fa5262aa59fbe7c890ed017374bd12938c9edb4dd20562f947fb406c47 sha256:7803c96b702ed924775aa4ba55f799d9fa0e8f3384fefd9d8ae231380309a71c
+
+added: com.example.lookup.AuditLogger#<init>/1
+  monorepo:backend/src/main/java/com/example/lookup/AuditLogger.java:9-11 @ tree-sha256:352388fa5262aa59fbe7c890ed017374bd12938c9edb4dd20562f947fb406c47 sha256:7803c96b702ed924775aa4ba55f799d9fa0e8f3384fefd9d8ae231380309a71c
+
+added: com.example.lookup.LookupQuery
+  monorepo:backend/src/main/java/com/example/lookup/LookupQuery.java:3-3 @ tree-sha256:352388fa5262aa59fbe7c890ed017374bd12938c9edb4dd20562f947fb406c47 sha256:9ce9c5da75987a71256a165962eb9c8eee7ca371bb1a88e926684387cf6aaca7
+
+added: com.example.lookup.LookupQuery#id
+  monorepo:backend/src/main/java/com/example/lookup/LookupQuery.java:3-3 @ tree-sha256:352388fa5262aa59fbe7c890ed017374bd12938c9edb4dd20562f947fb406c47 sha256:9ce9c5da75987a71256a165962eb9c8eee7ca371bb1a88e926684387cf6aaca7
+
+added: com.example.lookup.LookupResponse#displayName
+  monorepo:backend/src/main/java/com/example/lookup/LookupResponse.java:3-3 @ tree-sha256:352388fa5262aa59fbe7c890ed017374bd12938c9edb4dd20562f947fb406c47 sha256:2283e210acfe8302da51d995f36357367ce0a572ada2caf73a817cda5f853f66
+
+added: LookupResponse.displayName
+  monorepo:frontend/src/api/lookupApi.ts:3-3 @ tree-sha256:352388fa5262aa59fbe7c890ed017374bd12938c9edb4dd20562f947fb406c47 sha256:8b9224af601766edbb0617ffe30c2b85aa82fb82e97d13ed8467849175b8bcda
+
+Architecture pre-existing: architecture/no-raw-http: Import violates configured architecture boundary: org.legacy.clients.RawHttpClient
+  monorepo:backend/src/main/java/com/example/lookup/ApprovedLegacyGateway.java:3-3 @ tree-sha256:352388fa5262aa59fbe7c890ed017374bd12938c9edb4dd20562f947fb406c47 sha256:9ee96123e08adc4c3e2084333ccf04c76dfa3c3b368c4efce74f64605405cbc1
+
+Architecture new: architecture/no-raw-http: Import violates configured architecture boundary: org.legacy.clients.RawHttpClient
+  monorepo:backend/src/main/java/com/example/lookup/AuditLogger.java:3-3 @ tree-sha256:352388fa5262aa59fbe7c890ed017374bd12938c9edb4dd20562f947fb406c47 sha256:7803c96b702ed924775aa4ba55f799d9fa0e8f3384fefd9d8ae231380309a71c
+
+Architecture pre-existing: architecture/no-raw-http: Import violates configured architecture boundary: org.legacy.clients.RawHttpClient
+  monorepo:backend/src/main/java/com/example/lookup/ExpiredGateway.java:3-3 @ tree-sha256:352388fa5262aa59fbe7c890ed017374bd12938c9edb4dd20562f947fb406c47 sha256:f224098b35f541905d2eb2e44e35758801fe5e744e4a165651296299910c4730
+
+Architecture pre-existing: architecture/no-raw-http: Import violates configured architecture boundary: org.legacy.clients.RawHttpClient
+  monorepo:backend/src/main/java/com/example/lookup/LookupService.java:3-3 @ tree-sha256:352388fa5262aa59fbe7c890ed017374bd12938c9edb4dd20562f947fb406c47 sha256:5a20068f28bc00fc0d91ed0c098afd8c569a25a1c322264bcca660221cc93adb
+
+Architecture pre-existing: architecture/no-raw-http: Import violates configured architecture boundary: org.legacy.clients.RawHttpClient
+  monorepo:backend/src/main/java/com/example/lookup/UnreviewedGateway.java:3-3 @ tree-sha256:352388fa5262aa59fbe7c890ed017374bd12938c9edb4dd20562f947fb406c47 sha256:3d392a323d3d0ec99ec48753bb03078c9438a44f2b18ab761fa1c510fb8bc092
+
+Architecture new: contracts/http-lookup: Removed or changed HTTP contract: GET /api/lookup
+  monorepo:backend/src/main/java/com/example/lookup/LookupController.java:17-17 @ tree-sha256:533e0d57b3dc65ada8026985010f31e9a005ed9b53f52835b681f7487891a5aa sha256:e02b44120ddbbde16d21d06fcca12d883994dd5dc928690adc6f6d2cc343e1cf
+
+Requirement unverified: customer-lookup-by-id; missing edge cases: 1; runtime unverified
+
+Requirement unverified: display-name; missing edge cases: 0; runtime unverified
+
+Requirement unverified: blank-identifier; missing edge cases: 2; runtime unverified
+
+Requirement unverified: customer-not-found; missing edge cases: 1; runtime unverified
+
+Requirement unverified: loading-state; missing edge cases: 1; runtime unverified
+
+Requirement unverified: confirmation-needed-detail; missing edge cases: 0; runtime unverified

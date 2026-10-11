@@ -1,0 +1,12 @@
+{
+  "foreignGitPins": {
+    "original": "bca6a691b7f262726735c77423945b76fed6ab97",
+    "replacement": "fc10350308d7f9151810354ecdcf14512e81b078"
+  },
+  "foreignGitUid": 65534,
+  "foreignGitGid": 65534,
+  "inputsFiles": 37,
+  "override": "/workspace/review-analysis-deliverables/expanded-qa/pin-1/source/compose.override.yaml",
+  "windowsLaunchers": "Static inspection only; no Windows execution",
+  "composeInvocation": "Default compose.yaml + automatic compose.override.yaml from launcher working directory; QA uses separate project name and localhost port"
+}

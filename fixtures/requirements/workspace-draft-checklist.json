@@ -1,0 +1,82 @@
+{
+  "schemaVersion": "1",
+  "revision": "cross-project-customer-checklist-example-v1",
+  "owner": "Example product owner (unconfirmed workspace demonstration)",
+  "confirmation": {
+    "status": "draft"
+  },
+  "criteria": [
+    {
+      "id": "cross-project-display-name",
+      "description": "The frontend displays the displayName supplied by the customer lookup backend.",
+      "source": [
+        {
+          "projectId": "backend",
+          "pathPattern": "src/main/java/example/customers/CustomerResponse.java",
+          "pattern": "String displayName"
+        },
+        {
+          "projectId": "frontend",
+          "pathPattern": "src/CustomerResult.tsx",
+          "pattern": "result?.displayName"
+        }
+      ],
+      "tests": [
+        {
+          "projectId": "backend",
+          "pathPattern": "src/test/java/example/customers/CustomerLookupControllerTest.java",
+          "name": "returnsDisplayName"
+        },
+        {
+          "projectId": "frontend",
+          "pathPattern": "src/customerLookup.spec.ts",
+          "name": "renders customer display name"
+        }
+      ],
+      "edgeCases": [
+        {
+          "id": "known-customer",
+          "description": "A known customer has its display name rendered.",
+          "tests": [
+            {
+              "projectId": "frontend",
+              "pathPattern": "src/customerLookup.spec.ts",
+              "name": "renders customer display name"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cross-project-not-found",
+      "description": "A missing backend customer produces a clear not-found message in the frontend.",
+      "source": [
+        {
+          "projectId": "frontend",
+          "pathPattern": "src/customerApi.ts",
+          "pattern": "throw new Error('Customer lookup failed')"
+        }
+      ],
+      "tests": [
+        {
+          "projectId": "frontend",
+          "pathPattern": "src/customerLookup.spec.ts",
+          "name": "renders not-found message"
+        }
+      ],
+      "edgeCases": [
+        {
+          "id": "unknown-id",
+          "description": "An unknown identifier produces a not-found message rather than a generic lookup error.",
+          "tests": [
+            {
+              "projectId": "frontend",
+              "pathPattern": "src/customerLookup.spec.ts",
+              "name": "renders not-found message"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

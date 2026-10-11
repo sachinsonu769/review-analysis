@@ -1,0 +1,9 @@
+{
+  "command": "node",
+  "args": [
+    "/workspace/review-analysis-deliverables/qa-v1/adversarial/run-adversarial.mjs"
+  ],
+  "cwd": "/workspace",
+  "stdout": "/workspace/review-analysis-deliverables/qa-v1/adversarial/run.stdout.log",
+  "stderr": "/workspace/review-analysis-deliverables/qa-v1/adversarial/run.stderr.log"
+}

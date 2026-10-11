@@ -1,0 +1,20 @@
+{
+  "command": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+  "args": [
+    "/tmp/review-analysis-qa-v1-nn0cdauu/src/cli.js",
+    "analyze",
+    "--baseline",
+    "/tmp/review-analysis-adversarial-v1-anUajX/05-java-overload-receiver-shadow/baseline",
+    "--candidate",
+    "/tmp/review-analysis-adversarial-v1-anUajX/05-java-overload-receiver-shadow/candidate",
+    "--rules",
+    "/tmp/review-analysis-adversarial-v1-anUajX/rules.json",
+    "--as-of",
+    "2026-10-11",
+    "--task",
+    "Same-arity overload candidate evidence plus typed Object and var field shadows",
+    "--format",
+    "json"
+  ],
+  "cwd": "/tmp/review-analysis-qa-v1-nn0cdauu"
+}

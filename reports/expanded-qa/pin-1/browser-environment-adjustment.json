@@ -1,0 +1,8 @@
+{
+  "initialBrowserRun": "browser-api-run-1",
+  "failure": "Localhost port refused; QA internal Docker network does not publish the port",
+  "correction": "Remove QA-only internal network override; use delivered default network with read-only inputs + separate localhost port",
+  "productionSourceChanged": false,
+  "productionImageChanged": false,
+  "retryData": "/workspace/review-analysis-deliverables/expanded-qa/pin-1/browser-api-run-2-data"
+}

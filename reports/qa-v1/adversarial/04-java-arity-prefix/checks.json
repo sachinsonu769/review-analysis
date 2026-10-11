@@ -1,0 +1,48 @@
+{
+  "id": "04-java-arity-prefix",
+  "description": "Single-argument call cannot target a ten-argument declaration",
+  "status": "fail",
+  "exitCode": 0,
+  "sourcePaths": {
+    "baseline": "/tmp/review-analysis-adversarial-v1-anUajX/04-java-arity-prefix/baseline",
+    "candidate": "/tmp/review-analysis-adversarial-v1-anUajX/04-java-arity-prefix/candidate"
+  },
+  "sourceHashes": {
+    "baseline": {
+      "backend/Caller.java": "35a45fdf2632fb861fe1fbed526663d39dc9a6aaf5a2e3c011968459db077004",
+      "backend/Target.java": "76848536a24201b7975f52d4be3924dff6aab2bf8f2429f3f77eb952dc1bad3d"
+    },
+    "candidate": {
+      "backend/Caller.java": "35a45fdf2632fb861fe1fbed526663d39dc9a6aaf5a2e3c011968459db077004",
+      "backend/Target.java": "35c271fb4952a2fd568a9e3b9bd5ad0fadface04f643f06c9815de8b4272d689"
+    }
+  },
+  "evidence": {
+    "checkedEvidenceRecords": 12,
+    "errors": []
+  },
+  "assertions": [
+    {
+      "name": "no false ten-argument call target",
+      "status": "fail"
+    },
+    {
+      "name": "arity mismatch remains unknown",
+      "status": "fail"
+    },
+    {
+      "name": "all source evidence hashes/ranges/excerpts/revisions independently reproduce",
+      "status": "pass"
+    },
+    {
+      "name": "readable actual CLI exits 0",
+      "status": "pass"
+    }
+  ],
+  "reportStats": {
+    "changes": 2,
+    "directEdges": 4,
+    "unknowns": 0,
+    "sourceBuildHash": "8ee7fcacee9a1b276b2bfab2665d8d3ab771e40eee5f3924f1f301192426e68f"
+  }
+}

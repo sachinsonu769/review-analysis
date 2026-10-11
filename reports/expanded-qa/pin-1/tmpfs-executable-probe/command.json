@@ -1,0 +1,26 @@
+{
+  "command": [
+    "docker",
+    "run",
+    "--rm",
+    "--read-only",
+    "--network",
+    "none",
+    "--user",
+    "1000:1000",
+    "--cap-drop",
+    "ALL",
+    "--security-opt",
+    "no-new-privileges",
+    "--tmpfs",
+    "/tmp:rw,nosuid,nodev,size=536870912,mode=1777",
+    "--entrypoint",
+    "node",
+    "sha256:56ce7b94faf0f817f0fc13a1358b6650ff0d950bbd68198f070d649e1c23c819",
+    "-e",
+    "const fs=require(\"fs\");fs.writeFileSync(\"/tmp/qa-executable\",\"#!/bin/sh\\n\",{mode:0o755});let access;try{fs.accessSync(\"/tmp/qa-executable\",fs.constants.X_OK);access=\"executable\"}catch(e){access=e.code}console.log(JSON.stringify({mount:fs.readFileSync(\"/proc/mounts\",\"utf8\").split(\"\\n\").filter(line=>line.split(\" \")[1]===\"/tmp\"),access,mode:fs.statSync(\"/tmp/qa-executable\").mode.toString(8)}))"
+  ],
+  "cwd": null,
+  "startedAt": "2026-10-11T17:46:20.355203+00:00",
+  "dockerConfig": "/tmp/review-analysis-docker-config"
+}

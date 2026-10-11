@@ -1,0 +1,52 @@
+{
+  "version": "qa-mounted-requirements-1",
+  "projects": [
+    {
+      "id": "backend",
+      "label": "backend",
+      "repository": "synthetic/backend",
+      "module": "backend",
+      "baseline": {
+        "type": "directory",
+        "root": "/inputs/requirements/backend"
+      },
+      "candidate": {
+        "type": "directory",
+        "root": "/inputs/requirements/backend"
+      },
+      "rules": {
+        "version": "qa-synthetic-1",
+        "rules": []
+      }
+    },
+    {
+      "id": "frontend",
+      "label": "frontend",
+      "repository": "synthetic/frontend",
+      "module": "frontend",
+      "baseline": {
+        "type": "directory",
+        "root": "/inputs/requirements/frontend"
+      },
+      "candidate": {
+        "type": "directory",
+        "root": "/inputs/requirements/frontend"
+      },
+      "rules": {
+        "version": "qa-synthetic-1",
+        "rules": []
+      }
+    }
+  ],
+  "mappings": [
+    {
+      "id": "qa-explicit-api",
+      "kind": "http",
+      "fromProject": "frontend",
+      "toProject": "backend",
+      "urlPrefix": "/api/",
+      "owner": "Synthetic QA",
+      "version": "1"
+    }
+  ]
+}

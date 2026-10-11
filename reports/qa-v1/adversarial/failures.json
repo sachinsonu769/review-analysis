@@ -1,0 +1,1474 @@
+[
+  {
+    "case": "04-java-arity-prefix",
+    "assertions": [
+      {
+        "name": "no false ten-argument call target",
+        "status": "fail"
+      },
+      {
+        "name": "arity mismatch remains unknown",
+        "status": "fail"
+      }
+    ],
+    "directCallHttpEdges": [
+      {
+        "kind": "call",
+        "fromPath": "backend/Caller.java",
+        "toPath": "backend/Target.java",
+        "targetKey": "qa.Target#run/10",
+        "confidence": "medium",
+        "reason": "Lexical receiver type and unique method name/arity match; no runtime dispatch proof",
+        "evidence": {
+          "path": "backend/Caller.java",
+          "range": {
+            "startLine": 4,
+            "endLine": 4
+          },
+          "revision": "tree-sha256:604d214e151b87b9b40949f32b35c0ce884203fda15412feb3e9c29dcfbf8afd",
+          "fileHash": "35a45fdf2632fb861fe1fbed526663d39dc9a6aaf5a2e3c011968459db077004",
+          "excerpt": " void use() { target.run(1); } // wrong-arity"
+        },
+        "targetEvidence": {
+          "path": "backend/Target.java",
+          "range": {
+            "startLine": 3,
+            "endLine": 3
+          },
+          "revision": "tree-sha256:604d214e151b87b9b40949f32b35c0ce884203fda15412feb3e9c29dcfbf8afd",
+          "fileHash": "76848536a24201b7975f52d4be3924dff6aab2bf8f2429f3f77eb952dc1bad3d",
+          "excerpt": " int run(int a,int b,int c,int d,int e,int f,int g,int h,int i,int j) { return 1; }"
+        }
+      },
+      {
+        "kind": "call",
+        "fromPath": "backend/Caller.java",
+        "toPath": "backend/Target.java",
+        "targetKey": "qa.Target#run/10",
+        "confidence": "medium",
+        "reason": "Lexical receiver type and unique method name/arity match; no runtime dispatch proof",
+        "evidence": {
+          "path": "backend/Caller.java",
+          "range": {
+            "startLine": 4,
+            "endLine": 4
+          },
+          "revision": "tree-sha256:6ebef925b0b41d27bfc06e052260ed3f8dc7331b24dca2bc6f4d4862388e2ebb",
+          "fileHash": "35a45fdf2632fb861fe1fbed526663d39dc9a6aaf5a2e3c011968459db077004",
+          "excerpt": " void use() { target.run(1); } // wrong-arity"
+        },
+        "targetEvidence": {
+          "path": "backend/Target.java",
+          "range": {
+            "startLine": 3,
+            "endLine": 3
+          },
+          "revision": "tree-sha256:6ebef925b0b41d27bfc06e052260ed3f8dc7331b24dca2bc6f4d4862388e2ebb",
+          "fileHash": "35c271fb4952a2fd568a9e3b9bd5ad0fadface04f643f06c9815de8b4272d689",
+          "excerpt": " int run(int a,int b,int c,int d,int e,int f,int g,int h,int i,int j) { return 2; }"
+        }
+      }
+    ],
+    "unknowns": [],
+    "sourceBuildHash": "8ee7fcacee9a1b276b2bfab2665d8d3ab771e40eee5f3924f1f301192426e68f"
+  },
+  {
+    "case": "08-http-template-regex",
+    "assertions": [
+      {
+        "name": "regex-rejected literal has no matching edge",
+        "status": "fail"
+      }
+    ],
+    "directCallHttpEdges": [
+      {
+        "kind": "http",
+        "fromPath": "frontend/client.ts",
+        "toPath": "backend/NumericResource.java",
+        "targetKey": "qa.NumericResource#numeric/0",
+        "confidence": "medium",
+        "reason": "Literal HTTP verb/path matches source Spring mapping; runtime origin/proxy not verified",
+        "evidence": {
+          "path": "frontend/client.ts",
+          "range": {
+            "startLine": 1,
+            "endLine": 1
+          },
+          "revision": "tree-sha256:ab15463908a56ea3ec52c9b578c156c104f41ce151bb877796e176866d72f80e",
+          "fileHash": "415dc3afda07ab495c6fdcdbac97a2e4ea725f18af71cfcc3dc44e31c37edf56",
+          "excerpt": "fetch('/numeric/123'); // valid-template"
+        },
+        "targetEvidence": {
+          "path": "backend/NumericResource.java",
+          "range": {
+            "startLine": 6,
+            "endLine": 6
+          },
+          "revision": "tree-sha256:ab15463908a56ea3ec52c9b578c156c104f41ce151bb877796e176866d72f80e",
+          "fileHash": "31ab75e86d9b05e9b403aa9265fd380219a178a6f5164e95e345b235fb2f034b",
+          "excerpt": " @GetMapping(\"/numeric/{id:[0-9]+}\") String numeric() { return \"v1\"; }"
+        }
+      },
+      {
+        "kind": "http",
+        "fromPath": "frontend/client.ts",
+        "toPath": "backend/NumericResource.java",
+        "targetKey": "qa.NumericResource#numeric/0",
+        "confidence": "medium",
+        "reason": "Literal HTTP verb/path matches source Spring mapping; runtime origin/proxy not verified",
+        "evidence": {
+          "path": "frontend/client.ts",
+          "range": {
+            "startLine": 2,
+            "endLine": 2
+          },
+          "revision": "tree-sha256:ab15463908a56ea3ec52c9b578c156c104f41ce151bb877796e176866d72f80e",
+          "fileHash": "415dc3afda07ab495c6fdcdbac97a2e4ea725f18af71cfcc3dc44e31c37edf56",
+          "excerpt": "fetch('/numeric/nope'); // excluded-by-regex"
+        },
+        "targetEvidence": {
+          "path": "backend/NumericResource.java",
+          "range": {
+            "startLine": 6,
+            "endLine": 6
+          },
+          "revision": "tree-sha256:ab15463908a56ea3ec52c9b578c156c104f41ce151bb877796e176866d72f80e",
+          "fileHash": "31ab75e86d9b05e9b403aa9265fd380219a178a6f5164e95e345b235fb2f034b",
+          "excerpt": " @GetMapping(\"/numeric/{id:[0-9]+}\") String numeric() { return \"v1\"; }"
+        }
+      },
+      {
+        "kind": "http",
+        "fromPath": "frontend/client.ts",
+        "toPath": "backend/NumericResource.java",
+        "targetKey": "qa.NumericResource#numeric/0",
+        "confidence": "medium",
+        "reason": "Literal HTTP verb/path matches source Spring mapping; runtime origin/proxy not verified",
+        "evidence": {
+          "path": "frontend/client.ts",
+          "range": {
+            "startLine": 1,
+            "endLine": 1
+          },
+          "revision": "tree-sha256:74f3c0b34a05c971f16c0079619ecb767f8f192c7818849399cb3f32053b898c",
+          "fileHash": "415dc3afda07ab495c6fdcdbac97a2e4ea725f18af71cfcc3dc44e31c37edf56",
+          "excerpt": "fetch('/numeric/123'); // valid-template"
+        },
+        "targetEvidence": {
+          "path": "backend/NumericResource.java",
+          "range": {
+            "startLine": 6,
+            "endLine": 6
+          },
+          "revision": "tree-sha256:74f3c0b34a05c971f16c0079619ecb767f8f192c7818849399cb3f32053b898c",
+          "fileHash": "54bfc9935d6753fdf4ea5325d13d8e3d162d81589babdf6f4ec28bd75eb74b27",
+          "excerpt": " @GetMapping(\"/numeric/{id:[0-9]+}\") String numeric() { return \"v2\"; }"
+        }
+      },
+      {
+        "kind": "http",
+        "fromPath": "frontend/client.ts",
+        "toPath": "backend/NumericResource.java",
+        "targetKey": "qa.NumericResource#numeric/0",
+        "confidence": "medium",
+        "reason": "Literal HTTP verb/path matches source Spring mapping; runtime origin/proxy not verified",
+        "evidence": {
+          "path": "frontend/client.ts",
+          "range": {
+            "startLine": 2,
+            "endLine": 2
+          },
+          "revision": "tree-sha256:74f3c0b34a05c971f16c0079619ecb767f8f192c7818849399cb3f32053b898c",
+          "fileHash": "415dc3afda07ab495c6fdcdbac97a2e4ea725f18af71cfcc3dc44e31c37edf56",
+          "excerpt": "fetch('/numeric/nope'); // excluded-by-regex"
+        },
+        "targetEvidence": {
+          "path": "backend/NumericResource.java",
+          "range": {
+            "startLine": 6,
+            "endLine": 6
+          },
+          "revision": "tree-sha256:74f3c0b34a05c971f16c0079619ecb767f8f192c7818849399cb3f32053b898c",
+          "fileHash": "54bfc9935d6753fdf4ea5325d13d8e3d162d81589babdf6f4ec28bd75eb74b27",
+          "excerpt": " @GetMapping(\"/numeric/{id:[0-9]+}\") String numeric() { return \"v2\"; }"
+        }
+      }
+    ],
+    "unknowns": [
+      {
+        "reason": "external-or-missing-java-source",
+        "detail": "org.springframework.web.bind.annotation.GetMapping",
+        "evidence": {
+          "path": "backend/NumericResource.java",
+          "range": {
+            "startLine": 2,
+            "endLine": 2
+          },
+          "revision": "tree-sha256:ab15463908a56ea3ec52c9b578c156c104f41ce151bb877796e176866d72f80e",
+          "fileHash": "31ab75e86d9b05e9b403aa9265fd380219a178a6f5164e95e345b235fb2f034b",
+          "excerpt": "import org.springframework.web.bind.annotation.GetMapping;"
+        }
+      },
+      {
+        "reason": "external-or-missing-java-source",
+        "detail": "org.springframework.web.bind.annotation.PostMapping",
+        "evidence": {
+          "path": "backend/NumericResource.java",
+          "range": {
+            "startLine": 3,
+            "endLine": 3
+          },
+          "revision": "tree-sha256:ab15463908a56ea3ec52c9b578c156c104f41ce151bb877796e176866d72f80e",
+          "fileHash": "31ab75e86d9b05e9b403aa9265fd380219a178a6f5164e95e345b235fb2f034b",
+          "excerpt": "import org.springframework.web.bind.annotation.PostMapping;"
+        }
+      },
+      {
+        "reason": "external-or-missing-java-source",
+        "detail": "org.springframework.web.bind.annotation.RequestMapping",
+        "evidence": {
+          "path": "backend/NumericResource.java",
+          "range": {
+            "startLine": 4,
+            "endLine": 4
+          },
+          "revision": "tree-sha256:ab15463908a56ea3ec52c9b578c156c104f41ce151bb877796e176866d72f80e",
+          "fileHash": "31ab75e86d9b05e9b403aa9265fd380219a178a6f5164e95e345b235fb2f034b",
+          "excerpt": "import org.springframework.web.bind.annotation.RequestMapping;"
+        }
+      },
+      {
+        "reason": "external-or-missing-java-source",
+        "detail": "org.springframework.web.bind.annotation.GetMapping",
+        "evidence": {
+          "path": "backend/NumericResource.java",
+          "range": {
+            "startLine": 6,
+            "endLine": 6
+          },
+          "revision": "tree-sha256:ab15463908a56ea3ec52c9b578c156c104f41ce151bb877796e176866d72f80e",
+          "fileHash": "31ab75e86d9b05e9b403aa9265fd380219a178a6f5164e95e345b235fb2f034b",
+          "excerpt": " @GetMapping(\"/numeric/{id:[0-9]+}\") String numeric() { return \"v1\"; }"
+        }
+      },
+      {
+        "reason": "external-or-missing-java-source",
+        "detail": "String",
+        "evidence": {
+          "path": "backend/NumericResource.java",
+          "range": {
+            "startLine": 6,
+            "endLine": 6
+          },
+          "revision": "tree-sha256:ab15463908a56ea3ec52c9b578c156c104f41ce151bb877796e176866d72f80e",
+          "fileHash": "31ab75e86d9b05e9b403aa9265fd380219a178a6f5164e95e345b235fb2f034b",
+          "excerpt": " @GetMapping(\"/numeric/{id:[0-9]+}\") String numeric() { return \"v1\"; }"
+        }
+      },
+      {
+        "reason": "unresolved-call",
+        "detail": "fetch",
+        "evidence": {
+          "path": "frontend/client.ts",
+          "range": {
+            "startLine": 1,
+            "endLine": 1
+          },
+          "revision": "tree-sha256:ab15463908a56ea3ec52c9b578c156c104f41ce151bb877796e176866d72f80e",
+          "fileHash": "415dc3afda07ab495c6fdcdbac97a2e4ea725f18af71cfcc3dc44e31c37edf56",
+          "excerpt": "fetch('/numeric/123'); // valid-template"
+        }
+      },
+      {
+        "reason": "unresolved-call",
+        "detail": "fetch",
+        "evidence": {
+          "path": "frontend/client.ts",
+          "range": {
+            "startLine": 2,
+            "endLine": 2
+          },
+          "revision": "tree-sha256:ab15463908a56ea3ec52c9b578c156c104f41ce151bb877796e176866d72f80e",
+          "fileHash": "415dc3afda07ab495c6fdcdbac97a2e4ea725f18af71cfcc3dc44e31c37edf56",
+          "excerpt": "fetch('/numeric/nope'); // excluded-by-regex"
+        }
+      },
+      {
+        "reason": "unresolved-call",
+        "detail": "fetch",
+        "evidence": {
+          "path": "frontend/client.ts",
+          "range": {
+            "startLine": 3,
+            "endLine": 3
+          },
+          "revision": "tree-sha256:ab15463908a56ea3ec52c9b578c156c104f41ce151bb877796e176866d72f80e",
+          "fileHash": "415dc3afda07ab495c6fdcdbac97a2e4ea725f18af71cfcc3dc44e31c37edf56",
+          "excerpt": "fetch('https://other.example/numeric/123'); // unknown-origin"
+        }
+      },
+      {
+        "reason": "unmatched-endpoint",
+        "evidence": {
+          "path": "frontend/client.ts",
+          "range": {
+            "startLine": 3,
+            "endLine": 3
+          },
+          "revision": "tree-sha256:ab15463908a56ea3ec52c9b578c156c104f41ce151bb877796e176866d72f80e",
+          "fileHash": "415dc3afda07ab495c6fdcdbac97a2e4ea725f18af71cfcc3dc44e31c37edf56",
+          "excerpt": "fetch('https://other.example/numeric/123'); // unknown-origin"
+        },
+        "candidates": []
+      },
+      {
+        "reason": "external-or-missing-java-source",
+        "detail": "org.springframework.web.bind.annotation.GetMapping",
+        "evidence": {
+          "path": "backend/NumericResource.java",
+          "range": {
+            "startLine": 2,
+            "endLine": 2
+          },
+          "revision": "tree-sha256:74f3c0b34a05c971f16c0079619ecb767f8f192c7818849399cb3f32053b898c",
+          "fileHash": "54bfc9935d6753fdf4ea5325d13d8e3d162d81589babdf6f4ec28bd75eb74b27",
+          "excerpt": "import org.springframework.web.bind.annotation.GetMapping;"
+        }
+      },
+      {
+        "reason": "external-or-missing-java-source",
+        "detail": "org.springframework.web.bind.annotation.PostMapping",
+        "evidence": {
+          "path": "backend/NumericResource.java",
+          "range": {
+            "startLine": 3,
+            "endLine": 3
+          },
+          "revision": "tree-sha256:74f3c0b34a05c971f16c0079619ecb767f8f192c7818849399cb3f32053b898c",
+          "fileHash": "54bfc9935d6753fdf4ea5325d13d8e3d162d81589babdf6f4ec28bd75eb74b27",
+          "excerpt": "import org.springframework.web.bind.annotation.PostMapping;"
+        }
+      },
+      {
+        "reason": "external-or-missing-java-source",
+        "detail": "org.springframework.web.bind.annotation.RequestMapping",
+        "evidence": {
+          "path": "backend/NumericResource.java",
+          "range": {
+            "startLine": 4,
+            "endLine": 4
+          },
+          "revision": "tree-sha256:74f3c0b34a05c971f16c0079619ecb767f8f192c7818849399cb3f32053b898c",
+          "fileHash": "54bfc9935d6753fdf4ea5325d13d8e3d162d81589babdf6f4ec28bd75eb74b27",
+          "excerpt": "import org.springframework.web.bind.annotation.RequestMapping;"
+        }
+      },
+      {
+        "reason": "external-or-missing-java-source",
+        "detail": "org.springframework.web.bind.annotation.GetMapping",
+        "evidence": {
+          "path": "backend/NumericResource.java",
+          "range": {
+            "startLine": 6,
+            "endLine": 6
+          },
+          "revision": "tree-sha256:74f3c0b34a05c971f16c0079619ecb767f8f192c7818849399cb3f32053b898c",
+          "fileHash": "54bfc9935d6753fdf4ea5325d13d8e3d162d81589babdf6f4ec28bd75eb74b27",
+          "excerpt": " @GetMapping(\"/numeric/{id:[0-9]+}\") String numeric() { return \"v2\"; }"
+        }
+      },
+      {
+        "reason": "external-or-missing-java-source",
+        "detail": "String",
+        "evidence": {
+          "path": "backend/NumericResource.java",
+          "range": {
+            "startLine": 6,
+            "endLine": 6
+          },
+          "revision": "tree-sha256:74f3c0b34a05c971f16c0079619ecb767f8f192c7818849399cb3f32053b898c",
+          "fileHash": "54bfc9935d6753fdf4ea5325d13d8e3d162d81589babdf6f4ec28bd75eb74b27",
+          "excerpt": " @GetMapping(\"/numeric/{id:[0-9]+}\") String numeric() { return \"v2\"; }"
+        }
+      },
+      {
+        "reason": "unresolved-call",
+        "detail": "fetch",
+        "evidence": {
+          "path": "frontend/client.ts",
+          "range": {
+            "startLine": 1,
+            "endLine": 1
+          },
+          "revision": "tree-sha256:74f3c0b34a05c971f16c0079619ecb767f8f192c7818849399cb3f32053b898c",
+          "fileHash": "415dc3afda07ab495c6fdcdbac97a2e4ea725f18af71cfcc3dc44e31c37edf56",
+          "excerpt": "fetch('/numeric/123'); // valid-template"
+        }
+      },
+      {
+        "reason": "unresolved-call",
+        "detail": "fetch",
+        "evidence": {
+          "path": "frontend/client.ts",
+          "range": {
+            "startLine": 2,
+            "endLine": 2
+          },
+          "revision": "tree-sha256:74f3c0b34a05c971f16c0079619ecb767f8f192c7818849399cb3f32053b898c",
+          "fileHash": "415dc3afda07ab495c6fdcdbac97a2e4ea725f18af71cfcc3dc44e31c37edf56",
+          "excerpt": "fetch('/numeric/nope'); // excluded-by-regex"
+        }
+      },
+      {
+        "reason": "unresolved-call",
+        "detail": "fetch",
+        "evidence": {
+          "path": "frontend/client.ts",
+          "range": {
+            "startLine": 3,
+            "endLine": 3
+          },
+          "revision": "tree-sha256:74f3c0b34a05c971f16c0079619ecb767f8f192c7818849399cb3f32053b898c",
+          "fileHash": "415dc3afda07ab495c6fdcdbac97a2e4ea725f18af71cfcc3dc44e31c37edf56",
+          "excerpt": "fetch('https://other.example/numeric/123'); // unknown-origin"
+        }
+      },
+      {
+        "reason": "unmatched-endpoint",
+        "evidence": {
+          "path": "frontend/client.ts",
+          "range": {
+            "startLine": 3,
+            "endLine": 3
+          },
+          "revision": "tree-sha256:74f3c0b34a05c971f16c0079619ecb767f8f192c7818849399cb3f32053b898c",
+          "fileHash": "415dc3afda07ab495c6fdcdbac97a2e4ea725f18af71cfcc3dc44e31c37edf56",
+          "excerpt": "fetch('https://other.example/numeric/123'); // unknown-origin"
+        },
+        "candidates": []
+      }
+    ],
+    "sourceBuildHash": "8ee7fcacee9a1b276b2bfab2665d8d3ab771e40eee5f3924f1f301192426e68f"
+  },
+  {
+    "case": "11-ts-namespace-nested-member",
+    "assertions": [
+      {
+        "name": "no wrong container call declaration",
+        "status": "fail"
+      }
+    ],
+    "directCallHttpEdges": [
+      {
+        "kind": "call",
+        "fromPath": "frontend/consumer.ts",
+        "toPath": "frontend/lib.ts",
+        "targetKey": "service",
+        "confidence": "high",
+        "reason": "Imported binding resolves to a supplied named declaration",
+        "evidence": {
+          "path": "frontend/consumer.ts",
+          "range": {
+            "startLine": 2,
+            "endLine": 2
+          },
+          "revision": "tree-sha256:e639d37beaf73ae28a39b5c963c76f25f60d71f1748ef3f67b0291788c6c09e9",
+          "fileHash": "ca05ccd120f7628b555c06db8fce7255ee8af7f8fc0b14f0247ee10c1f66d618",
+          "excerpt": "export function use() { api.service.run(); } // nested-member"
+        },
+        "targetEvidence": {
+          "path": "frontend/lib.ts",
+          "range": {
+            "startLine": 1,
+            "endLine": 1
+          },
+          "revision": "tree-sha256:e639d37beaf73ae28a39b5c963c76f25f60d71f1748ef3f67b0291788c6c09e9",
+          "fileHash": "e5baaac6c7f48b2f1aad3f95b012292eb1d3f427930e61bbb1fd657be7dabce5",
+          "excerpt": "export const service = { run() { return 1; } };"
+        }
+      },
+      {
+        "kind": "call",
+        "fromPath": "frontend/consumer.ts",
+        "toPath": "frontend/lib.ts",
+        "targetKey": "service",
+        "confidence": "high",
+        "reason": "Imported binding resolves to a supplied named declaration",
+        "evidence": {
+          "path": "frontend/consumer.ts",
+          "range": {
+            "startLine": 2,
+            "endLine": 2
+          },
+          "revision": "tree-sha256:f1d0dde1c4b4f9ef806619b21e7b0084a001750019a13c2cd8e1fb506740911c",
+          "fileHash": "ca05ccd120f7628b555c06db8fce7255ee8af7f8fc0b14f0247ee10c1f66d618",
+          "excerpt": "export function use() { api.service.run(); } // nested-member"
+        },
+        "targetEvidence": {
+          "path": "frontend/lib.ts",
+          "range": {
+            "startLine": 1,
+            "endLine": 1
+          },
+          "revision": "tree-sha256:f1d0dde1c4b4f9ef806619b21e7b0084a001750019a13c2cd8e1fb506740911c",
+          "fileHash": "3869dfc22456e112777919330c43941ec3ea7da0ad84f1f760ce81717ad9c018",
+          "excerpt": "export const service = { run() { return 2; } };"
+        }
+      }
+    ],
+    "unknowns": [],
+    "sourceBuildHash": "8ee7fcacee9a1b276b2bfab2665d8d3ab771e40eee5f3924f1f301192426e68f"
+  },
+  {
+    "case": "12-java-ambiguous-explicit-imports",
+    "assertions": [
+      {
+        "name": "no first-import call guess",
+        "status": "fail"
+      },
+      {
+        "name": "ambiguous binding explicit unknown",
+        "status": "fail"
+      }
+    ],
+    "directCallHttpEdges": [
+      {
+        "kind": "call",
+        "fromPath": "backend/Caller.java",
+        "toPath": "backend/a/Target.java",
+        "targetKey": "a.Target#run/0",
+        "confidence": "medium",
+        "reason": "Lexical receiver type and unique method name/arity match; no runtime dispatch proof",
+        "evidence": {
+          "path": "backend/Caller.java",
+          "range": {
+            "startLine": 6,
+            "endLine": 6
+          },
+          "revision": "tree-sha256:86bb3497a219782c2f8c116a21fe117ae1b7f566b3ea9a6b6a39018746391451",
+          "fileHash": "a1aab558052caeea45ce53962b9306053f365cbd9d7495df9741dc5998e45d9a",
+          "excerpt": " void use(){ target.run(); } // ambiguous-import-receiver"
+        },
+        "targetEvidence": {
+          "path": "backend/a/Target.java",
+          "range": {
+            "startLine": 2,
+            "endLine": 2
+          },
+          "revision": "tree-sha256:86bb3497a219782c2f8c116a21fe117ae1b7f566b3ea9a6b6a39018746391451",
+          "fileHash": "8975900bb8ad28d30e1d27a9da5e6b98b6a6340d8401749369cd611ebeeb173f",
+          "excerpt": "public class Target { public int run() { return 1; } }"
+        }
+      },
+      {
+        "kind": "call",
+        "fromPath": "backend/Caller.java",
+        "toPath": "backend/a/Target.java",
+        "targetKey": "a.Target#run/0",
+        "confidence": "medium",
+        "reason": "Lexical receiver type and unique method name/arity match; no runtime dispatch proof",
+        "evidence": {
+          "path": "backend/Caller.java",
+          "range": {
+            "startLine": 6,
+            "endLine": 6
+          },
+          "revision": "tree-sha256:dd1db3d1164381b66f8d7f1305b0dad55580f264cdbc2a0e0762d8862f492aad",
+          "fileHash": "a1aab558052caeea45ce53962b9306053f365cbd9d7495df9741dc5998e45d9a",
+          "excerpt": " void use(){ target.run(); } // ambiguous-import-receiver"
+        },
+        "targetEvidence": {
+          "path": "backend/a/Target.java",
+          "range": {
+            "startLine": 2,
+            "endLine": 2
+          },
+          "revision": "tree-sha256:dd1db3d1164381b66f8d7f1305b0dad55580f264cdbc2a0e0762d8862f492aad",
+          "fileHash": "d3cd92707954342015ca2a17c62667b79bbe02c54115f3447a0e887e4ac065fb",
+          "excerpt": "public class Target { public int run() { return 2; } }"
+        }
+      }
+    ],
+    "unknowns": [],
+    "sourceBuildHash": "8ee7fcacee9a1b276b2bfab2665d8d3ab771e40eee5f3924f1f301192426e68f"
+  },
+  {
+    "case": "13-ts-namespace-contract-member",
+    "assertions": [
+      {
+        "name": "no wrong namespace declaration for method call",
+        "status": "fail"
+      },
+      {
+        "name": "qualified member or explicit uncertainty",
+        "status": "fail"
+      }
+    ],
+    "directCallHttpEdges": [
+      {
+        "kind": "call",
+        "fromPath": "frontend/consumer.ts",
+        "toPath": "frontend/lib.ts",
+        "targetKey": "Api",
+        "confidence": "high",
+        "reason": "Imported binding resolves to a supplied named declaration",
+        "evidence": {
+          "path": "frontend/consumer.ts",
+          "range": {
+            "startLine": 2,
+            "endLine": 2
+          },
+          "revision": "tree-sha256:99c8677a3068ca5ed295165291ae5b5da5e8a7864f7aa090e0fd822372c7198a",
+          "fileHash": "0ea13582782a29f0efecfd6f084810a4fa4baabf97fc1d99854e10f651fce687",
+          "excerpt": "export function use() { api.Api.run(); } // namespace-member"
+        },
+        "targetEvidence": {
+          "path": "frontend/lib.ts",
+          "range": {
+            "startLine": 1,
+            "endLine": 1
+          },
+          "revision": "tree-sha256:99c8677a3068ca5ed295165291ae5b5da5e8a7864f7aa090e0fd822372c7198a",
+          "fileHash": "5d1eb563b8d431a3baae70baf61caa769b8ed1b384c71859ff060d2a36311950",
+          "excerpt": "export namespace Api { export function run() { return 1; } }"
+        }
+      },
+      {
+        "kind": "call",
+        "fromPath": "frontend/consumer.ts",
+        "toPath": "frontend/lib.ts",
+        "targetKey": "Api",
+        "confidence": "high",
+        "reason": "Imported binding resolves to a supplied named declaration",
+        "evidence": {
+          "path": "frontend/consumer.ts",
+          "range": {
+            "startLine": 2,
+            "endLine": 2
+          },
+          "revision": "tree-sha256:c0d19991c5788f23a7094506bddcb0f57aff5d2630cc35bc6bbeb1a8bfe88142",
+          "fileHash": "0ea13582782a29f0efecfd6f084810a4fa4baabf97fc1d99854e10f651fce687",
+          "excerpt": "export function use() { api.Api.run(); } // namespace-member"
+        },
+        "targetEvidence": {
+          "path": "frontend/lib.ts",
+          "range": {
+            "startLine": 1,
+            "endLine": 1
+          },
+          "revision": "tree-sha256:c0d19991c5788f23a7094506bddcb0f57aff5d2630cc35bc6bbeb1a8bfe88142",
+          "fileHash": "ae28fabd402488e451dd36e907c07c5edbef985ea39b7304e2ad681ec13cfba0",
+          "excerpt": "export namespace Api { export function run() { return 2; } }"
+        }
+      }
+    ],
+    "unknowns": [],
+    "sourceBuildHash": "8ee7fcacee9a1b276b2bfab2665d8d3ab771e40eee5f3924f1f301192426e68f"
+  },
+  {
+    "case": "14-js-with-lexical-shadow",
+    "assertions": [
+      {
+        "name": "with object fetch never fabricates HTTP edge",
+        "status": "fail"
+      }
+    ],
+    "directCallHttpEdges": [
+      {
+        "kind": "http",
+        "fromPath": "frontend/shadow.js",
+        "toPath": "backend/Resource.java",
+        "targetKey": "qa.Resource#fake/0",
+        "confidence": "medium",
+        "reason": "Literal HTTP verb/path matches source Spring mapping; runtime origin/proxy not verified",
+        "evidence": {
+          "path": "frontend/shadow.js",
+          "range": {
+            "startLine": 2,
+            "endLine": 2
+          },
+          "revision": "tree-sha256:711e0938538298114ccb5dd700490445e756f227c4727a72a7101e6dbee187cd",
+          "fileHash": "106156234a0c6d6e3105e8ef6d1fd842d611025f4e211886999daf0ecb91cad7",
+          "excerpt": " fetch('/audit/fake'); // with-object-shadow"
+        },
+        "targetEvidence": {
+          "path": "backend/Resource.java",
+          "range": {
+            "startLine": 8,
+            "endLine": 8
+          },
+          "revision": "tree-sha256:711e0938538298114ccb5dd700490445e756f227c4727a72a7101e6dbee187cd",
+          "fileHash": "3804feef0d2b303327d83f58c4c2c6d33f75f79ba6aa914d248183fa52cf67c4",
+          "excerpt": " @GetMapping(\"/fake\") String fake() { return \"v1\"; }"
+        }
+      },
+      {
+        "kind": "http",
+        "fromPath": "frontend/shadow.js",
+        "toPath": "backend/Resource.java",
+        "targetKey": "qa.Resource#real/0",
+        "confidence": "medium",
+        "reason": "Literal HTTP verb/path matches source Spring mapping; runtime origin/proxy not verified",
+        "evidence": {
+          "path": "frontend/shadow.js",
+          "range": {
+            "startLine": 4,
+            "endLine": 4
+          },
+          "revision": "tree-sha256:711e0938538298114ccb5dd700490445e756f227c4727a72a7101e6dbee187cd",
+          "fileHash": "106156234a0c6d6e3105e8ef6d1fd842d611025f4e211886999daf0ecb91cad7",
+          "excerpt": "fetch('/audit/real'); // outside-with-control"
+        },
+        "targetEvidence": {
+          "path": "backend/Resource.java",
+          "range": {
+            "startLine": 7,
+            "endLine": 7
+          },
+          "revision": "tree-sha256:711e0938538298114ccb5dd700490445e756f227c4727a72a7101e6dbee187cd",
+          "fileHash": "3804feef0d2b303327d83f58c4c2c6d33f75f79ba6aa914d248183fa52cf67c4",
+          "excerpt": " @GetMapping(\"/real\") String real() { return \"v1\"; }"
+        }
+      },
+      {
+        "kind": "http",
+        "fromPath": "frontend/shadow.js",
+        "toPath": "backend/Resource.java",
+        "targetKey": "qa.Resource#fake/0",
+        "confidence": "medium",
+        "reason": "Literal HTTP verb/path matches source Spring mapping; runtime origin/proxy not verified",
+        "evidence": {
+          "path": "frontend/shadow.js",
+          "range": {
+            "startLine": 2,
+            "endLine": 2
+          },
+          "revision": "tree-sha256:20172821a390a42967242f9d0ad4454e61938398b5ffafa0e07c7a93a527c14d",
+          "fileHash": "106156234a0c6d6e3105e8ef6d1fd842d611025f4e211886999daf0ecb91cad7",
+          "excerpt": " fetch('/audit/fake'); // with-object-shadow"
+        },
+        "targetEvidence": {
+          "path": "backend/Resource.java",
+          "range": {
+            "startLine": 8,
+            "endLine": 8
+          },
+          "revision": "tree-sha256:20172821a390a42967242f9d0ad4454e61938398b5ffafa0e07c7a93a527c14d",
+          "fileHash": "9e9c44affd6daae1cc4a1e4216829ec607ab4530301be37a8fb6ff54b8428641",
+          "excerpt": " @GetMapping(\"/fake\") String fake() { return \"v2\"; }"
+        }
+      },
+      {
+        "kind": "http",
+        "fromPath": "frontend/shadow.js",
+        "toPath": "backend/Resource.java",
+        "targetKey": "qa.Resource#real/0",
+        "confidence": "medium",
+        "reason": "Literal HTTP verb/path matches source Spring mapping; runtime origin/proxy not verified",
+        "evidence": {
+          "path": "frontend/shadow.js",
+          "range": {
+            "startLine": 4,
+            "endLine": 4
+          },
+          "revision": "tree-sha256:20172821a390a42967242f9d0ad4454e61938398b5ffafa0e07c7a93a527c14d",
+          "fileHash": "106156234a0c6d6e3105e8ef6d1fd842d611025f4e211886999daf0ecb91cad7",
+          "excerpt": "fetch('/audit/real'); // outside-with-control"
+        },
+        "targetEvidence": {
+          "path": "backend/Resource.java",
+          "range": {
+            "startLine": 7,
+            "endLine": 7
+          },
+          "revision": "tree-sha256:20172821a390a42967242f9d0ad4454e61938398b5ffafa0e07c7a93a527c14d",
+          "fileHash": "9e9c44affd6daae1cc4a1e4216829ec607ab4530301be37a8fb6ff54b8428641",
+          "excerpt": " @GetMapping(\"/real\") String real() { return \"v2\"; }"
+        }
+      }
+    ],
+    "unknowns": [
+      {
+        "reason": "external-or-missing-java-source",
+        "detail": "org.springframework.web.bind.annotation.GetMapping",
+        "evidence": {
+          "path": "backend/Resource.java",
+          "range": {
+            "startLine": 2,
+            "endLine": 2
+          },
+          "revision": "tree-sha256:711e0938538298114ccb5dd700490445e756f227c4727a72a7101e6dbee187cd",
+          "fileHash": "3804feef0d2b303327d83f58c4c2c6d33f75f79ba6aa914d248183fa52cf67c4",
+          "excerpt": "import org.springframework.web.bind.annotation.GetMapping;"
+        }
+      },
+      {
+        "reason": "external-or-missing-java-source",
+        "detail": "org.springframework.web.bind.annotation.PostMapping",
+        "evidence": {
+          "path": "backend/Resource.java",
+          "range": {
+            "startLine": 3,
+            "endLine": 3
+          },
+          "revision": "tree-sha256:711e0938538298114ccb5dd700490445e756f227c4727a72a7101e6dbee187cd",
+          "fileHash": "3804feef0d2b303327d83f58c4c2c6d33f75f79ba6aa914d248183fa52cf67c4",
+          "excerpt": "import org.springframework.web.bind.annotation.PostMapping;"
+        }
+      },
+      {
+        "reason": "external-or-missing-java-source",
+        "detail": "org.springframework.web.bind.annotation.RequestMapping",
+        "evidence": {
+          "path": "backend/Resource.java",
+          "range": {
+            "startLine": 4,
+            "endLine": 4
+          },
+          "revision": "tree-sha256:711e0938538298114ccb5dd700490445e756f227c4727a72a7101e6dbee187cd",
+          "fileHash": "3804feef0d2b303327d83f58c4c2c6d33f75f79ba6aa914d248183fa52cf67c4",
+          "excerpt": "import org.springframework.web.bind.annotation.RequestMapping;"
+        }
+      },
+      {
+        "reason": "external-or-missing-java-source",
+        "detail": "org.springframework.web.bind.annotation.RequestMapping",
+        "evidence": {
+          "path": "backend/Resource.java",
+          "range": {
+            "startLine": 5,
+            "endLine": 5
+          },
+          "revision": "tree-sha256:711e0938538298114ccb5dd700490445e756f227c4727a72a7101e6dbee187cd",
+          "fileHash": "3804feef0d2b303327d83f58c4c2c6d33f75f79ba6aa914d248183fa52cf67c4",
+          "excerpt": "@RequestMapping(\"/audit\")"
+        }
+      },
+      {
+        "reason": "external-or-missing-java-source",
+        "detail": "org.springframework.web.bind.annotation.GetMapping",
+        "evidence": {
+          "path": "backend/Resource.java",
+          "range": {
+            "startLine": 7,
+            "endLine": 7
+          },
+          "revision": "tree-sha256:711e0938538298114ccb5dd700490445e756f227c4727a72a7101e6dbee187cd",
+          "fileHash": "3804feef0d2b303327d83f58c4c2c6d33f75f79ba6aa914d248183fa52cf67c4",
+          "excerpt": " @GetMapping(\"/real\") String real() { return \"v1\"; }"
+        }
+      },
+      {
+        "reason": "external-or-missing-java-source",
+        "detail": "String",
+        "evidence": {
+          "path": "backend/Resource.java",
+          "range": {
+            "startLine": 7,
+            "endLine": 7
+          },
+          "revision": "tree-sha256:711e0938538298114ccb5dd700490445e756f227c4727a72a7101e6dbee187cd",
+          "fileHash": "3804feef0d2b303327d83f58c4c2c6d33f75f79ba6aa914d248183fa52cf67c4",
+          "excerpt": " @GetMapping(\"/real\") String real() { return \"v1\"; }"
+        }
+      },
+      {
+        "reason": "external-or-missing-java-source",
+        "detail": "org.springframework.web.bind.annotation.GetMapping",
+        "evidence": {
+          "path": "backend/Resource.java",
+          "range": {
+            "startLine": 8,
+            "endLine": 8
+          },
+          "revision": "tree-sha256:711e0938538298114ccb5dd700490445e756f227c4727a72a7101e6dbee187cd",
+          "fileHash": "3804feef0d2b303327d83f58c4c2c6d33f75f79ba6aa914d248183fa52cf67c4",
+          "excerpt": " @GetMapping(\"/fake\") String fake() { return \"v1\"; }"
+        }
+      },
+      {
+        "reason": "external-or-missing-java-source",
+        "detail": "String",
+        "evidence": {
+          "path": "backend/Resource.java",
+          "range": {
+            "startLine": 8,
+            "endLine": 8
+          },
+          "revision": "tree-sha256:711e0938538298114ccb5dd700490445e756f227c4727a72a7101e6dbee187cd",
+          "fileHash": "3804feef0d2b303327d83f58c4c2c6d33f75f79ba6aa914d248183fa52cf67c4",
+          "excerpt": " @GetMapping(\"/fake\") String fake() { return \"v1\"; }"
+        }
+      },
+      {
+        "reason": "external-or-missing-java-source",
+        "detail": "org.springframework.web.bind.annotation.PostMapping",
+        "evidence": {
+          "path": "backend/Resource.java",
+          "range": {
+            "startLine": 9,
+            "endLine": 9
+          },
+          "revision": "tree-sha256:711e0938538298114ccb5dd700490445e756f227c4727a72a7101e6dbee187cd",
+          "fileHash": "3804feef0d2b303327d83f58c4c2c6d33f75f79ba6aa914d248183fa52cf67c4",
+          "excerpt": " @PostMapping(\"/real\") String post() { return \"v1\"; }"
+        }
+      },
+      {
+        "reason": "external-or-missing-java-source",
+        "detail": "String",
+        "evidence": {
+          "path": "backend/Resource.java",
+          "range": {
+            "startLine": 9,
+            "endLine": 9
+          },
+          "revision": "tree-sha256:711e0938538298114ccb5dd700490445e756f227c4727a72a7101e6dbee187cd",
+          "fileHash": "3804feef0d2b303327d83f58c4c2c6d33f75f79ba6aa914d248183fa52cf67c4",
+          "excerpt": " @PostMapping(\"/real\") String post() { return \"v1\"; }"
+        }
+      },
+      {
+        "reason": "unresolved-call",
+        "detail": "fetch",
+        "evidence": {
+          "path": "frontend/shadow.js",
+          "range": {
+            "startLine": 2,
+            "endLine": 2
+          },
+          "revision": "tree-sha256:711e0938538298114ccb5dd700490445e756f227c4727a72a7101e6dbee187cd",
+          "fileHash": "106156234a0c6d6e3105e8ef6d1fd842d611025f4e211886999daf0ecb91cad7",
+          "excerpt": " fetch('/audit/fake'); // with-object-shadow"
+        }
+      },
+      {
+        "reason": "unresolved-call",
+        "detail": "fetch",
+        "evidence": {
+          "path": "frontend/shadow.js",
+          "range": {
+            "startLine": 4,
+            "endLine": 4
+          },
+          "revision": "tree-sha256:711e0938538298114ccb5dd700490445e756f227c4727a72a7101e6dbee187cd",
+          "fileHash": "106156234a0c6d6e3105e8ef6d1fd842d611025f4e211886999daf0ecb91cad7",
+          "excerpt": "fetch('/audit/real'); // outside-with-control"
+        }
+      },
+      {
+        "reason": "external-or-missing-java-source",
+        "detail": "org.springframework.web.bind.annotation.GetMapping",
+        "evidence": {
+          "path": "backend/Resource.java",
+          "range": {
+            "startLine": 2,
+            "endLine": 2
+          },
+          "revision": "tree-sha256:20172821a390a42967242f9d0ad4454e61938398b5ffafa0e07c7a93a527c14d",
+          "fileHash": "9e9c44affd6daae1cc4a1e4216829ec607ab4530301be37a8fb6ff54b8428641",
+          "excerpt": "import org.springframework.web.bind.annotation.GetMapping;"
+        }
+      },
+      {
+        "reason": "external-or-missing-java-source",
+        "detail": "org.springframework.web.bind.annotation.PostMapping",
+        "evidence": {
+          "path": "backend/Resource.java",
+          "range": {
+            "startLine": 3,
+            "endLine": 3
+          },
+          "revision": "tree-sha256:20172821a390a42967242f9d0ad4454e61938398b5ffafa0e07c7a93a527c14d",
+          "fileHash": "9e9c44affd6daae1cc4a1e4216829ec607ab4530301be37a8fb6ff54b8428641",
+          "excerpt": "import org.springframework.web.bind.annotation.PostMapping;"
+        }
+      },
+      {
+        "reason": "external-or-missing-java-source",
+        "detail": "org.springframework.web.bind.annotation.RequestMapping",
+        "evidence": {
+          "path": "backend/Resource.java",
+          "range": {
+            "startLine": 4,
+            "endLine": 4
+          },
+          "revision": "tree-sha256:20172821a390a42967242f9d0ad4454e61938398b5ffafa0e07c7a93a527c14d",
+          "fileHash": "9e9c44affd6daae1cc4a1e4216829ec607ab4530301be37a8fb6ff54b8428641",
+          "excerpt": "import org.springframework.web.bind.annotation.RequestMapping;"
+        }
+      },
+      {
+        "reason": "external-or-missing-java-source",
+        "detail": "org.springframework.web.bind.annotation.RequestMapping",
+        "evidence": {
+          "path": "backend/Resource.java",
+          "range": {
+            "startLine": 5,
+            "endLine": 5
+          },
+          "revision": "tree-sha256:20172821a390a42967242f9d0ad4454e61938398b5ffafa0e07c7a93a527c14d",
+          "fileHash": "9e9c44affd6daae1cc4a1e4216829ec607ab4530301be37a8fb6ff54b8428641",
+          "excerpt": "@RequestMapping(\"/audit\")"
+        }
+      },
+      {
+        "reason": "external-or-missing-java-source",
+        "detail": "org.springframework.web.bind.annotation.GetMapping",
+        "evidence": {
+          "path": "backend/Resource.java",
+          "range": {
+            "startLine": 7,
+            "endLine": 7
+          },
+          "revision": "tree-sha256:20172821a390a42967242f9d0ad4454e61938398b5ffafa0e07c7a93a527c14d",
+          "fileHash": "9e9c44affd6daae1cc4a1e4216829ec607ab4530301be37a8fb6ff54b8428641",
+          "excerpt": " @GetMapping(\"/real\") String real() { return \"v2\"; }"
+        }
+      },
+      {
+        "reason": "external-or-missing-java-source",
+        "detail": "String",
+        "evidence": {
+          "path": "backend/Resource.java",
+          "range": {
+            "startLine": 7,
+            "endLine": 7
+          },
+          "revision": "tree-sha256:20172821a390a42967242f9d0ad4454e61938398b5ffafa0e07c7a93a527c14d",
+          "fileHash": "9e9c44affd6daae1cc4a1e4216829ec607ab4530301be37a8fb6ff54b8428641",
+          "excerpt": " @GetMapping(\"/real\") String real() { return \"v2\"; }"
+        }
+      },
+      {
+        "reason": "external-or-missing-java-source",
+        "detail": "org.springframework.web.bind.annotation.GetMapping",
+        "evidence": {
+          "path": "backend/Resource.java",
+          "range": {
+            "startLine": 8,
+            "endLine": 8
+          },
+          "revision": "tree-sha256:20172821a390a42967242f9d0ad4454e61938398b5ffafa0e07c7a93a527c14d",
+          "fileHash": "9e9c44affd6daae1cc4a1e4216829ec607ab4530301be37a8fb6ff54b8428641",
+          "excerpt": " @GetMapping(\"/fake\") String fake() { return \"v2\"; }"
+        }
+      },
+      {
+        "reason": "external-or-missing-java-source",
+        "detail": "String",
+        "evidence": {
+          "path": "backend/Resource.java",
+          "range": {
+            "startLine": 8,
+            "endLine": 8
+          },
+          "revision": "tree-sha256:20172821a390a42967242f9d0ad4454e61938398b5ffafa0e07c7a93a527c14d",
+          "fileHash": "9e9c44affd6daae1cc4a1e4216829ec607ab4530301be37a8fb6ff54b8428641",
+          "excerpt": " @GetMapping(\"/fake\") String fake() { return \"v2\"; }"
+        }
+      },
+      {
+        "reason": "external-or-missing-java-source",
+        "detail": "org.springframework.web.bind.annotation.PostMapping",
+        "evidence": {
+          "path": "backend/Resource.java",
+          "range": {
+            "startLine": 9,
+            "endLine": 9
+          },
+          "revision": "tree-sha256:20172821a390a42967242f9d0ad4454e61938398b5ffafa0e07c7a93a527c14d",
+          "fileHash": "9e9c44affd6daae1cc4a1e4216829ec607ab4530301be37a8fb6ff54b8428641",
+          "excerpt": " @PostMapping(\"/real\") String post() { return \"v2\"; }"
+        }
+      },
+      {
+        "reason": "external-or-missing-java-source",
+        "detail": "String",
+        "evidence": {
+          "path": "backend/Resource.java",
+          "range": {
+            "startLine": 9,
+            "endLine": 9
+          },
+          "revision": "tree-sha256:20172821a390a42967242f9d0ad4454e61938398b5ffafa0e07c7a93a527c14d",
+          "fileHash": "9e9c44affd6daae1cc4a1e4216829ec607ab4530301be37a8fb6ff54b8428641",
+          "excerpt": " @PostMapping(\"/real\") String post() { return \"v2\"; }"
+        }
+      },
+      {
+        "reason": "unresolved-call",
+        "detail": "fetch",
+        "evidence": {
+          "path": "frontend/shadow.js",
+          "range": {
+            "startLine": 2,
+            "endLine": 2
+          },
+          "revision": "tree-sha256:20172821a390a42967242f9d0ad4454e61938398b5ffafa0e07c7a93a527c14d",
+          "fileHash": "106156234a0c6d6e3105e8ef6d1fd842d611025f4e211886999daf0ecb91cad7",
+          "excerpt": " fetch('/audit/fake'); // with-object-shadow"
+        }
+      },
+      {
+        "reason": "unresolved-call",
+        "detail": "fetch",
+        "evidence": {
+          "path": "frontend/shadow.js",
+          "range": {
+            "startLine": 4,
+            "endLine": 4
+          },
+          "revision": "tree-sha256:20172821a390a42967242f9d0ad4454e61938398b5ffafa0e07c7a93a527c14d",
+          "fileHash": "106156234a0c6d6e3105e8ef6d1fd842d611025f4e211886999daf0ecb91cad7",
+          "excerpt": "fetch('/audit/real'); // outside-with-control"
+        }
+      }
+    ],
+    "sourceBuildHash": "8ee7fcacee9a1b276b2bfab2665d8d3ab771e40eee5f3924f1f301192426e68f"
+  },
+  {
+    "case": "15-java-varargs-overload",
+    "assertions": [
+      {
+        "name": "no incompatible fixed-arity call target",
+        "status": "fail"
+      },
+      {
+        "name": "varargs alternative produces uncertainty or correct target",
+        "status": "fail"
+      }
+    ],
+    "directCallHttpEdges": [
+      {
+        "kind": "call",
+        "fromPath": "backend/Caller.java",
+        "toPath": "backend/Worker.java",
+        "targetKey": "qa.Worker#run/2",
+        "confidence": "medium",
+        "reason": "Lexical receiver type and unique method name/arity match; no runtime dispatch proof",
+        "evidence": {
+          "path": "backend/Caller.java",
+          "range": {
+            "startLine": 4,
+            "endLine": 4
+          },
+          "revision": "tree-sha256:093f3e5a212707441937f86166f587edf9c7e8714f97619d68ea412a60a091c1",
+          "fileHash": "65307490230e508a4da64deac8e3fa23bc942b1dce8cdf5f7a26596971ff4789",
+          "excerpt": " void use(){ worker.run(\"x\", \"y\"); } // vararg-overload"
+        },
+        "targetEvidence": {
+          "path": "backend/Worker.java",
+          "range": {
+            "startLine": 4,
+            "endLine": 4
+          },
+          "revision": "tree-sha256:093f3e5a212707441937f86166f587edf9c7e8714f97619d68ea412a60a091c1",
+          "fileHash": "01571ea63b20b360bb7d1a0366d45bfec9bb57c371d00da3e6633f0207ac9935",
+          "excerpt": " String run(int a, int b) { return \"v1\"; }"
+        }
+      },
+      {
+        "kind": "call",
+        "fromPath": "backend/Caller.java",
+        "toPath": "backend/Worker.java",
+        "targetKey": "qa.Worker#run/2",
+        "confidence": "medium",
+        "reason": "Lexical receiver type and unique method name/arity match; no runtime dispatch proof",
+        "evidence": {
+          "path": "backend/Caller.java",
+          "range": {
+            "startLine": 4,
+            "endLine": 4
+          },
+          "revision": "tree-sha256:a4a4763f68ed4d7853604c103d311ec7bea90d46495ba1eaa3631305e8e481c5",
+          "fileHash": "65307490230e508a4da64deac8e3fa23bc942b1dce8cdf5f7a26596971ff4789",
+          "excerpt": " void use(){ worker.run(\"x\", \"y\"); } // vararg-overload"
+        },
+        "targetEvidence": {
+          "path": "backend/Worker.java",
+          "range": {
+            "startLine": 4,
+            "endLine": 4
+          },
+          "revision": "tree-sha256:a4a4763f68ed4d7853604c103d311ec7bea90d46495ba1eaa3631305e8e481c5",
+          "fileHash": "8c5056ff258b712ace834c690ed3051a39fe4419741a71bace8b0294cb5c0355",
+          "excerpt": " String run(int a, int b) { return \"v2\"; }"
+        }
+      }
+    ],
+    "unknowns": [
+      {
+        "reason": "external-or-missing-java-source",
+        "detail": "String",
+        "evidence": {
+          "path": "backend/Worker.java",
+          "range": {
+            "startLine": 3,
+            "endLine": 3
+          },
+          "revision": "tree-sha256:093f3e5a212707441937f86166f587edf9c7e8714f97619d68ea412a60a091c1",
+          "fileHash": "01571ea63b20b360bb7d1a0366d45bfec9bb57c371d00da3e6633f0207ac9935",
+          "excerpt": " String run(String... values) { return \"v1\"; }"
+        }
+      },
+      {
+        "reason": "external-or-missing-java-source",
+        "detail": "String",
+        "evidence": {
+          "path": "backend/Worker.java",
+          "range": {
+            "startLine": 3,
+            "endLine": 3
+          },
+          "revision": "tree-sha256:093f3e5a212707441937f86166f587edf9c7e8714f97619d68ea412a60a091c1",
+          "fileHash": "01571ea63b20b360bb7d1a0366d45bfec9bb57c371d00da3e6633f0207ac9935",
+          "excerpt": " String run(String... values) { return \"v1\"; }"
+        }
+      },
+      {
+        "reason": "external-or-missing-java-source",
+        "detail": "String",
+        "evidence": {
+          "path": "backend/Worker.java",
+          "range": {
+            "startLine": 4,
+            "endLine": 4
+          },
+          "revision": "tree-sha256:093f3e5a212707441937f86166f587edf9c7e8714f97619d68ea412a60a091c1",
+          "fileHash": "01571ea63b20b360bb7d1a0366d45bfec9bb57c371d00da3e6633f0207ac9935",
+          "excerpt": " String run(int a, int b) { return \"v1\"; }"
+        }
+      },
+      {
+        "reason": "external-or-missing-java-source",
+        "detail": "String",
+        "evidence": {
+          "path": "backend/Worker.java",
+          "range": {
+            "startLine": 3,
+            "endLine": 3
+          },
+          "revision": "tree-sha256:a4a4763f68ed4d7853604c103d311ec7bea90d46495ba1eaa3631305e8e481c5",
+          "fileHash": "8c5056ff258b712ace834c690ed3051a39fe4419741a71bace8b0294cb5c0355",
+          "excerpt": " String run(String... values) { return \"v2\"; }"
+        }
+      },
+      {
+        "reason": "external-or-missing-java-source",
+        "detail": "String",
+        "evidence": {
+          "path": "backend/Worker.java",
+          "range": {
+            "startLine": 3,
+            "endLine": 3
+          },
+          "revision": "tree-sha256:a4a4763f68ed4d7853604c103d311ec7bea90d46495ba1eaa3631305e8e481c5",
+          "fileHash": "8c5056ff258b712ace834c690ed3051a39fe4419741a71bace8b0294cb5c0355",
+          "excerpt": " String run(String... values) { return \"v2\"; }"
+        }
+      },
+      {
+        "reason": "external-or-missing-java-source",
+        "detail": "String",
+        "evidence": {
+          "path": "backend/Worker.java",
+          "range": {
+            "startLine": 4,
+            "endLine": 4
+          },
+          "revision": "tree-sha256:a4a4763f68ed4d7853604c103d311ec7bea90d46495ba1eaa3631305e8e481c5",
+          "fileHash": "8c5056ff258b712ace834c690ed3051a39fe4419741a71bace8b0294cb5c0355",
+          "excerpt": " String run(int a, int b) { return \"v2\"; }"
+        }
+      }
+    ],
+    "sourceBuildHash": "8ee7fcacee9a1b276b2bfab2665d8d3ab771e40eee5f3924f1f301192426e68f"
+  },
+  {
+    "case": "16-java-inherited-overload",
+    "assertions": [
+      {
+        "name": "no incompatible Child Integer call target",
+        "status": "fail"
+      },
+      {
+        "name": "inheritance alternative remains uncertainty or correct target",
+        "status": "fail"
+      }
+    ],
+    "directCallHttpEdges": [
+      {
+        "kind": "call",
+        "fromPath": "backend/Caller.java",
+        "toPath": "backend/Child.java",
+        "targetKey": "qa.Child#run/1",
+        "confidence": "medium",
+        "reason": "Lexical receiver type and unique method name/arity match; no runtime dispatch proof",
+        "evidence": {
+          "path": "backend/Caller.java",
+          "range": {
+            "startLine": 4,
+            "endLine": 4
+          },
+          "revision": "tree-sha256:43b897cc8f8ba65d00773ac869ebca31fcec2c9cc35cf9a0b39444339e2125c6",
+          "fileHash": "656d0a74c600dcd856612fe45a67348037b842f28374978ff203513bd6b93fd1",
+          "excerpt": " void use(){ child.run(\"x\"); } // inherited-overload"
+        },
+        "targetEvidence": {
+          "path": "backend/Child.java",
+          "range": {
+            "startLine": 2,
+            "endLine": 2
+          },
+          "revision": "tree-sha256:43b897cc8f8ba65d00773ac869ebca31fcec2c9cc35cf9a0b39444339e2125c6",
+          "fileHash": "b6819335d438a1ff2eee31838dd068058ef71c9f554fe624db6c50c8ddc2b5f9",
+          "excerpt": "class Child extends Base { String run(Integer value) { return \"v1\"; } }"
+        }
+      },
+      {
+        "kind": "call",
+        "fromPath": "backend/Caller.java",
+        "toPath": "backend/Child.java",
+        "targetKey": "qa.Child#run/1",
+        "confidence": "medium",
+        "reason": "Lexical receiver type and unique method name/arity match; no runtime dispatch proof",
+        "evidence": {
+          "path": "backend/Caller.java",
+          "range": {
+            "startLine": 4,
+            "endLine": 4
+          },
+          "revision": "tree-sha256:bebb9626c6af0c3a0cafab0b57a30bf57b070b61cdcff749e9c464ed999ac10d",
+          "fileHash": "656d0a74c600dcd856612fe45a67348037b842f28374978ff203513bd6b93fd1",
+          "excerpt": " void use(){ child.run(\"x\"); } // inherited-overload"
+        },
+        "targetEvidence": {
+          "path": "backend/Child.java",
+          "range": {
+            "startLine": 2,
+            "endLine": 2
+          },
+          "revision": "tree-sha256:bebb9626c6af0c3a0cafab0b57a30bf57b070b61cdcff749e9c464ed999ac10d",
+          "fileHash": "55178789faacec884e6f737e7c3e7632a411e6616e25eeb98e17919cb9326217",
+          "excerpt": "class Child extends Base { String run(Integer value) { return \"v2\"; } }"
+        }
+      }
+    ],
+    "unknowns": [
+      {
+        "reason": "external-or-missing-java-source",
+        "detail": "String",
+        "evidence": {
+          "path": "backend/Base.java",
+          "range": {
+            "startLine": 2,
+            "endLine": 2
+          },
+          "revision": "tree-sha256:43b897cc8f8ba65d00773ac869ebca31fcec2c9cc35cf9a0b39444339e2125c6",
+          "fileHash": "a7a37e9bbad27af27180fe504b0678e2e6e0314b492687ae64ba72f81b9a67fd",
+          "excerpt": "class Base { String run(String value) { return \"v1\"; } }"
+        }
+      },
+      {
+        "reason": "external-or-missing-java-source",
+        "detail": "String",
+        "evidence": {
+          "path": "backend/Base.java",
+          "range": {
+            "startLine": 2,
+            "endLine": 2
+          },
+          "revision": "tree-sha256:43b897cc8f8ba65d00773ac869ebca31fcec2c9cc35cf9a0b39444339e2125c6",
+          "fileHash": "a7a37e9bbad27af27180fe504b0678e2e6e0314b492687ae64ba72f81b9a67fd",
+          "excerpt": "class Base { String run(String value) { return \"v1\"; } }"
+        }
+      },
+      {
+        "reason": "external-or-missing-java-source",
+        "detail": "String",
+        "evidence": {
+          "path": "backend/Child.java",
+          "range": {
+            "startLine": 2,
+            "endLine": 2
+          },
+          "revision": "tree-sha256:43b897cc8f8ba65d00773ac869ebca31fcec2c9cc35cf9a0b39444339e2125c6",
+          "fileHash": "b6819335d438a1ff2eee31838dd068058ef71c9f554fe624db6c50c8ddc2b5f9",
+          "excerpt": "class Child extends Base { String run(Integer value) { return \"v1\"; } }"
+        }
+      },
+      {
+        "reason": "external-or-missing-java-source",
+        "detail": "Integer",
+        "evidence": {
+          "path": "backend/Child.java",
+          "range": {
+            "startLine": 2,
+            "endLine": 2
+          },
+          "revision": "tree-sha256:43b897cc8f8ba65d00773ac869ebca31fcec2c9cc35cf9a0b39444339e2125c6",
+          "fileHash": "b6819335d438a1ff2eee31838dd068058ef71c9f554fe624db6c50c8ddc2b5f9",
+          "excerpt": "class Child extends Base { String run(Integer value) { return \"v1\"; } }"
+        }
+      },
+      {
+        "reason": "external-or-missing-java-source",
+        "detail": "String",
+        "evidence": {
+          "path": "backend/Base.java",
+          "range": {
+            "startLine": 2,
+            "endLine": 2
+          },
+          "revision": "tree-sha256:bebb9626c6af0c3a0cafab0b57a30bf57b070b61cdcff749e9c464ed999ac10d",
+          "fileHash": "aa39806866edc40aea58b5112cb70e705a067f9ecda15bc35dbc64f62ca581bc",
+          "excerpt": "class Base { String run(String value) { return \"v2\"; } }"
+        }
+      },
+      {
+        "reason": "external-or-missing-java-source",
+        "detail": "String",
+        "evidence": {
+          "path": "backend/Base.java",
+          "range": {
+            "startLine": 2,
+            "endLine": 2
+          },
+          "revision": "tree-sha256:bebb9626c6af0c3a0cafab0b57a30bf57b070b61cdcff749e9c464ed999ac10d",
+          "fileHash": "aa39806866edc40aea58b5112cb70e705a067f9ecda15bc35dbc64f62ca581bc",
+          "excerpt": "class Base { String run(String value) { return \"v2\"; } }"
+        }
+      },
+      {
+        "reason": "external-or-missing-java-source",
+        "detail": "String",
+        "evidence": {
+          "path": "backend/Child.java",
+          "range": {
+            "startLine": 2,
+            "endLine": 2
+          },
+          "revision": "tree-sha256:bebb9626c6af0c3a0cafab0b57a30bf57b070b61cdcff749e9c464ed999ac10d",
+          "fileHash": "55178789faacec884e6f737e7c3e7632a411e6616e25eeb98e17919cb9326217",
+          "excerpt": "class Child extends Base { String run(Integer value) { return \"v2\"; } }"
+        }
+      },
+      {
+        "reason": "external-or-missing-java-source",
+        "detail": "Integer",
+        "evidence": {
+          "path": "backend/Child.java",
+          "range": {
+            "startLine": 2,
+            "endLine": 2
+          },
+          "revision": "tree-sha256:bebb9626c6af0c3a0cafab0b57a30bf57b070b61cdcff749e9c464ed999ac10d",
+          "fileHash": "55178789faacec884e6f737e7c3e7632a411e6616e25eeb98e17919cb9326217",
+          "excerpt": "class Child extends Base { String run(Integer value) { return \"v2\"; } }"
+        }
+      }
+    ],
+    "sourceBuildHash": "8ee7fcacee9a1b276b2bfab2665d8d3ab771e40eee5f3924f1f301192426e68f"
+  }
+]

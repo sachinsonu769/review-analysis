@@ -1,0 +1,20 @@
+{
+  "command": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+  "args": [
+    "/tmp/review-analysis-qa-v1-nn0cdauu/src/cli.js",
+    "analyze",
+    "--baseline",
+    "/tmp/review-analysis-adversarial-v1-anUajX/14-js-with-lexical-shadow/baseline",
+    "--candidate",
+    "/tmp/review-analysis-adversarial-v1-anUajX/14-js-with-lexical-shadow/candidate",
+    "--rules",
+    "/tmp/review-analysis-adversarial-v1-anUajX/rules.json",
+    "--as-of",
+    "2026-10-11",
+    "--task",
+    "Sloppy-script with object supplies custom fetch; outside global fetch remains a control",
+    "--format",
+    "json"
+  ],
+  "cwd": "/tmp/review-analysis-qa-v1-nn0cdauu"
+}

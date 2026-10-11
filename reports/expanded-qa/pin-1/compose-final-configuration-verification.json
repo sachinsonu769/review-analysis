@@ -1,0 +1,14 @@
+{
+  "status": "pass",
+  "command": "docker compose -p expanded-qa-pin1 config --format json",
+  "automaticOverrideIncluded": true,
+  "matchesWindowsLaunchersDefaultComposeDiscovery": true,
+  "sourceOverrideIsQaOnly": true,
+  "localhostPort": 18787,
+  "inputBindReadOnly": true,
+  "appReadOnly": true,
+  "appUid": "1000:1000",
+  "defaultNetworkInternal": false,
+  "supersededRecord": "compose-configuration-verification.json records the earlier QA-only internal network; use this record for the executed successful application configuration",
+  "windowsExecuted": false
+}

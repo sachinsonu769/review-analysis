@@ -1,0 +1,51 @@
+{
+  "name": "expanded-qa-pin1",
+  "networks": {
+    "default": {
+      "name": "expanded-qa-pin1_default",
+      "ipam": {}
+    }
+  },
+  "services": {
+    "app": {
+      "cap_drop": [
+        "ALL"
+      ],
+      "command": null,
+      "entrypoint": null,
+      "environment": {
+        "HOST": "0.0.0.0",
+        "NODE_ENV": "production",
+        "PORT": "8787",
+        "REVIEW_ANALYSIS_PMD_BIN": "/opt/pmd/bin/pmd"
+      },
+      "image": "review-analysis:0.2.0",
+      "init": true,
+      "mem_limit": "1073741824",
+      "networks": {
+        "default": null
+      },
+      "pids_limit": 256,
+      "platform": "linux/amd64",
+      "ports": [
+        {
+          "mode": "ingress",
+          "host_ip": "127.0.0.1",
+          "target": 8787,
+          "published": "8787",
+          "protocol": "tcp"
+        }
+      ],
+      "pull_policy": "never",
+      "read_only": true,
+      "restart": "no",
+      "security_opt": [
+        "no-new-privileges:true"
+      ],
+      "tmpfs": [
+        "/tmp:rw,nosuid,nodev,size=536870912,mode=1777"
+      ],
+      "user": "1000:1000"
+    }
+  }
+}

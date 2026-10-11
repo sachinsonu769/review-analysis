@@ -1,0 +1,17 @@
+01-http-lexical-static-dynamic: pass 
+02-ts-import-shadow-missing: pass 
+03-ts-ambiguous-module: pass 
+04-java-arity-prefix: fail no false ten-argument call target; arity mismatch remains unknown
+05-java-overload-receiver-shadow: pass 
+06-java-pattern-shadow: pass 
+07-java-static-constant-routing: pass 
+08-http-template-regex: fail regex-rejected literal has no matching edge
+09-http-ambiguous-controllers: pass 
+10-source-parse-diagnostics: pass 
+11-ts-namespace-nested-member: fail no wrong container call declaration
+12-java-ambiguous-explicit-imports: fail no first-import call guess; ambiguous binding explicit unknown
+13-ts-namespace-contract-member: fail no wrong namespace declaration for method call; qualified member or explicit uncertainty
+14-js-with-lexical-shadow: fail with object fetch never fabricates HTTP edge
+15-java-varargs-overload: fail no incompatible fixed-arity call target; varargs alternative produces uncertainty or correct target
+16-java-inherited-overload: fail no incompatible Child Integer call target; inheritance alternative remains uncertainty or correct target
+{"cases":16,"passed":8,"failed":8,"notRun":0,"manifestErrorsAfter":[]}

@@ -1,0 +1,8 @@
+{
+  "repository": "/workspace/review-analysis-deliverables/expanded-architect-review/cache-review/replace-refs-75c2mr",
+  "requestedRevision": "b2c7e85d49214fa6e79c999a4563060c973ca66f",
+  "replacementRevision": "0b60a0d56db5d56290b786185de0ef36dce54241",
+  "returnedRevision": "b2c7e85d49214fa6e79c999a4563060c973ca66f",
+  "returnedSource": "export const replacement=2;\n",
+  "rawOriginal": "export const original=1;\n"
+}

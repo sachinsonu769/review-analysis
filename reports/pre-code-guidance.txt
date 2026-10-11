@@ -1,0 +1,12 @@
+Review Analysis — advisory source report
+Analyzer 0.2.0; build 0427f5fed8a45a3d4dbc5523f1d0f8afb57949bac0df1f9bef249fd73ae31061
+As of pre-code guidance
+
+Task: Prepare a lookup contract migration
+Applicable rules:
+- architecture/no-raw-http v2026.10.1-fixture; owner example-platform: Call external systems through the project gateway abstraction.
+  Example (unreviewed): backend/src/main/java/com/example/lookup/AuditLogger.java:1-13 @ tree-sha256:352388fa5262aa59fbe7c890ed017374bd12938c9edb4dd20562f947fb406c47 (sha256 7803c96b702ed924775aa4ba55f799d9fa0e8f3384fefd9d8ae231380309a71c)
+  Example (simulated-reviewed): backend/src/main/java/com/example/lookup/ApprovedLegacyGateway.java:1-13 @ tree-sha256:352388fa5262aa59fbe7c890ed017374bd12938c9edb4dd20562f947fb406c47 (sha256 9ee96123e08adc4c3e2084333ccf04c76dfa3c3b368c4efce74f64605405cbc1)
+- contracts/http-lookup v2026.10.1-fixture; owner example-platform: Review known consumers whenever an HTTP endpoint contract changes.
+  Example (unreviewed): backend/src/main/java/com/example/lookup/LookupController.java:1-22 @ tree-sha256:352388fa5262aa59fbe7c890ed017374bd12938c9edb4dd20562f947fb406c47 (sha256 92f524bf34c641cb2a9f4285babd636a368e11602757c9d3e158111027458175)
+No human approval is inferred. Reviewed examples/exceptions are assertions from supplied configuration; simulation records are demonstrations only.

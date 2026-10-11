@@ -1,0 +1,120 @@
+Review Analysis — Code quality + checklist evidence
+
+Build: 0427f5fed8a45a3d4dbc5523f1d0f8afb57949bac0df1f9bef249fd73ae31061
+
+Advisory; incomplete source-only coverage; runtime and full regression remain unverified.
+
+19 changed declarations, 6 changed files, 3 edges.
+
+3 direct representative paths; 0 likely indirect paths (low certainty).
+
+Limits: depth 12; alternate/deeper paths may be omitted.
+
+Architecture findings: 0; quality/design findings: 12; unresolved source facts: 20.
+
+Checklist: draft; 6 criteria; runtime unverified.
+
+modified: fixture.Quality
+  quality:backend/Quality.java:4-18 @ tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033 sha256:841ae26e08ef903b2cdd2f68b3ba0d438ec8058ae6f3e7b727cf2fb1fb7358e9
+
+deleted: fixture.Quality#safe/1
+  quality:backend/Quality.java:3-6 @ tree-sha256:571c7ffdee41d629dea48f196950a8d93f43fb35977bc9036a40da3efe8330c9 sha256:bb14ae21fdf8620bdf5cd243ad2b68a0ff448431ba0fbc1af5334b9b47e0c046
+
+modified: calculate
+  quality:frontend/review.ts:7-17 @ tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033 sha256:a85423a3a2b3710203eea1289845495c9362bbf9c5a367a9a30b570ab1674183
+
+modified: resolved
+  quality:frontend/review.ts:19-21 @ tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033 sha256:a85423a3a2b3710203eea1289845495c9362bbf9c5a367a9a30b570ab1674183
+
+added: fixture.Quality#mutable
+  quality:backend/Quality.java:5-5 @ tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033 sha256:841ae26e08ef903b2cdd2f68b3ba0d438ec8058ae6f3e7b727cf2fb1fb7358e9
+
+added: fixture.Quality#broken/1
+  quality:backend/Quality.java:6-9 @ tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033 sha256:841ae26e08ef903b2cdd2f68b3ba0d438ec8058ae6f3e7b727cf2fb1fb7358e9
+
+added: fixture.Quality#unclosed/1
+  quality:backend/Quality.java:10-13 @ tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033 sha256:841ae26e08ef903b2cdd2f68b3ba0d438ec8058ae6f3e7b727cf2fb1fb7358e9
+
+added: fixture.Quality#conditional/0
+  quality:backend/Quality.java:14-17 @ tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033 sha256:841ae26e08ef903b2cdd2f68b3ba0d438ec8058ae6f3e7b727cf2fb1fb7358e9
+
+added: Order
+  quality:frontend/domain/order.ts:3-11 @ tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033 sha256:866a650d284a15d72d11ddfbcbaca8efec0052c80270e976d06c1035766aafeb
+
+added: Order.total
+  quality:frontend/domain/order.ts:5-5 @ tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033 sha256:866a650d284a15d72d11ddfbcbaca8efec0052c80270e976d06c1035766aafeb
+
+added: Order.internal
+  quality:frontend/domain/order.ts:6-6 @ tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033 sha256:866a650d284a15d72d11ddfbcbaca8efec0052c80270e976d06c1035766aafeb
+
+added: Order.id
+  quality:frontend/domain/order.ts:7-7 @ tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033 sha256:866a650d284a15d72d11ddfbcbaca8efec0052c80270e976d06c1035766aafeb
+
+added: Order.submit
+  quality:frontend/domain/order.ts:8-10 @ tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033 sha256:866a650d284a15d72d11ddfbcbaca8efec0052c80270e976d06c1035766aafeb
+
+added: summarizeA
+  quality:frontend/duplicate-a.ts:1-12 @ tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033 sha256:cefd0da6057d393b87caf4f92d5bfc5f32b1b502b0df65268c693120d637ba83
+
+added: summarizeB
+  quality:frontend/duplicate-b.ts:1-12 @ tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033 sha256:1f136709bdb12cd84215d92bb13c35362bf915679e6ffc17a22c2171e28bcece
+
+added: newIssue
+  quality:frontend/review.ts:23-26 @ tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033 sha256:a85423a3a2b3710203eea1289845495c9362bbf9c5a367a9a30b570ab1674183
+
+added: asyncIssue
+  quality:frontend/review.ts:28-30 @ tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033 sha256:a85423a3a2b3710203eea1289845495c9362bbf9c5a367a9a30b570ab1674183
+
+added: view
+  quality:frontend/view.tsx:2-2 @ tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033 sha256:fd7c97d2996557138fc6c02d6b2fb56514defda30e0247c56c2818e9422424ef
+
+added: model
+  quality:frontend/view.tsx:3-3 @ tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033 sha256:fd7c97d2996557138fc6c02d6b2fb56514defda30e0247c56c2818e9422424ef
+
+Quality new/potential: pmd/BrokenNullCheck: Dereferencing the qualifier of this expression will throw a NullPointerException
+  quality:backend/Quality.java:7-7 @ tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033 sha256:841ae26e08ef903b2cdd2f68b3ba0d438ec8058ae6f3e7b727cf2fb1fb7358e9
+
+Quality new/potential: pmd/CloseResource: Ensure that resources like this FileInputStream object are closed after use
+  quality:backend/Quality.java:11-11 @ tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033 sha256:841ae26e08ef903b2cdd2f68b3ba0d438ec8058ae6f3e7b727cf2fb1fb7358e9
+
+Quality new/evidenced: pmd/UnconditionalIfStatement: Do not use if statements that are always true or always false
+  quality:backend/Quality.java:15-15 @ tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033 sha256:841ae26e08ef903b2cdd2f68b3ba0d438ec8058ae6f3e7b727cf2fb1fb7358e9
+
+Quality new/evidenced: jscpd/duplicate-block: Token clone detected across frontend/duplicate-a.ts and frontend/duplicate-b.ts (13 lines, 0 tokens)
+  quality:frontend/duplicate-a.ts:1-13 @ tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033 sha256:cefd0da6057d393b87caf4f92d5bfc5f32b1b502b0df65268c693120d637ba83
+
+Quality pre-existing/potential: eslint/@typescript-eslint/no-non-null-assertion: Forbidden non-null assertion.
+  quality:frontend/review.ts:3-3 @ tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033 sha256:a85423a3a2b3710203eea1289845495c9362bbf9c5a367a9a30b570ab1674183
+
+Quality new/evidenced: eslint/no-async-promise-executor: Promise executor functions should not be async.
+  quality:frontend/review.ts:28-28 @ tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033 sha256:a85423a3a2b3710203eea1289845495c9362bbf9c5a367a9a30b570ab1674183
+
+Quality new/evidenced: eslint/no-constant-condition: Unexpected constant condition.
+  quality:frontend/review.ts:24-24 @ tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033 sha256:a85423a3a2b3710203eea1289845495c9362bbf9c5a367a9a30b570ab1674183
+
+Quality resolved/evidenced: eslint/no-unreachable: Unreachable code.
+  quality:frontend/review.ts:18-18 @ tree-sha256:571c7ffdee41d629dea48f196950a8d93f43fb35977bc9036a40da3efe8330c9 sha256:917c3f46cef70fc195d1c044650994971313b8eadbf88e6b48d5794fe42e7035
+
+Quality new/potential: source-design/public-mutable-field: fixture.Quality#mutable exposes a writable field; review whether direct mutation is intended
+  quality:backend/Quality.java:5-5 @ tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033 sha256:841ae26e08ef903b2cdd2f68b3ba0d438ec8058ae6f3e7b727cf2fb1fb7358e9
+
+Quality new/potential: source-design/module-cycle: Resolved source imports form a cycle among frontend/domain/order.ts, frontend/view.tsx; review initialization and coupling
+  quality:frontend/domain/order.ts:2-2 @ tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033 sha256:866a650d284a15d72d11ddfbcbaca8efec0052c80270e976d06c1035766aafeb
+
+Quality new/potential: source-design/parameter-count: Order.submit has 6 parameters; review the convention limit 5
+  quality:frontend/domain/order.ts:8-10 @ tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033 sha256:866a650d284a15d72d11ddfbcbaca8efec0052c80270e976d06c1035766aafeb
+
+Quality new/potential: source-design/public-mutable-field: Order.total exposes a writable field; review whether direct mutation is intended
+  quality:frontend/domain/order.ts:5-5 @ tree-sha256:c589474a75a4813715e5884f9c88071e8b13c88e090c165fcbf23474e1cf7033 sha256:866a650d284a15d72d11ddfbcbaca8efec0052c80270e976d06c1035766aafeb
+
+Requirement unverified: customer-lookup-by-id; missing edge cases: 1; runtime unverified
+
+Requirement unverified: display-name; missing edge cases: 0; runtime unverified
+
+Requirement unverified: blank-identifier; missing edge cases: 2; runtime unverified
+
+Requirement unverified: customer-not-found; missing edge cases: 1; runtime unverified
+
+Requirement unverified: loading-state; missing edge cases: 1; runtime unverified
+
+Requirement unverified: confirmation-needed-detail; missing edge cases: 0; runtime unverified

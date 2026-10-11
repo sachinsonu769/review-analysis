@@ -1,0 +1,8 @@
+node_modules/
+.cache/
+*.tgz
+artifacts/
+app-dist/
+*.tar.gz
+__pycache__/
+*.pyc

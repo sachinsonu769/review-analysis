@@ -1,0 +1,52 @@
+{
+  "id": "08-http-template-regex",
+  "description": "Template regex constraints must not claim a literal nonmatching request maps to configured route",
+  "status": "pass",
+  "exitCode": 0,
+  "sourcePaths": {
+    "baseline": "/tmp/review-analysis-adversarial-v2-NZrPxG/08-http-template-regex/baseline",
+    "candidate": "/tmp/review-analysis-adversarial-v2-NZrPxG/08-http-template-regex/candidate"
+  },
+  "sourceHashes": {
+    "baseline": {
+      "backend/NumericResource.java": "31ab75e86d9b05e9b403aa9265fd380219a178a6f5164e95e345b235fb2f034b",
+      "frontend/client.ts": "415dc3afda07ab495c6fdcdbac97a2e4ea725f18af71cfcc3dc44e31c37edf56"
+    },
+    "candidate": {
+      "backend/NumericResource.java": "54bfc9935d6753fdf4ea5325d13d8e3d162d81589babdf6f4ec28bd75eb74b27",
+      "frontend/client.ts": "415dc3afda07ab495c6fdcdbac97a2e4ea725f18af71cfcc3dc44e31c37edf56"
+    }
+  },
+  "evidence": {
+    "checkedEvidenceRecords": 30,
+    "errors": []
+  },
+  "assertions": [
+    {
+      "name": "valid template supported or explicit unknown",
+      "status": "pass"
+    },
+    {
+      "name": "regex-rejected literal has no matching edge",
+      "status": "pass"
+    },
+    {
+      "name": "absolute origin never matched to local route",
+      "status": "pass"
+    },
+    {
+      "name": "all source evidence hashes/ranges/excerpts/revisions independently reproduce",
+      "status": "pass"
+    },
+    {
+      "name": "readable actual CLI exits 0",
+      "status": "pass"
+    }
+  ],
+  "reportStats": {
+    "changes": 2,
+    "directEdges": 0,
+    "unknowns": 26,
+    "sourceBuildHash": "ca04bac50b7584aaafd9d5602acc8055152e81e25de5fa1b15bb710f76f53ac9"
+  }
+}

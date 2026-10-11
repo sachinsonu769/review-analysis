@@ -1,0 +1,8 @@
+{
+  "requirements/backend/src/main/java/example/customers/CustomerLookupController.java": "28ec39a06652ee166d68a1c9e489c6ad1c43c970fd21d48c4d7675b79401300b",
+  "requirements/backend/src/main/java/example/customers/CustomerResponse.java": "fe4a076477f47074f1ca4a4140e45648ce3e2110fef9cf31fd934ad2bd1dfe4a",
+  "requirements/backend/src/test/java/example/customers/CustomerLookupControllerTest.java": "aa3a223914ae9a6772826e29cf6c8d54eec522fa0869dcaff96832f265bb5184",
+  "requirements/frontend/src/CustomerResult.tsx": "fd213c059dcdf53b40bc3e55e70809aea60b0b0fba019ce3073338108db96655",
+  "requirements/frontend/src/customerApi.ts": "2cdee9cc200708bdb5c3184490c8e02a2597c6ada3b97b79ff5b66eb4c6a7095",
+  "requirements/frontend/src/customerLookup.spec.ts": "b033953aaf51f31b7481fedd383143894cd18d3f4aebbc230e99d70bee5db305"
+}

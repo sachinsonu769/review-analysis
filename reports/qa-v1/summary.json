@@ -1,0 +1,140 @@
+{
+  "artifact": "/workspace/review-analysis-deliverables/review-analysis-qa-v1.zip",
+  "artifactSha256": "2cc8f0b4cbe0ee4e1cdbb3c00b376c412b0aa02d66791903c4a56598dd995df8",
+  "sourceTreeHash": "5b05da471692520b2b28f6939ee02683d6c4b9908a89b1c91cd5e05edf4fa943",
+  "analyzerBuildHash": "8ee7fcacee9a1b276b2bfab2665d8d3ab771e40eee5f3924f1f301192426e68f",
+  "testedExtraction": "/tmp/review-analysis-qa-v1-nn0cdauu",
+  "status": "fail-awaiting-repair-and-new-exact-build-retest",
+  "startedAtUtc": "2026-10-11T16:45:09.210679+00:00",
+  "recordedAtUtc": "2026-10-11T16:52:54.555670+00:00",
+  "runtime": {
+    "node": "v24.19.0",
+    "npm": "11.9.0",
+    "git": "2.52.0",
+    "platform": "Linux"
+  },
+  "manifestFilesVerifiedBeforeAfter": 121,
+  "npmTests": {
+    "passed": 57,
+    "failed": 0,
+    "notRun": 0
+  },
+  "mainChecks": {
+    "passed": 81,
+    "failed": 0
+  },
+  "adversarialCases": {
+    "executed": 16,
+    "passed": 8,
+    "failedAssertionsCases": 8,
+    "supportedScopeBlockingCases": 6,
+    "outsideSemanticSupportCases": 2,
+    "notRun": 0
+  },
+  "evidenceRecordsIndependentlyVerified": 1816,
+  "blockingDefects": [
+    {
+      "case": "04-java-arity-prefix",
+      "description": "Single-argument call cannot target a ten-argument declaration",
+      "evidenceDirectory": "adversarial/04-java-arity-prefix",
+      "sourceInputs": "adversarial/04-java-arity-prefix/input",
+      "failedAssertions": [
+        "no false ten-argument call target",
+        "arity mismatch remains unknown"
+      ]
+    },
+    {
+      "case": "08-http-template-regex",
+      "description": "Template regex constraints must not claim a literal nonmatching request maps to configured route",
+      "evidenceDirectory": "adversarial/08-http-template-regex",
+      "sourceInputs": "adversarial/08-http-template-regex/input",
+      "failedAssertions": [
+        "regex-rejected literal has no matching edge"
+      ]
+    },
+    {
+      "case": "11-ts-namespace-nested-member",
+      "description": "Nested property method on namespace import must not claim the container variable is the called declaration",
+      "evidenceDirectory": "adversarial/11-ts-namespace-nested-member",
+      "sourceInputs": "adversarial/11-ts-namespace-nested-member/input",
+      "failedAssertions": [
+        "no wrong container call declaration"
+      ]
+    },
+    {
+      "case": "12-java-ambiguous-explicit-imports",
+      "description": "Conflicting explicit imports cannot acquire a guessed first-import receiver target (source is semantically invalid)",
+      "evidenceDirectory": "adversarial/12-java-ambiguous-explicit-imports",
+      "sourceInputs": "adversarial/12-java-ambiguous-explicit-imports/input",
+      "failedAssertions": [
+        "no first-import call guess",
+        "ambiguous binding explicit unknown"
+      ]
+    },
+    {
+      "case": "13-ts-namespace-contract-member",
+      "description": "Nested exported namespace method must use qualified member declaration or explicit uncertainty",
+      "evidenceDirectory": "adversarial/13-ts-namespace-contract-member",
+      "sourceInputs": "adversarial/13-ts-namespace-contract-member/input",
+      "failedAssertions": [
+        "no wrong namespace declaration for method call",
+        "qualified member or explicit uncertainty"
+      ]
+    },
+    {
+      "case": "14-js-with-lexical-shadow",
+      "description": "Sloppy-script with object supplies custom fetch; outside global fetch remains a control",
+      "evidenceDirectory": "adversarial/14-js-with-lexical-shadow",
+      "sourceInputs": "adversarial/14-js-with-lexical-shadow/input",
+      "failedAssertions": [
+        "with object fetch never fabricates HTTP edge"
+      ]
+    },
+    {
+      "case": "benchmark-incremental-path",
+      "description": "Packaged benchmark creates frontend/src/lookupApi.ts comment-only file instead of changing existing frontend/src/api/lookupApi.ts. Real API hash unchanged. Cold/warm timings remain a tiny-fixture measurement; incremental timing is invalid for an edit.",
+      "evidence": "benchmark-probe.json"
+    }
+  ],
+  "documentedSemanticLimitObservations": [
+    {
+      "case": "15-java-varargs-overload",
+      "description": "Valid two-string invocation must not resolve to int,int fixed overload when a varargs overload exists",
+      "evidenceDirectory": "adversarial/15-java-varargs-overload",
+      "sourceInputs": "adversarial/15-java-varargs-overload/input",
+      "failedAssertions": [
+        "no incompatible fixed-arity call target",
+        "varargs alternative produces uncertainty or correct target"
+      ]
+    },
+    {
+      "case": "16-java-inherited-overload",
+      "description": "Declared unsupported inherited overload should not be narrowed to incompatible locally declared member",
+      "evidenceDirectory": "adversarial/16-java-inherited-overload",
+      "sourceInputs": "adversarial/16-java-inherited-overload/input",
+      "failedAssertions": [
+        "no incompatible Child Integer call target",
+        "inheritance alternative remains uncertainty or correct target"
+      ]
+    }
+  ],
+  "executedCommandLog": "commands.jsonl",
+  "adversarialCommandLog": "adversarial/summary.json and case command.json/readable-command.json",
+  "notRun": [
+    {
+      "name": "npm run demo",
+      "reason": "Would mutate packaged reports in extraction; equivalent JSON/readable analysis and guidance exercised through actual CLI, keeping manifest files immutable."
+    },
+    {
+      "name": "Application compile/full regression/UI/private repository acceptance",
+      "reason": "No UI exists. Fixture source samples are intentionally incomplete applications. No private repository or full application authorized/provided."
+    }
+  ],
+  "limitations": [
+    "Source-only bounded parser/graph QA; no full Java/TS compilation, runtime dispatch, DI/reflection/origin/proxy, real project-scale acceptance, or efficacy measurement.",
+    "Synthetic local Git repository only; exact commits and dirty trees tested, with source/index/status/HEAD mutation checks. No remote pushes or deployment.",
+    "Rules and approvals are simulated test assertions, not real independently authenticated governance records.",
+    "Installation requires npm access; no external AI calls used. Analyzer CLI tests use only local supplied source.",
+    "Analyzer-version cache invalidation tested through exported analyze API because CLI has no version override. No engine files were edited."
+  ]
+}

@@ -1,0 +1,336 @@
+{
+  "schemaVersion": "1.0",
+  "analyzer": {
+    "version": "0.1.0",
+    "sourceBuildHash": "ca04bac50b7584aaafd9d5602acc8055152e81e25de5fa1b15bb710f76f53ac9",
+    "parsers": {
+      "java": "java-parser@3.0.1",
+      "typescript": "typescript@5.9.3"
+    }
+  },
+  "advisory": true,
+  "asOf": "2026-10-11",
+  "provenance": {
+    "baseline": {
+      "root": "/tmp/review-analysis-adversarial-v2-NZrPxG/positive-controls/17-positive-exact-java-arity/baseline",
+      "type": "directory",
+      "revision": "tree-sha256:9f3fbc2389e5f9b9ff741676ed68474a534ff57eb5fe9144fdd7e040758b677e",
+      "contentHash": "9f3fbc2389e5f9b9ff741676ed68474a534ff57eb5fe9144fdd7e040758b677e",
+      "dirty": false
+    },
+    "candidate": {
+      "root": "/tmp/review-analysis-adversarial-v2-NZrPxG/positive-controls/17-positive-exact-java-arity/candidate",
+      "type": "directory",
+      "revision": "tree-sha256:feb3a5ed66233c17503ee8fbd85c666bcaf3aa824ee11fc950c14722e1b13731",
+      "contentHash": "feb3a5ed66233c17503ee8fbd85c666bcaf3aa824ee11fc950c14722e1b13731",
+      "dirty": false
+    },
+    "rulesHash": "90f33c2c080aa463115b0ef7e4058bb9bf0da4944dff79ed58eae2f01f9cd3f1",
+    "baselineRulesHash": "90f33c2c080aa463115b0ef7e4058bb9bf0da4944dff79ed58eae2f01f9cd3f1",
+    "cacheKey": "de43e7be61ad2fc128f25ad5126c20987b21ba9865dcf5f207bb5bedc18cf356"
+  },
+  "changes": [
+    {
+      "kind": "modified",
+      "name": "Worker",
+      "key": "qa.Worker",
+      "language": "java",
+      "contractChanged": false,
+      "before": {
+        "path": "backend/Worker.java",
+        "range": {
+          "startLine": 2,
+          "endLine": 5
+        },
+        "revision": "tree-sha256:9f3fbc2389e5f9b9ff741676ed68474a534ff57eb5fe9144fdd7e040758b677e",
+        "fileHash": "facf19194fb5e28f7cf60099ddcf4cd06d81657faa77c53956c4feecb7efb1af",
+        "excerpt": "class Worker {\n int run(int value) { return 1; }\n int run(int a,int b,int c,int d,int e,int f,int g,int h,int i,int j) { return 1; }\n}"
+      },
+      "after": {
+        "path": "backend/Worker.java",
+        "range": {
+          "startLine": 2,
+          "endLine": 5
+        },
+        "revision": "tree-sha256:feb3a5ed66233c17503ee8fbd85c666bcaf3aa824ee11fc950c14722e1b13731",
+        "fileHash": "c73dd8de418b6ba44b29d58799e74ec195a6177ca80832b373c6a17c1afede40",
+        "excerpt": "class Worker {\n int run(int value) { return 2; }\n int run(int a,int b,int c,int d,int e,int f,int g,int h,int i,int j) { return 2; }\n}"
+      }
+    },
+    {
+      "kind": "modified",
+      "name": "run",
+      "key": "qa.Worker#run/1",
+      "language": "java",
+      "contractChanged": false,
+      "before": {
+        "path": "backend/Worker.java",
+        "range": {
+          "startLine": 3,
+          "endLine": 3
+        },
+        "revision": "tree-sha256:9f3fbc2389e5f9b9ff741676ed68474a534ff57eb5fe9144fdd7e040758b677e",
+        "fileHash": "facf19194fb5e28f7cf60099ddcf4cd06d81657faa77c53956c4feecb7efb1af",
+        "excerpt": " int run(int value) { return 1; }"
+      },
+      "after": {
+        "path": "backend/Worker.java",
+        "range": {
+          "startLine": 3,
+          "endLine": 3
+        },
+        "revision": "tree-sha256:feb3a5ed66233c17503ee8fbd85c666bcaf3aa824ee11fc950c14722e1b13731",
+        "fileHash": "c73dd8de418b6ba44b29d58799e74ec195a6177ca80832b373c6a17c1afede40",
+        "excerpt": " int run(int value) { return 2; }"
+      }
+    },
+    {
+      "kind": "modified",
+      "name": "run",
+      "key": "qa.Worker#run/10",
+      "language": "java",
+      "contractChanged": false,
+      "before": {
+        "path": "backend/Worker.java",
+        "range": {
+          "startLine": 4,
+          "endLine": 4
+        },
+        "revision": "tree-sha256:9f3fbc2389e5f9b9ff741676ed68474a534ff57eb5fe9144fdd7e040758b677e",
+        "fileHash": "facf19194fb5e28f7cf60099ddcf4cd06d81657faa77c53956c4feecb7efb1af",
+        "excerpt": " int run(int a,int b,int c,int d,int e,int f,int g,int h,int i,int j) { return 1; }"
+      },
+      "after": {
+        "path": "backend/Worker.java",
+        "range": {
+          "startLine": 4,
+          "endLine": 4
+        },
+        "revision": "tree-sha256:feb3a5ed66233c17503ee8fbd85c666bcaf3aa824ee11fc950c14722e1b13731",
+        "fileHash": "c73dd8de418b6ba44b29d58799e74ec195a6177ca80832b373c6a17c1afede40",
+        "excerpt": " int run(int a,int b,int c,int d,int e,int f,int g,int h,int i,int j) { return 2; }"
+      }
+    }
+  ],
+  "impact": {
+    "direct": [
+      {
+        "kind": "type",
+        "fromPath": "backend/Caller.java",
+        "toPath": "backend/Worker.java",
+        "targetKey": "qa.Worker",
+        "confidence": "high",
+        "reason": "Java qualified import or same-package type resolves to supplied source",
+        "evidence": {
+          "path": "backend/Caller.java",
+          "range": {
+            "startLine": 3,
+            "endLine": 3
+          },
+          "revision": "tree-sha256:9f3fbc2389e5f9b9ff741676ed68474a534ff57eb5fe9144fdd7e040758b677e",
+          "fileHash": "fa453a2563ce71d7c8f6e4b8c11b8199fb3e77b4f103bfdf55ed460d9f7f381a",
+          "excerpt": " Worker worker;"
+        },
+        "targetEvidence": {
+          "path": "backend/Worker.java",
+          "range": {
+            "startLine": 2,
+            "endLine": 5
+          },
+          "revision": "tree-sha256:9f3fbc2389e5f9b9ff741676ed68474a534ff57eb5fe9144fdd7e040758b677e",
+          "fileHash": "facf19194fb5e28f7cf60099ddcf4cd06d81657faa77c53956c4feecb7efb1af",
+          "excerpt": "class Worker {\n int run(int value) { return 1; }\n int run(int a,int b,int c,int d,int e,int f,int g,int h,int i,int j) { return 1; }\n}"
+        }
+      },
+      {
+        "kind": "call",
+        "fromPath": "backend/Caller.java",
+        "toPath": "backend/Worker.java",
+        "targetKey": "qa.Worker#run/1",
+        "confidence": "medium",
+        "reason": "Lexical receiver type and unique method name/arity match; no runtime dispatch proof",
+        "evidence": {
+          "path": "backend/Caller.java",
+          "range": {
+            "startLine": 4,
+            "endLine": 4
+          },
+          "revision": "tree-sha256:9f3fbc2389e5f9b9ff741676ed68474a534ff57eb5fe9144fdd7e040758b677e",
+          "fileHash": "fa453a2563ce71d7c8f6e4b8c11b8199fb3e77b4f103bfdf55ed460d9f7f381a",
+          "excerpt": " void one() { worker.run(7); } // exact-one"
+        },
+        "targetEvidence": {
+          "path": "backend/Worker.java",
+          "range": {
+            "startLine": 3,
+            "endLine": 3
+          },
+          "revision": "tree-sha256:9f3fbc2389e5f9b9ff741676ed68474a534ff57eb5fe9144fdd7e040758b677e",
+          "fileHash": "facf19194fb5e28f7cf60099ddcf4cd06d81657faa77c53956c4feecb7efb1af",
+          "excerpt": " int run(int value) { return 1; }"
+        }
+      },
+      {
+        "kind": "call",
+        "fromPath": "backend/Caller.java",
+        "toPath": "backend/Worker.java",
+        "targetKey": "qa.Worker#run/10",
+        "confidence": "medium",
+        "reason": "Lexical receiver type and unique method name/arity match; no runtime dispatch proof",
+        "evidence": {
+          "path": "backend/Caller.java",
+          "range": {
+            "startLine": 5,
+            "endLine": 5
+          },
+          "revision": "tree-sha256:9f3fbc2389e5f9b9ff741676ed68474a534ff57eb5fe9144fdd7e040758b677e",
+          "fileHash": "fa453a2563ce71d7c8f6e4b8c11b8199fb3e77b4f103bfdf55ed460d9f7f381a",
+          "excerpt": " void ten() { worker.run(1,2,3,4,5,6,7,8,9,10); } // exact-ten"
+        },
+        "targetEvidence": {
+          "path": "backend/Worker.java",
+          "range": {
+            "startLine": 4,
+            "endLine": 4
+          },
+          "revision": "tree-sha256:9f3fbc2389e5f9b9ff741676ed68474a534ff57eb5fe9144fdd7e040758b677e",
+          "fileHash": "facf19194fb5e28f7cf60099ddcf4cd06d81657faa77c53956c4feecb7efb1af",
+          "excerpt": " int run(int a,int b,int c,int d,int e,int f,int g,int h,int i,int j) { return 1; }"
+        }
+      },
+      {
+        "kind": "type",
+        "fromPath": "backend/Caller.java",
+        "toPath": "backend/Worker.java",
+        "targetKey": "qa.Worker",
+        "confidence": "high",
+        "reason": "Java qualified import or same-package type resolves to supplied source",
+        "evidence": {
+          "path": "backend/Caller.java",
+          "range": {
+            "startLine": 3,
+            "endLine": 3
+          },
+          "revision": "tree-sha256:feb3a5ed66233c17503ee8fbd85c666bcaf3aa824ee11fc950c14722e1b13731",
+          "fileHash": "fa453a2563ce71d7c8f6e4b8c11b8199fb3e77b4f103bfdf55ed460d9f7f381a",
+          "excerpt": " Worker worker;"
+        },
+        "targetEvidence": {
+          "path": "backend/Worker.java",
+          "range": {
+            "startLine": 2,
+            "endLine": 5
+          },
+          "revision": "tree-sha256:feb3a5ed66233c17503ee8fbd85c666bcaf3aa824ee11fc950c14722e1b13731",
+          "fileHash": "c73dd8de418b6ba44b29d58799e74ec195a6177ca80832b373c6a17c1afede40",
+          "excerpt": "class Worker {\n int run(int value) { return 2; }\n int run(int a,int b,int c,int d,int e,int f,int g,int h,int i,int j) { return 2; }\n}"
+        }
+      },
+      {
+        "kind": "call",
+        "fromPath": "backend/Caller.java",
+        "toPath": "backend/Worker.java",
+        "targetKey": "qa.Worker#run/1",
+        "confidence": "medium",
+        "reason": "Lexical receiver type and unique method name/arity match; no runtime dispatch proof",
+        "evidence": {
+          "path": "backend/Caller.java",
+          "range": {
+            "startLine": 4,
+            "endLine": 4
+          },
+          "revision": "tree-sha256:feb3a5ed66233c17503ee8fbd85c666bcaf3aa824ee11fc950c14722e1b13731",
+          "fileHash": "fa453a2563ce71d7c8f6e4b8c11b8199fb3e77b4f103bfdf55ed460d9f7f381a",
+          "excerpt": " void one() { worker.run(7); } // exact-one"
+        },
+        "targetEvidence": {
+          "path": "backend/Worker.java",
+          "range": {
+            "startLine": 3,
+            "endLine": 3
+          },
+          "revision": "tree-sha256:feb3a5ed66233c17503ee8fbd85c666bcaf3aa824ee11fc950c14722e1b13731",
+          "fileHash": "c73dd8de418b6ba44b29d58799e74ec195a6177ca80832b373c6a17c1afede40",
+          "excerpt": " int run(int value) { return 2; }"
+        }
+      },
+      {
+        "kind": "call",
+        "fromPath": "backend/Caller.java",
+        "toPath": "backend/Worker.java",
+        "targetKey": "qa.Worker#run/10",
+        "confidence": "medium",
+        "reason": "Lexical receiver type and unique method name/arity match; no runtime dispatch proof",
+        "evidence": {
+          "path": "backend/Caller.java",
+          "range": {
+            "startLine": 5,
+            "endLine": 5
+          },
+          "revision": "tree-sha256:feb3a5ed66233c17503ee8fbd85c666bcaf3aa824ee11fc950c14722e1b13731",
+          "fileHash": "fa453a2563ce71d7c8f6e4b8c11b8199fb3e77b4f103bfdf55ed460d9f7f381a",
+          "excerpt": " void ten() { worker.run(1,2,3,4,5,6,7,8,9,10); } // exact-ten"
+        },
+        "targetEvidence": {
+          "path": "backend/Worker.java",
+          "range": {
+            "startLine": 4,
+            "endLine": 4
+          },
+          "revision": "tree-sha256:feb3a5ed66233c17503ee8fbd85c666bcaf3aa824ee11fc950c14722e1b13731",
+          "fileHash": "c73dd8de418b6ba44b29d58799e74ec195a6177ca80832b373c6a17c1afede40",
+          "excerpt": " int run(int a,int b,int c,int d,int e,int f,int g,int h,int i,int j) { return 2; }"
+        }
+      }
+    ],
+    "indirect": []
+  },
+  "findings": [],
+  "guidance": {
+    "task": "One and ten arguments select only matching formal arity and retain direct call evidence",
+    "ruleSetVersion": "independent-adversarial-v1",
+    "approvalGap": "No human approval is inferred. Reviewed examples/exceptions are assertions from supplied configuration; simulation records are demonstrations only.",
+    "rules": [
+      {
+        "id": "independent/http-contract",
+        "kind": "endpoint-contract-change",
+        "owner": "synthetic-qa",
+        "version": "independent-adversarial-v1",
+        "severity": "warning",
+        "instruction": "endpoint-contract-change",
+        "examples": []
+      }
+    ]
+  },
+  "unknowns": [],
+  "focusedTests": [],
+  "coverage": {
+    "complete": false,
+    "fullRegressionMayBeSkipped": false,
+    "sourceFiles": {
+      "baseline": 2,
+      "candidate": 2
+    },
+    "excluded": {
+      "baseline": [],
+      "candidate": []
+    },
+    "limitations": [
+      "Source-only analysis; no Java/TypeScript semantic compilation, runtime dispatch, reflection, DI wiring, proxy/origin verification or transitive external package sources",
+      "Edges are evidence-backed approximations; indirect file dependencies do not prove execution",
+      "Renames inferred only for identical declaration key/signature/body; edited renames remain delete/add",
+      "Unknown syntax and unresolved/dynamic dependencies remain visible; passing fixture tests is not private-repository acceptance"
+    ]
+  },
+  "cache": {
+    "report": "disabled",
+    "parsedFiles": 4,
+    "reusedFiles": 0,
+    "invalidEntries": 0
+  },
+  "metrics": {
+    "elapsedMs": 23.26,
+    "bytesRead": 594,
+    "reportCacheHit": false
+  }
+}

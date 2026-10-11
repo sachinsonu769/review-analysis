@@ -1,0 +1,54 @@
+{
+  "id": "10-source-parse-diagnostics",
+  "description": "Malformed supplied Java and TS must retain explicit diagnostics alongside any recovered declarations",
+  "status": "pass",
+  "exitCode": 0,
+  "sourcePaths": {
+    "baseline": "/tmp/review-analysis-adversarial-v1-anUajX/10-source-parse-diagnostics/baseline",
+    "candidate": "/tmp/review-analysis-adversarial-v1-anUajX/10-source-parse-diagnostics/candidate"
+  },
+  "sourceHashes": {
+    "baseline": {
+      "backend/Broken.java": "bfface44019bbb5e9d6c91b9cc06d0dc06b9c07e2552a5b82bbac91de4c6d175",
+      "frontend/broken.ts": "e5e9210c33039adcdcea2933ef1a7fb945d69b8a18b255c1e2e47fbd9026840b",
+      "frontend/lib.ts": "6a17fb63c8c90e2ce7a1f7344a73bd815f27fdf6df05982abd610fe84ea3408b"
+    },
+    "candidate": {
+      "backend/Broken.java": "bfface44019bbb5e9d6c91b9cc06d0dc06b9c07e2552a5b82bbac91de4c6d175",
+      "frontend/broken.ts": "e5e9210c33039adcdcea2933ef1a7fb945d69b8a18b255c1e2e47fbd9026840b",
+      "frontend/lib.ts": "6745bcd12f9a1c706a5b88bc099841f1fb145a755425ede6614a1c4559e322d9"
+    }
+  },
+  "evidence": {
+    "checkedEvidenceRecords": 10,
+    "errors": []
+  },
+  "assertions": [
+    {
+      "name": "Java parse failure visible",
+      "status": "pass"
+    },
+    {
+      "name": "TS syntax diagnostic visible",
+      "status": "pass"
+    },
+    {
+      "name": "advisory flags preserved",
+      "status": "pass"
+    },
+    {
+      "name": "all source evidence hashes/ranges/excerpts/revisions independently reproduce",
+      "status": "pass"
+    },
+    {
+      "name": "readable actual CLI exits 0",
+      "status": "pass"
+    }
+  ],
+  "reportStats": {
+    "changes": 1,
+    "directEdges": 2,
+    "unknowns": 4,
+    "sourceBuildHash": "8ee7fcacee9a1b276b2bfab2665d8d3ab771e40eee5f3924f1f301192426e68f"
+  }
+}

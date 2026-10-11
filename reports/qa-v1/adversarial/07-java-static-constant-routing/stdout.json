@@ -1,0 +1,777 @@
+{
+  "schemaVersion": "1.0",
+  "analyzer": {
+    "version": "0.1.0",
+    "sourceBuildHash": "8ee7fcacee9a1b276b2bfab2665d8d3ab771e40eee5f3924f1f301192426e68f",
+    "parsers": {
+      "java": "java-parser@3.0.1",
+      "typescript": "typescript@5.9.3"
+    }
+  },
+  "advisory": true,
+  "asOf": "2026-10-11",
+  "provenance": {
+    "baseline": {
+      "root": "/tmp/review-analysis-adversarial-v1-anUajX/07-java-static-constant-routing/baseline",
+      "type": "directory",
+      "revision": "tree-sha256:3d3c85db0ba7d429935498eb0cb95dc52ad1abce3e4716d53714f90a1d57d72d",
+      "contentHash": "3d3c85db0ba7d429935498eb0cb95dc52ad1abce3e4716d53714f90a1d57d72d",
+      "dirty": false
+    },
+    "candidate": {
+      "root": "/tmp/review-analysis-adversarial-v1-anUajX/07-java-static-constant-routing/candidate",
+      "type": "directory",
+      "revision": "tree-sha256:562cc4c7af7bbd4a89d66859c11c54d3f5ca28ea9f16b1a7c82804576357751e",
+      "contentHash": "562cc4c7af7bbd4a89d66859c11c54d3f5ca28ea9f16b1a7c82804576357751e",
+      "dirty": false
+    },
+    "rulesHash": "90f33c2c080aa463115b0ef7e4058bb9bf0da4944dff79ed58eae2f01f9cd3f1",
+    "baselineRulesHash": "90f33c2c080aa463115b0ef7e4058bb9bf0da4944dff79ed58eae2f01f9cd3f1",
+    "cacheKey": "acc8f97a7cb1b142d3c859fad415231923aebcac45d1acc61651f56b9a67a060"
+  },
+  "changes": [
+    {
+      "kind": "modified",
+      "name": "Constants",
+      "key": "qa.Constants",
+      "language": "java",
+      "contractChanged": false,
+      "before": {
+        "path": "backend/Constants.java",
+        "range": {
+          "startLine": 5,
+          "endLine": 10
+        },
+        "revision": "tree-sha256:3d3c85db0ba7d429935498eb0cb95dc52ad1abce3e4716d53714f90a1d57d72d",
+        "fileHash": "9e46360040ceb30e18c96af650042f54d8278619d1ab10d44a7adc8f67e01114",
+        "excerpt": "class Constants {\n static final String ROOT = \"/audit\";\n @GetMapping(ROOT + \"/real\") String concatenated() { return \"v1\"; }\n @GetMapping(\"/audit/real\") String literal() { return \"v1\"; }\n @GetMapping(\"\\u002Faudit\\u002Fother\") String unicode() { return \"v1\"; }\n}"
+      },
+      "after": {
+        "path": "backend/Constants.java",
+        "range": {
+          "startLine": 5,
+          "endLine": 10
+        },
+        "revision": "tree-sha256:562cc4c7af7bbd4a89d66859c11c54d3f5ca28ea9f16b1a7c82804576357751e",
+        "fileHash": "f8c8bf0bc504c6e8ed3eb85f65948c2bade530cf4b70f7961e9de39f11e6cb97",
+        "excerpt": "class Constants {\n static final String ROOT = \"/audit\";\n @GetMapping(ROOT + \"/real\") String concatenated() { return \"v2\"; }\n @GetMapping(\"/audit/real\") String literal() { return \"v2\"; }\n @GetMapping(\"\\u002Faudit\\u002Fother\") String unicode() { return \"v2\"; }\n}"
+      }
+    },
+    {
+      "kind": "modified",
+      "name": "concatenated",
+      "key": "qa.Constants#concatenated/0",
+      "language": "java",
+      "contractChanged": false,
+      "before": {
+        "path": "backend/Constants.java",
+        "range": {
+          "startLine": 7,
+          "endLine": 7
+        },
+        "revision": "tree-sha256:3d3c85db0ba7d429935498eb0cb95dc52ad1abce3e4716d53714f90a1d57d72d",
+        "fileHash": "9e46360040ceb30e18c96af650042f54d8278619d1ab10d44a7adc8f67e01114",
+        "excerpt": " @GetMapping(ROOT + \"/real\") String concatenated() { return \"v1\"; }"
+      },
+      "after": {
+        "path": "backend/Constants.java",
+        "range": {
+          "startLine": 7,
+          "endLine": 7
+        },
+        "revision": "tree-sha256:562cc4c7af7bbd4a89d66859c11c54d3f5ca28ea9f16b1a7c82804576357751e",
+        "fileHash": "f8c8bf0bc504c6e8ed3eb85f65948c2bade530cf4b70f7961e9de39f11e6cb97",
+        "excerpt": " @GetMapping(ROOT + \"/real\") String concatenated() { return \"v2\"; }"
+      }
+    },
+    {
+      "kind": "modified",
+      "name": "literal",
+      "key": "qa.Constants#literal/0",
+      "language": "java",
+      "contractChanged": false,
+      "before": {
+        "path": "backend/Constants.java",
+        "range": {
+          "startLine": 8,
+          "endLine": 8
+        },
+        "revision": "tree-sha256:3d3c85db0ba7d429935498eb0cb95dc52ad1abce3e4716d53714f90a1d57d72d",
+        "fileHash": "9e46360040ceb30e18c96af650042f54d8278619d1ab10d44a7adc8f67e01114",
+        "excerpt": " @GetMapping(\"/audit/real\") String literal() { return \"v1\"; }"
+      },
+      "after": {
+        "path": "backend/Constants.java",
+        "range": {
+          "startLine": 8,
+          "endLine": 8
+        },
+        "revision": "tree-sha256:562cc4c7af7bbd4a89d66859c11c54d3f5ca28ea9f16b1a7c82804576357751e",
+        "fileHash": "f8c8bf0bc504c6e8ed3eb85f65948c2bade530cf4b70f7961e9de39f11e6cb97",
+        "excerpt": " @GetMapping(\"/audit/real\") String literal() { return \"v2\"; }"
+      }
+    },
+    {
+      "kind": "modified",
+      "name": "unicode",
+      "key": "qa.Constants#unicode/0",
+      "language": "java",
+      "contractChanged": false,
+      "before": {
+        "path": "backend/Constants.java",
+        "range": {
+          "startLine": 9,
+          "endLine": 9
+        },
+        "revision": "tree-sha256:3d3c85db0ba7d429935498eb0cb95dc52ad1abce3e4716d53714f90a1d57d72d",
+        "fileHash": "9e46360040ceb30e18c96af650042f54d8278619d1ab10d44a7adc8f67e01114",
+        "excerpt": " @GetMapping(\"\\u002Faudit\\u002Fother\") String unicode() { return \"v1\"; }"
+      },
+      "after": {
+        "path": "backend/Constants.java",
+        "range": {
+          "startLine": 9,
+          "endLine": 9
+        },
+        "revision": "tree-sha256:562cc4c7af7bbd4a89d66859c11c54d3f5ca28ea9f16b1a7c82804576357751e",
+        "fileHash": "f8c8bf0bc504c6e8ed3eb85f65948c2bade530cf4b70f7961e9de39f11e6cb97",
+        "excerpt": " @GetMapping(\"\\u002Faudit\\u002Fother\") String unicode() { return \"v2\"; }"
+      }
+    }
+  ],
+  "impact": {
+    "direct": [
+      {
+        "kind": "http",
+        "fromPath": "frontend/client.ts",
+        "toPath": "backend/Constants.java",
+        "targetKey": "qa.Constants#literal/0",
+        "confidence": "medium",
+        "reason": "Literal HTTP verb/path matches source Spring mapping; runtime origin/proxy not verified",
+        "evidence": {
+          "path": "frontend/client.ts",
+          "range": {
+            "startLine": 1,
+            "endLine": 1
+          },
+          "revision": "tree-sha256:3d3c85db0ba7d429935498eb0cb95dc52ad1abce3e4716d53714f90a1d57d72d",
+          "fileHash": "6b665567ac3bb0e85e4b4b9c8def051a7a08c23256653ad494cd0f47283d4edd",
+          "excerpt": "fetch('/audit/real'); // literal-route"
+        },
+        "targetEvidence": {
+          "path": "backend/Constants.java",
+          "range": {
+            "startLine": 8,
+            "endLine": 8
+          },
+          "revision": "tree-sha256:3d3c85db0ba7d429935498eb0cb95dc52ad1abce3e4716d53714f90a1d57d72d",
+          "fileHash": "9e46360040ceb30e18c96af650042f54d8278619d1ab10d44a7adc8f67e01114",
+          "excerpt": " @GetMapping(\"/audit/real\") String literal() { return \"v1\"; }"
+        }
+      },
+      {
+        "kind": "http",
+        "fromPath": "frontend/client.ts",
+        "toPath": "backend/Constants.java",
+        "targetKey": "qa.Constants#unicode/0",
+        "confidence": "medium",
+        "reason": "Literal HTTP verb/path matches source Spring mapping; runtime origin/proxy not verified",
+        "evidence": {
+          "path": "frontend/client.ts",
+          "range": {
+            "startLine": 2,
+            "endLine": 2
+          },
+          "revision": "tree-sha256:3d3c85db0ba7d429935498eb0cb95dc52ad1abce3e4716d53714f90a1d57d72d",
+          "fileHash": "6b665567ac3bb0e85e4b4b9c8def051a7a08c23256653ad494cd0f47283d4edd",
+          "excerpt": "fetch('/audit/other'); // escaped-route"
+        },
+        "targetEvidence": {
+          "path": "backend/Constants.java",
+          "range": {
+            "startLine": 9,
+            "endLine": 9
+          },
+          "revision": "tree-sha256:3d3c85db0ba7d429935498eb0cb95dc52ad1abce3e4716d53714f90a1d57d72d",
+          "fileHash": "9e46360040ceb30e18c96af650042f54d8278619d1ab10d44a7adc8f67e01114",
+          "excerpt": " @GetMapping(\"\\u002Faudit\\u002Fother\") String unicode() { return \"v1\"; }"
+        }
+      },
+      {
+        "kind": "http",
+        "fromPath": "frontend/client.ts",
+        "toPath": "backend/Constants.java",
+        "targetKey": "qa.Constants#literal/0",
+        "confidence": "medium",
+        "reason": "Literal HTTP verb/path matches source Spring mapping; runtime origin/proxy not verified",
+        "evidence": {
+          "path": "frontend/client.ts",
+          "range": {
+            "startLine": 1,
+            "endLine": 1
+          },
+          "revision": "tree-sha256:562cc4c7af7bbd4a89d66859c11c54d3f5ca28ea9f16b1a7c82804576357751e",
+          "fileHash": "6b665567ac3bb0e85e4b4b9c8def051a7a08c23256653ad494cd0f47283d4edd",
+          "excerpt": "fetch('/audit/real'); // literal-route"
+        },
+        "targetEvidence": {
+          "path": "backend/Constants.java",
+          "range": {
+            "startLine": 8,
+            "endLine": 8
+          },
+          "revision": "tree-sha256:562cc4c7af7bbd4a89d66859c11c54d3f5ca28ea9f16b1a7c82804576357751e",
+          "fileHash": "f8c8bf0bc504c6e8ed3eb85f65948c2bade530cf4b70f7961e9de39f11e6cb97",
+          "excerpt": " @GetMapping(\"/audit/real\") String literal() { return \"v2\"; }"
+        }
+      },
+      {
+        "kind": "http",
+        "fromPath": "frontend/client.ts",
+        "toPath": "backend/Constants.java",
+        "targetKey": "qa.Constants#unicode/0",
+        "confidence": "medium",
+        "reason": "Literal HTTP verb/path matches source Spring mapping; runtime origin/proxy not verified",
+        "evidence": {
+          "path": "frontend/client.ts",
+          "range": {
+            "startLine": 2,
+            "endLine": 2
+          },
+          "revision": "tree-sha256:562cc4c7af7bbd4a89d66859c11c54d3f5ca28ea9f16b1a7c82804576357751e",
+          "fileHash": "6b665567ac3bb0e85e4b4b9c8def051a7a08c23256653ad494cd0f47283d4edd",
+          "excerpt": "fetch('/audit/other'); // escaped-route"
+        },
+        "targetEvidence": {
+          "path": "backend/Constants.java",
+          "range": {
+            "startLine": 9,
+            "endLine": 9
+          },
+          "revision": "tree-sha256:562cc4c7af7bbd4a89d66859c11c54d3f5ca28ea9f16b1a7c82804576357751e",
+          "fileHash": "f8c8bf0bc504c6e8ed3eb85f65948c2bade530cf4b70f7961e9de39f11e6cb97",
+          "excerpt": " @GetMapping(\"\\u002Faudit\\u002Fother\") String unicode() { return \"v2\"; }"
+        }
+      }
+    ],
+    "indirect": []
+  },
+  "findings": [],
+  "guidance": {
+    "task": "Literal mapping remains matchable while constant concatenation mapping stays unknown",
+    "ruleSetVersion": "independent-adversarial-v1",
+    "approvalGap": "No human approval is inferred. Reviewed examples/exceptions are assertions from supplied configuration; simulation records are demonstrations only.",
+    "rules": [
+      {
+        "id": "independent/http-contract",
+        "kind": "endpoint-contract-change",
+        "owner": "synthetic-qa",
+        "version": "independent-adversarial-v1",
+        "severity": "warning",
+        "instruction": "endpoint-contract-change",
+        "examples": []
+      }
+    ]
+  },
+  "unknowns": [
+    {
+      "reason": "Dynamic Spring mapping requires configuration or constant evaluation",
+      "range": {
+        "startLine": 7,
+        "endLine": 7
+      },
+      "detail": "@GetMapping(ROOT + \"/real\")",
+      "evidence": {
+        "path": "backend/Constants.java",
+        "range": {
+          "startLine": 7,
+          "endLine": 7
+        },
+        "revision": "tree-sha256:3d3c85db0ba7d429935498eb0cb95dc52ad1abce3e4716d53714f90a1d57d72d",
+        "fileHash": "9e46360040ceb30e18c96af650042f54d8278619d1ab10d44a7adc8f67e01114",
+        "excerpt": " @GetMapping(ROOT + \"/real\") String concatenated() { return \"v1\"; }"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "org.springframework.web.bind.annotation.GetMapping",
+      "evidence": {
+        "path": "backend/Constants.java",
+        "range": {
+          "startLine": 2,
+          "endLine": 2
+        },
+        "revision": "tree-sha256:3d3c85db0ba7d429935498eb0cb95dc52ad1abce3e4716d53714f90a1d57d72d",
+        "fileHash": "9e46360040ceb30e18c96af650042f54d8278619d1ab10d44a7adc8f67e01114",
+        "excerpt": "import org.springframework.web.bind.annotation.GetMapping;"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "org.springframework.web.bind.annotation.PostMapping",
+      "evidence": {
+        "path": "backend/Constants.java",
+        "range": {
+          "startLine": 3,
+          "endLine": 3
+        },
+        "revision": "tree-sha256:3d3c85db0ba7d429935498eb0cb95dc52ad1abce3e4716d53714f90a1d57d72d",
+        "fileHash": "9e46360040ceb30e18c96af650042f54d8278619d1ab10d44a7adc8f67e01114",
+        "excerpt": "import org.springframework.web.bind.annotation.PostMapping;"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "org.springframework.web.bind.annotation.RequestMapping",
+      "evidence": {
+        "path": "backend/Constants.java",
+        "range": {
+          "startLine": 4,
+          "endLine": 4
+        },
+        "revision": "tree-sha256:3d3c85db0ba7d429935498eb0cb95dc52ad1abce3e4716d53714f90a1d57d72d",
+        "fileHash": "9e46360040ceb30e18c96af650042f54d8278619d1ab10d44a7adc8f67e01114",
+        "excerpt": "import org.springframework.web.bind.annotation.RequestMapping;"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "String",
+      "evidence": {
+        "path": "backend/Constants.java",
+        "range": {
+          "startLine": 6,
+          "endLine": 6
+        },
+        "revision": "tree-sha256:3d3c85db0ba7d429935498eb0cb95dc52ad1abce3e4716d53714f90a1d57d72d",
+        "fileHash": "9e46360040ceb30e18c96af650042f54d8278619d1ab10d44a7adc8f67e01114",
+        "excerpt": " static final String ROOT = \"/audit\";"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "org.springframework.web.bind.annotation.GetMapping",
+      "evidence": {
+        "path": "backend/Constants.java",
+        "range": {
+          "startLine": 7,
+          "endLine": 7
+        },
+        "revision": "tree-sha256:3d3c85db0ba7d429935498eb0cb95dc52ad1abce3e4716d53714f90a1d57d72d",
+        "fileHash": "9e46360040ceb30e18c96af650042f54d8278619d1ab10d44a7adc8f67e01114",
+        "excerpt": " @GetMapping(ROOT + \"/real\") String concatenated() { return \"v1\"; }"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "String",
+      "evidence": {
+        "path": "backend/Constants.java",
+        "range": {
+          "startLine": 7,
+          "endLine": 7
+        },
+        "revision": "tree-sha256:3d3c85db0ba7d429935498eb0cb95dc52ad1abce3e4716d53714f90a1d57d72d",
+        "fileHash": "9e46360040ceb30e18c96af650042f54d8278619d1ab10d44a7adc8f67e01114",
+        "excerpt": " @GetMapping(ROOT + \"/real\") String concatenated() { return \"v1\"; }"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "org.springframework.web.bind.annotation.GetMapping",
+      "evidence": {
+        "path": "backend/Constants.java",
+        "range": {
+          "startLine": 8,
+          "endLine": 8
+        },
+        "revision": "tree-sha256:3d3c85db0ba7d429935498eb0cb95dc52ad1abce3e4716d53714f90a1d57d72d",
+        "fileHash": "9e46360040ceb30e18c96af650042f54d8278619d1ab10d44a7adc8f67e01114",
+        "excerpt": " @GetMapping(\"/audit/real\") String literal() { return \"v1\"; }"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "String",
+      "evidence": {
+        "path": "backend/Constants.java",
+        "range": {
+          "startLine": 8,
+          "endLine": 8
+        },
+        "revision": "tree-sha256:3d3c85db0ba7d429935498eb0cb95dc52ad1abce3e4716d53714f90a1d57d72d",
+        "fileHash": "9e46360040ceb30e18c96af650042f54d8278619d1ab10d44a7adc8f67e01114",
+        "excerpt": " @GetMapping(\"/audit/real\") String literal() { return \"v1\"; }"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "org.springframework.web.bind.annotation.GetMapping",
+      "evidence": {
+        "path": "backend/Constants.java",
+        "range": {
+          "startLine": 9,
+          "endLine": 9
+        },
+        "revision": "tree-sha256:3d3c85db0ba7d429935498eb0cb95dc52ad1abce3e4716d53714f90a1d57d72d",
+        "fileHash": "9e46360040ceb30e18c96af650042f54d8278619d1ab10d44a7adc8f67e01114",
+        "excerpt": " @GetMapping(\"\\u002Faudit\\u002Fother\") String unicode() { return \"v1\"; }"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "String",
+      "evidence": {
+        "path": "backend/Constants.java",
+        "range": {
+          "startLine": 9,
+          "endLine": 9
+        },
+        "revision": "tree-sha256:3d3c85db0ba7d429935498eb0cb95dc52ad1abce3e4716d53714f90a1d57d72d",
+        "fileHash": "9e46360040ceb30e18c96af650042f54d8278619d1ab10d44a7adc8f67e01114",
+        "excerpt": " @GetMapping(\"\\u002Faudit\\u002Fother\") String unicode() { return \"v1\"; }"
+      }
+    },
+    {
+      "reason": "unresolved-call",
+      "detail": "fetch",
+      "evidence": {
+        "path": "frontend/client.ts",
+        "range": {
+          "startLine": 1,
+          "endLine": 1
+        },
+        "revision": "tree-sha256:3d3c85db0ba7d429935498eb0cb95dc52ad1abce3e4716d53714f90a1d57d72d",
+        "fileHash": "6b665567ac3bb0e85e4b4b9c8def051a7a08c23256653ad494cd0f47283d4edd",
+        "excerpt": "fetch('/audit/real'); // literal-route"
+      }
+    },
+    {
+      "reason": "unresolved-call",
+      "detail": "fetch",
+      "evidence": {
+        "path": "frontend/client.ts",
+        "range": {
+          "startLine": 2,
+          "endLine": 2
+        },
+        "revision": "tree-sha256:3d3c85db0ba7d429935498eb0cb95dc52ad1abce3e4716d53714f90a1d57d72d",
+        "fileHash": "6b665567ac3bb0e85e4b4b9c8def051a7a08c23256653ad494cd0f47283d4edd",
+        "excerpt": "fetch('/audit/other'); // escaped-route"
+      }
+    },
+    {
+      "reason": "Dynamic Spring mapping requires configuration or constant evaluation",
+      "range": {
+        "startLine": 7,
+        "endLine": 7
+      },
+      "detail": "@GetMapping(ROOT + \"/real\")",
+      "evidence": {
+        "path": "backend/Constants.java",
+        "range": {
+          "startLine": 7,
+          "endLine": 7
+        },
+        "revision": "tree-sha256:562cc4c7af7bbd4a89d66859c11c54d3f5ca28ea9f16b1a7c82804576357751e",
+        "fileHash": "f8c8bf0bc504c6e8ed3eb85f65948c2bade530cf4b70f7961e9de39f11e6cb97",
+        "excerpt": " @GetMapping(ROOT + \"/real\") String concatenated() { return \"v2\"; }"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "org.springframework.web.bind.annotation.GetMapping",
+      "evidence": {
+        "path": "backend/Constants.java",
+        "range": {
+          "startLine": 2,
+          "endLine": 2
+        },
+        "revision": "tree-sha256:562cc4c7af7bbd4a89d66859c11c54d3f5ca28ea9f16b1a7c82804576357751e",
+        "fileHash": "f8c8bf0bc504c6e8ed3eb85f65948c2bade530cf4b70f7961e9de39f11e6cb97",
+        "excerpt": "import org.springframework.web.bind.annotation.GetMapping;"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "org.springframework.web.bind.annotation.PostMapping",
+      "evidence": {
+        "path": "backend/Constants.java",
+        "range": {
+          "startLine": 3,
+          "endLine": 3
+        },
+        "revision": "tree-sha256:562cc4c7af7bbd4a89d66859c11c54d3f5ca28ea9f16b1a7c82804576357751e",
+        "fileHash": "f8c8bf0bc504c6e8ed3eb85f65948c2bade530cf4b70f7961e9de39f11e6cb97",
+        "excerpt": "import org.springframework.web.bind.annotation.PostMapping;"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "org.springframework.web.bind.annotation.RequestMapping",
+      "evidence": {
+        "path": "backend/Constants.java",
+        "range": {
+          "startLine": 4,
+          "endLine": 4
+        },
+        "revision": "tree-sha256:562cc4c7af7bbd4a89d66859c11c54d3f5ca28ea9f16b1a7c82804576357751e",
+        "fileHash": "f8c8bf0bc504c6e8ed3eb85f65948c2bade530cf4b70f7961e9de39f11e6cb97",
+        "excerpt": "import org.springframework.web.bind.annotation.RequestMapping;"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "String",
+      "evidence": {
+        "path": "backend/Constants.java",
+        "range": {
+          "startLine": 6,
+          "endLine": 6
+        },
+        "revision": "tree-sha256:562cc4c7af7bbd4a89d66859c11c54d3f5ca28ea9f16b1a7c82804576357751e",
+        "fileHash": "f8c8bf0bc504c6e8ed3eb85f65948c2bade530cf4b70f7961e9de39f11e6cb97",
+        "excerpt": " static final String ROOT = \"/audit\";"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "org.springframework.web.bind.annotation.GetMapping",
+      "evidence": {
+        "path": "backend/Constants.java",
+        "range": {
+          "startLine": 7,
+          "endLine": 7
+        },
+        "revision": "tree-sha256:562cc4c7af7bbd4a89d66859c11c54d3f5ca28ea9f16b1a7c82804576357751e",
+        "fileHash": "f8c8bf0bc504c6e8ed3eb85f65948c2bade530cf4b70f7961e9de39f11e6cb97",
+        "excerpt": " @GetMapping(ROOT + \"/real\") String concatenated() { return \"v2\"; }"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "String",
+      "evidence": {
+        "path": "backend/Constants.java",
+        "range": {
+          "startLine": 7,
+          "endLine": 7
+        },
+        "revision": "tree-sha256:562cc4c7af7bbd4a89d66859c11c54d3f5ca28ea9f16b1a7c82804576357751e",
+        "fileHash": "f8c8bf0bc504c6e8ed3eb85f65948c2bade530cf4b70f7961e9de39f11e6cb97",
+        "excerpt": " @GetMapping(ROOT + \"/real\") String concatenated() { return \"v2\"; }"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "org.springframework.web.bind.annotation.GetMapping",
+      "evidence": {
+        "path": "backend/Constants.java",
+        "range": {
+          "startLine": 8,
+          "endLine": 8
+        },
+        "revision": "tree-sha256:562cc4c7af7bbd4a89d66859c11c54d3f5ca28ea9f16b1a7c82804576357751e",
+        "fileHash": "f8c8bf0bc504c6e8ed3eb85f65948c2bade530cf4b70f7961e9de39f11e6cb97",
+        "excerpt": " @GetMapping(\"/audit/real\") String literal() { return \"v2\"; }"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "String",
+      "evidence": {
+        "path": "backend/Constants.java",
+        "range": {
+          "startLine": 8,
+          "endLine": 8
+        },
+        "revision": "tree-sha256:562cc4c7af7bbd4a89d66859c11c54d3f5ca28ea9f16b1a7c82804576357751e",
+        "fileHash": "f8c8bf0bc504c6e8ed3eb85f65948c2bade530cf4b70f7961e9de39f11e6cb97",
+        "excerpt": " @GetMapping(\"/audit/real\") String literal() { return \"v2\"; }"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "org.springframework.web.bind.annotation.GetMapping",
+      "evidence": {
+        "path": "backend/Constants.java",
+        "range": {
+          "startLine": 9,
+          "endLine": 9
+        },
+        "revision": "tree-sha256:562cc4c7af7bbd4a89d66859c11c54d3f5ca28ea9f16b1a7c82804576357751e",
+        "fileHash": "f8c8bf0bc504c6e8ed3eb85f65948c2bade530cf4b70f7961e9de39f11e6cb97",
+        "excerpt": " @GetMapping(\"\\u002Faudit\\u002Fother\") String unicode() { return \"v2\"; }"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "String",
+      "evidence": {
+        "path": "backend/Constants.java",
+        "range": {
+          "startLine": 9,
+          "endLine": 9
+        },
+        "revision": "tree-sha256:562cc4c7af7bbd4a89d66859c11c54d3f5ca28ea9f16b1a7c82804576357751e",
+        "fileHash": "f8c8bf0bc504c6e8ed3eb85f65948c2bade530cf4b70f7961e9de39f11e6cb97",
+        "excerpt": " @GetMapping(\"\\u002Faudit\\u002Fother\") String unicode() { return \"v2\"; }"
+      }
+    },
+    {
+      "reason": "unresolved-call",
+      "detail": "fetch",
+      "evidence": {
+        "path": "frontend/client.ts",
+        "range": {
+          "startLine": 1,
+          "endLine": 1
+        },
+        "revision": "tree-sha256:562cc4c7af7bbd4a89d66859c11c54d3f5ca28ea9f16b1a7c82804576357751e",
+        "fileHash": "6b665567ac3bb0e85e4b4b9c8def051a7a08c23256653ad494cd0f47283d4edd",
+        "excerpt": "fetch('/audit/real'); // literal-route"
+      }
+    },
+    {
+      "reason": "unresolved-call",
+      "detail": "fetch",
+      "evidence": {
+        "path": "frontend/client.ts",
+        "range": {
+          "startLine": 2,
+          "endLine": 2
+        },
+        "revision": "tree-sha256:562cc4c7af7bbd4a89d66859c11c54d3f5ca28ea9f16b1a7c82804576357751e",
+        "fileHash": "6b665567ac3bb0e85e4b4b9c8def051a7a08c23256653ad494cd0f47283d4edd",
+        "excerpt": "fetch('/audit/other'); // escaped-route"
+      }
+    }
+  ],
+  "focusedTests": [
+    {
+      "kind": "api-consumer",
+      "reason": "Exercise HTTP route, verb, serialization, empty/not-found/error responses and consumer rendering",
+      "evidence": {
+        "path": "frontend/client.ts",
+        "range": {
+          "startLine": 1,
+          "endLine": 1
+        },
+        "revision": "tree-sha256:3d3c85db0ba7d429935498eb0cb95dc52ad1abce3e4716d53714f90a1d57d72d",
+        "fileHash": "6b665567ac3bb0e85e4b4b9c8def051a7a08c23256653ad494cd0f47283d4edd",
+        "excerpt": "fetch('/audit/real'); // literal-route"
+      },
+      "targetEvidence": {
+        "path": "backend/Constants.java",
+        "range": {
+          "startLine": 8,
+          "endLine": 8
+        },
+        "revision": "tree-sha256:3d3c85db0ba7d429935498eb0cb95dc52ad1abce3e4716d53714f90a1d57d72d",
+        "fileHash": "9e46360040ceb30e18c96af650042f54d8278619d1ab10d44a7adc8f67e01114",
+        "excerpt": " @GetMapping(\"/audit/real\") String literal() { return \"v1\"; }"
+      }
+    },
+    {
+      "kind": "api-consumer",
+      "reason": "Exercise HTTP route, verb, serialization, empty/not-found/error responses and consumer rendering",
+      "evidence": {
+        "path": "frontend/client.ts",
+        "range": {
+          "startLine": 2,
+          "endLine": 2
+        },
+        "revision": "tree-sha256:3d3c85db0ba7d429935498eb0cb95dc52ad1abce3e4716d53714f90a1d57d72d",
+        "fileHash": "6b665567ac3bb0e85e4b4b9c8def051a7a08c23256653ad494cd0f47283d4edd",
+        "excerpt": "fetch('/audit/other'); // escaped-route"
+      },
+      "targetEvidence": {
+        "path": "backend/Constants.java",
+        "range": {
+          "startLine": 9,
+          "endLine": 9
+        },
+        "revision": "tree-sha256:3d3c85db0ba7d429935498eb0cb95dc52ad1abce3e4716d53714f90a1d57d72d",
+        "fileHash": "9e46360040ceb30e18c96af650042f54d8278619d1ab10d44a7adc8f67e01114",
+        "excerpt": " @GetMapping(\"\\u002Faudit\\u002Fother\") String unicode() { return \"v1\"; }"
+      }
+    },
+    {
+      "kind": "api-consumer",
+      "reason": "Exercise HTTP route, verb, serialization, empty/not-found/error responses and consumer rendering",
+      "evidence": {
+        "path": "frontend/client.ts",
+        "range": {
+          "startLine": 1,
+          "endLine": 1
+        },
+        "revision": "tree-sha256:562cc4c7af7bbd4a89d66859c11c54d3f5ca28ea9f16b1a7c82804576357751e",
+        "fileHash": "6b665567ac3bb0e85e4b4b9c8def051a7a08c23256653ad494cd0f47283d4edd",
+        "excerpt": "fetch('/audit/real'); // literal-route"
+      },
+      "targetEvidence": {
+        "path": "backend/Constants.java",
+        "range": {
+          "startLine": 8,
+          "endLine": 8
+        },
+        "revision": "tree-sha256:562cc4c7af7bbd4a89d66859c11c54d3f5ca28ea9f16b1a7c82804576357751e",
+        "fileHash": "f8c8bf0bc504c6e8ed3eb85f65948c2bade530cf4b70f7961e9de39f11e6cb97",
+        "excerpt": " @GetMapping(\"/audit/real\") String literal() { return \"v2\"; }"
+      }
+    },
+    {
+      "kind": "api-consumer",
+      "reason": "Exercise HTTP route, verb, serialization, empty/not-found/error responses and consumer rendering",
+      "evidence": {
+        "path": "frontend/client.ts",
+        "range": {
+          "startLine": 2,
+          "endLine": 2
+        },
+        "revision": "tree-sha256:562cc4c7af7bbd4a89d66859c11c54d3f5ca28ea9f16b1a7c82804576357751e",
+        "fileHash": "6b665567ac3bb0e85e4b4b9c8def051a7a08c23256653ad494cd0f47283d4edd",
+        "excerpt": "fetch('/audit/other'); // escaped-route"
+      },
+      "targetEvidence": {
+        "path": "backend/Constants.java",
+        "range": {
+          "startLine": 9,
+          "endLine": 9
+        },
+        "revision": "tree-sha256:562cc4c7af7bbd4a89d66859c11c54d3f5ca28ea9f16b1a7c82804576357751e",
+        "fileHash": "f8c8bf0bc504c6e8ed3eb85f65948c2bade530cf4b70f7961e9de39f11e6cb97",
+        "excerpt": " @GetMapping(\"\\u002Faudit\\u002Fother\") String unicode() { return \"v2\"; }"
+      }
+    }
+  ],
+  "coverage": {
+    "complete": false,
+    "fullRegressionMayBeSkipped": false,
+    "sourceFiles": {
+      "baseline": 2,
+      "candidate": 2
+    },
+    "excluded": {
+      "baseline": [],
+      "candidate": []
+    },
+    "limitations": [
+      "Source-only analysis; no Java/TypeScript semantic compilation, runtime dispatch, reflection, DI wiring, proxy/origin verification or transitive external package sources",
+      "Edges are evidence-backed approximations; indirect file dependencies do not prove execution",
+      "Renames inferred only for identical declaration key/signature/body; edited renames remain delete/add",
+      "Unknown syntax and unresolved/dynamic dependencies remain visible; passing fixture tests is not private-repository acceptance"
+    ]
+  },
+  "cache": {
+    "report": "disabled",
+    "parsedFiles": 4,
+    "reusedFiles": 0,
+    "invalidEntries": 0
+  },
+  "metrics": {
+    "elapsedMs": 49.59,
+    "bytesRead": 1066,
+    "reportCacheHit": false
+  }
+}

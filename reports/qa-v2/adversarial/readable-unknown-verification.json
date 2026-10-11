@@ -1,0 +1,75 @@
+[
+  {
+    "case": "04-java-arity-prefix",
+    "expectedReasons": [
+      "unresolved-call"
+    ],
+    "allVisible": true,
+    "incompleteCoverageVisible": true
+  },
+  {
+    "case": "08-http-template-regex",
+    "expectedReasons": [
+      "unsupported-route-constraint",
+      "unmatched-endpoint"
+    ],
+    "allVisible": true,
+    "incompleteCoverageVisible": true
+  },
+  {
+    "case": "11-ts-namespace-nested-member",
+    "expectedReasons": [
+      "unresolved-imported-member"
+    ],
+    "allVisible": true,
+    "incompleteCoverageVisible": true
+  },
+  {
+    "case": "12-java-ambiguous-explicit-imports",
+    "expectedReasons": [
+      "unresolved-call"
+    ],
+    "allVisible": true,
+    "incompleteCoverageVisible": true
+  },
+  {
+    "case": "13-ts-namespace-contract-member",
+    "expectedReasons": [
+      "unresolved-imported-member"
+    ],
+    "allVisible": true,
+    "incompleteCoverageVisible": true
+  },
+  {
+    "case": "14-js-with-lexical-shadow",
+    "expectedReasons": [
+      "with_dynamic_scope"
+    ],
+    "allVisible": true,
+    "incompleteCoverageVisible": true
+  },
+  {
+    "case": "15-java-varargs-overload",
+    "expectedReasons": [
+      "ambiguous-call"
+    ],
+    "allVisible": true,
+    "incompleteCoverageVisible": true
+  },
+  {
+    "case": "16-java-inherited-overload",
+    "expectedReasons": [
+      "java-inheritance-dispatch"
+    ],
+    "allVisible": true,
+    "incompleteCoverageVisible": true
+  },
+  {
+    "case": "10-source-parse-diagnostics",
+    "expectedReasons": [
+      "parse_diagnostic"
+    ],
+    "allVisible": true,
+    "incompleteCoverageVisible": true
+  }
+]

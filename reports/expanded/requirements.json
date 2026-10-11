@@ -1,0 +1,3922 @@
+{
+  "schemaVersion": "2.0",
+  "build": {
+    "version": "0.2.0",
+    "sourceBuildHash": "0427f5fed8a45a3d4dbc5523f1d0f8afb57949bac0df1f9bef249fd73ae31061",
+    "parsers": {
+      "java": "java-parser@3.0.1",
+      "typescript": "typescript@5.9.3"
+    }
+  },
+  "analyzer": {
+    "version": "0.2.0",
+    "sourceBuildHash": "0427f5fed8a45a3d4dbc5523f1d0f8afb57949bac0df1f9bef249fd73ae31061",
+    "parsers": {
+      "java": "java-parser@3.0.1",
+      "typescript": "typescript@5.9.3"
+    }
+  },
+  "advisory": true,
+  "asOf": "2026-10-11",
+  "graph": {
+    "nodes": [
+      {
+        "id": "requirements::backend/src/main/java/example/customers/CustomerLookupController.java",
+        "kind": "file",
+        "label": "CustomerLookupController.java",
+        "path": "backend/src/main/java/example/customers/CustomerLookupController.java",
+        "projectId": "requirements",
+        "repository": "example/customer-sample",
+        "module": "Backend",
+        "language": "java",
+        "changed": false,
+        "changeKinds": [],
+        "evidence": {
+          "path": "backend/src/main/java/example/customers/CustomerLookupController.java",
+          "range": {
+            "startLine": 1,
+            "endLine": 1
+          },
+          "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+          "fileHash": "28ec39a06652ee166d68a1c9e489c6ad1c43c970fd21d48c4d7675b79401300b",
+          "excerpt": "package example.customers;",
+          "projectId": "requirements",
+          "repository": "example/customer-sample"
+        },
+        "declarations": [
+          {
+            "key": "example.customers.CustomerLookupController",
+            "name": "CustomerLookupController",
+            "kind": "class",
+            "signature": "@RestController\n@RequestMapping(\"/api\")\npublic class CustomerLookupController",
+            "evidence": {
+              "path": "backend/src/main/java/example/customers/CustomerLookupController.java",
+              "range": {
+                "startLine": 9,
+                "endLine": 16
+              },
+              "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+              "fileHash": "28ec39a06652ee166d68a1c9e489c6ad1c43c970fd21d48c4d7675b79401300b",
+              "excerpt": "@RestController\n@RequestMapping(\"/api\")\npublic class CustomerLookupController {\n    @GetMapping(\"/customers/lookup\")\n    public CustomerResponse lookup(@RequestParam String id) {\n        return new CustomerResponse(id, \"Ada Example\");\n    }\n}",
+              "projectId": "requirements",
+              "repository": "example/customer-sample"
+            }
+          },
+          {
+            "key": "example.customers.CustomerLookupController#lookup/1",
+            "name": "lookup",
+            "kind": "method",
+            "signature": "@GetMapping(\"/customers/lookup\")\n    public CustomerResponse lookup(@RequestParam String id)",
+            "evidence": {
+              "path": "backend/src/main/java/example/customers/CustomerLookupController.java",
+              "range": {
+                "startLine": 12,
+                "endLine": 15
+              },
+              "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+              "fileHash": "28ec39a06652ee166d68a1c9e489c6ad1c43c970fd21d48c4d7675b79401300b",
+              "excerpt": "    @GetMapping(\"/customers/lookup\")\n    public CustomerResponse lookup(@RequestParam String id) {\n        return new CustomerResponse(id, \"Ada Example\");\n    }",
+              "projectId": "requirements",
+              "repository": "example/customer-sample"
+            }
+          }
+        ],
+        "phases": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "id": "requirements::backend/src/main/java/example/customers/CustomerResponse.java",
+        "kind": "file",
+        "label": "CustomerResponse.java",
+        "path": "backend/src/main/java/example/customers/CustomerResponse.java",
+        "projectId": "requirements",
+        "repository": "example/customer-sample",
+        "module": "Backend",
+        "language": "java",
+        "changed": false,
+        "changeKinds": [],
+        "evidence": {
+          "path": "backend/src/main/java/example/customers/CustomerResponse.java",
+          "range": {
+            "startLine": 1,
+            "endLine": 1
+          },
+          "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+          "fileHash": "fe4a076477f47074f1ca4a4140e45648ce3e2110fef9cf31fd934ad2bd1dfe4a",
+          "excerpt": "package example.customers;",
+          "projectId": "requirements",
+          "repository": "example/customer-sample"
+        },
+        "declarations": [
+          {
+            "key": "example.customers.CustomerResponse",
+            "name": "CustomerResponse",
+            "kind": "record",
+            "signature": "public record CustomerResponse(String id, String displayName)",
+            "evidence": {
+              "path": "backend/src/main/java/example/customers/CustomerResponse.java",
+              "range": {
+                "startLine": 3,
+                "endLine": 3
+              },
+              "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+              "fileHash": "fe4a076477f47074f1ca4a4140e45648ce3e2110fef9cf31fd934ad2bd1dfe4a",
+              "excerpt": "public record CustomerResponse(String id, String displayName) {}",
+              "projectId": "requirements",
+              "repository": "example/customer-sample"
+            }
+          },
+          {
+            "key": "example.customers.CustomerResponse#displayName",
+            "name": "displayName",
+            "kind": "component",
+            "signature": "String displayName",
+            "evidence": {
+              "path": "backend/src/main/java/example/customers/CustomerResponse.java",
+              "range": {
+                "startLine": 3,
+                "endLine": 3
+              },
+              "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+              "fileHash": "fe4a076477f47074f1ca4a4140e45648ce3e2110fef9cf31fd934ad2bd1dfe4a",
+              "excerpt": "public record CustomerResponse(String id, String displayName) {}",
+              "projectId": "requirements",
+              "repository": "example/customer-sample"
+            }
+          },
+          {
+            "key": "example.customers.CustomerResponse#id",
+            "name": "id",
+            "kind": "component",
+            "signature": "String id",
+            "evidence": {
+              "path": "backend/src/main/java/example/customers/CustomerResponse.java",
+              "range": {
+                "startLine": 3,
+                "endLine": 3
+              },
+              "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+              "fileHash": "fe4a076477f47074f1ca4a4140e45648ce3e2110fef9cf31fd934ad2bd1dfe4a",
+              "excerpt": "public record CustomerResponse(String id, String displayName) {}",
+              "projectId": "requirements",
+              "repository": "example/customer-sample"
+            }
+          }
+        ],
+        "phases": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "id": "requirements::backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+        "kind": "file",
+        "label": "CustomerLookupControllerTest.java",
+        "path": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+        "projectId": "requirements",
+        "repository": "example/customer-sample",
+        "module": "Backend",
+        "language": "java",
+        "changed": false,
+        "changeKinds": [],
+        "evidence": {
+          "path": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+          "range": {
+            "startLine": 1,
+            "endLine": 1
+          },
+          "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+          "fileHash": "aa3a223914ae9a6772826e29cf6c8d54eec522fa0869dcaff96832f265bb5184",
+          "excerpt": "package example.customers;",
+          "projectId": "requirements",
+          "repository": "example/customer-sample"
+        },
+        "declarations": [
+          {
+            "key": "example.customers.CustomerLookupControllerTest",
+            "name": "CustomerLookupControllerTest",
+            "kind": "class",
+            "signature": "class CustomerLookupControllerTest",
+            "evidence": {
+              "path": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+              "range": {
+                "startLine": 7,
+                "endLine": 19
+              },
+              "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+              "fileHash": "aa3a223914ae9a6772826e29cf6c8d54eec522fa0869dcaff96832f265bb5184",
+              "excerpt": "class CustomerLookupControllerTest {\n    @Test\n    void lookupByIdReturnsMatchingCustomer() {\n        var response = new CustomerLookupController().lookup(\"customer-1\");\n        assertEquals(\"customer-1\", response.id());\n    }\n\n    @Test\n    void returnsDisplayName() {\n        var response = new CustomerLookupController().lookup(\"customer-1\");\n        assertEquals(\"Ada Example\", response.displayName());\n    }\n}",
+              "projectId": "requirements",
+              "repository": "example/customer-sample"
+            }
+          },
+          {
+            "key": "example.customers.CustomerLookupControllerTest#lookupByIdReturnsMatchingCustomer/0",
+            "name": "lookupByIdReturnsMatchingCustomer",
+            "kind": "method",
+            "signature": "@Test\n    void lookupByIdReturnsMatchingCustomer()",
+            "evidence": {
+              "path": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+              "range": {
+                "startLine": 8,
+                "endLine": 12
+              },
+              "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+              "fileHash": "aa3a223914ae9a6772826e29cf6c8d54eec522fa0869dcaff96832f265bb5184",
+              "excerpt": "    @Test\n    void lookupByIdReturnsMatchingCustomer() {\n        var response = new CustomerLookupController().lookup(\"customer-1\");\n        assertEquals(\"customer-1\", response.id());\n    }",
+              "projectId": "requirements",
+              "repository": "example/customer-sample"
+            }
+          },
+          {
+            "key": "example.customers.CustomerLookupControllerTest#returnsDisplayName/0",
+            "name": "returnsDisplayName",
+            "kind": "method",
+            "signature": "@Test\n    void returnsDisplayName()",
+            "evidence": {
+              "path": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+              "range": {
+                "startLine": 14,
+                "endLine": 18
+              },
+              "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+              "fileHash": "aa3a223914ae9a6772826e29cf6c8d54eec522fa0869dcaff96832f265bb5184",
+              "excerpt": "    @Test\n    void returnsDisplayName() {\n        var response = new CustomerLookupController().lookup(\"customer-1\");\n        assertEquals(\"Ada Example\", response.displayName());\n    }",
+              "projectId": "requirements",
+              "repository": "example/customer-sample"
+            }
+          }
+        ],
+        "phases": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "id": "requirements::frontend/src/customerApi.ts",
+        "kind": "file",
+        "label": "customerApi.ts",
+        "path": "frontend/src/customerApi.ts",
+        "projectId": "requirements",
+        "repository": "example/customer-sample",
+        "module": "Frontend",
+        "language": "typescript",
+        "changed": false,
+        "changeKinds": [],
+        "evidence": {
+          "path": "frontend/src/customerApi.ts",
+          "range": {
+            "startLine": 1,
+            "endLine": 1
+          },
+          "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+          "fileHash": "2cdee9cc200708bdb5c3184490c8e02a2597c6ada3b97b79ff5b66eb4c6a7095",
+          "excerpt": "export interface CustomerResponse {",
+          "projectId": "requirements",
+          "repository": "example/customer-sample"
+        },
+        "declarations": [
+          {
+            "key": "CustomerResponse",
+            "name": "CustomerResponse",
+            "kind": "interface",
+            "signature": "export interface CustomerResponse {\nid: string;\ndisplayName: string;\n}",
+            "evidence": {
+              "path": "frontend/src/customerApi.ts",
+              "range": {
+                "startLine": 1,
+                "endLine": 4
+              },
+              "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+              "fileHash": "2cdee9cc200708bdb5c3184490c8e02a2597c6ada3b97b79ff5b66eb4c6a7095",
+              "excerpt": "export interface CustomerResponse {\n  id: string;\n  displayName: string;\n}",
+              "projectId": "requirements",
+              "repository": "example/customer-sample"
+            }
+          },
+          {
+            "key": "CustomerResponse.id",
+            "name": "id",
+            "kind": "property",
+            "signature": "id: string;",
+            "evidence": {
+              "path": "frontend/src/customerApi.ts",
+              "range": {
+                "startLine": 2,
+                "endLine": 2
+              },
+              "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+              "fileHash": "2cdee9cc200708bdb5c3184490c8e02a2597c6ada3b97b79ff5b66eb4c6a7095",
+              "excerpt": "  id: string;",
+              "projectId": "requirements",
+              "repository": "example/customer-sample"
+            }
+          },
+          {
+            "key": "CustomerResponse.displayName",
+            "name": "displayName",
+            "kind": "property",
+            "signature": "displayName: string;",
+            "evidence": {
+              "path": "frontend/src/customerApi.ts",
+              "range": {
+                "startLine": 3,
+                "endLine": 3
+              },
+              "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+              "fileHash": "2cdee9cc200708bdb5c3184490c8e02a2597c6ada3b97b79ff5b66eb4c6a7095",
+              "excerpt": "  displayName: string;",
+              "projectId": "requirements",
+              "repository": "example/customer-sample"
+            }
+          },
+          {
+            "key": "lookupCustomer",
+            "name": "lookupCustomer",
+            "kind": "function",
+            "signature": "export async function lookupCustomer(id: string): Promise<CustomerResponse>",
+            "evidence": {
+              "path": "frontend/src/customerApi.ts",
+              "range": {
+                "startLine": 7,
+                "endLine": 11
+              },
+              "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+              "fileHash": "2cdee9cc200708bdb5c3184490c8e02a2597c6ada3b97b79ff5b66eb4c6a7095",
+              "excerpt": "export async function lookupCustomer(id: string): Promise<CustomerResponse> {\n  const response = await fetch(`/api/customers/lookup?id=${encodeURIComponent(id)}`);\n  if (!response.ok) throw new Error('Customer lookup failed');\n  return response.json();\n}",
+              "projectId": "requirements",
+              "repository": "example/customer-sample"
+            }
+          }
+        ],
+        "phases": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "id": "requirements::frontend/src/customerLookup.spec.ts",
+        "kind": "file",
+        "label": "customerLookup.spec.ts",
+        "path": "frontend/src/customerLookup.spec.ts",
+        "projectId": "requirements",
+        "repository": "example/customer-sample",
+        "module": "Frontend",
+        "language": "typescript",
+        "changed": false,
+        "changeKinds": [],
+        "evidence": {
+          "path": "frontend/src/customerLookup.spec.ts",
+          "range": {
+            "startLine": 1,
+            "endLine": 1
+          },
+          "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+          "fileHash": "b033953aaf51f31b7481fedd383143894cd18d3f4aebbc230e99d70bee5db305",
+          "excerpt": "import {test, expect} from '@playwright/test';",
+          "projectId": "requirements",
+          "repository": "example/customer-sample"
+        },
+        "declarations": [],
+        "phases": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "id": "requirements::frontend/src/CustomerResult.tsx",
+        "kind": "file",
+        "label": "CustomerResult.tsx",
+        "path": "frontend/src/CustomerResult.tsx",
+        "projectId": "requirements",
+        "repository": "example/customer-sample",
+        "module": "Frontend",
+        "language": "typescript",
+        "changed": false,
+        "changeKinds": [],
+        "evidence": {
+          "path": "frontend/src/CustomerResult.tsx",
+          "range": {
+            "startLine": 1,
+            "endLine": 1
+          },
+          "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+          "fileHash": "fd213c059dcdf53b40bc3e55e70809aea60b0b0fba019ce3073338108db96655",
+          "excerpt": "import React from 'react';",
+          "projectId": "requirements",
+          "repository": "example/customer-sample"
+        },
+        "declarations": [
+          {
+            "key": "CustomerResult",
+            "name": "CustomerResult",
+            "kind": "function",
+            "signature": "export function CustomerResult({result}: {result: CustomerResponse | null})",
+            "evidence": {
+              "path": "frontend/src/CustomerResult.tsx",
+              "range": {
+                "startLine": 4,
+                "endLine": 6
+              },
+              "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+              "fileHash": "fd213c059dcdf53b40bc3e55e70809aea60b0b0fba019ce3073338108db96655",
+              "excerpt": "export function CustomerResult({result}: {result: CustomerResponse | null}) {\n  return <section aria-label=\"Customer result\">{result?.displayName ?? 'Loading customer…'}</section>;\n}",
+              "projectId": "requirements",
+              "repository": "example/customer-sample"
+            }
+          }
+        ],
+        "phases": [
+          "baseline",
+          "candidate"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "a778b40719b86b79fb2fdb72",
+        "source": "requirements::backend/src/main/java/example/customers/CustomerLookupController.java",
+        "target": "requirements::backend/src/main/java/example/customers/CustomerLookupController.java",
+        "kind": "http",
+        "confidence": "medium",
+        "reason": "Literal HTTP verb/path matches source Spring mapping; runtime origin/proxy not verified",
+        "evidence": {
+          "path": "backend/src/main/java/example/customers/CustomerLookupController.java",
+          "range": {
+            "startLine": 12,
+            "endLine": 12
+          },
+          "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+          "fileHash": "28ec39a06652ee166d68a1c9e489c6ad1c43c970fd21d48c4d7675b79401300b",
+          "excerpt": "    @GetMapping(\"/customers/lookup\")",
+          "projectId": "requirements",
+          "repository": "example/customer-sample"
+        },
+        "targetEvidence": {
+          "path": "backend/src/main/java/example/customers/CustomerLookupController.java",
+          "range": {
+            "startLine": 12,
+            "endLine": 15
+          },
+          "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+          "fileHash": "28ec39a06652ee166d68a1c9e489c6ad1c43c970fd21d48c4d7675b79401300b",
+          "excerpt": "    @GetMapping(\"/customers/lookup\")\n    public CustomerResponse lookup(@RequestParam String id) {\n        return new CustomerResponse(id, \"Ada Example\");\n    }",
+          "projectId": "requirements",
+          "repository": "example/customer-sample"
+        },
+        "phase": "baseline",
+        "crossRepository": false,
+        "targetKey": "example.customers.CustomerLookupController#lookup/1"
+      },
+      {
+        "id": "c6a720a3731a1c2d6cf4f854",
+        "source": "requirements::backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+        "target": "requirements::backend/src/main/java/example/customers/CustomerLookupController.java",
+        "kind": "type",
+        "confidence": "high",
+        "reason": "Java qualified import or same-package type resolves to supplied source",
+        "evidence": {
+          "path": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+          "range": {
+            "startLine": 10,
+            "endLine": 10
+          },
+          "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+          "fileHash": "aa3a223914ae9a6772826e29cf6c8d54eec522fa0869dcaff96832f265bb5184",
+          "excerpt": "        var response = new CustomerLookupController().lookup(\"customer-1\");",
+          "projectId": "requirements",
+          "repository": "example/customer-sample"
+        },
+        "targetEvidence": {
+          "path": "backend/src/main/java/example/customers/CustomerLookupController.java",
+          "range": {
+            "startLine": 9,
+            "endLine": 16
+          },
+          "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+          "fileHash": "28ec39a06652ee166d68a1c9e489c6ad1c43c970fd21d48c4d7675b79401300b",
+          "excerpt": "@RestController\n@RequestMapping(\"/api\")\npublic class CustomerLookupController {\n    @GetMapping(\"/customers/lookup\")\n    public CustomerResponse lookup(@RequestParam String id) {\n        return new CustomerResponse(id, \"Ada Example\");\n    }\n}",
+          "projectId": "requirements",
+          "repository": "example/customer-sample"
+        },
+        "phase": "baseline",
+        "crossRepository": false,
+        "targetKey": "example.customers.CustomerLookupController"
+      },
+      {
+        "id": "0393eabc0f8b8e76a3493c1f",
+        "source": "requirements::backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+        "target": "requirements::backend/src/main/java/example/customers/CustomerLookupController.java",
+        "kind": "type",
+        "confidence": "high",
+        "reason": "Java qualified import or same-package type resolves to supplied source",
+        "evidence": {
+          "path": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+          "range": {
+            "startLine": 16,
+            "endLine": 16
+          },
+          "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+          "fileHash": "aa3a223914ae9a6772826e29cf6c8d54eec522fa0869dcaff96832f265bb5184",
+          "excerpt": "        var response = new CustomerLookupController().lookup(\"customer-1\");",
+          "projectId": "requirements",
+          "repository": "example/customer-sample"
+        },
+        "targetEvidence": {
+          "path": "backend/src/main/java/example/customers/CustomerLookupController.java",
+          "range": {
+            "startLine": 9,
+            "endLine": 16
+          },
+          "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+          "fileHash": "28ec39a06652ee166d68a1c9e489c6ad1c43c970fd21d48c4d7675b79401300b",
+          "excerpt": "@RestController\n@RequestMapping(\"/api\")\npublic class CustomerLookupController {\n    @GetMapping(\"/customers/lookup\")\n    public CustomerResponse lookup(@RequestParam String id) {\n        return new CustomerResponse(id, \"Ada Example\");\n    }\n}",
+          "projectId": "requirements",
+          "repository": "example/customer-sample"
+        },
+        "phase": "baseline",
+        "crossRepository": false,
+        "targetKey": "example.customers.CustomerLookupController"
+      },
+      {
+        "id": "7af0c48038d4ac6fdbad790d",
+        "source": "requirements::frontend/src/customerApi.ts",
+        "target": "requirements::frontend/src/customerApi.ts",
+        "kind": "type",
+        "confidence": "high",
+        "reason": "Same-file lexical binding",
+        "evidence": {
+          "path": "frontend/src/customerApi.ts",
+          "range": {
+            "startLine": 7,
+            "endLine": 7
+          },
+          "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+          "fileHash": "2cdee9cc200708bdb5c3184490c8e02a2597c6ada3b97b79ff5b66eb4c6a7095",
+          "excerpt": "export async function lookupCustomer(id: string): Promise<CustomerResponse> {",
+          "projectId": "requirements",
+          "repository": "example/customer-sample"
+        },
+        "targetEvidence": {
+          "path": "frontend/src/customerApi.ts",
+          "range": {
+            "startLine": 1,
+            "endLine": 4
+          },
+          "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+          "fileHash": "2cdee9cc200708bdb5c3184490c8e02a2597c6ada3b97b79ff5b66eb4c6a7095",
+          "excerpt": "export interface CustomerResponse {\n  id: string;\n  displayName: string;\n}",
+          "projectId": "requirements",
+          "repository": "example/customer-sample"
+        },
+        "phase": "baseline",
+        "crossRepository": false,
+        "targetKey": "CustomerResponse"
+      },
+      {
+        "id": "cc35058a5a8f8fba0e5ea4df",
+        "source": "requirements::frontend/src/CustomerResult.tsx",
+        "target": "requirements::frontend/src/customerApi.ts",
+        "kind": "import",
+        "confidence": "high",
+        "reason": "Relative import resolves to supplied source file",
+        "evidence": {
+          "path": "frontend/src/CustomerResult.tsx",
+          "range": {
+            "startLine": 2,
+            "endLine": 2
+          },
+          "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+          "fileHash": "fd213c059dcdf53b40bc3e55e70809aea60b0b0fba019ce3073338108db96655",
+          "excerpt": "import type {CustomerResponse} from './customerApi';",
+          "projectId": "requirements",
+          "repository": "example/customer-sample"
+        },
+        "targetEvidence": {
+          "path": "frontend/src/customerApi.ts",
+          "range": {
+            "startLine": 1,
+            "endLine": 1
+          },
+          "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+          "fileHash": "2cdee9cc200708bdb5c3184490c8e02a2597c6ada3b97b79ff5b66eb4c6a7095",
+          "excerpt": "export interface CustomerResponse {",
+          "projectId": "requirements",
+          "repository": "example/customer-sample"
+        },
+        "phase": "baseline",
+        "crossRepository": false,
+        "targetKey": null
+      },
+      {
+        "id": "049b1ff63fe3724768aaf6d7",
+        "source": "requirements::frontend/src/CustomerResult.tsx",
+        "target": "requirements::frontend/src/customerApi.ts",
+        "kind": "type",
+        "confidence": "high",
+        "reason": "Imported binding resolves to a supplied named declaration",
+        "evidence": {
+          "path": "frontend/src/CustomerResult.tsx",
+          "range": {
+            "startLine": 4,
+            "endLine": 4
+          },
+          "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+          "fileHash": "fd213c059dcdf53b40bc3e55e70809aea60b0b0fba019ce3073338108db96655",
+          "excerpt": "export function CustomerResult({result}: {result: CustomerResponse | null}) {",
+          "projectId": "requirements",
+          "repository": "example/customer-sample"
+        },
+        "targetEvidence": {
+          "path": "frontend/src/customerApi.ts",
+          "range": {
+            "startLine": 1,
+            "endLine": 4
+          },
+          "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+          "fileHash": "2cdee9cc200708bdb5c3184490c8e02a2597c6ada3b97b79ff5b66eb4c6a7095",
+          "excerpt": "export interface CustomerResponse {\n  id: string;\n  displayName: string;\n}",
+          "projectId": "requirements",
+          "repository": "example/customer-sample"
+        },
+        "phase": "baseline",
+        "crossRepository": false,
+        "targetKey": "CustomerResponse"
+      },
+      {
+        "id": "903867835e49a3360eb440b2",
+        "source": "requirements::backend/src/main/java/example/customers/CustomerLookupController.java",
+        "target": "requirements::backend/src/main/java/example/customers/CustomerLookupController.java",
+        "kind": "http",
+        "confidence": "medium",
+        "reason": "Literal HTTP verb/path matches source Spring mapping; runtime origin/proxy not verified",
+        "evidence": {
+          "path": "backend/src/main/java/example/customers/CustomerLookupController.java",
+          "range": {
+            "startLine": 12,
+            "endLine": 12
+          },
+          "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+          "fileHash": "28ec39a06652ee166d68a1c9e489c6ad1c43c970fd21d48c4d7675b79401300b",
+          "excerpt": "    @GetMapping(\"/customers/lookup\")",
+          "projectId": "requirements",
+          "repository": "example/customer-sample"
+        },
+        "targetEvidence": {
+          "path": "backend/src/main/java/example/customers/CustomerLookupController.java",
+          "range": {
+            "startLine": 12,
+            "endLine": 15
+          },
+          "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+          "fileHash": "28ec39a06652ee166d68a1c9e489c6ad1c43c970fd21d48c4d7675b79401300b",
+          "excerpt": "    @GetMapping(\"/customers/lookup\")\n    public CustomerResponse lookup(@RequestParam String id) {\n        return new CustomerResponse(id, \"Ada Example\");\n    }",
+          "projectId": "requirements",
+          "repository": "example/customer-sample"
+        },
+        "phase": "candidate",
+        "crossRepository": false,
+        "targetKey": "example.customers.CustomerLookupController#lookup/1"
+      },
+      {
+        "id": "c35f8540edc605cc2757f88e",
+        "source": "requirements::backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+        "target": "requirements::backend/src/main/java/example/customers/CustomerLookupController.java",
+        "kind": "type",
+        "confidence": "high",
+        "reason": "Java qualified import or same-package type resolves to supplied source",
+        "evidence": {
+          "path": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+          "range": {
+            "startLine": 10,
+            "endLine": 10
+          },
+          "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+          "fileHash": "aa3a223914ae9a6772826e29cf6c8d54eec522fa0869dcaff96832f265bb5184",
+          "excerpt": "        var response = new CustomerLookupController().lookup(\"customer-1\");",
+          "projectId": "requirements",
+          "repository": "example/customer-sample"
+        },
+        "targetEvidence": {
+          "path": "backend/src/main/java/example/customers/CustomerLookupController.java",
+          "range": {
+            "startLine": 9,
+            "endLine": 16
+          },
+          "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+          "fileHash": "28ec39a06652ee166d68a1c9e489c6ad1c43c970fd21d48c4d7675b79401300b",
+          "excerpt": "@RestController\n@RequestMapping(\"/api\")\npublic class CustomerLookupController {\n    @GetMapping(\"/customers/lookup\")\n    public CustomerResponse lookup(@RequestParam String id) {\n        return new CustomerResponse(id, \"Ada Example\");\n    }\n}",
+          "projectId": "requirements",
+          "repository": "example/customer-sample"
+        },
+        "phase": "candidate",
+        "crossRepository": false,
+        "targetKey": "example.customers.CustomerLookupController"
+      },
+      {
+        "id": "a584100d3ad30530662b318d",
+        "source": "requirements::backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+        "target": "requirements::backend/src/main/java/example/customers/CustomerLookupController.java",
+        "kind": "type",
+        "confidence": "high",
+        "reason": "Java qualified import or same-package type resolves to supplied source",
+        "evidence": {
+          "path": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+          "range": {
+            "startLine": 16,
+            "endLine": 16
+          },
+          "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+          "fileHash": "aa3a223914ae9a6772826e29cf6c8d54eec522fa0869dcaff96832f265bb5184",
+          "excerpt": "        var response = new CustomerLookupController().lookup(\"customer-1\");",
+          "projectId": "requirements",
+          "repository": "example/customer-sample"
+        },
+        "targetEvidence": {
+          "path": "backend/src/main/java/example/customers/CustomerLookupController.java",
+          "range": {
+            "startLine": 9,
+            "endLine": 16
+          },
+          "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+          "fileHash": "28ec39a06652ee166d68a1c9e489c6ad1c43c970fd21d48c4d7675b79401300b",
+          "excerpt": "@RestController\n@RequestMapping(\"/api\")\npublic class CustomerLookupController {\n    @GetMapping(\"/customers/lookup\")\n    public CustomerResponse lookup(@RequestParam String id) {\n        return new CustomerResponse(id, \"Ada Example\");\n    }\n}",
+          "projectId": "requirements",
+          "repository": "example/customer-sample"
+        },
+        "phase": "candidate",
+        "crossRepository": false,
+        "targetKey": "example.customers.CustomerLookupController"
+      },
+      {
+        "id": "12c52c7da38e3f23e0377ba0",
+        "source": "requirements::frontend/src/customerApi.ts",
+        "target": "requirements::frontend/src/customerApi.ts",
+        "kind": "type",
+        "confidence": "high",
+        "reason": "Same-file lexical binding",
+        "evidence": {
+          "path": "frontend/src/customerApi.ts",
+          "range": {
+            "startLine": 7,
+            "endLine": 7
+          },
+          "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+          "fileHash": "2cdee9cc200708bdb5c3184490c8e02a2597c6ada3b97b79ff5b66eb4c6a7095",
+          "excerpt": "export async function lookupCustomer(id: string): Promise<CustomerResponse> {",
+          "projectId": "requirements",
+          "repository": "example/customer-sample"
+        },
+        "targetEvidence": {
+          "path": "frontend/src/customerApi.ts",
+          "range": {
+            "startLine": 1,
+            "endLine": 4
+          },
+          "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+          "fileHash": "2cdee9cc200708bdb5c3184490c8e02a2597c6ada3b97b79ff5b66eb4c6a7095",
+          "excerpt": "export interface CustomerResponse {\n  id: string;\n  displayName: string;\n}",
+          "projectId": "requirements",
+          "repository": "example/customer-sample"
+        },
+        "phase": "candidate",
+        "crossRepository": false,
+        "targetKey": "CustomerResponse"
+      },
+      {
+        "id": "fae9b5ec1747f82e767c588a",
+        "source": "requirements::frontend/src/CustomerResult.tsx",
+        "target": "requirements::frontend/src/customerApi.ts",
+        "kind": "import",
+        "confidence": "high",
+        "reason": "Relative import resolves to supplied source file",
+        "evidence": {
+          "path": "frontend/src/CustomerResult.tsx",
+          "range": {
+            "startLine": 2,
+            "endLine": 2
+          },
+          "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+          "fileHash": "fd213c059dcdf53b40bc3e55e70809aea60b0b0fba019ce3073338108db96655",
+          "excerpt": "import type {CustomerResponse} from './customerApi';",
+          "projectId": "requirements",
+          "repository": "example/customer-sample"
+        },
+        "targetEvidence": {
+          "path": "frontend/src/customerApi.ts",
+          "range": {
+            "startLine": 1,
+            "endLine": 1
+          },
+          "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+          "fileHash": "2cdee9cc200708bdb5c3184490c8e02a2597c6ada3b97b79ff5b66eb4c6a7095",
+          "excerpt": "export interface CustomerResponse {",
+          "projectId": "requirements",
+          "repository": "example/customer-sample"
+        },
+        "phase": "candidate",
+        "crossRepository": false,
+        "targetKey": null
+      },
+      {
+        "id": "9b7beda2266c40aebb476934",
+        "source": "requirements::frontend/src/CustomerResult.tsx",
+        "target": "requirements::frontend/src/customerApi.ts",
+        "kind": "type",
+        "confidence": "high",
+        "reason": "Imported binding resolves to a supplied named declaration",
+        "evidence": {
+          "path": "frontend/src/CustomerResult.tsx",
+          "range": {
+            "startLine": 4,
+            "endLine": 4
+          },
+          "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+          "fileHash": "fd213c059dcdf53b40bc3e55e70809aea60b0b0fba019ce3073338108db96655",
+          "excerpt": "export function CustomerResult({result}: {result: CustomerResponse | null}) {",
+          "projectId": "requirements",
+          "repository": "example/customer-sample"
+        },
+        "targetEvidence": {
+          "path": "frontend/src/customerApi.ts",
+          "range": {
+            "startLine": 1,
+            "endLine": 4
+          },
+          "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+          "fileHash": "2cdee9cc200708bdb5c3184490c8e02a2597c6ada3b97b79ff5b66eb4c6a7095",
+          "excerpt": "export interface CustomerResponse {\n  id: string;\n  displayName: string;\n}",
+          "projectId": "requirements",
+          "repository": "example/customer-sample"
+        },
+        "phase": "candidate",
+        "crossRepository": false,
+        "targetKey": "CustomerResponse"
+      }
+    ],
+    "complete": false,
+    "direction": "consumer-to-dependency"
+  },
+  "projectMetadata": [
+    {
+      "id": "requirements",
+      "label": "Customer checklist sample",
+      "repository": "example/customer-sample",
+      "module": "Business evidence"
+    }
+  ],
+  "workspace": {
+    "version": "demo-requirements-1",
+    "mappings": [],
+    "configHash": "c3b94fd8b808e841fc9849d030fb190c79df43299983fd59aaaceb0686c725e4"
+  },
+  "changes": [],
+  "impact": {
+    "paths": [],
+    "limits": {
+      "maxDepth": 12,
+      "representativePaths": true,
+      "complete": false,
+      "reason": "One bounded representative chain per expanded node and phase; alternate paths and deeper chains may be omitted"
+    },
+    "direct": [],
+    "indirect": []
+  },
+  "findings": [],
+  "guidance": {
+    "projects": [
+      {
+        "projectId": "requirements",
+        "task": "Demonstrate a bounded evidence-based change review",
+        "ruleSetVersion": "demo-2026.10",
+        "approvalGap": "No human approval is inferred. Reviewed examples/exceptions are assertions from supplied configuration; simulation records are demonstrations only.",
+        "rules": [
+          {
+            "id": "api/contract-change",
+            "kind": "endpoint-contract-change",
+            "owner": "Synthetic demo team",
+            "version": "demo-2026.10",
+            "severity": "warning",
+            "instruction": "Review consumers and API compatibility before changing a lookup contract.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "quality": {
+    "tools": [
+      {
+        "name": "eslint",
+        "version": "10.12.0",
+        "parser": "@typescript-eslint/parser@8.71.1",
+        "rules": [
+          "complexity",
+          "no-unreachable",
+          "no-constant-condition",
+          "no-constant-binary-expression",
+          "no-dupe-else-if",
+          "no-unsafe-finally",
+          "no-async-promise-executor",
+          "require-atomic-updates",
+          "@typescript-eslint/no-non-null-assertion",
+          "@typescript-eslint/no-non-null-asserted-optional-chain"
+        ],
+        "sourceOnly": true
+      },
+      {
+        "name": "jscpd",
+        "version": "4.0.5",
+        "rules": [
+          "duplicate-block"
+        ],
+        "sourceOnly": true
+      },
+      {
+        "name": "pmd",
+        "version": "7.17.0",
+        "status": "available",
+        "rules": [
+          "CyclomaticComplexity",
+          "BrokenNullCheck",
+          "CloseResource",
+          "UnconditionalIfStatement"
+        ],
+        "sourceOnly": true
+      }
+    ],
+    "findings": [],
+    "unsupported": [
+      {
+        "tool": "typescript-eslint",
+        "reason": "type-aware-checks-unavailable",
+        "detail": "No repository tsconfig, dependencies or compiler project is loaded; no-floating-promises, no-unnecessary-condition and typed null/async rules are not run",
+        "projectId": "requirements"
+      },
+      {
+        "tool": "pmd",
+        "reason": "source-only-type-resolution",
+        "detail": "JDK types only; external Java dependency types, dispatch and resource ownership contracts are not verified",
+        "projectId": "requirements"
+      },
+      {
+        "tool": "source-design",
+        "reason": "bounded-design-coverage",
+        "detail": "Selected import boundaries and declaration conventions only; no universal SRP/OCP/LSP/ISP/DIP judgment, runtime DI resolution, inheritance substitutability or behavioral proof",
+        "projectId": "requirements"
+      }
+    ],
+    "projects": [
+      {
+        "configHash": "a2ee4ddf65b11ddd9d572f41575b37f55c0141f30e531b11fe09d18a64e2dc58",
+        "config": {
+          "complexityThreshold": 10,
+          "duplication": {
+            "minTokens": 50,
+            "minLines": 5
+          },
+          "pmdEnabled": true
+        },
+        "tools": [
+          {
+            "name": "eslint",
+            "version": "10.12.0",
+            "parser": "@typescript-eslint/parser@8.71.1",
+            "rules": [
+              "complexity",
+              "no-unreachable",
+              "no-constant-condition",
+              "no-constant-binary-expression",
+              "no-dupe-else-if",
+              "no-unsafe-finally",
+              "no-async-promise-executor",
+              "require-atomic-updates",
+              "@typescript-eslint/no-non-null-assertion",
+              "@typescript-eslint/no-non-null-asserted-optional-chain"
+            ],
+            "sourceOnly": true
+          },
+          {
+            "name": "jscpd",
+            "version": "4.0.5",
+            "rules": [
+              "duplicate-block"
+            ],
+            "sourceOnly": true
+          },
+          {
+            "name": "pmd",
+            "version": "7.17.0",
+            "status": "available",
+            "rules": [
+              "CyclomaticComplexity",
+              "BrokenNullCheck",
+              "CloseResource",
+              "UnconditionalIfStatement"
+            ],
+            "sourceOnly": true
+          }
+        ],
+        "findings": [],
+        "unsupported": [
+          {
+            "tool": "typescript-eslint",
+            "reason": "type-aware-checks-unavailable",
+            "detail": "No repository tsconfig, dependencies or compiler project is loaded; no-floating-promises, no-unnecessary-condition and typed null/async rules are not run",
+            "projectId": "requirements"
+          },
+          {
+            "tool": "pmd",
+            "reason": "source-only-type-resolution",
+            "detail": "JDK types only; external Java dependency types, dispatch and resource ownership contracts are not verified",
+            "projectId": "requirements"
+          },
+          {
+            "tool": "source-design",
+            "reason": "bounded-design-coverage",
+            "detail": "Selected import boundaries and declaration conventions only; no universal SRP/OCP/LSP/ISP/DIP judgment, runtime DI resolution, inheritance substitutability or behavioral proof",
+            "projectId": "requirements"
+          }
+        ],
+        "metrics": {
+          "elapsedMs": 1663.42,
+          "analyzedFiles": {
+            "baseline": {
+              "eslint": 3,
+              "pmd": 3,
+              "jscpd": 6
+            },
+            "candidate": {
+              "eslint": 3,
+              "pmd": 3,
+              "jscpd": 6
+            }
+          },
+          "duplication": {
+            "baseline": {
+              "lines": 60,
+              "tokens": 519,
+              "sources": 5,
+              "clones": 0,
+              "duplicatedLines": 0,
+              "duplicatedTokens": 0,
+              "percentage": 0,
+              "percentageTokens": 0,
+              "newDuplicatedLines": 0,
+              "newClones": 0
+            },
+            "candidate": {
+              "lines": 60,
+              "tokens": 519,
+              "sources": 5,
+              "clones": 0,
+              "duplicatedLines": 0,
+              "duplicatedTokens": 0,
+              "percentage": 0,
+              "percentageTokens": 0,
+              "newDuplicatedLines": 0,
+              "newClones": 0
+            }
+          }
+        },
+        "conventions": {
+          "configHash": "a0c3afb1e366ef4040a5019cacaf21eaed3e19335582e5366b1220659d28c64d",
+          "config": {
+            "forbiddenImports": [],
+            "maxParameters": 5,
+            "maxClassMethods": 20,
+            "checkPublicMutableFields": true,
+            "checkModuleCycles": true
+          },
+          "tools": [
+            {
+              "name": "source-design",
+              "version": "1.0",
+              "rules": [
+                "forbidden-import",
+                "parameter-count",
+                "class-method-count",
+                "public-mutable-field",
+                "module-cycle"
+              ],
+              "sourceOnly": true
+            }
+          ],
+          "findings": [],
+          "unsupported": [
+            {
+              "tool": "source-design",
+              "reason": "bounded-design-coverage",
+              "detail": "Selected import boundaries and declaration conventions only; no universal SRP/OCP/LSP/ISP/DIP judgment, runtime DI resolution, inheritance substitutability or behavioral proof"
+            }
+          ],
+          "metrics": {
+            "configuredPolicies": 0,
+            "baselineFindings": 0,
+            "candidateFindings": 0
+          }
+        },
+        "projectId": "requirements",
+        "cache": "miss"
+      }
+    ]
+  },
+  "requirements": {
+    "schemaVersion": "1",
+    "status": "draft",
+    "advisory": true,
+    "confirmation": {
+      "status": "draft"
+    },
+    "checklist": {
+      "revision": "customer-lookup-checklist-example-v1",
+      "owner": "Example product owner (unconfirmed demonstration)",
+      "hash": "775651a6cdc32a97c972c816f4a97652639ad60bab94a5c166bac25cab5f7eb4"
+    },
+    "provenance": {
+      "mode": "workspace",
+      "fileHashesVerified": true,
+      "projects": [
+        {
+          "id": "requirements",
+          "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+          "contentHash": "00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97"
+        }
+      ],
+      "scope": {
+        "status": "unscoped",
+        "issues": []
+      }
+    },
+    "criteria": [
+      {
+        "id": "customer-lookup-by-id",
+        "description": "A customer can request a lookup by identifier and receive the matching customer identifier.",
+        "assessment": "unverified",
+        "reasons": [
+          "Checklist is draft; business criteria have not been asserted as confirmed"
+        ],
+        "sourceChecks": [
+          {
+            "selector": {
+              "pathPattern": "backend/src/main/java/example/customers/CustomerLookupController.java",
+              "symbol": "lookup",
+              "pattern": "@GetMapping(\"/customers/lookup\")"
+            },
+            "status": "matched",
+            "reason": "All explicit literal anchors occur in the same supplied file",
+            "matchingFileCount": 1,
+            "searchedFileCount": 1,
+            "searchedProjectIds": [
+              "requirements"
+            ],
+            "evidence": [
+              {
+                "path": "backend/src/main/java/example/customers/CustomerLookupController.java",
+                "range": {
+                  "startLine": 12,
+                  "endLine": 12
+                },
+                "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+                "fileHash": "28ec39a06652ee166d68a1c9e489c6ad1c43c970fd21d48c4d7675b79401300b",
+                "excerpt": "    @GetMapping(\"/customers/lookup\")",
+                "projectId": "requirements",
+                "kind": "source-literal",
+                "anchor": "symbol",
+                "matchedLiteral": "lookup",
+                "execution": "unverified"
+              },
+              {
+                "path": "backend/src/main/java/example/customers/CustomerLookupController.java",
+                "range": {
+                  "startLine": 12,
+                  "endLine": 12
+                },
+                "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+                "fileHash": "28ec39a06652ee166d68a1c9e489c6ad1c43c970fd21d48c4d7675b79401300b",
+                "excerpt": "    @GetMapping(\"/customers/lookup\")",
+                "projectId": "requirements",
+                "kind": "source-literal",
+                "anchor": "pattern",
+                "matchedLiteral": "@GetMapping(\"/customers/lookup\")",
+                "execution": "unverified"
+              }
+            ],
+            "evidenceTruncated": false
+          },
+          {
+            "selector": {
+              "pathPattern": "frontend/src/customerApi.ts",
+              "symbol": "lookupCustomer",
+              "pattern": "/api/customers/lookup?id="
+            },
+            "status": "matched",
+            "reason": "All explicit literal anchors occur in the same supplied file",
+            "matchingFileCount": 1,
+            "searchedFileCount": 1,
+            "searchedProjectIds": [
+              "requirements"
+            ],
+            "evidence": [
+              {
+                "path": "frontend/src/customerApi.ts",
+                "range": {
+                  "startLine": 7,
+                  "endLine": 7
+                },
+                "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+                "fileHash": "2cdee9cc200708bdb5c3184490c8e02a2597c6ada3b97b79ff5b66eb4c6a7095",
+                "excerpt": "export async function lookupCustomer(id: string): Promise<CustomerResponse> {",
+                "projectId": "requirements",
+                "kind": "source-literal",
+                "anchor": "symbol",
+                "matchedLiteral": "lookupCustomer",
+                "execution": "unverified"
+              },
+              {
+                "path": "frontend/src/customerApi.ts",
+                "range": {
+                  "startLine": 8,
+                  "endLine": 8
+                },
+                "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+                "fileHash": "2cdee9cc200708bdb5c3184490c8e02a2597c6ada3b97b79ff5b66eb4c6a7095",
+                "excerpt": "  const response = await fetch(`/api/customers/lookup?id=${encodeURIComponent(id)}`);",
+                "projectId": "requirements",
+                "kind": "source-literal",
+                "anchor": "pattern",
+                "matchedLiteral": "/api/customers/lookup?id=",
+                "execution": "unverified"
+              }
+            ],
+            "evidenceTruncated": false
+          }
+        ],
+        "testChecks": [
+          {
+            "selector": {
+              "pathPattern": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+              "name": "lookupByIdReturnsMatchingCustomer"
+            },
+            "status": "matched",
+            "reason": "All explicit literal anchors occur in the same supplied file",
+            "matchingFileCount": 1,
+            "searchedFileCount": 1,
+            "searchedProjectIds": [
+              "requirements"
+            ],
+            "evidence": [
+              {
+                "path": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+                "range": {
+                  "startLine": 9,
+                  "endLine": 9
+                },
+                "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+                "fileHash": "aa3a223914ae9a6772826e29cf6c8d54eec522fa0869dcaff96832f265bb5184",
+                "excerpt": "    void lookupByIdReturnsMatchingCustomer() {",
+                "projectId": "requirements",
+                "kind": "test-source-literal",
+                "anchor": "name",
+                "matchedLiteral": "lookupByIdReturnsMatchingCustomer",
+                "execution": "unverified"
+              }
+            ],
+            "evidenceTruncated": false
+          }
+        ],
+        "sourceEvidence": [
+          {
+            "path": "backend/src/main/java/example/customers/CustomerLookupController.java",
+            "range": {
+              "startLine": 12,
+              "endLine": 12
+            },
+            "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+            "fileHash": "28ec39a06652ee166d68a1c9e489c6ad1c43c970fd21d48c4d7675b79401300b",
+            "excerpt": "    @GetMapping(\"/customers/lookup\")",
+            "projectId": "requirements",
+            "kind": "source-literal",
+            "anchor": "symbol",
+            "matchedLiteral": "lookup",
+            "execution": "unverified"
+          },
+          {
+            "path": "backend/src/main/java/example/customers/CustomerLookupController.java",
+            "range": {
+              "startLine": 12,
+              "endLine": 12
+            },
+            "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+            "fileHash": "28ec39a06652ee166d68a1c9e489c6ad1c43c970fd21d48c4d7675b79401300b",
+            "excerpt": "    @GetMapping(\"/customers/lookup\")",
+            "projectId": "requirements",
+            "kind": "source-literal",
+            "anchor": "pattern",
+            "matchedLiteral": "@GetMapping(\"/customers/lookup\")",
+            "execution": "unverified"
+          },
+          {
+            "path": "frontend/src/customerApi.ts",
+            "range": {
+              "startLine": 7,
+              "endLine": 7
+            },
+            "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+            "fileHash": "2cdee9cc200708bdb5c3184490c8e02a2597c6ada3b97b79ff5b66eb4c6a7095",
+            "excerpt": "export async function lookupCustomer(id: string): Promise<CustomerResponse> {",
+            "projectId": "requirements",
+            "kind": "source-literal",
+            "anchor": "symbol",
+            "matchedLiteral": "lookupCustomer",
+            "execution": "unverified"
+          },
+          {
+            "path": "frontend/src/customerApi.ts",
+            "range": {
+              "startLine": 8,
+              "endLine": 8
+            },
+            "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+            "fileHash": "2cdee9cc200708bdb5c3184490c8e02a2597c6ada3b97b79ff5b66eb4c6a7095",
+            "excerpt": "  const response = await fetch(`/api/customers/lookup?id=${encodeURIComponent(id)}`);",
+            "projectId": "requirements",
+            "kind": "source-literal",
+            "anchor": "pattern",
+            "matchedLiteral": "/api/customers/lookup?id=",
+            "execution": "unverified"
+          }
+        ],
+        "testEvidence": [
+          {
+            "path": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+            "range": {
+              "startLine": 9,
+              "endLine": 9
+            },
+            "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+            "fileHash": "aa3a223914ae9a6772826e29cf6c8d54eec522fa0869dcaff96832f265bb5184",
+            "excerpt": "    void lookupByIdReturnsMatchingCustomer() {",
+            "projectId": "requirements",
+            "kind": "test-source-literal",
+            "anchor": "name",
+            "matchedLiteral": "lookupByIdReturnsMatchingCustomer",
+            "execution": "unverified"
+          }
+        ],
+        "edgeCases": [
+          {
+            "id": "known-customer",
+            "description": "A known identifier is preserved in the returned customer.",
+            "assessment": "evidenced",
+            "checks": [
+              {
+                "selector": {
+                  "pathPattern": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+                  "name": "lookupByIdReturnsMatchingCustomer"
+                },
+                "status": "matched",
+                "reason": "All explicit literal anchors occur in the same supplied file",
+                "matchingFileCount": 1,
+                "searchedFileCount": 1,
+                "searchedProjectIds": [
+                  "requirements"
+                ],
+                "evidence": [
+                  {
+                    "path": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+                    "range": {
+                      "startLine": 9,
+                      "endLine": 9
+                    },
+                    "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+                    "fileHash": "aa3a223914ae9a6772826e29cf6c8d54eec522fa0869dcaff96832f265bb5184",
+                    "excerpt": "    void lookupByIdReturnsMatchingCustomer() {",
+                    "projectId": "requirements",
+                    "kind": "test-source-literal",
+                    "anchor": "name",
+                    "matchedLiteral": "lookupByIdReturnsMatchingCustomer",
+                    "execution": "unverified"
+                  }
+                ],
+                "evidenceTruncated": false
+              }
+            ],
+            "testEvidence": [
+              {
+                "path": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+                "range": {
+                  "startLine": 9,
+                  "endLine": 9
+                },
+                "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+                "fileHash": "aa3a223914ae9a6772826e29cf6c8d54eec522fa0869dcaff96832f265bb5184",
+                "excerpt": "    void lookupByIdReturnsMatchingCustomer() {",
+                "projectId": "requirements",
+                "kind": "test-source-literal",
+                "anchor": "name",
+                "matchedLiteral": "lookupByIdReturnsMatchingCustomer",
+                "execution": "unverified"
+              }
+            ],
+            "runtime": "unverified"
+          }
+        ],
+        "missingEdgeCases": [],
+        "runtime": "unverified"
+      },
+      {
+        "id": "display-name",
+        "description": "The customer result displays the displayName property from the lookup response.",
+        "assessment": "unverified",
+        "reasons": [
+          "Checklist is draft; business criteria have not been asserted as confirmed"
+        ],
+        "sourceChecks": [
+          {
+            "selector": {
+              "pathPattern": "backend/src/main/java/example/customers/CustomerResponse.java",
+              "pattern": "String displayName"
+            },
+            "status": "matched",
+            "reason": "All explicit literal anchors occur in the same supplied file",
+            "matchingFileCount": 1,
+            "searchedFileCount": 1,
+            "searchedProjectIds": [
+              "requirements"
+            ],
+            "evidence": [
+              {
+                "path": "backend/src/main/java/example/customers/CustomerResponse.java",
+                "range": {
+                  "startLine": 3,
+                  "endLine": 3
+                },
+                "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+                "fileHash": "fe4a076477f47074f1ca4a4140e45648ce3e2110fef9cf31fd934ad2bd1dfe4a",
+                "excerpt": "public record CustomerResponse(String id, String displayName) {}",
+                "projectId": "requirements",
+                "kind": "source-literal",
+                "anchor": "pattern",
+                "matchedLiteral": "String displayName",
+                "execution": "unverified"
+              }
+            ],
+            "evidenceTruncated": false
+          },
+          {
+            "selector": {
+              "pathPattern": "frontend/src/CustomerResult.tsx",
+              "pattern": "result?.displayName"
+            },
+            "status": "matched",
+            "reason": "All explicit literal anchors occur in the same supplied file",
+            "matchingFileCount": 1,
+            "searchedFileCount": 1,
+            "searchedProjectIds": [
+              "requirements"
+            ],
+            "evidence": [
+              {
+                "path": "frontend/src/CustomerResult.tsx",
+                "range": {
+                  "startLine": 5,
+                  "endLine": 5
+                },
+                "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+                "fileHash": "fd213c059dcdf53b40bc3e55e70809aea60b0b0fba019ce3073338108db96655",
+                "excerpt": "  return <section aria-label=\"Customer result\">{result?.displayName ?? 'Loading customer…'}</section>;",
+                "projectId": "requirements",
+                "kind": "source-literal",
+                "anchor": "pattern",
+                "matchedLiteral": "result?.displayName",
+                "execution": "unverified"
+              }
+            ],
+            "evidenceTruncated": false
+          }
+        ],
+        "testChecks": [
+          {
+            "selector": {
+              "pathPattern": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+              "name": "returnsDisplayName"
+            },
+            "status": "matched",
+            "reason": "All explicit literal anchors occur in the same supplied file",
+            "matchingFileCount": 1,
+            "searchedFileCount": 1,
+            "searchedProjectIds": [
+              "requirements"
+            ],
+            "evidence": [
+              {
+                "path": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+                "range": {
+                  "startLine": 15,
+                  "endLine": 15
+                },
+                "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+                "fileHash": "aa3a223914ae9a6772826e29cf6c8d54eec522fa0869dcaff96832f265bb5184",
+                "excerpt": "    void returnsDisplayName() {",
+                "projectId": "requirements",
+                "kind": "test-source-literal",
+                "anchor": "name",
+                "matchedLiteral": "returnsDisplayName",
+                "execution": "unverified"
+              }
+            ],
+            "evidenceTruncated": false
+          }
+        ],
+        "sourceEvidence": [
+          {
+            "path": "backend/src/main/java/example/customers/CustomerResponse.java",
+            "range": {
+              "startLine": 3,
+              "endLine": 3
+            },
+            "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+            "fileHash": "fe4a076477f47074f1ca4a4140e45648ce3e2110fef9cf31fd934ad2bd1dfe4a",
+            "excerpt": "public record CustomerResponse(String id, String displayName) {}",
+            "projectId": "requirements",
+            "kind": "source-literal",
+            "anchor": "pattern",
+            "matchedLiteral": "String displayName",
+            "execution": "unverified"
+          },
+          {
+            "path": "frontend/src/CustomerResult.tsx",
+            "range": {
+              "startLine": 5,
+              "endLine": 5
+            },
+            "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+            "fileHash": "fd213c059dcdf53b40bc3e55e70809aea60b0b0fba019ce3073338108db96655",
+            "excerpt": "  return <section aria-label=\"Customer result\">{result?.displayName ?? 'Loading customer…'}</section>;",
+            "projectId": "requirements",
+            "kind": "source-literal",
+            "anchor": "pattern",
+            "matchedLiteral": "result?.displayName",
+            "execution": "unverified"
+          }
+        ],
+        "testEvidence": [
+          {
+            "path": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+            "range": {
+              "startLine": 15,
+              "endLine": 15
+            },
+            "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+            "fileHash": "aa3a223914ae9a6772826e29cf6c8d54eec522fa0869dcaff96832f265bb5184",
+            "excerpt": "    void returnsDisplayName() {",
+            "projectId": "requirements",
+            "kind": "test-source-literal",
+            "anchor": "name",
+            "matchedLiteral": "returnsDisplayName",
+            "execution": "unverified"
+          }
+        ],
+        "edgeCases": [],
+        "missingEdgeCases": [],
+        "runtime": "unverified"
+      },
+      {
+        "id": "blank-identifier",
+        "description": "A blank customer identifier is rejected before a lookup request.",
+        "assessment": "unverified",
+        "reasons": [
+          "Checklist is draft; business criteria have not been asserted as confirmed",
+          "One or more declared source selectors are unmatched",
+          "One or more declared test selectors are unmatched",
+          "Declared edge cases have missing test source evidence"
+        ],
+        "sourceChecks": [
+          {
+            "selector": {
+              "pathPattern": "frontend/src/customerApi.ts",
+              "pattern": "if (!id.trim())"
+            },
+            "status": "unmatched",
+            "reason": "No eligible file contains all explicit literal anchors",
+            "matchingFileCount": 0,
+            "searchedFileCount": 1,
+            "searchedProjectIds": [
+              "requirements"
+            ],
+            "evidence": [],
+            "evidenceTruncated": false
+          }
+        ],
+        "testChecks": [
+          {
+            "selector": {
+              "pathPattern": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+              "name": "rejectsBlankIdentifier"
+            },
+            "status": "unmatched",
+            "reason": "No eligible file contains all explicit literal anchors",
+            "matchingFileCount": 0,
+            "searchedFileCount": 1,
+            "searchedProjectIds": [
+              "requirements"
+            ],
+            "evidence": [],
+            "evidenceTruncated": false
+          }
+        ],
+        "sourceEvidence": [],
+        "testEvidence": [],
+        "edgeCases": [
+          {
+            "id": "empty-id",
+            "description": "An empty identifier produces validation feedback and no request.",
+            "assessment": "missing",
+            "checks": [
+              {
+                "selector": {
+                  "pathPattern": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+                  "name": "rejectsBlankIdentifier"
+                },
+                "status": "unmatched",
+                "reason": "No eligible file contains all explicit literal anchors",
+                "matchingFileCount": 0,
+                "searchedFileCount": 1,
+                "searchedProjectIds": [
+                  "requirements"
+                ],
+                "evidence": [],
+                "evidenceTruncated": false
+              }
+            ],
+            "testEvidence": [],
+            "runtime": "unverified",
+            "reason": "One or more declared edge-case test selectors are unmatched"
+          },
+          {
+            "id": "whitespace-id",
+            "description": "A whitespace-only identifier also produces validation feedback.",
+            "assessment": "missing",
+            "checks": [],
+            "testEvidence": [],
+            "runtime": "unverified",
+            "reason": "No explicit test selector supplied for this edge case"
+          }
+        ],
+        "missingEdgeCases": [
+          {
+            "id": "empty-id",
+            "description": "An empty identifier produces validation feedback and no request.",
+            "reason": "One or more declared edge-case test selectors are unmatched",
+            "checks": [
+              {
+                "selector": {
+                  "pathPattern": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+                  "name": "rejectsBlankIdentifier"
+                },
+                "status": "unmatched",
+                "reason": "No eligible file contains all explicit literal anchors",
+                "matchingFileCount": 0,
+                "searchedFileCount": 1,
+                "searchedProjectIds": [
+                  "requirements"
+                ],
+                "evidence": [],
+                "evidenceTruncated": false
+              }
+            ]
+          },
+          {
+            "id": "whitespace-id",
+            "description": "A whitespace-only identifier also produces validation feedback.",
+            "reason": "No explicit test selector supplied for this edge case",
+            "checks": []
+          }
+        ],
+        "runtime": "unverified"
+      },
+      {
+        "id": "customer-not-found",
+        "description": "A customer that does not exist receives a clear not-found response.",
+        "assessment": "unverified",
+        "reasons": [
+          "Checklist is draft; business criteria have not been asserted as confirmed",
+          "One or more declared test selectors are unmatched",
+          "Declared edge cases have missing test source evidence"
+        ],
+        "sourceChecks": [
+          {
+            "selector": {
+              "pathPattern": "frontend/src/customerApi.ts",
+              "pattern": "throw new Error('Customer lookup failed')"
+            },
+            "status": "matched",
+            "reason": "All explicit literal anchors occur in the same supplied file",
+            "matchingFileCount": 1,
+            "searchedFileCount": 1,
+            "searchedProjectIds": [
+              "requirements"
+            ],
+            "evidence": [
+              {
+                "path": "frontend/src/customerApi.ts",
+                "range": {
+                  "startLine": 9,
+                  "endLine": 9
+                },
+                "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+                "fileHash": "2cdee9cc200708bdb5c3184490c8e02a2597c6ada3b97b79ff5b66eb4c6a7095",
+                "excerpt": "  if (!response.ok) throw new Error('Customer lookup failed');",
+                "projectId": "requirements",
+                "kind": "source-literal",
+                "anchor": "pattern",
+                "matchedLiteral": "throw new Error('Customer lookup failed')",
+                "execution": "unverified"
+              }
+            ],
+            "evidenceTruncated": false
+          }
+        ],
+        "testChecks": [
+          {
+            "selector": {
+              "pathPattern": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+              "name": "returns404WhenCustomerMissing"
+            },
+            "status": "unmatched",
+            "reason": "No eligible file contains all explicit literal anchors",
+            "matchingFileCount": 0,
+            "searchedFileCount": 1,
+            "searchedProjectIds": [
+              "requirements"
+            ],
+            "evidence": [],
+            "evidenceTruncated": false
+          }
+        ],
+        "sourceEvidence": [
+          {
+            "path": "frontend/src/customerApi.ts",
+            "range": {
+              "startLine": 9,
+              "endLine": 9
+            },
+            "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+            "fileHash": "2cdee9cc200708bdb5c3184490c8e02a2597c6ada3b97b79ff5b66eb4c6a7095",
+            "excerpt": "  if (!response.ok) throw new Error('Customer lookup failed');",
+            "projectId": "requirements",
+            "kind": "source-literal",
+            "anchor": "pattern",
+            "matchedLiteral": "throw new Error('Customer lookup failed')",
+            "execution": "unverified"
+          }
+        ],
+        "testEvidence": [],
+        "edgeCases": [
+          {
+            "id": "unknown-customer",
+            "description": "An unknown identifier is handled separately from a server failure.",
+            "assessment": "missing",
+            "checks": [
+              {
+                "selector": {
+                  "pathPattern": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+                  "name": "returns404WhenCustomerMissing"
+                },
+                "status": "unmatched",
+                "reason": "No eligible file contains all explicit literal anchors",
+                "matchingFileCount": 0,
+                "searchedFileCount": 1,
+                "searchedProjectIds": [
+                  "requirements"
+                ],
+                "evidence": [],
+                "evidenceTruncated": false
+              }
+            ],
+            "testEvidence": [],
+            "runtime": "unverified",
+            "reason": "One or more declared edge-case test selectors are unmatched"
+          }
+        ],
+        "missingEdgeCases": [
+          {
+            "id": "unknown-customer",
+            "description": "An unknown identifier is handled separately from a server failure.",
+            "reason": "One or more declared edge-case test selectors are unmatched",
+            "checks": [
+              {
+                "selector": {
+                  "pathPattern": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+                  "name": "returns404WhenCustomerMissing"
+                },
+                "status": "unmatched",
+                "reason": "No eligible file contains all explicit literal anchors",
+                "matchingFileCount": 0,
+                "searchedFileCount": 1,
+                "searchedProjectIds": [
+                  "requirements"
+                ],
+                "evidence": [],
+                "evidenceTruncated": false
+              }
+            ]
+          }
+        ],
+        "runtime": "unverified"
+      },
+      {
+        "id": "loading-state",
+        "description": "The user sees a loading label before the customer response arrives.",
+        "assessment": "unverified",
+        "reasons": [
+          "Checklist is draft; business criteria have not been asserted as confirmed",
+          "One or more declared test selectors are unmatched",
+          "Declared edge cases have missing test source evidence"
+        ],
+        "sourceChecks": [
+          {
+            "selector": {
+              "pathPattern": "frontend/src/CustomerResult.tsx",
+              "pattern": "Loading customer…"
+            },
+            "status": "matched",
+            "reason": "All explicit literal anchors occur in the same supplied file",
+            "matchingFileCount": 1,
+            "searchedFileCount": 1,
+            "searchedProjectIds": [
+              "requirements"
+            ],
+            "evidence": [
+              {
+                "path": "frontend/src/CustomerResult.tsx",
+                "range": {
+                  "startLine": 5,
+                  "endLine": 5
+                },
+                "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+                "fileHash": "fd213c059dcdf53b40bc3e55e70809aea60b0b0fba019ce3073338108db96655",
+                "excerpt": "  return <section aria-label=\"Customer result\">{result?.displayName ?? 'Loading customer…'}</section>;",
+                "projectId": "requirements",
+                "kind": "source-literal",
+                "anchor": "pattern",
+                "matchedLiteral": "Loading customer…",
+                "execution": "unverified"
+              }
+            ],
+            "evidenceTruncated": false
+          }
+        ],
+        "testChecks": [
+          {
+            "selector": {
+              "pathPattern": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+              "name": "showsLoadingBeforeResponse"
+            },
+            "status": "unmatched",
+            "reason": "No eligible file contains all explicit literal anchors",
+            "matchingFileCount": 0,
+            "searchedFileCount": 1,
+            "searchedProjectIds": [
+              "requirements"
+            ],
+            "evidence": [],
+            "evidenceTruncated": false
+          }
+        ],
+        "sourceEvidence": [
+          {
+            "path": "frontend/src/CustomerResult.tsx",
+            "range": {
+              "startLine": 5,
+              "endLine": 5
+            },
+            "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+            "fileHash": "fd213c059dcdf53b40bc3e55e70809aea60b0b0fba019ce3073338108db96655",
+            "excerpt": "  return <section aria-label=\"Customer result\">{result?.displayName ?? 'Loading customer…'}</section>;",
+            "projectId": "requirements",
+            "kind": "source-literal",
+            "anchor": "pattern",
+            "matchedLiteral": "Loading customer…",
+            "execution": "unverified"
+          }
+        ],
+        "testEvidence": [],
+        "edgeCases": [
+          {
+            "id": "slow-response",
+            "description": "The loading state persists while the response is delayed.",
+            "assessment": "missing",
+            "checks": [
+              {
+                "selector": {
+                  "pathPattern": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+                  "name": "keepsLoadingUntilResponse"
+                },
+                "status": "unmatched",
+                "reason": "No eligible file contains all explicit literal anchors",
+                "matchingFileCount": 0,
+                "searchedFileCount": 1,
+                "searchedProjectIds": [
+                  "requirements"
+                ],
+                "evidence": [],
+                "evidenceTruncated": false
+              }
+            ],
+            "testEvidence": [],
+            "runtime": "unverified",
+            "reason": "One or more declared edge-case test selectors are unmatched"
+          }
+        ],
+        "missingEdgeCases": [
+          {
+            "id": "slow-response",
+            "description": "The loading state persists while the response is delayed.",
+            "reason": "One or more declared edge-case test selectors are unmatched",
+            "checks": [
+              {
+                "selector": {
+                  "pathPattern": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+                  "name": "keepsLoadingUntilResponse"
+                },
+                "status": "unmatched",
+                "reason": "No eligible file contains all explicit literal anchors",
+                "matchingFileCount": 0,
+                "searchedFileCount": 1,
+                "searchedProjectIds": [
+                  "requirements"
+                ],
+                "evidence": [],
+                "evidenceTruncated": false
+              }
+            ]
+          }
+        ],
+        "runtime": "unverified"
+      },
+      {
+        "id": "confirmation-needed-detail",
+        "description": "An owner must provide explicit source and test selectors for the customer authorization rule.",
+        "assessment": "unverified",
+        "reasons": [
+          "Checklist is draft; business criteria have not been asserted as confirmed",
+          "No explicit source selectors supplied",
+          "No explicit test selectors supplied"
+        ],
+        "sourceChecks": [],
+        "testChecks": [],
+        "sourceEvidence": [],
+        "testEvidence": [],
+        "edgeCases": [],
+        "missingEdgeCases": [],
+        "runtime": "unverified"
+      }
+    ],
+    "summary": {
+      "total": 6,
+      "evidenced": 0,
+      "potentialMismatch": 0,
+      "unverified": 6,
+      "missingEdgeCases": 4
+    },
+    "runtime": "unverified",
+    "limitations": [
+      "Confirmation metadata is a supplied assertion; the engine does not authenticate an owner or invent approval. Simulated confirmations are demonstration data.",
+      "Literal source matches, including symbol and test-name anchors, show text presence only. Comments and string literals can match; declarations, assertions and business behavior are not proved.",
+      "Test source evidence does not show that tests were executed, passed, or cover the criterion at runtime. Runtime behavior always remains unverified.",
+      "Only supplied snapshot files are searched. Test selectors are limited to test/spec filenames, Java Test/Tests names, or test/tests/__tests__ directories.",
+      "Missing edge cases are only those explicitly listed in the checklist. The engine cannot infer all necessary business scenarios or permit skipping full regression.",
+      "Path selectors use bounded * and ** globs; all other selectors are case-sensitive literal text. No user regular expressions, external AI, or local models are run.",
+      "Snapshot revisions are supplied by the snapshot reader; file SHA256 values are checked against supplied text. Without evidenceScope, confirmation has no pinned source revision.",
+      "Workspace criteria are evaluated once across selected project snapshots. Unscoped selectors search every selected project; explicit projectId selectors search only that project. Evidence preserves each project ID, original path, revision and file hash.",
+      "An optional dependency graph was supplied but is not used to infer semantic satisfaction of business criteria."
+    ]
+  },
+  "unknowns": [
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "org.springframework.web.bind.annotation.GetMapping",
+      "evidence": {
+        "path": "backend/src/main/java/example/customers/CustomerLookupController.java",
+        "range": {
+          "startLine": 3,
+          "endLine": 3
+        },
+        "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+        "fileHash": "28ec39a06652ee166d68a1c9e489c6ad1c43c970fd21d48c4d7675b79401300b",
+        "excerpt": "import org.springframework.web.bind.annotation.GetMapping;",
+        "projectId": "requirements",
+        "repository": "example/customer-sample"
+      },
+      "phase": "baseline",
+      "projectId": "requirements"
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "org.springframework.web.bind.annotation.RequestMapping",
+      "evidence": {
+        "path": "backend/src/main/java/example/customers/CustomerLookupController.java",
+        "range": {
+          "startLine": 4,
+          "endLine": 4
+        },
+        "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+        "fileHash": "28ec39a06652ee166d68a1c9e489c6ad1c43c970fd21d48c4d7675b79401300b",
+        "excerpt": "import org.springframework.web.bind.annotation.RequestMapping;",
+        "projectId": "requirements",
+        "repository": "example/customer-sample"
+      },
+      "phase": "baseline",
+      "projectId": "requirements"
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "org.springframework.web.bind.annotation.RequestParam",
+      "evidence": {
+        "path": "backend/src/main/java/example/customers/CustomerLookupController.java",
+        "range": {
+          "startLine": 5,
+          "endLine": 5
+        },
+        "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+        "fileHash": "28ec39a06652ee166d68a1c9e489c6ad1c43c970fd21d48c4d7675b79401300b",
+        "excerpt": "import org.springframework.web.bind.annotation.RequestParam;",
+        "projectId": "requirements",
+        "repository": "example/customer-sample"
+      },
+      "phase": "baseline",
+      "projectId": "requirements"
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "org.springframework.web.bind.annotation.RestController",
+      "evidence": {
+        "path": "backend/src/main/java/example/customers/CustomerLookupController.java",
+        "range": {
+          "startLine": 6,
+          "endLine": 6
+        },
+        "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+        "fileHash": "28ec39a06652ee166d68a1c9e489c6ad1c43c970fd21d48c4d7675b79401300b",
+        "excerpt": "import org.springframework.web.bind.annotation.RestController;",
+        "projectId": "requirements",
+        "repository": "example/customer-sample"
+      },
+      "phase": "baseline",
+      "projectId": "requirements"
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "org.springframework.web.bind.annotation.RestController",
+      "evidence": {
+        "path": "backend/src/main/java/example/customers/CustomerLookupController.java",
+        "range": {
+          "startLine": 9,
+          "endLine": 9
+        },
+        "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+        "fileHash": "28ec39a06652ee166d68a1c9e489c6ad1c43c970fd21d48c4d7675b79401300b",
+        "excerpt": "@RestController",
+        "projectId": "requirements",
+        "repository": "example/customer-sample"
+      },
+      "phase": "baseline",
+      "projectId": "requirements"
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "org.springframework.web.bind.annotation.RequestMapping",
+      "evidence": {
+        "path": "backend/src/main/java/example/customers/CustomerLookupController.java",
+        "range": {
+          "startLine": 10,
+          "endLine": 10
+        },
+        "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+        "fileHash": "28ec39a06652ee166d68a1c9e489c6ad1c43c970fd21d48c4d7675b79401300b",
+        "excerpt": "@RequestMapping(\"/api\")",
+        "projectId": "requirements",
+        "repository": "example/customer-sample"
+      },
+      "phase": "baseline",
+      "projectId": "requirements"
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "org.springframework.web.bind.annotation.GetMapping",
+      "evidence": {
+        "path": "backend/src/main/java/example/customers/CustomerLookupController.java",
+        "range": {
+          "startLine": 12,
+          "endLine": 12
+        },
+        "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+        "fileHash": "28ec39a06652ee166d68a1c9e489c6ad1c43c970fd21d48c4d7675b79401300b",
+        "excerpt": "    @GetMapping(\"/customers/lookup\")",
+        "projectId": "requirements",
+        "repository": "example/customer-sample"
+      },
+      "phase": "baseline",
+      "projectId": "requirements"
+    },
+    {
+      "reason": "ambiguous-type",
+      "evidence": {
+        "path": "backend/src/main/java/example/customers/CustomerLookupController.java",
+        "range": {
+          "startLine": 13,
+          "endLine": 13
+        },
+        "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+        "fileHash": "28ec39a06652ee166d68a1c9e489c6ad1c43c970fd21d48c4d7675b79401300b",
+        "excerpt": "    public CustomerResponse lookup(@RequestParam String id) {",
+        "projectId": "requirements",
+        "repository": "example/customer-sample"
+      },
+      "phase": "baseline",
+      "projectId": "requirements"
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "org.springframework.web.bind.annotation.RequestParam",
+      "evidence": {
+        "path": "backend/src/main/java/example/customers/CustomerLookupController.java",
+        "range": {
+          "startLine": 13,
+          "endLine": 13
+        },
+        "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+        "fileHash": "28ec39a06652ee166d68a1c9e489c6ad1c43c970fd21d48c4d7675b79401300b",
+        "excerpt": "    public CustomerResponse lookup(@RequestParam String id) {",
+        "projectId": "requirements",
+        "repository": "example/customer-sample"
+      },
+      "phase": "baseline",
+      "projectId": "requirements"
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "String",
+      "evidence": {
+        "path": "backend/src/main/java/example/customers/CustomerLookupController.java",
+        "range": {
+          "startLine": 13,
+          "endLine": 13
+        },
+        "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+        "fileHash": "28ec39a06652ee166d68a1c9e489c6ad1c43c970fd21d48c4d7675b79401300b",
+        "excerpt": "    public CustomerResponse lookup(@RequestParam String id) {",
+        "projectId": "requirements",
+        "repository": "example/customer-sample"
+      },
+      "phase": "baseline",
+      "projectId": "requirements"
+    },
+    {
+      "reason": "ambiguous-type",
+      "evidence": {
+        "path": "backend/src/main/java/example/customers/CustomerLookupController.java",
+        "range": {
+          "startLine": 14,
+          "endLine": 14
+        },
+        "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+        "fileHash": "28ec39a06652ee166d68a1c9e489c6ad1c43c970fd21d48c4d7675b79401300b",
+        "excerpt": "        return new CustomerResponse(id, \"Ada Example\");",
+        "projectId": "requirements",
+        "repository": "example/customer-sample"
+      },
+      "phase": "baseline",
+      "projectId": "requirements"
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "String",
+      "evidence": {
+        "path": "backend/src/main/java/example/customers/CustomerResponse.java",
+        "range": {
+          "startLine": 3,
+          "endLine": 3
+        },
+        "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+        "fileHash": "fe4a076477f47074f1ca4a4140e45648ce3e2110fef9cf31fd934ad2bd1dfe4a",
+        "excerpt": "public record CustomerResponse(String id, String displayName) {}",
+        "projectId": "requirements",
+        "repository": "example/customer-sample"
+      },
+      "phase": "baseline",
+      "projectId": "requirements"
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "String",
+      "evidence": {
+        "path": "backend/src/main/java/example/customers/CustomerResponse.java",
+        "range": {
+          "startLine": 3,
+          "endLine": 3
+        },
+        "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+        "fileHash": "fe4a076477f47074f1ca4a4140e45648ce3e2110fef9cf31fd934ad2bd1dfe4a",
+        "excerpt": "public record CustomerResponse(String id, String displayName) {}",
+        "projectId": "requirements",
+        "repository": "example/customer-sample"
+      },
+      "phase": "baseline",
+      "projectId": "requirements"
+    },
+    {
+      "reason": "Java local receiver type is not inferred",
+      "range": {
+        "startLine": 10,
+        "endLine": 10
+      },
+      "detail": "var",
+      "evidence": {
+        "path": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+        "range": {
+          "startLine": 10,
+          "endLine": 10
+        },
+        "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+        "fileHash": "aa3a223914ae9a6772826e29cf6c8d54eec522fa0869dcaff96832f265bb5184",
+        "excerpt": "        var response = new CustomerLookupController().lookup(\"customer-1\");",
+        "projectId": "requirements",
+        "repository": "example/customer-sample"
+      },
+      "phase": "baseline",
+      "projectId": "requirements"
+    },
+    {
+      "reason": "Java local receiver type is not inferred",
+      "range": {
+        "startLine": 16,
+        "endLine": 16
+      },
+      "detail": "var",
+      "evidence": {
+        "path": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+        "range": {
+          "startLine": 16,
+          "endLine": 16
+        },
+        "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+        "fileHash": "aa3a223914ae9a6772826e29cf6c8d54eec522fa0869dcaff96832f265bb5184",
+        "excerpt": "        var response = new CustomerLookupController().lookup(\"customer-1\");",
+        "projectId": "requirements",
+        "repository": "example/customer-sample"
+      },
+      "phase": "baseline",
+      "projectId": "requirements"
+    },
+    {
+      "reason": "Java call receiver is unresolved",
+      "range": {
+        "startLine": 10,
+        "endLine": 10
+      },
+      "detail": "new CustomerLookupController()",
+      "evidence": {
+        "path": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+        "range": {
+          "startLine": 10,
+          "endLine": 10
+        },
+        "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+        "fileHash": "aa3a223914ae9a6772826e29cf6c8d54eec522fa0869dcaff96832f265bb5184",
+        "excerpt": "        var response = new CustomerLookupController().lookup(\"customer-1\");",
+        "projectId": "requirements",
+        "repository": "example/customer-sample"
+      },
+      "phase": "baseline",
+      "projectId": "requirements"
+    },
+    {
+      "reason": "Java call receiver is unresolved",
+      "range": {
+        "startLine": 11,
+        "endLine": 11
+      },
+      "detail": "response",
+      "evidence": {
+        "path": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+        "range": {
+          "startLine": 11,
+          "endLine": 11
+        },
+        "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+        "fileHash": "aa3a223914ae9a6772826e29cf6c8d54eec522fa0869dcaff96832f265bb5184",
+        "excerpt": "        assertEquals(\"customer-1\", response.id());",
+        "projectId": "requirements",
+        "repository": "example/customer-sample"
+      },
+      "phase": "baseline",
+      "projectId": "requirements"
+    },
+    {
+      "reason": "Java call receiver is unresolved",
+      "range": {
+        "startLine": 16,
+        "endLine": 16
+      },
+      "detail": "new CustomerLookupController()",
+      "evidence": {
+        "path": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+        "range": {
+          "startLine": 16,
+          "endLine": 16
+        },
+        "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+        "fileHash": "aa3a223914ae9a6772826e29cf6c8d54eec522fa0869dcaff96832f265bb5184",
+        "excerpt": "        var response = new CustomerLookupController().lookup(\"customer-1\");",
+        "projectId": "requirements",
+        "repository": "example/customer-sample"
+      },
+      "phase": "baseline",
+      "projectId": "requirements"
+    },
+    {
+      "reason": "Java call receiver is unresolved",
+      "range": {
+        "startLine": 17,
+        "endLine": 17
+      },
+      "detail": "response",
+      "evidence": {
+        "path": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+        "range": {
+          "startLine": 17,
+          "endLine": 17
+        },
+        "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+        "fileHash": "aa3a223914ae9a6772826e29cf6c8d54eec522fa0869dcaff96832f265bb5184",
+        "excerpt": "        assertEquals(\"Ada Example\", response.displayName());",
+        "projectId": "requirements",
+        "repository": "example/customer-sample"
+      },
+      "phase": "baseline",
+      "projectId": "requirements"
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "org.junit.jupiter.api.Test",
+      "evidence": {
+        "path": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+        "range": {
+          "startLine": 3,
+          "endLine": 3
+        },
+        "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+        "fileHash": "aa3a223914ae9a6772826e29cf6c8d54eec522fa0869dcaff96832f265bb5184",
+        "excerpt": "import org.junit.jupiter.api.Test;",
+        "projectId": "requirements",
+        "repository": "example/customer-sample"
+      },
+      "phase": "baseline",
+      "projectId": "requirements"
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "org.junit.jupiter.api.Assertions.assertEquals",
+      "evidence": {
+        "path": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+        "range": {
+          "startLine": 4,
+          "endLine": 4
+        },
+        "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+        "fileHash": "aa3a223914ae9a6772826e29cf6c8d54eec522fa0869dcaff96832f265bb5184",
+        "excerpt": "import static org.junit.jupiter.api.Assertions.assertEquals;",
+        "projectId": "requirements",
+        "repository": "example/customer-sample"
+      },
+      "phase": "baseline",
+      "projectId": "requirements"
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "org.junit.jupiter.api.Test",
+      "evidence": {
+        "path": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+        "range": {
+          "startLine": 8,
+          "endLine": 8
+        },
+        "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+        "fileHash": "aa3a223914ae9a6772826e29cf6c8d54eec522fa0869dcaff96832f265bb5184",
+        "excerpt": "    @Test",
+        "projectId": "requirements",
+        "repository": "example/customer-sample"
+      },
+      "phase": "baseline",
+      "projectId": "requirements"
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "var",
+      "evidence": {
+        "path": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+        "range": {
+          "startLine": 10,
+          "endLine": 10
+        },
+        "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+        "fileHash": "aa3a223914ae9a6772826e29cf6c8d54eec522fa0869dcaff96832f265bb5184",
+        "excerpt": "        var response = new CustomerLookupController().lookup(\"customer-1\");",
+        "projectId": "requirements",
+        "repository": "example/customer-sample"
+      },
+      "phase": "baseline",
+      "projectId": "requirements"
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "org.junit.jupiter.api.Test",
+      "evidence": {
+        "path": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+        "range": {
+          "startLine": 14,
+          "endLine": 14
+        },
+        "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+        "fileHash": "aa3a223914ae9a6772826e29cf6c8d54eec522fa0869dcaff96832f265bb5184",
+        "excerpt": "    @Test",
+        "projectId": "requirements",
+        "repository": "example/customer-sample"
+      },
+      "phase": "baseline",
+      "projectId": "requirements"
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "var",
+      "evidence": {
+        "path": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+        "range": {
+          "startLine": 16,
+          "endLine": 16
+        },
+        "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+        "fileHash": "aa3a223914ae9a6772826e29cf6c8d54eec522fa0869dcaff96832f265bb5184",
+        "excerpt": "        var response = new CustomerLookupController().lookup(\"customer-1\");",
+        "projectId": "requirements",
+        "repository": "example/customer-sample"
+      },
+      "phase": "baseline",
+      "projectId": "requirements"
+    },
+    {
+      "reason": "dynamic-dependency",
+      "detail": "Runtime value prevents a resolved edge",
+      "evidence": {
+        "path": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+        "range": {
+          "startLine": 10,
+          "endLine": 10
+        },
+        "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+        "fileHash": "aa3a223914ae9a6772826e29cf6c8d54eec522fa0869dcaff96832f265bb5184",
+        "excerpt": "        var response = new CustomerLookupController().lookup(\"customer-1\");",
+        "projectId": "requirements",
+        "repository": "example/customer-sample"
+      },
+      "phase": "baseline",
+      "projectId": "requirements"
+    },
+    {
+      "reason": "unresolved-call",
+      "detail": "assertEquals",
+      "evidence": {
+        "path": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+        "range": {
+          "startLine": 11,
+          "endLine": 11
+        },
+        "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+        "fileHash": "aa3a223914ae9a6772826e29cf6c8d54eec522fa0869dcaff96832f265bb5184",
+        "excerpt": "        assertEquals(\"customer-1\", response.id());",
+        "projectId": "requirements",
+        "repository": "example/customer-sample"
+      },
+      "candidates": [],
+      "phase": "baseline",
+      "projectId": "requirements"
+    },
+    {
+      "reason": "dynamic-dependency",
+      "detail": "Runtime value prevents a resolved edge",
+      "evidence": {
+        "path": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+        "range": {
+          "startLine": 11,
+          "endLine": 11
+        },
+        "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+        "fileHash": "aa3a223914ae9a6772826e29cf6c8d54eec522fa0869dcaff96832f265bb5184",
+        "excerpt": "        assertEquals(\"customer-1\", response.id());",
+        "projectId": "requirements",
+        "repository": "example/customer-sample"
+      },
+      "phase": "baseline",
+      "projectId": "requirements"
+    },
+    {
+      "reason": "dynamic-dependency",
+      "detail": "Runtime value prevents a resolved edge",
+      "evidence": {
+        "path": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+        "range": {
+          "startLine": 16,
+          "endLine": 16
+        },
+        "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+        "fileHash": "aa3a223914ae9a6772826e29cf6c8d54eec522fa0869dcaff96832f265bb5184",
+        "excerpt": "        var response = new CustomerLookupController().lookup(\"customer-1\");",
+        "projectId": "requirements",
+        "repository": "example/customer-sample"
+      },
+      "phase": "baseline",
+      "projectId": "requirements"
+    },
+    {
+      "reason": "unresolved-call",
+      "detail": "assertEquals",
+      "evidence": {
+        "path": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+        "range": {
+          "startLine": 17,
+          "endLine": 17
+        },
+        "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+        "fileHash": "aa3a223914ae9a6772826e29cf6c8d54eec522fa0869dcaff96832f265bb5184",
+        "excerpt": "        assertEquals(\"Ada Example\", response.displayName());",
+        "projectId": "requirements",
+        "repository": "example/customer-sample"
+      },
+      "candidates": [],
+      "phase": "baseline",
+      "projectId": "requirements"
+    },
+    {
+      "reason": "dynamic-dependency",
+      "detail": "Runtime value prevents a resolved edge",
+      "evidence": {
+        "path": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+        "range": {
+          "startLine": 17,
+          "endLine": 17
+        },
+        "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+        "fileHash": "aa3a223914ae9a6772826e29cf6c8d54eec522fa0869dcaff96832f265bb5184",
+        "excerpt": "        assertEquals(\"Ada Example\", response.displayName());",
+        "projectId": "requirements",
+        "repository": "example/customer-sample"
+      },
+      "phase": "baseline",
+      "projectId": "requirements"
+    },
+    {
+      "reason": "dynamic_http_url",
+      "range": {
+        "startLine": 8,
+        "endLine": 8
+      },
+      "detail": "`/api/customers/lookup?id=${encodeURIComponent(id)}`",
+      "evidence": {
+        "path": "frontend/src/customerApi.ts",
+        "range": {
+          "startLine": 8,
+          "endLine": 8
+        },
+        "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+        "fileHash": "2cdee9cc200708bdb5c3184490c8e02a2597c6ada3b97b79ff5b66eb4c6a7095",
+        "excerpt": "  const response = await fetch(`/api/customers/lookup?id=${encodeURIComponent(id)}`);",
+        "projectId": "requirements",
+        "repository": "example/customer-sample"
+      },
+      "phase": "baseline",
+      "projectId": "requirements"
+    },
+    {
+      "reason": "unresolved_call",
+      "range": {
+        "startLine": 8,
+        "endLine": 8
+      },
+      "detail": "encodeURIComponent",
+      "evidence": {
+        "path": "frontend/src/customerApi.ts",
+        "range": {
+          "startLine": 8,
+          "endLine": 8
+        },
+        "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+        "fileHash": "2cdee9cc200708bdb5c3184490c8e02a2597c6ada3b97b79ff5b66eb4c6a7095",
+        "excerpt": "  const response = await fetch(`/api/customers/lookup?id=${encodeURIComponent(id)}`);",
+        "projectId": "requirements",
+        "repository": "example/customer-sample"
+      },
+      "phase": "baseline",
+      "projectId": "requirements"
+    },
+    {
+      "reason": "unresolved_call",
+      "range": {
+        "startLine": 10,
+        "endLine": 10
+      },
+      "detail": "response.json",
+      "evidence": {
+        "path": "frontend/src/customerApi.ts",
+        "range": {
+          "startLine": 10,
+          "endLine": 10
+        },
+        "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+        "fileHash": "2cdee9cc200708bdb5c3184490c8e02a2597c6ada3b97b79ff5b66eb4c6a7095",
+        "excerpt": "  return response.json();",
+        "projectId": "requirements",
+        "repository": "example/customer-sample"
+      },
+      "phase": "baseline",
+      "projectId": "requirements"
+    },
+    {
+      "reason": "unresolved-call",
+      "detail": "Promise",
+      "evidence": {
+        "path": "frontend/src/customerApi.ts",
+        "range": {
+          "startLine": 7,
+          "endLine": 7
+        },
+        "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+        "fileHash": "2cdee9cc200708bdb5c3184490c8e02a2597c6ada3b97b79ff5b66eb4c6a7095",
+        "excerpt": "export async function lookupCustomer(id: string): Promise<CustomerResponse> {",
+        "projectId": "requirements",
+        "repository": "example/customer-sample"
+      },
+      "phase": "baseline",
+      "projectId": "requirements"
+    },
+    {
+      "reason": "unresolved-call",
+      "detail": "fetch",
+      "evidence": {
+        "path": "frontend/src/customerApi.ts",
+        "range": {
+          "startLine": 8,
+          "endLine": 8
+        },
+        "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+        "fileHash": "2cdee9cc200708bdb5c3184490c8e02a2597c6ada3b97b79ff5b66eb4c6a7095",
+        "excerpt": "  const response = await fetch(`/api/customers/lookup?id=${encodeURIComponent(id)}`);",
+        "projectId": "requirements",
+        "repository": "example/customer-sample"
+      },
+      "phase": "baseline",
+      "projectId": "requirements"
+    },
+    {
+      "reason": "dynamic-dependency",
+      "detail": "Runtime value prevents a resolved edge",
+      "evidence": {
+        "path": "frontend/src/customerApi.ts",
+        "range": {
+          "startLine": 8,
+          "endLine": 8
+        },
+        "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+        "fileHash": "2cdee9cc200708bdb5c3184490c8e02a2597c6ada3b97b79ff5b66eb4c6a7095",
+        "excerpt": "  const response = await fetch(`/api/customers/lookup?id=${encodeURIComponent(id)}`);",
+        "projectId": "requirements",
+        "repository": "example/customer-sample"
+      },
+      "phase": "baseline",
+      "projectId": "requirements"
+    },
+    {
+      "reason": "unresolved-call",
+      "detail": "encodeURIComponent",
+      "evidence": {
+        "path": "frontend/src/customerApi.ts",
+        "range": {
+          "startLine": 8,
+          "endLine": 8
+        },
+        "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+        "fileHash": "2cdee9cc200708bdb5c3184490c8e02a2597c6ada3b97b79ff5b66eb4c6a7095",
+        "excerpt": "  const response = await fetch(`/api/customers/lookup?id=${encodeURIComponent(id)}`);",
+        "projectId": "requirements",
+        "repository": "example/customer-sample"
+      },
+      "phase": "baseline",
+      "projectId": "requirements"
+    },
+    {
+      "reason": "unresolved-call",
+      "detail": "Error",
+      "evidence": {
+        "path": "frontend/src/customerApi.ts",
+        "range": {
+          "startLine": 9,
+          "endLine": 9
+        },
+        "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+        "fileHash": "2cdee9cc200708bdb5c3184490c8e02a2597c6ada3b97b79ff5b66eb4c6a7095",
+        "excerpt": "  if (!response.ok) throw new Error('Customer lookup failed');",
+        "projectId": "requirements",
+        "repository": "example/customer-sample"
+      },
+      "phase": "baseline",
+      "projectId": "requirements"
+    },
+    {
+      "reason": "unresolved-call",
+      "detail": "json",
+      "evidence": {
+        "path": "frontend/src/customerApi.ts",
+        "range": {
+          "startLine": 10,
+          "endLine": 10
+        },
+        "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+        "fileHash": "2cdee9cc200708bdb5c3184490c8e02a2597c6ada3b97b79ff5b66eb4c6a7095",
+        "excerpt": "  return response.json();",
+        "projectId": "requirements",
+        "repository": "example/customer-sample"
+      },
+      "phase": "baseline",
+      "projectId": "requirements"
+    },
+    {
+      "reason": "unresolved_call",
+      "range": {
+        "startLine": 6,
+        "endLine": 6
+      },
+      "detail": "page.goto",
+      "evidence": {
+        "path": "frontend/src/customerLookup.spec.ts",
+        "range": {
+          "startLine": 6,
+          "endLine": 6
+        },
+        "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+        "fileHash": "b033953aaf51f31b7481fedd383143894cd18d3f4aebbc230e99d70bee5db305",
+        "excerpt": "  await page.goto('/customers');",
+        "projectId": "requirements",
+        "repository": "example/customer-sample"
+      },
+      "phase": "baseline",
+      "projectId": "requirements"
+    },
+    {
+      "reason": "unresolved_call",
+      "range": {
+        "startLine": 7,
+        "endLine": 7
+      },
+      "detail": "expect(page.getByLabel('Customer result')).toHaveText",
+      "evidence": {
+        "path": "frontend/src/customerLookup.spec.ts",
+        "range": {
+          "startLine": 7,
+          "endLine": 7
+        },
+        "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+        "fileHash": "b033953aaf51f31b7481fedd383143894cd18d3f4aebbc230e99d70bee5db305",
+        "excerpt": "  await expect(page.getByLabel('Customer result')).toHaveText('Ada Example');",
+        "projectId": "requirements",
+        "repository": "example/customer-sample"
+      },
+      "phase": "baseline",
+      "projectId": "requirements"
+    },
+    {
+      "reason": "unresolved_call",
+      "range": {
+        "startLine": 7,
+        "endLine": 7
+      },
+      "detail": "page.getByLabel",
+      "evidence": {
+        "path": "frontend/src/customerLookup.spec.ts",
+        "range": {
+          "startLine": 7,
+          "endLine": 7
+        },
+        "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+        "fileHash": "b033953aaf51f31b7481fedd383143894cd18d3f4aebbc230e99d70bee5db305",
+        "excerpt": "  await expect(page.getByLabel('Customer result')).toHaveText('Ada Example');",
+        "projectId": "requirements",
+        "repository": "example/customer-sample"
+      },
+      "phase": "baseline",
+      "projectId": "requirements"
+    },
+    {
+      "reason": "external-module",
+      "detail": "@playwright/test",
+      "evidence": {
+        "path": "frontend/src/customerLookup.spec.ts",
+        "range": {
+          "startLine": 1,
+          "endLine": 1
+        },
+        "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+        "fileHash": "b033953aaf51f31b7481fedd383143894cd18d3f4aebbc230e99d70bee5db305",
+        "excerpt": "import {test, expect} from '@playwright/test';",
+        "projectId": "requirements",
+        "repository": "example/customer-sample"
+      },
+      "phase": "baseline",
+      "projectId": "requirements"
+    },
+    {
+      "reason": "external-module",
+      "detail": "@playwright/test",
+      "evidence": {
+        "path": "frontend/src/customerLookup.spec.ts",
+        "range": {
+          "startLine": 1,
+          "endLine": 1
+        },
+        "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+        "fileHash": "b033953aaf51f31b7481fedd383143894cd18d3f4aebbc230e99d70bee5db305",
+        "excerpt": "import {test, expect} from '@playwright/test';",
+        "projectId": "requirements",
+        "repository": "example/customer-sample"
+      },
+      "phase": "baseline",
+      "projectId": "requirements"
+    },
+    {
+      "reason": "unresolved-call",
+      "detail": "goto",
+      "evidence": {
+        "path": "frontend/src/customerLookup.spec.ts",
+        "range": {
+          "startLine": 6,
+          "endLine": 6
+        },
+        "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+        "fileHash": "b033953aaf51f31b7481fedd383143894cd18d3f4aebbc230e99d70bee5db305",
+        "excerpt": "  await page.goto('/customers');",
+        "projectId": "requirements",
+        "repository": "example/customer-sample"
+      },
+      "phase": "baseline",
+      "projectId": "requirements"
+    },
+    {
+      "reason": "unresolved-call",
+      "detail": "toHaveText",
+      "evidence": {
+        "path": "frontend/src/customerLookup.spec.ts",
+        "range": {
+          "startLine": 7,
+          "endLine": 7
+        },
+        "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+        "fileHash": "b033953aaf51f31b7481fedd383143894cd18d3f4aebbc230e99d70bee5db305",
+        "excerpt": "  await expect(page.getByLabel('Customer result')).toHaveText('Ada Example');",
+        "projectId": "requirements",
+        "repository": "example/customer-sample"
+      },
+      "phase": "baseline",
+      "projectId": "requirements"
+    },
+    {
+      "reason": "unresolved-call",
+      "detail": "getByLabel",
+      "evidence": {
+        "path": "frontend/src/customerLookup.spec.ts",
+        "range": {
+          "startLine": 7,
+          "endLine": 7
+        },
+        "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+        "fileHash": "b033953aaf51f31b7481fedd383143894cd18d3f4aebbc230e99d70bee5db305",
+        "excerpt": "  await expect(page.getByLabel('Customer result')).toHaveText('Ada Example');",
+        "projectId": "requirements",
+        "repository": "example/customer-sample"
+      },
+      "phase": "baseline",
+      "projectId": "requirements"
+    },
+    {
+      "reason": "external-module",
+      "detail": "react",
+      "evidence": {
+        "path": "frontend/src/CustomerResult.tsx",
+        "range": {
+          "startLine": 1,
+          "endLine": 1
+        },
+        "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+        "fileHash": "fd213c059dcdf53b40bc3e55e70809aea60b0b0fba019ce3073338108db96655",
+        "excerpt": "import React from 'react';",
+        "projectId": "requirements",
+        "repository": "example/customer-sample"
+      },
+      "phase": "baseline",
+      "projectId": "requirements"
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "org.springframework.web.bind.annotation.GetMapping",
+      "evidence": {
+        "path": "backend/src/main/java/example/customers/CustomerLookupController.java",
+        "range": {
+          "startLine": 3,
+          "endLine": 3
+        },
+        "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+        "fileHash": "28ec39a06652ee166d68a1c9e489c6ad1c43c970fd21d48c4d7675b79401300b",
+        "excerpt": "import org.springframework.web.bind.annotation.GetMapping;",
+        "projectId": "requirements",
+        "repository": "example/customer-sample"
+      },
+      "phase": "candidate",
+      "projectId": "requirements"
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "org.springframework.web.bind.annotation.RequestMapping",
+      "evidence": {
+        "path": "backend/src/main/java/example/customers/CustomerLookupController.java",
+        "range": {
+          "startLine": 4,
+          "endLine": 4
+        },
+        "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+        "fileHash": "28ec39a06652ee166d68a1c9e489c6ad1c43c970fd21d48c4d7675b79401300b",
+        "excerpt": "import org.springframework.web.bind.annotation.RequestMapping;",
+        "projectId": "requirements",
+        "repository": "example/customer-sample"
+      },
+      "phase": "candidate",
+      "projectId": "requirements"
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "org.springframework.web.bind.annotation.RequestParam",
+      "evidence": {
+        "path": "backend/src/main/java/example/customers/CustomerLookupController.java",
+        "range": {
+          "startLine": 5,
+          "endLine": 5
+        },
+        "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+        "fileHash": "28ec39a06652ee166d68a1c9e489c6ad1c43c970fd21d48c4d7675b79401300b",
+        "excerpt": "import org.springframework.web.bind.annotation.RequestParam;",
+        "projectId": "requirements",
+        "repository": "example/customer-sample"
+      },
+      "phase": "candidate",
+      "projectId": "requirements"
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "org.springframework.web.bind.annotation.RestController",
+      "evidence": {
+        "path": "backend/src/main/java/example/customers/CustomerLookupController.java",
+        "range": {
+          "startLine": 6,
+          "endLine": 6
+        },
+        "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+        "fileHash": "28ec39a06652ee166d68a1c9e489c6ad1c43c970fd21d48c4d7675b79401300b",
+        "excerpt": "import org.springframework.web.bind.annotation.RestController;",
+        "projectId": "requirements",
+        "repository": "example/customer-sample"
+      },
+      "phase": "candidate",
+      "projectId": "requirements"
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "org.springframework.web.bind.annotation.RestController",
+      "evidence": {
+        "path": "backend/src/main/java/example/customers/CustomerLookupController.java",
+        "range": {
+          "startLine": 9,
+          "endLine": 9
+        },
+        "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+        "fileHash": "28ec39a06652ee166d68a1c9e489c6ad1c43c970fd21d48c4d7675b79401300b",
+        "excerpt": "@RestController",
+        "projectId": "requirements",
+        "repository": "example/customer-sample"
+      },
+      "phase": "candidate",
+      "projectId": "requirements"
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "org.springframework.web.bind.annotation.RequestMapping",
+      "evidence": {
+        "path": "backend/src/main/java/example/customers/CustomerLookupController.java",
+        "range": {
+          "startLine": 10,
+          "endLine": 10
+        },
+        "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+        "fileHash": "28ec39a06652ee166d68a1c9e489c6ad1c43c970fd21d48c4d7675b79401300b",
+        "excerpt": "@RequestMapping(\"/api\")",
+        "projectId": "requirements",
+        "repository": "example/customer-sample"
+      },
+      "phase": "candidate",
+      "projectId": "requirements"
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "org.springframework.web.bind.annotation.GetMapping",
+      "evidence": {
+        "path": "backend/src/main/java/example/customers/CustomerLookupController.java",
+        "range": {
+          "startLine": 12,
+          "endLine": 12
+        },
+        "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+        "fileHash": "28ec39a06652ee166d68a1c9e489c6ad1c43c970fd21d48c4d7675b79401300b",
+        "excerpt": "    @GetMapping(\"/customers/lookup\")",
+        "projectId": "requirements",
+        "repository": "example/customer-sample"
+      },
+      "phase": "candidate",
+      "projectId": "requirements"
+    },
+    {
+      "reason": "ambiguous-type",
+      "evidence": {
+        "path": "backend/src/main/java/example/customers/CustomerLookupController.java",
+        "range": {
+          "startLine": 13,
+          "endLine": 13
+        },
+        "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+        "fileHash": "28ec39a06652ee166d68a1c9e489c6ad1c43c970fd21d48c4d7675b79401300b",
+        "excerpt": "    public CustomerResponse lookup(@RequestParam String id) {",
+        "projectId": "requirements",
+        "repository": "example/customer-sample"
+      },
+      "phase": "candidate",
+      "projectId": "requirements"
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "org.springframework.web.bind.annotation.RequestParam",
+      "evidence": {
+        "path": "backend/src/main/java/example/customers/CustomerLookupController.java",
+        "range": {
+          "startLine": 13,
+          "endLine": 13
+        },
+        "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+        "fileHash": "28ec39a06652ee166d68a1c9e489c6ad1c43c970fd21d48c4d7675b79401300b",
+        "excerpt": "    public CustomerResponse lookup(@RequestParam String id) {",
+        "projectId": "requirements",
+        "repository": "example/customer-sample"
+      },
+      "phase": "candidate",
+      "projectId": "requirements"
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "String",
+      "evidence": {
+        "path": "backend/src/main/java/example/customers/CustomerLookupController.java",
+        "range": {
+          "startLine": 13,
+          "endLine": 13
+        },
+        "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+        "fileHash": "28ec39a06652ee166d68a1c9e489c6ad1c43c970fd21d48c4d7675b79401300b",
+        "excerpt": "    public CustomerResponse lookup(@RequestParam String id) {",
+        "projectId": "requirements",
+        "repository": "example/customer-sample"
+      },
+      "phase": "candidate",
+      "projectId": "requirements"
+    },
+    {
+      "reason": "ambiguous-type",
+      "evidence": {
+        "path": "backend/src/main/java/example/customers/CustomerLookupController.java",
+        "range": {
+          "startLine": 14,
+          "endLine": 14
+        },
+        "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+        "fileHash": "28ec39a06652ee166d68a1c9e489c6ad1c43c970fd21d48c4d7675b79401300b",
+        "excerpt": "        return new CustomerResponse(id, \"Ada Example\");",
+        "projectId": "requirements",
+        "repository": "example/customer-sample"
+      },
+      "phase": "candidate",
+      "projectId": "requirements"
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "String",
+      "evidence": {
+        "path": "backend/src/main/java/example/customers/CustomerResponse.java",
+        "range": {
+          "startLine": 3,
+          "endLine": 3
+        },
+        "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+        "fileHash": "fe4a076477f47074f1ca4a4140e45648ce3e2110fef9cf31fd934ad2bd1dfe4a",
+        "excerpt": "public record CustomerResponse(String id, String displayName) {}",
+        "projectId": "requirements",
+        "repository": "example/customer-sample"
+      },
+      "phase": "candidate",
+      "projectId": "requirements"
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "String",
+      "evidence": {
+        "path": "backend/src/main/java/example/customers/CustomerResponse.java",
+        "range": {
+          "startLine": 3,
+          "endLine": 3
+        },
+        "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+        "fileHash": "fe4a076477f47074f1ca4a4140e45648ce3e2110fef9cf31fd934ad2bd1dfe4a",
+        "excerpt": "public record CustomerResponse(String id, String displayName) {}",
+        "projectId": "requirements",
+        "repository": "example/customer-sample"
+      },
+      "phase": "candidate",
+      "projectId": "requirements"
+    },
+    {
+      "reason": "Java local receiver type is not inferred",
+      "range": {
+        "startLine": 10,
+        "endLine": 10
+      },
+      "detail": "var",
+      "evidence": {
+        "path": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+        "range": {
+          "startLine": 10,
+          "endLine": 10
+        },
+        "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+        "fileHash": "aa3a223914ae9a6772826e29cf6c8d54eec522fa0869dcaff96832f265bb5184",
+        "excerpt": "        var response = new CustomerLookupController().lookup(\"customer-1\");",
+        "projectId": "requirements",
+        "repository": "example/customer-sample"
+      },
+      "phase": "candidate",
+      "projectId": "requirements"
+    },
+    {
+      "reason": "Java local receiver type is not inferred",
+      "range": {
+        "startLine": 16,
+        "endLine": 16
+      },
+      "detail": "var",
+      "evidence": {
+        "path": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+        "range": {
+          "startLine": 16,
+          "endLine": 16
+        },
+        "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+        "fileHash": "aa3a223914ae9a6772826e29cf6c8d54eec522fa0869dcaff96832f265bb5184",
+        "excerpt": "        var response = new CustomerLookupController().lookup(\"customer-1\");",
+        "projectId": "requirements",
+        "repository": "example/customer-sample"
+      },
+      "phase": "candidate",
+      "projectId": "requirements"
+    },
+    {
+      "reason": "Java call receiver is unresolved",
+      "range": {
+        "startLine": 10,
+        "endLine": 10
+      },
+      "detail": "new CustomerLookupController()",
+      "evidence": {
+        "path": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+        "range": {
+          "startLine": 10,
+          "endLine": 10
+        },
+        "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+        "fileHash": "aa3a223914ae9a6772826e29cf6c8d54eec522fa0869dcaff96832f265bb5184",
+        "excerpt": "        var response = new CustomerLookupController().lookup(\"customer-1\");",
+        "projectId": "requirements",
+        "repository": "example/customer-sample"
+      },
+      "phase": "candidate",
+      "projectId": "requirements"
+    },
+    {
+      "reason": "Java call receiver is unresolved",
+      "range": {
+        "startLine": 11,
+        "endLine": 11
+      },
+      "detail": "response",
+      "evidence": {
+        "path": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+        "range": {
+          "startLine": 11,
+          "endLine": 11
+        },
+        "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+        "fileHash": "aa3a223914ae9a6772826e29cf6c8d54eec522fa0869dcaff96832f265bb5184",
+        "excerpt": "        assertEquals(\"customer-1\", response.id());",
+        "projectId": "requirements",
+        "repository": "example/customer-sample"
+      },
+      "phase": "candidate",
+      "projectId": "requirements"
+    },
+    {
+      "reason": "Java call receiver is unresolved",
+      "range": {
+        "startLine": 16,
+        "endLine": 16
+      },
+      "detail": "new CustomerLookupController()",
+      "evidence": {
+        "path": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+        "range": {
+          "startLine": 16,
+          "endLine": 16
+        },
+        "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+        "fileHash": "aa3a223914ae9a6772826e29cf6c8d54eec522fa0869dcaff96832f265bb5184",
+        "excerpt": "        var response = new CustomerLookupController().lookup(\"customer-1\");",
+        "projectId": "requirements",
+        "repository": "example/customer-sample"
+      },
+      "phase": "candidate",
+      "projectId": "requirements"
+    },
+    {
+      "reason": "Java call receiver is unresolved",
+      "range": {
+        "startLine": 17,
+        "endLine": 17
+      },
+      "detail": "response",
+      "evidence": {
+        "path": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+        "range": {
+          "startLine": 17,
+          "endLine": 17
+        },
+        "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+        "fileHash": "aa3a223914ae9a6772826e29cf6c8d54eec522fa0869dcaff96832f265bb5184",
+        "excerpt": "        assertEquals(\"Ada Example\", response.displayName());",
+        "projectId": "requirements",
+        "repository": "example/customer-sample"
+      },
+      "phase": "candidate",
+      "projectId": "requirements"
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "org.junit.jupiter.api.Test",
+      "evidence": {
+        "path": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+        "range": {
+          "startLine": 3,
+          "endLine": 3
+        },
+        "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+        "fileHash": "aa3a223914ae9a6772826e29cf6c8d54eec522fa0869dcaff96832f265bb5184",
+        "excerpt": "import org.junit.jupiter.api.Test;",
+        "projectId": "requirements",
+        "repository": "example/customer-sample"
+      },
+      "phase": "candidate",
+      "projectId": "requirements"
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "org.junit.jupiter.api.Assertions.assertEquals",
+      "evidence": {
+        "path": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+        "range": {
+          "startLine": 4,
+          "endLine": 4
+        },
+        "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+        "fileHash": "aa3a223914ae9a6772826e29cf6c8d54eec522fa0869dcaff96832f265bb5184",
+        "excerpt": "import static org.junit.jupiter.api.Assertions.assertEquals;",
+        "projectId": "requirements",
+        "repository": "example/customer-sample"
+      },
+      "phase": "candidate",
+      "projectId": "requirements"
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "org.junit.jupiter.api.Test",
+      "evidence": {
+        "path": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+        "range": {
+          "startLine": 8,
+          "endLine": 8
+        },
+        "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+        "fileHash": "aa3a223914ae9a6772826e29cf6c8d54eec522fa0869dcaff96832f265bb5184",
+        "excerpt": "    @Test",
+        "projectId": "requirements",
+        "repository": "example/customer-sample"
+      },
+      "phase": "candidate",
+      "projectId": "requirements"
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "var",
+      "evidence": {
+        "path": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+        "range": {
+          "startLine": 10,
+          "endLine": 10
+        },
+        "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+        "fileHash": "aa3a223914ae9a6772826e29cf6c8d54eec522fa0869dcaff96832f265bb5184",
+        "excerpt": "        var response = new CustomerLookupController().lookup(\"customer-1\");",
+        "projectId": "requirements",
+        "repository": "example/customer-sample"
+      },
+      "phase": "candidate",
+      "projectId": "requirements"
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "org.junit.jupiter.api.Test",
+      "evidence": {
+        "path": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+        "range": {
+          "startLine": 14,
+          "endLine": 14
+        },
+        "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+        "fileHash": "aa3a223914ae9a6772826e29cf6c8d54eec522fa0869dcaff96832f265bb5184",
+        "excerpt": "    @Test",
+        "projectId": "requirements",
+        "repository": "example/customer-sample"
+      },
+      "phase": "candidate",
+      "projectId": "requirements"
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "var",
+      "evidence": {
+        "path": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+        "range": {
+          "startLine": 16,
+          "endLine": 16
+        },
+        "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+        "fileHash": "aa3a223914ae9a6772826e29cf6c8d54eec522fa0869dcaff96832f265bb5184",
+        "excerpt": "        var response = new CustomerLookupController().lookup(\"customer-1\");",
+        "projectId": "requirements",
+        "repository": "example/customer-sample"
+      },
+      "phase": "candidate",
+      "projectId": "requirements"
+    },
+    {
+      "reason": "dynamic-dependency",
+      "detail": "Runtime value prevents a resolved edge",
+      "evidence": {
+        "path": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+        "range": {
+          "startLine": 10,
+          "endLine": 10
+        },
+        "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+        "fileHash": "aa3a223914ae9a6772826e29cf6c8d54eec522fa0869dcaff96832f265bb5184",
+        "excerpt": "        var response = new CustomerLookupController().lookup(\"customer-1\");",
+        "projectId": "requirements",
+        "repository": "example/customer-sample"
+      },
+      "phase": "candidate",
+      "projectId": "requirements"
+    },
+    {
+      "reason": "unresolved-call",
+      "detail": "assertEquals",
+      "evidence": {
+        "path": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+        "range": {
+          "startLine": 11,
+          "endLine": 11
+        },
+        "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+        "fileHash": "aa3a223914ae9a6772826e29cf6c8d54eec522fa0869dcaff96832f265bb5184",
+        "excerpt": "        assertEquals(\"customer-1\", response.id());",
+        "projectId": "requirements",
+        "repository": "example/customer-sample"
+      },
+      "candidates": [],
+      "phase": "candidate",
+      "projectId": "requirements"
+    },
+    {
+      "reason": "dynamic-dependency",
+      "detail": "Runtime value prevents a resolved edge",
+      "evidence": {
+        "path": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+        "range": {
+          "startLine": 11,
+          "endLine": 11
+        },
+        "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+        "fileHash": "aa3a223914ae9a6772826e29cf6c8d54eec522fa0869dcaff96832f265bb5184",
+        "excerpt": "        assertEquals(\"customer-1\", response.id());",
+        "projectId": "requirements",
+        "repository": "example/customer-sample"
+      },
+      "phase": "candidate",
+      "projectId": "requirements"
+    },
+    {
+      "reason": "dynamic-dependency",
+      "detail": "Runtime value prevents a resolved edge",
+      "evidence": {
+        "path": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+        "range": {
+          "startLine": 16,
+          "endLine": 16
+        },
+        "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+        "fileHash": "aa3a223914ae9a6772826e29cf6c8d54eec522fa0869dcaff96832f265bb5184",
+        "excerpt": "        var response = new CustomerLookupController().lookup(\"customer-1\");",
+        "projectId": "requirements",
+        "repository": "example/customer-sample"
+      },
+      "phase": "candidate",
+      "projectId": "requirements"
+    },
+    {
+      "reason": "unresolved-call",
+      "detail": "assertEquals",
+      "evidence": {
+        "path": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+        "range": {
+          "startLine": 17,
+          "endLine": 17
+        },
+        "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+        "fileHash": "aa3a223914ae9a6772826e29cf6c8d54eec522fa0869dcaff96832f265bb5184",
+        "excerpt": "        assertEquals(\"Ada Example\", response.displayName());",
+        "projectId": "requirements",
+        "repository": "example/customer-sample"
+      },
+      "candidates": [],
+      "phase": "candidate",
+      "projectId": "requirements"
+    },
+    {
+      "reason": "dynamic-dependency",
+      "detail": "Runtime value prevents a resolved edge",
+      "evidence": {
+        "path": "backend/src/test/java/example/customers/CustomerLookupControllerTest.java",
+        "range": {
+          "startLine": 17,
+          "endLine": 17
+        },
+        "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+        "fileHash": "aa3a223914ae9a6772826e29cf6c8d54eec522fa0869dcaff96832f265bb5184",
+        "excerpt": "        assertEquals(\"Ada Example\", response.displayName());",
+        "projectId": "requirements",
+        "repository": "example/customer-sample"
+      },
+      "phase": "candidate",
+      "projectId": "requirements"
+    },
+    {
+      "reason": "dynamic_http_url",
+      "range": {
+        "startLine": 8,
+        "endLine": 8
+      },
+      "detail": "`/api/customers/lookup?id=${encodeURIComponent(id)}`",
+      "evidence": {
+        "path": "frontend/src/customerApi.ts",
+        "range": {
+          "startLine": 8,
+          "endLine": 8
+        },
+        "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+        "fileHash": "2cdee9cc200708bdb5c3184490c8e02a2597c6ada3b97b79ff5b66eb4c6a7095",
+        "excerpt": "  const response = await fetch(`/api/customers/lookup?id=${encodeURIComponent(id)}`);",
+        "projectId": "requirements",
+        "repository": "example/customer-sample"
+      },
+      "phase": "candidate",
+      "projectId": "requirements"
+    },
+    {
+      "reason": "unresolved_call",
+      "range": {
+        "startLine": 8,
+        "endLine": 8
+      },
+      "detail": "encodeURIComponent",
+      "evidence": {
+        "path": "frontend/src/customerApi.ts",
+        "range": {
+          "startLine": 8,
+          "endLine": 8
+        },
+        "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+        "fileHash": "2cdee9cc200708bdb5c3184490c8e02a2597c6ada3b97b79ff5b66eb4c6a7095",
+        "excerpt": "  const response = await fetch(`/api/customers/lookup?id=${encodeURIComponent(id)}`);",
+        "projectId": "requirements",
+        "repository": "example/customer-sample"
+      },
+      "phase": "candidate",
+      "projectId": "requirements"
+    },
+    {
+      "reason": "unresolved_call",
+      "range": {
+        "startLine": 10,
+        "endLine": 10
+      },
+      "detail": "response.json",
+      "evidence": {
+        "path": "frontend/src/customerApi.ts",
+        "range": {
+          "startLine": 10,
+          "endLine": 10
+        },
+        "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+        "fileHash": "2cdee9cc200708bdb5c3184490c8e02a2597c6ada3b97b79ff5b66eb4c6a7095",
+        "excerpt": "  return response.json();",
+        "projectId": "requirements",
+        "repository": "example/customer-sample"
+      },
+      "phase": "candidate",
+      "projectId": "requirements"
+    },
+    {
+      "reason": "unresolved-call",
+      "detail": "Promise",
+      "evidence": {
+        "path": "frontend/src/customerApi.ts",
+        "range": {
+          "startLine": 7,
+          "endLine": 7
+        },
+        "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+        "fileHash": "2cdee9cc200708bdb5c3184490c8e02a2597c6ada3b97b79ff5b66eb4c6a7095",
+        "excerpt": "export async function lookupCustomer(id: string): Promise<CustomerResponse> {",
+        "projectId": "requirements",
+        "repository": "example/customer-sample"
+      },
+      "phase": "candidate",
+      "projectId": "requirements"
+    },
+    {
+      "reason": "unresolved-call",
+      "detail": "fetch",
+      "evidence": {
+        "path": "frontend/src/customerApi.ts",
+        "range": {
+          "startLine": 8,
+          "endLine": 8
+        },
+        "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+        "fileHash": "2cdee9cc200708bdb5c3184490c8e02a2597c6ada3b97b79ff5b66eb4c6a7095",
+        "excerpt": "  const response = await fetch(`/api/customers/lookup?id=${encodeURIComponent(id)}`);",
+        "projectId": "requirements",
+        "repository": "example/customer-sample"
+      },
+      "phase": "candidate",
+      "projectId": "requirements"
+    },
+    {
+      "reason": "dynamic-dependency",
+      "detail": "Runtime value prevents a resolved edge",
+      "evidence": {
+        "path": "frontend/src/customerApi.ts",
+        "range": {
+          "startLine": 8,
+          "endLine": 8
+        },
+        "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+        "fileHash": "2cdee9cc200708bdb5c3184490c8e02a2597c6ada3b97b79ff5b66eb4c6a7095",
+        "excerpt": "  const response = await fetch(`/api/customers/lookup?id=${encodeURIComponent(id)}`);",
+        "projectId": "requirements",
+        "repository": "example/customer-sample"
+      },
+      "phase": "candidate",
+      "projectId": "requirements"
+    },
+    {
+      "reason": "unresolved-call",
+      "detail": "encodeURIComponent",
+      "evidence": {
+        "path": "frontend/src/customerApi.ts",
+        "range": {
+          "startLine": 8,
+          "endLine": 8
+        },
+        "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+        "fileHash": "2cdee9cc200708bdb5c3184490c8e02a2597c6ada3b97b79ff5b66eb4c6a7095",
+        "excerpt": "  const response = await fetch(`/api/customers/lookup?id=${encodeURIComponent(id)}`);",
+        "projectId": "requirements",
+        "repository": "example/customer-sample"
+      },
+      "phase": "candidate",
+      "projectId": "requirements"
+    },
+    {
+      "reason": "unresolved-call",
+      "detail": "Error",
+      "evidence": {
+        "path": "frontend/src/customerApi.ts",
+        "range": {
+          "startLine": 9,
+          "endLine": 9
+        },
+        "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+        "fileHash": "2cdee9cc200708bdb5c3184490c8e02a2597c6ada3b97b79ff5b66eb4c6a7095",
+        "excerpt": "  if (!response.ok) throw new Error('Customer lookup failed');",
+        "projectId": "requirements",
+        "repository": "example/customer-sample"
+      },
+      "phase": "candidate",
+      "projectId": "requirements"
+    },
+    {
+      "reason": "unresolved-call",
+      "detail": "json",
+      "evidence": {
+        "path": "frontend/src/customerApi.ts",
+        "range": {
+          "startLine": 10,
+          "endLine": 10
+        },
+        "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+        "fileHash": "2cdee9cc200708bdb5c3184490c8e02a2597c6ada3b97b79ff5b66eb4c6a7095",
+        "excerpt": "  return response.json();",
+        "projectId": "requirements",
+        "repository": "example/customer-sample"
+      },
+      "phase": "candidate",
+      "projectId": "requirements"
+    },
+    {
+      "reason": "unresolved_call",
+      "range": {
+        "startLine": 6,
+        "endLine": 6
+      },
+      "detail": "page.goto",
+      "evidence": {
+        "path": "frontend/src/customerLookup.spec.ts",
+        "range": {
+          "startLine": 6,
+          "endLine": 6
+        },
+        "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+        "fileHash": "b033953aaf51f31b7481fedd383143894cd18d3f4aebbc230e99d70bee5db305",
+        "excerpt": "  await page.goto('/customers');",
+        "projectId": "requirements",
+        "repository": "example/customer-sample"
+      },
+      "phase": "candidate",
+      "projectId": "requirements"
+    },
+    {
+      "reason": "unresolved_call",
+      "range": {
+        "startLine": 7,
+        "endLine": 7
+      },
+      "detail": "expect(page.getByLabel('Customer result')).toHaveText",
+      "evidence": {
+        "path": "frontend/src/customerLookup.spec.ts",
+        "range": {
+          "startLine": 7,
+          "endLine": 7
+        },
+        "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+        "fileHash": "b033953aaf51f31b7481fedd383143894cd18d3f4aebbc230e99d70bee5db305",
+        "excerpt": "  await expect(page.getByLabel('Customer result')).toHaveText('Ada Example');",
+        "projectId": "requirements",
+        "repository": "example/customer-sample"
+      },
+      "phase": "candidate",
+      "projectId": "requirements"
+    },
+    {
+      "reason": "unresolved_call",
+      "range": {
+        "startLine": 7,
+        "endLine": 7
+      },
+      "detail": "page.getByLabel",
+      "evidence": {
+        "path": "frontend/src/customerLookup.spec.ts",
+        "range": {
+          "startLine": 7,
+          "endLine": 7
+        },
+        "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+        "fileHash": "b033953aaf51f31b7481fedd383143894cd18d3f4aebbc230e99d70bee5db305",
+        "excerpt": "  await expect(page.getByLabel('Customer result')).toHaveText('Ada Example');",
+        "projectId": "requirements",
+        "repository": "example/customer-sample"
+      },
+      "phase": "candidate",
+      "projectId": "requirements"
+    },
+    {
+      "reason": "external-module",
+      "detail": "@playwright/test",
+      "evidence": {
+        "path": "frontend/src/customerLookup.spec.ts",
+        "range": {
+          "startLine": 1,
+          "endLine": 1
+        },
+        "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+        "fileHash": "b033953aaf51f31b7481fedd383143894cd18d3f4aebbc230e99d70bee5db305",
+        "excerpt": "import {test, expect} from '@playwright/test';",
+        "projectId": "requirements",
+        "repository": "example/customer-sample"
+      },
+      "phase": "candidate",
+      "projectId": "requirements"
+    },
+    {
+      "reason": "external-module",
+      "detail": "@playwright/test",
+      "evidence": {
+        "path": "frontend/src/customerLookup.spec.ts",
+        "range": {
+          "startLine": 1,
+          "endLine": 1
+        },
+        "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+        "fileHash": "b033953aaf51f31b7481fedd383143894cd18d3f4aebbc230e99d70bee5db305",
+        "excerpt": "import {test, expect} from '@playwright/test';",
+        "projectId": "requirements",
+        "repository": "example/customer-sample"
+      },
+      "phase": "candidate",
+      "projectId": "requirements"
+    },
+    {
+      "reason": "unresolved-call",
+      "detail": "goto",
+      "evidence": {
+        "path": "frontend/src/customerLookup.spec.ts",
+        "range": {
+          "startLine": 6,
+          "endLine": 6
+        },
+        "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+        "fileHash": "b033953aaf51f31b7481fedd383143894cd18d3f4aebbc230e99d70bee5db305",
+        "excerpt": "  await page.goto('/customers');",
+        "projectId": "requirements",
+        "repository": "example/customer-sample"
+      },
+      "phase": "candidate",
+      "projectId": "requirements"
+    },
+    {
+      "reason": "unresolved-call",
+      "detail": "toHaveText",
+      "evidence": {
+        "path": "frontend/src/customerLookup.spec.ts",
+        "range": {
+          "startLine": 7,
+          "endLine": 7
+        },
+        "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+        "fileHash": "b033953aaf51f31b7481fedd383143894cd18d3f4aebbc230e99d70bee5db305",
+        "excerpt": "  await expect(page.getByLabel('Customer result')).toHaveText('Ada Example');",
+        "projectId": "requirements",
+        "repository": "example/customer-sample"
+      },
+      "phase": "candidate",
+      "projectId": "requirements"
+    },
+    {
+      "reason": "unresolved-call",
+      "detail": "getByLabel",
+      "evidence": {
+        "path": "frontend/src/customerLookup.spec.ts",
+        "range": {
+          "startLine": 7,
+          "endLine": 7
+        },
+        "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+        "fileHash": "b033953aaf51f31b7481fedd383143894cd18d3f4aebbc230e99d70bee5db305",
+        "excerpt": "  await expect(page.getByLabel('Customer result')).toHaveText('Ada Example');",
+        "projectId": "requirements",
+        "repository": "example/customer-sample"
+      },
+      "phase": "candidate",
+      "projectId": "requirements"
+    },
+    {
+      "reason": "external-module",
+      "detail": "react",
+      "evidence": {
+        "path": "frontend/src/CustomerResult.tsx",
+        "range": {
+          "startLine": 1,
+          "endLine": 1
+        },
+        "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+        "fileHash": "fd213c059dcdf53b40bc3e55e70809aea60b0b0fba019ce3073338108db96655",
+        "excerpt": "import React from 'react';",
+        "projectId": "requirements",
+        "repository": "example/customer-sample"
+      },
+      "phase": "candidate",
+      "projectId": "requirements"
+    }
+  ],
+  "focusedTests": [],
+  "coverage": {
+    "complete": false,
+    "fullRegressionMayBeSkipped": false,
+    "limitations": [
+      "Source-only analysis; no Java/TypeScript semantic compilation, runtime dispatch, reflection, DI wiring, proxy/origin verification or transitive external package sources",
+      "Edges are evidence-backed approximations; indirect file dependencies do not prove execution",
+      "Renames inferred only for identical declaration key/signature/body; edited renames remain delete/add",
+      "Unknown syntax and unresolved/dynamic dependencies remain visible; passing fixture tests is not private-repository acceptance",
+      "Cross-project dependencies require explicit mappings; mappings are assertions, not deployment proof",
+      "Selected quality and SOLID signals do not establish universal design correctness",
+      "Requirement criteria are literal source/test evidence only; runtime remains unverified"
+    ]
+  },
+  "provenance": {
+    "projects": [
+      {
+        "projectId": "requirements",
+        "baseline": {
+          "root": "/workspace/review-analysis/fixtures/requirements/sample",
+          "type": "directory",
+          "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+          "contentHash": "00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+          "dirty": false
+        },
+        "candidate": {
+          "root": "/workspace/review-analysis/fixtures/requirements/sample",
+          "type": "directory",
+          "revision": "tree-sha256:00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+          "contentHash": "00c93dbea14d93d05b2510a01ca9d96f411ee41568537ebd15c79021e9386b97",
+          "dirty": false
+        },
+        "rulesHash": "f18a7396f5e3d332ba600beed841870f72eef42f5929bc9d4bc5d695adc2cd42",
+        "baselineRulesHash": "f18a7396f5e3d332ba600beed841870f72eef42f5929bc9d4bc5d695adc2cd42",
+        "cacheKey": "ea8f6f9c64f071467cfef467667b7ba5842b2a474a4075f538c7bdb06e6d9c24"
+      }
+    ]
+  },
+  "cache": {
+    "projects": [
+      {
+        "projectId": "requirements",
+        "report": "miss",
+        "parsedFiles": 0,
+        "reusedFiles": 0,
+        "invalidEntries": 0
+      }
+    ],
+    "quality": [
+      {
+        "projectId": "requirements",
+        "status": "miss"
+      }
+    ]
+  },
+  "metrics": {
+    "elapsedMs": 1763.15,
+    "projects": 1,
+    "sourceFiles": 6,
+    "edges": 12
+  }
+}

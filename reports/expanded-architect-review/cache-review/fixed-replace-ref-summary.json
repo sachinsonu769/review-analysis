@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "requestedRevision": "b2c7e85d49214fa6e79c999a4563060c973ca66f",
+  "returnedRevision": "b2c7e85d49214fa6e79c999a4563060c973ca66f",
+  "returnedSource": "export const original=1;\n",
+  "sourceHash": "88e9930b38dec03265c17ae2c34900b84f06be09f085fdc79edd3780e5c66e22"
+}

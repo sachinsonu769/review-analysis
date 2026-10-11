@@ -1,0 +1,21 @@
+{
+  "overallStatus": "pass",
+  "artifactZipSha256": "a140834fe7d26c707a04dc43ae225178bc39756154ca52e63f8dd7db91582897",
+  "analyzerSourceBuildHash": "ca04bac50b7584aaafd9d5602acc8055152e81e25de5fa1b15bb710f76f53ac9",
+  "analyzerIdentityMatchesAllReports": true,
+  "manifestSha256": "87d4a883a987672fd0441b660ef0026163ef00e7cc2536b4dbb97413cd72d344",
+  "manifestEntries": 124,
+  "manifestErrors": [],
+  "cases": 18,
+  "originalCases": 16,
+  "positiveCases": 2,
+  "passed": 18,
+  "failed": 0,
+  "notRun": 0,
+  "actualCLIInvocations": 36,
+  "checkedEvidenceRecords": 638,
+  "evidenceErrors": [],
+  "originalInputBytesAndTreeRevisionsUnchanged": true,
+  "readableUnknownsVisible": true,
+  "remainingSupportedBlockers": []
+}

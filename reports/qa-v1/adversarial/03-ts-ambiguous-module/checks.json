@@ -1,0 +1,50 @@
+{
+  "id": "03-ts-ambiguous-module",
+  "description": "Both .ts and .tsx candidate files prevent unique imported call",
+  "status": "pass",
+  "exitCode": 0,
+  "sourcePaths": {
+    "baseline": "/tmp/review-analysis-adversarial-v1-anUajX/03-ts-ambiguous-module/baseline",
+    "candidate": "/tmp/review-analysis-adversarial-v1-anUajX/03-ts-ambiguous-module/candidate"
+  },
+  "sourceHashes": {
+    "baseline": {
+      "frontend/consumer.ts": "b2f41335f5344a2d002632eda191eee705bfa333ef91e40267b2a65b406495e2",
+      "frontend/lib.ts": "6a17fb63c8c90e2ce7a1f7344a73bd815f27fdf6df05982abd610fe84ea3408b",
+      "frontend/lib.tsx": "6a17fb63c8c90e2ce7a1f7344a73bd815f27fdf6df05982abd610fe84ea3408b"
+    },
+    "candidate": {
+      "frontend/consumer.ts": "b2f41335f5344a2d002632eda191eee705bfa333ef91e40267b2a65b406495e2",
+      "frontend/lib.ts": "6745bcd12f9a1c706a5b88bc099841f1fb145a755425ede6614a1c4559e322d9",
+      "frontend/lib.tsx": "6745bcd12f9a1c706a5b88bc099841f1fb145a755425ede6614a1c4559e322d9"
+    }
+  },
+  "evidence": {
+    "checkedEvidenceRecords": 6,
+    "errors": []
+  },
+  "assertions": [
+    {
+      "name": "ambiguous source reported",
+      "status": "pass"
+    },
+    {
+      "name": "no fabricated call edge",
+      "status": "pass"
+    },
+    {
+      "name": "all source evidence hashes/ranges/excerpts/revisions independently reproduce",
+      "status": "pass"
+    },
+    {
+      "name": "readable actual CLI exits 0",
+      "status": "pass"
+    }
+  ],
+  "reportStats": {
+    "changes": 2,
+    "directEdges": 0,
+    "unknowns": 2,
+    "sourceBuildHash": "8ee7fcacee9a1b276b2bfab2665d8d3ab771e40eee5f3924f1f301192426e68f"
+  }
+}

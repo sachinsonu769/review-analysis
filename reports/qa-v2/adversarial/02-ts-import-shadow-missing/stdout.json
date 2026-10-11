@@ -1,0 +1,553 @@
+{
+  "schemaVersion": "1.0",
+  "analyzer": {
+    "version": "0.1.0",
+    "sourceBuildHash": "ca04bac50b7584aaafd9d5602acc8055152e81e25de5fa1b15bb710f76f53ac9",
+    "parsers": {
+      "java": "java-parser@3.0.1",
+      "typescript": "typescript@5.9.3"
+    }
+  },
+  "advisory": true,
+  "asOf": "2026-10-11",
+  "provenance": {
+    "baseline": {
+      "root": "/tmp/review-analysis-adversarial-v2-NZrPxG/02-ts-import-shadow-missing/baseline",
+      "type": "directory",
+      "revision": "tree-sha256:4c2dcad5edde3048d080c6ad442997f575d7f5fd8880592fa579b9b49fe0ca5b",
+      "contentHash": "4c2dcad5edde3048d080c6ad442997f575d7f5fd8880592fa579b9b49fe0ca5b",
+      "dirty": false
+    },
+    "candidate": {
+      "root": "/tmp/review-analysis-adversarial-v2-NZrPxG/02-ts-import-shadow-missing/candidate",
+      "type": "directory",
+      "revision": "tree-sha256:77db4e8ccd58030590e06a202bec4233f5b3b28a1889e892b91b02f0c026090d",
+      "contentHash": "77db4e8ccd58030590e06a202bec4233f5b3b28a1889e892b91b02f0c026090d",
+      "dirty": false
+    },
+    "rulesHash": "90f33c2c080aa463115b0ef7e4058bb9bf0da4944dff79ed58eae2f01f9cd3f1",
+    "baselineRulesHash": "90f33c2c080aa463115b0ef7e4058bb9bf0da4944dff79ed58eae2f01f9cd3f1",
+    "cacheKey": "14fb478c3b4443deb73eae0a9ebf460068c6a49f4514e3a68d0eee7785677113"
+  },
+  "changes": [
+    {
+      "kind": "modified",
+      "name": "work",
+      "key": "work",
+      "language": "typescript",
+      "contractChanged": false,
+      "before": {
+        "path": "frontend/lib.ts",
+        "range": {
+          "startLine": 1,
+          "endLine": 1
+        },
+        "revision": "tree-sha256:4c2dcad5edde3048d080c6ad442997f575d7f5fd8880592fa579b9b49fe0ca5b",
+        "fileHash": "6a17fb63c8c90e2ce7a1f7344a73bd815f27fdf6df05982abd610fe84ea3408b",
+        "excerpt": "export function work(x: number): number { return 1; }"
+      },
+      "after": {
+        "path": "frontend/lib.ts",
+        "range": {
+          "startLine": 1,
+          "endLine": 1
+        },
+        "revision": "tree-sha256:77db4e8ccd58030590e06a202bec4233f5b3b28a1889e892b91b02f0c026090d",
+        "fileHash": "6745bcd12f9a1c706a5b88bc099841f1fb145a755425ede6614a1c4559e322d9",
+        "excerpt": "export function work(x: number): number { return 2; }"
+      }
+    }
+  ],
+  "impact": {
+    "direct": [
+      {
+        "kind": "import",
+        "fromPath": "frontend/consumer.ts",
+        "toPath": "frontend/lib.ts",
+        "targetKey": null,
+        "confidence": "high",
+        "reason": "Relative import resolves to supplied source file",
+        "evidence": {
+          "path": "frontend/consumer.ts",
+          "range": {
+            "startLine": 1,
+            "endLine": 1
+          },
+          "revision": "tree-sha256:4c2dcad5edde3048d080c6ad442997f575d7f5fd8880592fa579b9b49fe0ca5b",
+          "fileHash": "fa2c919715d474b2c8941ea1ce8b9ab1dc8449306f1d7e5460d491df4d9a8518",
+          "excerpt": "import {work as act, type Packet} from './lib';"
+        },
+        "targetEvidence": {
+          "path": "frontend/lib.ts",
+          "range": {
+            "startLine": 1,
+            "endLine": 1
+          },
+          "revision": "tree-sha256:4c2dcad5edde3048d080c6ad442997f575d7f5fd8880592fa579b9b49fe0ca5b",
+          "fileHash": "6a17fb63c8c90e2ce7a1f7344a73bd815f27fdf6df05982abd610fe84ea3408b",
+          "excerpt": "export function work(x: number): number { return 1; }"
+        }
+      },
+      {
+        "kind": "import",
+        "fromPath": "frontend/consumer.ts",
+        "toPath": "frontend/lib.ts",
+        "targetKey": null,
+        "confidence": "high",
+        "reason": "Relative import resolves to supplied source file",
+        "evidence": {
+          "path": "frontend/consumer.ts",
+          "range": {
+            "startLine": 2,
+            "endLine": 2
+          },
+          "revision": "tree-sha256:4c2dcad5edde3048d080c6ad442997f575d7f5fd8880592fa579b9b49fe0ca5b",
+          "fileHash": "fa2c919715d474b2c8941ea1ce8b9ab1dc8449306f1d7e5460d491df4d9a8518",
+          "excerpt": "import * as tools from './lib';"
+        },
+        "targetEvidence": {
+          "path": "frontend/lib.ts",
+          "range": {
+            "startLine": 1,
+            "endLine": 1
+          },
+          "revision": "tree-sha256:4c2dcad5edde3048d080c6ad442997f575d7f5fd8880592fa579b9b49fe0ca5b",
+          "fileHash": "6a17fb63c8c90e2ce7a1f7344a73bd815f27fdf6df05982abd610fe84ea3408b",
+          "excerpt": "export function work(x: number): number { return 1; }"
+        }
+      },
+      {
+        "kind": "type",
+        "fromPath": "frontend/consumer.ts",
+        "toPath": "frontend/lib.ts",
+        "targetKey": "Packet",
+        "confidence": "high",
+        "reason": "Imported binding resolves to a supplied named declaration",
+        "evidence": {
+          "path": "frontend/consumer.ts",
+          "range": {
+            "startLine": 4,
+            "endLine": 4
+          },
+          "revision": "tree-sha256:4c2dcad5edde3048d080c6ad442997f575d7f5fd8880592fa579b9b49fe0ca5b",
+          "fileHash": "fa2c919715d474b2c8941ea1ce8b9ab1dc8449306f1d7e5460d491df4d9a8518",
+          "excerpt": "export function use(value: Packet) { act(1); } // imported-call"
+        },
+        "targetEvidence": {
+          "path": "frontend/lib.ts",
+          "range": {
+            "startLine": 2,
+            "endLine": 2
+          },
+          "revision": "tree-sha256:4c2dcad5edde3048d080c6ad442997f575d7f5fd8880592fa579b9b49fe0ca5b",
+          "fileHash": "6a17fb63c8c90e2ce7a1f7344a73bd815f27fdf6df05982abd610fe84ea3408b",
+          "excerpt": "export interface Packet { value: number }"
+        }
+      },
+      {
+        "kind": "call",
+        "fromPath": "frontend/consumer.ts",
+        "toPath": "frontend/lib.ts",
+        "targetKey": "work",
+        "confidence": "high",
+        "reason": "Imported binding resolves to a supplied named declaration",
+        "evidence": {
+          "path": "frontend/consumer.ts",
+          "range": {
+            "startLine": 4,
+            "endLine": 4
+          },
+          "revision": "tree-sha256:4c2dcad5edde3048d080c6ad442997f575d7f5fd8880592fa579b9b49fe0ca5b",
+          "fileHash": "fa2c919715d474b2c8941ea1ce8b9ab1dc8449306f1d7e5460d491df4d9a8518",
+          "excerpt": "export function use(value: Packet) { act(1); } // imported-call"
+        },
+        "targetEvidence": {
+          "path": "frontend/lib.ts",
+          "range": {
+            "startLine": 1,
+            "endLine": 1
+          },
+          "revision": "tree-sha256:4c2dcad5edde3048d080c6ad442997f575d7f5fd8880592fa579b9b49fe0ca5b",
+          "fileHash": "6a17fb63c8c90e2ce7a1f7344a73bd815f27fdf6df05982abd610fe84ea3408b",
+          "excerpt": "export function work(x: number): number { return 1; }"
+        }
+      },
+      {
+        "kind": "call",
+        "fromPath": "frontend/consumer.ts",
+        "toPath": "frontend/lib.ts",
+        "targetKey": "work",
+        "confidence": "high",
+        "reason": "Imported binding resolves to a supplied named declaration",
+        "evidence": {
+          "path": "frontend/consumer.ts",
+          "range": {
+            "startLine": 5,
+            "endLine": 5
+          },
+          "revision": "tree-sha256:4c2dcad5edde3048d080c6ad442997f575d7f5fd8880592fa579b9b49fe0ca5b",
+          "fileHash": "fa2c919715d474b2c8941ea1ce8b9ab1dc8449306f1d7e5460d491df4d9a8518",
+          "excerpt": "export function namespaceUse() { tools.work(1); } // namespace-call"
+        },
+        "targetEvidence": {
+          "path": "frontend/lib.ts",
+          "range": {
+            "startLine": 1,
+            "endLine": 1
+          },
+          "revision": "tree-sha256:4c2dcad5edde3048d080c6ad442997f575d7f5fd8880592fa579b9b49fe0ca5b",
+          "fileHash": "6a17fb63c8c90e2ce7a1f7344a73bd815f27fdf6df05982abd610fe84ea3408b",
+          "excerpt": "export function work(x: number): number { return 1; }"
+        }
+      },
+      {
+        "kind": "import",
+        "fromPath": "frontend/consumer.ts",
+        "toPath": "frontend/lib.ts",
+        "targetKey": null,
+        "confidence": "high",
+        "reason": "Relative import resolves to supplied source file",
+        "evidence": {
+          "path": "frontend/consumer.ts",
+          "range": {
+            "startLine": 1,
+            "endLine": 1
+          },
+          "revision": "tree-sha256:77db4e8ccd58030590e06a202bec4233f5b3b28a1889e892b91b02f0c026090d",
+          "fileHash": "fa2c919715d474b2c8941ea1ce8b9ab1dc8449306f1d7e5460d491df4d9a8518",
+          "excerpt": "import {work as act, type Packet} from './lib';"
+        },
+        "targetEvidence": {
+          "path": "frontend/lib.ts",
+          "range": {
+            "startLine": 1,
+            "endLine": 1
+          },
+          "revision": "tree-sha256:77db4e8ccd58030590e06a202bec4233f5b3b28a1889e892b91b02f0c026090d",
+          "fileHash": "6745bcd12f9a1c706a5b88bc099841f1fb145a755425ede6614a1c4559e322d9",
+          "excerpt": "export function work(x: number): number { return 2; }"
+        }
+      },
+      {
+        "kind": "import",
+        "fromPath": "frontend/consumer.ts",
+        "toPath": "frontend/lib.ts",
+        "targetKey": null,
+        "confidence": "high",
+        "reason": "Relative import resolves to supplied source file",
+        "evidence": {
+          "path": "frontend/consumer.ts",
+          "range": {
+            "startLine": 2,
+            "endLine": 2
+          },
+          "revision": "tree-sha256:77db4e8ccd58030590e06a202bec4233f5b3b28a1889e892b91b02f0c026090d",
+          "fileHash": "fa2c919715d474b2c8941ea1ce8b9ab1dc8449306f1d7e5460d491df4d9a8518",
+          "excerpt": "import * as tools from './lib';"
+        },
+        "targetEvidence": {
+          "path": "frontend/lib.ts",
+          "range": {
+            "startLine": 1,
+            "endLine": 1
+          },
+          "revision": "tree-sha256:77db4e8ccd58030590e06a202bec4233f5b3b28a1889e892b91b02f0c026090d",
+          "fileHash": "6745bcd12f9a1c706a5b88bc099841f1fb145a755425ede6614a1c4559e322d9",
+          "excerpt": "export function work(x: number): number { return 2; }"
+        }
+      },
+      {
+        "kind": "type",
+        "fromPath": "frontend/consumer.ts",
+        "toPath": "frontend/lib.ts",
+        "targetKey": "Packet",
+        "confidence": "high",
+        "reason": "Imported binding resolves to a supplied named declaration",
+        "evidence": {
+          "path": "frontend/consumer.ts",
+          "range": {
+            "startLine": 4,
+            "endLine": 4
+          },
+          "revision": "tree-sha256:77db4e8ccd58030590e06a202bec4233f5b3b28a1889e892b91b02f0c026090d",
+          "fileHash": "fa2c919715d474b2c8941ea1ce8b9ab1dc8449306f1d7e5460d491df4d9a8518",
+          "excerpt": "export function use(value: Packet) { act(1); } // imported-call"
+        },
+        "targetEvidence": {
+          "path": "frontend/lib.ts",
+          "range": {
+            "startLine": 2,
+            "endLine": 2
+          },
+          "revision": "tree-sha256:77db4e8ccd58030590e06a202bec4233f5b3b28a1889e892b91b02f0c026090d",
+          "fileHash": "6745bcd12f9a1c706a5b88bc099841f1fb145a755425ede6614a1c4559e322d9",
+          "excerpt": "export interface Packet { value: number }"
+        }
+      },
+      {
+        "kind": "call",
+        "fromPath": "frontend/consumer.ts",
+        "toPath": "frontend/lib.ts",
+        "targetKey": "work",
+        "confidence": "high",
+        "reason": "Imported binding resolves to a supplied named declaration",
+        "evidence": {
+          "path": "frontend/consumer.ts",
+          "range": {
+            "startLine": 4,
+            "endLine": 4
+          },
+          "revision": "tree-sha256:77db4e8ccd58030590e06a202bec4233f5b3b28a1889e892b91b02f0c026090d",
+          "fileHash": "fa2c919715d474b2c8941ea1ce8b9ab1dc8449306f1d7e5460d491df4d9a8518",
+          "excerpt": "export function use(value: Packet) { act(1); } // imported-call"
+        },
+        "targetEvidence": {
+          "path": "frontend/lib.ts",
+          "range": {
+            "startLine": 1,
+            "endLine": 1
+          },
+          "revision": "tree-sha256:77db4e8ccd58030590e06a202bec4233f5b3b28a1889e892b91b02f0c026090d",
+          "fileHash": "6745bcd12f9a1c706a5b88bc099841f1fb145a755425ede6614a1c4559e322d9",
+          "excerpt": "export function work(x: number): number { return 2; }"
+        }
+      },
+      {
+        "kind": "call",
+        "fromPath": "frontend/consumer.ts",
+        "toPath": "frontend/lib.ts",
+        "targetKey": "work",
+        "confidence": "high",
+        "reason": "Imported binding resolves to a supplied named declaration",
+        "evidence": {
+          "path": "frontend/consumer.ts",
+          "range": {
+            "startLine": 5,
+            "endLine": 5
+          },
+          "revision": "tree-sha256:77db4e8ccd58030590e06a202bec4233f5b3b28a1889e892b91b02f0c026090d",
+          "fileHash": "fa2c919715d474b2c8941ea1ce8b9ab1dc8449306f1d7e5460d491df4d9a8518",
+          "excerpt": "export function namespaceUse() { tools.work(1); } // namespace-call"
+        },
+        "targetEvidence": {
+          "path": "frontend/lib.ts",
+          "range": {
+            "startLine": 1,
+            "endLine": 1
+          },
+          "revision": "tree-sha256:77db4e8ccd58030590e06a202bec4233f5b3b28a1889e892b91b02f0c026090d",
+          "fileHash": "6745bcd12f9a1c706a5b88bc099841f1fb145a755425ede6614a1c4559e322d9",
+          "excerpt": "export function work(x: number): number { return 2; }"
+        }
+      }
+    ],
+    "indirect": []
+  },
+  "findings": [],
+  "guidance": {
+    "task": "Named and namespace bindings, nested forward local call, absent relative import",
+    "ruleSetVersion": "independent-adversarial-v1",
+    "approvalGap": "No human approval is inferred. Reviewed examples/exceptions are assertions from supplied configuration; simulation records are demonstrations only.",
+    "rules": [
+      {
+        "id": "independent/http-contract",
+        "kind": "endpoint-contract-change",
+        "owner": "synthetic-qa",
+        "version": "independent-adversarial-v1",
+        "severity": "warning",
+        "instruction": "endpoint-contract-change",
+        "examples": []
+      }
+    ]
+  },
+  "unknowns": [
+    {
+      "reason": "unresolved_call",
+      "range": {
+        "startLine": 6,
+        "endLine": 6
+      },
+      "detail": "act",
+      "evidence": {
+        "path": "frontend/consumer.ts",
+        "range": {
+          "startLine": 6,
+          "endLine": 6
+        },
+        "revision": "tree-sha256:4c2dcad5edde3048d080c6ad442997f575d7f5fd8880592fa579b9b49fe0ca5b",
+        "fileHash": "fa2c919715d474b2c8941ea1ce8b9ab1dc8449306f1d7e5460d491df4d9a8518",
+        "excerpt": "export function shadow(act: () => number) { return act(); } // parameter-shadow"
+      }
+    },
+    {
+      "reason": "unresolved_call",
+      "range": {
+        "startLine": 7,
+        "endLine": 7
+      },
+      "detail": "before",
+      "evidence": {
+        "path": "frontend/consumer.ts",
+        "range": {
+          "startLine": 7,
+          "endLine": 7
+        },
+        "revision": "tree-sha256:4c2dcad5edde3048d080c6ad442997f575d7f5fd8880592fa579b9b49fe0ca5b",
+        "fileHash": "fa2c919715d474b2c8941ea1ce8b9ab1dc8449306f1d7e5460d491df4d9a8518",
+        "excerpt": "export function local() { before(); function before() { return 4; } } // nested-local"
+      }
+    },
+    {
+      "reason": "missing-source",
+      "evidence": {
+        "path": "frontend/consumer.ts",
+        "range": {
+          "startLine": 3,
+          "endLine": 3
+        },
+        "revision": "tree-sha256:4c2dcad5edde3048d080c6ad442997f575d7f5fd8880592fa579b9b49fe0ca5b",
+        "fileHash": "fa2c919715d474b2c8941ea1ce8b9ab1dc8449306f1d7e5460d491df4d9a8518",
+        "excerpt": "import {missing} from './absent';"
+      },
+      "detail": "./absent",
+      "candidates": []
+    },
+    {
+      "reason": "unresolved-call",
+      "detail": "act",
+      "evidence": {
+        "path": "frontend/consumer.ts",
+        "range": {
+          "startLine": 6,
+          "endLine": 6
+        },
+        "revision": "tree-sha256:4c2dcad5edde3048d080c6ad442997f575d7f5fd8880592fa579b9b49fe0ca5b",
+        "fileHash": "fa2c919715d474b2c8941ea1ce8b9ab1dc8449306f1d7e5460d491df4d9a8518",
+        "excerpt": "export function shadow(act: () => number) { return act(); } // parameter-shadow"
+      }
+    },
+    {
+      "reason": "unresolved-call",
+      "detail": "before",
+      "evidence": {
+        "path": "frontend/consumer.ts",
+        "range": {
+          "startLine": 7,
+          "endLine": 7
+        },
+        "revision": "tree-sha256:4c2dcad5edde3048d080c6ad442997f575d7f5fd8880592fa579b9b49fe0ca5b",
+        "fileHash": "fa2c919715d474b2c8941ea1ce8b9ab1dc8449306f1d7e5460d491df4d9a8518",
+        "excerpt": "export function local() { before(); function before() { return 4; } } // nested-local"
+      }
+    },
+    {
+      "reason": "unresolved_call",
+      "range": {
+        "startLine": 6,
+        "endLine": 6
+      },
+      "detail": "act",
+      "evidence": {
+        "path": "frontend/consumer.ts",
+        "range": {
+          "startLine": 6,
+          "endLine": 6
+        },
+        "revision": "tree-sha256:77db4e8ccd58030590e06a202bec4233f5b3b28a1889e892b91b02f0c026090d",
+        "fileHash": "fa2c919715d474b2c8941ea1ce8b9ab1dc8449306f1d7e5460d491df4d9a8518",
+        "excerpt": "export function shadow(act: () => number) { return act(); } // parameter-shadow"
+      }
+    },
+    {
+      "reason": "unresolved_call",
+      "range": {
+        "startLine": 7,
+        "endLine": 7
+      },
+      "detail": "before",
+      "evidence": {
+        "path": "frontend/consumer.ts",
+        "range": {
+          "startLine": 7,
+          "endLine": 7
+        },
+        "revision": "tree-sha256:77db4e8ccd58030590e06a202bec4233f5b3b28a1889e892b91b02f0c026090d",
+        "fileHash": "fa2c919715d474b2c8941ea1ce8b9ab1dc8449306f1d7e5460d491df4d9a8518",
+        "excerpt": "export function local() { before(); function before() { return 4; } } // nested-local"
+      }
+    },
+    {
+      "reason": "missing-source",
+      "evidence": {
+        "path": "frontend/consumer.ts",
+        "range": {
+          "startLine": 3,
+          "endLine": 3
+        },
+        "revision": "tree-sha256:77db4e8ccd58030590e06a202bec4233f5b3b28a1889e892b91b02f0c026090d",
+        "fileHash": "fa2c919715d474b2c8941ea1ce8b9ab1dc8449306f1d7e5460d491df4d9a8518",
+        "excerpt": "import {missing} from './absent';"
+      },
+      "detail": "./absent",
+      "candidates": []
+    },
+    {
+      "reason": "unresolved-call",
+      "detail": "act",
+      "evidence": {
+        "path": "frontend/consumer.ts",
+        "range": {
+          "startLine": 6,
+          "endLine": 6
+        },
+        "revision": "tree-sha256:77db4e8ccd58030590e06a202bec4233f5b3b28a1889e892b91b02f0c026090d",
+        "fileHash": "fa2c919715d474b2c8941ea1ce8b9ab1dc8449306f1d7e5460d491df4d9a8518",
+        "excerpt": "export function shadow(act: () => number) { return act(); } // parameter-shadow"
+      }
+    },
+    {
+      "reason": "unresolved-call",
+      "detail": "before",
+      "evidence": {
+        "path": "frontend/consumer.ts",
+        "range": {
+          "startLine": 7,
+          "endLine": 7
+        },
+        "revision": "tree-sha256:77db4e8ccd58030590e06a202bec4233f5b3b28a1889e892b91b02f0c026090d",
+        "fileHash": "fa2c919715d474b2c8941ea1ce8b9ab1dc8449306f1d7e5460d491df4d9a8518",
+        "excerpt": "export function local() { before(); function before() { return 4; } } // nested-local"
+      }
+    }
+  ],
+  "focusedTests": [],
+  "coverage": {
+    "complete": false,
+    "fullRegressionMayBeSkipped": false,
+    "sourceFiles": {
+      "baseline": 2,
+      "candidate": 2
+    },
+    "excluded": {
+      "baseline": [],
+      "candidate": []
+    },
+    "limitations": [
+      "Source-only analysis; no Java/TypeScript semantic compilation, runtime dispatch, reflection, DI wiring, proxy/origin verification or transitive external package sources",
+      "Edges are evidence-backed approximations; indirect file dependencies do not prove execution",
+      "Renames inferred only for identical declaration key/signature/body; edited renames remain delete/add",
+      "Unknown syntax and unresolved/dynamic dependencies remain visible; passing fixture tests is not private-repository acceptance"
+    ]
+  },
+  "cache": {
+    "report": "disabled",
+    "parsedFiles": 4,
+    "reusedFiles": 0,
+    "invalidEntries": 0
+  },
+  "metrics": {
+    "elapsedMs": 40.09,
+    "bytesRead": 1134,
+    "reportCacheHit": false
+  }
+}

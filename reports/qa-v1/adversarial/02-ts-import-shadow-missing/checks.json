@@ -1,0 +1,60 @@
+{
+  "id": "02-ts-import-shadow-missing",
+  "description": "Named and namespace bindings, nested forward local call, absent relative import",
+  "status": "pass",
+  "exitCode": 0,
+  "sourcePaths": {
+    "baseline": "/tmp/review-analysis-adversarial-v1-anUajX/02-ts-import-shadow-missing/baseline",
+    "candidate": "/tmp/review-analysis-adversarial-v1-anUajX/02-ts-import-shadow-missing/candidate"
+  },
+  "sourceHashes": {
+    "baseline": {
+      "frontend/consumer.ts": "fa2c919715d474b2c8941ea1ce8b9ab1dc8449306f1d7e5460d491df4d9a8518",
+      "frontend/lib.ts": "6a17fb63c8c90e2ce7a1f7344a73bd815f27fdf6df05982abd610fe84ea3408b"
+    },
+    "candidate": {
+      "frontend/consumer.ts": "fa2c919715d474b2c8941ea1ce8b9ab1dc8449306f1d7e5460d491df4d9a8518",
+      "frontend/lib.ts": "6745bcd12f9a1c706a5b88bc099841f1fb145a755425ede6614a1c4559e322d9"
+    }
+  },
+  "evidence": {
+    "checkedEvidenceRecords": 32,
+    "errors": []
+  },
+  "assertions": [
+    {
+      "name": "named import call",
+      "status": "pass"
+    },
+    {
+      "name": "namespace import call",
+      "status": "pass"
+    },
+    {
+      "name": "parameter does not inherit imported target",
+      "status": "pass"
+    },
+    {
+      "name": "missing source remains unknown",
+      "status": "pass"
+    },
+    {
+      "name": "nested function does not target top-level import",
+      "status": "pass"
+    },
+    {
+      "name": "all source evidence hashes/ranges/excerpts/revisions independently reproduce",
+      "status": "pass"
+    },
+    {
+      "name": "readable actual CLI exits 0",
+      "status": "pass"
+    }
+  ],
+  "reportStats": {
+    "changes": 1,
+    "directEdges": 10,
+    "unknowns": 10,
+    "sourceBuildHash": "8ee7fcacee9a1b276b2bfab2665d8d3ab771e40eee5f3924f1f301192426e68f"
+  }
+}

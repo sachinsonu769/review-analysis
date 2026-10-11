@@ -1,0 +1,246 @@
+[
+  {
+    "name": "health has exact pinned build",
+    "status": "pass",
+    "elapsedMs": 31,
+    "evidence": {
+      "status": "ok",
+      "version": "0.2.0",
+      "build": {
+        "version": "0.2.0",
+        "sourceBuildHash": "0427f5fed8a45a3d4dbc5523f1d0f8afb57949bac0df1f9bef249fd73ae31061",
+        "parsers": {
+          "java": "java-parser@3.0.1",
+          "typescript": "typescript@5.9.3"
+        }
+      },
+      "runtime": "v24.21.0",
+      "analysis": "read-only-advisory"
+    }
+  },
+  {
+    "name": "all five bundled demos available",
+    "status": "pass",
+    "elapsedMs": 1
+  },
+  {
+    "name": "lookup real API analysis and typed canonical paths",
+    "status": "pass",
+    "elapsedMs": 2060,
+    "evidence": {
+      "nodes": 24,
+      "edges": 50,
+      "paths": 81,
+      "unknowns": 142
+    }
+  },
+  {
+    "name": "lookup exact source location/revision/hash/excerpt",
+    "status": "pass",
+    "elapsedMs": 4,
+    "evidence": {
+      "verified": 216
+    }
+  },
+  {
+    "name": "angular real API analysis and typed canonical paths",
+    "status": "pass",
+    "elapsedMs": 1957,
+    "evidence": {
+      "nodes": 10,
+      "edges": 33,
+      "paths": 27,
+      "unknowns": 97
+    }
+  },
+  {
+    "name": "angular exact source location/revision/hash/excerpt",
+    "status": "pass",
+    "elapsedMs": 2,
+    "evidence": {
+      "verified": 134
+    }
+  },
+  {
+    "name": "split real API analysis and typed canonical paths",
+    "status": "pass",
+    "elapsedMs": 2186,
+    "evidence": {
+      "nodes": 24,
+      "edges": 61,
+      "paths": 128,
+      "unknowns": 137
+    }
+  },
+  {
+    "name": "split exact source location/revision/hash/excerpt",
+    "status": "pass",
+    "elapsedMs": 3,
+    "evidence": {
+      "verified": 233
+    }
+  },
+  {
+    "name": "quality real API analysis and typed canonical paths",
+    "status": "pass",
+    "elapsedMs": 1996,
+    "evidence": {
+      "nodes": 6,
+      "edges": 3,
+      "paths": 3,
+      "unknowns": 20
+    }
+  },
+  {
+    "name": "quality exact source location/revision/hash/excerpt",
+    "status": "pass",
+    "elapsedMs": 1,
+    "evidence": {
+      "verified": 53
+    }
+  },
+  {
+    "name": "requirements real API analysis and typed canonical paths",
+    "status": "pass",
+    "elapsedMs": 1898,
+    "evidence": {
+      "nodes": 6,
+      "edges": 12,
+      "paths": 0,
+      "unknowns": 98
+    }
+  },
+  {
+    "name": "requirements exact source location/revision/hash/excerpt",
+    "status": "pass",
+    "elapsedMs": 1,
+    "evidence": {
+      "verified": 43
+    }
+  },
+  {
+    "name": "React Spring direct and likely indirect callers",
+    "status": "pass",
+    "elapsedMs": 1
+  },
+  {
+    "name": "Angular typed HttpClient endpoints retain bounded evidence",
+    "status": "pass",
+    "elapsedMs": 0
+  },
+  {
+    "name": "split links exist only with explicit versioned mapping",
+    "status": "pass",
+    "elapsedMs": 121
+  },
+  {
+    "name": "reputable quality tools actually available and classified",
+    "status": "pass",
+    "elapsedMs": 1
+  },
+  {
+    "name": "draft requirements never certify runtime",
+    "status": "pass",
+    "elapsedMs": 0
+  },
+  {
+    "name": "API cold then warm cache observes exact sources",
+    "status": "pass",
+    "elapsedMs": 195
+  },
+  {
+    "name": "custom mounted requirements combine backend/source and frontend/tests",
+    "status": "pass",
+    "elapsedMs": 2007
+  },
+  {
+    "name": "non-root app reads foreign-owned Git mount with pinned original SHA and dirty bypass",
+    "status": "pass",
+    "elapsedMs": 151
+  },
+  {
+    "name": "API input denies outside",
+    "status": "pass",
+    "elapsedMs": 3
+  },
+  {
+    "name": "API input denies parent-traversal",
+    "status": "pass",
+    "elapsedMs": 3
+  },
+  {
+    "name": "API input denies symlink-outside",
+    "status": "pass",
+    "elapsedMs": 3
+  },
+  {
+    "name": "API cross-origin rejected",
+    "status": "pass",
+    "elapsedMs": 1
+  },
+  {
+    "name": "API malformed checklist and oversize requests fail visibly",
+    "status": "pass",
+    "elapsedMs": 99
+  },
+  {
+    "name": "browser initial real analysis and visible file graph",
+    "status": "pass",
+    "elapsedMs": 491
+  },
+  {
+    "name": "browser canonical source selection, file and declaration evidence",
+    "status": "pass",
+    "elapsedMs": 204
+  },
+  {
+    "name": "browser direct/indirect paths use exact canonical same-phase edge IDs",
+    "status": "pass",
+    "elapsedMs": 243
+  },
+  {
+    "name": "browser repository/module/search/changed/certainty filters restore graph",
+    "status": "pass",
+    "elapsedMs": 377
+  },
+  {
+    "name": "browser governance and legacy/new filters",
+    "status": "pass",
+    "elapsedMs": 73
+  },
+  {
+    "name": "browser report download matches returned report",
+    "status": "pass",
+    "elapsedMs": 54
+  },
+  {
+    "name": "browser angular demo fully updates real report",
+    "status": "pass",
+    "elapsedMs": 342
+  },
+  {
+    "name": "browser split demo fully updates real report",
+    "status": "pass",
+    "elapsedMs": 388
+  },
+  {
+    "name": "browser quality demo fully updates real report",
+    "status": "pass",
+    "elapsedMs": 2096
+  },
+  {
+    "name": "browser requirements demo fully updates real report",
+    "status": "pass",
+    "elapsedMs": 423
+  },
+  {
+    "name": "browser custom mounted workspace and cross-project confirmed checklist",
+    "status": "pass",
+    "elapsedMs": 807
+  },
+  {
+    "name": "browser errors absent",
+    "status": "pass",
+    "elapsedMs": 0
+  }
+]

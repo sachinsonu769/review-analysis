@@ -1,0 +1,10 @@
+{
+  "uid": 1000,
+  "inputOwner": 0,
+  "readonlyInput": "EROFS",
+  "readonlyRoot": "EROFS",
+  "tmpMount": [
+    "tmpfs /tmp tmpfs rw,nosuid,nodev,noexec,relatime,size=524288k 0 0"
+  ],
+  "fsmonitorExecuted": false
+}

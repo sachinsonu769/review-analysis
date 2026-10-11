@@ -1,0 +1,36 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import os from 'node:os';
+import {spawnSync} from 'node:child_process';
+import {analyze,buildIdentity} from '/tmp/review-analysis-qa-v1-nn0cdauu/src/engine.js';
+const build='/tmp/review-analysis-qa-v1-nn0cdauu';
+const evidence='/workspace/review-analysis-deliverables/qa-v1';
+const root=fs.mkdtempSync(path.join(os.tmpdir(),'review-analysis-qa-extra-'));
+const before=path.join(root,'before'),after=path.join(root,'after'),cache=path.join(root,'cache');fs.mkdirSync(before);fs.mkdirSync(after);
+const rules={version:'qa-1',rules:[]};const rp=path.join(root,'rules.json');fs.writeFileSync(rp,JSON.stringify(rules));
+fs.writeFileSync(path.join(before,'old.ts'),'export function renameCandidate(): string { return "old"; }\n');
+fs.writeFileSync(path.join(after,'new.ts'),'export function renameCandidate(): string { return "edited"; }\n');
+const options={baseline:{type:'directory',root:before},candidate:{type:'directory',root:after},rules,asOf:'2026-10-11',cacheDir:cache};
+const results=[];
+const check=(name,pass,detail)=>results.push({name,status:pass?'pass':'fail',detail});
+const first=analyze(options),repeat=analyze(options),next=analyze({...options,analyzerVersion:'independent-qa-next-version'});
+check('analyzer-cache-version-invalidation',first.cache.report==='miss'&&repeat.cache.report==='hit'&&next.cache.report==='miss'&&next.cache.parsedFiles===2&&next.provenance.cacheKey!==first.provenance.cacheKey,{current:first.cache,repeat:repeat.cache,next:next.cache,currentKey:first.provenance.cacheKey,nextKey:next.provenance.cacheKey});
+fs.writeFileSync(path.join(evidence,'analyzer-next-version.json'),JSON.stringify(next,null,2)+'\n');
+function cli(name,args,expected=0){
+ const argv=['node',path.join(build,'src/cli.js'),...args];const start=Date.now();const p=spawnSync(argv[0],argv.slice(1),{encoding:'utf8'});
+ fs.writeFileSync(path.join(evidence,name+'.stdout.log'),p.stdout);fs.writeFileSync(path.join(evidence,name+'.stderr.log'),p.stderr);
+ fs.appendFileSync(path.join(evidence,'commands.jsonl'),JSON.stringify({name,argv,cwd:process.cwd(),startedUtc:new Date(start).toISOString(),durationSeconds:(Date.now()-start)/1000,exitCode:p.status,expectedExitCode:expected,status:p.status===expected?'pass':'fail'})+'\n');
+ check(name,p.status===expected,p.stderr);return p.status===0?JSON.parse(p.stdout):null;
+}
+const args=['analyze','--baseline',before,'--candidate',after,'--rules',rp,'--as-of','2026-10-11'];
+let report=cli('edited-rename',args);
+check('edited-rename-remains-delete-add',report.changes.some(c=>c.kind==='deleted')&&report.changes.some(c=>c.kind==='added')&&!report.changes.some(c=>c.kind==='renamed'),report.changes.map(c=>({kind:c.kind,key:c.key})));
+fs.writeFileSync(path.join(after,'new.ts'),fs.readFileSync(path.join(before,'old.ts')));fs.writeFileSync(path.join(after,'second.ts'),fs.readFileSync(path.join(before,'old.ts')));
+report=cli('ambiguous-rename',args);check('ambiguous-rename-not-inferred',!report.changes.some(c=>c.kind==='renamed')&&report.changes.filter(c=>c.kind==='added').length===2,report.changes.map(c=>({kind:c.kind,key:c.key})));
+const outside=path.join(root,'private-sample.ts');fs.writeFileSync(outside,'export const neverFollow = 123;\n');fs.symlinkSync(outside,path.join(after,'linked.ts'));
+report=cli('source-symlink',args);check('source-symlink-excluded',report.coverage.excluded.candidate.some(x=>x.path==='linked.ts'&&/symlink/.test(x.reason))&&!report.changes.some(c=>c.after?.path==='linked.ts'),report.coverage.excluded.candidate);
+const ctx=JSON.parse(fs.readFileSync(path.join(evidence,'integration-context.json')));
+cli('nonexistent-commit',['analyze','--repo',ctx.repo,'--base','0000000000000000000000000000000000000000','--head',ctx.candidateCommit,'--rules',path.join(build,'fixtures/rules.json'),'--as-of','2026-10-11'],2);
+check('build-identity-still-exact',buildIdentity().sourceBuildHash==='8ee7fcacee9a1b276b2bfab2665d8d3ab771e40eee5f3924f1f301192426e68f',buildIdentity());
+fs.writeFileSync(path.join(evidence,'extra-results.json'),JSON.stringify({temporaryRoot:root,results},null,2)+'\n');
+process.stdout.write(JSON.stringify(results,null,2)+'\n');

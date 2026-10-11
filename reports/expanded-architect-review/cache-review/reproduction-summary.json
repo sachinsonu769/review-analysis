@@ -1,0 +1,71 @@
+{
+  "recordedAt": "2026-10-11T17:22:01.987Z",
+  "runtime": {
+    "node": "v24.19.0",
+    "git": "git version 2.52.0"
+  },
+  "reviewedSources": {
+    "src/snapshot.js": "4b1ebaa5d3f07957510fe170a18cdf4ee6c39c1af29fd67afab1ea6641def640",
+    "src/engine.js": "80e76ddb33723e17c294b43b9aeff41e3c10222ed849f97f50b7c7f753129a60",
+    "src/cache.js": "6876a054527bdd8645d527c015a7c196d9419ccad7ec605bdc533234eb239419",
+    "src/cli.js": "2745d4ca16e4013d26eb69ae1816ff72bc80ab3fa9d5dbb5b7835a622d3f1d93",
+    "app/workspace.ts": "951018c041bf330feba50b586cf7810a2a25b88c01b1168cec74c1d59e80f580"
+  },
+  "fsmonitor": {
+    "repository": "/workspace/review-analysis-deliverables/expanded-architect-review/cache-review/repro-b5zxA2/fsmonitor-repository",
+    "configuredHook": "/workspace/review-analysis-deliverables/expanded-architect-review/cache-review/repro-b5zxA2/fsmonitor-repository/.git/synthetic-fsmonitor",
+    "markerPath": "/workspace/review-analysis-deliverables/expanded-architect-review/cache-review/repro-b5zxA2/fsmonitor-repository/executed-by-repository-hook.ts",
+    "markerBefore": false,
+    "markerAfter": true,
+    "markerSource": "export const fsmonitorExecuted = true;\n",
+    "returnedSnapshotFiles": [
+      "a.ts"
+    ],
+    "dirty": true
+  },
+  "cleanGitWorktree": {
+    "repository": "/workspace/review-analysis-deliverables/expanded-architect-review/cache-review/repro-b5zxA2/clean-exclusion-repository",
+    "head": "11b9c03b32a19a0a42a99e291699cda7e688905c",
+    "status": "",
+    "candidateDirty": false,
+    "sourceFiles": {
+      "baseline": 2,
+      "candidate": 1
+    },
+    "changes": [
+      {
+        "kind": "deleted",
+        "name": "b",
+        "key": "b",
+        "language": "typescript",
+        "contractChanged": true,
+        "before": {
+          "path": "build/b.ts",
+          "range": {
+            "startLine": 1,
+            "endLine": 1
+          },
+          "revision": "11b9c03b32a19a0a42a99e291699cda7e688905c",
+          "fileHash": "57bcf3a40396ee7d90604e103f6701bb5bd11e29d3b4c58d4e2c38340f39c8bc",
+          "excerpt": "export function b(): string { return \"stable\"; }"
+        },
+        "after": null
+      }
+    ],
+    "exclusions": {
+      "baseline": [],
+      "candidate": [
+        {
+          "path": ".git",
+          "reason": "generated/vendor directory"
+        },
+        {
+          "path": "build",
+          "reason": "generated/vendor directory"
+        }
+      ]
+    },
+    "fullRegressionMayBeSkipped": false,
+    "advisory": true
+  }
+}

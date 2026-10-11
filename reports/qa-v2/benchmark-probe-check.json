@@ -1,0 +1,60 @@
+{
+  "name": "corrected-incremental-benchmark",
+  "status": "pass",
+  "probe": {
+    "target": "/tmp/review-analysis-benchmark-X6GDHV/candidate/frontend/src/api/lookupApi.ts",
+    "targetExisted": true,
+    "actualApiPath": "/tmp/review-analysis-benchmark-X6GDHV/candidate/frontend/src/api/lookupApi.ts",
+    "actualApiHash": "8b9224af601766edbb0617ffe30c2b85aa82fb82e97d13ed8467849175b8bcda",
+    "targetNowExists": true,
+    "actualApiHashAfter": "24235d96e685874c7de797bba874a768d435fe110a5b68f6cef15ca4ab899f36",
+    "targetText": "export interface LookupResponse {\n  id: string;\n  displayName: string;\n}\n\nexport async function lookup(): Promise<LookupResponse> {\n  const response = await fetch('/api/catalog/lookup');\n  if (!response.ok) throw new Error('Lookup failed');\n  return response.json();\n}\n\n// incremental content change for benchmark\n"
+  },
+  "incremental": {
+    "metrics": {
+      "elapsedMs": 5.54,
+      "bytesRead": 10390,
+      "reportCacheHit": false
+    },
+    "cache": {
+      "report": "miss",
+      "parsedFiles": 1,
+      "reusedFiles": 42,
+      "invalidEntries": 0
+    }
+  },
+  "coldProcess": {
+    "runs": [
+      {
+        "wallMs": 710.57,
+        "analysisMs": 122.7
+      },
+      {
+        "wallMs": 629.67,
+        "analysisMs": 112.96
+      },
+      {
+        "wallMs": 643.47,
+        "analysisMs": 128.85
+      }
+    ],
+    "medianWallMs": 643.47,
+    "medianAnalysisMs": 122.7
+  },
+  "warm": {
+    "runsMs": [
+      2.87,
+      2.69,
+      2.73,
+      2.54,
+      2.42
+    ],
+    "medianMs": 2.69,
+    "cache": {
+      "report": "hit",
+      "parsedFiles": 0,
+      "reusedFiles": 0,
+      "invalidEntries": 0
+    }
+  }
+}

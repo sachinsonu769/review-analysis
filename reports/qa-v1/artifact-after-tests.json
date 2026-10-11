@@ -1,0 +1,491 @@
+{
+  "checkedAtUtc": "2026-10-11T16:51:03.271677+00:00",
+  "filesVerified": 121,
+  "allManifestSourceFilesUnchanged": true,
+  "checks": [
+    {
+      "path": ".gitignore",
+      "pass": true
+    },
+    {
+      "path": "README.md",
+      "pass": true
+    },
+    {
+      "path": "docs/architecture.md",
+      "pass": true
+    },
+    {
+      "path": "docs/java-parser.md",
+      "pass": true
+    },
+    {
+      "path": "docs/parser-contract.md",
+      "pass": true
+    },
+    {
+      "path": "docs/typescript-parser.md",
+      "pass": true
+    },
+    {
+      "path": "docs/verification.md",
+      "pass": true
+    },
+    {
+      "path": "fixtures/README.md",
+      "pass": true
+    },
+    {
+      "path": "fixtures/exception-review.simulation.md",
+      "pass": true
+    },
+    {
+      "path": "fixtures/lookup/baseline/backend/src/main/java/com/example/lookup/AdminLookupJob.java",
+      "pass": true
+    },
+    {
+      "path": "fixtures/lookup/baseline/backend/src/main/java/com/example/lookup/ApprovedLegacyGateway.java",
+      "pass": true
+    },
+    {
+      "path": "fixtures/lookup/baseline/backend/src/main/java/com/example/lookup/ExpiredGateway.java",
+      "pass": true
+    },
+    {
+      "path": "fixtures/lookup/baseline/backend/src/main/java/com/example/lookup/LookupController.java",
+      "pass": true
+    },
+    {
+      "path": "fixtures/lookup/baseline/backend/src/main/java/com/example/lookup/LookupExporter.java",
+      "pass": true
+    },
+    {
+      "path": "fixtures/lookup/baseline/backend/src/main/java/com/example/lookup/LookupResponse.java",
+      "pass": true
+    },
+    {
+      "path": "fixtures/lookup/baseline/backend/src/main/java/com/example/lookup/LookupService.java",
+      "pass": true
+    },
+    {
+      "path": "fixtures/lookup/baseline/backend/src/main/java/com/example/lookup/OverloadConsumer.java",
+      "pass": true
+    },
+    {
+      "path": "fixtures/lookup/baseline/backend/src/main/java/com/example/lookup/OverloadedLookup.java",
+      "pass": true
+    },
+    {
+      "path": "fixtures/lookup/baseline/backend/src/main/java/com/example/lookup/RetiredLookupAdapter.java",
+      "pass": true
+    },
+    {
+      "path": "fixtures/lookup/baseline/backend/src/main/java/com/example/lookup/UnreviewedGateway.java",
+      "pass": true
+    },
+    {
+      "path": "fixtures/lookup/baseline/frontend/src/App.tsx",
+      "pass": true
+    },
+    {
+      "path": "fixtures/lookup/baseline/frontend/src/api/axiosLookup.ts",
+      "pass": true
+    },
+    {
+      "path": "fixtures/lookup/baseline/frontend/src/api/billingApi.ts",
+      "pass": true
+    },
+    {
+      "path": "fixtures/lookup/baseline/frontend/src/api/dynamicLookup.ts",
+      "pass": true
+    },
+    {
+      "path": "fixtures/lookup/baseline/frontend/src/api/lookupApi.ts",
+      "pass": true
+    },
+    {
+      "path": "fixtures/lookup/baseline/frontend/src/api/missingImport.ts",
+      "pass": true
+    },
+    {
+      "path": "fixtures/lookup/baseline/frontend/src/api/stringDecoys.ts",
+      "pass": true
+    },
+    {
+      "path": "fixtures/lookup/baseline/frontend/src/components/InvoicePanel.tsx",
+      "pass": true
+    },
+    {
+      "path": "fixtures/lookup/baseline/frontend/src/components/LookupBadge.ts",
+      "pass": true
+    },
+    {
+      "path": "fixtures/lookup/baseline/frontend/src/components/LookupPanel.tsx",
+      "pass": true
+    },
+    {
+      "path": "fixtures/lookup/candidate/backend/src/main/java/com/example/lookup/AdminLookupJob.java",
+      "pass": true
+    },
+    {
+      "path": "fixtures/lookup/candidate/backend/src/main/java/com/example/lookup/ApprovedLegacyGateway.java",
+      "pass": true
+    },
+    {
+      "path": "fixtures/lookup/candidate/backend/src/main/java/com/example/lookup/AuditLogger.java",
+      "pass": true
+    },
+    {
+      "path": "fixtures/lookup/candidate/backend/src/main/java/com/example/lookup/ExpiredGateway.java",
+      "pass": true
+    },
+    {
+      "path": "fixtures/lookup/candidate/backend/src/main/java/com/example/lookup/LookupController.java",
+      "pass": true
+    },
+    {
+      "path": "fixtures/lookup/candidate/backend/src/main/java/com/example/lookup/LookupExporter.java",
+      "pass": true
+    },
+    {
+      "path": "fixtures/lookup/candidate/backend/src/main/java/com/example/lookup/LookupQuery.java",
+      "pass": true
+    },
+    {
+      "path": "fixtures/lookup/candidate/backend/src/main/java/com/example/lookup/LookupResponse.java",
+      "pass": true
+    },
+    {
+      "path": "fixtures/lookup/candidate/backend/src/main/java/com/example/lookup/LookupService.java",
+      "pass": true
+    },
+    {
+      "path": "fixtures/lookup/candidate/backend/src/main/java/com/example/lookup/OverloadConsumer.java",
+      "pass": true
+    },
+    {
+      "path": "fixtures/lookup/candidate/backend/src/main/java/com/example/lookup/OverloadedLookup.java",
+      "pass": true
+    },
+    {
+      "path": "fixtures/lookup/candidate/backend/src/main/java/com/example/lookup/UnreviewedGateway.java",
+      "pass": true
+    },
+    {
+      "path": "fixtures/lookup/candidate/frontend/src/App.tsx",
+      "pass": true
+    },
+    {
+      "path": "fixtures/lookup/candidate/frontend/src/api/axiosLookup.ts",
+      "pass": true
+    },
+    {
+      "path": "fixtures/lookup/candidate/frontend/src/api/billingApi.ts",
+      "pass": true
+    },
+    {
+      "path": "fixtures/lookup/candidate/frontend/src/api/dynamicLookup.ts",
+      "pass": true
+    },
+    {
+      "path": "fixtures/lookup/candidate/frontend/src/api/lookupApi.ts",
+      "pass": true
+    },
+    {
+      "path": "fixtures/lookup/candidate/frontend/src/api/missingImport.ts",
+      "pass": true
+    },
+    {
+      "path": "fixtures/lookup/candidate/frontend/src/api/stringDecoys.ts",
+      "pass": true
+    },
+    {
+      "path": "fixtures/lookup/candidate/frontend/src/components/CatalogBadge.ts",
+      "pass": true
+    },
+    {
+      "path": "fixtures/lookup/candidate/frontend/src/components/InvoicePanel.tsx",
+      "pass": true
+    },
+    {
+      "path": "fixtures/lookup/candidate/frontend/src/components/LookupPanel.tsx",
+      "pass": true
+    },
+    {
+      "path": "fixtures/renamed-rules.json",
+      "pass": true
+    },
+    {
+      "path": "fixtures/renamed/baseline/backend/src/main/java/org/demo/inventory/ExpiredTransport.java",
+      "pass": true
+    },
+    {
+      "path": "fixtures/renamed/baseline/backend/src/main/java/org/demo/inventory/InventoryRefreshTask.java",
+      "pass": true
+    },
+    {
+      "path": "fixtures/renamed/baseline/backend/src/main/java/org/demo/inventory/InventoryResolver.java",
+      "pass": true
+    },
+    {
+      "path": "fixtures/renamed/baseline/backend/src/main/java/org/demo/inventory/InventoryResource.java",
+      "pass": true
+    },
+    {
+      "path": "fixtures/renamed/baseline/backend/src/main/java/org/demo/inventory/OverloadedInventory.java",
+      "pass": true
+    },
+    {
+      "path": "fixtures/renamed/baseline/backend/src/main/java/org/demo/inventory/ProductExport.java",
+      "pass": true
+    },
+    {
+      "path": "fixtures/renamed/baseline/backend/src/main/java/org/demo/inventory/ProductReply.java",
+      "pass": true
+    },
+    {
+      "path": "fixtures/renamed/baseline/backend/src/main/java/org/demo/inventory/ProposedTransport.java",
+      "pass": true
+    },
+    {
+      "path": "fixtures/renamed/baseline/backend/src/main/java/org/demo/inventory/ResolutionConsumer.java",
+      "pass": true
+    },
+    {
+      "path": "fixtures/renamed/baseline/backend/src/main/java/org/demo/inventory/RetiredInventoryAdapter.java",
+      "pass": true
+    },
+    {
+      "path": "fixtures/renamed/baseline/backend/src/main/java/org/demo/inventory/SimulatedTransport.java",
+      "pass": true
+    },
+    {
+      "path": "fixtures/renamed/baseline/frontend/src/App.tsx",
+      "pass": true
+    },
+    {
+      "path": "fixtures/renamed/baseline/frontend/src/api/axiosInventory.ts",
+      "pass": true
+    },
+    {
+      "path": "fixtures/renamed/baseline/frontend/src/api/billingApi.ts",
+      "pass": true
+    },
+    {
+      "path": "fixtures/renamed/baseline/frontend/src/api/dynamicInventory.ts",
+      "pass": true
+    },
+    {
+      "path": "fixtures/renamed/baseline/frontend/src/api/inventoryApi.ts",
+      "pass": true
+    },
+    {
+      "path": "fixtures/renamed/baseline/frontend/src/api/missingImport.ts",
+      "pass": true
+    },
+    {
+      "path": "fixtures/renamed/baseline/frontend/src/api/stringDecoys.ts",
+      "pass": true
+    },
+    {
+      "path": "fixtures/renamed/baseline/frontend/src/components/InvoicePanel.tsx",
+      "pass": true
+    },
+    {
+      "path": "fixtures/renamed/baseline/frontend/src/components/ProductBadge.ts",
+      "pass": true
+    },
+    {
+      "path": "fixtures/renamed/baseline/frontend/src/components/ProductPanel.tsx",
+      "pass": true
+    },
+    {
+      "path": "fixtures/renamed/candidate/backend/src/main/java/org/demo/inventory/ChangeJournal.java",
+      "pass": true
+    },
+    {
+      "path": "fixtures/renamed/candidate/backend/src/main/java/org/demo/inventory/ExpiredTransport.java",
+      "pass": true
+    },
+    {
+      "path": "fixtures/renamed/candidate/backend/src/main/java/org/demo/inventory/InventoryInquiry.java",
+      "pass": true
+    },
+    {
+      "path": "fixtures/renamed/candidate/backend/src/main/java/org/demo/inventory/InventoryRefreshTask.java",
+      "pass": true
+    },
+    {
+      "path": "fixtures/renamed/candidate/backend/src/main/java/org/demo/inventory/InventoryResolver.java",
+      "pass": true
+    },
+    {
+      "path": "fixtures/renamed/candidate/backend/src/main/java/org/demo/inventory/InventoryResource.java",
+      "pass": true
+    },
+    {
+      "path": "fixtures/renamed/candidate/backend/src/main/java/org/demo/inventory/OverloadedInventory.java",
+      "pass": true
+    },
+    {
+      "path": "fixtures/renamed/candidate/backend/src/main/java/org/demo/inventory/ProductExport.java",
+      "pass": true
+    },
+    {
+      "path": "fixtures/renamed/candidate/backend/src/main/java/org/demo/inventory/ProductReply.java",
+      "pass": true
+    },
+    {
+      "path": "fixtures/renamed/candidate/backend/src/main/java/org/demo/inventory/ProposedTransport.java",
+      "pass": true
+    },
+    {
+      "path": "fixtures/renamed/candidate/backend/src/main/java/org/demo/inventory/ResolutionConsumer.java",
+      "pass": true
+    },
+    {
+      "path": "fixtures/renamed/candidate/backend/src/main/java/org/demo/inventory/SimulatedTransport.java",
+      "pass": true
+    },
+    {
+      "path": "fixtures/renamed/candidate/frontend/src/App.tsx",
+      "pass": true
+    },
+    {
+      "path": "fixtures/renamed/candidate/frontend/src/api/axiosInventory.ts",
+      "pass": true
+    },
+    {
+      "path": "fixtures/renamed/candidate/frontend/src/api/billingApi.ts",
+      "pass": true
+    },
+    {
+      "path": "fixtures/renamed/candidate/frontend/src/api/dynamicInventory.ts",
+      "pass": true
+    },
+    {
+      "path": "fixtures/renamed/candidate/frontend/src/api/inventoryApi.ts",
+      "pass": true
+    },
+    {
+      "path": "fixtures/renamed/candidate/frontend/src/api/missingImport.ts",
+      "pass": true
+    },
+    {
+      "path": "fixtures/renamed/candidate/frontend/src/api/stringDecoys.ts",
+      "pass": true
+    },
+    {
+      "path": "fixtures/renamed/candidate/frontend/src/components/InvoicePanel.tsx",
+      "pass": true
+    },
+    {
+      "path": "fixtures/renamed/candidate/frontend/src/components/ProductPanel.tsx",
+      "pass": true
+    },
+    {
+      "path": "fixtures/renamed/candidate/frontend/src/components/WarehouseBadge.ts",
+      "pass": true
+    },
+    {
+      "path": "fixtures/rules.json",
+      "pass": true
+    },
+    {
+      "path": "package-lock.json",
+      "pass": true
+    },
+    {
+      "path": "package.json",
+      "pass": true
+    },
+    {
+      "path": "reports/benchmark.json",
+      "pass": true
+    },
+    {
+      "path": "reports/lookup-change.json",
+      "pass": true
+    },
+    {
+      "path": "reports/lookup-change.txt",
+      "pass": true
+    },
+    {
+      "path": "reports/pre-code-guidance.json",
+      "pass": true
+    },
+    {
+      "path": "reports/pre-code-guidance.txt",
+      "pass": true
+    },
+    {
+      "path": "scripts/benchmark.js",
+      "pass": true
+    },
+    {
+      "path": "scripts/demo.js",
+      "pass": true
+    },
+    {
+      "path": "scripts/package.py",
+      "pass": true
+    },
+    {
+      "path": "src/cache.js",
+      "pass": true
+    },
+    {
+      "path": "src/cli.js",
+      "pass": true
+    },
+    {
+      "path": "src/engine.js",
+      "pass": true
+    },
+    {
+      "path": "src/graph.js",
+      "pass": true
+    },
+    {
+      "path": "src/java.js",
+      "pass": true
+    },
+    {
+      "path": "src/report.js",
+      "pass": true
+    },
+    {
+      "path": "src/rules.js",
+      "pass": true
+    },
+    {
+      "path": "src/snapshot.js",
+      "pass": true
+    },
+    {
+      "path": "src/typescript.js",
+      "pass": true
+    },
+    {
+      "path": "test/cache-cli.test.js",
+      "pass": true
+    },
+    {
+      "path": "test/engine.test.js",
+      "pass": true
+    },
+    {
+      "path": "test/java.test.js",
+      "pass": true
+    },
+    {
+      "path": "test/review-regressions.test.js",
+      "pass": true
+    },
+    {
+      "path": "test/typescript.test.js",
+      "pass": true
+    }
+  ]
+}

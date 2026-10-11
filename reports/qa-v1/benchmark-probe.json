@@ -1,0 +1,9 @@
+{
+  "target": "/tmp/review-analysis-benchmark-25o4cZ/candidate/frontend/src/lookupApi.ts",
+  "targetExisted": false,
+  "actualApiPath": "/tmp/review-analysis-benchmark-25o4cZ/candidate/frontend/src/api/lookupApi.ts",
+  "actualApiHash": "8b9224af601766edbb0617ffe30c2b85aa82fb82e97d13ed8467849175b8bcda",
+  "targetNowExists": true,
+  "actualApiHashAfter": "8b9224af601766edbb0617ffe30c2b85aa82fb82e97d13ed8467849175b8bcda",
+  "targetText": "\n// incremental content change for benchmark\n"
+}

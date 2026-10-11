@@ -1,0 +1,27 @@
+Review Analysis — Business checklist evidence
+
+Build: 0427f5fed8a45a3d4dbc5523f1d0f8afb57949bac0df1f9bef249fd73ae31061
+
+Advisory; incomplete source-only coverage; runtime and full regression remain unverified.
+
+0 changed declarations, 0 changed files, 12 edges.
+
+0 direct representative paths; 0 likely indirect paths (low certainty).
+
+Limits: depth 12; alternate/deeper paths may be omitted.
+
+Architecture findings: 0; quality/design findings: 0; unresolved source facts: 98.
+
+Checklist: draft; 6 criteria; runtime unverified.
+
+Requirement unverified: customer-lookup-by-id; missing edge cases: 0; runtime unverified
+
+Requirement unverified: display-name; missing edge cases: 0; runtime unverified
+
+Requirement unverified: blank-identifier; missing edge cases: 2; runtime unverified
+
+Requirement unverified: customer-not-found; missing edge cases: 1; runtime unverified
+
+Requirement unverified: loading-state; missing edge cases: 1; runtime unverified
+
+Requirement unverified: confirmation-needed-detail; missing edge cases: 0; runtime unverified

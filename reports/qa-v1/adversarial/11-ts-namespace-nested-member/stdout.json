@@ -1,0 +1,226 @@
+{
+  "schemaVersion": "1.0",
+  "analyzer": {
+    "version": "0.1.0",
+    "sourceBuildHash": "8ee7fcacee9a1b276b2bfab2665d8d3ab771e40eee5f3924f1f301192426e68f",
+    "parsers": {
+      "java": "java-parser@3.0.1",
+      "typescript": "typescript@5.9.3"
+    }
+  },
+  "advisory": true,
+  "asOf": "2026-10-11",
+  "provenance": {
+    "baseline": {
+      "root": "/tmp/review-analysis-adversarial-v1-anUajX/11-ts-namespace-nested-member/baseline",
+      "type": "directory",
+      "revision": "tree-sha256:e639d37beaf73ae28a39b5c963c76f25f60d71f1748ef3f67b0291788c6c09e9",
+      "contentHash": "e639d37beaf73ae28a39b5c963c76f25f60d71f1748ef3f67b0291788c6c09e9",
+      "dirty": false
+    },
+    "candidate": {
+      "root": "/tmp/review-analysis-adversarial-v1-anUajX/11-ts-namespace-nested-member/candidate",
+      "type": "directory",
+      "revision": "tree-sha256:f1d0dde1c4b4f9ef806619b21e7b0084a001750019a13c2cd8e1fb506740911c",
+      "contentHash": "f1d0dde1c4b4f9ef806619b21e7b0084a001750019a13c2cd8e1fb506740911c",
+      "dirty": false
+    },
+    "rulesHash": "90f33c2c080aa463115b0ef7e4058bb9bf0da4944dff79ed58eae2f01f9cd3f1",
+    "baselineRulesHash": "90f33c2c080aa463115b0ef7e4058bb9bf0da4944dff79ed58eae2f01f9cd3f1",
+    "cacheKey": "db63f7f4f71fcf644d607d78409f40aa4eae10508259b953596526f90943a42b"
+  },
+  "changes": [
+    {
+      "kind": "modified",
+      "name": "service",
+      "key": "service",
+      "language": "typescript",
+      "contractChanged": false,
+      "before": {
+        "path": "frontend/lib.ts",
+        "range": {
+          "startLine": 1,
+          "endLine": 1
+        },
+        "revision": "tree-sha256:e639d37beaf73ae28a39b5c963c76f25f60d71f1748ef3f67b0291788c6c09e9",
+        "fileHash": "e5baaac6c7f48b2f1aad3f95b012292eb1d3f427930e61bbb1fd657be7dabce5",
+        "excerpt": "export const service = { run() { return 1; } };"
+      },
+      "after": {
+        "path": "frontend/lib.ts",
+        "range": {
+          "startLine": 1,
+          "endLine": 1
+        },
+        "revision": "tree-sha256:f1d0dde1c4b4f9ef806619b21e7b0084a001750019a13c2cd8e1fb506740911c",
+        "fileHash": "3869dfc22456e112777919330c43941ec3ea7da0ad84f1f760ce81717ad9c018",
+        "excerpt": "export const service = { run() { return 2; } };"
+      }
+    }
+  ],
+  "impact": {
+    "direct": [
+      {
+        "kind": "import",
+        "fromPath": "frontend/consumer.ts",
+        "toPath": "frontend/lib.ts",
+        "targetKey": null,
+        "confidence": "high",
+        "reason": "Relative import resolves to supplied source file",
+        "evidence": {
+          "path": "frontend/consumer.ts",
+          "range": {
+            "startLine": 1,
+            "endLine": 1
+          },
+          "revision": "tree-sha256:e639d37beaf73ae28a39b5c963c76f25f60d71f1748ef3f67b0291788c6c09e9",
+          "fileHash": "ca05ccd120f7628b555c06db8fce7255ee8af7f8fc0b14f0247ee10c1f66d618",
+          "excerpt": "import * as api from './lib';"
+        },
+        "targetEvidence": {
+          "path": "frontend/lib.ts",
+          "range": {
+            "startLine": 1,
+            "endLine": 1
+          },
+          "revision": "tree-sha256:e639d37beaf73ae28a39b5c963c76f25f60d71f1748ef3f67b0291788c6c09e9",
+          "fileHash": "e5baaac6c7f48b2f1aad3f95b012292eb1d3f427930e61bbb1fd657be7dabce5",
+          "excerpt": "export const service = { run() { return 1; } };"
+        }
+      },
+      {
+        "kind": "call",
+        "fromPath": "frontend/consumer.ts",
+        "toPath": "frontend/lib.ts",
+        "targetKey": "service",
+        "confidence": "high",
+        "reason": "Imported binding resolves to a supplied named declaration",
+        "evidence": {
+          "path": "frontend/consumer.ts",
+          "range": {
+            "startLine": 2,
+            "endLine": 2
+          },
+          "revision": "tree-sha256:e639d37beaf73ae28a39b5c963c76f25f60d71f1748ef3f67b0291788c6c09e9",
+          "fileHash": "ca05ccd120f7628b555c06db8fce7255ee8af7f8fc0b14f0247ee10c1f66d618",
+          "excerpt": "export function use() { api.service.run(); } // nested-member"
+        },
+        "targetEvidence": {
+          "path": "frontend/lib.ts",
+          "range": {
+            "startLine": 1,
+            "endLine": 1
+          },
+          "revision": "tree-sha256:e639d37beaf73ae28a39b5c963c76f25f60d71f1748ef3f67b0291788c6c09e9",
+          "fileHash": "e5baaac6c7f48b2f1aad3f95b012292eb1d3f427930e61bbb1fd657be7dabce5",
+          "excerpt": "export const service = { run() { return 1; } };"
+        }
+      },
+      {
+        "kind": "import",
+        "fromPath": "frontend/consumer.ts",
+        "toPath": "frontend/lib.ts",
+        "targetKey": null,
+        "confidence": "high",
+        "reason": "Relative import resolves to supplied source file",
+        "evidence": {
+          "path": "frontend/consumer.ts",
+          "range": {
+            "startLine": 1,
+            "endLine": 1
+          },
+          "revision": "tree-sha256:f1d0dde1c4b4f9ef806619b21e7b0084a001750019a13c2cd8e1fb506740911c",
+          "fileHash": "ca05ccd120f7628b555c06db8fce7255ee8af7f8fc0b14f0247ee10c1f66d618",
+          "excerpt": "import * as api from './lib';"
+        },
+        "targetEvidence": {
+          "path": "frontend/lib.ts",
+          "range": {
+            "startLine": 1,
+            "endLine": 1
+          },
+          "revision": "tree-sha256:f1d0dde1c4b4f9ef806619b21e7b0084a001750019a13c2cd8e1fb506740911c",
+          "fileHash": "3869dfc22456e112777919330c43941ec3ea7da0ad84f1f760ce81717ad9c018",
+          "excerpt": "export const service = { run() { return 2; } };"
+        }
+      },
+      {
+        "kind": "call",
+        "fromPath": "frontend/consumer.ts",
+        "toPath": "frontend/lib.ts",
+        "targetKey": "service",
+        "confidence": "high",
+        "reason": "Imported binding resolves to a supplied named declaration",
+        "evidence": {
+          "path": "frontend/consumer.ts",
+          "range": {
+            "startLine": 2,
+            "endLine": 2
+          },
+          "revision": "tree-sha256:f1d0dde1c4b4f9ef806619b21e7b0084a001750019a13c2cd8e1fb506740911c",
+          "fileHash": "ca05ccd120f7628b555c06db8fce7255ee8af7f8fc0b14f0247ee10c1f66d618",
+          "excerpt": "export function use() { api.service.run(); } // nested-member"
+        },
+        "targetEvidence": {
+          "path": "frontend/lib.ts",
+          "range": {
+            "startLine": 1,
+            "endLine": 1
+          },
+          "revision": "tree-sha256:f1d0dde1c4b4f9ef806619b21e7b0084a001750019a13c2cd8e1fb506740911c",
+          "fileHash": "3869dfc22456e112777919330c43941ec3ea7da0ad84f1f760ce81717ad9c018",
+          "excerpt": "export const service = { run() { return 2; } };"
+        }
+      }
+    ],
+    "indirect": []
+  },
+  "findings": [],
+  "guidance": {
+    "task": "Nested property method on namespace import must not claim the container variable is the called declaration",
+    "ruleSetVersion": "independent-adversarial-v1",
+    "approvalGap": "No human approval is inferred. Reviewed examples/exceptions are assertions from supplied configuration; simulation records are demonstrations only.",
+    "rules": [
+      {
+        "id": "independent/http-contract",
+        "kind": "endpoint-contract-change",
+        "owner": "synthetic-qa",
+        "version": "independent-adversarial-v1",
+        "severity": "warning",
+        "instruction": "endpoint-contract-change",
+        "examples": []
+      }
+    ]
+  },
+  "unknowns": [],
+  "focusedTests": [],
+  "coverage": {
+    "complete": false,
+    "fullRegressionMayBeSkipped": false,
+    "sourceFiles": {
+      "baseline": 2,
+      "candidate": 2
+    },
+    "excluded": {
+      "baseline": [],
+      "candidate": []
+    },
+    "limitations": [
+      "Source-only analysis; no Java/TypeScript semantic compilation, runtime dispatch, reflection, DI wiring, proxy/origin verification or transitive external package sources",
+      "Edges are evidence-backed approximations; indirect file dependencies do not prove execution",
+      "Renames inferred only for identical declaration key/signature/body; edited renames remain delete/add",
+      "Unknown syntax and unresolved/dynamic dependencies remain visible; passing fixture tests is not private-repository acceptance"
+    ]
+  },
+  "cache": {
+    "report": "disabled",
+    "parsedFiles": 4,
+    "reusedFiles": 0,
+    "invalidEntries": 0
+  },
+  "metrics": {
+    "elapsedMs": 34.42,
+    "bytesRead": 280,
+    "reportCacheHit": false
+  }
+}

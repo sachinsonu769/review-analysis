@@ -1,0 +1,867 @@
+[
+  {
+    "name": "git-init",
+    "argv": [
+      "git",
+      "-C",
+      "/tmp/review-analysis-qa-integration-q2ryoreb/repo",
+      "init",
+      "-q"
+    ],
+    "cwd": "/tmp/review-analysis-qa-v1-nn0cdauu",
+    "startedUtc": "2026-10-11T16:48:12.459753+00:00",
+    "durationSeconds": 0.002,
+    "exitCode": 0,
+    "expectedExitCode": 0,
+    "status": "pass"
+  },
+  {
+    "name": "git-config-name",
+    "argv": [
+      "git",
+      "-C",
+      "/tmp/review-analysis-qa-integration-q2ryoreb/repo",
+      "config",
+      "user.name",
+      "Independent synthetic QA"
+    ],
+    "cwd": "/tmp/review-analysis-qa-v1-nn0cdauu",
+    "startedUtc": "2026-10-11T16:48:12.462248+00:00",
+    "durationSeconds": 0.002,
+    "exitCode": 0,
+    "expectedExitCode": 0,
+    "status": "pass"
+  },
+  {
+    "name": "git-config-email",
+    "argv": [
+      "git",
+      "-C",
+      "/tmp/review-analysis-qa-integration-q2ryoreb/repo",
+      "config",
+      "user.email",
+      "qa@example.invalid"
+    ],
+    "cwd": "/tmp/review-analysis-qa-v1-nn0cdauu",
+    "startedUtc": "2026-10-11T16:48:12.463886+00:00",
+    "durationSeconds": 0.001,
+    "exitCode": 0,
+    "expectedExitCode": 0,
+    "status": "pass"
+  },
+  {
+    "name": "git-add-baseline",
+    "argv": [
+      "git",
+      "-C",
+      "/tmp/review-analysis-qa-integration-q2ryoreb/repo",
+      "add",
+      "."
+    ],
+    "cwd": "/tmp/review-analysis-qa-v1-nn0cdauu",
+    "startedUtc": "2026-10-11T16:48:12.465490+00:00",
+    "durationSeconds": 0.003,
+    "exitCode": 0,
+    "expectedExitCode": 0,
+    "status": "pass"
+  },
+  {
+    "name": "git-commit-baseline",
+    "argv": [
+      "git",
+      "-C",
+      "/tmp/review-analysis-qa-integration-q2ryoreb/repo",
+      "commit",
+      "-qm",
+      "Independent QA baseline"
+    ],
+    "cwd": "/tmp/review-analysis-qa-v1-nn0cdauu",
+    "startedUtc": "2026-10-11T16:48:12.468889+00:00",
+    "durationSeconds": 0.005,
+    "exitCode": 0,
+    "expectedExitCode": 0,
+    "status": "pass"
+  },
+  {
+    "name": "git-add-candidate",
+    "argv": [
+      "git",
+      "-C",
+      "/tmp/review-analysis-qa-integration-q2ryoreb/repo",
+      "add",
+      "."
+    ],
+    "cwd": "/tmp/review-analysis-qa-v1-nn0cdauu",
+    "startedUtc": "2026-10-11T16:48:12.476562+00:00",
+    "durationSeconds": 0.002,
+    "exitCode": 0,
+    "expectedExitCode": 0,
+    "status": "pass"
+  },
+  {
+    "name": "git-commit-candidate",
+    "argv": [
+      "git",
+      "-C",
+      "/tmp/review-analysis-qa-integration-q2ryoreb/repo",
+      "commit",
+      "-qm",
+      "Independent QA candidate"
+    ],
+    "cwd": "/tmp/review-analysis-qa-v1-nn0cdauu",
+    "startedUtc": "2026-10-11T16:48:12.479116+00:00",
+    "durationSeconds": 0.004,
+    "exitCode": 0,
+    "expectedExitCode": 0,
+    "status": "pass"
+  },
+  {
+    "name": "git-cold",
+    "argv": [
+      "node",
+      "/tmp/review-analysis-qa-v1-nn0cdauu/src/cli.js",
+      "analyze",
+      "--repo",
+      "/tmp/review-analysis-qa-integration-q2ryoreb/repo",
+      "--base",
+      "c96d8162bc648b171aa07362c5f3298d4330992e",
+      "--head",
+      "d01fb950ad205f327232a0df9c24fed33e65fcae",
+      "--rules",
+      "/tmp/review-analysis-qa-v1-nn0cdauu/fixtures/rules.json",
+      "--as-of",
+      "2026-10-11",
+      "--cache",
+      "/tmp/review-analysis-qa-integration-q2ryoreb/cache"
+    ],
+    "cwd": "/tmp/review-analysis-qa-v1-nn0cdauu",
+    "startedUtc": "2026-10-11T16:48:12.489092+00:00",
+    "durationSeconds": 0.802,
+    "exitCode": 0,
+    "expectedExitCode": 0,
+    "status": "pass"
+  },
+  {
+    "name": "git-warm",
+    "argv": [
+      "node",
+      "/tmp/review-analysis-qa-v1-nn0cdauu/src/cli.js",
+      "analyze",
+      "--repo",
+      "/tmp/review-analysis-qa-integration-q2ryoreb/repo",
+      "--base",
+      "c96d8162bc648b171aa07362c5f3298d4330992e",
+      "--head",
+      "d01fb950ad205f327232a0df9c24fed33e65fcae",
+      "--rules",
+      "/tmp/review-analysis-qa-v1-nn0cdauu/fixtures/rules.json",
+      "--as-of",
+      "2026-10-11",
+      "--cache",
+      "/tmp/review-analysis-qa-integration-q2ryoreb/cache"
+    ],
+    "cwd": "/tmp/review-analysis-qa-v1-nn0cdauu",
+    "startedUtc": "2026-10-11T16:48:13.292630+00:00",
+    "durationSeconds": 0.646,
+    "exitCode": 0,
+    "expectedExitCode": 0,
+    "status": "pass"
+  },
+  {
+    "name": "git-exact-revisions",
+    "status": "pass",
+    "detail": {
+      "base": "c96d8162bc648b171aa07362c5f3298d4330992e",
+      "head": "d01fb950ad205f327232a0df9c24fed33e65fcae"
+    }
+  },
+  {
+    "name": "git-cache-cold-warm",
+    "status": "pass",
+    "detail": {
+      "cold": {
+        "report": "miss",
+        "parsedFiles": 28,
+        "reusedFiles": 15,
+        "invalidEntries": 0
+      },
+      "warm": {
+        "report": "hit",
+        "parsedFiles": 0,
+        "reusedFiles": 0,
+        "invalidEntries": 0
+      }
+    }
+  },
+  {
+    "name": "git-evidence",
+    "status": "pass",
+    "detail": {
+      "evidenceCount": 312,
+      "issues": []
+    }
+  },
+  {
+    "name": "git-read-only",
+    "status": "pass",
+    "detail": null
+  },
+  {
+    "name": "git-cache-corrupt",
+    "argv": [
+      "node",
+      "/tmp/review-analysis-qa-v1-nn0cdauu/src/cli.js",
+      "analyze",
+      "--repo",
+      "/tmp/review-analysis-qa-integration-q2ryoreb/repo",
+      "--base",
+      "c96d8162bc648b171aa07362c5f3298d4330992e",
+      "--head",
+      "d01fb950ad205f327232a0df9c24fed33e65fcae",
+      "--rules",
+      "/tmp/review-analysis-qa-v1-nn0cdauu/fixtures/rules.json",
+      "--as-of",
+      "2026-10-11",
+      "--cache",
+      "/tmp/review-analysis-qa-integration-q2ryoreb/cache"
+    ],
+    "cwd": "/tmp/review-analysis-qa-v1-nn0cdauu",
+    "startedUtc": "2026-10-11T16:48:13.951856+00:00",
+    "durationSeconds": 0.653,
+    "exitCode": 0,
+    "expectedExitCode": 0,
+    "status": "pass"
+  },
+  {
+    "name": "cache-corruption-recomputed",
+    "status": "pass",
+    "detail": {
+      "report": "miss",
+      "parsedFiles": 0,
+      "reusedFiles": 43,
+      "invalidEntries": 1
+    }
+  },
+  {
+    "name": "cache-rules-change",
+    "argv": [
+      "node",
+      "/tmp/review-analysis-qa-v1-nn0cdauu/src/cli.js",
+      "analyze",
+      "--repo",
+      "/tmp/review-analysis-qa-integration-q2ryoreb/repo",
+      "--base",
+      "c96d8162bc648b171aa07362c5f3298d4330992e",
+      "--head",
+      "d01fb950ad205f327232a0df9c24fed33e65fcae",
+      "--rules",
+      "/tmp/review-analysis-qa-integration-q2ryoreb/rules-v2.json",
+      "--as-of",
+      "2026-10-11",
+      "--cache",
+      "/tmp/review-analysis-qa-integration-q2ryoreb/cache"
+    ],
+    "cwd": "/tmp/review-analysis-qa-v1-nn0cdauu",
+    "startedUtc": "2026-10-11T16:48:14.606451+00:00",
+    "durationSeconds": 0.707,
+    "exitCode": 0,
+    "expectedExitCode": 0,
+    "status": "pass"
+  },
+  {
+    "name": "cache-rules-change-miss",
+    "status": "pass",
+    "detail": {
+      "report": "miss",
+      "parsedFiles": 0,
+      "reusedFiles": 43,
+      "invalidEntries": 0
+    }
+  },
+  {
+    "name": "cache-date-change",
+    "argv": [
+      "node",
+      "/tmp/review-analysis-qa-v1-nn0cdauu/src/cli.js",
+      "analyze",
+      "--repo",
+      "/tmp/review-analysis-qa-integration-q2ryoreb/repo",
+      "--base",
+      "c96d8162bc648b171aa07362c5f3298d4330992e",
+      "--head",
+      "d01fb950ad205f327232a0df9c24fed33e65fcae",
+      "--rules",
+      "/tmp/review-analysis-qa-v1-nn0cdauu/fixtures/rules.json",
+      "--as-of",
+      "2027-01-01",
+      "--cache",
+      "/tmp/review-analysis-qa-integration-q2ryoreb/cache"
+    ],
+    "cwd": "/tmp/review-analysis-qa-v1-nn0cdauu",
+    "startedUtc": "2026-10-11T16:48:15.315017+00:00",
+    "durationSeconds": 0.671,
+    "exitCode": 0,
+    "expectedExitCode": 0,
+    "status": "pass"
+  },
+  {
+    "name": "cache-date-change-miss",
+    "status": "pass",
+    "detail": {
+      "report": "miss",
+      "parsedFiles": 0,
+      "reusedFiles": 43,
+      "invalidEntries": 0
+    }
+  },
+  {
+    "name": "cache-task-change",
+    "argv": [
+      "node",
+      "/tmp/review-analysis-qa-v1-nn0cdauu/src/cli.js",
+      "analyze",
+      "--repo",
+      "/tmp/review-analysis-qa-integration-q2ryoreb/repo",
+      "--base",
+      "c96d8162bc648b171aa07362c5f3298d4330992e",
+      "--head",
+      "d01fb950ad205f327232a0df9c24fed33e65fcae",
+      "--rules",
+      "/tmp/review-analysis-qa-v1-nn0cdauu/fixtures/rules.json",
+      "--as-of",
+      "2026-10-11",
+      "--cache",
+      "/tmp/review-analysis-qa-integration-q2ryoreb/cache",
+      "--task",
+      "Independent changed task"
+    ],
+    "cwd": "/tmp/review-analysis-qa-v1-nn0cdauu",
+    "startedUtc": "2026-10-11T16:48:15.987382+00:00",
+    "durationSeconds": 0.673,
+    "exitCode": 0,
+    "expectedExitCode": 0,
+    "status": "pass"
+  },
+  {
+    "name": "cache-task-change-miss",
+    "status": "pass",
+    "detail": {
+      "report": "miss",
+      "parsedFiles": 0,
+      "reusedFiles": 43,
+      "invalidEntries": 0
+    }
+  },
+  {
+    "name": "dirty-first",
+    "argv": [
+      "node",
+      "/tmp/review-analysis-qa-v1-nn0cdauu/src/cli.js",
+      "analyze",
+      "--repo",
+      "/tmp/review-analysis-qa-integration-q2ryoreb/repo",
+      "--base",
+      "c96d8162bc648b171aa07362c5f3298d4330992e",
+      "--head",
+      "worktree",
+      "--rules",
+      "/tmp/review-analysis-qa-v1-nn0cdauu/fixtures/rules.json",
+      "--as-of",
+      "2026-10-11",
+      "--cache",
+      "/tmp/review-analysis-qa-integration-q2ryoreb/cache"
+    ],
+    "cwd": "/tmp/review-analysis-qa-v1-nn0cdauu",
+    "startedUtc": "2026-10-11T16:48:16.669955+00:00",
+    "durationSeconds": 0.608,
+    "exitCode": 0,
+    "expectedExitCode": 0,
+    "status": "pass"
+  },
+  {
+    "name": "dirty-repeat",
+    "argv": [
+      "node",
+      "/tmp/review-analysis-qa-v1-nn0cdauu/src/cli.js",
+      "analyze",
+      "--repo",
+      "/tmp/review-analysis-qa-integration-q2ryoreb/repo",
+      "--base",
+      "c96d8162bc648b171aa07362c5f3298d4330992e",
+      "--head",
+      "worktree",
+      "--rules",
+      "/tmp/review-analysis-qa-v1-nn0cdauu/fixtures/rules.json",
+      "--as-of",
+      "2026-10-11",
+      "--cache",
+      "/tmp/review-analysis-qa-integration-q2ryoreb/cache"
+    ],
+    "cwd": "/tmp/review-analysis-qa-v1-nn0cdauu",
+    "startedUtc": "2026-10-11T16:48:17.279851+00:00",
+    "durationSeconds": 0.698,
+    "exitCode": 0,
+    "expectedExitCode": 0,
+    "status": "pass"
+  },
+  {
+    "name": "dirty-bypass-repeated",
+    "status": "pass",
+    "detail": {
+      "first": {
+        "report": "bypass-dirty",
+        "parsedFiles": 2,
+        "reusedFiles": 42,
+        "invalidEntries": 0
+      },
+      "repeat": {
+        "report": "bypass-dirty",
+        "parsedFiles": 0,
+        "reusedFiles": 44,
+        "invalidEntries": 0
+      }
+    }
+  },
+  {
+    "name": "dirty-source-content-visible",
+    "status": "pass",
+    "detail": null
+  },
+  {
+    "name": "dirty-evidence",
+    "status": "pass",
+    "detail": {
+      "evidenceCount": 314,
+      "issues": []
+    }
+  },
+  {
+    "name": "dirty-read-only",
+    "status": "pass",
+    "detail": null
+  },
+  {
+    "name": "guard-out-inside",
+    "argv": [
+      "node",
+      "/tmp/review-analysis-qa-v1-nn0cdauu/src/cli.js",
+      "analyze",
+      "--repo",
+      "/tmp/review-analysis-qa-integration-q2ryoreb/repo",
+      "--base",
+      "c96d8162bc648b171aa07362c5f3298d4330992e",
+      "--head",
+      "worktree",
+      "--rules",
+      "/tmp/review-analysis-qa-v1-nn0cdauu/fixtures/rules.json",
+      "--as-of",
+      "2026-10-11",
+      "--cache",
+      "/tmp/review-analysis-qa-integration-q2ryoreb/cache",
+      "--out",
+      "/tmp/review-analysis-qa-integration-q2ryoreb/repo/report.json"
+    ],
+    "cwd": "/tmp/review-analysis-qa-v1-nn0cdauu",
+    "startedUtc": "2026-10-11T16:48:17.994532+00:00",
+    "durationSeconds": 0.49,
+    "exitCode": 2,
+    "expectedExitCode": 2,
+    "status": "pass"
+  },
+  {
+    "name": "guard-out-inside-error-message",
+    "status": "pass",
+    "detail": "Review Analysis: Output/cache must be outside the analyzed repository: /tmp/review-analysis-qa-integration-q2ryoreb/repo"
+  },
+  {
+    "name": "guard-cache-inside",
+    "argv": [
+      "node",
+      "/tmp/review-analysis-qa-v1-nn0cdauu/src/cli.js",
+      "analyze",
+      "--repo",
+      "/tmp/review-analysis-qa-integration-q2ryoreb/repo",
+      "--base",
+      "c96d8162bc648b171aa07362c5f3298d4330992e",
+      "--head",
+      "worktree",
+      "--rules",
+      "/tmp/review-analysis-qa-v1-nn0cdauu/fixtures/rules.json",
+      "--as-of",
+      "2026-10-11",
+      "--cache",
+      "/tmp/review-analysis-qa-integration-q2ryoreb/repo/cache"
+    ],
+    "cwd": "/tmp/review-analysis-qa-v1-nn0cdauu",
+    "startedUtc": "2026-10-11T16:48:18.484565+00:00",
+    "durationSeconds": 0.532,
+    "exitCode": 2,
+    "expectedExitCode": 2,
+    "status": "pass"
+  },
+  {
+    "name": "guard-cache-inside-error-message",
+    "status": "pass",
+    "detail": "Review Analysis: Output/cache must be outside the analyzed repository: /tmp/review-analysis-qa-integration-q2ryoreb/repo"
+  },
+  {
+    "name": "guard-out-symlink",
+    "argv": [
+      "node",
+      "/tmp/review-analysis-qa-v1-nn0cdauu/src/cli.js",
+      "analyze",
+      "--repo",
+      "/tmp/review-analysis-qa-integration-q2ryoreb/repo",
+      "--base",
+      "c96d8162bc648b171aa07362c5f3298d4330992e",
+      "--head",
+      "worktree",
+      "--rules",
+      "/tmp/review-analysis-qa-v1-nn0cdauu/fixtures/rules.json",
+      "--as-of",
+      "2026-10-11",
+      "--cache",
+      "/tmp/review-analysis-qa-integration-q2ryoreb/cache",
+      "--out",
+      "/tmp/review-analysis-qa-integration-q2ryoreb/dest/alias/report.json"
+    ],
+    "cwd": "/tmp/review-analysis-qa-v1-nn0cdauu",
+    "startedUtc": "2026-10-11T16:48:19.016922+00:00",
+    "durationSeconds": 0.48,
+    "exitCode": 2,
+    "expectedExitCode": 2,
+    "status": "pass"
+  },
+  {
+    "name": "guard-out-symlink-error-message",
+    "status": "pass",
+    "detail": "Review Analysis: Output/cache must be outside the analyzed repository: /tmp/review-analysis-qa-integration-q2ryoreb/repo"
+  },
+  {
+    "name": "guard-cache-symlink",
+    "argv": [
+      "node",
+      "/tmp/review-analysis-qa-v1-nn0cdauu/src/cli.js",
+      "analyze",
+      "--repo",
+      "/tmp/review-analysis-qa-integration-q2ryoreb/repo",
+      "--base",
+      "c96d8162bc648b171aa07362c5f3298d4330992e",
+      "--head",
+      "worktree",
+      "--rules",
+      "/tmp/review-analysis-qa-v1-nn0cdauu/fixtures/rules.json",
+      "--as-of",
+      "2026-10-11",
+      "--cache",
+      "/tmp/review-analysis-qa-integration-q2ryoreb/dest/alias/cache"
+    ],
+    "cwd": "/tmp/review-analysis-qa-v1-nn0cdauu",
+    "startedUtc": "2026-10-11T16:48:19.496751+00:00",
+    "durationSeconds": 0.472,
+    "exitCode": 2,
+    "expectedExitCode": 2,
+    "status": "pass"
+  },
+  {
+    "name": "guard-cache-symlink-error-message",
+    "status": "pass",
+    "detail": "Review Analysis: Output/cache must be outside the analyzed repository: /tmp/review-analysis-qa-integration-q2ryoreb/repo"
+  },
+  {
+    "name": "guard-out-dangling-symlink",
+    "argv": [
+      "node",
+      "/tmp/review-analysis-qa-v1-nn0cdauu/src/cli.js",
+      "analyze",
+      "--repo",
+      "/tmp/review-analysis-qa-integration-q2ryoreb/repo",
+      "--base",
+      "c96d8162bc648b171aa07362c5f3298d4330992e",
+      "--head",
+      "worktree",
+      "--rules",
+      "/tmp/review-analysis-qa-v1-nn0cdauu/fixtures/rules.json",
+      "--as-of",
+      "2026-10-11",
+      "--cache",
+      "/tmp/review-analysis-qa-integration-q2ryoreb/cache",
+      "--out",
+      "/tmp/review-analysis-qa-integration-q2ryoreb/dest/dangling-report"
+    ],
+    "cwd": "/tmp/review-analysis-qa-v1-nn0cdauu",
+    "startedUtc": "2026-10-11T16:48:19.969387+00:00",
+    "durationSeconds": 0.492,
+    "exitCode": 2,
+    "expectedExitCode": 2,
+    "status": "pass"
+  },
+  {
+    "name": "guard-out-dangling-symlink-error-message",
+    "status": "pass",
+    "detail": "Review Analysis: Output/cache must be outside the analyzed repository: /tmp/review-analysis-qa-integration-q2ryoreb/repo"
+  },
+  {
+    "name": "guard-cache-dangling-symlink",
+    "argv": [
+      "node",
+      "/tmp/review-analysis-qa-v1-nn0cdauu/src/cli.js",
+      "analyze",
+      "--repo",
+      "/tmp/review-analysis-qa-integration-q2ryoreb/repo",
+      "--base",
+      "c96d8162bc648b171aa07362c5f3298d4330992e",
+      "--head",
+      "worktree",
+      "--rules",
+      "/tmp/review-analysis-qa-v1-nn0cdauu/fixtures/rules.json",
+      "--as-of",
+      "2026-10-11",
+      "--cache",
+      "/tmp/review-analysis-qa-integration-q2ryoreb/dest/dangling-cache"
+    ],
+    "cwd": "/tmp/review-analysis-qa-v1-nn0cdauu",
+    "startedUtc": "2026-10-11T16:48:20.461653+00:00",
+    "durationSeconds": 0.496,
+    "exitCode": 2,
+    "expectedExitCode": 2,
+    "status": "pass"
+  },
+  {
+    "name": "guard-cache-dangling-symlink-error-message",
+    "status": "pass",
+    "detail": "Review Analysis: Output/cache must be outside the analyzed repository: /tmp/review-analysis-qa-integration-q2ryoreb/repo"
+  },
+  {
+    "name": "guard-out-parent-traversal",
+    "argv": [
+      "node",
+      "/tmp/review-analysis-qa-v1-nn0cdauu/src/cli.js",
+      "analyze",
+      "--repo",
+      "/tmp/review-analysis-qa-integration-q2ryoreb/repo",
+      "--base",
+      "c96d8162bc648b171aa07362c5f3298d4330992e",
+      "--head",
+      "worktree",
+      "--rules",
+      "/tmp/review-analysis-qa-v1-nn0cdauu/fixtures/rules.json",
+      "--as-of",
+      "2026-10-11",
+      "--cache",
+      "/tmp/review-analysis-qa-integration-q2ryoreb/cache",
+      "--out",
+      "/tmp/review-analysis-qa-integration-q2ryoreb/dest/nest/../report.json"
+    ],
+    "cwd": "/tmp/review-analysis-qa-v1-nn0cdauu",
+    "startedUtc": "2026-10-11T16:48:20.957754+00:00",
+    "durationSeconds": 0.488,
+    "exitCode": 2,
+    "expectedExitCode": 2,
+    "status": "pass"
+  },
+  {
+    "name": "guard-out-parent-traversal-error-message",
+    "status": "pass",
+    "detail": "Review Analysis: Output/cache destination cannot contain parent traversal"
+  },
+  {
+    "name": "guards-read-only",
+    "status": "pass",
+    "detail": null
+  },
+  {
+    "name": "out-prefix-sibling-allowed",
+    "argv": [
+      "node",
+      "/tmp/review-analysis-qa-v1-nn0cdauu/src/cli.js",
+      "analyze",
+      "--repo",
+      "/tmp/review-analysis-qa-integration-q2ryoreb/repo",
+      "--base",
+      "c96d8162bc648b171aa07362c5f3298d4330992e",
+      "--head",
+      "worktree",
+      "--rules",
+      "/tmp/review-analysis-qa-v1-nn0cdauu/fixtures/rules.json",
+      "--as-of",
+      "2026-10-11",
+      "--cache",
+      "/tmp/review-analysis-qa-integration-q2ryoreb/cache",
+      "--out",
+      "/tmp/review-analysis-qa-integration-q2ryoreb/repo-sibling-report.json"
+    ],
+    "cwd": "/tmp/review-analysis-qa-v1-nn0cdauu",
+    "startedUtc": "2026-10-11T16:48:21.451173+00:00",
+    "durationSeconds": 0.571,
+    "exitCode": 0,
+    "expectedExitCode": 0,
+    "status": "pass"
+  },
+  {
+    "name": "out-prefix-sibling-created",
+    "status": "pass",
+    "detail": null
+  },
+  {
+    "name": "fixture-identical-rename",
+    "status": "pass",
+    "detail": null
+  },
+  {
+    "name": "fixture-deletion-baseline-only",
+    "status": "pass",
+    "detail": null
+  },
+  {
+    "name": "fixture-unreviewed-never-suppressed",
+    "status": "pass",
+    "detail": null
+  },
+  {
+    "name": "expiry-on-day",
+    "argv": [
+      "node",
+      "/tmp/review-analysis-qa-v1-nn0cdauu/src/cli.js",
+      "analyze",
+      "--baseline",
+      "/tmp/review-analysis-qa-v1-nn0cdauu/fixtures/lookup/baseline",
+      "--candidate",
+      "/tmp/review-analysis-qa-v1-nn0cdauu/fixtures/lookup/candidate",
+      "--rules",
+      "/tmp/review-analysis-qa-v1-nn0cdauu/fixtures/rules.json",
+      "--as-of",
+      "2026-12-31",
+      "--cache",
+      "/tmp/review-analysis-qa-integration-q2ryoreb/expiry-cache"
+    ],
+    "cwd": "/tmp/review-analysis-qa-v1-nn0cdauu",
+    "startedUtc": "2026-10-11T16:48:22.023355+00:00",
+    "durationSeconds": 0.621,
+    "exitCode": 0,
+    "expectedExitCode": 0,
+    "status": "pass"
+  },
+  {
+    "name": "expiry-next-day",
+    "argv": [
+      "node",
+      "/tmp/review-analysis-qa-v1-nn0cdauu/src/cli.js",
+      "analyze",
+      "--baseline",
+      "/tmp/review-analysis-qa-v1-nn0cdauu/fixtures/lookup/baseline",
+      "--candidate",
+      "/tmp/review-analysis-qa-v1-nn0cdauu/fixtures/lookup/candidate",
+      "--rules",
+      "/tmp/review-analysis-qa-v1-nn0cdauu/fixtures/rules.json",
+      "--as-of",
+      "2027-01-01",
+      "--cache",
+      "/tmp/review-analysis-qa-integration-q2ryoreb/expiry-cache"
+    ],
+    "cwd": "/tmp/review-analysis-qa-v1-nn0cdauu",
+    "startedUtc": "2026-10-11T16:48:22.645382+00:00",
+    "durationSeconds": 0.485,
+    "exitCode": 0,
+    "expectedExitCode": 0,
+    "status": "pass"
+  },
+  {
+    "name": "expiry-inclusive-on-day",
+    "status": "pass",
+    "detail": null
+  },
+  {
+    "name": "expiry-next-day-unsuppressed",
+    "status": "pass",
+    "detail": null
+  },
+  {
+    "name": "expiry-date-cache-invalidation",
+    "status": "pass",
+    "detail": null
+  },
+  {
+    "name": "invalid-date",
+    "argv": [
+      "node",
+      "/tmp/review-analysis-qa-v1-nn0cdauu/src/cli.js",
+      "analyze",
+      "--repo",
+      "/tmp/review-analysis-qa-integration-q2ryoreb/repo",
+      "--base",
+      "c96d8162bc648b171aa07362c5f3298d4330992e",
+      "--head",
+      "d01fb950ad205f327232a0df9c24fed33e65fcae",
+      "--rules",
+      "/tmp/review-analysis-qa-v1-nn0cdauu/fixtures/rules.json",
+      "--as-of",
+      "2026-02-30",
+      "--cache",
+      "/tmp/review-analysis-qa-integration-q2ryoreb/cache"
+    ],
+    "cwd": "/tmp/review-analysis-qa-v1-nn0cdauu",
+    "startedUtc": "2026-10-11T16:48:23.132421+00:00",
+    "durationSeconds": 0.523,
+    "exitCode": 2,
+    "expectedExitCode": 2,
+    "status": "pass"
+  },
+  {
+    "name": "invalid-revision",
+    "argv": [
+      "node",
+      "/tmp/review-analysis-qa-v1-nn0cdauu/src/cli.js",
+      "analyze",
+      "--repo",
+      "/tmp/review-analysis-qa-integration-q2ryoreb/repo",
+      "--base",
+      "--not-a-commit",
+      "--head",
+      "d01fb950ad205f327232a0df9c24fed33e65fcae",
+      "--rules",
+      "/tmp/review-analysis-qa-v1-nn0cdauu/fixtures/rules.json",
+      "--as-of",
+      "2026-10-11",
+      "--cache",
+      "/tmp/review-analysis-qa-integration-q2ryoreb/cache"
+    ],
+    "cwd": "/tmp/review-analysis-qa-v1-nn0cdauu",
+    "startedUtc": "2026-10-11T16:48:23.655370+00:00",
+    "durationSeconds": 0.492,
+    "exitCode": 2,
+    "expectedExitCode": 2,
+    "status": "pass"
+  },
+  {
+    "name": "missing-rules",
+    "argv": [
+      "node",
+      "/tmp/review-analysis-qa-v1-nn0cdauu/src/cli.js",
+      "analyze",
+      "--repo",
+      "/tmp/review-analysis-qa-integration-q2ryoreb/repo",
+      "--base",
+      "c96d8162bc648b171aa07362c5f3298d4330992e",
+      "--head",
+      "d01fb950ad205f327232a0df9c24fed33e65fcae",
+      "--rules",
+      "/tmp/review-analysis-qa-integration-q2ryoreb/absent.json",
+      "--as-of",
+      "2026-10-11",
+      "--cache",
+      "/tmp/review-analysis-qa-integration-q2ryoreb/cache"
+    ],
+    "cwd": "/tmp/review-analysis-qa-v1-nn0cdauu",
+    "startedUtc": "2026-10-11T16:48:24.147074+00:00",
+    "durationSeconds": 0.482,
+    "exitCode": 2,
+    "expectedExitCode": 2,
+    "status": "pass"
+  },
+  {
+    "name": "final-git-source-unchanged",
+    "status": "pass",
+    "detail": null
+  }
+]

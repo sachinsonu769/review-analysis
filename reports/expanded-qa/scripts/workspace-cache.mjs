@@ -1,0 +1,45 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import assert from 'node:assert/strict';
+import {execFileSync} from 'node:child_process';
+import {analyzeWorkspace} from '/opt/review-analysis/app-dist/workspace.js';
+import {buildIdentity} from '/opt/review-analysis/src/engine.js';
+import {readSnapshot,hash} from '/opt/review-analysis/src/snapshot.js';
+
+const expectedBuild=process.argv[2];
+assert.equal(buildIdentity().sourceBuildHash,expectedBuild);
+const dir=fs.mkdtempSync('/tmp/expanded-qa-cache-');
+const baseline=path.join(dir,'baseline'),candidate=path.join(dir,'candidate'),cacheDir=path.join(dir,'cache');
+fs.mkdirSync(baseline);fs.mkdirSync(candidate);
+const code='export function lookup(value?: string) { return value!; }\n';
+fs.writeFileSync(path.join(baseline,'a.ts'),code);fs.writeFileSync(path.join(candidate,'a.ts'),code);
+const workspace={version:'qa-workspace-1',projects:[{id:'qa',repository:'synthetic/qa',module:'app',baseline:{type:'directory',root:baseline},candidate:{type:'directory',root:candidate},rules:{version:'qa-rules-1',rules:[]}}],mappings:[]};
+const options={workspace,cacheDir,asOf:'2026-10-11',task:'Inspect lookup callers',quality:{pmdEnabled:false,complexityThreshold:3}};
+const observations=[];
+const analyze=async(name,overrides={})=>{const report=await analyzeWorkspace({...options,...overrides});assert.equal(report.build.sourceBuildHash,expectedBuild);observations.push({name,cache:report.cache,changes:report.changes.length,qualityFindings:report.quality.findings.length,provenance:report.provenance});return report;};
+const cold=await analyze('cold');assert.equal(cold.cache.projects[0].report,'miss');assert.equal(cold.cache.quality[0].status,'miss');
+const warm=await analyze('warm');assert.equal(warm.cache.projects[0].report,'hit');assert.equal(warm.cache.quality[0].status,'hit');
+const date=await analyze('date-change',{asOf:'2026-10-12'});assert.equal(date.cache.projects[0].report,'miss');assert.equal(date.cache.quality[0].status,'hit');
+const task=await analyze('task-change',{task:'Inspect different task'});assert.equal(task.cache.projects[0].report,'miss');assert.equal(task.cache.quality[0].status,'hit');
+const changedRules=structuredClone(workspace);changedRules.projects[0].rules.version='qa-rules-2';
+const rules=await analyze('rules-change',{workspace:changedRules});assert.equal(rules.cache.projects[0].report,'miss');
+const quality=await analyze('quality-config-change',{quality:{pmdEnabled:false,complexityThreshold:2}});assert.equal(quality.cache.projects[0].report,'hit');assert.equal(quality.cache.quality[0].status,'miss');
+fs.writeFileSync(path.join(candidate,'a.ts'),'export function lookup(value?: string) { if (value) return value; return "fallback"; }\n');
+const content=await analyze('source-content-change');assert.equal(content.cache.projects[0].report,'miss');assert.equal(content.cache.quality[0].status,'miss');assert.ok(content.changes.length);
+// Cache integrity errors must recompute, never hide source changes.
+const reportKey=content.provenance.projects[0].cacheKey;
+fs.writeFileSync(path.join(cacheDir,reportKey+'.json'),'{"key":"invalid","digest":"invalid","value":{}}');
+const corrupt=await analyze('corrupt-report-cache');assert.equal(corrupt.cache.projects[0].report,'miss');assert.ok(corrupt.cache.projects[0].invalidEntries>0);assert.deepEqual(corrupt.changes,content.changes);
+
+const repo=path.join(dir,'git');fs.mkdirSync(repo);
+const git=(...args)=>execFileSync('git',['-C',repo,...args],{encoding:'utf8'}).trim();
+git('init','-q');git('config','user.name','Synthetic QA');git('config','user.email','synthetic@example.invalid');
+fs.writeFileSync(path.join(repo,'a.ts'),'export const original=1;\n');git('add','.');git('commit','-qm','original');const original=git('rev-parse','HEAD');
+fs.writeFileSync(path.join(repo,'a.ts'),'export const replacement=2;\n');git('add','.');git('commit','-qm','replacement');const replacement=git('rev-parse','HEAD');git('replace',original,replacement);
+const pinned=readSnapshot({type:'git',root:repo,revision:original});assert.equal(pinned.revision,original);assert.equal(pinned.files['a.ts'].text,'export const original=1;\n');
+const marker=path.join(dir,'fsmonitor-executed');const hook=path.join(repo,'.git','qa-fsmonitor');fs.writeFileSync(hook,`#!/bin/sh\nprintf executed > '${marker}'\nprintf 'qa-token\\000'\n`,{mode:0o755});git('config','core.fsmonitor',hook);
+fs.writeFileSync(path.join(repo,'a.ts'),'export const dirty=3;\n');
+const gitWorkspace={version:'qa-git-1',projects:[{id:'git',repository:'synthetic/git',module:'app',baseline:{type:'git',root:repo,revision:original},candidate:{type:'worktree',root:repo},rules:{version:'qa',rules:[]}}],mappings:[]};
+const sourceBefore=hash(fs.readFileSync(path.join(repo,'a.ts'))),indexBefore=hash(fs.readFileSync(path.join(repo,'.git','index')));
+const dirty=await analyze('dirty-worktree',{workspace:gitWorkspace});assert.equal(dirty.cache.projects[0].report,'bypass-dirty');assert.equal(dirty.cache.quality[0].status,'bypass-dirty');assert.equal(fs.existsSync(marker),false);assert.equal(hash(fs.readFileSync(path.join(repo,'a.ts'))),sourceBefore);assert.equal(hash(fs.readFileSync(path.join(repo,'.git','index'))),indexBefore);
+process.stdout.write(JSON.stringify({status:'pass',expectedBuild,observations,git:{original,replacement,pinnedSource:pinned.files['a.ts'].text,hookExecuted:fs.existsSync(marker),sourceUnchanged:true,indexUnchanged:true}},null,2)+'\n');

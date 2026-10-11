@@ -1,0 +1,17 @@
+{
+  "build": "/tmp/review-analysis-qa-v2-fsn7g676",
+  "sourceCaseRoot": "/tmp/review-analysis-adversarial-v2-NZrPxG",
+  "artifactZipSha256": "a140834fe7d26c707a04dc43ae225178bc39756154ca52e63f8dd7db91582897",
+  "manifestSha256": "87d4a883a987672fd0441b660ef0026163ef00e7cc2536b4dbb97413cd72d344",
+  "manifestFiles": 124,
+  "node": "v24.19.0",
+  "manifestErrorsBefore": [],
+  "reviewedDocs": [
+    "README.md",
+    "docs/architecture.md",
+    "docs/parser-contract.md",
+    "docs/java-parser.md",
+    "docs/typescript-parser.md",
+    "docs/verification.md"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "version": "independent-adversarial-v1",
+  "rules": [
+    {
+      "id": "independent/http-contract",
+      "kind": "endpoint-contract-change",
+      "owner": "synthetic-qa",
+      "severity": "warning"
+    }
+  ]
+}

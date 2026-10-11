@@ -1,0 +1,658 @@
+{
+  "schemaVersion": "1.0",
+  "analyzer": {
+    "version": "0.1.0",
+    "sourceBuildHash": "8ee7fcacee9a1b276b2bfab2665d8d3ab771e40eee5f3924f1f301192426e68f",
+    "parsers": {
+      "java": "java-parser@3.0.1",
+      "typescript": "typescript@5.9.3"
+    }
+  },
+  "advisory": true,
+  "asOf": "2026-10-11",
+  "provenance": {
+    "baseline": {
+      "root": "/tmp/review-analysis-adversarial-v1-anUajX/06-java-pattern-shadow/baseline",
+      "type": "directory",
+      "revision": "tree-sha256:b1d9d2e9e6139a9b62fe51c97115a69f3b83d3aee4482069a21e8e4aec54a636",
+      "contentHash": "b1d9d2e9e6139a9b62fe51c97115a69f3b83d3aee4482069a21e8e4aec54a636",
+      "dirty": false
+    },
+    "candidate": {
+      "root": "/tmp/review-analysis-adversarial-v1-anUajX/06-java-pattern-shadow/candidate",
+      "type": "directory",
+      "revision": "tree-sha256:46cc950016eb615012f7204744e437b826b699f805379f5faa0d0748a2b99e1e",
+      "contentHash": "46cc950016eb615012f7204744e437b826b699f805379f5faa0d0748a2b99e1e",
+      "dirty": false
+    },
+    "rulesHash": "90f33c2c080aa463115b0ef7e4058bb9bf0da4944dff79ed58eae2f01f9cd3f1",
+    "baselineRulesHash": "90f33c2c080aa463115b0ef7e4058bb9bf0da4944dff79ed58eae2f01f9cd3f1",
+    "cacheKey": "7cdbee581433a588512661bb712501333b294b349c0dcf8e0785cc364b596466"
+  },
+  "changes": [
+    {
+      "kind": "modified",
+      "name": "Other",
+      "key": "qa.Other",
+      "language": "java",
+      "contractChanged": false,
+      "before": {
+        "path": "backend/Other.java",
+        "range": {
+          "startLine": 2,
+          "endLine": 2
+        },
+        "revision": "tree-sha256:b1d9d2e9e6139a9b62fe51c97115a69f3b83d3aee4482069a21e8e4aec54a636",
+        "fileHash": "b3cbea9c2653245343cd6697741ffb14fc6fa624ddde12a233074af901d2136c",
+        "excerpt": "class Other { String zero() { return \"v1\"; } }"
+      },
+      "after": {
+        "path": "backend/Other.java",
+        "range": {
+          "startLine": 2,
+          "endLine": 2
+        },
+        "revision": "tree-sha256:46cc950016eb615012f7204744e437b826b699f805379f5faa0d0748a2b99e1e",
+        "fileHash": "2ffbf58ce807332b522855f8aedcceb441f7584b0a9769ddf7c27c6c8769cd01",
+        "excerpt": "class Other { String zero() { return \"v2\"; } }"
+      }
+    },
+    {
+      "kind": "modified",
+      "name": "zero",
+      "key": "qa.Other#zero/0",
+      "language": "java",
+      "contractChanged": false,
+      "before": {
+        "path": "backend/Other.java",
+        "range": {
+          "startLine": 2,
+          "endLine": 2
+        },
+        "revision": "tree-sha256:b1d9d2e9e6139a9b62fe51c97115a69f3b83d3aee4482069a21e8e4aec54a636",
+        "fileHash": "b3cbea9c2653245343cd6697741ffb14fc6fa624ddde12a233074af901d2136c",
+        "excerpt": "class Other { String zero() { return \"v1\"; } }"
+      },
+      "after": {
+        "path": "backend/Other.java",
+        "range": {
+          "startLine": 2,
+          "endLine": 2
+        },
+        "revision": "tree-sha256:46cc950016eb615012f7204744e437b826b699f805379f5faa0d0748a2b99e1e",
+        "fileHash": "2ffbf58ce807332b522855f8aedcceb441f7584b0a9769ddf7c27c6c8769cd01",
+        "excerpt": "class Other { String zero() { return \"v2\"; } }"
+      }
+    },
+    {
+      "kind": "modified",
+      "name": "Service",
+      "key": "qa.Service",
+      "language": "java",
+      "contractChanged": false,
+      "before": {
+        "path": "backend/Service.java",
+        "range": {
+          "startLine": 2,
+          "endLine": 6
+        },
+        "revision": "tree-sha256:b1d9d2e9e6139a9b62fe51c97115a69f3b83d3aee4482069a21e8e4aec54a636",
+        "fileHash": "d3a42475956bd2df2a9590b19d5412ed0a40510315dd00c96b03ec93f77af449",
+        "excerpt": "class Service {\n String run(String x) { return \"v1\"; }\n String run(Integer x) { return \"v1\"; }\n String zero() { return \"v1\"; }\n}"
+      },
+      "after": {
+        "path": "backend/Service.java",
+        "range": {
+          "startLine": 2,
+          "endLine": 6
+        },
+        "revision": "tree-sha256:46cc950016eb615012f7204744e437b826b699f805379f5faa0d0748a2b99e1e",
+        "fileHash": "383c8d5afa487ed5becf8b5fa1a8ec2aa451627280815ccd16fd5b3a411e939d",
+        "excerpt": "class Service {\n String run(String x) { return \"v2\"; }\n String run(Integer x) { return \"v2\"; }\n String zero() { return \"v2\"; }\n}"
+      }
+    },
+    {
+      "kind": "modified",
+      "name": "run",
+      "key": "qa.Service#run/1(String)",
+      "language": "java",
+      "contractChanged": false,
+      "before": {
+        "path": "backend/Service.java",
+        "range": {
+          "startLine": 3,
+          "endLine": 3
+        },
+        "revision": "tree-sha256:b1d9d2e9e6139a9b62fe51c97115a69f3b83d3aee4482069a21e8e4aec54a636",
+        "fileHash": "d3a42475956bd2df2a9590b19d5412ed0a40510315dd00c96b03ec93f77af449",
+        "excerpt": " String run(String x) { return \"v1\"; }"
+      },
+      "after": {
+        "path": "backend/Service.java",
+        "range": {
+          "startLine": 3,
+          "endLine": 3
+        },
+        "revision": "tree-sha256:46cc950016eb615012f7204744e437b826b699f805379f5faa0d0748a2b99e1e",
+        "fileHash": "383c8d5afa487ed5becf8b5fa1a8ec2aa451627280815ccd16fd5b3a411e939d",
+        "excerpt": " String run(String x) { return \"v2\"; }"
+      }
+    },
+    {
+      "kind": "modified",
+      "name": "run",
+      "key": "qa.Service#run/1(Integer)",
+      "language": "java",
+      "contractChanged": false,
+      "before": {
+        "path": "backend/Service.java",
+        "range": {
+          "startLine": 4,
+          "endLine": 4
+        },
+        "revision": "tree-sha256:b1d9d2e9e6139a9b62fe51c97115a69f3b83d3aee4482069a21e8e4aec54a636",
+        "fileHash": "d3a42475956bd2df2a9590b19d5412ed0a40510315dd00c96b03ec93f77af449",
+        "excerpt": " String run(Integer x) { return \"v1\"; }"
+      },
+      "after": {
+        "path": "backend/Service.java",
+        "range": {
+          "startLine": 4,
+          "endLine": 4
+        },
+        "revision": "tree-sha256:46cc950016eb615012f7204744e437b826b699f805379f5faa0d0748a2b99e1e",
+        "fileHash": "383c8d5afa487ed5becf8b5fa1a8ec2aa451627280815ccd16fd5b3a411e939d",
+        "excerpt": " String run(Integer x) { return \"v2\"; }"
+      }
+    },
+    {
+      "kind": "modified",
+      "name": "zero",
+      "key": "qa.Service#zero/0",
+      "language": "java",
+      "contractChanged": false,
+      "before": {
+        "path": "backend/Service.java",
+        "range": {
+          "startLine": 5,
+          "endLine": 5
+        },
+        "revision": "tree-sha256:b1d9d2e9e6139a9b62fe51c97115a69f3b83d3aee4482069a21e8e4aec54a636",
+        "fileHash": "d3a42475956bd2df2a9590b19d5412ed0a40510315dd00c96b03ec93f77af449",
+        "excerpt": " String zero() { return \"v1\"; }"
+      },
+      "after": {
+        "path": "backend/Service.java",
+        "range": {
+          "startLine": 5,
+          "endLine": 5
+        },
+        "revision": "tree-sha256:46cc950016eb615012f7204744e437b826b699f805379f5faa0d0748a2b99e1e",
+        "fileHash": "383c8d5afa487ed5becf8b5fa1a8ec2aa451627280815ccd16fd5b3a411e939d",
+        "excerpt": " String zero() { return \"v2\"; }"
+      }
+    }
+  ],
+  "impact": {
+    "direct": [
+      {
+        "kind": "type",
+        "fromPath": "backend/Caller.java",
+        "toPath": "backend/Service.java",
+        "targetKey": "qa.Service",
+        "confidence": "high",
+        "reason": "Java qualified import or same-package type resolves to supplied source",
+        "evidence": {
+          "path": "backend/Caller.java",
+          "range": {
+            "startLine": 3,
+            "endLine": 3
+          },
+          "revision": "tree-sha256:b1d9d2e9e6139a9b62fe51c97115a69f3b83d3aee4482069a21e8e4aec54a636",
+          "fileHash": "61c9478ae93a9aecee4882d69d9b5b97490a7685461fca8fb33cd12ddd4ec468",
+          "excerpt": " Service service;"
+        },
+        "targetEvidence": {
+          "path": "backend/Service.java",
+          "range": {
+            "startLine": 2,
+            "endLine": 6
+          },
+          "revision": "tree-sha256:b1d9d2e9e6139a9b62fe51c97115a69f3b83d3aee4482069a21e8e4aec54a636",
+          "fileHash": "d3a42475956bd2df2a9590b19d5412ed0a40510315dd00c96b03ec93f77af449",
+          "excerpt": "class Service {\n String run(String x) { return \"v1\"; }\n String run(Integer x) { return \"v1\"; }\n String zero() { return \"v1\"; }\n}"
+        }
+      },
+      {
+        "kind": "type",
+        "fromPath": "backend/Caller.java",
+        "toPath": "backend/Other.java",
+        "targetKey": "qa.Other",
+        "confidence": "high",
+        "reason": "Java qualified import or same-package type resolves to supplied source",
+        "evidence": {
+          "path": "backend/Caller.java",
+          "range": {
+            "startLine": 5,
+            "endLine": 5
+          },
+          "revision": "tree-sha256:b1d9d2e9e6139a9b62fe51c97115a69f3b83d3aee4482069a21e8e4aec54a636",
+          "fileHash": "61c9478ae93a9aecee4882d69d9b5b97490a7685461fca8fb33cd12ddd4ec468",
+          "excerpt": "  if (value instanceof Other service) { service.zero(); } // pattern-shadow"
+        },
+        "targetEvidence": {
+          "path": "backend/Other.java",
+          "range": {
+            "startLine": 2,
+            "endLine": 2
+          },
+          "revision": "tree-sha256:b1d9d2e9e6139a9b62fe51c97115a69f3b83d3aee4482069a21e8e4aec54a636",
+          "fileHash": "b3cbea9c2653245343cd6697741ffb14fc6fa624ddde12a233074af901d2136c",
+          "excerpt": "class Other { String zero() { return \"v1\"; } }"
+        }
+      },
+      {
+        "kind": "type",
+        "fromPath": "backend/Caller.java",
+        "toPath": "backend/Service.java",
+        "targetKey": "qa.Service",
+        "confidence": "high",
+        "reason": "Java qualified import or same-package type resolves to supplied source",
+        "evidence": {
+          "path": "backend/Caller.java",
+          "range": {
+            "startLine": 3,
+            "endLine": 3
+          },
+          "revision": "tree-sha256:46cc950016eb615012f7204744e437b826b699f805379f5faa0d0748a2b99e1e",
+          "fileHash": "61c9478ae93a9aecee4882d69d9b5b97490a7685461fca8fb33cd12ddd4ec468",
+          "excerpt": " Service service;"
+        },
+        "targetEvidence": {
+          "path": "backend/Service.java",
+          "range": {
+            "startLine": 2,
+            "endLine": 6
+          },
+          "revision": "tree-sha256:46cc950016eb615012f7204744e437b826b699f805379f5faa0d0748a2b99e1e",
+          "fileHash": "383c8d5afa487ed5becf8b5fa1a8ec2aa451627280815ccd16fd5b3a411e939d",
+          "excerpt": "class Service {\n String run(String x) { return \"v2\"; }\n String run(Integer x) { return \"v2\"; }\n String zero() { return \"v2\"; }\n}"
+        }
+      },
+      {
+        "kind": "type",
+        "fromPath": "backend/Caller.java",
+        "toPath": "backend/Other.java",
+        "targetKey": "qa.Other",
+        "confidence": "high",
+        "reason": "Java qualified import or same-package type resolves to supplied source",
+        "evidence": {
+          "path": "backend/Caller.java",
+          "range": {
+            "startLine": 5,
+            "endLine": 5
+          },
+          "revision": "tree-sha256:46cc950016eb615012f7204744e437b826b699f805379f5faa0d0748a2b99e1e",
+          "fileHash": "61c9478ae93a9aecee4882d69d9b5b97490a7685461fca8fb33cd12ddd4ec468",
+          "excerpt": "  if (value instanceof Other service) { service.zero(); } // pattern-shadow"
+        },
+        "targetEvidence": {
+          "path": "backend/Other.java",
+          "range": {
+            "startLine": 2,
+            "endLine": 2
+          },
+          "revision": "tree-sha256:46cc950016eb615012f7204744e437b826b699f805379f5faa0d0748a2b99e1e",
+          "fileHash": "2ffbf58ce807332b522855f8aedcceb441f7584b0a9769ddf7c27c6c8769cd01",
+          "excerpt": "class Other { String zero() { return \"v2\"; } }"
+        }
+      }
+    ],
+    "indirect": []
+  },
+  "findings": [],
+  "guidance": {
+    "task": "Valid instanceof pattern binding must not inherit same-named field type",
+    "ruleSetVersion": "independent-adversarial-v1",
+    "approvalGap": "No human approval is inferred. Reviewed examples/exceptions are assertions from supplied configuration; simulation records are demonstrations only.",
+    "rules": [
+      {
+        "id": "independent/http-contract",
+        "kind": "endpoint-contract-change",
+        "owner": "synthetic-qa",
+        "version": "independent-adversarial-v1",
+        "severity": "warning",
+        "instruction": "endpoint-contract-change",
+        "examples": []
+      }
+    ]
+  },
+  "unknowns": [
+    {
+      "reason": "Java local receiver type is not inferred",
+      "range": {
+        "startLine": 5,
+        "endLine": 5
+      },
+      "detail": "Other",
+      "evidence": {
+        "path": "backend/Caller.java",
+        "range": {
+          "startLine": 5,
+          "endLine": 5
+        },
+        "revision": "tree-sha256:b1d9d2e9e6139a9b62fe51c97115a69f3b83d3aee4482069a21e8e4aec54a636",
+        "fileHash": "61c9478ae93a9aecee4882d69d9b5b97490a7685461fca8fb33cd12ddd4ec468",
+        "excerpt": "  if (value instanceof Other service) { service.zero(); } // pattern-shadow"
+      }
+    },
+    {
+      "reason": "Java call receiver is unresolved",
+      "range": {
+        "startLine": 5,
+        "endLine": 5
+      },
+      "detail": "service",
+      "evidence": {
+        "path": "backend/Caller.java",
+        "range": {
+          "startLine": 5,
+          "endLine": 5
+        },
+        "revision": "tree-sha256:b1d9d2e9e6139a9b62fe51c97115a69f3b83d3aee4482069a21e8e4aec54a636",
+        "fileHash": "61c9478ae93a9aecee4882d69d9b5b97490a7685461fca8fb33cd12ddd4ec468",
+        "excerpt": "  if (value instanceof Other service) { service.zero(); } // pattern-shadow"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "Object",
+      "evidence": {
+        "path": "backend/Caller.java",
+        "range": {
+          "startLine": 4,
+          "endLine": 4
+        },
+        "revision": "tree-sha256:b1d9d2e9e6139a9b62fe51c97115a69f3b83d3aee4482069a21e8e4aec54a636",
+        "fileHash": "61c9478ae93a9aecee4882d69d9b5b97490a7685461fca8fb33cd12ddd4ec468",
+        "excerpt": " void use(Object value) {"
+      }
+    },
+    {
+      "reason": "dynamic-dependency",
+      "detail": "Runtime value prevents a resolved edge",
+      "evidence": {
+        "path": "backend/Caller.java",
+        "range": {
+          "startLine": 5,
+          "endLine": 5
+        },
+        "revision": "tree-sha256:b1d9d2e9e6139a9b62fe51c97115a69f3b83d3aee4482069a21e8e4aec54a636",
+        "fileHash": "61c9478ae93a9aecee4882d69d9b5b97490a7685461fca8fb33cd12ddd4ec468",
+        "excerpt": "  if (value instanceof Other service) { service.zero(); } // pattern-shadow"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "String",
+      "evidence": {
+        "path": "backend/Other.java",
+        "range": {
+          "startLine": 2,
+          "endLine": 2
+        },
+        "revision": "tree-sha256:b1d9d2e9e6139a9b62fe51c97115a69f3b83d3aee4482069a21e8e4aec54a636",
+        "fileHash": "b3cbea9c2653245343cd6697741ffb14fc6fa624ddde12a233074af901d2136c",
+        "excerpt": "class Other { String zero() { return \"v1\"; } }"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "String",
+      "evidence": {
+        "path": "backend/Service.java",
+        "range": {
+          "startLine": 3,
+          "endLine": 3
+        },
+        "revision": "tree-sha256:b1d9d2e9e6139a9b62fe51c97115a69f3b83d3aee4482069a21e8e4aec54a636",
+        "fileHash": "d3a42475956bd2df2a9590b19d5412ed0a40510315dd00c96b03ec93f77af449",
+        "excerpt": " String run(String x) { return \"v1\"; }"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "String",
+      "evidence": {
+        "path": "backend/Service.java",
+        "range": {
+          "startLine": 3,
+          "endLine": 3
+        },
+        "revision": "tree-sha256:b1d9d2e9e6139a9b62fe51c97115a69f3b83d3aee4482069a21e8e4aec54a636",
+        "fileHash": "d3a42475956bd2df2a9590b19d5412ed0a40510315dd00c96b03ec93f77af449",
+        "excerpt": " String run(String x) { return \"v1\"; }"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "String",
+      "evidence": {
+        "path": "backend/Service.java",
+        "range": {
+          "startLine": 4,
+          "endLine": 4
+        },
+        "revision": "tree-sha256:b1d9d2e9e6139a9b62fe51c97115a69f3b83d3aee4482069a21e8e4aec54a636",
+        "fileHash": "d3a42475956bd2df2a9590b19d5412ed0a40510315dd00c96b03ec93f77af449",
+        "excerpt": " String run(Integer x) { return \"v1\"; }"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "Integer",
+      "evidence": {
+        "path": "backend/Service.java",
+        "range": {
+          "startLine": 4,
+          "endLine": 4
+        },
+        "revision": "tree-sha256:b1d9d2e9e6139a9b62fe51c97115a69f3b83d3aee4482069a21e8e4aec54a636",
+        "fileHash": "d3a42475956bd2df2a9590b19d5412ed0a40510315dd00c96b03ec93f77af449",
+        "excerpt": " String run(Integer x) { return \"v1\"; }"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "String",
+      "evidence": {
+        "path": "backend/Service.java",
+        "range": {
+          "startLine": 5,
+          "endLine": 5
+        },
+        "revision": "tree-sha256:b1d9d2e9e6139a9b62fe51c97115a69f3b83d3aee4482069a21e8e4aec54a636",
+        "fileHash": "d3a42475956bd2df2a9590b19d5412ed0a40510315dd00c96b03ec93f77af449",
+        "excerpt": " String zero() { return \"v1\"; }"
+      }
+    },
+    {
+      "reason": "Java local receiver type is not inferred",
+      "range": {
+        "startLine": 5,
+        "endLine": 5
+      },
+      "detail": "Other",
+      "evidence": {
+        "path": "backend/Caller.java",
+        "range": {
+          "startLine": 5,
+          "endLine": 5
+        },
+        "revision": "tree-sha256:46cc950016eb615012f7204744e437b826b699f805379f5faa0d0748a2b99e1e",
+        "fileHash": "61c9478ae93a9aecee4882d69d9b5b97490a7685461fca8fb33cd12ddd4ec468",
+        "excerpt": "  if (value instanceof Other service) { service.zero(); } // pattern-shadow"
+      }
+    },
+    {
+      "reason": "Java call receiver is unresolved",
+      "range": {
+        "startLine": 5,
+        "endLine": 5
+      },
+      "detail": "service",
+      "evidence": {
+        "path": "backend/Caller.java",
+        "range": {
+          "startLine": 5,
+          "endLine": 5
+        },
+        "revision": "tree-sha256:46cc950016eb615012f7204744e437b826b699f805379f5faa0d0748a2b99e1e",
+        "fileHash": "61c9478ae93a9aecee4882d69d9b5b97490a7685461fca8fb33cd12ddd4ec468",
+        "excerpt": "  if (value instanceof Other service) { service.zero(); } // pattern-shadow"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "Object",
+      "evidence": {
+        "path": "backend/Caller.java",
+        "range": {
+          "startLine": 4,
+          "endLine": 4
+        },
+        "revision": "tree-sha256:46cc950016eb615012f7204744e437b826b699f805379f5faa0d0748a2b99e1e",
+        "fileHash": "61c9478ae93a9aecee4882d69d9b5b97490a7685461fca8fb33cd12ddd4ec468",
+        "excerpt": " void use(Object value) {"
+      }
+    },
+    {
+      "reason": "dynamic-dependency",
+      "detail": "Runtime value prevents a resolved edge",
+      "evidence": {
+        "path": "backend/Caller.java",
+        "range": {
+          "startLine": 5,
+          "endLine": 5
+        },
+        "revision": "tree-sha256:46cc950016eb615012f7204744e437b826b699f805379f5faa0d0748a2b99e1e",
+        "fileHash": "61c9478ae93a9aecee4882d69d9b5b97490a7685461fca8fb33cd12ddd4ec468",
+        "excerpt": "  if (value instanceof Other service) { service.zero(); } // pattern-shadow"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "String",
+      "evidence": {
+        "path": "backend/Other.java",
+        "range": {
+          "startLine": 2,
+          "endLine": 2
+        },
+        "revision": "tree-sha256:46cc950016eb615012f7204744e437b826b699f805379f5faa0d0748a2b99e1e",
+        "fileHash": "2ffbf58ce807332b522855f8aedcceb441f7584b0a9769ddf7c27c6c8769cd01",
+        "excerpt": "class Other { String zero() { return \"v2\"; } }"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "String",
+      "evidence": {
+        "path": "backend/Service.java",
+        "range": {
+          "startLine": 3,
+          "endLine": 3
+        },
+        "revision": "tree-sha256:46cc950016eb615012f7204744e437b826b699f805379f5faa0d0748a2b99e1e",
+        "fileHash": "383c8d5afa487ed5becf8b5fa1a8ec2aa451627280815ccd16fd5b3a411e939d",
+        "excerpt": " String run(String x) { return \"v2\"; }"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "String",
+      "evidence": {
+        "path": "backend/Service.java",
+        "range": {
+          "startLine": 3,
+          "endLine": 3
+        },
+        "revision": "tree-sha256:46cc950016eb615012f7204744e437b826b699f805379f5faa0d0748a2b99e1e",
+        "fileHash": "383c8d5afa487ed5becf8b5fa1a8ec2aa451627280815ccd16fd5b3a411e939d",
+        "excerpt": " String run(String x) { return \"v2\"; }"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "String",
+      "evidence": {
+        "path": "backend/Service.java",
+        "range": {
+          "startLine": 4,
+          "endLine": 4
+        },
+        "revision": "tree-sha256:46cc950016eb615012f7204744e437b826b699f805379f5faa0d0748a2b99e1e",
+        "fileHash": "383c8d5afa487ed5becf8b5fa1a8ec2aa451627280815ccd16fd5b3a411e939d",
+        "excerpt": " String run(Integer x) { return \"v2\"; }"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "Integer",
+      "evidence": {
+        "path": "backend/Service.java",
+        "range": {
+          "startLine": 4,
+          "endLine": 4
+        },
+        "revision": "tree-sha256:46cc950016eb615012f7204744e437b826b699f805379f5faa0d0748a2b99e1e",
+        "fileHash": "383c8d5afa487ed5becf8b5fa1a8ec2aa451627280815ccd16fd5b3a411e939d",
+        "excerpt": " String run(Integer x) { return \"v2\"; }"
+      }
+    },
+    {
+      "reason": "external-or-missing-java-source",
+      "detail": "String",
+      "evidence": {
+        "path": "backend/Service.java",
+        "range": {
+          "startLine": 5,
+          "endLine": 5
+        },
+        "revision": "tree-sha256:46cc950016eb615012f7204744e437b826b699f805379f5faa0d0748a2b99e1e",
+        "fileHash": "383c8d5afa487ed5becf8b5fa1a8ec2aa451627280815ccd16fd5b3a411e939d",
+        "excerpt": " String zero() { return \"v2\"; }"
+      }
+    }
+  ],
+  "focusedTests": [],
+  "coverage": {
+    "complete": false,
+    "fullRegressionMayBeSkipped": false,
+    "sourceFiles": {
+      "baseline": 3,
+      "candidate": 3
+    },
+    "excluded": {
+      "baseline": [],
+      "candidate": []
+    },
+    "limitations": [
+      "Source-only analysis; no Java/TypeScript semantic compilation, runtime dispatch, reflection, DI wiring, proxy/origin verification or transitive external package sources",
+      "Edges are evidence-backed approximations; indirect file dependencies do not prove execution",
+      "Renames inferred only for identical declaration key/signature/body; edited renames remain delete/add",
+      "Unknown syntax and unresolved/dynamic dependencies remain visible; passing fixture tests is not private-repository acceptance"
+    ]
+  },
+  "cache": {
+    "report": "disabled",
+    "parsedFiles": 6,
+    "reusedFiles": 0,
+    "invalidEntries": 0
+  },
+  "metrics": {
+    "elapsedMs": 23.58,
+    "bytesRead": 698,
+    "reportCacheHit": false
+  }
+}

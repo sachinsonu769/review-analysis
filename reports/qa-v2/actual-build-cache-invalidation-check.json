@@ -1,0 +1,28 @@
+{
+  "name": "actual-build-cache-invalidation",
+  "status": "pass",
+  "oldBuild": {
+    "version": "0.1.0",
+    "sourceBuildHash": "8ee7fcacee9a1b276b2bfab2665d8d3ab771e40eee5f3924f1f301192426e68f",
+    "parsers": {
+      "java": "java-parser@3.0.1",
+      "typescript": "typescript@5.9.3"
+    }
+  },
+  "newBuild": {
+    "version": "0.1.0",
+    "sourceBuildHash": "ca04bac50b7584aaafd9d5602acc8055152e81e25de5fa1b15bb710f76f53ac9",
+    "parsers": {
+      "java": "java-parser@3.0.1",
+      "typescript": "typescript@5.9.3"
+    }
+  },
+  "oldCacheKey": "cd5eb5602ee27ef9b6c5567e1d06352521f846ad978e59255837be9beb9227f3",
+  "newCacheKey": "1fa4b0bf5171bf1f05102e75c4757b4d7e30d4b5bc9b930e6f285edb9dda08e9",
+  "cache": {
+    "report": "miss",
+    "parsedFiles": 28,
+    "reusedFiles": 15,
+    "invalidEntries": 0
+  }
+}

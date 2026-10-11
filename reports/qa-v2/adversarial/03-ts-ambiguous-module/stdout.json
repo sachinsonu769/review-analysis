@@ -1,0 +1,177 @@
+{
+  "schemaVersion": "1.0",
+  "analyzer": {
+    "version": "0.1.0",
+    "sourceBuildHash": "ca04bac50b7584aaafd9d5602acc8055152e81e25de5fa1b15bb710f76f53ac9",
+    "parsers": {
+      "java": "java-parser@3.0.1",
+      "typescript": "typescript@5.9.3"
+    }
+  },
+  "advisory": true,
+  "asOf": "2026-10-11",
+  "provenance": {
+    "baseline": {
+      "root": "/tmp/review-analysis-adversarial-v2-NZrPxG/03-ts-ambiguous-module/baseline",
+      "type": "directory",
+      "revision": "tree-sha256:16d60e395d5a5b34c1f3a878201cb42a1932d9746eb051cca175069c8220bc39",
+      "contentHash": "16d60e395d5a5b34c1f3a878201cb42a1932d9746eb051cca175069c8220bc39",
+      "dirty": false
+    },
+    "candidate": {
+      "root": "/tmp/review-analysis-adversarial-v2-NZrPxG/03-ts-ambiguous-module/candidate",
+      "type": "directory",
+      "revision": "tree-sha256:ed248fc79ac96fcf27bec376b3607619582f873a78c0bc9d274f52691abdbdfe",
+      "contentHash": "ed248fc79ac96fcf27bec376b3607619582f873a78c0bc9d274f52691abdbdfe",
+      "dirty": false
+    },
+    "rulesHash": "90f33c2c080aa463115b0ef7e4058bb9bf0da4944dff79ed58eae2f01f9cd3f1",
+    "baselineRulesHash": "90f33c2c080aa463115b0ef7e4058bb9bf0da4944dff79ed58eae2f01f9cd3f1",
+    "cacheKey": "d03722a54d941ff723d5da4e0e6b7ccd517faa93987dd32428821002dd505299"
+  },
+  "changes": [
+    {
+      "kind": "modified",
+      "name": "work",
+      "key": "work",
+      "language": "typescript",
+      "contractChanged": false,
+      "before": {
+        "path": "frontend/lib.ts",
+        "range": {
+          "startLine": 1,
+          "endLine": 1
+        },
+        "revision": "tree-sha256:16d60e395d5a5b34c1f3a878201cb42a1932d9746eb051cca175069c8220bc39",
+        "fileHash": "6a17fb63c8c90e2ce7a1f7344a73bd815f27fdf6df05982abd610fe84ea3408b",
+        "excerpt": "export function work(x: number): number { return 1; }"
+      },
+      "after": {
+        "path": "frontend/lib.ts",
+        "range": {
+          "startLine": 1,
+          "endLine": 1
+        },
+        "revision": "tree-sha256:ed248fc79ac96fcf27bec376b3607619582f873a78c0bc9d274f52691abdbdfe",
+        "fileHash": "6745bcd12f9a1c706a5b88bc099841f1fb145a755425ede6614a1c4559e322d9",
+        "excerpt": "export function work(x: number): number { return 2; }"
+      }
+    },
+    {
+      "kind": "modified",
+      "name": "work",
+      "key": "work",
+      "language": "typescript",
+      "contractChanged": false,
+      "before": {
+        "path": "frontend/lib.tsx",
+        "range": {
+          "startLine": 1,
+          "endLine": 1
+        },
+        "revision": "tree-sha256:16d60e395d5a5b34c1f3a878201cb42a1932d9746eb051cca175069c8220bc39",
+        "fileHash": "6a17fb63c8c90e2ce7a1f7344a73bd815f27fdf6df05982abd610fe84ea3408b",
+        "excerpt": "export function work(x: number): number { return 1; }"
+      },
+      "after": {
+        "path": "frontend/lib.tsx",
+        "range": {
+          "startLine": 1,
+          "endLine": 1
+        },
+        "revision": "tree-sha256:ed248fc79ac96fcf27bec376b3607619582f873a78c0bc9d274f52691abdbdfe",
+        "fileHash": "6745bcd12f9a1c706a5b88bc099841f1fb145a755425ede6614a1c4559e322d9",
+        "excerpt": "export function work(x: number): number { return 2; }"
+      }
+    }
+  ],
+  "impact": {
+    "direct": [],
+    "indirect": []
+  },
+  "findings": [],
+  "guidance": {
+    "task": "Both .ts and .tsx candidate files prevent unique imported call",
+    "ruleSetVersion": "independent-adversarial-v1",
+    "approvalGap": "No human approval is inferred. Reviewed examples/exceptions are assertions from supplied configuration; simulation records are demonstrations only.",
+    "rules": [
+      {
+        "id": "independent/http-contract",
+        "kind": "endpoint-contract-change",
+        "owner": "synthetic-qa",
+        "version": "independent-adversarial-v1",
+        "severity": "warning",
+        "instruction": "endpoint-contract-change",
+        "examples": []
+      }
+    ]
+  },
+  "unknowns": [
+    {
+      "reason": "ambiguous-import",
+      "evidence": {
+        "path": "frontend/consumer.ts",
+        "range": {
+          "startLine": 1,
+          "endLine": 1
+        },
+        "revision": "tree-sha256:16d60e395d5a5b34c1f3a878201cb42a1932d9746eb051cca175069c8220bc39",
+        "fileHash": "b2f41335f5344a2d002632eda191eee705bfa333ef91e40267b2a65b406495e2",
+        "excerpt": "import {work} from './lib';"
+      },
+      "detail": "./lib",
+      "candidates": [
+        "frontend/lib.ts",
+        "frontend/lib.tsx"
+      ]
+    },
+    {
+      "reason": "ambiguous-import",
+      "evidence": {
+        "path": "frontend/consumer.ts",
+        "range": {
+          "startLine": 1,
+          "endLine": 1
+        },
+        "revision": "tree-sha256:ed248fc79ac96fcf27bec376b3607619582f873a78c0bc9d274f52691abdbdfe",
+        "fileHash": "b2f41335f5344a2d002632eda191eee705bfa333ef91e40267b2a65b406495e2",
+        "excerpt": "import {work} from './lib';"
+      },
+      "detail": "./lib",
+      "candidates": [
+        "frontend/lib.ts",
+        "frontend/lib.tsx"
+      ]
+    }
+  ],
+  "focusedTests": [],
+  "coverage": {
+    "complete": false,
+    "fullRegressionMayBeSkipped": false,
+    "sourceFiles": {
+      "baseline": 3,
+      "candidate": 3
+    },
+    "excluded": {
+      "baseline": [],
+      "candidate": []
+    },
+    "limitations": [
+      "Source-only analysis; no Java/TypeScript semantic compilation, runtime dispatch, reflection, DI wiring, proxy/origin verification or transitive external package sources",
+      "Edges are evidence-backed approximations; indirect file dependencies do not prove execution",
+      "Renames inferred only for identical declaration key/signature/body; edited renames remain delete/add",
+      "Unknown syntax and unresolved/dynamic dependencies remain visible; passing fixture tests is not private-repository acceptance"
+    ]
+  },
+  "cache": {
+    "report": "disabled",
+    "parsedFiles": 6,
+    "reusedFiles": 0,
+    "invalidEntries": 0
+  },
+  "metrics": {
+    "elapsedMs": 35.56,
+    "bytesRead": 614,
+    "reportCacheHit": false
+  }
+}
